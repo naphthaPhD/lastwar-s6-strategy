@@ -48,6 +48,12 @@
 | 2026-05-03 | `outputs/lastwar_s6_latest_alliance_rankings_by_server.csv` | サーバー別連盟ランキング | 詳細分析の入力 |
 | 2026-05-03 | `outputs/lastwar_s6_latest_commander_highlights_by_server.csv` | 司令官ハイライト | 司令官ランキングの抜粋 |
 | 2026-05-03 | `outputs/lastwar_s6_latest_rankings_combined.csv` | 連盟/司令官統合CSV | 最新ランキング統合 |
+| 2026-05-03 | `S6powerrank/IMG_*.PNG` | 戦力ランキング再集計用の元画像群 | ローカル/Drive管理。GitHubには含めない |
+| 2026-05-03 | `outputs/s6powerrank_alliance_rankings_2026-05-03.csv` | `S6powerrank/` 画像から再集計した同盟戦力ランキング | 2026-05-03時点の戦略比較ではこのCSVを優先 |
+| 2026-05-03 | `outputs/s6powerrank_hero_rankings_2026-05-03.csv` | `S6powerrank/` 画像から再集計した英雄/司令官ランキング | 多言語名は一部要画像確認 |
+| 2026-05-03 | `outputs/sheets/s6powerrank_8server_power_2026-05-03.xlsx` | 8サーバー戦力ランキングのExcel整理版 | `outputs/` 配下のためGitHubには含めない |
+| 2026-05-03 | `outputs/s6powerrank_review_2026-05-03.csv` | OCR/抽出で要確認になった行 | 連盟タグ未確認などのレビュー対象 |
+| 2026-05-03 | `outputs/s6powerrank_multilingual_review_2026-05-03.csv` | 多言語名のOCRレビュー対象 | 自動置換禁止。必要なら画像で個別確認 |
 
 ## 未検証の噂・仮説
 

@@ -1,5 +1,7 @@
 # Local/system files
 .DS_Store
+node_modules
+node_modules/
 
 # Screenshots and image captures stay local/Drive-only.
 *.PNG

@@ -33,7 +33,9 @@ Season 6 の仕様は docs/season6_mechanics.md、方針は strategy/season6_str
 | `strategy/map_planning_notes.md` | Cpt Hedge S6地図を使ったゾーン対応、初期集合、ルート計画メモ |
 | `strategy/cpt_hedge_map_workflow.md` | Cpt Hedge地図の非公式扱い、グリッド命名、色分け、Discord共有、JSON保存ルール |
 | `outputs/lastwar_s6_latest_*.csv` | 戦力ランキングCSV。`.gitignore` 対象でGitHubには通常含めない |
+| `outputs/s6powerrank_*.csv` | `S6powerrank/` 画像から再集計した戦力ランキングCSV。`.gitignore` 対象 |
 | `outputs/lastwar_s6_latest_summary.md` | 最新戦力サマリー。`.gitignore` 対象 |
+| `S6powerrank/IMG_*.PNG` | 戦力ランキング用の元画像群。`.gitignore` 対象 |
 | `templates/screenshot_review_template.md` | 画像確認用テンプレート |
 
 ## 作業方針
@@ -83,7 +85,17 @@ Season 6 の仕様は docs/season6_mechanics.md、方針は strategy/season6_str
 
 ### 2026-05-03 戦力データ
 
-ローカルの `outputs/` に戦力CSVと要約がある。`outputs/` は `.gitignore` 対象なので、GitHubへ共有する場合は必要な結論をmdへ転記する。
+ローカルの `outputs/` に戦力CSVと要約がある。`outputs/` と `S6powerrank/` は `.gitignore` 対象なので、GitHubへ共有する場合は必要な結論をmdへ転記する。
+
+優先する最新集計:
+
+- `outputs/s6powerrank_alliance_rankings_2026-05-03.csv`
+- `outputs/s6powerrank_hero_rankings_2026-05-03.csv`
+- `outputs/sheets/s6powerrank_8server_power_2026-05-03.xlsx`
+- `outputs/s6powerrank_review_2026-05-03.csv`
+- `outputs/s6powerrank_multilingual_review_2026-05-03.csv`
+
+旧集計も残っているが、戦略比較は `s6powerrank` 系の再集計値を優先する。
 
 - `outputs/lastwar_s6_latest_summary.md`
 - `outputs/lastwar_s6_latest_server_power_summary.csv`

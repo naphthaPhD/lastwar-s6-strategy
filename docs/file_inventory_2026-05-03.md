@@ -33,16 +33,20 @@
 | パス/種類 | 扱い |
 |---|---|
 | `IMG_*.PNG` | 一次資料。移動せず、必要な事実だけ `research/source_log.md` へ転記 |
+| `S6powerrank/IMG_*.PNG` | 戦力ランキング再集計用の画像群。ローカル/Drive管理 |
 | `outputs/lastwar_s6_latest_*.csv` | 戦力ランキングCSV。`.gitignore` 対象 |
+| `outputs/s6powerrank_*.csv` | `S6powerrank/` 画像から再集計した戦力ランキングCSV。`.gitignore` 対象 |
+| `outputs/sheets/*.xlsx` | 戦力ランキングのExcel整理版。`.gitignore` 対象 |
 | `outputs/lastwar_s6_latest_summary.md` | 戦力サマリー。必要な結論は `strategy/server_strategy_comparison_2026-05-03.md` に転記済み |
 | `outputs/ocr_all_images_2026-05-03.txt` | OCR作業出力。ローカル参照用 |
 | `map_exports/` | Cpt HedgeのJSONエクスポートや作業途中画像。作業用ローカル保存 |
 | `build_lastwar_s6_latest_rankings.py` | CSV生成用ローカルスクリプト。GitHub docs-only方針では除外 |
 | `tools/vision_ocr.swift` | OCR補助ローカルツール。GitHub docs-only方針では除外 |
+| `node_modules/` | スプレッドシート作成時のローカル依存。GitHubには含めない |
 
 ## 現時点の注意
 
 - `outputs/`、画像、ローカル抽出スクリプトはGitHubへ載せない前提。
-- 戦力数値は `outputs/` を正とし、共有用の判断は `strategy/server_strategy_comparison_2026-05-03.md` を見る。
+- 戦力数値は新しい `outputs/s6powerrank_*.csv` を優先し、共有用の判断は `strategy/server_strategy_comparison_2026-05-03.md` を見る。
 - 地図配置は `strategy/map_planning_notes.md` を正とする。
 - 幹部Discord共有は `strategy/jdx_executive_brief_v2.md` を使う。
