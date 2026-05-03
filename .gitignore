@@ -13,6 +13,7 @@
 
 # Generated or bulky exports should be opted in explicitly.
 outputs/
+map_exports/
 *.zip
 *.tar
 *.tar.gz

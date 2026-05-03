@@ -18,6 +18,7 @@
 | `strategy/jdx_executive_brief_v2.md` | 幹部Discord向けの現行共有文 |
 | `strategy/week1_member_playbook.md` | Week 1メンバー向け指示 |
 | `strategy/map_planning_notes.md` | Cpt Hedge地図とゲーム内配置を使った作戦メモ |
+| `strategy/cpt_hedge_map_workflow.md` | Cpt Hedge地図を非公式作戦図として使うための運用手順 |
 | `strategy/server_strategy_comparison_2026-05-03.md` | 戦力CSVから作成したサーバー別比較 |
 
 ## 旧版・補助ファイル
@@ -35,6 +36,7 @@
 | `outputs/lastwar_s6_latest_*.csv` | 戦力ランキングCSV。`.gitignore` 対象 |
 | `outputs/lastwar_s6_latest_summary.md` | 戦力サマリー。必要な結論は `strategy/server_strategy_comparison_2026-05-03.md` に転記済み |
 | `outputs/ocr_all_images_2026-05-03.txt` | OCR作業出力。ローカル参照用 |
+| `map_exports/` | Cpt HedgeのJSONエクスポートや作業途中画像。作業用ローカル保存 |
 | `build_lastwar_s6_latest_rankings.py` | CSV生成用ローカルスクリプト。GitHub docs-only方針では除外 |
 | `tools/vision_ocr.swift` | OCR補助ローカルツール。GitHub docs-only方針では除外 |
 

@@ -15,8 +15,9 @@
 | 未着手 | 前哨基地配置候補を複数案で作る | 大統領連盟候補/JDX | 配置前 | 配置後変更不可の可能性を前提 |
 | 完了 | Day 1のJDX向け行動指示を作る | 内政担当 | 開幕前 | `strategy/week1_member_playbook.md` に作成 |
 | 完了 | S6地図ツールの活用方針を作る | 作戦担当 | 開幕前 | `strategy/map_planning_notes.md` に作成。全サーバー配置を反映済み |
+| 完了 | Cpt Hedge地図の運用手順を作る | 作戦担当 | 開幕前 | `strategy/cpt_hedge_map_workflow.md` に作成。非公式地図としての検証ルール、グリッド命名、色分け、Discord共有文を整理 |
 | 完了 | 戦力CSVの所在とサーバー別比較を確認する | 作戦担当 | 開幕前 | `outputs/lastwar_s6_latest_*.csv` と `strategy/server_strategy_comparison_2026-05-03.md` |
-| 未着手 | Cpt Hedge地図の幹部共有用グリッドを作る | 作戦担当 | 開幕前 | Week1内政、#476警戒、#509候補、祭壇候補、前哨基地候補を分ける |
+| 未着手 | Cpt Hedge地図の幹部共有用グリッドを実際に作る | 作戦担当 | 開幕前 | Week1内政、#476警戒、#509候補、祭壇候補、前哨基地候補を分ける。JSONは `map_exports/` にローカル保存 |
 | 未着手 | Week別イベントカレンダーを作る | 幹部 | 開幕前 | Week 1-2、Week 3-4、Week 5-7、Week 8を分ける |
 | 未着手 | 破壊戦ルート候補を図示する | 作戦担当 | Week 3前 | Cpt Hedge地図を使い、敵都市破壊で自軍接続も消える前提で順番を決める |
 | 進行中 | #509方面の候補情報をランキングCSVで整理する | 外交担当 | Week 1中 | `server_strategy_comparison_2026-05-03.md` に概況あり。盟約候補の確定ではなく、#440方針後に判断するための材料集め |

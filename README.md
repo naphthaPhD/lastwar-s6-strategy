@@ -29,3 +29,12 @@
 このフォルダ直下に `IMG_*.PNG` のスクリーンショットがあります。画像は移動せず、必要な内容を `research/source_log.md` に転記していきます。
 
 戦力ランキングの生成物は `outputs/` にあります。`outputs/` は `.gitignore` 対象なので、GitHubへ共有する場合は必要な結論を `strategy/` または `docs/` のmdへ転記します。
+
+## 地図作戦
+
+Cpt HedgeのS6インタラクティブ地図は、公式情報源ではなく作戦図作成用として扱います。
+
+- ゾーン対応、初期集合、#476警戒、#509候補線は `strategy/map_planning_notes.md`
+- グリッド命名、色分け、JSON保存、Discord共有手順は `strategy/cpt_hedge_map_workflow.md`
+
+地図のJSONエクスポートや作業途中画像は `map_exports/` にローカル保存し、GitHubには原則含めません。

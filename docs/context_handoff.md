@@ -31,6 +31,7 @@ Season 6 の仕様は docs/season6_mechanics.md、方針は strategy/season6_str
 | `strategy/jdx_executive_brief_v2.md` | 公式Wiki貼り付け情報反映後の幹部Discord共有用要約 |
 | `strategy/week1_member_playbook.md` | S6開始後1週目の連盟メンバー向け行動指示 |
 | `strategy/map_planning_notes.md` | Cpt Hedge S6地図を使ったゾーン対応、初期集合、ルート計画メモ |
+| `strategy/cpt_hedge_map_workflow.md` | Cpt Hedge地図の非公式扱い、グリッド命名、色分け、Discord共有、JSON保存ルール |
 | `outputs/lastwar_s6_latest_*.csv` | 戦力ランキングCSV。`.gitignore` 対象でGitHubには通常含めない |
 | `outputs/lastwar_s6_latest_summary.md` | 最新戦力サマリー。`.gitignore` 対象 |
 | `templates/screenshot_review_template.md` | 画像確認用テンプレート |
@@ -78,7 +79,7 @@ Season 6 の仕様は docs/season6_mechanics.md、方針は strategy/season6_str
 - 密林陣営は#440/#509/#511/#534、湿地陣営は#476/#480/#503/#523。
 - #440は右下E。全体方針待ちだが、#534からは遠いため初期防衛を#440頼みにしすぎない。
 - Cpt Hedge側はグリッド作成、連盟色分け、進軍ルート番号、JSONエクスポート/インポートに対応。
-- 詳細は `strategy/map_planning_notes.md`。
+- ゾーン対応と初期集合案は `strategy/map_planning_notes.md`。実際の運用手順は `strategy/cpt_hedge_map_workflow.md`。
 
 ### 2026-05-03 戦力データ
 
