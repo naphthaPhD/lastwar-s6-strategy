@@ -1,0 +1,23 @@
+# Local/system files
+.DS_Store
+
+# Screenshots and image captures stay local/Drive-only.
+*.PNG
+*.png
+*.JPG
+*.jpg
+*.JPEG
+*.jpeg
+*.HEIC
+*.heic
+
+# Generated or bulky exports should be opted in explicitly.
+outputs/
+*.zip
+*.tar
+*.tar.gz
+
+# Temporary files
+*.tmp
+*.swp
+*~
