@@ -21,10 +21,12 @@ Season 6 の仕様は docs/season6_mechanics.md、方針は strategy/season6_str
 | `docs/00_project_brief.md` | 目的、前提、意思決定基準 |
 | `docs/season6_mechanics.md` | Season 6 の仕様整理 |
 | `docs/previous_thread_summary.md` | 前回チャット「シャドウジャングル情報を収集」の復元メモ |
+| `docs/content_review_2026-05-03.md` | 2026-05-03時点の内容確認メモ |
 | `research/source_log.md` | スクリーンショットや外部情報の根拠ログ |
 | `strategy/season6_strategy.md` | 戦略方針 |
 | `strategy/action_plan.md` | タスク、日次チェック、週次チェック |
 | `strategy/jdx_executive_brief.md` | 幹部Discord共有用の要約 |
+| `strategy/jdx_executive_brief_v2.md` | 公式Wiki貼り付け情報反映後の幹部Discord共有用要約 |
 | `templates/screenshot_review_template.md` | 画像確認用テンプレート |
 
 ## 作業方針
