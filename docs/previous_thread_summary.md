@@ -29,6 +29,8 @@
 
 ## JDX方針としてまとまっていたこと
 
+以下は前回チャット時点の整理であり、現在は#440方針待ちと#509未確定を強めに扱う。最新方針は `strategy/season6_strategy.md` と `strategy/jdx_executive_brief_v2.md` を参照する。
+
 - #534/JDXは「南で#476を受け止める」「北東で#509と接続・連携する」「祭壇は別働で取りに行く」が基本。
 - #534単独で中央祭壇には参加できる可能性が高い。
 - ただし中央都市、前哨基地、破壊戦の主導には#509側の接続と協力がほぼ必須。
@@ -42,7 +44,7 @@
 
 ## 前回作成済みとされるCSV
 
-前回ログ上では以下のCSVが作られていた。ただし、今回の `/Users/mba2025/Documents/S6` には現時点で存在を確認できていない。
+前回ログ上では以下のCSVが作られていた。今回の `/Users/mba2025/Documents/S6` では、最新画像ベースのCSVを `outputs/lastwar_s6_latest_*.csv` として確認済み。`outputs/` は `.gitignore` 対象で、GitHubには通常含めない。
 
 - `lastwar_s6_server_power_summary.csv`
 - `lastwar_s6_alliance_rankings_by_server.csv`
@@ -51,6 +53,15 @@
 - `lastwar_s6_alliance_rankings_by_server_from_drive.csv`
 - `lastwar_s6_commander_rankings_by_server_top20_from_drive.csv`
 - `lastwar_s6_server_power_summary_from_drive.csv`
+
+現在参照するファイル:
+
+- `outputs/lastwar_s6_latest_summary.md`
+- `outputs/lastwar_s6_latest_server_power_summary.csv`
+- `outputs/lastwar_s6_latest_alliance_rankings_by_server.csv`
+- `outputs/lastwar_s6_latest_commander_highlights_by_server.csv`
+- `outputs/lastwar_s6_latest_rankings_combined.csv`
+- `strategy/server_strategy_comparison_2026-05-03.md`
 
 ## 前回停止時の状態
 

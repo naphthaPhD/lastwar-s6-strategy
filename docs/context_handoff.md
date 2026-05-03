@@ -20,13 +20,19 @@ Season 6 の仕様は docs/season6_mechanics.md、方針は strategy/season6_str
 | `README.md` | プロジェクトの入口 |
 | `docs/00_project_brief.md` | 目的、前提、意思決定基準 |
 | `docs/season6_mechanics.md` | Season 6 の仕様整理 |
+| `docs/file_inventory_2026-05-03.md` | フォルダ内ファイルの棚卸しとGitHubへ載せる/載せない整理 |
 | `docs/previous_thread_summary.md` | 前回チャット「シャドウジャングル情報を収集」の復元メモ |
 | `docs/content_review_2026-05-03.md` | 2026-05-03時点の内容確認メモ |
 | `research/source_log.md` | スクリーンショットや外部情報の根拠ログ |
 | `strategy/season6_strategy.md` | 戦略方針 |
 | `strategy/action_plan.md` | タスク、日次チェック、週次チェック |
+| `strategy/server_strategy_comparison_2026-05-03.md` | 戦力CSVから作成したサーバー別戦略比較 |
 | `strategy/jdx_executive_brief.md` | 幹部Discord共有用の要約 |
 | `strategy/jdx_executive_brief_v2.md` | 公式Wiki貼り付け情報反映後の幹部Discord共有用要約 |
+| `strategy/week1_member_playbook.md` | S6開始後1週目の連盟メンバー向け行動指示 |
+| `strategy/map_planning_notes.md` | Cpt Hedge S6地図を使ったゾーン対応、初期集合、ルート計画メモ |
+| `outputs/lastwar_s6_latest_*.csv` | 戦力ランキングCSV。`.gitignore` 対象でGitHubには通常含めない |
+| `outputs/lastwar_s6_latest_summary.md` | 最新戦力サマリー。`.gitignore` 対象 |
 | `templates/screenshot_review_template.md` | 画像確認用テンプレート |
 
 ## 作業方針
@@ -62,6 +68,29 @@ Season 6 の仕様は docs/season6_mechanics.md、方針は strategy/season6_str
 - 釣りの日: 通常餌は来訪者・勲功商店、ゴールド餌は職業スキル。タイミングは魚種やエネルギーではなく重さに影響。
 - Day 1攻略画像: 初日はウイルス耐性、胞子工場、真菌研究所、漁場2つ、釣り開始、魚寄付を優先。
 - 前哨基地: 大統領のみ配置可能。配置後移動不可。建設後は本戦域全連盟に領土リンク効果。破壊されると再配置不可。
+
+### 2026-05-03 Cpt Hedge S6地図確認
+
+`https://cpt-hedge.com/maps/season-6/interactive` を確認し、S6地図を作戦検討に使えることを確認。
+
+- 地図は3000x3000座標で、外周A-Hと中央Iに分かれる。
+- ユーザー添付のゲーム内シーズンマップ画像で、#534=A、#509=H、#503=G、#476=B、中央#8061=I、#480=F、#523=C、#511=D、#440=Eとして扱えることを確認。
+- 密林陣営は#440/#509/#511/#534、湿地陣営は#476/#480/#503/#523。
+- #440は右下E。全体方針待ちだが、#534からは遠いため初期防衛を#440頼みにしすぎない。
+- Cpt Hedge側はグリッド作成、連盟色分け、進軍ルート番号、JSONエクスポート/インポートに対応。
+- 詳細は `strategy/map_planning_notes.md`。
+
+### 2026-05-03 戦力データ
+
+ローカルの `outputs/` に戦力CSVと要約がある。`outputs/` は `.gitignore` 対象なので、GitHubへ共有する場合は必要な結論をmdへ転記する。
+
+- `outputs/lastwar_s6_latest_summary.md`
+- `outputs/lastwar_s6_latest_server_power_summary.csv`
+- `outputs/lastwar_s6_latest_alliance_rankings_by_server.csv`
+- `outputs/lastwar_s6_latest_commander_highlights_by_server.csv`
+- `outputs/lastwar_s6_latest_rankings_combined.csv`
+
+戦力分析のmdは `strategy/server_strategy_comparison_2026-05-03.md`。
 
 ## 次の具体作業
 

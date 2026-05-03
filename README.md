@@ -27,3 +27,5 @@
 ## 現在の素材
 
 このフォルダ直下に `IMG_*.PNG` のスクリーンショットがあります。画像は移動せず、必要な内容を `research/source_log.md` に転記していきます。
+
+戦力ランキングの生成物は `outputs/` にあります。`outputs/` は `.gitignore` 対象なので、GitHubへ共有する場合は必要な結論を `strategy/` または `docs/` のmdへ転記します。

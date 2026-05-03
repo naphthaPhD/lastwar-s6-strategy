@@ -22,7 +22,7 @@
 - 盟約: 同陣営1連盟のみ、隣接維持が重要
 - 釣り/魚寄付: 陣営科学、連盟スキル、盟約解放の基盤
 
-戦略面でも、#534/JDXの方針が「南で耐える、北東で#509とつなぐ、祭壇は別働、序盤は内政優先」に整理されている。
+戦略面でも、#534/JDXの方針が「序盤は#534内政、南#476は防衛・遅滞、#509は重要候補として情報収集、祭壇は別働、#440方針待ち」に整理されている。
 
 ## 修正した点
 
@@ -30,6 +30,9 @@
 - `strategy/action_plan.md` の古い記述「公式Wiki直接確認は未実施」を、現在の状況に合わせて更新した。
 - `strategy/action_plan.md` に、Day 1指示、Week別カレンダー、破壊戦ルート、#509盟約候補、祭壇スキル優先順位のタスクを追加した。
 - 幹部Discord投稿用に `strategy/jdx_executive_brief_v2.md` を新規作成した。
+- 戦力CSVとサーバー別比較を `outputs/` と `strategy/server_strategy_comparison_2026-05-03.md` で確認した。
+- Cpt Hedge地図とゲーム内シーズンマップ画像を合わせ、全サーバー配置を `strategy/map_planning_notes.md` に反映した。
+- Week 1メンバー向け指示を `strategy/week1_member_playbook.md` に作成した。
 
 ## 残っている注意点
 
@@ -46,5 +49,5 @@
 
 1. `strategy/jdx_executive_brief_v2.md` を幹部共有文として確認する。
 2. `strategy/action_plan.md` の担当者欄をJDX内の実担当者名で埋める。
-3. ランキングCSVを復元または再作成し、#509盟約候補と#476警戒対象を数値で再確認する。
-4. Day 1用の短いメンバー向け指示文を別ファイルで作る。
+3. Cpt Hedge地図上で、Week 1内政、#476警戒、#509候補、中央祭壇、前哨基地候補のグリッドを作る。
+4. #440方針が出たら、`strategy/season6_strategy.md` と幹部共有文を再調整する。

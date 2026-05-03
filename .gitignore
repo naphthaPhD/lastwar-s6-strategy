@@ -17,6 +17,10 @@ outputs/
 *.tar
 *.tar.gz
 
+# Local extraction/utility scripts. Keep GitHub docs-only unless explicitly needed.
+build_*.py
+tools/
+
 # Temporary files
 *.tmp
 *.swp
