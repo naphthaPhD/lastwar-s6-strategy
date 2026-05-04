@@ -1,0 +1,48 @@
+name: Build Discord Assets
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "*.md"
+      - "**/*.md"
+      - "**/*.xls"
+      - "**/*.xlsx"
+      - "**/*.xlsm"
+      - ".github/workflows/build-discord-assets.yml"
+      - "scripts/build_discord_assets.sh"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Install converters
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            fonts-noto-cjk \
+            libreoffice \
+            pandoc \
+            poppler-utils \
+            texlive-lang-japanese \
+            texlive-latex-extra \
+            texlive-latex-recommended \
+            texlive-luatex
+
+      - name: Build PDFs and PNGs
+        run: bash scripts/build_discord_assets.sh
+
+      - name: Upload generated assets
+        uses: actions/upload-artifact@v7
+        with:
+          name: discord-assets
+          path: outputs/discord_assets/
+          if-no-files-found: error
