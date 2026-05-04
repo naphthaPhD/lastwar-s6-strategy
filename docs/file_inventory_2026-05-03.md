@@ -47,6 +47,7 @@
 
 ## 現時点の注意
 
+- READMEのファイル索引を通常の入口にする。
 - `outputs/`、画像、ローカル抽出スクリプトはGitHubへ載せない前提。
 - 戦力数値は新しい `outputs/s6powerrank_*.csv` を優先し、共有用の判断は `strategy/server_strategy_comparison_2026-05-03.md` を見る。
 - 地図配置は `strategy/map_planning_notes.md` を正とする。
