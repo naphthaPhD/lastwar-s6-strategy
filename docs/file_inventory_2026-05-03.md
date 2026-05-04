@@ -16,6 +16,7 @@
 | `strategy/season6_strategy.md` | JDX/#534の戦略本体 |
 | `strategy/action_plan.md` | 今後の実行タスク |
 | `strategy/jdx_executive_brief_v2.md` | 幹部Discord向けの現行共有文 |
+| `strategy/member_start_checklist.md` | 連盟員向けの開始前・開始直後チェックリスト |
 | `strategy/week1_member_playbook.md` | Week 1メンバー向け指示 |
 | `strategy/map_planning_notes.md` | Cpt Hedge地図とゲーム内配置を使った作戦メモ |
 | `strategy/cpt_hedge_map_workflow.md` | Cpt Hedge地図を非公式作戦図として使うための運用手順 |
