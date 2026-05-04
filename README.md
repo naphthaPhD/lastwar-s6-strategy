@@ -27,16 +27,19 @@ GitHub Actions の `Build Discord Assets` で、リポジトリ内のMarkdownと
 1. GitHubの `Actions` タブを開く
 2. `Build Discord Assets` を選ぶ
 3. `Run workflow` を押す
-4. 完了後、画面下部の `Artifacts` から `discord-assets` をダウンロードする
-5. 必要なPDFまたはPNGをDiscordへ手動で添付する
+4. 完了した実行履歴を開く
+5. 実行結果ページの `Artifacts` から `discord-assets` をダウンロードする
+6. ダウンロードしたZIPを展開し、必要なPDFまたはPNGをDiscordへ手動で添付する
 
-手元で同じ変換を行う場合は、Pandoc、LuaLaTeX、Poppler、LibreOfficeを入れた上で次を実行します。
+手元で同じ変換を行う場合は、Pandoc、Google ChromeまたはChromium、Poppler、LibreOfficeを入れた上で次を実行します。
 
 ```sh
 bash scripts/build_discord_assets.sh
 ```
 
 生成先は `outputs/discord_assets/` です。Excelは事前に印刷範囲、用紙方向、改ページを整えておくとPDF/PNGが見やすくなります。
+
+GitHub Actionsで作ったPDF/PNGはリポジトリのファイル一覧には追加されません。Actionsの実行結果に保存される一時成果物として扱います。
 
 注意: `outputs/` は `.gitignore` 対象なので、GitHub Actionsで変換したいExcelは `strategy/`、`docs/`、`sheets/` などGit管理対象の場所に置きます。
 

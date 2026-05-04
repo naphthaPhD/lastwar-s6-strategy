@@ -12,6 +12,7 @@ on:
       - "**/*.xlsm"
       - ".github/workflows/build-discord-assets.yml"
       - "scripts/build_discord_assets.sh"
+      - "scripts/discord_assets_style.html"
 
 permissions:
   contents: read
@@ -31,11 +32,7 @@ jobs:
             fonts-noto-cjk \
             libreoffice \
             pandoc \
-            poppler-utils \
-            texlive-lang-japanese \
-            texlive-latex-extra \
-            texlive-latex-recommended \
-            texlive-luatex
+            poppler-utils
 
       - name: Build PDFs and PNGs
         run: bash scripts/build_discord_assets.sh

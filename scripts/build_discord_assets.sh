@@ -3,6 +3,8 @@ set -euo pipefail
 
 OUTPUT_DIR="${OUTPUT_DIR:-outputs/discord_assets}"
 PNG_DPI="${PNG_DPI:-180}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+STYLE_FILE="$SCRIPT_DIR/discord_assets_style.html"
 
 fail() {
   echo "error: $*" >&2
@@ -25,6 +27,30 @@ find_libreoffice() {
   fi
 }
 
+find_chrome() {
+  if command -v google-chrome >/dev/null 2>&1; then
+    command -v google-chrome
+  elif command -v google-chrome-stable >/dev/null 2>&1; then
+    command -v google-chrome-stable
+  elif command -v chromium >/dev/null 2>&1; then
+    command -v chromium
+  elif command -v chromium-browser >/dev/null 2>&1; then
+    command -v chromium-browser
+  elif [[ -x /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome ]]; then
+    printf '%s\n' "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+  elif [[ -x /Applications/Chromium.app/Contents/MacOS/Chromium ]]; then
+    printf '%s\n' "/Applications/Chromium.app/Contents/MacOS/Chromium"
+  else
+    return 1
+  fi
+}
+
+absolute_path() {
+  local dir
+  dir="$(cd "$(dirname "$1")" && pwd -P)"
+  printf '%s/%s' "$dir" "$(basename "$1")"
+}
+
 safe_stem() {
   local path="${1#./}"
   local stem="${path%.*}"
@@ -40,24 +66,36 @@ source_find_base=(
 )
 
 require_command pandoc
-require_command lualatex
 require_command pdftoppm
+[[ -f "$STYLE_FILE" ]] || fail "style file not found: $STYLE_FILE"
 
 mkdir -p "$OUTPUT_DIR"
-rm -f "$OUTPUT_DIR"/*.pdf "$OUTPUT_DIR"/*.png
+rm -f "$OUTPUT_DIR"/*.html "$OUTPUT_DIR"/*.pdf "$OUTPUT_DIR"/*.png
 
 markdown_count=0
 while IFS= read -r file; do
+  chrome_bin="$(find_chrome)" || fail "Google Chrome or Chromium is required to convert Markdown files"
   stem="$(safe_stem "$file")"
+  tmp_dir="$(mktemp -d)"
+  html="$tmp_dir/${stem}.html"
   pdf="$OUTPUT_DIR/${stem}.pdf"
-  echo "Markdown -> PDF: $file"
+  echo "Markdown -> HTML -> PDF: $file"
   pandoc "$file" \
     --from=gfm+hard_line_breaks \
-    --pdf-engine=lualatex \
-    -V documentclass=ltjsarticle \
-    -V papersize=a4 \
-    -V geometry:margin=18mm \
-    -o "$pdf"
+    --standalone \
+    --metadata title="$file" \
+    --include-in-header="$STYLE_FILE" \
+    -o "$html"
+  "$chrome_bin" \
+    --headless \
+    --disable-gpu \
+    --disable-dev-shm-usage \
+    --no-sandbox \
+    --no-pdf-header-footer \
+    --print-to-pdf-no-header \
+    --print-to-pdf="$(absolute_path "$pdf")" \
+    "file://$(absolute_path "$html")"
+  rm -rf "$tmp_dir"
   markdown_count=$((markdown_count + 1))
 done < <(find "${source_find_base[@]}" -type f -name "*.md" -print | sort)
 
