@@ -31,6 +31,7 @@ Season 6 の仕様は docs/season6_mechanics.md、方針は strategy/season6_str
 | `strategy/jdx_executive_brief_v2.md` | 公式Wiki貼り付け情報反映後の幹部Discord共有用要約 |
 | `strategy/member_start_checklist.md` | S6開始前・開始直後に連盟員へ貼る短縮チェックリスト |
 | `strategy/week1_member_playbook.md` | S6開始後1週目の連盟メンバー向け行動指示 |
+| `strategy/hero_power_growth_by_spend.md` | 無課金・微課金・廃課金別の英雄戦力育成方針 |
 | `strategy/map_planning_notes.md` | Cpt Hedge S6地図を使ったゾーン対応、初期集合、ルート計画メモ |
 | `strategy/cpt_hedge_map_workflow.md` | Cpt Hedge地図の非公式扱い、グリッド命名、色分け、Discord共有、JSON保存ルール |
 | `outputs/lastwar_s6_latest_*.csv` | 戦力ランキングCSV。`.gitignore` 対象でGitHubには通常含めない |
