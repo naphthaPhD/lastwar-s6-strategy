@@ -14,6 +14,7 @@
 | `docs/content_review_2026-05-03.md` | 2026-05-03時点のレビュー |
 | `research/source_log.md` | 画像、外部情報、ローカル生成データの根拠ログ |
 | `strategy/season6_strategy.md` | JDX/#534の戦略本体 |
+| `strategy/hero_power_growth_by_spend.md` | 無課金・微課金・廃課金別の英雄戦力育成方針 |
 | `strategy/action_plan.md` | 今後の実行タスク |
 | `strategy/jdx_executive_brief_v2.md` | 幹部Discord向けの現行共有文 |
 | `strategy/member_start_checklist.md` | 連盟員向けの開始前・開始直後チェックリスト |
@@ -26,7 +27,7 @@
 
 | パス | 扱い |
 |---|---|
-| `strategy/jdx_executive_brief.md` | 旧版。#509連携を強めに置いた初期案として残す。共有はv2を使う |
+| `strategy/archive/jdx_executive_brief.md` | 旧版。#509連携を強めに置いた初期案として退避。共有はv2を使う |
 | `templates/screenshot_review_template.md` | 画像確認の記録テンプレート |
 
 ## ローカル管理素材
