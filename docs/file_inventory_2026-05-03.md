@@ -20,6 +20,7 @@
 | `strategy/member_start_checklist.md` | 連盟員向けの開始前・開始直後チェックリスト |
 | `strategy/week1_member_playbook.md` | Week 1メンバー向け指示 |
 | `strategy/map_planning_notes.md` | Cpt Hedge地図とゲーム内配置を使った作戦メモ |
+| `strategy/476_invasion_map_assessment_2026-05-07.md` | #476の中央侵攻/#534妨害ルート評価 |
 | `strategy/cpt_hedge_map_workflow.md` | Cpt Hedge地図を非公式作戦図として使うための運用手順 |
 | `strategy/server_strategy_comparison_2026-05-03.md` | 戦力CSVから作成したサーバー別比較 |
 
