@@ -11,6 +11,7 @@
 | `docs/season6_mechanics.md` | S6仕様の確認済み/仮説/要確認整理 |
 | `docs/context_handoff.md` | 新しいチャットへ渡す引き継ぎ |
 | `docs/previous_thread_summary.md` | 前回チャットの復元メモ |
+| `docs/shadow_jungle_info_previous_thread.md` | 前回チャット復元メモからJDX方針を除いた情報抽出版 |
 | `docs/content_review_2026-05-03.md` | 2026-05-03時点のレビュー |
 | `research/source_log.md` | 画像、外部情報、ローカル生成データの根拠ログ |
 | `strategy/season6_strategy.md` | JDX/#534の戦略本体 |
