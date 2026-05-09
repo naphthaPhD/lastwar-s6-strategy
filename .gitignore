@@ -16,6 +16,7 @@ node_modules/
 # Generated or bulky exports should be opted in explicitly.
 outputs/
 map_exports/
+*.pdf
 *.zip
 *.tar
 *.tar.gz
