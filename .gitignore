@@ -15,6 +15,7 @@ node_modules/
 
 # Generated or bulky exports should be opted in explicitly.
 outputs/
+S6powerrank/
 map_exports/
 *.pdf
 *.zip
