@@ -104,6 +104,11 @@
 | 2026-05-03 | `outputs/sheets/s6powerrank_8server_power_2026-05-03.xlsx` | 8サーバー戦力ランキングのExcel整理版 | `outputs/` 配下のためGitHubには含めない |
 | 2026-05-03 | `outputs/s6powerrank_review_2026-05-03.csv` | OCR/抽出で要確認になった行 | 連盟タグ未確認などのレビュー対象 |
 | 2026-05-03 | `outputs/s6powerrank_multilingual_review_2026-05-03.csv` | 多言語名のOCRレビュー対象 | 自動置換禁止。必要なら画像で個別確認 |
+| 2026-05-10 | `/Users/mba2025/Downloads/s6powerrank_8server_power_2026-05-10.ods` | 別GPTでOCR作成された高精度ODS。英雄Top100 x 8サーバー、連盟ランキングを含む | ローカル入力。Google Driveへは未アップロード。連盟名変更や多言語名を含む現行優先データ |
+| 2026-05-10 | `outputs/s6powerrank_hero_rankings_ods_2026-05-10.csv` | ODSから再抽出した英雄/司令官ランキング | 800行、全サーバーTop100欠番なし。多言語名はODS原文保持 |
+| 2026-05-10 | `outputs/s6powerrank_alliance_rankings_ods_2026-05-10.csv` | ODSから再抽出した連盟ランキング | 289行。全サーバーTop9比較可能。#503/#534は50位まで取得 |
+| 2026-05-10 | `outputs/sheets/s6powerrank_8server_power_2026-05-10_ods.xlsx` | ODS版OCRから作成した日本語Excel | `outputs/` 配下のためGitHubには含めない。MDには `strategy/server_strategy_comparison_2026-05-10.md` として転記 |
+| 2026-05-10 | `outputs/sheets/s6powerrank_8server_power_2026-05-10_ods_en.xlsx` | ODS版OCRから作成した英語Excel | 海外勢共有用。Unicode名は原文保持 |
 
 ## 未検証の噂・仮説
 

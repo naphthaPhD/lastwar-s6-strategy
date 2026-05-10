@@ -48,6 +48,8 @@
 - `outputs/lastwar_s6_latest_rankings_combined.csv`
 - `strategy/server_strategy_comparison_2026-05-03.md`
 
+補足: これは前回チャット時点の参照一覧。現行の戦力判断は `strategy/server_strategy_comparison_2026-05-10.md` を優先する。
+
 ## 前回停止時の状態
 
 - Google Drive の `S6` フォルダにランキング画像をアップロード済み。

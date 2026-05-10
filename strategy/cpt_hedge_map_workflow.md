@@ -89,17 +89,17 @@ map_exports/2026-05-03/20260503_476_Watch_Line_v01.png
 
 優先する入力:
 
-- `outputs/s6powerrank_alliance_rankings_2026-05-03.csv`
-- `outputs/s6powerrank_hero_rankings_2026-05-03.csv`
-- `strategy/server_strategy_comparison_2026-05-03.md`
+- `outputs/s6powerrank_alliance_rankings_ods_2026-05-10.csv`
+- `outputs/s6powerrank_hero_rankings_ods_2026-05-10.csv`
+- `strategy/server_strategy_comparison_2026-05-10.md`
 
 地図への反映:
 
 | 対象 | 地図上の扱い | 理由 |
 |---|---|---|
-| #476 | 赤を濃く、警戒線を太めにする | Top9/Top6/Top3すべて最大。#534南の最大圧力 |
-| #509 | 水色の候補線を太めにする | 味方Top9 2位。#503方面と中央参加の生命線 |
-| #440 | 金色で方針軸として示す | Top3は強いが#534から遠い。初期防衛の直接戦力とは分ける |
+| #476 | 赤を濃く、警戒線を太めにする | 2026-05-10 ODS版でもTop9/Top6/Top3すべて最大。#534南の最大圧力 |
+| #509 | 水色の候補線を太めにする | 味方Top9 2位で実働主力候補。#503方面と中央参加の生命線 |
+| #440 | 金色で方針軸として示す | 英雄Top100とTop3は強いがTop9は薄め。#534から遠いため初期防衛の直接戦力とは分ける |
 | #511 | 薄い緑または支援マーク | 味方で最も薄い。単独主戦線より支援対象 |
 | #480/#503/#523 | 敵色を分ける | #503は#509方面、#480/#523は中央・下側連動を監視 |
 
