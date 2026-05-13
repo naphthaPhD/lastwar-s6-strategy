@@ -20,6 +20,7 @@
 | `strategy/jdx_executive_brief_v2.md` | 幹部Discord向けの現行共有文 |
 | `strategy/member_start_checklist.md` | 連盟員向けの開始前・開始直後チェックリスト |
 | `strategy/week1_member_playbook.md` | Week 1メンバー向け指示 |
+| `strategy/509_week2_proposal_2026-05-12.md` | #509大統領・作戦担当へ送るWeek 2中央入口/#503方面提案文 |
 | `strategy/map_planning_notes.md` | Cpt Hedge地図とゲーム内配置を使った作戦メモ |
 | `strategy/base_occupation_plan_2026-05-12.md` | 7日目までの占領予定図を使った拠点取得・担当境界・中央入口・防衛ライン・戦力比較反映の判断メモ |
 | `strategy/476_invasion_map_assessment_2026-05-07.md` | #476の中央侵攻/#534妨害ルート評価 |
