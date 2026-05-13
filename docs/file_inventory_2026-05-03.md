@@ -9,6 +9,7 @@
 | `README.md` | プロジェクト入口。作業方針と素材の扱い |
 | `docs/00_project_brief.md` | 現在の前提、未確定事項、意思決定基準 |
 | `docs/season6_mechanics.md` | S6仕様の確認済み/仮説/要確認整理 |
+| `docs/english_discord_season6_delta_2026-05-13.md` | 公式英語版Discord `#season-6` の差分抽出。日本語版で未記録/弱かったStaff・Mod・Advisor回答と要確認の観測を分離 |
 | `docs/context_handoff.md` | 新しいチャットへ渡す引き継ぎ |
 | `docs/previous_thread_summary.md` | 前回チャットの復元メモ |
 | `docs/shadow_jungle_info_previous_thread.md` | 前回チャット復元メモからJDX方針を除いた情報抽出版 |
