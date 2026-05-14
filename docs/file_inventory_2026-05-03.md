@@ -10,7 +10,7 @@
 | `docs/00_project_brief.md` | 現在の前提、未確定事項、意思決定基準 |
 | `docs/season6_mechanics.md` | S6仕様の確認済み/仮説/要確認整理 |
 | `docs/english_discord_season6_delta_2026-05-13.md` | 公式英語版Discord `#season-6` の差分抽出。日本語版で未記録/弱かったStaff・Mod・Advisor回答と要確認の観測を分離 |
-| `docs/japanese_discord_season6_delta_2026-05-13.md` | 公式日本語Discord `#🐊シーズン6-シャドウジャングル` HTML全件走査の差分抽出。盟約更新後挙動、巨大花未適用観測、最新日本語ログの補強を分離 |
+| `docs/japanese_discord_season6_delta_2026-05-13.md` | 公式日本語Discord `#🐊シーズン6-シャドウジャングル` HTML全件走査の差分抽出。盟約更新後挙動、巨大花未適用観測、盟約隣接条件、最新日本語ログの補強を分離 |
 | `docs/context_handoff.md` | 新しいチャットへ渡す引き継ぎ |
 | `docs/previous_thread_summary.md` | 前回チャットの復元メモ |
 | `docs/shadow_jungle_info_previous_thread.md` | 前回チャット復元メモからJDX方針を除いた情報抽出版 |
@@ -22,6 +22,7 @@
 | `strategy/jdx_executive_brief_v2.md` | 幹部Discord向けの現行共有文 |
 | `strategy/member_start_checklist.md` | 連盟員向けの開始前・開始直後チェックリスト |
 | `strategy/week1_member_playbook.md` | Week 1メンバー向け指示 |
+| `strategy/534_defense_line_abc_2026-05-14.md` | #476侵攻に備える#534 A/B/C防衛ライン、初戦接触漁場、連盟割り振り案 |
 | `strategy/509_week2_proposal_2026-05-12.md` | #509大統領・作戦担当へ送るWeek 2中央入口/#503方面提案文 |
 | `strategy/map_planning_notes.md` | Cpt Hedge地図とゲーム内配置を使った作戦メモ |
 | `strategy/base_occupation_plan_2026-05-12.md` | 7日目までの占領予定図を使った拠点取得・担当境界・中央入口・防衛ライン・戦力比較反映の判断メモ |
