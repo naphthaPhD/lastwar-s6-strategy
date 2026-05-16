@@ -74,6 +74,8 @@ Season 6 の仕様は docs/season6_mechanics.md、方針は strategy/season6_str
 - 都市行動は未占領都市も含め水曜/土曜のみ。敵陣営未占領都市を常時破壊できる前提にはしない。
 - FG/Strongholdの同日取得後の保護明けは表示バグ疑いと実際に取得できた例が並んだため、保護表より対象画面の保護終了表示と宣戦/取得ボタンを優先する。
 
+2026-05-17にNao氏note `シーズン6情報まとめ` を確認。基本仕様は既存情報と重複が多く、非公式記事のため上書き根拠にはしない。追加価値として、拠点ボスLv1-Lv7の耐性目安と占領時参加戦力例を `docs/season6_mechanics.md` / `strategy/action_plan.md` / `research/source_log.md` に低-中信頼度で追記した。
+
 ## 作業方針
 
 - 会話だけに重要情報を残さない
