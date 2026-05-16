@@ -22,6 +22,8 @@ Season 6 の仕様は docs/season6_mechanics.md、方針は strategy/season6_str
 | `docs/season6_mechanics.md` | Season 6 の仕様整理 |
 | `docs/file_inventory_2026-05-03.md` | フォルダ内ファイルの棚卸しとGitHubへ載せる/載せない整理 |
 | `docs/previous_thread_summary.md` | 前回チャット「シャドウジャングル情報を収集」の復元メモ |
+| `docs/english_discord_season6_delta_2026-05-13.md` | 公式英語版Discord `#season-6` のHTML走査差分 |
+| `docs/japanese_discord_season6_delta_2026-05-13.md` | 公式日本語Discord `#🐊シーズン6-シャドウジャングル` のHTML走査差分 |
 | `docs/content_review_2026-05-03.md` | 2026-05-03時点の内容確認メモ |
 | `research/source_log.md` | スクリーンショットや外部情報の根拠ログ |
 | `strategy/season6_strategy.md` | 戦略方針 |
@@ -51,6 +53,19 @@ Season 6 の仕様は docs/season6_mechanics.md、方針は strategy/season6_str
 別GPTでOCR作成された `s6powerrank_8server_power_2026-05-10.ods` を優先データとして再集計し、`strategy/server_strategy_comparison_2026-05-10.md` を現行のサーバー別戦力比較にした。ローカルExcelは `outputs/sheets/s6powerrank_8server_power_2026-05-10_ods.xlsx` と英語版 `outputs/sheets/s6powerrank_8server_power_2026-05-10_ods_en.xlsx`。
 
 重要な読みは、#476が連盟Top9/Top6/Top3すべて最大、#509が味方側の実働主力候補、#534は英雄Top100では4位だが連盟Top9では5位というもの。#534単独で#476を正面から押し返すより、南の遅滞、#509連携、#440方針確認を組み合わせる。
+
+## 2026-05-16 公式Discord HTML更新
+
+英語版公式Discord `#season-6` HTML更新版を7,238投稿、JST換算2026-05-16 09:57まで再走査した。日本語版公式 `#🐊シーズン6-シャドウジャングル` は687投稿、JST換算2026-05-16 09:00まで確認した。
+
+主な追加点:
+
+- 盟約成立後は相手領土を広く進行用隣接として使える実地回答あり。ただし祭壇・交易地は接続元ではなく、味方都市へ接続した漁場を間接的なpact接続元にする扱いも否定回答あり。
+- 1日のFG/Stronghold取得上限を使い切ると、盟約先の取得支援/増援にも参加できないStaff回答あり。取得担当と支援担当は枠を分ける。
+- FG攻撃アイコンはバリア解除対象。増援は維持の可能性が高いが、初回に攻撃/増援表示を確認する。
+- 交易地は接続足場ではないが、交易地攻撃自体は隣接不要という実務回答あり。
+- 日本語版では、序盤は陣営科学優先、ただし連盟スキル40回実績のため解放後はカエルの贈り物も使う、という実務整理を追加。
+- 巨大ワニは同じWarzone/エリアに基地がないと集結できない可能性があるため、発生時の移設要否を確認する。
 
 ## 作業方針
 
