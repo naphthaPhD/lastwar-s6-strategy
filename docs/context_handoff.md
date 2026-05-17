@@ -34,6 +34,7 @@ Season 6 の仕様は docs/season6_mechanics.md、方針は strategy/season6_str
 | `strategy/jdx_executive_brief_v2.md` | 公式Wiki貼り付け情報反映後の幹部Discord共有用要約 |
 | `strategy/534_defense_line_abc_2026-05-14.md` | #476侵攻に備える#534 A/B/C防衛ライン、初戦接触漁場、連盟割り振り案 |
 | `strategy/509_week2_proposal_2026-05-12.md` | #509大統領・作戦担当へ送るWeek 2中央入口/#503方面提案文 |
+| `strategy/509_534_voice_meeting_2026-05-17.md` | #509/#534音声会議要約。#503攻撃方針、#476遅滞、2026-05-20水曜攻撃候補、盟約経由中央進出の確認事項 |
 | `strategy/member_start_checklist.md` | S6開始前・開始直後に連盟員へ貼る短縮チェックリスト |
 | `strategy/week1_member_playbook.md` | S6開始後1週目の連盟メンバー向け行動指示 |
 | `strategy/hero_power_growth_by_spend.md` | 無課金・微課金・廃課金別の英雄戦力育成方針 |
@@ -77,6 +78,31 @@ Season 6 の仕様は docs/season6_mechanics.md、方針は strategy/season6_str
 2026-05-17にNao氏note `シーズン6情報まとめ` を確認。基本仕様は既存情報と重複が多く、非公式記事のため上書き根拠にはしない。追加価値として、拠点ボスLv1-Lv7の耐性目安と占領時参加戦力例を `docs/season6_mechanics.md` / `strategy/action_plan.md` / `research/source_log.md` に低-中信頼度で追記した。
 
 同日昼に英語/日本語Discord HTML更新版を再走査。英語版は前回末尾以降17投稿、JST換算2026-05-17 06:33まで、日本語版は1投稿、JST換算2026-05-17 01:50まで。どちらも確定回答はなく、中央FG斜め隣接、盟約領土を使った敵都市破壊、VS移設時の軍功階級バフ、祭壇の1日占領数制限を未回答項目として追記した。
+
+## 2026-05-17 KTVS外交予定
+
+ユーザー共有Discord本文で、KTVSの今後予定を確認した。4thとの盟約は早くても水曜以降になるため、KTVSは先に509VEXとの盟約交渉を進めている。成立すれば遅くとも火曜にはL5へ入り、その後4thとの盟約へ切り替え、4thから順に南側に布陣した各連盟を誘致する構想。
+
+反映先:
+
+- `research/source_log.md`: ユーザー報告として記録。
+- `strategy/season6_strategy.md`: KTVS/VEX/4thを暫定盟約から切替する外交前提として追記。
+- `strategy/action_plan.md`: 火曜L5入り、VEX盟約範囲、4th切替、南側誘致順の確認タスクを追加。
+- `strategy/534_defense_line_abc_2026-05-14.md`: VEXを暫定接続/支援候補として扱い、Cライン防衛をVEX前提だけで組まない注意を追記。
+- `strategy/509_week2_proposal_2026-05-12.md`: #509へ相談する前の確認事項にVEX暫定盟約と4th切替を追加。
+
+## 2026-05-17 #509/#534音声会議
+
+ユーザー共有の `2026-05-17 00-14-36-transcript.txt` を読み、`strategy/509_534_voice_meeting_2026-05-17.md` を作成した。自動文字起こしのため、画面共有で指していた座標・連盟名は未確定として扱う。
+
+主な反映:
+
+- #509側は#503を2点から攻撃し、線を塞ぐ方針。
+- #534の主任務は#476遅滞。兵を無駄にせず、保護更新/リセットで遅らせる。
+- ただし純防衛ではなく、#476側に弱い連盟や空いたラインがあれば水曜/土曜に攻撃する。
+- 会話内の `next Wednesday` は、会議日から見て 2026-05-20 水曜として扱う。SVT/JTと応戦時間は要確認。
+- 中央進出は、味方連盟が先に進み、後から盟約を切り替えて#534が入る案も候補。
+- 日曜までに取るべき2セル、KTVSが取るべきセル、黄色/紫/緑/IXMらしき対象は座標未確定。ゲーム内地図で再確認する。
 
 ## 作業方針
 
