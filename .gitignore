@@ -2,6 +2,8 @@
 .DS_Store
 node_modules
 node_modules/
+.venv/
+.tessdata/
 
 # Screenshots and image captures stay local/Drive-only.
 *.PNG
