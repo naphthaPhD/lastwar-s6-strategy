@@ -4,41 +4,33 @@
 2026-05-26
 
 ## Context
-Repository operation was aligned around using this project as a Codex-GitHub-ChatGPT handoff ledger for Last War Season 6 strategy work.
+Past work in this S6 project was consolidated into a GitHub-readable project summary and timeline for ChatGPT review.
 
 ## Updated Files
-- `AGENTS.md`
-- `.gitignore`
-- `README.md`
+- `analysis/2026-05-26_project_work_summary.md`
+- `logs/timeline/2026-05-26_project_work_timeline.md`
 - `analysis/latest_handoff.md`
-- `logs/timeline/.gitkeep`
-- `logs/chat/.gitkeep`
-- `logs/decisions/.gitkeep`
-- `rules/.gitkeep`
-- `data/.gitkeep`
-- `prompts/.gitkeep`
-- `screenshots/selected/.gitkeep`
 
 ## Key Findings
-1. Existing `docs/` and `strategy/` files should remain the canonical strategy and mechanics layer.
-2. `analysis/latest_handoff.md` should be the first ChatGPT entry point after each completed work unit.
-3. Bulk screenshots, OCR intermediates, cache outputs, and broad local helper scripts should stay out of Git unless explicitly selected.
+1. The project work so far falls into mechanics research, strategy planning, map/alliance operations, diplomacy coordination, ranking/OCR, Google Sheets integration, and repository workflow.
+2. The canonical operational documents remain `docs/season6_mechanics.md`, `strategy/season6_strategy.md`, `strategy/action_plan.md`, and `research/source_log.md`.
+3. Current strategy still centers on #534/JDX avoiding a direct solo push into #476, using delay/defense, #509/#440 coordination, and live-sheet verification for map-state decisions.
 
 ## Current Risks
-1. The worktree already contains unrelated local or untracked files, so future commits must continue to stage only intended files.
-2. The `tools/` directory contains many local scripts; only allowlisted or explicitly selected scripts should be committed.
-3. Live Google Sheets and map-state analysis can drift quickly, so snapshot-specific conclusions should include dates and source IDs.
+1. Live Google Sheets, map ownership, protection windows, and battle-ready times can drift quickly.
+2. Some prior Sheets/script work changed preserved source tabs or local outputs, not necessarily live Apps Script runtime.
+3. The worktree still contains unrelated untracked local files, so future commits must stage only intended files.
 
 ## Recommended Next Actions
-1. Use this handoff file as the update target for the next S6 analysis or automation run.
-2. When a durable analysis is produced, save it under `analysis/YYYY-MM-DD_topic_analysis.md`.
-3. When event chronology matters, add a dated timeline under `logs/timeline/`.
+1. Review `analysis/2026-05-26_project_work_summary.md` before the next ChatGPT strategic interpretation pass.
+2. For the next live operation decision, refresh the live map sheet and record exact source IDs/timestamps.
+3. Continue writing durable analyses to `analysis/` and event chronology to `logs/timeline/`.
 
 ## Questions for ChatGPT
-1. Is the handoff summary sufficient for the next strategic interpretation pass?
-2. Should the next shared brief be aimed at JDX officers or broader #534 members?
-3. What additional live sheet or screenshot evidence is needed before the next operation decision?
+1. Does the consolidated summary miss any major workstream that should be visible to future reviewers?
+2. Which current open item should be converted into the next JDX officer brief?
+3. What live sheet or screenshot evidence is required before the next map-operation recommendation?
 
 ## Notes
-- This file is a reusable template and should be overwritten with the latest completed work unit.
-- Keep exact sheet IDs, source files, and timestamps in future updates when they affect the conclusion.
+- `jdx_run_note_latest.md` and broad local `tools/` files remain untracked and were not included directly in this commit.
+- The JDX screenshot-run result from `jdx_run_note_latest.md` was summarized in the project work summary.
