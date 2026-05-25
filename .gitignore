@@ -1,8 +1,12 @@
 # Local/system files
 .DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
 node_modules
 node_modules/
 .venv/
+venv/
 .tessdata/
 
 # Screenshots and image captures stay local/Drive-only.
@@ -26,9 +30,43 @@ map_exports/
 
 # Local extraction/utility scripts. Keep GitHub docs-only unless explicitly needed.
 build_*.py
-tools/
+tools/*
+!tools/chat_event_preprocessor/
+!tools/chat_event_preprocessor/**
+tools/chat_event_preprocessor/_tmp_test/
+tools/chat_event_preprocessor/__pycache__/
+tools/chat_event_preprocessor/*.pyc
 
-# Temporary files
+# Logs and temporary files
+*.log
 *.tmp
 *.swp
 *~
+tmp/
+temp/
+cache/
+debug/
+output_tmp/
+intermediate/
+
+# OCR temporary outputs
+cropped/
+crop/
+ocr_tmp/
+ocr_debug/
+failed_ocr/
+raw_ocr/
+
+# Bulk screenshots
+screenshots/raw/
+screenshots/cropped/
+screenshots/tmp/
+
+# Allow selected evidence screenshots when explicitly added.
+!screenshots/
+!screenshots/selected/
+!screenshots/selected/**
+
+# Local environment
+.env
+.env.local

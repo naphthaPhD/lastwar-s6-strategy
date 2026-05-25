@@ -21,6 +21,17 @@
 
 チャットの文脈が長くなった場合は、`docs/context_handoff.md` を新しいスレッドの再開用メモとして使います。
 
+## Codex / ChatGPT 運用
+
+このリポジトリは、Codexで整理したS6作戦材料をGitHubに残し、ChatGPTが確認・解釈しやすくするための引き継ぎ台帳として使います。
+
+- 作業後は `analysis/latest_handoff.md` を更新し、ChatGPTが最初に読む入口にします。
+- 耐久的な分析は `analysis/YYYY-MM-DD_topic_analysis.md`、時系列は `logs/timeline/`、構造化データは `data/` に保存します。
+- チャットログやOCR済み会話データは `logs/chat/`、作戦判断や外交判断は `logs/decisions/` に整理します。
+- S6仕様の最終整理は引き続き `docs/season6_mechanics.md`、戦略本体は `strategy/season6_strategy.md`、実行タスクは `strategy/action_plan.md` に反映します。
+- 大量スクリーンショット、crop画像、OCR途中ファイル、キャッシュ、生成物は原則commitしません。重要な証拠画像だけ `screenshots/selected/` に置きます。
+- commit前は対象ファイルを選別し、`git add .` は使いません。
+
 ## Discord添付用PDF/PNG
 
 GitHub Actions の `Build Discord Assets` で、リポジトリ内のMarkdownとExcelファイルをDiscord添付用のPDF/PNGに変換できます。
