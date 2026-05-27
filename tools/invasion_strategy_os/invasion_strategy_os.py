@@ -53,6 +53,9 @@ class Node:
     y: float
     importance: float
     area: str = ""
+    acquired_at: str | None = None
+    status: str = ""
+    memo: str = ""
 
 
 @dataclass(frozen=True)
@@ -85,7 +88,59 @@ def read_csv_rows(source: dict[str, Any], base_dir: Path) -> list[dict[str, str]
     else:
         raise ValueError(f"Unsupported source type: {source_type}")
 
+    if source.get("format") == "management_table":
+        return parse_management_table_rows(text)
     return list(csv.DictReader(text.splitlines()))
+
+
+def parse_management_table_rows(text: str) -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+    for row_number, row in enumerate(csv.reader(text.splitlines()), start=1):
+        padded = row + [""] * max(0, 20 - len(row))
+        coord = padded[1].strip() or padded[0].strip()
+        area = padded[18].strip()
+        position_key = padded[19].strip()
+        if row_number == 1 or coord in {"座標", "座標(自動)"}:
+            continue
+        if not coord or not area or not position_key:
+            continue
+        x, y = local_coord_xy(coord)
+        rows.append(
+            {
+                "id": position_key,
+                "name": coord,
+                "type": padded[2].strip(),
+                "owner": padded[3].strip(),
+                "protect_until": padded[5].strip(),
+                "x": str(x),
+                "y": str(y),
+                "area": area,
+                "acquired_at": padded[4].strip(),
+                "status": padded[7].strip(),
+                "memo": padded[11].strip(),
+            }
+        )
+    return rows
+
+
+def local_coord_xy(coord: str) -> tuple[float, float]:
+    match = re.match(r"^([A-Ka-j])-(\d+)$", coord.strip())
+    if not match:
+        return 0.0, 0.0
+    letter, number_text = match.groups()
+    number = int(number_text)
+    if letter.isupper():
+        axis = [20, 99, 199, 299, 399, 499, 599, 699, 799, 899, 978]
+        row_index = ord(letter) - ord("A")
+        col_index = (number - 1) // 2
+        if row_index < 0 or row_index >= len(axis) or col_index < 0 or col_index >= len(axis):
+            return 0.0, 0.0
+        return float(axis[col_index]), float(axis[row_index])
+    row_index = ord(letter) - ord("a")
+    col_index = (number - 2) // 2
+    if row_index < 0 or row_index >= 10 or col_index < 0 or col_index >= 10:
+        return 0.0, 0.0
+    return float(49 + col_index * 100), float(49 + row_index * 100)
 
 
 def google_sheet_csv_url(source: dict[str, Any]) -> str:
@@ -110,6 +165,36 @@ def parse_float(value: str, default: float = 0.0) -> float:
     if value == "":
         return default
     return float(str(value).replace(",", ""))
+
+
+def parse_coord_letter(value: str) -> str:
+    match = re.search(r"(?:^|:)([A-Za-z])-\d+$", value.strip())
+    return match.group(1) if match else ""
+
+
+def normalize_node_type(raw_type: str, coord: str, config: dict[str, Any]) -> str:
+    node_type = raw_type or "unknown"
+    if not config.get("type_from_coord_case"):
+        return node_type
+    isolated_types = {str(value) for value in config.get("isolated_types", [])}
+    if node_type in isolated_types:
+        return node_type
+    letter = parse_coord_letter(coord)
+    if not letter:
+        return node_type
+    if letter.islower():
+        return str(config.get("city_type", "city"))
+    if letter.isupper():
+        return str(config.get("fishery_type", "fishery"))
+    return node_type
+
+
+def apply_area_offset(x: float, y: float, area: str, config: dict[str, Any]) -> tuple[float, float]:
+    offsets = config.get("area_offsets", {})
+    offset = offsets.get(area, [0, 0])
+    if len(offset) != 2:
+        raise ValueError(f"area_offsets for {area} must have exactly two numbers")
+    return x + float(offset[0]), y + float(offset[1])
 
 
 def parse_optional_time(value: str | None, tz: ZoneInfo) -> datetime | None:
@@ -142,6 +227,7 @@ def load_nodes(rows: list[dict[str, str]], config: dict[str, Any]) -> tuple[dict
     nodes: dict[str, Node] = {}
     adjacency_edges: list[Edge] = []
     area_filter = set(config.get("areas", []))
+    excluded_areas = set(config.get("exclude_areas", []))
     importance_by_type = {str(key): float(value) for key, value in config.get("importance_by_type", {}).items()}
     for row_number, row in enumerate(rows, start=2):
         node_id = pick(row, NODE_ALIASES, "id")
@@ -150,21 +236,30 @@ def load_nodes(rows: list[dict[str, str]], config: dict[str, Any]) -> tuple[dict
         area = pick(row, NODE_ALIASES, "area")
         if area_filter and area not in area_filter:
             continue
-        node_type = pick(row, NODE_ALIASES, "type", "unknown") or "unknown"
+        if area in excluded_areas:
+            continue
+        node_name = pick(row, NODE_ALIASES, "name", node_id) or node_id
+        node_type = normalize_node_type(pick(row, NODE_ALIASES, "type", "unknown"), node_name, config)
+        local_x = parse_float(pick(row, NODE_ALIASES, "x"))
+        local_y = parse_float(pick(row, NODE_ALIASES, "y"))
+        x, y = apply_area_offset(local_x, local_y, area, config)
         importance = parse_float(
             pick(row, NODE_ALIASES, "importance"),
             importance_by_type.get(node_type, 1.0),
         )
         node = Node(
             id=node_id,
-            name=pick(row, NODE_ALIASES, "name", node_id) or node_id,
+            name=node_name,
             type=node_type,
             owner=pick(row, NODE_ALIASES, "owner", "unknown") or "unknown",
             protect_until=pick(row, NODE_ALIASES, "protect_until") or None,
-            x=parse_float(pick(row, NODE_ALIASES, "x")),
-            y=parse_float(pick(row, NODE_ALIASES, "y")),
+            x=x,
+            y=y,
             importance=importance,
             area=area,
+            acquired_at=row.get("acquired_at") or None,
+            status=row.get("status", ""),
+            memo=row.get("memo", ""),
         )
         nodes[node.id] = node
         for neighbor_id in split_neighbors(pick(row, NODE_ALIASES, "adjacent")):
@@ -192,10 +287,15 @@ def derive_distance_edges(nodes: dict[str, Node], config: dict[str, Any]) -> lis
     max_distance = float(config.get("max_distance", 80))
     same_area_only = bool(config.get("same_area_only", True))
     max_edges_per_node = int(config.get("max_edges_per_node", 6))
+    isolated_types = {str(value) for value in config.get("isolated_types", [])}
     candidates: list[tuple[float, str, str]] = []
     node_items = sorted(nodes.items())
     for index, (source_id, source) in enumerate(node_items):
+        if source.type in isolated_types:
+            continue
         for target_id, target in node_items[index + 1 :]:
+            if target.type in isolated_types:
+                continue
             if same_area_only and source.area != target.area:
                 continue
             distance = ((source.x - target.x) ** 2 + (source.y - target.y) ** 2) ** 0.5
@@ -205,7 +305,7 @@ def derive_distance_edges(nodes: dict[str, Node], config: dict[str, Any]) -> lis
     degree: dict[str, int] = {node_id: 0 for node_id in nodes}
     edges: list[Edge] = []
     for distance, source_id, target_id in sorted(candidates):
-        if degree[source_id] >= max_edges_per_node or degree[target_id] >= max_edges_per_node:
+        if max_edges_per_node > 0 and (degree[source_id] >= max_edges_per_node or degree[target_id] >= max_edges_per_node):
             continue
         edges.append(Edge(source_id, target_id, round(distance, 3)))
         degree[source_id] += 1
@@ -396,6 +496,11 @@ def write_html(
     output_path.parent.mkdir(parents=True, exist_ok=True)
     critical_ids = {item["node_id"] for item in analysis["critical_nodes"]}
     warning_hours = float(config.get("protect_warning_hours", 6))
+    visual_scale = float(config.get("visual_scale", 1.0))
+    node_min_size = float(config.get("node_min_size", 12))
+    node_max_size = float(config.get("node_max_size", 55))
+    node_size_multiplier = float(config.get("node_size_multiplier", 4))
+    font_size = int(config.get("font_size", 18))
     colors_by_owner = owner_color_map({str(node_data.get("owner", "unknown")) for _, node_data in graph.nodes(data=True)})
 
     network = Network(height="820px", width="100%", bgcolor="#111827", font_color="#f9fafb", cdn_resources="local")
@@ -409,56 +514,67 @@ def write_html(
             border = "#ef4444"
         elif protect["status"] == "soon":
             border = "#facc15"
-        title = (
-            f"<b>{node.name}</b><br>"
-            f"id: {node.id}<br>"
-            f"type: {node.type}<br>"
-            f"owner: {node.owner}<br>"
-            f"importance: {node.importance}<br>"
-            f"protect: {protect['protect_until'] or 'unknown'}<br>"
-            f"remaining hours: {protect['hours_remaining']}"
-        )
+        title = f"{node.area} {node.name} / {node.type} / {node.owner}"
         network.add_node(
             node.id,
             label=node.name,
             title=title,
-            x=node.x,
-            y=-node.y,
+            x=node.x * visual_scale,
+            y=-node.y * visual_scale,
             physics=False,
-            size=max(12, min(55, 12 + node.importance * 4)),
+            size=max(node_min_size, min(node_max_size, node_min_size + node.importance * node_size_multiplier)),
             color={"background": colors_by_owner.get(node.owner, owner_color(node.owner)), "border": border},
             borderWidth=6 if node_id in critical_ids else 2,
+            area=node.area,
+            coord=node.name,
+            nodeType=node.type,
+            owner=node.owner,
+            importance=node.importance,
+            rawProtectUntil=node.protect_until or "",
+            protectUntil=protect["protect_until"] or "",
+            protectStatus=protect["status"],
+            hoursRemaining=protect["hours_remaining"],
+            acquiredAt=node.acquired_at or "",
+            mapStatus=node.status,
+            memo=node.memo,
         )
 
     for source, target, edge_data in graph.edges(data=True):
         network.add_edge(source, target, value=edge_data.get("weight", 1.0), title=f"weight: {edge_data.get('weight', 1.0)}")
 
     network.set_options(
-        """
-        {
-          "nodes": {
-            "font": {"size": 18, "face": "arial", "color": "#f9fafb", "strokeWidth": 4, "strokeColor": "#111827"},
-            "shape": "dot"
-          },
-          "edges": {
-            "color": {"color": "#94a3b8", "highlight": "#facc15"},
-            "smooth": false
-          },
-          "physics": {
-            "enabled": false,
-            "stabilization": false
-          },
-          "interaction": {
-            "hover": true,
-            "navigationButtons": true,
-            "keyboard": true
-          }
-        }
-        """
+        json.dumps(
+            {
+                "nodes": {
+                    "font": {
+                        "size": font_size,
+                        "face": "arial",
+                        "color": "#f9fafb",
+                        "strokeWidth": 4,
+                        "strokeColor": "#111827",
+                    },
+                    "shape": "dot",
+                },
+                "edges": {
+                    "color": {"color": "#94a3b8", "highlight": "#facc15"},
+                    "smooth": False,
+                },
+                "physics": {
+                    "enabled": False,
+                    "stabilization": False,
+                },
+                "interaction": {
+                    "hover": True,
+                    "navigationButtons": True,
+                    "keyboard": True,
+                },
+            }
+        )
     )
     copy_local_vis_assets(output_path)
     html = network.generate_html(notebook=False)
     html = localize_vis_resources(strip_remote_bootstrap(html))
+    html = add_node_info_panel_v3(html)
     html = clean_generated_html(html)
     output_path.write_text(html, encoding="utf-8")
 
@@ -502,6 +618,363 @@ def localize_vis_resources(html: str) -> str:
         html,
     )
     return html
+
+
+def add_node_info_panel(html: str) -> str:
+    style = """
+<style>
+  #node-info-panel {
+    position: fixed;
+    right: 16px;
+    top: 16px;
+    z-index: 10;
+    width: min(360px, calc(100vw - 32px));
+    max-height: calc(100vh - 32px);
+    overflow: auto;
+    background: rgba(15, 23, 42, 0.94);
+    color: #f8fafc;
+    border: 1px solid rgba(148, 163, 184, 0.55);
+    border-radius: 8px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.38);
+    font-family: Arial, sans-serif;
+    padding: 14px 16px;
+  }
+  #node-info-panel .node-info-empty {
+    color: #cbd5e1;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  #node-info-panel h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 1.25;
+  }
+  #node-info-panel dl {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 7px 10px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  #node-info-panel dt {
+    color: #94a3b8;
+  }
+  #node-info-panel dd {
+    margin: 0;
+    word-break: break-word;
+  }
+  #node-info-panel .node-info-memo {
+    grid-column: 1 / -1;
+    margin-top: 6px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(148, 163, 184, 0.35);
+    white-space: pre-wrap;
+    color: #e2e8f0;
+  }
+</style>
+"""
+    panel = """
+<div id="node-info-panel">
+  <div class="node-info-empty">ノードをクリックすると、管理表由来のエリア・座標・種別・連盟・保護情報をここに表示します。</div>
+</div>
+"""
+    script = """
+<script>
+  (function () {
+    function valueOrDash(value) {
+      return value === undefined || value === null || value === "" ? "-" : String(value);
+    }
+    function escapeHtml(value) {
+      return valueOrDash(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+    function row(label, value) {
+      return "<dt>" + escapeHtml(label) + "</dt><dd>" + escapeHtml(value) + "</dd>";
+    }
+    function renderNodeInfo(nodeId) {
+      var panel = document.getElementById("node-info-panel");
+      if (!panel || !nodeId || !nodes) return;
+      var node = nodes.get(nodeId);
+      if (!node) return;
+      var memo = valueOrDash(node.memo);
+      panel.innerHTML =
+        "<h2>" + escapeHtml(valueOrDash(node.area) + " " + valueOrDash(node.coord)) + "</h2>" +
+        "<dl>" +
+        row("位置キー", node.id) +
+        row("種別", node.nodeType) +
+        row("連盟", node.owner) +
+        row("状態", node.mapStatus) +
+        row("取得日時", node.acquiredAt) +
+        row("保護切れ", node.rawProtectUntil || node.protectUntil) +
+        row("残り時間", node.hoursRemaining === null ? "-" : node.hoursRemaining + " h") +
+        row("重要度", node.importance) +
+        (memo === "-" ? "" : "<dd class=\\"node-info-memo\\">" + escapeHtml(memo) + "</dd>") +
+        "</dl>";
+    }
+    function resetNodeInfo() {
+      var panel = document.getElementById("node-info-panel");
+      if (panel) {
+        panel.innerHTML = '<div class="node-info-empty">ノードをクリックすると、管理表由来のエリア・座標・種別・連盟・保護情報をここに表示します。</div>';
+      }
+    }
+    if (typeof network !== "undefined") {
+      window.renderNodeInfo = renderNodeInfo;
+      network.on("selectNode", function (params) {
+        renderNodeInfo(params.nodes && params.nodes[0]);
+      });
+      network.on("deselectNode", resetNodeInfo);
+    }
+  })();
+</script>
+"""
+    if "</head>" in html:
+        html = html.replace("</head>", style + "\n</head>", 1)
+    if "<body>" in html:
+        html = html.replace("<body>", "<body>\n" + panel, 1)
+    return html.replace("</body>", script + "\n</body>", 1)
+
+
+def add_node_info_panel_v2(html: str) -> str:
+    empty_text = "Click a node to show area, coordinate, type, alliance, and protection data from the management table."
+    style = """
+<style>
+  #node-info-panel {
+    position: fixed;
+    right: 16px;
+    top: 16px;
+    z-index: 10;
+    width: min(380px, calc(100vw - 32px));
+    max-height: calc(100vh - 32px);
+    overflow: auto;
+    background: rgba(15, 23, 42, 0.94);
+    color: #f8fafc;
+    border: 1px solid rgba(148, 163, 184, 0.55);
+    border-radius: 8px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.38);
+    font-family: Arial, sans-serif;
+    padding: 14px 16px;
+  }
+  #node-info-panel .node-info-empty {
+    color: #cbd5e1;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  #node-info-panel h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 1.25;
+  }
+  #node-info-panel dl {
+    display: grid;
+    grid-template-columns: 104px 1fr;
+    gap: 7px 10px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  #node-info-panel dt {
+    color: #94a3b8;
+  }
+  #node-info-panel dd {
+    margin: 0;
+    word-break: break-word;
+  }
+  #node-info-panel .node-info-memo {
+    grid-column: 1 / -1;
+    margin-top: 6px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(148, 163, 184, 0.35);
+    white-space: pre-wrap;
+    color: #e2e8f0;
+  }
+</style>
+"""
+    panel = f"""
+<div id="node-info-panel">
+  <div class="node-info-empty">{empty_text}</div>
+</div>
+"""
+    script = f"""
+<script>
+  (function () {{
+    var emptyText = {json.dumps(empty_text)};
+    function valueOrDash(value) {{
+      return value === undefined || value === null || value === "" ? "-" : String(value);
+    }}
+    function escapeHtml(value) {{
+      return valueOrDash(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }}
+    function row(label, value) {{
+      return "<dt>" + escapeHtml(label) + "</dt><dd>" + escapeHtml(value) + "</dd>";
+    }}
+    function renderNodeInfo(nodeId) {{
+      var panel = document.getElementById("node-info-panel");
+      if (!panel || !nodeId || !nodes) return;
+      var node = nodes.get(nodeId);
+      if (!node) return;
+      var memo = valueOrDash(node.memo);
+      panel.innerHTML =
+        "<h2>" + escapeHtml(valueOrDash(node.area) + " " + valueOrDash(node.coord)) + "</h2>" +
+        "<dl>" +
+        row("Position key", node.id) +
+        row("Type", node.nodeType) +
+        row("Alliance", node.owner) +
+        row("Status", node.mapStatus) +
+        row("Acquired", node.acquiredAt) +
+        row("Protect until", node.rawProtectUntil || node.protectUntil) +
+        row("Hours left", node.hoursRemaining === null ? "-" : node.hoursRemaining + " h") +
+        row("Importance", node.importance) +
+        (memo === "-" ? "" : "<dd class=\\"node-info-memo\\">" + escapeHtml(memo) + "</dd>") +
+        "</dl>";
+    }}
+    function resetNodeInfo() {{
+      var panel = document.getElementById("node-info-panel");
+      if (panel) {{
+        panel.innerHTML = '<div class="node-info-empty">' + escapeHtml(emptyText) + '</div>';
+      }}
+    }}
+    if (typeof network !== "undefined") {{
+      window.renderNodeInfo = renderNodeInfo;
+      network.on("selectNode", function (params) {{
+        renderNodeInfo(params.nodes && params.nodes[0]);
+      }});
+      network.on("deselectNode", resetNodeInfo);
+    }}
+  }})();
+</script>
+"""
+    if "</head>" in html:
+        html = html.replace("</head>", style + "\n</head>", 1)
+    if "<body>" in html:
+        html = html.replace("<body>", "<body>\n" + panel, 1)
+    return html.replace("</body>", script + "\n</body>", 1)
+
+
+def add_node_info_panel_v3(html: str) -> str:
+    empty_text = "Click a node to show area, coordinate, type, alliance, and protection data from the management table."
+    style = """
+<style>
+  #node-info-panel {
+    position: fixed;
+    right: 16px;
+    top: 16px;
+    z-index: 10;
+    width: min(380px, calc(100vw - 32px));
+    max-height: calc(100vh - 32px);
+    overflow: auto;
+    background: rgba(15, 23, 42, 0.94);
+    color: #f8fafc;
+    border: 1px solid rgba(148, 163, 184, 0.55);
+    border-radius: 8px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.38);
+    font-family: Arial, sans-serif;
+    padding: 14px 16px;
+  }
+  #node-info-panel .node-info-empty {
+    color: #cbd5e1;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  #node-info-panel h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 1.25;
+  }
+  #node-info-panel dl {
+    display: grid;
+    grid-template-columns: 104px 1fr;
+    gap: 7px 10px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  #node-info-panel dt {
+    color: #94a3b8;
+  }
+  #node-info-panel dd {
+    margin: 0;
+    word-break: break-word;
+  }
+  #node-info-panel .node-info-memo {
+    grid-column: 1 / -1;
+    margin-top: 6px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(148, 163, 184, 0.35);
+    white-space: pre-wrap;
+    color: #e2e8f0;
+  }
+</style>
+"""
+    panel = f"""
+<div id="node-info-panel">
+  <div class="node-info-empty">{empty_text}</div>
+</div>
+"""
+    attach_js = f"""
+                  (function () {{
+                    var emptyText = {json.dumps(empty_text)};
+                    function valueOrDash(value) {{
+                      return value === undefined || value === null || value === "" ? "-" : String(value);
+                    }}
+                    function escapeHtml(value) {{
+                      return valueOrDash(value)
+                        .replaceAll("&", "&amp;")
+                        .replaceAll("<", "&lt;")
+                        .replaceAll(">", "&gt;")
+                        .replaceAll('"', "&quot;")
+                        .replaceAll("'", "&#039;");
+                    }}
+                    function row(label, value) {{
+                      return "<dt>" + escapeHtml(label) + "</dt><dd>" + escapeHtml(value) + "</dd>";
+                    }}
+                    function renderNodeInfo(nodeId) {{
+                      var panel = document.getElementById("node-info-panel");
+                      if (!panel || !nodeId || !nodes) return;
+                      var node = nodes.get(nodeId);
+                      if (!node) return;
+                      var memo = valueOrDash(node.memo);
+                      panel.innerHTML =
+                        "<h2>" + escapeHtml(valueOrDash(node.area) + " " + valueOrDash(node.coord)) + "</h2>" +
+                        "<dl>" +
+                        row("Position key", node.id) +
+                        row("Type", node.nodeType) +
+                        row("Alliance", node.owner) +
+                        row("Status", node.mapStatus) +
+                        row("Acquired", node.acquiredAt) +
+                        row("Protect until", node.rawProtectUntil || node.protectUntil) +
+                        row("Hours left", node.hoursRemaining === null ? "-" : node.hoursRemaining + " h") +
+                        row("Importance", node.importance) +
+                        (memo === "-" ? "" : "<dd class=\\"node-info-memo\\">" + escapeHtml(memo) + "</dd>") +
+                        "</dl>";
+                    }}
+                    function resetNodeInfo() {{
+                      var panel = document.getElementById("node-info-panel");
+                      if (panel) {{
+                        panel.innerHTML = '<div class="node-info-empty">' + escapeHtml(emptyText) + '</div>';
+                      }}
+                    }}
+                    window.renderNodeInfo = renderNodeInfo;
+                    network.on("selectNode", function (params) {{
+                      renderNodeInfo(params.nodes && params.nodes[0]);
+                    }});
+                    network.on("deselectNode", resetNodeInfo);
+                  }})();
+"""
+    if "</head>" in html:
+        html = html.replace("</head>", style + "\n</head>", 1)
+    if "<body>" in html:
+        html = html.replace("<body>", "<body>\n" + panel, 1)
+    return html.replace("                  return network;", attach_js + "\n                  return network;", 1)
 
 
 def clean_generated_html(html: str) -> str:

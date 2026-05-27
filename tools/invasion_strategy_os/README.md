@@ -98,6 +98,23 @@ Outputs:
 
 Important: the current sheet does not contain an explicit adjacency column. `config.google_history_534.json` therefore uses coordinate-distance edges as a trial graph. Use this for visualization and workflow testing, not as confirmed game-rule adjacency.
 
+## Run With The Current Full Outer Map
+
+`config.google_full_map.json` reads the live `管理表たたき` export, excludes the central area, applies the 3x3 outer-area layout from the Google Sheets full map, and derives provisional distance edges across area borders.
+
+```powershell
+.\.venv\Scripts\python.exe tools\invasion_strategy_os\invasion_strategy_os.py --config tools\invasion_strategy_os\config.google_full_map.json
+```
+
+Current rule assumptions:
+
+- Central area rows are excluded for now.
+- `交易地` nodes are displayed but not connected by edges.
+- Lowercase coordinate letters are normalized to `都市`.
+- Uppercase coordinate letters are normalized to `漁場`.
+- The full-map view uses smaller nodes and labels so city/fishery spacing is easier to read.
+- Clicking a node opens a fixed information panel with management-table fields: position key, type, alliance, status, acquisition time, protection time, and memo.
+
 ## Tactical Use
 
 1. Export or expose the current Google Sheets board state.

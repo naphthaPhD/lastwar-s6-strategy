@@ -1,0 +1,61 @@
+{
+  "timezone": "Asia/Tokyo",
+  "sources": {
+    "nodes": {
+      "type": "google_sheet_csv",
+      "spreadsheet_id": "12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g",
+      "gid": "1973254316",
+      "format": "management_table"
+    }
+  },
+  "source_options": {
+    "exclude_areas": ["\u4e2d\u592e"],
+    "type_from_coord_case": true,
+    "city_type": "\u90fd\u5e02",
+    "fishery_type": "\u6f01\u5834",
+    "isolated_types": ["\u4ea4\u6613\u5730"],
+    "importance_by_type": {
+      "\u6f01\u5834": 3,
+      "\u90fd\u5e02": 8,
+      "\u4ea4\u6613\u5730": 1,
+      "\u30b2\u30fc\u30e0\u6a5f": 5,
+      "\u796d\u58c7": 9
+    },
+    "area_offsets": {
+      "#534": [0, 0],
+      "#509": [1000, 0],
+      "#503": [2000, 0],
+      "#476": [0, 1000],
+      "#480": [2000, 1000],
+      "#523": [0, 2000],
+      "#511": [1000, 2000],
+      "#440": [2000, 2000]
+    }
+  },
+  "edge_derivation": {
+    "type": "distance",
+    "same_area_only": false,
+    "max_distance": 112,
+    "max_edges_per_node": 0,
+    "isolated_types": ["\u4ea4\u6613\u5730"]
+  },
+  "analysis": {
+    "major_types": ["\u90fd\u5e02", "\u796d\u58c7"],
+    "major_importance": 8,
+    "route_limited_degree": 2,
+    "protect_warning_hours": 6,
+    "visual_scale": 1.25,
+    "node_min_size": 8,
+    "node_max_size": 34,
+    "node_size_multiplier": 2.7,
+    "font_size": 13
+  },
+  "shortest_path": {
+    "from": "#476:K-11",
+    "to": "#534:D-11"
+  },
+  "output": {
+    "html": "sample_output/map.html",
+    "json": "sample_output/state.json"
+  }
+}
