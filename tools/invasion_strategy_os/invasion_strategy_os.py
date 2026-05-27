@@ -404,6 +404,8 @@ def filter_edges_by_type_rules(edges: list[Edge], nodes: dict[str, Node], config
 
 
 def derive_distance_edges(nodes: dict[str, Node], config: dict[str, Any]) -> list[Edge]:
+    if config.get("type") == "coordinate":
+        return derive_coordinate_edges(nodes, config)
     if config.get("type") != "distance":
         return []
     max_distance = float(config.get("max_distance", 80))
@@ -436,6 +438,117 @@ def derive_distance_edges(nodes: dict[str, Node], config: dict[str, Any]) -> lis
         degree[source_id] += 1
         degree[target_id] += 1
     return edges
+
+
+def parse_outer_fishery_coord(coord: str) -> tuple[int, int] | None:
+    match = re.match(r"^([A-K])-(\d+)$", coord.strip())
+    if not match:
+        return None
+    letter, number_text = match.groups()
+    number = int(number_text)
+    if number < 1 or number > 21 or number % 2 == 0:
+        return None
+    return ord(letter) - ord("A"), (number - 1) // 2
+
+
+def parse_central_grid_coord(coord: str) -> tuple[int, int] | None:
+    match = re.match(rf"^{CENTRAL_COORD_PREFIX}-(\d+)-(\d+)$", coord.strip())
+    if not match:
+        return None
+    row, col = int(match.group(1)), int(match.group(2))
+    if row < 1 or row > 20 or col < 1 or col > 20:
+        return None
+    return row, col
+
+
+def edge_key(source_id: str, target_id: str) -> tuple[str, str]:
+    return tuple(sorted((source_id, target_id)))
+
+
+def boundary_variants(index: int, max_index: int) -> list[int]:
+    if index <= 0 or index >= max_index:
+        return [index]
+    return [index - 1, index, index + 1]
+
+
+def add_edge_once(edge_map: dict[tuple[str, str], Edge], source_id: str, target_id: str, weight: float = 1.0) -> None:
+    if source_id == target_id:
+        return
+    key = edge_key(source_id, target_id)
+    edge_map.setdefault(key, Edge(key[0], key[1], weight))
+
+
+def outer_area_grid(nodes: dict[str, Node]) -> dict[str, tuple[int, int]]:
+    areas: dict[str, list[Node]] = {}
+    for node in nodes.values():
+        if parse_outer_fishery_coord(node.name) is not None:
+            areas.setdefault(node.area, []).append(node)
+    grid: dict[str, tuple[int, int]] = {}
+    for area, area_nodes in areas.items():
+        min_x = min(node.x for node in area_nodes)
+        min_y = min(node.y for node in area_nodes)
+        grid[area] = (round((min_x - 20) / 1000), round((min_y - 20) / 1000))
+    return grid
+
+
+def derive_coordinate_edges(nodes: dict[str, Node], config: dict[str, Any]) -> list[Edge]:
+    isolated_types = {str(value) for value in config.get("isolated_types", [])}
+    fishery_type = str(config.get("fishery_type", DEFAULT_FISHERY_TYPE))
+    include_central = bool(config.get("include_central_fishery_edges", True))
+
+    outer_by_area_coord: dict[tuple[str, int, int], str] = {}
+    central_by_coord: dict[tuple[int, int], str] = {}
+    for node_id, node in nodes.items():
+        if node.type in isolated_types or node.type != fishery_type:
+            continue
+        outer_coord = parse_outer_fishery_coord(node.name)
+        if outer_coord is not None:
+            outer_by_area_coord[(node.area, outer_coord[0], outer_coord[1])] = node_id
+            continue
+        central_coord = parse_central_grid_coord(node.name)
+        if include_central and central_coord is not None:
+            central_by_coord[central_coord] = node_id
+
+    edges: dict[tuple[str, str], Edge] = {}
+
+    max_outer_index = 10
+    for (area, row, col), source_id in sorted(outer_by_area_coord.items()):
+        for next_row, next_col in ((row + 1, col), (row, col + 1)):
+            target_id = outer_by_area_coord.get((area, next_row, next_col))
+            if target_id:
+                add_edge_once(edges, source_id, target_id)
+
+    grid_by_area = outer_area_grid(nodes)
+    area_by_grid = {grid: area for area, grid in grid_by_area.items()}
+    for (area, row, col), source_id in sorted(outer_by_area_coord.items()):
+        area_grid = grid_by_area.get(area)
+        if area_grid is None:
+            continue
+        area_col, area_row = area_grid
+        boundary_specs = []
+        if row == 0:
+            boundary_specs.append(((area_col, area_row - 1), max_outer_index, col, "vertical"))
+        if col == max_outer_index:
+            boundary_specs.append(((area_col + 1, area_row), row, 0, "horizontal"))
+        for target_grid, target_fixed, changing_index, direction in boundary_specs:
+            target_area = area_by_grid.get(target_grid)
+            if target_area is None:
+                continue
+            for variant in boundary_variants(changing_index, max_outer_index):
+                if direction == "vertical":
+                    target_id = outer_by_area_coord.get((target_area, target_fixed, variant))
+                else:
+                    target_id = outer_by_area_coord.get((target_area, variant, target_fixed))
+                if target_id:
+                    add_edge_once(edges, source_id, target_id)
+
+    for (row, col), source_id in sorted(central_by_coord.items()):
+        for next_row, next_col in ((row + 1, col), (row, col + 1)):
+            target_id = central_by_coord.get((next_row, next_col))
+            if target_id:
+                add_edge_once(edges, source_id, target_id)
+
+    return list(edges.values())
 
 
 def build_graph(nodes: dict[str, Node], edges: list[Edge]) -> nx.Graph:

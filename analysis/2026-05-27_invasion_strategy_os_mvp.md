@@ -21,16 +21,16 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - Added node and edge structures with `id`, `name`, `type`, `owner`, `protect_until`, `x`, `y`, `importance`, `from`, `to`, and `weight`.
 - Added JST protection-timer handling.
 - Added graph analysis for connected components, articulation points, shortest path, degree centrality, and betweenness centrality.
-- The current full-map output reads the management-table sheet, includes the central area, and contains 2,165 nodes with 6,876 provisional tactical edges.
-- Central area typing follows the Cpt Hedgehog Season 6 reference-map pattern plus the commander adjustment: 208 central fishery nodes are connected, 188 central altar nodes are isolated, and the 2x2 center is represented by one large isolated `祖霊神殿` node.
+- The current full-map output reads the management-table sheet, includes the central area, and contains 2,165 nodes with 2,268 coordinate-rule tactical edges.
+- Central area typing follows the Cpt Hedgehog Season 6 reference-map pattern plus the commander adjustment: 208 central fishery nodes are connected by 348 orthogonal central-fishery edges, 188 central altar nodes are isolated, and the 2x2 center is represented by one large isolated `祖霊神殿` node.
 - The outer area placement is clockwise from the upper-left: `#534`, `#509`, `#503`, `#480`, `#440`, `#511`, `#523`, `#476`.
 - Trade-post nodes are displayed but intentionally left unconnected.
 - Fishery nodes are displayed larger than city nodes, while central-area fishery nodes are displayed smaller than outer fisheries.
 - The HTML map can toggle labels between coordinates and alliance names at the same node-center position. In alliance-name mode, trade posts are always labeled `交易地`.
 - The HTML map can reset moved nodes to the generated layout with `位置リセット`.
 - Strategic colors are based on ownership from `管理表たたき`: #534-side owners blue, #509/#440/#511-side owners green, enemy-side owners red, and unowned nodes white. Owners with server-number prefixes such as `476B` are classified by that prefix even when they occupy another area.
-- Edge rules are tactical, not purely geometric: city-city edges are blocked, movement must go through fisheries, trade posts are isolated, and altar/temple nodes are isolated.
-- Fishery nodes use circle styling and smaller in-node label text so alliance-name labels fit better.
+- Edge rules are tactical and coordinate-based, not pure distance: outer fishery lanes connect along the grid, neighboring-area border fisheries connect by coordinate rule, city-city edges are blocked, trade posts are isolated, and altar/temple nodes are isolated.
+- Fishery nodes use circle styling and smaller in-node label text so alliance-name labels fit better; central fishery node size is reduced to 14.
 - The full-map HTML applies display-only gaps between area blocks and includes a fixed legend for strategic colors plus red/yellow protection borders.
 - The full-map view has a fixed click information panel using management-table fields, so alliance/status/protection data is easier to inspect.
 - Added an initial local interactive-map server prototype for search, sheet refresh, and local manual owner/status/memo overrides.

@@ -120,11 +120,12 @@ Current rule assumptions:
 - A fixed legend explains strategic colors and red/yellow protection borders.
 - Clicking a node opens a fixed information panel with management-table fields: position key, type, alliance, status, acquisition time, protection time, and memo.
 - Central-area facility types are corrected from the Cpt Hedgehog Season 6 reference map pattern: outer central cells are fishery nodes, inner central cells are altar nodes, and the 2x2 center is represented as one large `祖霊神殿` node.
-- Central fishery nodes are connected by distance edges and displayed smaller than outer fisheries. Central altar nodes and `祖霊神殿` are displayed but isolated because altar ownership does not create adjacent movement.
+- Central fishery nodes are connected by orthogonal coordinate edges and displayed smaller than outer fisheries. Central altar nodes and `祖霊神殿` are displayed but isolated because altar ownership does not create adjacent movement.
 - The HTML map has a label toggle: coordinate labels by default, or alliance-name labels at the same node-center position. In alliance-name mode, trade posts are always labeled `交易地`.
 - Nodes can be temporarily moved with the mouse. The HTML map has a `位置リセット` button that returns moved nodes to the generated layout.
 - Node colors are strategic colors: #534-side owners are blue, #509/#440/#511-side owners are green, enemy-side owners are red, and unowned nodes are white. Owners with server-number prefixes such as `476B` are classified by that prefix even when they occupy another area.
-- Edge rules are tactical, not purely geometric: city-city edges are blocked, movement must go through fisheries, trade posts are isolated, and altar/temple nodes are isolated.
+- Edge rules are tactical and coordinate-based, not pure distance: outer fishery lanes connect along the grid, neighboring-area border fisheries connect by coordinate rule, city-city edges are blocked, trade posts are isolated, and altar/temple nodes are isolated.
+- Example verification: `#534:A-1` connects to `#534:B-1`, `#534:A-3`, and `#476:K-1`; `#534:A-3` connects across the border to `#476:K-1`, `#476:K-3`, and `#476:K-5`.
 
 ## Run The Interactive Local Map
 

@@ -44,10 +44,12 @@
     }
   },
   "edge_derivation": {
-    "type": "distance",
+    "type": "coordinate",
     "same_area_only": false,
     "max_distance": 112,
     "max_edges_per_node": 0,
+    "fishery_type": "\u6f01\u5834",
+    "include_central_fishery_edges": true,
     "isolated_types": ["\u4ea4\u6613\u5730", "\u796d\u58c7", "\u7956\u970a\u795e\u6bbf"],
     "disallowed_edge_type_pairs": [["\u90fd\u5e02", "\u90fd\u5e02"]]
   },
@@ -62,7 +64,7 @@
     "node_min_size": 8,
     "node_max_size": 34,
     "node_size_multiplier": 2.7,
-    "central_fishery_size": 20.0,
+    "central_fishery_size": 14.0,
     "visual_size_by_type": {
       "\u6f01\u5834": 29.6,
       "\u90fd\u5e02": 16.1,
