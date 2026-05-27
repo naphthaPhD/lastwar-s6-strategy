@@ -108,11 +108,12 @@ Important: the current sheet does not contain an explicit adjacency column. `con
 
 Current rule assumptions:
 
-- Central area rows are excluded for now.
+- Central area rows are included and placed in the middle of the outer ring.
 - Outer areas are placed clockwise from the upper-left: `#534`, `#509`, `#503`, `#480`, `#440`, `#511`, `#523`, `#476`.
 - `交易地` nodes are displayed but not connected by edges.
 - Lowercase coordinate letters are normalized to `都市`.
 - Uppercase coordinate letters are normalized to `漁場`.
+- Fishery nodes are displayed larger than city nodes in this view.
 - The full-map view uses smaller nodes and labels so city/fishery spacing is easier to read.
 - Clicking a node opens a fixed information panel with management-table fields: position key, type, alliance, status, acquisition time, protection time, and memo.
 

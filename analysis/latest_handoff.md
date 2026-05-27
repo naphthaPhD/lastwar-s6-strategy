@@ -10,7 +10,7 @@ Built the first MVP of a LastWar invasion strategy OS for current-board visualiz
 
 This does not automate gameplay. It is a repeatable analysis and visualization pipeline connected to the live Google Sheets operational map.
 
-The current live output reads `管理表たたき` from spreadsheet `＃534`, expands it to the full outer map using the Google Sheets full-map layout, and excludes the central area for now.
+The current live output reads `管理表たたき` from spreadsheet `＃534`, expands it to the full map using the Google Sheets layout, and now includes the central area.
 
 ## Updated files
 
@@ -36,12 +36,13 @@ The current live output reads `管理表たたき` from spreadsheet `＃534`, ex
 4. CHOKE candidates are extracted from articulation points and scored by importance, graph degree, betweenness, major-node split, and major-node isolation.
 5. `sample_output/map.html` is generated with `pyvis`, owner-based node colors, importance-based size, edge display, click/hover node details, and protection-status border coloring.
 6. HTML generation uses local vis-network assets under `sample_output/lib/`, avoiding the inline-script black-screen issue seen in the in-app browser.
-7. The Google Sheets full-map output currently contains all 8 outer areas from `管理表たたき`: 1,768 nodes, 6,436 provisional distance edges, 81 connected components, and 0 CHOKE nodes under the current distance-edge model.
+7. The Google Sheets full-map output currently contains the 8 outer areas plus central area from `管理表たたき`: 2,168 nodes, 10,406 provisional distance edges, 81 connected components, and 0 CHOKE nodes under the current distance-edge model.
 8. The 81 components are expected in this model: 80 `交易地` nodes are intentionally isolated, and the remaining connected component is the outer-ring map.
 9. Lowercase coordinate letters are normalized to `都市`; uppercase coordinate letters are normalized to `漁場`; the central area is excluded.
 10. The full-map HTML uses smaller nodes and labels to create more visible spacing between cities and fisheries.
 11. Clicking a node now opens a fixed information panel with management-table fields, instead of relying on the small browser hover tooltip.
 12. The outer area placement is now clockwise from the upper-left: `#534`, `#509`, `#503`, `#480`, `#440`, `#511`, `#523`, `#476`.
+13. Fishery nodes are now displayed larger than city nodes; central nodes are included in the middle of the ring.
 
 ## Current risks
 

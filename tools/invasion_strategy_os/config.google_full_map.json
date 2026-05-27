@@ -9,7 +9,7 @@
     }
   },
   "source_options": {
-    "exclude_areas": ["\u4e2d\u592e"],
+    "exclude_areas": [],
     "type_from_coord_case": true,
     "city_type": "\u90fd\u5e02",
     "fishery_type": "\u6f01\u5834",
@@ -27,6 +27,7 @@
       "#503": [2000, 2000],
       "#476": [0, 1000],
       "#480": [2000, 1000],
+      "\u4e2d\u592e": [1000, 1000],
       "#523": [0, 0],
       "#511": [1000, 0],
       "#440": [2000, 0]
@@ -48,6 +49,11 @@
     "node_min_size": 8,
     "node_max_size": 34,
     "node_size_multiplier": 2.7,
+    "visual_size_by_type": {
+      "\u6f01\u5834": 29.6,
+      "\u90fd\u5e02": 16.1,
+      "\u4ea4\u6613\u5730": 10.7
+    },
     "font_size": 13
   },
   "shortest_path": {

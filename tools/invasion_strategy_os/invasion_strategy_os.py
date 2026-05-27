@@ -124,6 +124,15 @@ def parse_management_table_rows(text: str) -> list[dict[str, str]]:
 
 
 def local_coord_xy(coord: str) -> tuple[float, float]:
+    central_match = re.match(r"^中央-(\d+)-(\d+)$", coord.strip())
+    if central_match:
+        row_text, col_text = central_match.groups()
+        row = int(row_text)
+        col = int(col_text)
+        if row < 1 or row > 20 or col < 1 or col > 20:
+            return 0.0, 0.0
+        return float(24 + (col - 1) * 50), float(1024 - row * 50)
+
     match = re.match(r"^([A-Ka-j])-(\d+)$", coord.strip())
     if not match:
         return 0.0, 0.0
@@ -500,6 +509,7 @@ def write_html(
     node_min_size = float(config.get("node_min_size", 12))
     node_max_size = float(config.get("node_max_size", 55))
     node_size_multiplier = float(config.get("node_size_multiplier", 4))
+    visual_size_by_type = {str(key): float(value) for key, value in config.get("visual_size_by_type", {}).items()}
     font_size = int(config.get("font_size", 18))
     colors_by_owner = owner_color_map({str(node_data.get("owner", "unknown")) for _, node_data in graph.nodes(data=True)})
 
@@ -522,7 +532,10 @@ def write_html(
             x=node.x * visual_scale,
             y=-node.y * visual_scale,
             physics=False,
-            size=max(node_min_size, min(node_max_size, node_min_size + node.importance * node_size_multiplier)),
+            size=visual_size_by_type.get(
+                node.type,
+                max(node_min_size, min(node_max_size, node_min_size + node.importance * node_size_multiplier)),
+            ),
             color={"background": colors_by_owner.get(node.owner, owner_color(node.owner)), "border": border},
             borderWidth=6 if node_id in critical_ids else 2,
             area=node.area,

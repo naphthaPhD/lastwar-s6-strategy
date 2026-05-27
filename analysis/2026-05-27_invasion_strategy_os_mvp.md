@@ -21,9 +21,10 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - Added node and edge structures with `id`, `name`, `type`, `owner`, `protect_until`, `x`, `y`, `importance`, `from`, `to`, and `weight`.
 - Added JST protection-timer handling.
 - Added graph analysis for connected components, articulation points, shortest path, degree centrality, and betweenness centrality.
-- The full outer-map output now reads `管理表たたき`, excludes the central area, and contains 1,768 nodes with 6,436 provisional distance edges.
+- The full-map output now reads `管理表たたき`, includes the central area, and contains 2,168 nodes with 10,406 provisional distance edges.
 - The outer area placement is clockwise from the upper-left: `#534`, `#509`, `#503`, `#480`, `#440`, `#511`, `#523`, `#476`.
 - `交易地` nodes are displayed but intentionally left unconnected.
+- Fishery nodes are now displayed larger than city nodes.
 - The full-map view has a fixed click information panel using management-table fields, so alliance/status/protection data is easier to inspect.
 
 ## 4. Timeline
