@@ -39,7 +39,7 @@ The user then asked for this tab to periodically reflect `取得入力マップ`
 - Trigger installer: `installInvasionMapSyncTrigger`
 - Trigger interval: 5 minutes
 - Stop function: `removeInvasionMapSyncTriggers`
-- Last-sync cell: `侵攻予測_20260527_取得入力型!DL2`
+- Last-sync cell: `侵攻予測_20260527_取得入力型!DK2`
 
 Important: this is saved in the source tab only. The connector did not update the live Apps Script `Code.gs`. To activate the menu and time trigger, copy the block from `AppsScript_地点詳細!A1241:A1316` into the bound Apps Script project and add the three menu lines shown in the comments to the final `onOpen()`.
 
@@ -48,21 +48,23 @@ Troubleshooting note: the error `右側の入力欄が空です。 savePointFrom
 Manual sync verification:
 
 - At 2026-05-27 13:08 JST, `取得入力マップ!A6:DN92` was copied to `侵攻予測_20260527_取得入力型!A6:DN92` by Sheets API.
-- `侵攻予測_20260527_取得入力型!DL2` now shows `5/27 13:08 手動反映済`.
+- `侵攻予測_20260527_取得入力型!DK2` now shows `5/27 13:08 手動反映済`.
 - The prediction tab now has an added warning in `A4` that `入力欄を管理表たたきへ反映` is not the sync command.
 
 Prediction-layer input added:
 
-- Right-side panel: `侵攻予測_20260527_取得入力型!DP1:DY90`
-- Scenario selector: `DQ2`
-- Layer table: `DP18:DY90`
-- Auto key formula: `DU19`
+- Right-side panel: `侵攻予測_20260527_取得入力型!DO1:DX90`
+- Scenario selector: `DP2`
+- Layer table: `DO18:DX90`
+- Auto key formula: `DT19`
 - Map coloring range: `A6:CC88`
-- Current column count after adding the panel: `132`
+- Current column count after adding the panel and deleting the old usage column: `131`
 - Category colors: `敵主攻`, `破壊候補`, `防衛優先`, `捨て候補`, `再取得`, `反攻ルート`, `起点`, `要確認`
 - Scenario choices: `全表示`, `最悪パターン`, `476B上押し`, `476C右押し`, `503合流`, `反攻ルート`, `防衛ライン`, `捨て/交換`, `要確認`
 
-The layer table is intentionally separate from the map body. After copying `取得入力マップ` into the forecast tab, commanders can add or edit rows in `DP19:DY90`; rows with `ON=TRUE` are overlaid onto the map by conditional formatting. `DQ2=全表示` shows all active rows, while selecting a scenario shows only that scenario.
+The layer table is intentionally separate from the map body. After copying `取得入力マップ` into the forecast tab, commanders can add or edit rows in `DO19:DX90`; rows with `ON=TRUE` are overlaid onto the map by conditional formatting. `DP2=全表示` shows all active rows, while selecting a scenario shows only that scenario.
+
+At 2026-05-27 13:42 JST, the old `取得入力マップの使い方` column was deleted from the prediction tab only. This removed `CD` from `侵攻予測_20260527_取得入力型`; the source `取得入力マップ` was not changed. The saved Apps Script source patch in `AppsScript_地点詳細!A1253` was also updated from `DL2` to `DK2`.
 
 Seeded scenarios:
 
@@ -76,7 +78,7 @@ Verified properties:
 
 - Row count: `92`
 - Column count before prediction panel: `118`
-- Column count after prediction panel: `132`
+- Column count after prediction panel and old usage column deletion: `131`
 - Frozen rows: `5`
 - Gridlines: hidden
 - Sample merge retained: `A6:B6`
@@ -95,6 +97,7 @@ Verified properties:
 7. The new sync patch copies only the map body, so top notes and tactical formatting on the prediction tab can remain while the map body is refreshed.
 8. The right-side prediction layer now turns the tab into a paint-map workflow: add a coordinate row, select a scenario and category, set `ON=TRUE`, and the map highlights that point.
 9. For command use, scenario switching is now simpler than creating separate tabs for every hypothesis.
+10. The old `取得入力マップの使い方` column has been removed from the prediction tab to reduce clutter.
 
 ## Current risks
 
@@ -118,8 +121,8 @@ Verified properties:
 5. Before the next city-fight window, confirm which #503-side pact alliances can actually use adjacency against #534.
 6. Reflect `AppsScript_地点詳細!A1241:A1316` into live `Code.gs` if automatic sync is needed during the fight window.
 7. After reflecting the script, run `copyLatestInputMapToInvasionMap` once to test, then run `installInvasionMapSyncTrigger` only if repeated refresh is needed.
-8. Use `DQ2=最悪パターン` to brief likely enemy break points, `DQ2=防衛ライン` for minimum defense, `DQ2=捨て/交換` for abandon/recapture, and `DQ2=反攻ルート` for attack planning.
-9. Add new rows under `DP19:DY90` whenever 476B/476C/503 captures a fishery or gains a new city-destruction adjacency.
+8. Use `DP2=最悪パターン` to brief likely enemy break points, `DP2=防衛ライン` for minimum defense, `DP2=捨て/交換` for abandon/recapture, and `DP2=反攻ルート` for attack planning.
+9. Add new rows under `DO19:DX90` whenever 476B/476C/503 captures a fishery or gains a new city-destruction adjacency.
 
 ## Questions for ChatGPT
 
@@ -133,6 +136,6 @@ Verified properties:
 
 - This update intentionally stops trying to delete AO or remove map borders by restructuring cells.
 - The new tab keeps the same shape as `取得入力マップ`, including the difficult merged cells.
-- `侵攻予測_20260527_取得入力型!A1:A3` and `DL1:DL2` were updated with sync notes and last-sync status.
-- `侵攻予測_20260527_取得入力型!DP:DY` is now the operator-facing prediction input area; the map body should still be treated as copied/current-state terrain.
+- `侵攻予測_20260527_取得入力型!A1:A3` and `DK1:DK2` were updated with sync notes and last-sync status.
+- `侵攻予測_20260527_取得入力型!DO:DX` is now the operator-facing prediction input area; the map body should still be treated as copied/current-state terrain.
 - Existing unrelated local changes remain outside this analysis.
