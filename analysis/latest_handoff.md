@@ -43,6 +43,14 @@ The user then asked for this tab to periodically reflect `取得入力マップ`
 
 Important: this is saved in the source tab only. The connector did not update the live Apps Script `Code.gs`. To activate the menu and time trigger, copy the block from `AppsScript_地点詳細!A1241:A1316` into the bound Apps Script project and add the three menu lines shown in the comments to the final `onOpen()`.
 
+Troubleshooting note: the error `右側の入力欄が空です。 savePointFromDetail @ コード.gs:123` means the old point-entry menu/function ran. It is not the sync function. For this map sync, use `copyLatestInputMapToInvasionMap`; for periodic sync, run `installInvasionMapSyncTrigger` once.
+
+Manual sync verification:
+
+- At 2026-05-27 13:08 JST, `取得入力マップ!A6:DN92` was copied to `侵攻予測_20260527_取得入力型!A6:DN92` by Sheets API.
+- `侵攻予測_20260527_取得入力型!DL2` now shows `5/27 13:08 手動反映済`.
+- The prediction tab now has an added warning in `A4` that `入力欄を管理表たたきへ反映` is not the sync command.
+
 Verified properties:
 
 - Row count: `92`
@@ -73,6 +81,7 @@ Verified properties:
 5. Additional color rules on the new duplicated tab could conflict with inherited conditional formatting unless added carefully.
 6. If the sync patch is run, the map body becomes copied values rather than live formulas; therefore the manual copy or 5-minute trigger should be treated as part of the operating procedure.
 7. The patch is not live until it is reflected into `Code.gs`.
+8. Running `savePointFromDetail` with empty right-side inputs is expected to fail; do not use it for map sync.
 
 ## Recommended next actions
 
@@ -82,6 +91,7 @@ Verified properties:
 4. Keep the #476B / #476C / #503 analysis focused on city destruction risk and route-opening risk, not full-map fixed defense.
 5. Before the next city-fight window, confirm which #503-side pact alliances can actually use adjacency against #534.
 6. Reflect `AppsScript_地点詳細!A1241:A1316` into live `Code.gs` if automatic sync is needed during the fight window.
+7. After reflecting the script, run `copyLatestInputMapToInvasionMap` once to test, then run `installInvasionMapSyncTrigger` only if repeated refresh is needed.
 
 ## Questions for ChatGPT
 
