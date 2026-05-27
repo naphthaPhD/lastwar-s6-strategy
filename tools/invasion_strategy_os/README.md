@@ -124,6 +124,7 @@ Current rule assumptions:
 - The HTML map has a label toggle: coordinate labels by default, or alliance-name labels at the same node-center position. In alliance-name mode, trade posts are always labeled `交易地`.
 - Nodes can be temporarily moved with the mouse. The HTML map has a `位置リセット` button that returns moved nodes to the generated layout.
 - Selecting a fishery highlights all edges connected to that fishery in cyan. `境界強調` highlights fishery edges where a #534-side node touches an enemy-side node in orange, and `強調解除` clears edge highlighting.
+- `マップ最新化` can refresh the generated map from the latest `管理表たたき` sheet when `interactive_server.py` is running. It calls `/api/refresh`, regenerates `sample_output/map.html` and `sample_output/state.json`, then reloads the browser page.
 - Node colors are strategic colors: #534-side owners are blue, #509/#440/#511-side owners are green, enemy-side owners are red, and unowned nodes are white. Owners with server-number prefixes such as `476B` are classified by that prefix even when they occupy another area.
 - Edge rules are tactical and coordinate-based, not pure distance: fisheries connect to adjacent fisheries in 8 directions unless the diagonal crosses a city/trade-post cell, cities connect only to their four surrounding fisheries, destroyed cities are isolated, outer-area fisheries connect to nearby central fisheries with a small coordinate tolerance, city-city edges are blocked, trade posts remain isolated and are never treated as cities, and altar/temple nodes are isolated.
 - Example verification: `#534:a-2` is a trade post and has no edges; `#534:b-2` is a city and connects to `#534:B-1`, `#534:B-3`, `#534:C-1`, and `#534:C-3`.
@@ -147,9 +148,11 @@ http://127.0.0.1:8010/
 Interactive behavior:
 
 - Reads `sample_output/state.json` in the browser.
-- `Refresh Sheet` regenerates `sample_output/map.html` and `sample_output/state.json` from `config.google_full_map.json`.
+- `マップを最新に` regenerates `sample_output/map.html` and `sample_output/state.json` from `config.google_full_map.json`.
 - Node edits are saved locally to `data/invasion_strategy_overrides.json`.
 - Manual edits override browser display after every refresh, so spreadsheet updates and local commander corrections can coexist.
+
+The static generated map also has a `マップ最新化` button. For that button to work, keep the interactive server running on port `8010`; if the static map is opened through `http://127.0.0.1:8000/sample_output/map.html`, it will call the `8010` refresh API and reload itself after regeneration.
 
 Current limitation: local edits do not write back to Google Sheets. Treat `data/invasion_strategy_overrides.json` as the safe editable layer until a Google Sheets write-back policy is decided.
 

@@ -1496,6 +1496,25 @@ def add_node_info_panel_v3(html: str) -> str:
     font: 700 13px Arial, sans-serif;
     cursor: pointer;
   }
+  #map-refresh-sheet {
+    position: fixed;
+    left: 500px;
+    top: 16px;
+    z-index: 11;
+    min-width: 124px;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid rgba(14, 165, 233, 0.9);
+    border-radius: 6px;
+    background: rgba(3, 105, 161, 0.94);
+    color: #f8fafc;
+    font: 700 13px Arial, sans-serif;
+    cursor: pointer;
+  }
+  #map-refresh-sheet:disabled {
+    cursor: wait;
+    opacity: 0.65;
+  }
   #map-legend {
     position: fixed;
     left: 16px;
@@ -1541,6 +1560,7 @@ def add_node_info_panel_v3(html: str) -> str:
 <button id="map-reset-layout" type="button">&#20301;&#32622;&#12522;&#12475;&#12483;&#12488;</button>
 <button id="map-highlight-boundary" type="button">&#22659;&#30028;&#24375;&#35519;</button>
 <button id="map-clear-edge-highlight" type="button">&#24375;&#35519;&#35299;&#38500;</button>
+<button id="map-refresh-sheet" type="button">&#12510;&#12483;&#12503;&#26368;&#26032;&#21270;</button>
 <div id="map-legend" aria-label="legend">
   <h3>凡例</h3>
   <div class="legend-row"><span class="legend-dot" style="background:#2563eb"></span><span>#534 / JDX</span></div>
@@ -1671,9 +1691,62 @@ def add_node_info_panel_v3(html: str) -> str:
                     if (clearEdgeButton) {{
                       clearEdgeButton.addEventListener("click", resetEdgeHighlights);
                     }}
+                    async function postRefresh(endpoint) {{
+                      var response = await fetch(endpoint, {{
+                        method: "POST",
+                        headers: {{ "Content-Type": "application/json" }}
+                      }});
+                      var text = await response.text();
+                      var data = {{}};
+                      if (text) {{
+                        try {{
+                          data = JSON.parse(text);
+                        }} catch (error) {{
+                          data = {{ error: text }};
+                        }}
+                      }}
+                      if (!response.ok || data.ok === false) {{
+                        throw new Error(data.stderr || data.error || (response.status + " " + response.statusText));
+                      }}
+                      return data;
+                    }}
+                    async function refreshMapFromSheet() {{
+                      var refreshButton = document.getElementById("map-refresh-sheet");
+                      if (!refreshButton) return;
+                      var originalText = refreshButton.textContent;
+                      refreshButton.disabled = true;
+                      refreshButton.textContent = "\\u66f4\\u65b0\\u4e2d...";
+                      var endpoints = ["/api/refresh"];
+                      var host = window.location.hostname;
+                      if ((host === "127.0.0.1" || host === "localhost") && window.location.port !== "8010") {{
+                        endpoints.push(window.location.protocol + "//" + host + ":8010/api/refresh");
+                      }}
+                      var lastError = null;
+                      for (var i = 0; i < endpoints.length; i += 1) {{
+                        try {{
+                          await postRefresh(endpoints[i]);
+                          window.location.href = window.location.pathname + "?updated=" + Date.now();
+                          return;
+                        }} catch (error) {{
+                          lastError = error;
+                        }}
+                      }}
+                      refreshButton.disabled = false;
+                      refreshButton.textContent = originalText;
+                      alert(
+                        "\\u30de\\u30c3\\u30d7\\u3092\\u66f4\\u65b0\\u3067\\u304d\\u307e\\u305b\\u3093\\u3067\\u3057\\u305f\\u3002\\n" +
+                        "\\u5148\\u306b interactive_server.py \\u3092 --port 8010 \\u3067\\u8d77\\u52d5\\u3057\\u3066\\u304f\\u3060\\u3055\\u3044\\u3002\\n\\n" +
+                        (lastError ? lastError.message : "")
+                      );
+                    }}
+                    var refreshButton = document.getElementById("map-refresh-sheet");
+                    if (refreshButton) {{
+                      refreshButton.addEventListener("click", refreshMapFromSheet);
+                    }}
                     window.highlightConnectedEdges = highlightConnectedEdges;
                     window.highlightSelfEnemyFisheryEdges = highlightSelfEnemyFisheryEdges;
                     window.resetEdgeHighlights = resetEdgeHighlights;
+                    window.refreshMapFromSheet = refreshMapFromSheet;
                     function renderNodeInfo(nodeId) {{
                       var panel = document.getElementById("node-info-panel");
                       if (!panel || !nodeId || !nodes) return;

@@ -110,8 +110,17 @@ class InteractiveMapHandler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", content_type)
         self.send_header("Content-Length", str(len(content)))
         self.send_header("Cache-Control", "no-store")
+        self.send_cors_headers()
         self.end_headers()
         self.wfile.write(content)
+
+    def send_cors_headers(self) -> None:
+        origin = self.headers.get("Origin", "")
+        if origin.startswith(("http://127.0.0.1:", "http://localhost:")):
+            self.send_header("Access-Control-Allow-Origin", origin)
+            self.send_header("Vary", "Origin")
+            self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+            self.send_header("Access-Control-Allow-Headers", "Content-Type")
 
     def send_json(self, data: Any, status: int = 200) -> None:
         content = json.dumps(data, ensure_ascii=False, indent=2).encode("utf-8")
@@ -162,6 +171,12 @@ class InteractiveMapHandler(BaseHTTPRequestHandler):
             self.refresh_from_sheet()
             return
         self.send_error_json("Not found", HTTPStatus.NOT_FOUND)
+
+    def do_OPTIONS(self) -> None:
+        self.send_response(HTTPStatus.NO_CONTENT)
+        self.send_cors_headers()
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
 
     def refresh_from_sheet(self) -> None:
         command = [

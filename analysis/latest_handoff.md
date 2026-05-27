@@ -36,7 +36,7 @@ This does not automate gameplay. It is a repeatable analysis and visualization p
 4. CHOKE candidates are extracted from articulation points and scored by importance, graph degree, betweenness, major-node split, and major-node isolation.
 5. `sample_output/map.html` is generated with `pyvis`, owner-based node colors, importance-based size, edge display, click/hover node details, and protection-status border coloring.
 6. HTML generation uses local vis-network assets under `sample_output/lib/`, avoiding the inline-script black-screen issue seen in the in-app browser.
-7. The current full-map output contains the 8 outer areas plus central area: 2,165 nodes, 5,624 coordinate-rule tactical edges, and 0 CHOKE nodes under the current coordinate-edge model.
+7. The current full-map output contains the 8 outer areas plus central area: 2,166 nodes, 5,456 coordinate-rule tactical edges, and 0 CHOKE nodes under the current coordinate-edge model.
 8. Central area typing now follows the Cpt Hedgehog Season 6 reference-map pattern plus the commander adjustment: 397 central nodes, 208 central fishery nodes, 188 central altar nodes, and one large `祖霊神殿` node replacing the 2x2 center.
 9. Central fishery nodes are connected by distance edges; central altar/temple nodes are displayed but isolated. Verification after regeneration: 1,764 central fishery-related edges, 0 central altar edges, and 0 `祖霊神殿` edges.
 10. Trade-post nodes are displayed but intentionally left unconnected.
@@ -52,7 +52,8 @@ This does not automate gameplay. It is a repeatable analysis and visualization p
 20. The HTML map applies display-only gaps between the 3x3 area blocks; graph coordinates and edge derivation remain unchanged.
 21. The HTML map includes a fixed legend explaining strategic colors, gray destroyed-city nodes, and red/yellow protection borders.
 22. Added a first local interactive-map server skeleton for a cpt-hedge-style workflow: browser rendering from `state.json`, sheet refresh endpoint, and local manual overrides in `data/invasion_strategy_overrides.json`.
-23. Added edge-highlight controls to the generated HTML map: selecting a fishery highlights its connected edges in cyan, `境界強調` highlights #534-side fishery to enemy-side fishery edges in orange, and `強調解除` resets edge styling. Current live data contains 94 self-enemy fishery edge candidates.
+23. Added edge-highlight controls to the generated HTML map: selecting a fishery highlights its connected edges in cyan, `境界強調` highlights #534-side fishery to enemy-side fishery edges in orange, and `強調解除` resets edge styling. Current live data contains 80 self-enemy fishery edge candidates.
+24. Added a generated-map `マップ最新化` button. It calls the local `/api/refresh` endpoint, regenerates from the latest `管理表たたき` Google Sheet through `config.google_full_map.json`, and reloads the map. The interactive server now permits local CORS fallback from `127.0.0.1:8000` to `127.0.0.1:8010`.
 
 ## Current risks
 
@@ -68,7 +69,7 @@ This does not automate gameplay. It is a repeatable analysis and visualization p
 3. Review `sample_output/state.json` first, then use `sample_output/map.html` for commander sharing.
 4. For the current #534-only live test, run `.\.venv\Scripts\python.exe tools\invasion_strategy_os\invasion_strategy_os.py --config tools\invasion_strategy_os\config.google_history_534.json`.
 5. For the current full-map live test, run `.\.venv\Scripts\python.exe tools\invasion_strategy_os\invasion_strategy_os.py --config tools\invasion_strategy_os\config.google_full_map.json`.
-6. For the local interactive prototype, run `.\.venv\Scripts\python.exe tools\invasion_strategy_os\interactive_server.py --port 8010` and open `http://127.0.0.1:8010/`.
+6. For refresh buttons and the local interactive prototype, run `.\.venv\Scripts\python.exe tools\invasion_strategy_os\interactive_server.py --port 8010`; then open either `http://127.0.0.1:8010/` or the generated map at `http://127.0.0.1:8010/sample_output/map.html`.
 
 ## Questions for ChatGPT
 
@@ -83,6 +84,7 @@ This does not automate gameplay. It is a repeatable analysis and visualization p
 - The generated HTML is UTF-8 and uses local vis-network assets in `sample_output/lib/`.
 - The in-app browser successfully rendered the regenerated full-map output at `http://127.0.0.1:8000/sample_output/map.html`.
 - The in-app browser visually verified the new `境界強調` and `強調解除` buttons on the generated `sample_output/map.html`.
+- The in-app browser visually verified `マップ最新化`: it called the local refresh API, regenerated from Google Sheets, and reloaded `sample_output/map.html` with a cache-busting URL.
 - Visual reference screenshots supplied by the user for tactical map geometry: `C:/Users/kitazaki/FIT Dropbox/訓北﨑/lastwar/S6/IMG_1219.PNG` and `C:/Users/kitazaki/FIT Dropbox/訓北﨑/lastwar/S6/IMG_1220.PNG`. These were used as reference only and were not committed.
 - The `tools/invasion_strategy_os/` directory is explicitly allowlisted in `.gitignore`; existing unrelated local `tools/` files remain ignored.
 - Existing unrelated local changes were not touched.
