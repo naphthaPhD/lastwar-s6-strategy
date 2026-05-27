@@ -503,7 +503,7 @@ def write_html(
     font_size = int(config.get("font_size", 18))
     colors_by_owner = owner_color_map({str(node_data.get("owner", "unknown")) for _, node_data in graph.nodes(data=True)})
 
-    network = Network(height="820px", width="100%", bgcolor="#111827", font_color="#f9fafb", cdn_resources="local")
+    network = Network(height="100vh", width="100%", bgcolor="#111827", font_color="#f9fafb", cdn_resources="local")
     network.toggle_physics(False)
 
     for node_id, node_data in graph.nodes(data=True):
@@ -623,6 +623,29 @@ def localize_vis_resources(html: str) -> str:
 def add_node_info_panel(html: str) -> str:
     style = """
 <style>
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #111827;
+  }
+  .card {
+    width: 100% !important;
+    height: 100vh !important;
+    border: 0 !important;
+    background: #111827 !important;
+  }
+  .card-body {
+    height: 100vh !important;
+    padding: 0 !important;
+  }
+  #mynetwork {
+    width: 100vw !important;
+    height: 100vh !important;
+    border: 0 !important;
+  }
   #node-info-panel {
     position: fixed;
     right: 16px;
@@ -743,6 +766,29 @@ def add_node_info_panel_v2(html: str) -> str:
     empty_text = "Click a node to show area, coordinate, type, alliance, and protection data from the management table."
     style = """
 <style>
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #111827;
+  }
+  .card {
+    width: 100% !important;
+    height: 100vh !important;
+    border: 0 !important;
+    background: #111827 !important;
+  }
+  .card-body {
+    height: 100vh !important;
+    padding: 0 !important;
+  }
+  #mynetwork {
+    width: 100vw !important;
+    height: 100vh !important;
+    border: 0 !important;
+  }
   #node-info-panel {
     position: fixed;
     right: 16px;
@@ -864,6 +910,29 @@ def add_node_info_panel_v3(html: str) -> str:
     empty_text = "Click a node to show area, coordinate, type, alliance, and protection data from the management table."
     style = """
 <style>
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #111827;
+  }
+  .card {
+    width: 100% !important;
+    height: 100vh !important;
+    border: 0 !important;
+    background: #111827 !important;
+  }
+  .card-body {
+    height: 100vh !important;
+    padding: 0 !important;
+  }
+  #mynetwork {
+    width: 100vw !important;
+    height: 100vh !important;
+    border: 0 !important;
+  }
   #node-info-panel {
     position: fixed;
     right: 16px;

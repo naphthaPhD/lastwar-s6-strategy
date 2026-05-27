@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T18:20:18.142248+09:00",
+  "generated_at": "2026-05-27T18:50:13.344140+09:00",
   "timezone": "Asia/Tokyo",
   "nodes": [
     {
@@ -454,7 +454,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -155.34,
+        "hours_remaining": -155.84,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -758,7 +758,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -155.34,
+        "hours_remaining": -155.84,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -1062,7 +1062,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -155.34,
+        "hours_remaining": -155.84,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -1252,7 +1252,7 @@
       "memo": "OCR IMG_0533.PNG / #476 X:799 Y:20 Lv.1 / 中立/未登録 -> 476X",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -1309,7 +1309,7 @@
       "memo": "赤字OCR IMG_0695.PNG / #509 X:799 Y:20 Lv1 漁場 / BHE -> 4tH",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -1366,7 +1366,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -155.34,
+        "hours_remaining": -155.84,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -1423,7 +1423,7 @@
       "memo": "赤字OCR IMG_0695.PNG / #476 X:849 Y:49 Lv1 湿地の村 / 中立/未登録 -> 476X",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.66,
+        "hours_remaining": 76.16,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -1670,7 +1670,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -155.34,
+        "hours_remaining": -155.84,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -2012,7 +2012,7 @@
       "memo": "OCR IMG_0523.PNG / #476 X:978 Y:20 Lv.1 / 中立/未登録 -> 476B",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -2069,7 +2069,7 @@
       "memo": "赤字OCR IMG_0751.PNG / #509 X:978 Y:20 Lv.1 / SsQ -> SsQ / 時刻は前後スクショから推定",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -2126,7 +2126,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -155.34,
+        "hours_remaining": -155.84,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -2278,7 +2278,7 @@
       "memo": "赤字OCR IMG_0873.PNG / #534 X:99 Y:20 Lv.1 / nO9 -> KTVS / 時刻は前後スクショから推定",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -2373,7 +2373,7 @@
       "memo": "OCR IMG_0444.PNG / #503 X:149 Y:49 Lv.1",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.84,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -2582,7 +2582,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -155.34,
+        "hours_remaining": -155.84,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -2791,7 +2791,7 @@
       "memo": "OCR IMG_0505.PNG / #480 X:299 Y:20 Lv.1 / BAI→BAJ",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -2886,7 +2886,7 @@
       "memo": "OCR IMG_0449.PNG / #534 X:299 Y:20 Lv.1",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -3190,7 +3190,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -155.34,
+        "hours_remaining": -155.84,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -3342,7 +3342,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -155.34,
+        "hours_remaining": -155.84,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -3437,7 +3437,7 @@
       "memo": "OCR IMG_0501.PNG / #509 X:449 Y:149 Lv.1 / 中立/未登録→VEX",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.84,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -3551,7 +3551,7 @@
       "memo": "OCR IMG_0507.PNG / #480 X:499 Y:99 Lv.1",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -3589,7 +3589,7 @@
       "memo": "赤字OCR IMG_0696.PNG / #509 X:499 Y:99 Lv1 漁場 / VEX -> 476d / 時刻は前後スクショから推定",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -3646,7 +3646,7 @@
       "memo": "赤字OCR IMG_0614.PNG / #534 X:499 Y:99 Lv.1 / 中立/未登録 -> Trh / 時刻は前後スクショから推定",
       "protection": {
         "status": "expired",
-        "hours_remaining": -83.34,
+        "hours_remaining": -83.84,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -3893,7 +3893,7 @@
       "memo": "赤字OCR IMG_0697.PNG / #509 X:599 Y:99 Lv1 漁場 / CZX -> 476d / 時刻は前後スクショから推定",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -3950,7 +3950,7 @@
       "memo": "赤字OCR IMG_0632.PNG / #534 X:599 Y:99 Lv.1 / 中立/放棄 -> Trh / 時刻は前後スクショから推定",
       "protection": {
         "status": "expired",
-        "hours_remaining": -83.34,
+        "hours_remaining": -83.84,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -4140,7 +4140,7 @@
       "memo": "画像10: #476 X:699 Y:99 Lv1",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.34,
+        "hours_remaining": -163.84,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -4254,7 +4254,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -339.34,
+        "hours_remaining": -339.84,
         "protect_until": "2026-05-13T15:00:00+09:00"
       }
     },
@@ -4862,7 +4862,7 @@
       "memo": "OCR IMG_0481.PNG / #534 X:899 Y:99 Lv.1 / w6Fに表記統一",
       "protection": {
         "status": "expired",
-        "hours_remaining": -83.34,
+        "hours_remaining": -83.84,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -5318,7 +5318,7 @@
       "memo": "赤字OCR IMG_0615.PNG / #534 X:978 Y:99 Lv.1 / 中立/未登録 -> w6F / 時刻は前後スクショから推定",
       "protection": {
         "status": "expired",
-        "hours_remaining": -83.34,
+        "hours_remaining": -83.84,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -5470,7 +5470,7 @@
       "memo": "赤字OCR IMG_0748.PNG / #534 X:99 Y:99 Lv.1 / 中立/未登録 -> nO9 / 時刻は前後スクショから推定",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -5774,7 +5774,7 @@
       "memo": "OCR IMG_0452.PNG / #534 X:199 Y:99 Lv.1",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -5983,7 +5983,7 @@
       "memo": "OCR IMG_0507.PNG / #480 X:299 Y:99 Lv.1",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -6078,7 +6078,7 @@
       "memo": "OCR IMG_0450.PNG / #534 X:299 Y:99 Lv.1",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -6325,7 +6325,7 @@
       "memo": "OCR IMG_0389.PNG / #509 X:399 Y:99 Lv.1",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -6382,7 +6382,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -155.34,
+        "hours_remaining": -155.84,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -6439,7 +6439,7 @@
       "memo": "OCR IMG_0450.PNG / #480 X:20 Y:199 Lv.1 / 中立/未登録→BgNa",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -6477,7 +6477,7 @@
       "memo": "OCR IMG_0507.PNG / #509 X:20 Y:199 Lv.1",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.84,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -6534,7 +6534,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -155.34,
+        "hours_remaining": -155.84,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -6743,7 +6743,7 @@
       "memo": "赤字OCR IMG_0747.PNG / #480 X:499 Y:199 Lv.2 / 中立/未登録 -> BgNa / 時刻は前後スクショから推定",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -6781,7 +6781,7 @@
       "memo": "赤字OCR IMG_0694.PNG / #509 X:499 Y:199 Lv2 漁場 / 中立/未登録 -> VEX",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -6838,7 +6838,7 @@
       "memo": "赤字OCR IMG_0875.PNG / #534 X:499 Y:199 Lv.2 / Trh -> 476B",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -6952,7 +6952,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.84,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -7085,7 +7085,7 @@
       "memo": "赤字OCR IMG_0698.PNG / #509 X:599 Y:199 Lv2 漁場 / VEX -> 476A",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -7275,7 +7275,7 @@
       "memo": "手入力ログ 2026/05/27 11:18 / #534 X:649 Y:249 Lv.2 密林の兵舎 / 中立/未登録 -> JDX / 種別は都市に正規化 / 最初の連盟",
       "protection": {
         "status": "protected",
-        "hours_remaining": 164.66,
+        "hours_remaining": 164.16,
         "protect_until": "2026-06-03T15:00:00+09:00"
       }
     },
@@ -7351,7 +7351,7 @@
       "memo": "赤字OCR IMG_0904.PNG / #480 X:699 Y:199 Lv.2 / 中立/未登録 -> GcC",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -7389,7 +7389,7 @@
       "memo": "OCR IMG_0455.PNG / #509 X:699 Y:199 Lv.2",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -8605,7 +8605,7 @@
       "memo": "OCR IMG_0509.PNG / #509 X:99 Y:199 Lv.1",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -8662,7 +8662,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -155.34,
+        "hours_remaining": -155.84,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -8909,7 +8909,7 @@
       "memo": "OCR IMG_0542.PNG / #509 X:199 Y:199 Lv.2 / 中立/未登録 -> SHA",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -8966,7 +8966,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -155.34,
+        "hours_remaining": -155.84,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -9118,7 +9118,7 @@
       "memo": "手入力ログ 2026/05/27 11:01 / #534 X:249 Y:249 Lv.2 密林の兵舎 / 中立/未登録 -> 4tH / 種別は都市に正規化 / 最初の連盟",
       "protection": {
         "status": "protected",
-        "hours_remaining": 172.66,
+        "hours_remaining": 172.16,
         "protect_until": "2026-06-03T23:00:00+09:00"
       }
     },
@@ -9213,7 +9213,7 @@
       "memo": "2026/05/21 22:43 右側パネル: 中立/未登録 -> JDX / 取得日時更新2026/05/21 22:39 OCR IMG_0547.PNG / #509 X:299 Y:199 Lv.2 / JDX継続確認・取得日時更新",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -9270,7 +9270,7 @@
       "memo": "赤字OCR IMG_0872.PNG / #534 X:299 Y:199 Lv.2 / SHA -> 476C",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -9517,7 +9517,7 @@
       "memo": "赤字OCR IMG_0641.PNG / #509 X:399 Y:199 Lv.2 / 中立/未登録 -> VEX",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.84,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -9574,7 +9574,7 @@
       "memo": "赤字OCR IMG_0874.PNG / #534 X:399 Y:199 Lv.2 / SHA0 -> 476C",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -9745,7 +9745,7 @@
       "memo": "赤字OCR IMG_0751.PNG / #476 X:449 Y:349 Lv.3 / 中立/未登録 -> 476B / 時刻は前後スクショから推定",
       "protection": {
         "status": "protected",
-        "hours_remaining": 84.66,
+        "hours_remaining": 84.16,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -9764,7 +9764,7 @@
       "memo": "赤字OCR IMG_0743.PNG / #503 X:449 Y:349 Lv.3 / 中立/未登録 -> Lghs",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.66,
+        "hours_remaining": 76.16,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -9802,7 +9802,7 @@
       "memo": "OCR IMG_0459.PNG / #480 X:449 Y:349 Lv.3",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -9821,7 +9821,7 @@
       "memo": "OCR IMG_0479.PNG / #509 X:449 Y:349 Lv.3 / SsQ維持",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -9973,7 +9973,7 @@
       "memo": "赤字OCR IMG_0903.PNG / #509 X:499 Y:299 Lv.3 / 中立/未登録 -> 476A",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -10049,7 +10049,7 @@
       "memo": "赤字OCR IMG_0750.PNG / #476 X:549 Y:349 Lv.3 / 中立/未登録 -> 476B / 時刻は前後スクショから推定",
       "protection": {
         "status": "protected",
-        "hours_remaining": 84.66,
+        "hours_remaining": 84.16,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -10277,7 +10277,7 @@
       "memo": "赤字OCR IMG_0871.PNG / #509 X:599 Y:299 Lv.3 / SsQ -> 476A",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -10353,7 +10353,7 @@
       "memo": "OCR IMG_0456.PNG / #476 X:649 Y:349 Lv.3",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -10448,7 +10448,7 @@
       "memo": "OCR IMG_0459.PNG / #534 X:649 Y:349 Lv.3 / 中立/未登録→JDX",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.84,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -11189,7 +11189,7 @@
       "memo": "OCR IMG_0489.PNG / #509 X:899 Y:299 Lv.1",
       "protection": {
         "status": "expired",
-        "hours_remaining": -83.34,
+        "hours_remaining": -83.84,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -11645,7 +11645,7 @@
       "memo": "赤字OCR IMG_0746.PNG / #509 X:978 Y:299 Lv.1 / SsQ -> SsQ",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -11702,7 +11702,7 @@
       "memo": "2026/05/21 20:06 右側パネル: 放棄確認 / 中立化 89M -> 中立2026/05/21 23:14 OCR IMG_0548.PNG / #534 X:978 Y:299 Lv.1 / 中立/放棄 -> 89M",
       "protection": {
         "status": "expired",
-        "hours_remaining": -83.34,
+        "hours_remaining": -83.84,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -12025,7 +12025,7 @@
       "memo": "赤字OCR IMG_1090.PNG / #440 X:199 Y:299 Lv.2 漁場 / 中立/未登録 -> BAJ / 最初の連盟",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -12329,7 +12329,7 @@
       "memo": "手入力ログ 2026/05/25 05:06 / #440 X:299 Y:299 Lv.3 漁場 / 中立/未登録 -> BAJ / 最初の連盟",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -12386,7 +12386,7 @@
       "memo": "RAW_OCR_LOG row41 / #503 X:299 Y:299 Lv.3 漁場 / 中立/未登録 -> TkTk / 画像:323B43BC / Dropbox赤字OCR重複確認",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.84,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -12405,7 +12405,7 @@
       "memo": "赤字OCR IMG_0754.PNG / #509 X:299 Y:299 Lv.3 / tWD -> JDX",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.84,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -12462,7 +12462,7 @@
       "memo": "赤字OCR IMG_0874.PNG / #534 X:299 Y:299 Lv.3 / SHA -> 476B",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -12709,7 +12709,7 @@
       "memo": "赤字OCR IMG_0701.PNG / #509 X:399 Y:299 Lv3 漁場 / 中立/未登録 -> VEX",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -13165,7 +13165,7 @@
       "memo": "赤字OCR IMG_0903.PNG / #509 X:499 Y:399 Lv.4 / 中立/未登録 -> FHX",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -13469,7 +13469,7 @@
       "memo": "赤字OCR IMG_0583.PNG / #509 X:599 Y:399 Lv.4 / 中立/未登録 -> FHX",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -14077,7 +14077,7 @@
       "memo": "OCR IMG_0488.PNG / #509 X:799 Y:399 Lv.2",
       "protection": {
         "status": "expired",
-        "hours_remaining": -83.34,
+        "hours_remaining": -83.84,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -14970,7 +14970,7 @@
       "memo": "RAW_OCR_LOG row42 / #503 X:99 Y:399 Lv.1 漁場 / 中立/未登録 -> RCON / 画像:323B43BC / Dropbox赤字OCR重複確認",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.84,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -15217,7 +15217,7 @@
       "memo": "手入力ログ 2026/05/27 6:16 / #440 X:199 Y:399 Lv.2 漁場 / 中立/未登録 -> BAJ / 画像:269C1960-ECB0-4A5E-8F25-98B00614784B.jpeg",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -15255,7 +15255,7 @@
       "memo": "赤字OCR IMG_0903.PNG / #480 X:199 Y:399 Lv.2 / 中立/未登録 -> RCON",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.84,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -15369,7 +15369,7 @@
       "memo": "赤字OCR IMG_0691.PNG / #480 X:249 Y:449 Lv2 湿地の兵舎 / 中立/未登録 -> TkTk",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.16,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -15559,7 +15559,7 @@
       "memo": "赤字OCR IMG_0754.PNG / #480 X:299 Y:399 Lv.3 / 中立/未登録 -> BAJ",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -15578,7 +15578,7 @@
       "memo": "画像17: #503 X:299 Y:399 Lv3",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.34,
+        "hours_remaining": -163.84,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -15673,7 +15673,7 @@
       "memo": "赤字OCR IMG_0745.PNG / #480 X:349 Y:449 Lv.3 / 中立/未登録 -> BgNa",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.66,
+        "hours_remaining": 76.16,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -15692,7 +15692,7 @@
       "memo": "赤字OCR IMG_0744.PNG / #503 X:349 Y:449 Lv.3 / 中立/未登録 -> Lghs",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.66,
+        "hours_remaining": 76.16,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -15787,7 +15787,7 @@
       "memo": "OCR IMG_0475.PNG / #534 X:349 Y:449 Lv.3",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -15825,7 +15825,7 @@
       "memo": "赤字OCR IMG_1089.PNG / #440 X:399 Y:399 Lv.4 漁場 / 中立/未登録 -> SsQ",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -15901,7 +15901,7 @@
       "memo": "OCR IMG_0558.PNG / #509 X:399 Y:399 Lv.4 / 中立/未登録 -> SsQ",
       "protection": {
         "status": "expired",
-        "hours_remaining": -83.34,
+        "hours_remaining": -83.84,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -16661,7 +16661,7 @@
       "memo": "赤字OCR IMG_0702.PNG / #509 X:599 Y:499 Lv4 漁場 / 中立/未登録 -> SsQ",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -16718,7 +16718,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -267.34,
+        "hours_remaining": -267.84,
         "protect_until": "2026-05-16T15:00:00+09:00"
       }
     },
@@ -16756,7 +16756,7 @@
       "memo": "OCR IMG_0459.PNG / #476 X:649 Y:549 Lv.3 / 476d維持",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.84,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -16794,7 +16794,7 @@
       "memo": "OCR IMG_0456.PNG / #509 X:649 Y:549 Lv.3 / FHX維持",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -16908,7 +16908,7 @@
       "memo": "RAW_OCR_LOG row38 / #476 X:699 Y:499 Lv.3 漁場 / 中立/未登録 -> 476d / 画像:968A1AD3",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -16927,7 +16927,7 @@
       "memo": "赤字OCR IMG_1085.PNG / #480 X:699 Y:499 Lv.3 漁場 / 中立/未登録 -> TkTk",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -17022,7 +17022,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.84,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -17174,7 +17174,7 @@
       "memo": "",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.84,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -17269,7 +17269,7 @@
       "memo": "赤字OCR IMG_0695.PNG / #509 X:799 Y:499 Lv2 漁場 / 中立/未登録 -> Lghs",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -17573,7 +17573,7 @@
       "memo": "OCR IMG_0530.PNG / #509 X:899 Y:499 Lv.1 / 中立/未登録 -> Lghs",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.84,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -18048,7 +18048,7 @@
       "memo": "手入力ログ 2026/05/25 01:22 / #511 X:978 Y:499 Lv.1 漁場 / 中立/未登録 -> TRh / 最初の連盟",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -18447,7 +18447,7 @@
       "memo": "OCR IMG_0524.PNG / #480 X:199 Y:499 Lv.2 / 中立/未登録 -> TkTk / 視認補正",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.84,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -18561,7 +18561,7 @@
       "memo": "赤字OCR IMG_0694.PNG / #476 X:249 Y:549 Lv2 湿地の兵舎 / 中立/未登録 -> 476X",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.66,
+        "hours_remaining": 76.16,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -18580,7 +18580,7 @@
       "memo": "赤字OCR IMG_0690.PNG / #480 X:249 Y:549 Lv2 湿地の兵舎 / 中立/未登録 -> TkTk",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.16,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -18713,7 +18713,7 @@
       "memo": "手入力ログ 2026/05/25 01:36 / #440 X:299 Y:499 Lv.3 漁場 / 中立/未登録 -> BAJ",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -18751,7 +18751,7 @@
       "memo": "OCR IMG_0523.PNG / #480 X:299 Y:499 Lv.3 / 中立/未登録 -> TkTk",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.84,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -18865,7 +18865,7 @@
       "memo": "赤字OCR IMG_0745.PNG / #480 X:349 Y:549 Lv.3 / 中立/未登録 -> BgNa",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.66,
+        "hours_remaining": 76.16,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -19055,7 +19055,7 @@
       "memo": "赤字OCR IMG_0686.PNG / #480 X:399 Y:499 Lv4 漁場 / 中立/未登録 -> BgNa",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -19074,7 +19074,7 @@
       "memo": "RAW_OCR_LOG row37 / #503 X:399 Y:499 Lv.4 漁場 / 中立/未登録 -> 476A / 画像:968A1AD3",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -19093,7 +19093,7 @@
       "memo": "手入力ログ 2026/05/25 06:01 / #509 X:399 Y:499 Lv.4 漁場 / 中立/未登録 -> GcC",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -19150,7 +19150,7 @@
       "memo": "赤字OCR IMG_0583.PNG / #534 X:399 Y:499 Lv.4 / 中立/未登録 -> 4tH",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -19321,7 +19321,7 @@
       "memo": "赤字OCR IMG_0862.PNG / #476 X:449 Y:649 Lv.3 / 中立/未登録 -> 476A",
       "protection": {
         "status": "protected",
-        "hours_remaining": 84.66,
+        "hours_remaining": 84.16,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -19340,7 +19340,7 @@
       "memo": "赤字OCR IMG_0690.PNG / #480 X:449 Y:649 Lv3 湿地の集会場 / 中立/未登録 -> RCON",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.16,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -19378,7 +19378,7 @@
       "memo": "OCR IMG_0456.PNG / #440 X:449 Y:649 Lv.3",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -19492,7 +19492,7 @@
       "memo": "赤字OCR IMG_0631.PNG / #476 X:499 Y:599 Lv.4 / 中立/未登録 -> 476A",
       "protection": {
         "status": "expired",
-        "hours_remaining": -83.34,
+        "hours_remaining": -83.84,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -19606,7 +19606,7 @@
       "memo": "OCR IMG_0472.PNG / #534 X:499 Y:599 Lv.4",
       "protection": {
         "status": "expired",
-        "hours_remaining": -83.34,
+        "hours_remaining": -83.84,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -19625,7 +19625,7 @@
       "memo": "赤字OCR IMG_0862.PNG / #476 X:549 Y:649 Lv.3 / 中立/未登録 -> 476A",
       "protection": {
         "status": "protected",
-        "hours_remaining": 84.66,
+        "hours_remaining": 84.16,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -19663,7 +19663,7 @@
       "memo": "OCR IMG_0477.PNG / #480 X:549 Y:649 Lv.3 / RCON維持",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.84,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -19739,7 +19739,7 @@
       "memo": "OCR IMG_0472.PNG / #534 X:549 Y:649 Lv.3",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -19948,7 +19948,7 @@
       "memo": "OCR IMG_0477.PNG / #476 X:649 Y:649 Lv.3 / 476A維持",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -19967,7 +19967,7 @@
       "memo": "OCR IMG_0479.PNG / #480 X:649 Y:649 Lv.3 / TkTk維持",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.84,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -20005,7 +20005,7 @@
       "memo": "OCR IMG_0479.PNG / #509 X:649 Y:649 Lv.3 / 中立/未登録→FHX",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -20214,7 +20214,7 @@
       "memo": "赤字OCR IMG_0581.PNG / #534 X:699 Y:599 Lv.3 / 中立/未登録 -> KTVS",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -20575,7 +20575,7 @@
       "memo": "手入力ログ 2026/05/27 11:01 / #476 X:849 Y:649 Lv.1 湿地の村 / 中立/未登録 -> 476d / 種別は都市に正規化",
       "protection": {
         "status": "protected",
-        "hours_remaining": 164.66,
+        "hours_remaining": 164.16,
         "protect_until": "2026-06-03T15:00:00+09:00"
       }
     },
@@ -21639,7 +21639,7 @@
       "memo": "赤字OCR IMG_0584.PNG / #480 X:199 Y:599 Lv.2 / 中立/未登録 -> TkTk",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -21791,7 +21791,7 @@
       "memo": "OCR IMG_0386.PNG / #480 X:249 Y:649 Lv.2 / TkTk維持",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.84,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -21886,7 +21886,7 @@
       "memo": "OCR IMG_0463.PNG / #534 X:249 Y:649 Lv.2 / 4tH維持",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -22000,7 +22000,7 @@
       "memo": "赤字OCR IMG_0751.PNG / #511 X:299 Y:599 Lv.3 / 中立/未登録 -> WUG / 時刻は前後スクショから推定",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.84,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -22076,7 +22076,7 @@
       "memo": "OCR IMG_0476.PNG / #476 X:349 Y:649 Lv.3",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -22095,7 +22095,7 @@
       "memo": "OCR IMG_0478.PNG / #480 X:349 Y:649 Lv.3 / 時刻OCR要確認 / 読取要確認",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.84,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -22190,7 +22190,7 @@
       "memo": "OCR IMG_0468.PNG / #534 X:349 Y:649 Lv.3",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -22228,7 +22228,7 @@
       "memo": "手入力ログ 2026/05/27 0:33 / #476 X:399 Y:599 Lv.4 漁場 / 中立/未登録 -> Lghs / 画像:EC98C0E9-48DF-4F7A-8B3D-02CA2FE91BBE.jpeg",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.84,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -22342,7 +22342,7 @@
       "memo": "OCR IMG_0469.PNG / #534 X:399 Y:599 Lv.4 / 4tH維持",
       "protection": {
         "status": "expired",
-        "hours_remaining": -83.34,
+        "hours_remaining": -83.84,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -22798,7 +22798,7 @@
       "memo": "OCR IMG_0545.PNG / #534 X:499 Y:699 Lv.3 / 中立/未登録 -> nO9 / nO9確認",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -22817,7 +22817,7 @@
       "memo": "赤字OCR IMG_0695.PNG / #523 X:549 Y:749 Lv2 湿地の兵舎 / 中立/未登録 -> WUG",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.66,
+        "hours_remaining": 76.16,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -23102,7 +23102,7 @@
       "memo": "OCR IMG_0467.PNG / #534 X:599 Y:699 Lv.3 / 時刻OCR要確認 / 読取要確認",
       "protection": {
         "status": "expired",
-        "hours_remaining": -155.34,
+        "hours_remaining": -155.84,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -23596,7 +23596,7 @@
       "memo": "赤字OCR IMG_0634.PNG / #476 X:799 Y:699 Lv.2 / 中立/未登録 -> 476d",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.84,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -23729,7 +23729,7 @@
       "memo": "赤字OCR IMG_0694.PNG / #523 X:849 Y:749 Lv1 湿地の村 / 中立/未登録 -> WUG",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.66,
+        "hours_remaining": 76.16,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -23976,7 +23976,7 @@
       "memo": "OCR IMG_0464.PNG / #511 X:899 Y:699 Lv.1 / 時刻OCR要確認 / 読取要確認",
       "protection": {
         "status": "expired",
-        "hours_remaining": -155.34,
+        "hours_remaining": -155.84,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -23995,7 +23995,7 @@
       "memo": "OCR IMG_0531.PNG / #523 X:899 Y:699 Lv.1 / 中立/未登録 -> WUG",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.84,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -24508,7 +24508,7 @@
       "memo": "手入力ログ 2026/05/24 22:48 / #476 X:99 Y:699 Lv.1 漁場 / 中立/未登録 -> 476C",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -24812,7 +24812,7 @@
       "memo": "手入力ログ 2026/05/24 22:38 / #476 X:199 Y:699 Lv.2 漁場 / 中立/未登録 -> 476C",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -25534,7 +25534,7 @@
       "memo": "OCR IMG_0544.PNG / #534 X:399 Y:699 Lv.3 / 中立/未登録 -> nO9 / nO9確認",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -27168,7 +27168,7 @@
       "memo": "画像2/3: #511 X:899 Y:799 Lv1",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.34,
+        "hours_remaining": -163.84,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -27833,7 +27833,7 @@
       "memo": "赤字OCR IMG_0688.PNG / #480 X:149 Y:849 Lv1 湿地の村 / 中立/未登録 -> RCON",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.16,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -28023,7 +28023,7 @@
       "memo": "赤字OCR IMG_0631.PNG / #480 X:199 Y:799 Lv.2 / 中立/未登録 -> RCON",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.84,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -28308,7 +28308,7 @@
       "memo": "手入力ログ 2026/05/25 10:29 / #476 X:299 Y:799 Lv.2 漁場 / 中立/未登録 -> 476B",
       "protection": {
         "status": "soon",
-        "hours_remaining": 4.66,
+        "hours_remaining": 4.16,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -29144,7 +29144,7 @@
       "memo": "赤字OCR IMG_0752.PNG / #511 X:499 Y:899 Lv.1 / 中立/未登録 -> 476X / 時刻は前後スクショから推定",
       "protection": {
         "status": "protected",
-        "hours_remaining": 12.66,
+        "hours_remaining": 12.16,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -29752,7 +29752,7 @@
       "memo": "OCR IMG_0569.PNG / #511 X:699 Y:899 Lv.1 / 中立/未登録 -> BgNa / BgNa視認補正",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -30075,7 +30075,7 @@
       "memo": "OCR IMG_0532.PNG / #523 X:799 Y:899 Lv.1 / 中立/未登録 -> WUG",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.84,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -30968,7 +30968,7 @@
       "memo": "OCR IMG_0531.PNG / #511 X:99 Y:899 Lv.1 / 中立/未登録 -> 476B",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.34,
+        "hours_remaining": -91.84,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
