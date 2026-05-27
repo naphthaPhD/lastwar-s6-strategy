@@ -26,7 +26,9 @@ Latest side classification for this handoff:
 - Existing trial tab: `侵攻予測_20260527_統合`
 - New recommended map tab: `侵攻予測_20260527_取得入力型`
 - Source tab for the new map: `取得入力マップ`
-- New map sheetId: `1280147971`
+- Current recommended map sheetId: `202605272`
+- Operation data tab: `侵攻予測_操作データ`
+- Operation data sheetId: `202605273`
 
 `侵攻予測_20260527_取得入力型` was created by directly duplicating `取得入力マップ`. It preserves the source tab's structure instead of trying to rebuild the map manually.
 
@@ -92,21 +94,36 @@ Seeded scenarios:
 - `反攻ルート`: `#534:C-11` is the starting candidate; `#534:D-9`, `#476:D-9`, and `#476:C-11` are marked as short-window connection-cut candidates.
 - `476B上押し`, `476C右押し`, `503合流`: initial role-split and convergence hypotheses are included as editable rows.
 
-Custom scenario/action overlay added at 2026-05-27 14:40 JST:
+Custom scenario/action overlay status:
 
-- Custom scenario registry: `侵攻予測_20260527_取得入力型!DZ3:DZ40`
-- Action-category registry: `侵攻予測_20260527_取得入力型!EA3:EA15`
-- Scenario selector: `DP2`
-- Layer rows: `DO19:DY90`
-- Action input: `DQ19:DQ90`
-- Auto key: `DT19:DT90`
-- Map coloring range: `A6:CC88`
+The 2026-05-27 14:40 JST design placed the input panel on the map itself, but that was superseded at 2026-05-27 15:22 JST because top-panel input changed the map column widths. The current design keeps the map tab as a pure map and moves all scenario inputs to `侵攻予測_操作データ`.
 
-Operators can now add a new scenario name in `DZ`, select it in `DP2` and `DP19:DP90`, then choose an action in `DQ` such as `攻める`, `守る`, `捨てる`, `取る`, `保護更新`, `敵主攻`, `破壊候補`, `防衛優先`, `再取得`, `反攻ルート`, `起点`, or `要確認`. Rows with `ON=TRUE` and a matching scenario are reflected onto the map by top-priority conditional formatting.
+Current 2026-05-27 15:22 JST structure:
+
+- `侵攻予測_20260527_取得入力型` was rebuilt from `取得入力マップ`.
+- New map sheetId: `202605272`.
+- Map body: `侵攻予測_20260527_取得入力型!A6:CC88`.
+- Hidden compatibility/right-side columns: `CD:DN`.
+- Operation data sheet: `侵攻予測_操作データ`.
+- Operation data sheetId: `202605273`.
+- Scenario selector: `侵攻予測_操作データ!O1`.
+- Layer rows: `侵攻予測_操作データ!A2:L200`.
+- Auto key: `侵攻予測_操作データ!J2:J200`.
+- Game coordinate helper: `侵攻予測_操作データ!K2:K200`.
+
+Operators now add or edit rows in `侵攻予測_操作データ`, then select the display scenario in `O1`. Rows with `ON=TRUE` and a matching scenario are reflected onto the map by conditional formatting. This avoids changing map column widths.
 
 Action-color rules now override the normal side text-color view only for highlighted cells. Unhighlighted cells still use the command-reading colors: enemy red, #534 blue, #509 ally green, and other black. Highlighted cells use the action background color, with white bold text on dark colors and black bold text on yellow categories.
 
-Verification sample: with `DP2=最悪パターン` and row 19 set to `TRUE / 最悪パターン / 敵主攻 / #534 / D-11 / #534:D-11`, map cell `S33` was confirmed to correspond to `#534:D-11` and render as red background with white bold text.
+Verification sample: `マップ表示テンプレ!S33=D-11`; with `侵攻予測_操作データ` containing `TRUE / 最悪パターン / 敵主攻 / #534 / D-11 / #534:D-11`, map cell `侵攻予測_20260527_取得入力型!S33` renders as red background with white bold text.
+
+Sidebar source patch:
+
+- Saved range: `AppsScript_地点詳細!A1320:A1407`
+- Main sidebar function: `openInvasionScenarioSidebar`
+- Data-write function: `appendInvasionScenarioRow`
+- Scenario-filter function: `setInvasionScenarioFilter`
+- Status: saved as source text only. To make it live, copy the block into bound Apps Script `Code.gs` and add the menu item to `onOpen()`.
 
 Verified properties:
 
@@ -129,12 +146,13 @@ Verified properties:
 5. The safest working map is now `侵攻予測_20260527_取得入力型`, because it is an exact duplicate of `取得入力マップ`.
 6. `侵攻予測_20260527_統合` should be treated as a trial/reference tab, not the operational source of truth.
 7. The new sync patch copies only the map body, so top notes and tactical formatting on the prediction tab can remain while the map body is refreshed.
-8. The right-side prediction layer now turns the tab into a paint-map workflow: add a coordinate row, select a scenario and category, set `ON=TRUE`, and the map highlights that point.
+8. The prediction workflow now uses `侵攻予測_操作データ` as the paint-map input table: add a coordinate row, select a scenario and action category, set `ON=TRUE`, and the map highlights that point.
 9. For command use, scenario switching is now simpler than creating separate tabs for every hypothesis.
 10. The old `取得入力マップの使い方` column has been removed from the prediction tab to reduce clutter.
 11. The map body now prioritizes white background plus text-color classification: red enemy, blue #534, green #509 ally, black other.
 12. Game-coordinate display is available in `DY`, but only where `管理表たたき` already has a coordinate string in the memo/source field.
-13. The prediction map now supports user-created scenarios and action categories, so commanders can mark attack, defense, abandon, capture, recapture, and protection-refresh intentions directly on the map.
+13. The prediction map now supports user-created scenarios and action categories without placing input cells on the map tab itself.
+14. The top-panel input design was rejected because it changed map column widths.
 
 ## Current risks
 
@@ -149,7 +167,8 @@ Verified properties:
 9. Prediction rows are hypotheses, not confirmed rules. If fishery ownership, city break eligibility, or pact access changes, the right-side table must be updated before using the colors operationally.
 10. The counterattack route layer should be treated as a short-window disruption plan; fixed occupation against #476/#503 pressure is still high-risk.
 11. Action-color rules now have top priority on `A6:CC88`; when a scenario highlight is active, it overrides the white background and normal side text color for that cell.
-12. Coordinate blanks in `DY` are data gaps, not formula failure, when the corresponding `管理表たたき` memo/source field has no `#... X... Y...` text.
+12. Coordinate blanks in `侵攻予測_操作データ!K:K` are data gaps, not formula failure, when the corresponding `管理表たたき` memo/source field has no `#... X... Y...` text.
+13. Until the Apps Script block is copied into live `Code.gs`, the actual editable input surface is `侵攻予測_操作データ`, not a live sidebar.
 
 ## Recommended next actions
 
@@ -163,7 +182,8 @@ Verified properties:
 8. Use `DP2=最悪パターン` to brief likely enemy break points, `DP2=防衛ライン` for minimum defense, `DP2=捨て/交換` for abandon/recapture, and `DP2=反攻ルート` for attack planning.
 9. Add new rows under `DO19:DY90` whenever 476B/476C/503 captures a fishery or gains a new city-destruction adjacency.
 10. Add missing game coordinates to `管理表たたき` memo/source fields in `#534 X449 Y49` or `#534 X:449 Y:49` style if `DY` should show them.
-11. For each command decision, first add or select a scenario in `DZ`, then classify rows in `DQ` as `攻める`, `守る`, `捨てる`, `取る`, or `保護更新` so the map works as a shared paint-map rather than a static forecast.
+11. For each command decision, add or edit rows in `侵攻予測_操作データ`, then classify rows as `攻める`, `守る`, `捨てる`, `取る`, or `保護更新` so the map works as a shared paint-map rather than a static forecast.
+12. If a sidebar workflow is desired, reflect `AppsScript_地点詳細!A1320:A1407` into live `Code.gs` and add the `openInvasionScenarioSidebar` menu item.
 
 ## Questions for ChatGPT
 
@@ -178,8 +198,8 @@ Verified properties:
 
 - This update intentionally stops trying to delete AO or remove map borders by restructuring cells.
 - The new tab keeps the same shape as `取得入力マップ`, including the difficult merged cells.
-- `侵攻予測_20260527_取得入力型!A1:A3` and `DK1:DK2` were updated with sync notes and last-sync status.
-- `侵攻予測_20260527_取得入力型!DO:DY` is now the operator-facing prediction input area; the map body should still be treated as copied/current-state terrain.
+- `侵攻予測_20260527_取得入力型!A1:A4` now explicitly notes that operation input belongs in `侵攻予測_操作データ` or the future Apps Script sidebar.
+- `侵攻予測_操作データ!A:L` is now the operator-facing prediction input area; the map body should still be treated as copied/current-state terrain.
 - The map body is now a white-background command view with text colors: red enemy, blue #534, green #509 ally, black other.
 - Scenario highlights now intentionally override the normal text-color view for the selected cells, because tactical actions need to be visible at a glance.
 - Existing unrelated local changes remain outside this analysis.
