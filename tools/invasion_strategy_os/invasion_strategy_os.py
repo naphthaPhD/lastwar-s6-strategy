@@ -523,11 +523,14 @@ def derive_coordinate_edges(nodes: dict[str, Node], config: dict[str, Any]) -> l
     city_type = str(config.get("city_type", DEFAULT_CITY_TYPE))
     trade_type = str(config.get("trade_type", "\u4ea4\u6613\u5730"))
     include_central = bool(config.get("include_central_fishery_edges", True))
+    central_boundary_max_distance = float(config.get("central_boundary_max_distance", 76))
 
     outer_by_area_coord: dict[tuple[str, int, int], str] = {}
+    outer_fishery_nodes: dict[str, Node] = {}
     outer_city_by_area_coord: dict[tuple[str, int, int], str] = {}
     outer_blocking_facility_by_area_coord: dict[tuple[str, int, int], str] = {}
     central_by_coord: dict[tuple[int, int], str] = {}
+    central_fishery_nodes: dict[str, Node] = {}
     for node_id, node in nodes.items():
         if node.type == fishery_type:
             if node.type in isolated_types:
@@ -535,10 +538,12 @@ def derive_coordinate_edges(nodes: dict[str, Node], config: dict[str, Any]) -> l
             outer_coord = parse_outer_fishery_coord(node.name)
             if outer_coord is not None:
                 outer_by_area_coord[(node.area, outer_coord[0], outer_coord[1])] = node_id
+                outer_fishery_nodes[node_id] = node
                 continue
             central_coord = parse_central_grid_coord(node.name)
             if include_central and central_coord is not None:
                 central_by_coord[central_coord] = node_id
+                central_fishery_nodes[node_id] = node
             continue
         if node.type in {city_type, trade_type}:
             outer_city_coord = parse_outer_city_coord(node.name)
@@ -589,6 +594,13 @@ def derive_coordinate_edges(nodes: dict[str, Node], config: dict[str, Any]) -> l
             target_id = central_by_coord.get((row + row_step, col + col_step))
             if target_id:
                 add_edge_once(edges, source_id, target_id)
+
+    if central_boundary_max_distance > 0:
+        for outer_id, outer_node in sorted(outer_fishery_nodes.items()):
+            for central_id, central_node in sorted(central_fishery_nodes.items()):
+                distance = ((outer_node.x - central_node.x) ** 2 + (outer_node.y - central_node.y) ** 2) ** 0.5
+                if 0 < distance <= central_boundary_max_distance:
+                    add_edge_once(edges, outer_id, central_id, round(distance, 3))
 
     return list(edges.values())
 
