@@ -350,11 +350,21 @@
     }
 
     function displayOwner(node) {
+      if (isDestroyedNode(node)) return "破壊";
       if (node.display_owner) return node.display_owner;
       return isUnownedOwner(node.owner) ? "未取得" : String(node.owner || "").trim();
     }
 
+    function isDestroyedNode(node) {
+      if (node.destroyed) return true;
+      if (node.type !== "都市") return false;
+      return [node.status, node.memo, node.owner]
+        .filter(Boolean)
+        .some(value => String(value).toLowerCase().includes("破壊") || String(value).toLowerCase().includes("destroyed"));
+    }
+
     function strategicColor(node) {
+      if (isDestroyedNode(node)) return "#6b7280";
       if (node.strategic_color) return node.strategic_color;
       if (isUnownedOwner(node.owner)) return "#f8fafc";
       if (node.affiliation === "self") return "#2563eb";

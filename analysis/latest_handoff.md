@@ -45,12 +45,12 @@ This does not automate gameplay. It is a repeatable analysis and visualization p
 13. Fishery nodes are displayed larger than city nodes, but central-area fishery nodes are displayed smaller than outer fisheries to reduce central clutter.
 14. The HTML map has a label toggle: coordinate labels by default, or alliance-name labels at the same node-center position. In alliance-name mode, trade posts are always labeled `交易地`.
 15. Node colors are strategic colors from `管理表たたき` ownership: #534-side owners are blue, #509/#440/#511-side owners are green, enemy-side owners are red, and unowned nodes are white. Owners with server-number prefixes such as `476B` are classified by that prefix even when they occupy another area.
-16. Edge rules are now tactical and coordinate-based: fisheries connect to adjacent fisheries in 8 directions unless the diagonal crosses a city/trade-post cell, cities connect only to their four surrounding fisheries, trade posts remain isolated and are never treated as cities, and altar/temple nodes are isolated. Outer-area fisheries also connect to nearby central fisheries using the same adjacency intent with a small coordinate tolerance. Verification after regeneration: 5,620 edges, 2,740 fishery-fishery edges, 2,880 fishery-city edges, 92 outer-central fishery edges, 0 city-city edges, 0 trade-post edges, and 0 altar/temple edges.
+16. Edge rules are now tactical and coordinate-based: fisheries connect to adjacent fisheries in 8 directions unless the diagonal crosses a city/trade-post cell, cities connect only to their four surrounding fisheries, destroyed cities are isolated, trade posts remain isolated and are never treated as cities, and altar/temple nodes are isolated. Outer-area fisheries also connect to nearby central fisheries using the same adjacency intent with a small coordinate tolerance. Verification after regeneration: 5,624 edges, 2,740 fishery-fishery edges, 2,884 fishery-city edges, 0 destroyed-node edges, 0 city-city edges, 0 trade-post edges, and 0 altar/temple edges.
 17. The HTML map has a `位置リセット` button that returns moved nodes to the generated layout.
 18. Clicking a node opens a fixed information panel with management-table fields.
 19. Fishery nodes now use circle styling and smaller in-node label text so alliance-name mode is easier to read; central fishery node size is reduced to 14.
 20. The HTML map applies display-only gaps between the 3x3 area blocks; graph coordinates and edge derivation remain unchanged.
-21. The HTML map includes a fixed legend explaining strategic colors and red/yellow protection borders.
+21. The HTML map includes a fixed legend explaining strategic colors, gray destroyed-city nodes, and red/yellow protection borders.
 22. Added a first local interactive-map server skeleton for a cpt-hedge-style workflow: browser rendering from `state.json`, sheet refresh endpoint, and local manual overrides in `data/invasion_strategy_overrides.json`.
 
 ## Current risks

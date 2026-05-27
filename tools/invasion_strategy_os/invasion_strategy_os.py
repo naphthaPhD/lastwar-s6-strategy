@@ -35,6 +35,7 @@ ALLY_SERVERS = {"509", "440", "511"}
 ENEMY_SERVERS = {"503", "480", "523", "476"}
 DEFAULT_SELF_OWNERS = {"JDX"}
 UNOWNED_OWNER_VALUES = {"", "unknown", "none", "neutral", "\u672a\u53d6\u5f97", "\u672a\u767b\u9332", "\u4e2d\u7acb", "\u4e2d\u7acb/\u672a\u767b\u9332"}
+DESTROYED_KEYWORDS = ("\u7834\u58ca", "destroyed", "ruined")
 
 NODE_ALIASES = {
     "id": ["id", "node_id", "key", "キー", "ID", "拠点ID", "位置キー"],
@@ -307,6 +308,23 @@ def parse_optional_time(value: str | None, tz: ZoneInfo) -> datetime | None:
     return parsed.astimezone(tz)
 
 
+def has_destroyed_marker(*values: str | None) -> bool:
+    text = " ".join(str(value or "") for value in values).lower()
+    return any(keyword.lower() in text for keyword in DESTROYED_KEYWORDS)
+
+
+def is_destroyed_node(node: Node) -> bool:
+    return node.type == DEFAULT_CITY_TYPE and has_destroyed_marker(node.status, node.memo, node.owner)
+
+
+def is_destroyed_node_data(node_data: dict[str, Any]) -> bool:
+    return str(node_data.get("type", "")) == DEFAULT_CITY_TYPE and has_destroyed_marker(
+        str(node_data.get("status", "")),
+        str(node_data.get("memo", "")),
+        str(node_data.get("owner", "")),
+    )
+
+
 def split_neighbors(value: str) -> list[str]:
     return [part for part in re.split(r"[;,\s]+", value.strip()) if part]
 
@@ -395,6 +413,8 @@ def filter_edges_by_type_rules(edges: list[Edge], nodes: dict[str, Node], config
         target = nodes.get(edge.target)
         if source is None or target is None:
             continue
+        if is_destroyed_node(source) or is_destroyed_node(target):
+            continue
         if source.type in isolated_types or target.type in isolated_types:
             continue
         if normalized_type_pair(source.type, target.type) in blocked_type_pairs:
@@ -416,9 +436,13 @@ def derive_distance_edges(nodes: dict[str, Node], config: dict[str, Any]) -> lis
     candidates: list[tuple[float, str, str]] = []
     node_items = sorted(nodes.items())
     for index, (source_id, source) in enumerate(node_items):
+        if is_destroyed_node(source):
+            continue
         if source.type in isolated_types:
             continue
         for target_id, target in node_items[index + 1 :]:
+            if is_destroyed_node(target):
+                continue
             if target.type in isolated_types:
                 continue
             if normalized_type_pair(source.type, target.type) in blocked_type_pairs:
@@ -549,7 +573,7 @@ def derive_coordinate_edges(nodes: dict[str, Node], config: dict[str, Any]) -> l
             outer_city_coord = parse_outer_city_coord(node.name)
             if outer_city_coord is not None:
                 outer_blocking_facility_by_area_coord[(node.area, outer_city_coord[0], outer_city_coord[1])] = node_id
-                if node.type == city_type and node.type not in isolated_types:
+                if node.type == city_type and not is_destroyed_node(node) and node.type not in isolated_types:
                     outer_city_by_area_coord[(node.area, outer_city_coord[0], outer_city_coord[1])] = node_id
 
     edges: dict[tuple[str, str], Edge] = {}
@@ -732,6 +756,10 @@ def display_owner(owner: str | None) -> str:
     return "\u672a\u53d6\u5f97" if is_unowned_owner(owner) else str(owner).strip()
 
 
+def display_node_owner(node: Node) -> str:
+    return "\u7834\u58ca" if is_destroyed_node(node) else display_owner(node.owner)
+
+
 def area_affiliation(area: str) -> str:
     if area == SELF_AREA:
         return "self"
@@ -774,6 +802,8 @@ def build_owner_affiliations(graph: nx.Graph, config: dict[str, Any]) -> dict[st
 
     owner_area_counts: dict[str, dict[str, int]] = {}
     for _, node_data in graph.nodes(data=True):
+        if is_destroyed_node_data(node_data):
+            continue
         owner = str(node_data.get("owner", "")).strip()
         if is_unowned_owner(owner) or owner in affiliations:
             continue
@@ -800,16 +830,21 @@ def affiliation_color(affiliation: str) -> str:
         "self": "#2563eb",
         "ally": "#16a34a",
         "enemy": "#dc2626",
+        "destroyed": "#6b7280",
     }.get(affiliation, "#f8fafc")
 
 
 def strategic_affiliation(node: Node, owner_affiliations: dict[str, str]) -> str:
+    if is_destroyed_node(node):
+        return "destroyed"
     if is_unowned_owner(node.owner):
         return "unowned"
     return owner_affiliations.get(str(node.owner).strip(), area_affiliation(node.area))
 
 
 def strategic_color(node: Node, owner_affiliations: dict[str, str] | None = None) -> str:
+    if is_destroyed_node(node):
+        return "#6b7280"
     if is_unowned_owner(node.owner):
         return "#f8fafc"
     if owner_affiliations is None:
@@ -900,7 +935,7 @@ def write_html(
             border = "#ef4444"
         elif protect["status"] == "soon":
             border = "#facc15"
-        owner_label = display_owner(node.owner)
+        owner_label = display_node_owner(node)
         affiliation = strategic_affiliation(node, owner_affiliations)
         title = f"{node.area} {node.name} / {node.type} / {owner_label}"
         visual_x, visual_y = visual_position(node, config)
@@ -1479,6 +1514,7 @@ def add_node_info_panel_v3(html: str) -> str:
   <div class="legend-row"><span class="legend-dot" style="background:#16a34a"></span><span>味方</span></div>
   <div class="legend-row"><span class="legend-dot" style="background:#dc2626"></span><span>敵</span></div>
   <div class="legend-row"><span class="legend-dot" style="background:#f8fafc"></span><span>未取得</span></div>
+  <div class="legend-row"><span class="legend-dot" style="background:#6b7280"></span><span>破壊</span></div>
   <div class="legend-row"><span class="legend-border" style="border:3px solid #ef4444"></span><span>保護終了済み</span></div>
   <div class="legend-row"><span class="legend-border" style="border:3px solid #facc15"></span><span>保護終了が近い</span></div>
 </div>
@@ -1611,7 +1647,8 @@ def write_json(
         visual_x, visual_y = visual_position(node, config)
         record["visual_x"] = visual_x
         record["visual_y"] = visual_y
-        record["display_owner"] = display_owner(node.owner)
+        record["display_owner"] = display_node_owner(node)
+        record["destroyed"] = is_destroyed_node(node)
         record["affiliation"] = strategic_affiliation(node, owner_affiliations)
         record["strategic_color"] = strategic_color(node, owner_affiliations)
         record["protection"] = protection_status(node, now, warning_hours, tz)

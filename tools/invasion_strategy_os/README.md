@@ -117,16 +117,17 @@ Current rule assumptions:
 - The full-map view uses smaller nodes and labels so city/fishery spacing is easier to read.
 - Fishery labels use smaller in-node text in alliance-label mode.
 - The full-map view adds display-only gaps between area blocks while preserving graph coordinates for edge derivation.
-- A fixed legend explains strategic colors and red/yellow protection borders.
+- A fixed legend explains strategic colors, gray destroyed-city nodes, and red/yellow protection borders.
 - Clicking a node opens a fixed information panel with management-table fields: position key, type, alliance, status, acquisition time, protection time, and memo.
 - Central-area facility types are corrected from the Cpt Hedgehog Season 6 reference map pattern: outer central cells are fishery nodes, inner central cells are altar nodes, and the 2x2 center is represented as one large `祖霊神殿` node.
 - Central fishery nodes are connected by orthogonal coordinate edges and displayed smaller than outer fisheries. Central altar nodes and `祖霊神殿` are displayed but isolated because altar ownership does not create adjacent movement.
 - The HTML map has a label toggle: coordinate labels by default, or alliance-name labels at the same node-center position. In alliance-name mode, trade posts are always labeled `交易地`.
 - Nodes can be temporarily moved with the mouse. The HTML map has a `位置リセット` button that returns moved nodes to the generated layout.
 - Node colors are strategic colors: #534-side owners are blue, #509/#440/#511-side owners are green, enemy-side owners are red, and unowned nodes are white. Owners with server-number prefixes such as `476B` are classified by that prefix even when they occupy another area.
-- Edge rules are tactical and coordinate-based, not pure distance: fisheries connect to adjacent fisheries in 8 directions unless the diagonal crosses a city/trade-post cell, cities connect only to their four surrounding fisheries, outer-area fisheries connect to nearby central fisheries with a small coordinate tolerance, city-city edges are blocked, trade posts remain isolated and are never treated as cities, and altar/temple nodes are isolated.
+- Edge rules are tactical and coordinate-based, not pure distance: fisheries connect to adjacent fisheries in 8 directions unless the diagonal crosses a city/trade-post cell, cities connect only to their four surrounding fisheries, destroyed cities are isolated, outer-area fisheries connect to nearby central fisheries with a small coordinate tolerance, city-city edges are blocked, trade posts remain isolated and are never treated as cities, and altar/temple nodes are isolated.
 - Example verification: `#534:a-2` is a trade post and has no edges; `#534:b-2` is a city and connects to `#534:B-1`, `#534:B-3`, `#534:C-1`, and `#534:C-3`.
 - Central-boundary example: `#534:A-21` connects to `中央-1-1`.
+- If a city row later contains `破壊`, `destroyed`, or `ruined` in owner/status/memo, the city node is shown in gray, labels as `破壊`, and receives no edges.
 
 ## Run The Interactive Local Map
 
