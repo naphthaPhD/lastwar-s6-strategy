@@ -1,0 +1,8 @@
+id,name,type,owner,protect_until,x,y,importance,adjacent
+SAMPLE-A1,Sample Gate A,city,JDX,2026-05-27T22:00:00+09:00,100,120,9,SAMPLE-B1
+SAMPLE-B1,Sample Junction B,stronghold,JDX,2026-05-28T03:00:00+09:00,220,120,8,SAMPLE-A1;SAMPLE-C1;SAMPLE-B2
+SAMPLE-C1,Sample Forward C,fishery,476C,2026-05-27T19:30:00+09:00,340,120,6,SAMPLE-B1;SAMPLE-D1
+SAMPLE-D1,Sample City D,city,476B,2026-05-28T08:00:00+09:00,460,120,9,SAMPLE-C1
+SAMPLE-B2,Sample Side Route,fishery,509,,220,240,4,SAMPLE-B1;SAMPLE-C2
+SAMPLE-C2,Sample Support C2,stronghold,509,2026-05-29T00:00:00+09:00,340,240,7,SAMPLE-B2
+SAMPLE-Z1,Sample Isolated Watch,fishery,neutral,,560,240,3,

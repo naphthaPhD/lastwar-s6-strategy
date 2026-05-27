@@ -1,0 +1,314 @@
+{
+  "generated_at": "2026-05-27T18:00:00+09:00",
+  "timezone": "Asia/Tokyo",
+  "nodes": [
+    {
+      "id": "SAMPLE-A1",
+      "name": "Sample Gate A",
+      "type": "city",
+      "owner": "JDX",
+      "protect_until": "2026-05-27T22:00:00+09:00",
+      "x": 100.0,
+      "y": 120.0,
+      "importance": 9.0,
+      "protection": {
+        "status": "soon",
+        "hours_remaining": 4.0,
+        "protect_until": "2026-05-27T22:00:00+09:00"
+      }
+    },
+    {
+      "id": "SAMPLE-B1",
+      "name": "Sample Junction B",
+      "type": "stronghold",
+      "owner": "JDX",
+      "protect_until": "2026-05-28T03:00:00+09:00",
+      "x": 220.0,
+      "y": 120.0,
+      "importance": 8.0,
+      "protection": {
+        "status": "protected",
+        "hours_remaining": 9.0,
+        "protect_until": "2026-05-28T03:00:00+09:00"
+      }
+    },
+    {
+      "id": "SAMPLE-C1",
+      "name": "Sample Forward C",
+      "type": "fishery",
+      "owner": "476C",
+      "protect_until": "2026-05-27T19:30:00+09:00",
+      "x": 340.0,
+      "y": 120.0,
+      "importance": 6.0,
+      "protection": {
+        "status": "soon",
+        "hours_remaining": 1.5,
+        "protect_until": "2026-05-27T19:30:00+09:00"
+      }
+    },
+    {
+      "id": "SAMPLE-D1",
+      "name": "Sample City D",
+      "type": "city",
+      "owner": "476B",
+      "protect_until": "2026-05-28T08:00:00+09:00",
+      "x": 460.0,
+      "y": 120.0,
+      "importance": 9.0,
+      "protection": {
+        "status": "protected",
+        "hours_remaining": 14.0,
+        "protect_until": "2026-05-28T08:00:00+09:00"
+      }
+    },
+    {
+      "id": "SAMPLE-B2",
+      "name": "Sample Side Route",
+      "type": "fishery",
+      "owner": "509",
+      "protect_until": null,
+      "x": 220.0,
+      "y": 240.0,
+      "importance": 4.0,
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "SAMPLE-C2",
+      "name": "Sample Support C2",
+      "type": "stronghold",
+      "owner": "509",
+      "protect_until": "2026-05-29T00:00:00+09:00",
+      "x": 340.0,
+      "y": 240.0,
+      "importance": 7.0,
+      "protection": {
+        "status": "protected",
+        "hours_remaining": 30.0,
+        "protect_until": "2026-05-29T00:00:00+09:00"
+      }
+    },
+    {
+      "id": "SAMPLE-Z1",
+      "name": "Sample Isolated Watch",
+      "type": "fishery",
+      "owner": "neutral",
+      "protect_until": null,
+      "x": 560.0,
+      "y": 240.0,
+      "importance": 3.0,
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    }
+  ],
+  "connections": [
+    {
+      "source": "SAMPLE-A1",
+      "target": "SAMPLE-B1",
+      "weight": 1.0
+    },
+    {
+      "source": "SAMPLE-B1",
+      "target": "SAMPLE-C1",
+      "weight": 1.0
+    },
+    {
+      "source": "SAMPLE-B1",
+      "target": "SAMPLE-B2",
+      "weight": 1.0
+    },
+    {
+      "source": "SAMPLE-C1",
+      "target": "SAMPLE-D1",
+      "weight": 1.0
+    },
+    {
+      "source": "SAMPLE-B2",
+      "target": "SAMPLE-C2",
+      "weight": 1.0
+    }
+  ],
+  "connected_components": [
+    [
+      "SAMPLE-A1",
+      "SAMPLE-B1",
+      "SAMPLE-B2",
+      "SAMPLE-C1",
+      "SAMPLE-C2",
+      "SAMPLE-D1"
+    ],
+    [
+      "SAMPLE-Z1"
+    ]
+  ],
+  "articulation_points": [
+    "SAMPLE-B1",
+    "SAMPLE-B2",
+    "SAMPLE-C1"
+  ],
+  "critical_nodes": [
+    {
+      "choke_id": "CHOKE-01",
+      "node_id": "SAMPLE-B1",
+      "name": "Sample Junction B",
+      "owner": "JDX",
+      "type": "stronghold",
+      "importance": 8.0,
+      "degree": 3,
+      "betweenness": 0.5333,
+      "score": 21.333,
+      "reasons": [
+        "removal_disconnects_graph",
+        "major_groups_split",
+        "major_node_isolated"
+      ],
+      "affected_major_groups": [
+        [
+          "SAMPLE-A1"
+        ],
+        [
+          "SAMPLE-D1"
+        ],
+        [
+          "SAMPLE-C2"
+        ]
+      ],
+      "components_after_removal": [
+        [
+          "SAMPLE-A1"
+        ],
+        [
+          "SAMPLE-C1",
+          "SAMPLE-D1"
+        ],
+        [
+          "SAMPLE-B2",
+          "SAMPLE-C2"
+        ],
+        [
+          "SAMPLE-Z1"
+        ]
+      ]
+    },
+    {
+      "choke_id": "CHOKE-02",
+      "node_id": "SAMPLE-C1",
+      "name": "Sample Forward C",
+      "owner": "476C",
+      "type": "fishery",
+      "importance": 6.0,
+      "degree": 2,
+      "betweenness": 0.2667,
+      "score": 15.667,
+      "reasons": [
+        "removal_disconnects_graph",
+        "major_groups_split",
+        "major_node_isolated",
+        "limited_route_degree"
+      ],
+      "affected_major_groups": [
+        [
+          "SAMPLE-A1",
+          "SAMPLE-B1",
+          "SAMPLE-C2"
+        ],
+        [
+          "SAMPLE-D1"
+        ]
+      ],
+      "components_after_removal": [
+        [
+          "SAMPLE-A1",
+          "SAMPLE-B1",
+          "SAMPLE-B2",
+          "SAMPLE-C2"
+        ],
+        [
+          "SAMPLE-D1"
+        ],
+        [
+          "SAMPLE-Z1"
+        ]
+      ]
+    },
+    {
+      "choke_id": "CHOKE-03",
+      "node_id": "SAMPLE-B2",
+      "name": "Sample Side Route",
+      "owner": "509",
+      "type": "fishery",
+      "importance": 4.0,
+      "degree": 2,
+      "betweenness": 0.2667,
+      "score": 13.667,
+      "reasons": [
+        "removal_disconnects_graph",
+        "major_groups_split",
+        "major_node_isolated",
+        "limited_route_degree"
+      ],
+      "affected_major_groups": [
+        [
+          "SAMPLE-A1",
+          "SAMPLE-B1",
+          "SAMPLE-D1"
+        ],
+        [
+          "SAMPLE-C2"
+        ]
+      ],
+      "components_after_removal": [
+        [
+          "SAMPLE-A1",
+          "SAMPLE-B1",
+          "SAMPLE-C1",
+          "SAMPLE-D1"
+        ],
+        [
+          "SAMPLE-C2"
+        ],
+        [
+          "SAMPLE-Z1"
+        ]
+      ]
+    }
+  ],
+  "isolated_nodes": [
+    "SAMPLE-Z1"
+  ],
+  "shortest_path": {
+    "from": "SAMPLE-A1",
+    "to": "SAMPLE-D1",
+    "path": [
+      "SAMPLE-A1",
+      "SAMPLE-B1",
+      "SAMPLE-C1",
+      "SAMPLE-D1"
+    ]
+  },
+  "degree_centrality": {
+    "SAMPLE-A1": 0.1667,
+    "SAMPLE-B1": 0.5,
+    "SAMPLE-B2": 0.3333,
+    "SAMPLE-C1": 0.3333,
+    "SAMPLE-C2": 0.1667,
+    "SAMPLE-D1": 0.1667,
+    "SAMPLE-Z1": 0.0
+  },
+  "betweenness_centrality": {
+    "SAMPLE-A1": 0.0,
+    "SAMPLE-B1": 0.5333,
+    "SAMPLE-B2": 0.2667,
+    "SAMPLE-C1": 0.2667,
+    "SAMPLE-C2": 0.0,
+    "SAMPLE-D1": 0.0,
+    "SAMPLE-Z1": 0.0
+  }
+}

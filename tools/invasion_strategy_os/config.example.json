@@ -1,0 +1,27 @@
+{
+  "timezone": "Asia/Tokyo",
+  "sources": {
+    "nodes": {
+      "type": "csv",
+      "path": "tools/invasion_strategy_os/sample_nodes.csv"
+    },
+    "edges": {
+      "type": "csv",
+      "path": "tools/invasion_strategy_os/sample_edges.csv"
+    }
+  },
+  "analysis": {
+    "major_types": ["city", "stronghold", "sanctuary"],
+    "major_importance": 7,
+    "route_limited_degree": 2,
+    "protect_warning_hours": 6
+  },
+  "shortest_path": {
+    "from": "SAMPLE-A1",
+    "to": "SAMPLE-D1"
+  },
+  "output": {
+    "html": "sample_output/map.html",
+    "json": "sample_output/state.json"
+  }
+}
