@@ -2,52 +2,57 @@
 
 ## Date
 
-2026-05-26
+2026-05-27
 
 ## Context
 
-#534 is preparing for the 2026-05-27 Wednesday City Clash against #476B / #476C. The user wants ChatGPT to review whether the enemy can split roles: one alliance pressing upward inside #534 while the other attacks right-side fishing grounds to build a route toward the #503 side.
+The pact situation changed: #503-side alliances can now attack #534. The user asked for a worst-case forecast of how #534 holdings could change, and requested a color-coded invasion prediction map in the Google Sheet if possible.
 
-This handoff uses the live Google Sheet `管理表たたき` for #534 rows (`A1549:T1769`) and the current repo mechanics/strategy files.
+This handoff uses the live Google Sheet and the previous #476B/#476C route analysis. A new prediction tab was added to the spreadsheet.
 
 ## Updated files
 
-- `analysis/2026-05-26_476bc_city_clash_route_analysis.md`
+- `analysis/2026-05-27_503_476_worst_case_invasion_forecast.md`
 - `analysis/latest_handoff.md`
+
+## Updated Google Sheet
+
+- Spreadsheet ID: `12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g`
+- Added tab: `侵攻予測_20260527_最悪`
+- Source map reference: `取得入力マップ!A5:AR46`
 
 ## Key findings
 
-1. #476C already owns #534-side fishing grounds `A-7 / B-7 / C-7 / C-9`; #476B already owns `C-11 / D-7`.
-2. Before any additional fishing-ground captures, direct city-destruction candidates include `c-12(JDX)`, `c-10(SHA)`, `c-8(SHA)`, `b-10(SHA)`, `b-12(SHA)`, `b-8(MOE)`, and `b-6(MOE)`.
-3. If #476B captures `D-11`, the situation becomes materially worse because `d-12(JDX)` and `d-10(SHA)` open while `c-12(JDX)` remains threatened.
-4. If either #476B or #476C captures `D-9`, it becomes the main right-turn point toward `d-10(SHA)` and later right-side / #503-side expansion.
-5. The split scenario is realistic: #476C can pressure the upper/interior cities while #476B uses `D-9 / D-11 / E-7` to prepare a rightward route.
+1. With #503 able to participate, #534 should treat #503 as a right-side convergence threat, not as secondary background pressure.
+2. The most dangerous pattern is #476C pressing upward/interior from `A-7 / B-7 / C-7 / C-9`, while #476B pushes rightward from `C-11 / D-7`.
+3. `D-11` is the highest-priority denial point. If it falls, `c-12(JDX)` and `d-12(JDX)` become a two-sided JDX problem.
+4. `D-9` is the second denial point because it creates the right-turn route toward `d-10(SHA)` and the later #503-side corridor.
+5. `E-7` is the third denial point because it lets the attack move beyond the D-line into deeper SHA/4tH territory.
 
 ## Current risks
 
-1. #534 may overcommit to defending visible cities and allow `D-11` or `D-9` to fall.
-2. `D-11` falling creates JDX two-sided pressure (`c-12` plus `d-12`) and a cleaner right-side route for #476B.
-3. `D-9` falling allows #476B/#476C to bend the route rightward and prepare later movement toward the #503 side.
-4. City destruction is less reversible than fishing-ground exchange; do not treat cities as simple abandon/recapture pieces.
-5. Empty-owner city rows `c-6 / d-6` need in-game confirmation before they are included in final target lists.
+1. #534 may over-defend visible cities and lose `D-11 / D-9 / E-7`.
+2. If `D-11` and `D-9` both fall, the C-line stops being the real front; D/E become the new contested belt.
+3. #503 can amplify a rightward route once a shared/pact-enabled connection is usable.
+4. City destruction remains less reversible than fishing-ground exchange; `c-12`, `c-10`, `c-8`, and `b-10` should be watched but not at the cost of losing the denial points.
 
 ## Recommended next actions
 
-1. Treat `D-11` as the top denial point for 2026-05-27.
-2. Treat `D-9` as the second denial point and likely right-turn warning tile.
-3. Keep `E-7` as the third warning tile for deeper right-side expansion.
-4. Put separate watch roles on 476C upper pressure (`A-7 / B-7 / C-7 / C-9`) and 476B right-side pressure (`C-11 / D-7 / D-9 / D-11 / E-7`).
-5. Limit city defense focus to `c-12`, `c-10`, `c-8`, and `b-10` unless in-game targeting shows otherwise.
+1. Assign one watch group to #476C upper/interior pressure.
+2. Assign one watch group to #476B/#503 right-side pressure.
+3. Make `D-11`, `D-9`, and `E-7` the map callouts for immediate denial.
+4. Use the new `侵攻予測_20260527_最悪` sheet tab during the 2026-05-27 response windows.
+5. Confirm in game whether #503 can use pact territory as attack adjacency immediately, and whether empty-owner city rows can be destroyed.
 
 ## Questions for ChatGPT
 
-1. Does ChatGPT agree that `D-11` is the highest-priority denial point?
-2. Should #534 defend `c-12(JDX)` directly, or prioritize preventing `D-11` even if `c-12` is pressured?
-3. Is the split model, 476C upward / 476B rightward toward #503 side, the most likely #476B/#476C role division?
-4. What short instruction should be sent to #534 R4/R5 for the 2026-05-27 23:00 JST window?
+1. Is `D-11 > D-9 > E-7` the correct denial priority under the new pact situation?
+2. Should #534 intentionally abandon some city defense to preserve D/E-line denial?
+3. What should the short R4/R5 instruction be for the 23:00 JST window?
+4. Does the prediction map need a separate #503-side map panel, or is the #534 overlay enough for today?
 
 ## Notes
 
-- Source sheet: `12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g`, tab `管理表たたき`, range `A1549:T1769`.
-- The answer assumes city adjacency follows the visible map layout and that only rows marked `都市` are city-destruction candidates.
-- `jdx_run_note_latest.md` and broad local `tools/` files are unrelated local/untracked files and should not be staged for this push.
+- The new prediction tab is a forecast layer, not a confirmed future state.
+- The tab uses colors for current enemy footholds, first denial points, city destruction candidates, and #503-side convergence route.
+- Existing unrelated local changes remain outside this analysis.
