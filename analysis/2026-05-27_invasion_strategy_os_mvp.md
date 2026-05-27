@@ -28,7 +28,7 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - Fishery nodes are displayed larger than city nodes, while central-area fishery nodes are displayed smaller than outer fisheries.
 - The HTML map can toggle labels between coordinates and alliance names at the same node-center position. In alliance-name mode, trade posts are always labeled `交易地`.
 - The HTML map can reset moved nodes to the generated layout with `位置リセット`.
-- The HTML map can highlight tactical edges: selecting a fishery highlights all connected edges, `境界強調` highlights #534-side fishery to enemy-side fishery edges, and `強調解除` clears edge highlighting.
+- The HTML map can highlight tactical edges: selecting a fishery highlights all connected edges, `境界強調` highlights #534-side fishery to enemy-side fishery edges, `ルート選択` highlights the shortest route between two selected nodes, and `強調解除` / `ルート解除` clear edge highlighting.
 - The HTML map can refresh from the latest `管理表たたき` sheet with `マップ最新化` when the local interactive server is running.
 - Strategic colors are based on ownership from `管理表たたき`: #534-side owners blue, #509/#440/#511-side owners green, enemy-side owners red, and unowned nodes white. Owners with server-number prefixes such as `476B` are classified by that prefix even when they occupy another area.
 - Edge rules are tactical and coordinate-based, not pure distance: fisheries connect to adjacent fisheries in 8 directions unless the diagonal crosses a city/trade-post cell, cities connect only to their four surrounding fisheries, destroyed cities are isolated, outer-area fisheries connect to nearby central fisheries with a small coordinate tolerance, city-city edges are blocked, trade posts remain isolated and are never treated as cities, and altar/temple nodes are isolated.
@@ -48,6 +48,7 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - Adjusted central-area type classification and edge derivation from the Cpt Hedgehog Season 6 reference map.
 - Added generated-HTML edge highlighting for selected fisheries and #534-side versus enemy fishery borders.
 - Added a generated-map refresh button backed by the local interactive server refresh API.
+- Added generated-map shortest-route highlighting with two-click route selection.
 
 ## 5. Interpretation
 

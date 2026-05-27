@@ -52,8 +52,9 @@ This does not automate gameplay. It is a repeatable analysis and visualization p
 20. The HTML map applies display-only gaps between the 3x3 area blocks; graph coordinates and edge derivation remain unchanged.
 21. The HTML map includes a fixed legend explaining strategic colors, gray destroyed-city nodes, and red/yellow protection borders.
 22. Added a first local interactive-map server skeleton for a cpt-hedge-style workflow: browser rendering from `state.json`, sheet refresh endpoint, and local manual overrides in `data/invasion_strategy_overrides.json`.
-23. Added edge-highlight controls to the generated HTML map: selecting a fishery highlights its connected edges in cyan, `境界強調` highlights #534-side fishery to enemy-side fishery edges in orange, and `強調解除` resets edge styling. Current live data contains 80 self-enemy fishery edge candidates.
+23. Added edge-highlight controls to the generated HTML map: selecting a fishery highlights its connected edges in cyan, `境界強調` highlights #534-side fishery to enemy-side fishery edges in orange, and `強調解除` resets edge styling. Current live data contains 77 self-enemy fishery edge candidates.
 24. Added a generated-map `マップ最新化` button. It calls the local `/api/refresh` endpoint, regenerates from the latest `管理表たたき` Google Sheet through `config.google_full_map.json`, and reloads the map. The interactive server now permits local CORS fallback from `127.0.0.1:8000` to `127.0.0.1:8010`.
+25. Added generated-map shortest-route highlighting. `ルート選択` puts the map into two-click route mode; the first selected node is the start, the second selected node is the target, and the shortest path is shown with thick purple edges. `ルート解除` clears route/edge highlighting.
 
 ## Current risks
 
@@ -85,6 +86,7 @@ This does not automate gameplay. It is a repeatable analysis and visualization p
 - The in-app browser successfully rendered the regenerated full-map output at `http://127.0.0.1:8000/sample_output/map.html`.
 - The in-app browser visually verified the new `境界強調` and `強調解除` buttons on the generated `sample_output/map.html`.
 - The in-app browser visually verified `マップ最新化`: it called the local refresh API, regenerated from Google Sheets, and reloaded `sample_output/map.html` with a cache-busting URL.
+- The in-app browser verified the generated route toolbar: `ルート選択` is visible and changes to `始点選択中`; node click handling changed to route mode for the first selected node.
 - Visual reference screenshots supplied by the user for tactical map geometry: `C:/Users/kitazaki/FIT Dropbox/訓北﨑/lastwar/S6/IMG_1219.PNG` and `C:/Users/kitazaki/FIT Dropbox/訓北﨑/lastwar/S6/IMG_1220.PNG`. These were used as reference only and were not committed.
 - The `tools/invasion_strategy_os/` directory is explicitly allowlisted in `.gitignore`; existing unrelated local `tools/` files remain ignored.
 - Existing unrelated local changes were not touched.

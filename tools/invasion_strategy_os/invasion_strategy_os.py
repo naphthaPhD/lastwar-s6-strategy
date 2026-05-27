@@ -1436,84 +1436,42 @@ def add_node_info_panel_v3(html: str) -> str:
     white-space: pre-wrap;
     color: #e2e8f0;
   }
-  #map-label-toggle {
+  #map-toolbar {
     position: fixed;
     left: 16px;
     top: 16px;
-    z-index: 11;
+    z-index: 12;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: calc(100vw - 32px);
+  }
+  #map-toolbar button {
+    min-width: 104px;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid rgba(148, 163, 184, 0.65);
+    border-radius: 6px;
+    background: rgba(15, 23, 42, 0.92);
+    color: #f8fafc;
+    font: 700 13px Arial, sans-serif;
+    cursor: pointer;
+  }
+  #map-label-toggle {
     min-width: 124px;
-    height: 34px;
-    padding: 0 12px;
-    border: 1px solid rgba(148, 163, 184, 0.65);
-    border-radius: 6px;
-    background: rgba(15, 23, 42, 0.92);
-    color: #f8fafc;
-    font: 700 13px Arial, sans-serif;
-    cursor: pointer;
-  }
-  #map-reset-layout {
-    position: fixed;
-    left: 152px;
-    top: 16px;
-    z-index: 11;
-    min-width: 104px;
-    height: 34px;
-    padding: 0 12px;
-    border: 1px solid rgba(148, 163, 184, 0.65);
-    border-radius: 6px;
-    background: rgba(15, 23, 42, 0.92);
-    color: #f8fafc;
-    font: 700 13px Arial, sans-serif;
-    cursor: pointer;
-  }
-  #map-highlight-boundary {
-    position: fixed;
-    left: 268px;
-    top: 16px;
-    z-index: 11;
-    min-width: 104px;
-    height: 34px;
-    padding: 0 12px;
-    border: 1px solid rgba(148, 163, 184, 0.65);
-    border-radius: 6px;
-    background: rgba(15, 23, 42, 0.92);
-    color: #f8fafc;
-    font: 700 13px Arial, sans-serif;
-    cursor: pointer;
-  }
-  #map-clear-edge-highlight {
-    position: fixed;
-    left: 384px;
-    top: 16px;
-    z-index: 11;
-    min-width: 104px;
-    height: 34px;
-    padding: 0 12px;
-    border: 1px solid rgba(148, 163, 184, 0.65);
-    border-radius: 6px;
-    background: rgba(15, 23, 42, 0.92);
-    color: #f8fafc;
-    font: 700 13px Arial, sans-serif;
-    cursor: pointer;
   }
   #map-refresh-sheet {
-    position: fixed;
-    left: 500px;
-    top: 16px;
-    z-index: 11;
     min-width: 124px;
-    height: 34px;
-    padding: 0 12px;
     border: 1px solid rgba(14, 165, 233, 0.9);
-    border-radius: 6px;
     background: rgba(3, 105, 161, 0.94);
-    color: #f8fafc;
-    font: 700 13px Arial, sans-serif;
-    cursor: pointer;
   }
   #map-refresh-sheet:disabled {
     cursor: wait;
     opacity: 0.65;
+  }
+  #map-route-mode {
+    border: 1px solid rgba(168, 85, 247, 0.9);
+    background: rgba(88, 28, 135, 0.94);
   }
   #map-legend {
     position: fixed;
@@ -1553,14 +1511,26 @@ def add_node_info_panel_v3(html: str) -> str:
     background: transparent;
     flex: 0 0 auto;
   }
+  @media (max-width: 900px) {
+    #map-toolbar {
+      max-width: calc(100vw - 32px);
+    }
+    #map-legend {
+      top: 150px;
+    }
+  }
 </style>
 """
     panel = f"""
+<div id="map-toolbar">
 <button id="map-label-toggle" type="button">&#36899;&#30431;&#21517;&#34920;&#31034;</button>
 <button id="map-reset-layout" type="button">&#20301;&#32622;&#12522;&#12475;&#12483;&#12488;</button>
 <button id="map-highlight-boundary" type="button">&#22659;&#30028;&#24375;&#35519;</button>
 <button id="map-clear-edge-highlight" type="button">&#24375;&#35519;&#35299;&#38500;</button>
 <button id="map-refresh-sheet" type="button">&#12510;&#12483;&#12503;&#26368;&#26032;&#21270;</button>
+<button id="map-route-mode" type="button">&#12523;&#12540;&#12488;&#36984;&#25246;</button>
+<button id="map-clear-route" type="button">&#12523;&#12540;&#12488;&#35299;&#38500;</button>
+</div>
 <div id="map-legend" aria-label="legend">
   <h3>凡例</h3>
   <div class="legend-row"><span class="legend-dot" style="background:#2563eb"></span><span>#534 / JDX</span></div>
@@ -1638,6 +1608,26 @@ def add_node_info_panel_v3(html: str) -> str:
                       }});
                     }}
                     var defaultEdgeStyle = {{ color: {{ color: "#94a3b8", highlight: "#facc15" }}, width: 1 }};
+                    var routeMode = false;
+                    var routeStartNodeId = null;
+                    var routeEdgeIds = [];
+                    function updateRouteButtonText() {{
+                      var routeButton = document.getElementById("map-route-mode");
+                      if (!routeButton) return;
+                      if (!routeMode) {{
+                        routeButton.textContent = "\\u30eb\\u30fc\\u30c8\\u9078\\u629e";
+                      }} else if (routeStartNodeId) {{
+                        routeButton.textContent = "\\u7d42\\u70b9\\u9078\\u629e\\u4e2d";
+                      }} else {{
+                        routeButton.textContent = "\\u59cb\\u70b9\\u9078\\u629e\\u4e2d";
+                      }}
+                    }}
+                    function clearRouteState() {{
+                      routeMode = false;
+                      routeStartNodeId = null;
+                      routeEdgeIds = [];
+                      updateRouteButtonText();
+                    }}
                     function resetEdgeHighlights() {{
                       if (!edges) return;
                       edges.update(edges.get().map(function (edge) {{
@@ -1647,6 +1637,10 @@ def add_node_info_panel_v3(html: str) -> str:
                           width: defaultEdgeStyle.width
                         }};
                       }}));
+                    }}
+                    function clearAllEdgeHighlights() {{
+                      clearRouteState();
+                      resetEdgeHighlights();
                     }}
                     function highlightEdges(edgeIds, color, width) {{
                       if (!edges || !edgeIds.length) return;
@@ -1658,10 +1652,88 @@ def add_node_info_panel_v3(html: str) -> str:
                         }};
                       }}));
                     }}
+                    function shortestPath(startId, targetId) {{
+                      if (!edges || !nodes || !startId || !targetId) return null;
+                      if (startId === targetId) return [startId];
+                      var adjacency = {{}};
+                      nodes.getIds().forEach(function (nodeId) {{
+                        adjacency[nodeId] = [];
+                      }});
+                      edges.get().forEach(function (edge) {{
+                        if (!adjacency[edge.from]) adjacency[edge.from] = [];
+                        if (!adjacency[edge.to]) adjacency[edge.to] = [];
+                        adjacency[edge.from].push(edge.to);
+                        adjacency[edge.to].push(edge.from);
+                      }});
+                      var queue = [startId];
+                      var visited = {{}};
+                      var previous = {{}};
+                      visited[startId] = true;
+                      for (var i = 0; i < queue.length; i += 1) {{
+                        var current = queue[i];
+                        var neighbors = adjacency[current] || [];
+                        for (var j = 0; j < neighbors.length; j += 1) {{
+                          var next = neighbors[j];
+                          if (visited[next]) continue;
+                          visited[next] = true;
+                          previous[next] = current;
+                          if (next === targetId) {{
+                            var path = [targetId];
+                            var cursor = targetId;
+                            while (cursor !== startId) {{
+                              cursor = previous[cursor];
+                              path.push(cursor);
+                            }}
+                            path.reverse();
+                            return path;
+                          }}
+                          queue.push(next);
+                        }}
+                      }}
+                      return null;
+                    }}
+                    function edgeIdsForPath(path) {{
+                      if (!edges || !path || path.length < 2) return [];
+                      var byPair = {{}};
+                      edges.get().forEach(function (edge) {{
+                        byPair[edge.from + "\\u0000" + edge.to] = edge.id;
+                        byPair[edge.to + "\\u0000" + edge.from] = edge.id;
+                      }});
+                      var ids = [];
+                      for (var i = 0; i < path.length - 1; i += 1) {{
+                        var id = byPair[path[i] + "\\u0000" + path[i + 1]];
+                        if (id) ids.push(id);
+                      }}
+                      return ids;
+                    }}
+                    function showShortestRoute(startId, targetId) {{
+                      var path = shortestPath(startId, targetId);
+                      resetEdgeHighlights();
+                      if (!path || path.length < 2) {{
+                        alert("\\u9078\\u629e\\u3057\\u305f2\\u30ce\\u30fc\\u30c9\\u9593\\u306e\\u30eb\\u30fc\\u30c8\\u304c\\u3042\\u308a\\u307e\\u305b\\u3093\\u3002");
+                        clearRouteState();
+                        return;
+                      }}
+                      routeEdgeIds = edgeIdsForPath(path);
+                      highlightEdges(routeEdgeIds, "#a855f7", 6);
+                      clearRouteState();
+                    }}
+                    function handleRouteSelection(nodeId) {{
+                      if (!routeMode || !nodeId) return false;
+                      if (!routeStartNodeId) {{
+                        routeStartNodeId = nodeId;
+                        resetEdgeHighlights();
+                        updateRouteButtonText();
+                        return true;
+                      }}
+                      showShortestRoute(routeStartNodeId, nodeId);
+                      return true;
+                    }}
                     function highlightConnectedEdges(nodeId) {{
                       if (!nodes || !edges || !nodeId) return;
                       var node = nodes.get(nodeId);
                       if (!node || node.nodeType !== "\\u6f01\\u5834") return;
+                      clearRouteState();
                       resetEdgeHighlights();
                       var selectedEdges = edges.get().filter(function (edge) {{
                         return edge.from === nodeId || edge.to === nodeId;
@@ -1670,6 +1742,7 @@ def add_node_info_panel_v3(html: str) -> str:
                     }}
                     function highlightSelfEnemyFisheryEdges() {{
                       if (!nodes || !edges) return;
+                      clearRouteState();
                       resetEdgeHighlights();
                       var selectedEdges = edges.get().filter(function (edge) {{
                         var source = nodes.get(edge.from);
@@ -1689,7 +1762,21 @@ def add_node_info_panel_v3(html: str) -> str:
                     }}
                     var clearEdgeButton = document.getElementById("map-clear-edge-highlight");
                     if (clearEdgeButton) {{
-                      clearEdgeButton.addEventListener("click", resetEdgeHighlights);
+                      clearEdgeButton.addEventListener("click", clearAllEdgeHighlights);
+                    }}
+                    var routeButton = document.getElementById("map-route-mode");
+                    if (routeButton) {{
+                      routeButton.addEventListener("click", function () {{
+                        routeMode = true;
+                        routeStartNodeId = null;
+                        routeEdgeIds = [];
+                        resetEdgeHighlights();
+                        updateRouteButtonText();
+                      }});
+                    }}
+                    var clearRouteButton = document.getElementById("map-clear-route");
+                    if (clearRouteButton) {{
+                      clearRouteButton.addEventListener("click", clearAllEdgeHighlights);
                     }}
                     async function postRefresh(endpoint) {{
                       var response = await fetch(endpoint, {{
@@ -1746,6 +1833,7 @@ def add_node_info_panel_v3(html: str) -> str:
                     window.highlightConnectedEdges = highlightConnectedEdges;
                     window.highlightSelfEnemyFisheryEdges = highlightSelfEnemyFisheryEdges;
                     window.resetEdgeHighlights = resetEdgeHighlights;
+                    window.showShortestRoute = showShortestRoute;
                     window.refreshMapFromSheet = refreshMapFromSheet;
                     function renderNodeInfo(nodeId) {{
                       var panel = document.getElementById("node-info-panel");
@@ -1777,11 +1865,12 @@ def add_node_info_panel_v3(html: str) -> str:
                     network.on("selectNode", function (params) {{
                       var nodeId = params.nodes && params.nodes[0];
                       renderNodeInfo(nodeId);
-                      highlightConnectedEdges(nodeId);
+                      if (!handleRouteSelection(nodeId)) {{
+                        highlightConnectedEdges(nodeId);
+                      }}
                     }});
                     network.on("deselectNode", function () {{
                       resetNodeInfo();
-                      resetEdgeHighlights();
                     }});
                   }})();
 """
