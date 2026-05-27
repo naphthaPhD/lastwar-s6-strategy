@@ -1,0 +1,41 @@
+{
+  "timezone": "Asia/Tokyo",
+  "sources": {
+    "nodes": {
+      "type": "google_sheet_csv",
+      "spreadsheet_id": "12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g",
+      "gid": "2106696209"
+    }
+  },
+  "source_options": {
+    "areas": ["#534"],
+    "importance_by_type": {
+      "漁場": 3,
+      "都市": 8,
+      "密林の村": 6,
+      "交易地": 4,
+      "ゲーム機": 5,
+      "祭壇": 9
+    }
+  },
+  "edge_derivation": {
+    "type": "distance",
+    "same_area_only": true,
+    "max_distance": 112,
+    "max_edges_per_node": 6
+  },
+  "analysis": {
+    "major_types": ["都市", "密林の村", "祭壇"],
+    "major_importance": 8,
+    "route_limited_degree": 2,
+    "protect_warning_hours": 6
+  },
+  "shortest_path": {
+    "from": "#534:A-7",
+    "to": "#534:D-11"
+  },
+  "output": {
+    "html": "sample_output/map.html",
+    "json": "sample_output/state.json"
+  }
+}

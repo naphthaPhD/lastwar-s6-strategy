@@ -23,15 +23,16 @@ from pyvis.network import Network
 JST = ZoneInfo("Asia/Tokyo")
 
 NODE_ALIASES = {
-    "id": ["id", "node_id", "key", "キー", "ID", "拠点ID"],
-    "name": ["name", "拠点名", "名称", "施設名"],
+    "id": ["id", "node_id", "key", "キー", "ID", "拠点ID", "位置キー"],
+    "name": ["name", "拠点名", "名称", "施設名", "座標"],
     "type": ["type", "種別", "施設種別"],
-    "owner": ["owner", "所有連盟", "連盟", "alliance"],
-    "protect_until": ["protect_until", "保護終了時刻", "保護終了", "保護明け", "protect"],
+    "owner": ["owner", "所有連盟", "連盟", "alliance", "現在連盟"],
+    "protect_until": ["protect_until", "保護終了時刻", "保護終了", "保護明け", "protect", "保護切れ"],
     "x": ["x", "X", "座標X", "game_x"],
     "y": ["y", "Y", "座標Y", "game_y"],
     "importance": ["importance", "重要度", "priority", "優先度"],
     "adjacent": ["adjacent", "隣接", "接続情報", "neighbors", "neighbours"],
+    "area": ["area", "エリア", "server", "サーバ"],
 }
 
 EDGE_ALIASES = {
@@ -51,6 +52,7 @@ class Node:
     x: float
     y: float
     importance: float
+    area: str = ""
 
 
 @dataclass(frozen=True)
@@ -123,7 +125,10 @@ def parse_optional_time(value: str | None, tz: ZoneInfo) -> datetime | None:
             return parsed.replace(tzinfo=tz)
         except ValueError:
             pass
-    parsed = datetime.fromisoformat(normalized)
+    try:
+        parsed = datetime.fromisoformat(normalized)
+    except ValueError:
+        return None
     if parsed.tzinfo is None:
         return parsed.replace(tzinfo=tz)
     return parsed.astimezone(tz)
@@ -133,22 +138,33 @@ def split_neighbors(value: str) -> list[str]:
     return [part for part in re.split(r"[;,\s]+", value.strip()) if part]
 
 
-def load_nodes(rows: list[dict[str, str]]) -> tuple[dict[str, Node], list[Edge]]:
+def load_nodes(rows: list[dict[str, str]], config: dict[str, Any]) -> tuple[dict[str, Node], list[Edge]]:
     nodes: dict[str, Node] = {}
     adjacency_edges: list[Edge] = []
+    area_filter = set(config.get("areas", []))
+    importance_by_type = {str(key): float(value) for key, value in config.get("importance_by_type", {}).items()}
     for row_number, row in enumerate(rows, start=2):
         node_id = pick(row, NODE_ALIASES, "id")
         if not node_id:
             raise ValueError(f"Node row {row_number} is missing id")
+        area = pick(row, NODE_ALIASES, "area")
+        if area_filter and area not in area_filter:
+            continue
+        node_type = pick(row, NODE_ALIASES, "type", "unknown") or "unknown"
+        importance = parse_float(
+            pick(row, NODE_ALIASES, "importance"),
+            importance_by_type.get(node_type, 1.0),
+        )
         node = Node(
             id=node_id,
             name=pick(row, NODE_ALIASES, "name", node_id) or node_id,
-            type=pick(row, NODE_ALIASES, "type", "unknown") or "unknown",
+            type=node_type,
             owner=pick(row, NODE_ALIASES, "owner", "unknown") or "unknown",
             protect_until=pick(row, NODE_ALIASES, "protect_until") or None,
             x=parse_float(pick(row, NODE_ALIASES, "x")),
             y=parse_float(pick(row, NODE_ALIASES, "y")),
-            importance=parse_float(pick(row, NODE_ALIASES, "importance"), 1.0),
+            importance=importance,
+            area=area,
         )
         nodes[node.id] = node
         for neighbor_id in split_neighbors(pick(row, NODE_ALIASES, "adjacent")):
@@ -167,6 +183,33 @@ def load_edges(rows: list[dict[str, str]]) -> list[Edge]:
             raise ValueError(f"Edge row {row_number} needs both from and to")
         weight = parse_float(pick(row, EDGE_ALIASES, "weight"), 1.0)
         edges.append(Edge(source, target, weight))
+    return edges
+
+
+def derive_distance_edges(nodes: dict[str, Node], config: dict[str, Any]) -> list[Edge]:
+    if config.get("type") != "distance":
+        return []
+    max_distance = float(config.get("max_distance", 80))
+    same_area_only = bool(config.get("same_area_only", True))
+    max_edges_per_node = int(config.get("max_edges_per_node", 6))
+    candidates: list[tuple[float, str, str]] = []
+    node_items = sorted(nodes.items())
+    for index, (source_id, source) in enumerate(node_items):
+        for target_id, target in node_items[index + 1 :]:
+            if same_area_only and source.area != target.area:
+                continue
+            distance = ((source.x - target.x) ** 2 + (source.y - target.y) ** 2) ** 0.5
+            if 0 < distance <= max_distance:
+                candidates.append((distance, source_id, target_id))
+
+    degree: dict[str, int] = {node_id: 0 for node_id in nodes}
+    edges: list[Edge] = []
+    for distance, source_id, target_id in sorted(candidates):
+        if degree[source_id] >= max_edges_per_node or degree[target_id] >= max_edges_per_node:
+            continue
+        edges.append(Edge(source_id, target_id, round(distance, 3)))
+        degree[source_id] += 1
+        degree[target_id] += 1
     return edges
 
 
@@ -401,6 +444,10 @@ def write_html(
             "color": {"color": "#94a3b8", "highlight": "#facc15"},
             "smooth": false
           },
+          "physics": {
+            "enabled": false,
+            "stabilization": false
+          },
           "interaction": {
             "hover": true,
             "navigationButtons": true,
@@ -516,11 +563,13 @@ def main() -> int:
         raise ValueError("Node source is required")
 
     node_rows = read_csv_rows(sources["nodes"], repo_root)
-    nodes, adjacency_edges = load_nodes(node_rows)
+    source_config = config.get("source_options", {})
+    nodes, adjacency_edges = load_nodes(node_rows, source_config)
     explicit_edges = []
     if sources.get("edges"):
         explicit_edges = load_edges(read_csv_rows(sources["edges"], repo_root))
-    edges = dedupe_edges(adjacency_edges + explicit_edges)
+    derived_edges = derive_distance_edges(nodes, config.get("edge_derivation", {}))
+    edges = dedupe_edges(adjacency_edges + explicit_edges + derived_edges)
 
     graph = build_graph(nodes, edges)
     shortest = config.get("shortest_path", {})

@@ -83,6 +83,21 @@ Use `type: google_sheet_csv` and specify spreadsheet id plus gid. The target she
 
 If the map sheet stores adjacency in the node table, the edge source may be omitted.
 
+## Run With The Current #534 Sheet
+
+The live-test config reads `拠点履歴_座標` from spreadsheet `＃534`, filters it to the `#534` area, derives provisional same-area distance edges, and overwrites the usual output files.
+
+```powershell
+.\.venv\Scripts\python.exe tools\invasion_strategy_os\invasion_strategy_os.py --config tools\invasion_strategy_os\config.google_history_534.json
+```
+
+Outputs:
+
+- `sample_output/map.html`
+- `sample_output/state.json`
+
+Important: the current sheet does not contain an explicit adjacency column. `config.google_history_534.json` therefore uses coordinate-distance edges as a trial graph. Use this for visualization and workflow testing, not as confirmed game-rule adjacency.
+
 ## Tactical Use
 
 1. Export or expose the current Google Sheets board state.

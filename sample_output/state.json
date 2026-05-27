@@ -1,76 +1,17 @@
 {
-  "generated_at": "2026-05-27T18:00:00+09:00",
+  "generated_at": "2026-05-27T17:28:57.897502+09:00",
   "timezone": "Asia/Tokyo",
   "nodes": [
     {
-      "id": "SAMPLE-A1",
-      "name": "Sample Gate A",
-      "type": "city",
-      "owner": "JDX",
-      "protect_until": "2026-05-27T22:00:00+09:00",
-      "x": 100.0,
-      "y": 120.0,
-      "importance": 9.0,
-      "protection": {
-        "status": "soon",
-        "hours_remaining": 4.0,
-        "protect_until": "2026-05-27T22:00:00+09:00"
-      }
-    },
-    {
-      "id": "SAMPLE-B1",
-      "name": "Sample Junction B",
-      "type": "stronghold",
-      "owner": "JDX",
-      "protect_until": "2026-05-28T03:00:00+09:00",
-      "x": 220.0,
-      "y": 120.0,
-      "importance": 8.0,
-      "protection": {
-        "status": "protected",
-        "hours_remaining": 9.0,
-        "protect_until": "2026-05-28T03:00:00+09:00"
-      }
-    },
-    {
-      "id": "SAMPLE-C1",
-      "name": "Sample Forward C",
-      "type": "fishery",
-      "owner": "476C",
-      "protect_until": "2026-05-27T19:30:00+09:00",
-      "x": 340.0,
-      "y": 120.0,
-      "importance": 6.0,
-      "protection": {
-        "status": "soon",
-        "hours_remaining": 1.5,
-        "protect_until": "2026-05-27T19:30:00+09:00"
-      }
-    },
-    {
-      "id": "SAMPLE-D1",
-      "name": "Sample City D",
-      "type": "city",
-      "owner": "476B",
-      "protect_until": "2026-05-28T08:00:00+09:00",
-      "x": 460.0,
-      "y": 120.0,
-      "importance": 9.0,
-      "protection": {
-        "status": "protected",
-        "hours_remaining": 14.0,
-        "protect_until": "2026-05-28T08:00:00+09:00"
-      }
-    },
-    {
-      "id": "SAMPLE-B2",
-      "name": "Sample Side Route",
-      "type": "fishery",
-      "owner": "509",
+      "id": "#534:A-1",
+      "name": "A-1",
+      "type": "漁場",
+      "owner": "nO9",
       "protect_until": null,
-      "x": 220.0,
-      "y": 240.0,
-      "importance": 4.0,
+      "x": 20.0,
+      "y": 20.0,
+      "importance": 3.0,
+      "area": "#534",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -78,29 +19,3519 @@
       }
     },
     {
-      "id": "SAMPLE-C2",
-      "name": "Sample Support C2",
-      "type": "stronghold",
-      "owner": "509",
-      "protect_until": "2026-05-29T00:00:00+09:00",
-      "x": 340.0,
-      "y": 240.0,
-      "importance": 7.0,
+      "id": "#534:A-3",
+      "name": "A-3",
+      "type": "漁場",
+      "owner": "KTVS",
+      "protect_until": "2026/05/27 23:00",
+      "x": 99.0,
+      "y": 20.0,
+      "importance": 3.0,
+      "area": "#534",
       "protection": {
-        "status": "protected",
-        "hours_remaining": 30.0,
-        "protect_until": "2026-05-29T00:00:00+09:00"
+        "status": "soon",
+        "hours_remaining": 5.52,
+        "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
     {
-      "id": "SAMPLE-Z1",
-      "name": "Sample Isolated Watch",
-      "type": "fishery",
-      "owner": "neutral",
-      "protect_until": null,
-      "x": 560.0,
-      "y": 240.0,
+      "id": "#534:A-5",
+      "name": "A-5",
+      "type": "漁場",
+      "owner": "4tH",
+      "protect_until": "2026/05/21 7:00",
+      "x": 199.0,
+      "y": 20.0,
       "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -154.48,
+        "protect_until": "2026-05-21T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:A-7",
+      "name": "A-7",
+      "type": "漁場",
+      "owner": "476C",
+      "protect_until": "2026/05/23 23:00",
+      "x": 299.0,
+      "y": 20.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -90.48,
+        "protect_until": "2026-05-23T23:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:A-9",
+      "name": "A-9",
+      "type": "漁場",
+      "owner": "SHA0",
+      "protect_until": "2026/05/21 7:00",
+      "x": 399.0,
+      "y": 20.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -154.48,
+        "protect_until": "2026-05-21T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:A-11",
+      "name": "A-11",
+      "type": "漁場",
+      "owner": "Trh",
+      "protect_until": "2026/05/21 7:00",
+      "x": 499.0,
+      "y": 20.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -154.48,
+        "protect_until": "2026-05-21T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:A-13",
+      "name": "A-13",
+      "type": "漁場",
+      "owner": "w6F",
+      "protect_until": "2026/05/21 7:00",
+      "x": 599.0,
+      "y": 20.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -154.48,
+        "protect_until": "2026-05-21T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:A-15",
+      "name": "A-15",
+      "type": "漁場",
+      "owner": "w6F",
+      "protect_until": "2026/05/21 7:00",
+      "x": 699.0,
+      "y": 20.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -154.48,
+        "protect_until": "2026-05-21T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:A-17",
+      "name": "A-17",
+      "type": "漁場",
+      "owner": "w6F",
+      "protect_until": "2026/05/21 7:00",
+      "x": 799.0,
+      "y": 20.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -154.48,
+        "protect_until": "2026-05-21T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:A-19",
+      "name": "A-19",
+      "type": "漁場",
+      "owner": "KTVS",
+      "protect_until": "2026/05/21 7:00",
+      "x": 899.0,
+      "y": 20.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -154.48,
+        "protect_until": "2026-05-21T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:A-21",
+      "name": "A-21",
+      "type": "漁場",
+      "owner": "KTVS",
+      "protect_until": "2026/05/21 7:00",
+      "x": 978.0,
+      "y": 20.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -154.48,
+        "protect_until": "2026-05-21T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:B-1",
+      "name": "B-1",
+      "type": "漁場",
+      "owner": "Skh",
+      "protect_until": "2026/05/21 7:00",
+      "x": 20.0,
+      "y": 99.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -154.48,
+        "protect_until": "2026-05-21T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:B-3",
+      "name": "B-3",
+      "type": "漁場",
+      "owner": "nO9",
+      "protect_until": "2026/05/28 7:00",
+      "x": 99.0,
+      "y": 99.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "protected",
+        "hours_remaining": 13.52,
+        "protect_until": "2026-05-28T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:B-5",
+      "name": "B-5",
+      "type": "漁場",
+      "owner": "MOE",
+      "protect_until": "2026/05/23 23:00",
+      "x": 199.0,
+      "y": 99.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -90.48,
+        "protect_until": "2026-05-23T23:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:B-7",
+      "name": "B-7",
+      "type": "漁場",
+      "owner": "476C",
+      "protect_until": "2026/05/23 23:00",
+      "x": 299.0,
+      "y": 99.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -90.48,
+        "protect_until": "2026-05-23T23:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:B-9",
+      "name": "B-9",
+      "type": "漁場",
+      "owner": "SHA0",
+      "protect_until": "2026/05/21 7:00",
+      "x": 399.0,
+      "y": 99.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -154.48,
+        "protect_until": "2026-05-21T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:B-11",
+      "name": "B-11",
+      "type": "漁場",
+      "owner": "Trh",
+      "protect_until": "2026/05/24 7:00",
+      "x": 499.0,
+      "y": 99.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -82.48,
+        "protect_until": "2026-05-24T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:B-13",
+      "name": "B-13",
+      "type": "漁場",
+      "owner": "Trh",
+      "protect_until": "2026/05/24 7:00",
+      "x": 599.0,
+      "y": 99.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -82.48,
+        "protect_until": "2026-05-24T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:B-15",
+      "name": "B-15",
+      "type": "漁場",
+      "owner": "JDX",
+      "protect_until": "2026/05/13 15:00",
+      "x": 699.0,
+      "y": 99.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -338.48,
+        "protect_until": "2026-05-13T15:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:B-17",
+      "name": "B-17",
+      "type": "漁場",
+      "owner": "w6F",
+      "protect_until": null,
+      "x": 799.0,
+      "y": 99.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:B-19",
+      "name": "B-19",
+      "type": "漁場",
+      "owner": "w6F",
+      "protect_until": "2026/05/24 7:00",
+      "x": 899.0,
+      "y": 99.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -82.48,
+        "protect_until": "2026-05-24T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:B-21",
+      "name": "B-21",
+      "type": "漁場",
+      "owner": "w6F",
+      "protect_until": "2026/05/24 7:00",
+      "x": 978.0,
+      "y": 99.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -82.48,
+        "protect_until": "2026-05-24T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:C-1",
+      "name": "C-1",
+      "type": "漁場",
+      "owner": "Skh",
+      "protect_until": "2026/05/21 7:00",
+      "x": 20.0,
+      "y": 199.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -154.48,
+        "protect_until": "2026-05-21T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:C-3",
+      "name": "C-3",
+      "type": "漁場",
+      "owner": "nO9",
+      "protect_until": "2026/05/21 7:00",
+      "x": 99.0,
+      "y": 199.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -154.48,
+        "protect_until": "2026-05-21T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:C-5",
+      "name": "C-5",
+      "type": "漁場",
+      "owner": "4tH",
+      "protect_until": "2026/05/21 7:00",
+      "x": 199.0,
+      "y": 199.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -154.48,
+        "protect_until": "2026-05-21T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:C-7",
+      "name": "C-7",
+      "type": "漁場",
+      "owner": "476C",
+      "protect_until": "2026/05/27 23:00",
+      "x": 299.0,
+      "y": 199.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "soon",
+        "hours_remaining": 5.52,
+        "protect_until": "2026-05-27T23:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:C-9",
+      "name": "C-9",
+      "type": "漁場",
+      "owner": "476C",
+      "protect_until": "2026/05/27 23:00",
+      "x": 399.0,
+      "y": 199.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "soon",
+        "hours_remaining": 5.52,
+        "protect_until": "2026-05-27T23:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:C-11",
+      "name": "C-11",
+      "type": "漁場",
+      "owner": "476B",
+      "protect_until": "2026/05/27 23:00",
+      "x": 499.0,
+      "y": 199.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "soon",
+        "hours_remaining": 5.52,
+        "protect_until": "2026-05-27T23:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:C-13",
+      "name": "C-13",
+      "type": "漁場",
+      "owner": "JDX",
+      "protect_until": null,
+      "x": 599.0,
+      "y": 199.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:C-15",
+      "name": "C-15",
+      "type": "漁場",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 699.0,
+      "y": 199.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:C-17",
+      "name": "C-17",
+      "type": "漁場",
+      "owner": "JDX",
+      "protect_until": null,
+      "x": 799.0,
+      "y": 199.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:C-19",
+      "name": "C-19",
+      "type": "漁場",
+      "owner": "KTVS",
+      "protect_until": null,
+      "x": 899.0,
+      "y": 199.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:C-21",
+      "name": "C-21",
+      "type": "漁場",
+      "owner": "SHA",
+      "protect_until": null,
+      "x": 978.0,
+      "y": 199.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:D-1",
+      "name": "D-1",
+      "type": "漁場",
+      "owner": "Skh",
+      "protect_until": null,
+      "x": 20.0,
+      "y": 299.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:D-3",
+      "name": "D-3",
+      "type": "漁場",
+      "owner": "nO9",
+      "protect_until": null,
+      "x": 99.0,
+      "y": 299.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:D-5",
+      "name": "D-5",
+      "type": "漁場",
+      "owner": "4tH",
+      "protect_until": null,
+      "x": 199.0,
+      "y": 299.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:D-7",
+      "name": "D-7",
+      "type": "漁場",
+      "owner": "476B",
+      "protect_until": "2026/05/27 23:00",
+      "x": 299.0,
+      "y": 299.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "soon",
+        "hours_remaining": 5.52,
+        "protect_until": "2026-05-27T23:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:D-9",
+      "name": "D-9",
+      "type": "漁場",
+      "owner": "SHA",
+      "protect_until": null,
+      "x": 399.0,
+      "y": 299.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:D-11",
+      "name": "D-11",
+      "type": "漁場",
+      "owner": "SHA",
+      "protect_until": null,
+      "x": 499.0,
+      "y": 299.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:D-13",
+      "name": "D-13",
+      "type": "漁場",
+      "owner": "JDX",
+      "protect_until": null,
+      "x": 599.0,
+      "y": 299.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:D-15",
+      "name": "D-15",
+      "type": "漁場",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 699.0,
+      "y": 299.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:D-17",
+      "name": "D-17",
+      "type": "漁場",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 799.0,
+      "y": 299.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:D-19",
+      "name": "D-19",
+      "type": "漁場",
+      "owner": "sg3",
+      "protect_until": null,
+      "x": 899.0,
+      "y": 299.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:D-21",
+      "name": "D-21",
+      "type": "漁場",
+      "owner": "89M",
+      "protect_until": "2026/05/24 7:00",
+      "x": 978.0,
+      "y": 299.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -82.48,
+        "protect_until": "2026-05-24T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:E-1",
+      "name": "E-1",
+      "type": "漁場",
+      "owner": "Skh",
+      "protect_until": null,
+      "x": 20.0,
+      "y": 399.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:E-3",
+      "name": "E-3",
+      "type": "漁場",
+      "owner": "kOi",
+      "protect_until": null,
+      "x": 99.0,
+      "y": 399.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:E-5",
+      "name": "E-5",
+      "type": "漁場",
+      "owner": "kOi",
+      "protect_until": "安全時間要登録",
+      "x": 199.0,
+      "y": 399.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:E-7",
+      "name": "E-7",
+      "type": "漁場",
+      "owner": "4tH",
+      "protect_until": null,
+      "x": 299.0,
+      "y": 399.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:E-9",
+      "name": "E-9",
+      "type": "漁場",
+      "owner": "SHA",
+      "protect_until": null,
+      "x": 399.0,
+      "y": 399.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:E-11",
+      "name": "E-11",
+      "type": "漁場",
+      "owner": "SHA",
+      "protect_until": null,
+      "x": 499.0,
+      "y": 399.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:E-13",
+      "name": "E-13",
+      "type": "漁場",
+      "owner": "JDX",
+      "protect_until": null,
+      "x": 599.0,
+      "y": 399.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:E-15",
+      "name": "E-15",
+      "type": "漁場",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 699.0,
+      "y": 399.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:E-17",
+      "name": "E-17",
+      "type": "漁場",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 799.0,
+      "y": 399.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:E-19",
+      "name": "E-19",
+      "type": "漁場",
+      "owner": "89M",
+      "protect_until": null,
+      "x": 899.0,
+      "y": 399.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:E-21",
+      "name": "E-21",
+      "type": "漁場",
+      "owner": "89M",
+      "protect_until": null,
+      "x": 978.0,
+      "y": 399.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:F-1",
+      "name": "F-1",
+      "type": "漁場",
+      "owner": "kOi",
+      "protect_until": null,
+      "x": 20.0,
+      "y": 499.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:F-3",
+      "name": "F-3",
+      "type": "漁場",
+      "owner": "kOi",
+      "protect_until": null,
+      "x": 99.0,
+      "y": 499.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:F-5",
+      "name": "F-5",
+      "type": "漁場",
+      "owner": "nO9",
+      "protect_until": null,
+      "x": 199.0,
+      "y": 499.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:F-7",
+      "name": "F-7",
+      "type": "漁場",
+      "owner": "RGWC",
+      "protect_until": null,
+      "x": 299.0,
+      "y": 499.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:F-9",
+      "name": "F-9",
+      "type": "漁場",
+      "owner": "4tH",
+      "protect_until": "2026/05/23 23:00",
+      "x": 399.0,
+      "y": 499.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -90.48,
+        "protect_until": "2026-05-23T23:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:F-11",
+      "name": "F-11",
+      "type": "漁場",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 499.0,
+      "y": 499.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:F-13",
+      "name": "F-13",
+      "type": "漁場",
+      "owner": "JDX",
+      "protect_until": "2026/05/16 15:00",
+      "x": 599.0,
+      "y": 499.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -266.48,
+        "protect_until": "2026-05-16T15:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:F-15",
+      "name": "F-15",
+      "type": "漁場",
+      "owner": "JDX",
+      "protect_until": "2026/05/20 15:00",
+      "x": 699.0,
+      "y": 499.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -170.48,
+        "protect_until": "2026-05-20T15:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:F-17",
+      "name": "F-17",
+      "type": "漁場",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 799.0,
+      "y": 499.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:F-19",
+      "name": "F-19",
+      "type": "漁場",
+      "owner": "89M",
+      "protect_until": null,
+      "x": 899.0,
+      "y": 499.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:F-21",
+      "name": "F-21",
+      "type": "漁場",
+      "owner": "nol",
+      "protect_until": null,
+      "x": 978.0,
+      "y": 499.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:G-1",
+      "name": "G-1",
+      "type": "漁場",
+      "owner": "kOi",
+      "protect_until": null,
+      "x": 20.0,
+      "y": 599.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:G-3",
+      "name": "G-3",
+      "type": "漁場",
+      "owner": "kOi",
+      "protect_until": null,
+      "x": 99.0,
+      "y": 599.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:G-5",
+      "name": "G-5",
+      "type": "漁場",
+      "owner": "nO9",
+      "protect_until": null,
+      "x": 199.0,
+      "y": 599.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:G-7",
+      "name": "G-7",
+      "type": "漁場",
+      "owner": "RGWC",
+      "protect_until": null,
+      "x": 299.0,
+      "y": 599.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:G-9",
+      "name": "G-9",
+      "type": "漁場",
+      "owner": "4tH",
+      "protect_until": "2026/05/24 7:00",
+      "x": 399.0,
+      "y": 599.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -82.48,
+        "protect_until": "2026-05-24T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:G-11",
+      "name": "G-11",
+      "type": "漁場",
+      "owner": "4tH",
+      "protect_until": "2026/05/24 7:00",
+      "x": 499.0,
+      "y": 599.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -82.48,
+        "protect_until": "2026-05-24T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:G-13",
+      "name": "G-13",
+      "type": "漁場",
+      "owner": "KTVS",
+      "protect_until": null,
+      "x": 599.0,
+      "y": 599.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:G-15",
+      "name": "G-15",
+      "type": "漁場",
+      "owner": "KTVS",
+      "protect_until": "2026/05/23 23:00",
+      "x": 699.0,
+      "y": 599.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -90.48,
+        "protect_until": "2026-05-23T23:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:G-17",
+      "name": "G-17",
+      "type": "漁場",
+      "owner": "89M",
+      "protect_until": null,
+      "x": 799.0,
+      "y": 599.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:G-19",
+      "name": "G-19",
+      "type": "漁場",
+      "owner": "nol",
+      "protect_until": null,
+      "x": 899.0,
+      "y": 599.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:G-21",
+      "name": "G-21",
+      "type": "漁場",
+      "owner": "nol",
+      "protect_until": null,
+      "x": 978.0,
+      "y": 599.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:H-1",
+      "name": "H-1",
+      "type": "漁場",
+      "owner": "Ryu1",
+      "protect_until": null,
+      "x": 20.0,
+      "y": 699.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:H-3",
+      "name": "H-3",
+      "type": "漁場",
+      "owner": "Ryu1",
+      "protect_until": null,
+      "x": 99.0,
+      "y": 699.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:H-5",
+      "name": "H-5",
+      "type": "漁場",
+      "owner": "RGWC",
+      "protect_until": "安全時間要登録",
+      "x": 199.0,
+      "y": 699.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:H-7",
+      "name": "H-7",
+      "type": "漁場",
+      "owner": "RGWC",
+      "protect_until": "安全時間要登録",
+      "x": 299.0,
+      "y": 699.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:H-9",
+      "name": "H-9",
+      "type": "漁場",
+      "owner": "nO9",
+      "protect_until": "2026/05/23 23:00",
+      "x": 399.0,
+      "y": 699.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -90.48,
+        "protect_until": "2026-05-23T23:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:H-11",
+      "name": "H-11",
+      "type": "漁場",
+      "owner": "nO9",
+      "protect_until": "2026/05/23 23:00",
+      "x": 499.0,
+      "y": 699.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -90.48,
+        "protect_until": "2026-05-23T23:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:H-13",
+      "name": "H-13",
+      "type": "漁場",
+      "owner": "89M",
+      "protect_until": "2026/05/21 7:00",
+      "x": 599.0,
+      "y": 699.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -154.48,
+        "protect_until": "2026-05-21T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:H-15",
+      "name": "H-15",
+      "type": "漁場",
+      "owner": "89M",
+      "protect_until": null,
+      "x": 699.0,
+      "y": 699.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:H-17",
+      "name": "H-17",
+      "type": "漁場",
+      "owner": "89M",
+      "protect_until": null,
+      "x": 799.0,
+      "y": 699.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:H-19",
+      "name": "H-19",
+      "type": "漁場",
+      "owner": "59U",
+      "protect_until": "安全時間要登録",
+      "x": 899.0,
+      "y": 699.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:H-21",
+      "name": "H-21",
+      "type": "漁場",
+      "owner": "89M",
+      "protect_until": null,
+      "x": 978.0,
+      "y": 699.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:I-1",
+      "name": "I-1",
+      "type": "漁場",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 20.0,
+      "y": 799.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:I-3",
+      "name": "I-3",
+      "type": "漁場",
+      "owner": "RGWC",
+      "protect_until": null,
+      "x": 99.0,
+      "y": 799.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:I-5",
+      "name": "I-5",
+      "type": "漁場",
+      "owner": "RGWC",
+      "protect_until": null,
+      "x": 199.0,
+      "y": 799.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:I-7",
+      "name": "I-7",
+      "type": "漁場",
+      "owner": "RGWC",
+      "protect_until": null,
+      "x": 299.0,
+      "y": 799.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:I-9",
+      "name": "I-9",
+      "type": "漁場",
+      "owner": "RGWC",
+      "protect_until": null,
+      "x": 399.0,
+      "y": 799.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:I-11",
+      "name": "I-11",
+      "type": "漁場",
+      "owner": "Dao",
+      "protect_until": null,
+      "x": 499.0,
+      "y": 799.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:I-13",
+      "name": "I-13",
+      "type": "漁場",
+      "owner": "Dao",
+      "protect_until": null,
+      "x": 599.0,
+      "y": 799.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:I-15",
+      "name": "I-15",
+      "type": "漁場",
+      "owner": "f4j",
+      "protect_until": null,
+      "x": 699.0,
+      "y": 799.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:I-17",
+      "name": "I-17",
+      "type": "漁場",
+      "owner": "f4j",
+      "protect_until": null,
+      "x": 799.0,
+      "y": 799.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:I-19",
+      "name": "I-19",
+      "type": "漁場",
+      "owner": "nol",
+      "protect_until": null,
+      "x": 899.0,
+      "y": 799.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:I-21",
+      "name": "I-21",
+      "type": "漁場",
+      "owner": "nol",
+      "protect_until": null,
+      "x": 978.0,
+      "y": 799.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:J-1",
+      "name": "J-1",
+      "type": "漁場",
+      "owner": "RGWC",
+      "protect_until": null,
+      "x": 20.0,
+      "y": 899.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:J-3",
+      "name": "J-3",
+      "type": "漁場",
+      "owner": "CROW",
+      "protect_until": null,
+      "x": 99.0,
+      "y": 899.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:J-5",
+      "name": "J-5",
+      "type": "漁場",
+      "owner": "CROW",
+      "protect_until": null,
+      "x": 199.0,
+      "y": 899.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:J-7",
+      "name": "J-7",
+      "type": "漁場",
+      "owner": "Dao",
+      "protect_until": null,
+      "x": 299.0,
+      "y": 899.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:J-9",
+      "name": "J-9",
+      "type": "漁場",
+      "owner": "Dao",
+      "protect_until": null,
+      "x": 399.0,
+      "y": 899.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:J-11",
+      "name": "J-11",
+      "type": "漁場",
+      "owner": "f4j",
+      "protect_until": null,
+      "x": 499.0,
+      "y": 899.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:J-13",
+      "name": "J-13",
+      "type": "漁場",
+      "owner": "Dao",
+      "protect_until": null,
+      "x": 599.0,
+      "y": 899.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:J-15",
+      "name": "J-15",
+      "type": "漁場",
+      "owner": "f4j",
+      "protect_until": null,
+      "x": 699.0,
+      "y": 899.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:J-17",
+      "name": "J-17",
+      "type": "漁場",
+      "owner": "Dao",
+      "protect_until": null,
+      "x": 799.0,
+      "y": 899.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:J-19",
+      "name": "J-19",
+      "type": "漁場",
+      "owner": "nol",
+      "protect_until": null,
+      "x": 899.0,
+      "y": 899.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:J-21",
+      "name": "J-21",
+      "type": "漁場",
+      "owner": "nol",
+      "protect_until": null,
+      "x": 978.0,
+      "y": 899.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:K-1",
+      "name": "K-1",
+      "type": "漁場",
+      "owner": "RGWC",
+      "protect_until": null,
+      "x": 20.0,
+      "y": 978.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:K-3",
+      "name": "K-3",
+      "type": "漁場",
+      "owner": "moca",
+      "protect_until": null,
+      "x": 99.0,
+      "y": 978.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:K-5",
+      "name": "K-5",
+      "type": "漁場",
+      "owner": "CROW",
+      "protect_until": null,
+      "x": 199.0,
+      "y": 978.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:K-7",
+      "name": "K-7",
+      "type": "漁場",
+      "owner": "Dao",
+      "protect_until": null,
+      "x": 299.0,
+      "y": 978.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:K-9",
+      "name": "K-9",
+      "type": "漁場",
+      "owner": "f4j",
+      "protect_until": null,
+      "x": 399.0,
+      "y": 978.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:K-11",
+      "name": "K-11",
+      "type": "漁場",
+      "owner": "f4j",
+      "protect_until": "安全時間要登録",
+      "x": 499.0,
+      "y": 978.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:K-13",
+      "name": "K-13",
+      "type": "漁場",
+      "owner": "f4j",
+      "protect_until": null,
+      "x": 599.0,
+      "y": 978.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:K-15",
+      "name": "K-15",
+      "type": "漁場",
+      "owner": "Dao",
+      "protect_until": null,
+      "x": 699.0,
+      "y": 978.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:K-17",
+      "name": "K-17",
+      "type": "漁場",
+      "owner": "f4j",
+      "protect_until": null,
+      "x": 799.0,
+      "y": 978.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:K-19",
+      "name": "K-19",
+      "type": "漁場",
+      "owner": "f4j",
+      "protect_until": null,
+      "x": 899.0,
+      "y": 978.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:K-21",
+      "name": "K-21",
+      "type": "漁場",
+      "owner": "nol",
+      "protect_until": null,
+      "x": 978.0,
+      "y": 978.0,
+      "importance": 3.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:a-2",
+      "name": "a-2",
+      "type": "交易地",
+      "owner": "Lghs",
+      "protect_until": "都市系取得曜日要確認",
+      "x": 49.0,
+      "y": 49.0,
+      "importance": 4.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:a-4",
+      "name": "a-4",
+      "type": "交易地",
+      "owner": "JDX",
+      "protect_until": "都市系取得曜日要確認",
+      "x": 149.0,
+      "y": 49.0,
+      "importance": 4.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:a-6",
+      "name": "a-6",
+      "type": "交易地",
+      "owner": "KTVS",
+      "protect_until": "都市系取得曜日要確認",
+      "x": 249.0,
+      "y": 49.0,
+      "importance": 4.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:a-8",
+      "name": "a-8",
+      "type": "交易地",
+      "owner": "RCON",
+      "protect_until": "都市系取得曜日要確認",
+      "x": 349.0,
+      "y": 49.0,
+      "importance": 4.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:a-10",
+      "name": "a-10",
+      "type": "交易地",
+      "owner": "SHA",
+      "protect_until": "都市系取得曜日要確認",
+      "x": 449.0,
+      "y": 49.0,
+      "importance": 4.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:a-12",
+      "name": "a-12",
+      "type": "交易地",
+      "owner": "476X",
+      "protect_until": "都市系取得曜日要確認",
+      "x": 549.0,
+      "y": 49.0,
+      "importance": 4.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:a-14",
+      "name": "a-14",
+      "type": "交易地",
+      "owner": "JDX",
+      "protect_until": "都市系取得曜日要確認",
+      "x": 649.0,
+      "y": 49.0,
+      "importance": 4.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:a-16",
+      "name": "a-16",
+      "type": "交易地",
+      "owner": "fzn",
+      "protect_until": "安全時間要登録",
+      "x": 749.0,
+      "y": 49.0,
+      "importance": 4.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:a-18",
+      "name": "a-18",
+      "type": "交易地",
+      "owner": "476A",
+      "protect_until": "都市系取得曜日要確認",
+      "x": 849.0,
+      "y": 49.0,
+      "importance": 4.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:a-20",
+      "name": "a-20",
+      "type": "交易地",
+      "owner": "476X",
+      "protect_until": "都市系取得曜日要確認",
+      "x": 949.0,
+      "y": 49.0,
+      "importance": 4.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:b-2",
+      "name": "b-2",
+      "type": "密林の村",
+      "owner": "Skh",
+      "protect_until": "種別要確認",
+      "x": 49.0,
+      "y": 149.0,
+      "importance": 6.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:b-4",
+      "name": "b-4",
+      "type": "都市",
+      "owner": "4tH",
+      "protect_until": null,
+      "x": 149.0,
+      "y": 149.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:b-6",
+      "name": "b-6",
+      "type": "都市",
+      "owner": "MOE",
+      "protect_until": null,
+      "x": 249.0,
+      "y": 149.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:b-8",
+      "name": "b-8",
+      "type": "都市",
+      "owner": "MOE",
+      "protect_until": null,
+      "x": 349.0,
+      "y": 149.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:b-10",
+      "name": "b-10",
+      "type": "都市",
+      "owner": "SHA",
+      "protect_until": null,
+      "x": 449.0,
+      "y": 149.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:b-12",
+      "name": "b-12",
+      "type": "都市",
+      "owner": "SHA",
+      "protect_until": null,
+      "x": 549.0,
+      "y": 149.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:b-14",
+      "name": "b-14",
+      "type": "都市",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 649.0,
+      "y": 149.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:b-16",
+      "name": "b-16",
+      "type": "都市",
+      "owner": "JDX",
+      "protect_until": null,
+      "x": 749.0,
+      "y": 149.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:b-18",
+      "name": "b-18",
+      "type": "都市",
+      "owner": "JDX",
+      "protect_until": null,
+      "x": 849.0,
+      "y": 149.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:b-20",
+      "name": "b-20",
+      "type": "密林の村",
+      "owner": "w6F",
+      "protect_until": "種別要確認",
+      "x": 949.0,
+      "y": 149.0,
+      "importance": 6.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:c-2",
+      "name": "c-2",
+      "type": "都市",
+      "owner": "nO9",
+      "protect_until": null,
+      "x": 49.0,
+      "y": 249.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:c-4",
+      "name": "c-4",
+      "type": "密林の村",
+      "owner": "nO9",
+      "protect_until": "種別要確認",
+      "x": 149.0,
+      "y": 249.0,
+      "importance": 6.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:c-6",
+      "name": "c-6",
+      "type": "都市",
+      "owner": "4tH",
+      "protect_until": null,
+      "x": 249.0,
+      "y": 249.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:c-8",
+      "name": "c-8",
+      "type": "都市",
+      "owner": "SHA",
+      "protect_until": null,
+      "x": 349.0,
+      "y": 249.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:c-10",
+      "name": "c-10",
+      "type": "都市",
+      "owner": "SHA",
+      "protect_until": null,
+      "x": 449.0,
+      "y": 249.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:c-12",
+      "name": "c-12",
+      "type": "都市",
+      "owner": "JDX",
+      "protect_until": "2026/05/23 15:00",
+      "x": 549.0,
+      "y": 249.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -98.48,
+        "protect_until": "2026-05-23T15:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:c-14",
+      "name": "c-14",
+      "type": "都市",
+      "owner": "JDX",
+      "protect_until": null,
+      "x": 649.0,
+      "y": 249.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:c-16",
+      "name": "c-16",
+      "type": "都市",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 749.0,
+      "y": 249.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:c-18",
+      "name": "c-18",
+      "type": "都市",
+      "owner": "sg3",
+      "protect_until": null,
+      "x": 849.0,
+      "y": 249.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:c-20",
+      "name": "c-20",
+      "type": "都市",
+      "owner": "KTVS",
+      "protect_until": null,
+      "x": 949.0,
+      "y": 249.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:d-2",
+      "name": "d-2",
+      "type": "都市",
+      "owner": "kOi",
+      "protect_until": null,
+      "x": 49.0,
+      "y": 349.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:d-4",
+      "name": "d-4",
+      "type": "都市",
+      "owner": "nO9",
+      "protect_until": null,
+      "x": 149.0,
+      "y": 349.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:d-6",
+      "name": "d-6",
+      "type": "都市",
+      "owner": "RGWC",
+      "protect_until": null,
+      "x": 249.0,
+      "y": 349.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:d-8",
+      "name": "d-8",
+      "type": "密林の集会場",
+      "owner": "4tH",
+      "protect_until": "種別要確認",
+      "x": 349.0,
+      "y": 349.0,
+      "importance": 1.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:d-10",
+      "name": "d-10",
+      "type": "都市",
+      "owner": "SHA",
+      "protect_until": null,
+      "x": 449.0,
+      "y": 349.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:d-12",
+      "name": "d-12",
+      "type": "都市",
+      "owner": "JDX",
+      "protect_until": null,
+      "x": 549.0,
+      "y": 349.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:d-14",
+      "name": "d-14",
+      "type": "都市",
+      "owner": "JDX",
+      "protect_until": "2026/05/27 15:00",
+      "x": 649.0,
+      "y": 349.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -2.48,
+        "protect_until": "2026-05-27T15:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:d-16",
+      "name": "d-16",
+      "type": "都市",
+      "owner": "KTVS",
+      "protect_until": null,
+      "x": 749.0,
+      "y": 349.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:d-18",
+      "name": "d-18",
+      "type": "都市",
+      "owner": "sg3",
+      "protect_until": null,
+      "x": 849.0,
+      "y": 349.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:d-20",
+      "name": "d-20",
+      "type": "都市",
+      "owner": "KTVS",
+      "protect_until": null,
+      "x": 949.0,
+      "y": 349.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:e-2",
+      "name": "e-2",
+      "type": "都市",
+      "owner": "kOi",
+      "protect_until": null,
+      "x": 49.0,
+      "y": 449.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:e-4",
+      "name": "e-4",
+      "type": "都市",
+      "owner": "nO9",
+      "protect_until": null,
+      "x": 149.0,
+      "y": 449.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:e-6",
+      "name": "e-6",
+      "type": "都市",
+      "owner": "4tH",
+      "protect_until": null,
+      "x": 249.0,
+      "y": 449.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:e-8",
+      "name": "e-8",
+      "type": "都市",
+      "owner": "SHA",
+      "protect_until": "2026/05/28 7:00",
+      "x": 349.0,
+      "y": 449.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "protected",
+        "hours_remaining": 13.52,
+        "protect_until": "2026-05-28T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:e-10",
+      "name": "e-10",
+      "type": "都市",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 449.0,
+      "y": 449.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:e-12",
+      "name": "e-12",
+      "type": "都市",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 549.0,
+      "y": 449.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:e-14",
+      "name": "e-14",
+      "type": "密林の集会場",
+      "owner": "SHA",
+      "protect_until": "種別要確認",
+      "x": 649.0,
+      "y": 449.0,
+      "importance": 1.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:e-16",
+      "name": "e-16",
+      "type": "都市",
+      "owner": "KTVS",
+      "protect_until": null,
+      "x": 749.0,
+      "y": 449.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:e-18",
+      "name": "e-18",
+      "type": "都市",
+      "owner": "89M",
+      "protect_until": null,
+      "x": 849.0,
+      "y": 449.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:e-20",
+      "name": "e-20",
+      "type": "都市",
+      "owner": "89M",
+      "protect_until": null,
+      "x": 949.0,
+      "y": 449.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:f-2",
+      "name": "f-2",
+      "type": "都市",
+      "owner": "kOi",
+      "protect_until": "安全時間要登録",
+      "x": 49.0,
+      "y": 549.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:f-4",
+      "name": "f-4",
+      "type": "都市",
+      "owner": "kOi",
+      "protect_until": null,
+      "x": 149.0,
+      "y": 549.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:f-6",
+      "name": "f-6",
+      "type": "都市",
+      "owner": "4tH",
+      "protect_until": null,
+      "x": 249.0,
+      "y": 549.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:f-8",
+      "name": "f-8",
+      "type": "都市",
+      "owner": "4tH",
+      "protect_until": "都市系取得曜日要確認",
+      "x": 349.0,
+      "y": 549.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:f-10",
+      "name": "f-10",
+      "type": "都市",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 449.0,
+      "y": 549.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:f-12",
+      "name": "f-12",
+      "type": "都市",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 549.0,
+      "y": 549.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:f-14",
+      "name": "f-14",
+      "type": "都市",
+      "owner": "KTVS",
+      "protect_until": null,
+      "x": 649.0,
+      "y": 549.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:f-16",
+      "name": "f-16",
+      "type": "都市",
+      "owner": "JDX",
+      "protect_until": "2026/05/23 15:00",
+      "x": 749.0,
+      "y": 549.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "expired",
+        "hours_remaining": -98.48,
+        "protect_until": "2026-05-23T15:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:f-18",
+      "name": "f-18",
+      "type": "都市",
+      "owner": "89M",
+      "protect_until": null,
+      "x": 849.0,
+      "y": 549.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:f-20",
+      "name": "f-20",
+      "type": "密林の村",
+      "owner": "89M",
+      "protect_until": "種別要確認",
+      "x": 949.0,
+      "y": 549.0,
+      "importance": 6.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:g-2",
+      "name": "g-2",
+      "type": "都市",
+      "owner": "Ryu1",
+      "protect_until": null,
+      "x": 49.0,
+      "y": 649.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:g-4",
+      "name": "g-4",
+      "type": "都市",
+      "owner": "kOi",
+      "protect_until": null,
+      "x": 149.0,
+      "y": 649.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:g-6",
+      "name": "g-6",
+      "type": "都市",
+      "owner": "4tH",
+      "protect_until": "2026/05/28 7:00",
+      "x": 249.0,
+      "y": 649.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "protected",
+        "hours_remaining": 13.52,
+        "protect_until": "2026-05-28T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:g-8",
+      "name": "g-8",
+      "type": "都市",
+      "owner": "nO9",
+      "protect_until": "2026/05/28 7:00",
+      "x": 349.0,
+      "y": 649.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "protected",
+        "hours_remaining": 13.52,
+        "protect_until": "2026-05-28T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:g-10",
+      "name": "g-10",
+      "type": "密林の集会場",
+      "owner": "4tH",
+      "protect_until": "種別要確認",
+      "x": 449.0,
+      "y": 649.0,
+      "importance": 1.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:g-12",
+      "name": "g-12",
+      "type": "都市",
+      "owner": "KTVS",
+      "protect_until": "2026/05/28 7:00",
+      "x": 549.0,
+      "y": 649.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "protected",
+        "hours_remaining": 13.52,
+        "protect_until": "2026-05-28T07:00:00+09:00"
+      }
+    },
+    {
+      "id": "#534:g-14",
+      "name": "g-14",
+      "type": "都市",
+      "owner": "89M",
+      "protect_until": null,
+      "x": 649.0,
+      "y": 649.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:g-16",
+      "name": "g-16",
+      "type": "密林の兵舎",
+      "owner": "KTVS",
+      "protect_until": "種別要確認",
+      "x": 749.0,
+      "y": 649.0,
+      "importance": 1.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:g-18",
+      "name": "g-18",
+      "type": "都市",
+      "owner": "nol",
+      "protect_until": null,
+      "x": 849.0,
+      "y": 649.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:g-20",
+      "name": "g-20",
+      "type": "都市",
+      "owner": "89M",
+      "protect_until": null,
+      "x": 949.0,
+      "y": 649.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:h-2",
+      "name": "h-2",
+      "type": "都市",
+      "owner": "Ryu1",
+      "protect_until": null,
+      "x": 49.0,
+      "y": 749.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:h-4",
+      "name": "h-4",
+      "type": "都市",
+      "owner": "Ryu1",
+      "protect_until": null,
+      "x": 149.0,
+      "y": 749.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:h-6",
+      "name": "h-6",
+      "type": "都市",
+      "owner": "nO9",
+      "protect_until": null,
+      "x": 249.0,
+      "y": 749.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:h-8",
+      "name": "h-8",
+      "type": "都市",
+      "owner": "nO9",
+      "protect_until": null,
+      "x": 349.0,
+      "y": 749.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:h-10",
+      "name": "h-10",
+      "type": "都市",
+      "owner": "RGWC",
+      "protect_until": null,
+      "x": 449.0,
+      "y": 749.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:h-12",
+      "name": "h-12",
+      "type": "都市",
+      "owner": "Dao",
+      "protect_until": null,
+      "x": 549.0,
+      "y": 749.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:h-14",
+      "name": "h-14",
+      "type": "都市",
+      "owner": "89M",
+      "protect_until": null,
+      "x": 649.0,
+      "y": 749.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:h-16",
+      "name": "h-16",
+      "type": "都市",
+      "owner": "nol",
+      "protect_until": null,
+      "x": 749.0,
+      "y": 749.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:h-18",
+      "name": "h-18",
+      "type": "都市",
+      "owner": "nol",
+      "protect_until": null,
+      "x": 849.0,
+      "y": 749.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:h-20",
+      "name": "h-20",
+      "type": "都市",
+      "owner": "nol",
+      "protect_until": null,
+      "x": 949.0,
+      "y": 749.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:i-2",
+      "name": "i-2",
+      "type": "都市",
+      "owner": "RGWC",
+      "protect_until": null,
+      "x": 49.0,
+      "y": 849.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:i-4",
+      "name": "i-4",
+      "type": "都市",
+      "owner": "RGWC",
+      "protect_until": null,
+      "x": 149.0,
+      "y": 849.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:i-6",
+      "name": "i-6",
+      "type": "都市",
+      "owner": "Dao",
+      "protect_until": "安全時間要登録",
+      "x": 249.0,
+      "y": 849.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:i-8",
+      "name": "i-8",
+      "type": "都市",
+      "owner": "Dao",
+      "protect_until": null,
+      "x": 349.0,
+      "y": 849.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:i-10",
+      "name": "i-10",
+      "type": "都市",
+      "owner": "Dao",
+      "protect_until": null,
+      "x": 449.0,
+      "y": 849.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:i-12",
+      "name": "i-12",
+      "type": "密林の村",
+      "owner": "f4j",
+      "protect_until": "安全時間要登録",
+      "x": 549.0,
+      "y": 849.0,
+      "importance": 6.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:i-14",
+      "name": "i-14",
+      "type": "都市",
+      "owner": "f4j",
+      "protect_until": null,
+      "x": 649.0,
+      "y": 849.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:i-16",
+      "name": "i-16",
+      "type": "都市",
+      "owner": "f4j",
+      "protect_until": null,
+      "x": 749.0,
+      "y": 849.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:i-18",
+      "name": "i-18",
+      "type": "都市",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 849.0,
+      "y": 849.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:i-20",
+      "name": "i-20",
+      "type": "都市",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 949.0,
+      "y": 849.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:j-2",
+      "name": "j-2",
+      "type": "都市",
+      "owner": "RGWC",
+      "protect_until": null,
+      "x": 49.0,
+      "y": 949.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:j-4",
+      "name": "j-4",
+      "type": "都市",
+      "owner": "CROW",
+      "protect_until": null,
+      "x": 149.0,
+      "y": 949.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:j-6",
+      "name": "j-6",
+      "type": "都市",
+      "owner": "CROW",
+      "protect_until": null,
+      "x": 249.0,
+      "y": 949.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:j-8",
+      "name": "j-8",
+      "type": "都市",
+      "owner": "f4j",
+      "protect_until": null,
+      "x": 349.0,
+      "y": 949.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:j-10",
+      "name": "j-10",
+      "type": "都市",
+      "owner": "f4j",
+      "protect_until": null,
+      "x": 449.0,
+      "y": 949.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:j-12",
+      "name": "j-12",
+      "type": "都市",
+      "owner": "f4j",
+      "protect_until": null,
+      "x": 549.0,
+      "y": 949.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:j-14",
+      "name": "j-14",
+      "type": "都市",
+      "owner": "f4j",
+      "protect_until": null,
+      "x": 649.0,
+      "y": 949.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:j-16",
+      "name": "j-16",
+      "type": "密林の村",
+      "owner": "Dao",
+      "protect_until": "安全時間要登録",
+      "x": 749.0,
+      "y": 949.0,
+      "importance": 6.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:j-18",
+      "name": "j-18",
+      "type": "都市",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 849.0,
+      "y": 949.0,
+      "importance": 8.0,
+      "area": "#534",
+      "protection": {
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
+      }
+    },
+    {
+      "id": "#534:j-20",
+      "name": "j-20",
+      "type": "都市",
+      "owner": "unknown",
+      "protect_until": null,
+      "x": 949.0,
+      "y": 949.0,
+      "importance": 8.0,
+      "area": "#534",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -110,205 +3541,3900 @@
   ],
   "connections": [
     {
-      "source": "SAMPLE-A1",
-      "target": "SAMPLE-B1",
-      "weight": 1.0
+      "source": "#534:A-1",
+      "target": "#534:a-2",
+      "weight": 41.012
     },
     {
-      "source": "SAMPLE-B1",
-      "target": "SAMPLE-C1",
-      "weight": 1.0
+      "source": "#534:A-21",
+      "target": "#534:a-20",
+      "weight": 41.012
     },
     {
-      "source": "SAMPLE-B1",
-      "target": "SAMPLE-B2",
-      "weight": 1.0
+      "source": "#534:K-1",
+      "target": "#534:j-2",
+      "weight": 41.012
     },
     {
-      "source": "SAMPLE-C1",
-      "target": "SAMPLE-D1",
-      "weight": 1.0
+      "source": "#534:K-21",
+      "target": "#534:j-20",
+      "weight": 41.012
     },
     {
-      "source": "SAMPLE-B2",
-      "target": "SAMPLE-C2",
-      "weight": 1.0
+      "source": "#534:A-11",
+      "target": "#534:a-10",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-11",
+      "target": "#534:a-12",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-13",
+      "target": "#534:a-12",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-13",
+      "target": "#534:a-14",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-15",
+      "target": "#534:a-14",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-15",
+      "target": "#534:a-16",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-17",
+      "target": "#534:a-16",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-17",
+      "target": "#534:a-18",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-19",
+      "target": "#534:a-18",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-19",
+      "target": "#534:a-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-3",
+      "target": "#534:a-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-3",
+      "target": "#534:a-4",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-5",
+      "target": "#534:a-4",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-5",
+      "target": "#534:a-6",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-7",
+      "target": "#534:a-6",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-7",
+      "target": "#534:a-8",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-9",
+      "target": "#534:a-10",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:A-9",
+      "target": "#534:a-8",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:B-1",
+      "target": "#534:a-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:B-1",
+      "target": "#534:b-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:B-21",
+      "target": "#534:a-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:B-21",
+      "target": "#534:b-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:C-1",
+      "target": "#534:b-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:C-1",
+      "target": "#534:c-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:C-21",
+      "target": "#534:b-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:C-21",
+      "target": "#534:c-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:D-1",
+      "target": "#534:c-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:D-1",
+      "target": "#534:d-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:D-21",
+      "target": "#534:c-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:D-21",
+      "target": "#534:d-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:E-1",
+      "target": "#534:d-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:E-1",
+      "target": "#534:e-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:E-21",
+      "target": "#534:d-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:E-21",
+      "target": "#534:e-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:F-1",
+      "target": "#534:e-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:F-1",
+      "target": "#534:f-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:F-21",
+      "target": "#534:e-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:F-21",
+      "target": "#534:f-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:G-1",
+      "target": "#534:f-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:G-1",
+      "target": "#534:g-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:G-21",
+      "target": "#534:f-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:G-21",
+      "target": "#534:g-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:H-1",
+      "target": "#534:g-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:H-1",
+      "target": "#534:h-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:H-21",
+      "target": "#534:g-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:H-21",
+      "target": "#534:h-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:I-1",
+      "target": "#534:h-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:I-1",
+      "target": "#534:i-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:I-21",
+      "target": "#534:h-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:I-21",
+      "target": "#534:i-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:J-1",
+      "target": "#534:i-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:J-1",
+      "target": "#534:j-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:J-21",
+      "target": "#534:i-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:J-21",
+      "target": "#534:j-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-11",
+      "target": "#534:j-10",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-11",
+      "target": "#534:j-12",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-13",
+      "target": "#534:j-12",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-13",
+      "target": "#534:j-14",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-15",
+      "target": "#534:j-14",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-15",
+      "target": "#534:j-16",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-17",
+      "target": "#534:j-16",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-17",
+      "target": "#534:j-18",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-19",
+      "target": "#534:j-18",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-19",
+      "target": "#534:j-20",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-3",
+      "target": "#534:j-2",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-3",
+      "target": "#534:j-4",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-5",
+      "target": "#534:j-4",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-5",
+      "target": "#534:j-6",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-7",
+      "target": "#534:j-6",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-7",
+      "target": "#534:j-8",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-9",
+      "target": "#534:j-10",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:K-9",
+      "target": "#534:j-8",
+      "weight": 57.801
+    },
+    {
+      "source": "#534:B-11",
+      "target": "#534:a-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-11",
+      "target": "#534:a-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-11",
+      "target": "#534:b-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-11",
+      "target": "#534:b-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-13",
+      "target": "#534:a-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-13",
+      "target": "#534:a-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-13",
+      "target": "#534:b-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-13",
+      "target": "#534:b-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-15",
+      "target": "#534:a-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-15",
+      "target": "#534:a-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-15",
+      "target": "#534:b-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-15",
+      "target": "#534:b-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-17",
+      "target": "#534:a-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-17",
+      "target": "#534:a-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-17",
+      "target": "#534:b-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-17",
+      "target": "#534:b-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-19",
+      "target": "#534:a-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-19",
+      "target": "#534:a-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-19",
+      "target": "#534:b-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-19",
+      "target": "#534:b-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-3",
+      "target": "#534:a-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-3",
+      "target": "#534:a-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-3",
+      "target": "#534:b-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-3",
+      "target": "#534:b-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-5",
+      "target": "#534:a-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-5",
+      "target": "#534:a-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-5",
+      "target": "#534:b-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-5",
+      "target": "#534:b-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-7",
+      "target": "#534:a-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-7",
+      "target": "#534:a-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-7",
+      "target": "#534:b-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-7",
+      "target": "#534:b-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-9",
+      "target": "#534:a-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-9",
+      "target": "#534:a-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-9",
+      "target": "#534:b-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:B-9",
+      "target": "#534:b-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-11",
+      "target": "#534:b-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-11",
+      "target": "#534:b-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-11",
+      "target": "#534:c-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-11",
+      "target": "#534:c-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-13",
+      "target": "#534:b-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-13",
+      "target": "#534:b-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-13",
+      "target": "#534:c-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-13",
+      "target": "#534:c-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-15",
+      "target": "#534:b-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-15",
+      "target": "#534:b-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-15",
+      "target": "#534:c-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-15",
+      "target": "#534:c-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-17",
+      "target": "#534:b-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-17",
+      "target": "#534:b-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-17",
+      "target": "#534:c-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-17",
+      "target": "#534:c-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-19",
+      "target": "#534:b-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-19",
+      "target": "#534:b-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-19",
+      "target": "#534:c-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-19",
+      "target": "#534:c-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-3",
+      "target": "#534:b-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-3",
+      "target": "#534:b-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-3",
+      "target": "#534:c-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-3",
+      "target": "#534:c-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-5",
+      "target": "#534:b-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-5",
+      "target": "#534:b-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-5",
+      "target": "#534:c-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-5",
+      "target": "#534:c-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-7",
+      "target": "#534:b-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-7",
+      "target": "#534:b-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-7",
+      "target": "#534:c-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-7",
+      "target": "#534:c-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-9",
+      "target": "#534:b-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-9",
+      "target": "#534:b-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-9",
+      "target": "#534:c-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:C-9",
+      "target": "#534:c-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-11",
+      "target": "#534:c-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-11",
+      "target": "#534:c-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-11",
+      "target": "#534:d-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-11",
+      "target": "#534:d-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-13",
+      "target": "#534:c-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-13",
+      "target": "#534:c-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-13",
+      "target": "#534:d-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-13",
+      "target": "#534:d-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-15",
+      "target": "#534:c-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-15",
+      "target": "#534:c-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-15",
+      "target": "#534:d-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-15",
+      "target": "#534:d-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-17",
+      "target": "#534:c-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-17",
+      "target": "#534:c-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-17",
+      "target": "#534:d-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-17",
+      "target": "#534:d-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-19",
+      "target": "#534:c-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-19",
+      "target": "#534:c-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-19",
+      "target": "#534:d-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-19",
+      "target": "#534:d-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-3",
+      "target": "#534:c-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-3",
+      "target": "#534:c-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-3",
+      "target": "#534:d-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-3",
+      "target": "#534:d-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-5",
+      "target": "#534:c-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-5",
+      "target": "#534:c-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-5",
+      "target": "#534:d-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-5",
+      "target": "#534:d-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-7",
+      "target": "#534:c-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-7",
+      "target": "#534:c-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-7",
+      "target": "#534:d-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-7",
+      "target": "#534:d-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-9",
+      "target": "#534:c-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-9",
+      "target": "#534:c-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-9",
+      "target": "#534:d-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:D-9",
+      "target": "#534:d-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-11",
+      "target": "#534:d-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-11",
+      "target": "#534:d-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-11",
+      "target": "#534:e-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-11",
+      "target": "#534:e-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-13",
+      "target": "#534:d-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-13",
+      "target": "#534:d-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-13",
+      "target": "#534:e-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-13",
+      "target": "#534:e-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-15",
+      "target": "#534:d-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-15",
+      "target": "#534:d-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-15",
+      "target": "#534:e-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-15",
+      "target": "#534:e-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-17",
+      "target": "#534:d-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-17",
+      "target": "#534:d-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-17",
+      "target": "#534:e-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-17",
+      "target": "#534:e-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-19",
+      "target": "#534:d-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-19",
+      "target": "#534:d-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-19",
+      "target": "#534:e-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-19",
+      "target": "#534:e-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-3",
+      "target": "#534:d-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-3",
+      "target": "#534:d-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-3",
+      "target": "#534:e-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-3",
+      "target": "#534:e-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-5",
+      "target": "#534:d-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-5",
+      "target": "#534:d-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-5",
+      "target": "#534:e-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-5",
+      "target": "#534:e-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-7",
+      "target": "#534:d-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-7",
+      "target": "#534:d-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-7",
+      "target": "#534:e-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-7",
+      "target": "#534:e-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-9",
+      "target": "#534:d-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-9",
+      "target": "#534:d-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-9",
+      "target": "#534:e-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:E-9",
+      "target": "#534:e-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-11",
+      "target": "#534:e-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-11",
+      "target": "#534:e-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-11",
+      "target": "#534:f-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-11",
+      "target": "#534:f-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-13",
+      "target": "#534:e-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-13",
+      "target": "#534:e-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-13",
+      "target": "#534:f-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-13",
+      "target": "#534:f-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-15",
+      "target": "#534:e-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-15",
+      "target": "#534:e-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-15",
+      "target": "#534:f-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-15",
+      "target": "#534:f-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-17",
+      "target": "#534:e-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-17",
+      "target": "#534:e-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-17",
+      "target": "#534:f-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-17",
+      "target": "#534:f-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-19",
+      "target": "#534:e-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-19",
+      "target": "#534:e-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-19",
+      "target": "#534:f-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-19",
+      "target": "#534:f-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-3",
+      "target": "#534:e-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-3",
+      "target": "#534:e-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-3",
+      "target": "#534:f-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-3",
+      "target": "#534:f-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-5",
+      "target": "#534:e-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-5",
+      "target": "#534:e-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-5",
+      "target": "#534:f-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-5",
+      "target": "#534:f-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-7",
+      "target": "#534:e-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-7",
+      "target": "#534:e-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-7",
+      "target": "#534:f-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-7",
+      "target": "#534:f-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-9",
+      "target": "#534:e-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-9",
+      "target": "#534:e-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-9",
+      "target": "#534:f-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:F-9",
+      "target": "#534:f-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-11",
+      "target": "#534:f-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-11",
+      "target": "#534:f-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-11",
+      "target": "#534:g-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-11",
+      "target": "#534:g-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-13",
+      "target": "#534:f-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-13",
+      "target": "#534:f-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-13",
+      "target": "#534:g-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-13",
+      "target": "#534:g-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-15",
+      "target": "#534:f-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-15",
+      "target": "#534:f-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-15",
+      "target": "#534:g-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-15",
+      "target": "#534:g-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-17",
+      "target": "#534:f-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-17",
+      "target": "#534:f-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-17",
+      "target": "#534:g-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-17",
+      "target": "#534:g-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-19",
+      "target": "#534:f-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-19",
+      "target": "#534:f-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-19",
+      "target": "#534:g-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-19",
+      "target": "#534:g-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-3",
+      "target": "#534:f-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-3",
+      "target": "#534:f-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-3",
+      "target": "#534:g-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-3",
+      "target": "#534:g-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-5",
+      "target": "#534:f-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-5",
+      "target": "#534:f-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-5",
+      "target": "#534:g-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-5",
+      "target": "#534:g-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-7",
+      "target": "#534:f-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-7",
+      "target": "#534:f-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-7",
+      "target": "#534:g-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-7",
+      "target": "#534:g-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-9",
+      "target": "#534:f-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-9",
+      "target": "#534:f-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-9",
+      "target": "#534:g-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:G-9",
+      "target": "#534:g-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-11",
+      "target": "#534:g-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-11",
+      "target": "#534:g-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-11",
+      "target": "#534:h-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-11",
+      "target": "#534:h-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-13",
+      "target": "#534:g-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-13",
+      "target": "#534:g-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-13",
+      "target": "#534:h-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-13",
+      "target": "#534:h-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-15",
+      "target": "#534:g-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-15",
+      "target": "#534:g-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-15",
+      "target": "#534:h-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-15",
+      "target": "#534:h-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-17",
+      "target": "#534:g-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-17",
+      "target": "#534:g-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-17",
+      "target": "#534:h-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-17",
+      "target": "#534:h-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-19",
+      "target": "#534:g-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-19",
+      "target": "#534:g-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-19",
+      "target": "#534:h-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-19",
+      "target": "#534:h-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-3",
+      "target": "#534:g-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-3",
+      "target": "#534:g-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-3",
+      "target": "#534:h-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-3",
+      "target": "#534:h-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-5",
+      "target": "#534:g-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-5",
+      "target": "#534:g-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-5",
+      "target": "#534:h-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-5",
+      "target": "#534:h-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-7",
+      "target": "#534:g-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-7",
+      "target": "#534:g-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-7",
+      "target": "#534:h-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-7",
+      "target": "#534:h-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-9",
+      "target": "#534:g-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-9",
+      "target": "#534:g-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-9",
+      "target": "#534:h-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:H-9",
+      "target": "#534:h-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-11",
+      "target": "#534:h-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-11",
+      "target": "#534:h-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-11",
+      "target": "#534:i-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-11",
+      "target": "#534:i-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-13",
+      "target": "#534:h-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-13",
+      "target": "#534:h-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-13",
+      "target": "#534:i-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-13",
+      "target": "#534:i-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-15",
+      "target": "#534:h-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-15",
+      "target": "#534:h-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-15",
+      "target": "#534:i-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-15",
+      "target": "#534:i-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-17",
+      "target": "#534:h-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-17",
+      "target": "#534:h-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-17",
+      "target": "#534:i-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-17",
+      "target": "#534:i-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-19",
+      "target": "#534:h-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-19",
+      "target": "#534:h-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-19",
+      "target": "#534:i-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-19",
+      "target": "#534:i-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-3",
+      "target": "#534:h-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-3",
+      "target": "#534:h-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-3",
+      "target": "#534:i-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-3",
+      "target": "#534:i-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-5",
+      "target": "#534:h-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-5",
+      "target": "#534:h-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-5",
+      "target": "#534:i-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-5",
+      "target": "#534:i-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-7",
+      "target": "#534:h-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-7",
+      "target": "#534:h-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-7",
+      "target": "#534:i-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-7",
+      "target": "#534:i-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-9",
+      "target": "#534:h-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-9",
+      "target": "#534:h-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-9",
+      "target": "#534:i-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:I-9",
+      "target": "#534:i-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-11",
+      "target": "#534:i-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-11",
+      "target": "#534:i-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-11",
+      "target": "#534:j-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-11",
+      "target": "#534:j-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-13",
+      "target": "#534:i-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-13",
+      "target": "#534:i-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-13",
+      "target": "#534:j-12",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-13",
+      "target": "#534:j-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-15",
+      "target": "#534:i-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-15",
+      "target": "#534:i-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-15",
+      "target": "#534:j-14",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-15",
+      "target": "#534:j-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-17",
+      "target": "#534:i-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-17",
+      "target": "#534:i-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-17",
+      "target": "#534:j-16",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-17",
+      "target": "#534:j-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-19",
+      "target": "#534:i-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-19",
+      "target": "#534:i-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-19",
+      "target": "#534:j-18",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-19",
+      "target": "#534:j-20",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-3",
+      "target": "#534:i-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-3",
+      "target": "#534:i-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-3",
+      "target": "#534:j-2",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-3",
+      "target": "#534:j-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-5",
+      "target": "#534:i-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-5",
+      "target": "#534:i-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-5",
+      "target": "#534:j-4",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-5",
+      "target": "#534:j-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-7",
+      "target": "#534:i-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-7",
+      "target": "#534:i-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-7",
+      "target": "#534:j-6",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-7",
+      "target": "#534:j-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-9",
+      "target": "#534:i-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-9",
+      "target": "#534:i-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-9",
+      "target": "#534:j-10",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:J-9",
+      "target": "#534:j-8",
+      "weight": 70.711
+    },
+    {
+      "source": "#534:A-1",
+      "target": "#534:A-3",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:A-1",
+      "target": "#534:B-1",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:A-11",
+      "target": "#534:B-11",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:A-13",
+      "target": "#534:B-13",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:A-15",
+      "target": "#534:B-15",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:A-17",
+      "target": "#534:B-17",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:A-19",
+      "target": "#534:A-21",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:A-19",
+      "target": "#534:B-19",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:A-21",
+      "target": "#534:B-21",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:A-3",
+      "target": "#534:B-3",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:A-5",
+      "target": "#534:B-5",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:A-7",
+      "target": "#534:B-7",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:A-9",
+      "target": "#534:B-9",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:B-1",
+      "target": "#534:B-3",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:B-19",
+      "target": "#534:B-21",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:C-1",
+      "target": "#534:C-3",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:C-19",
+      "target": "#534:C-21",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:D-1",
+      "target": "#534:D-3",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:D-19",
+      "target": "#534:D-21",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:E-1",
+      "target": "#534:E-3",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:E-19",
+      "target": "#534:E-21",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:F-1",
+      "target": "#534:F-3",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:F-19",
+      "target": "#534:F-21",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:G-1",
+      "target": "#534:G-3",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:G-19",
+      "target": "#534:G-21",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:H-1",
+      "target": "#534:H-3",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:H-19",
+      "target": "#534:H-21",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:I-1",
+      "target": "#534:I-3",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:I-19",
+      "target": "#534:I-21",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:J-1",
+      "target": "#534:J-3",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:J-1",
+      "target": "#534:K-1",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:J-11",
+      "target": "#534:K-11",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:J-13",
+      "target": "#534:K-13",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:J-15",
+      "target": "#534:K-15",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:J-17",
+      "target": "#534:K-17",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:J-19",
+      "target": "#534:J-21",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:J-19",
+      "target": "#534:K-19",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:J-21",
+      "target": "#534:K-21",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:J-3",
+      "target": "#534:K-3",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:J-5",
+      "target": "#534:K-5",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:J-7",
+      "target": "#534:K-7",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:J-9",
+      "target": "#534:K-9",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:K-1",
+      "target": "#534:K-3",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:K-19",
+      "target": "#534:K-21",
+      "weight": 79.0
+    },
+    {
+      "source": "#534:A-11",
+      "target": "#534:A-13",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:A-11",
+      "target": "#534:A-9",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:A-13",
+      "target": "#534:A-15",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:A-15",
+      "target": "#534:A-17",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:A-17",
+      "target": "#534:A-19",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:A-3",
+      "target": "#534:A-5",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:A-5",
+      "target": "#534:A-7",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:A-7",
+      "target": "#534:A-9",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:B-1",
+      "target": "#534:C-1",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:B-11",
+      "target": "#534:B-13",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:B-15",
+      "target": "#534:B-17",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:B-21",
+      "target": "#534:C-21",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:B-5",
+      "target": "#534:B-7",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:B-9",
+      "target": "#534:C-9",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:C-1",
+      "target": "#534:D-1",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:C-11",
+      "target": "#534:C-13",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:C-11",
+      "target": "#534:C-9",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:C-13",
+      "target": "#534:C-15",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:C-15",
+      "target": "#534:C-17",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:C-17",
+      "target": "#534:C-19",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:C-21",
+      "target": "#534:D-21",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:C-3",
+      "target": "#534:C-5",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:C-5",
+      "target": "#534:C-7",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:C-7",
+      "target": "#534:D-7",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:D-1",
+      "target": "#534:E-1",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:D-11",
+      "target": "#534:D-13",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:D-11",
+      "target": "#534:D-9",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:D-13",
+      "target": "#534:D-15",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:D-15",
+      "target": "#534:D-17",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:D-17",
+      "target": "#534:D-19",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:D-21",
+      "target": "#534:E-21",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:D-3",
+      "target": "#534:D-5",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:D-5",
+      "target": "#534:D-7",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:D-9",
+      "target": "#534:E-9",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:E-1",
+      "target": "#534:F-1",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:E-11",
+      "target": "#534:E-13",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:E-11",
+      "target": "#534:E-9",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:E-13",
+      "target": "#534:E-15",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:E-15",
+      "target": "#534:E-17",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:E-17",
+      "target": "#534:E-19",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:E-21",
+      "target": "#534:F-21",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:E-3",
+      "target": "#534:E-5",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:E-5",
+      "target": "#534:E-7",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:E-7",
+      "target": "#534:F-7",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:F-1",
+      "target": "#534:G-1",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:F-11",
+      "target": "#534:F-13",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:F-11",
+      "target": "#534:F-9",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:F-13",
+      "target": "#534:F-15",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:F-15",
+      "target": "#534:F-17",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:F-17",
+      "target": "#534:F-19",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:F-21",
+      "target": "#534:G-21",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:F-3",
+      "target": "#534:F-5",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:F-5",
+      "target": "#534:F-7",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:F-9",
+      "target": "#534:G-9",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:G-1",
+      "target": "#534:H-1",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:G-11",
+      "target": "#534:G-13",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:G-11",
+      "target": "#534:G-9",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:G-13",
+      "target": "#534:G-15",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:G-15",
+      "target": "#534:G-17",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:G-17",
+      "target": "#534:G-19",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:G-21",
+      "target": "#534:H-21",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:G-3",
+      "target": "#534:G-5",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:G-5",
+      "target": "#534:G-7",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:G-7",
+      "target": "#534:H-7",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:H-1",
+      "target": "#534:I-1",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:H-11",
+      "target": "#534:H-13",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:H-11",
+      "target": "#534:H-9",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:H-13",
+      "target": "#534:H-15",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:H-15",
+      "target": "#534:H-17",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:H-17",
+      "target": "#534:H-19",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:H-21",
+      "target": "#534:I-21",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:H-3",
+      "target": "#534:H-5",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:H-5",
+      "target": "#534:H-7",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:H-9",
+      "target": "#534:I-9",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:I-1",
+      "target": "#534:J-1",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:I-11",
+      "target": "#534:I-13",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:I-11",
+      "target": "#534:I-9",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:I-13",
+      "target": "#534:I-15",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:I-15",
+      "target": "#534:I-17",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:I-17",
+      "target": "#534:I-19",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:I-21",
+      "target": "#534:J-21",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:I-3",
+      "target": "#534:I-5",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:I-5",
+      "target": "#534:I-7",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:I-7",
+      "target": "#534:J-7",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:J-11",
+      "target": "#534:J-13",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:J-15",
+      "target": "#534:J-17",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:K-11",
+      "target": "#534:K-13",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:K-11",
+      "target": "#534:K-9",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:K-13",
+      "target": "#534:K-15",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:K-15",
+      "target": "#534:K-17",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:K-17",
+      "target": "#534:K-19",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:K-3",
+      "target": "#534:K-5",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:K-5",
+      "target": "#534:K-7",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:K-7",
+      "target": "#534:K-9",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:a-10",
+      "target": "#534:a-12",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:a-10",
+      "target": "#534:a-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:a-12",
+      "target": "#534:a-14",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:a-14",
+      "target": "#534:a-16",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:a-16",
+      "target": "#534:a-18",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:a-18",
+      "target": "#534:a-20",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:a-2",
+      "target": "#534:a-4",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:a-2",
+      "target": "#534:b-2",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:a-20",
+      "target": "#534:b-20",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:a-4",
+      "target": "#534:a-6",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:a-6",
+      "target": "#534:a-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:b-10",
+      "target": "#534:b-12",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:b-10",
+      "target": "#534:b-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:b-12",
+      "target": "#534:b-14",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:b-14",
+      "target": "#534:b-16",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:b-16",
+      "target": "#534:b-18",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:b-18",
+      "target": "#534:b-20",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:b-2",
+      "target": "#534:b-4",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:b-4",
+      "target": "#534:b-6",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:b-6",
+      "target": "#534:b-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:c-10",
+      "target": "#534:c-12",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:c-10",
+      "target": "#534:c-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:c-12",
+      "target": "#534:c-14",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:c-14",
+      "target": "#534:c-16",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:c-16",
+      "target": "#534:c-18",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:c-18",
+      "target": "#534:c-20",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:c-2",
+      "target": "#534:c-4",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:c-2",
+      "target": "#534:d-2",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:c-20",
+      "target": "#534:d-20",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:c-4",
+      "target": "#534:c-6",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:c-6",
+      "target": "#534:c-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:d-10",
+      "target": "#534:d-12",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:d-10",
+      "target": "#534:d-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:d-12",
+      "target": "#534:d-14",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:d-14",
+      "target": "#534:d-16",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:d-16",
+      "target": "#534:d-18",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:d-18",
+      "target": "#534:d-20",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:d-2",
+      "target": "#534:d-4",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:d-4",
+      "target": "#534:d-6",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:d-6",
+      "target": "#534:d-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:e-10",
+      "target": "#534:e-12",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:e-10",
+      "target": "#534:e-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:e-12",
+      "target": "#534:e-14",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:e-14",
+      "target": "#534:e-16",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:e-16",
+      "target": "#534:e-18",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:e-18",
+      "target": "#534:e-20",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:e-2",
+      "target": "#534:e-4",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:e-2",
+      "target": "#534:f-2",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:e-20",
+      "target": "#534:f-20",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:e-4",
+      "target": "#534:e-6",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:e-6",
+      "target": "#534:e-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:f-10",
+      "target": "#534:f-12",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:f-10",
+      "target": "#534:f-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:f-12",
+      "target": "#534:f-14",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:f-14",
+      "target": "#534:f-16",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:f-16",
+      "target": "#534:f-18",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:f-18",
+      "target": "#534:f-20",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:f-2",
+      "target": "#534:f-4",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:f-4",
+      "target": "#534:f-6",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:f-6",
+      "target": "#534:f-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:g-10",
+      "target": "#534:g-12",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:g-10",
+      "target": "#534:g-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:g-12",
+      "target": "#534:g-14",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:g-14",
+      "target": "#534:g-16",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:g-16",
+      "target": "#534:g-18",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:g-18",
+      "target": "#534:g-20",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:g-2",
+      "target": "#534:g-4",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:g-2",
+      "target": "#534:h-2",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:g-20",
+      "target": "#534:h-20",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:g-4",
+      "target": "#534:g-6",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:g-6",
+      "target": "#534:g-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:h-10",
+      "target": "#534:h-12",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:h-10",
+      "target": "#534:h-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:h-12",
+      "target": "#534:h-14",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:h-14",
+      "target": "#534:h-16",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:h-16",
+      "target": "#534:h-18",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:h-18",
+      "target": "#534:h-20",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:h-2",
+      "target": "#534:h-4",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:h-4",
+      "target": "#534:h-6",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:h-6",
+      "target": "#534:h-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:i-10",
+      "target": "#534:i-12",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:i-10",
+      "target": "#534:i-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:i-12",
+      "target": "#534:i-14",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:i-14",
+      "target": "#534:i-16",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:i-16",
+      "target": "#534:i-18",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:i-18",
+      "target": "#534:i-20",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:i-2",
+      "target": "#534:i-4",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:i-2",
+      "target": "#534:j-2",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:i-20",
+      "target": "#534:j-20",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:i-4",
+      "target": "#534:i-6",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:i-6",
+      "target": "#534:i-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:j-10",
+      "target": "#534:j-12",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:j-10",
+      "target": "#534:j-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:j-12",
+      "target": "#534:j-14",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:j-14",
+      "target": "#534:j-16",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:j-16",
+      "target": "#534:j-18",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:j-18",
+      "target": "#534:j-20",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:j-2",
+      "target": "#534:j-4",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:j-4",
+      "target": "#534:j-6",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:j-6",
+      "target": "#534:j-8",
+      "weight": 100.0
+    },
+    {
+      "source": "#534:A-19",
+      "target": "#534:B-21",
+      "weight": 111.723
+    },
+    {
+      "source": "#534:A-3",
+      "target": "#534:B-1",
+      "weight": 111.723
+    },
+    {
+      "source": "#534:J-1",
+      "target": "#534:K-3",
+      "weight": 111.723
+    },
+    {
+      "source": "#534:J-21",
+      "target": "#534:K-19",
+      "weight": 111.723
     }
   ],
   "connected_components": [
     [
-      "SAMPLE-A1",
-      "SAMPLE-B1",
-      "SAMPLE-B2",
-      "SAMPLE-C1",
-      "SAMPLE-C2",
-      "SAMPLE-D1"
-    ],
-    [
-      "SAMPLE-Z1"
+      "#534:A-1",
+      "#534:A-11",
+      "#534:A-13",
+      "#534:A-15",
+      "#534:A-17",
+      "#534:A-19",
+      "#534:A-21",
+      "#534:A-3",
+      "#534:A-5",
+      "#534:A-7",
+      "#534:A-9",
+      "#534:B-1",
+      "#534:B-11",
+      "#534:B-13",
+      "#534:B-15",
+      "#534:B-17",
+      "#534:B-19",
+      "#534:B-21",
+      "#534:B-3",
+      "#534:B-5",
+      "#534:B-7",
+      "#534:B-9",
+      "#534:C-1",
+      "#534:C-11",
+      "#534:C-13",
+      "#534:C-15",
+      "#534:C-17",
+      "#534:C-19",
+      "#534:C-21",
+      "#534:C-3",
+      "#534:C-5",
+      "#534:C-7",
+      "#534:C-9",
+      "#534:D-1",
+      "#534:D-11",
+      "#534:D-13",
+      "#534:D-15",
+      "#534:D-17",
+      "#534:D-19",
+      "#534:D-21",
+      "#534:D-3",
+      "#534:D-5",
+      "#534:D-7",
+      "#534:D-9",
+      "#534:E-1",
+      "#534:E-11",
+      "#534:E-13",
+      "#534:E-15",
+      "#534:E-17",
+      "#534:E-19",
+      "#534:E-21",
+      "#534:E-3",
+      "#534:E-5",
+      "#534:E-7",
+      "#534:E-9",
+      "#534:F-1",
+      "#534:F-11",
+      "#534:F-13",
+      "#534:F-15",
+      "#534:F-17",
+      "#534:F-19",
+      "#534:F-21",
+      "#534:F-3",
+      "#534:F-5",
+      "#534:F-7",
+      "#534:F-9",
+      "#534:G-1",
+      "#534:G-11",
+      "#534:G-13",
+      "#534:G-15",
+      "#534:G-17",
+      "#534:G-19",
+      "#534:G-21",
+      "#534:G-3",
+      "#534:G-5",
+      "#534:G-7",
+      "#534:G-9",
+      "#534:H-1",
+      "#534:H-11",
+      "#534:H-13",
+      "#534:H-15",
+      "#534:H-17",
+      "#534:H-19",
+      "#534:H-21",
+      "#534:H-3",
+      "#534:H-5",
+      "#534:H-7",
+      "#534:H-9",
+      "#534:I-1",
+      "#534:I-11",
+      "#534:I-13",
+      "#534:I-15",
+      "#534:I-17",
+      "#534:I-19",
+      "#534:I-21",
+      "#534:I-3",
+      "#534:I-5",
+      "#534:I-7",
+      "#534:I-9",
+      "#534:J-1",
+      "#534:J-11",
+      "#534:J-13",
+      "#534:J-15",
+      "#534:J-17",
+      "#534:J-19",
+      "#534:J-21",
+      "#534:J-3",
+      "#534:J-5",
+      "#534:J-7",
+      "#534:J-9",
+      "#534:K-1",
+      "#534:K-11",
+      "#534:K-13",
+      "#534:K-15",
+      "#534:K-17",
+      "#534:K-19",
+      "#534:K-21",
+      "#534:K-3",
+      "#534:K-5",
+      "#534:K-7",
+      "#534:K-9",
+      "#534:a-10",
+      "#534:a-12",
+      "#534:a-14",
+      "#534:a-16",
+      "#534:a-18",
+      "#534:a-2",
+      "#534:a-20",
+      "#534:a-4",
+      "#534:a-6",
+      "#534:a-8",
+      "#534:b-10",
+      "#534:b-12",
+      "#534:b-14",
+      "#534:b-16",
+      "#534:b-18",
+      "#534:b-2",
+      "#534:b-20",
+      "#534:b-4",
+      "#534:b-6",
+      "#534:b-8",
+      "#534:c-10",
+      "#534:c-12",
+      "#534:c-14",
+      "#534:c-16",
+      "#534:c-18",
+      "#534:c-2",
+      "#534:c-20",
+      "#534:c-4",
+      "#534:c-6",
+      "#534:c-8",
+      "#534:d-10",
+      "#534:d-12",
+      "#534:d-14",
+      "#534:d-16",
+      "#534:d-18",
+      "#534:d-2",
+      "#534:d-20",
+      "#534:d-4",
+      "#534:d-6",
+      "#534:d-8",
+      "#534:e-10",
+      "#534:e-12",
+      "#534:e-14",
+      "#534:e-16",
+      "#534:e-18",
+      "#534:e-2",
+      "#534:e-20",
+      "#534:e-4",
+      "#534:e-6",
+      "#534:e-8",
+      "#534:f-10",
+      "#534:f-12",
+      "#534:f-14",
+      "#534:f-16",
+      "#534:f-18",
+      "#534:f-2",
+      "#534:f-20",
+      "#534:f-4",
+      "#534:f-6",
+      "#534:f-8",
+      "#534:g-10",
+      "#534:g-12",
+      "#534:g-14",
+      "#534:g-16",
+      "#534:g-18",
+      "#534:g-2",
+      "#534:g-20",
+      "#534:g-4",
+      "#534:g-6",
+      "#534:g-8",
+      "#534:h-10",
+      "#534:h-12",
+      "#534:h-14",
+      "#534:h-16",
+      "#534:h-18",
+      "#534:h-2",
+      "#534:h-20",
+      "#534:h-4",
+      "#534:h-6",
+      "#534:h-8",
+      "#534:i-10",
+      "#534:i-12",
+      "#534:i-14",
+      "#534:i-16",
+      "#534:i-18",
+      "#534:i-2",
+      "#534:i-20",
+      "#534:i-4",
+      "#534:i-6",
+      "#534:i-8",
+      "#534:j-10",
+      "#534:j-12",
+      "#534:j-14",
+      "#534:j-16",
+      "#534:j-18",
+      "#534:j-2",
+      "#534:j-20",
+      "#534:j-4",
+      "#534:j-6",
+      "#534:j-8"
     ]
   ],
-  "articulation_points": [
-    "SAMPLE-B1",
-    "SAMPLE-B2",
-    "SAMPLE-C1"
-  ],
-  "critical_nodes": [
-    {
-      "choke_id": "CHOKE-01",
-      "node_id": "SAMPLE-B1",
-      "name": "Sample Junction B",
-      "owner": "JDX",
-      "type": "stronghold",
-      "importance": 8.0,
-      "degree": 3,
-      "betweenness": 0.5333,
-      "score": 21.333,
-      "reasons": [
-        "removal_disconnects_graph",
-        "major_groups_split",
-        "major_node_isolated"
-      ],
-      "affected_major_groups": [
-        [
-          "SAMPLE-A1"
-        ],
-        [
-          "SAMPLE-D1"
-        ],
-        [
-          "SAMPLE-C2"
-        ]
-      ],
-      "components_after_removal": [
-        [
-          "SAMPLE-A1"
-        ],
-        [
-          "SAMPLE-C1",
-          "SAMPLE-D1"
-        ],
-        [
-          "SAMPLE-B2",
-          "SAMPLE-C2"
-        ],
-        [
-          "SAMPLE-Z1"
-        ]
-      ]
-    },
-    {
-      "choke_id": "CHOKE-02",
-      "node_id": "SAMPLE-C1",
-      "name": "Sample Forward C",
-      "owner": "476C",
-      "type": "fishery",
-      "importance": 6.0,
-      "degree": 2,
-      "betweenness": 0.2667,
-      "score": 15.667,
-      "reasons": [
-        "removal_disconnects_graph",
-        "major_groups_split",
-        "major_node_isolated",
-        "limited_route_degree"
-      ],
-      "affected_major_groups": [
-        [
-          "SAMPLE-A1",
-          "SAMPLE-B1",
-          "SAMPLE-C2"
-        ],
-        [
-          "SAMPLE-D1"
-        ]
-      ],
-      "components_after_removal": [
-        [
-          "SAMPLE-A1",
-          "SAMPLE-B1",
-          "SAMPLE-B2",
-          "SAMPLE-C2"
-        ],
-        [
-          "SAMPLE-D1"
-        ],
-        [
-          "SAMPLE-Z1"
-        ]
-      ]
-    },
-    {
-      "choke_id": "CHOKE-03",
-      "node_id": "SAMPLE-B2",
-      "name": "Sample Side Route",
-      "owner": "509",
-      "type": "fishery",
-      "importance": 4.0,
-      "degree": 2,
-      "betweenness": 0.2667,
-      "score": 13.667,
-      "reasons": [
-        "removal_disconnects_graph",
-        "major_groups_split",
-        "major_node_isolated",
-        "limited_route_degree"
-      ],
-      "affected_major_groups": [
-        [
-          "SAMPLE-A1",
-          "SAMPLE-B1",
-          "SAMPLE-D1"
-        ],
-        [
-          "SAMPLE-C2"
-        ]
-      ],
-      "components_after_removal": [
-        [
-          "SAMPLE-A1",
-          "SAMPLE-B1",
-          "SAMPLE-C1",
-          "SAMPLE-D1"
-        ],
-        [
-          "SAMPLE-C2"
-        ],
-        [
-          "SAMPLE-Z1"
-        ]
-      ]
-    }
-  ],
-  "isolated_nodes": [
-    "SAMPLE-Z1"
-  ],
+  "articulation_points": [],
+  "critical_nodes": [],
+  "isolated_nodes": [],
   "shortest_path": {
-    "from": "SAMPLE-A1",
-    "to": "SAMPLE-D1",
+    "from": "#534:A-7",
+    "to": "#534:D-11",
     "path": [
-      "SAMPLE-A1",
-      "SAMPLE-B1",
-      "SAMPLE-C1",
-      "SAMPLE-D1"
+      "#534:A-7",
+      "#534:B-7",
+      "#534:b-8",
+      "#534:C-9",
+      "#534:c-10",
+      "#534:D-11"
     ]
   },
   "degree_centrality": {
-    "SAMPLE-A1": 0.1667,
-    "SAMPLE-B1": 0.5,
-    "SAMPLE-B2": 0.3333,
-    "SAMPLE-C1": 0.3333,
-    "SAMPLE-C2": 0.1667,
-    "SAMPLE-D1": 0.1667,
-    "SAMPLE-Z1": 0.0
+    "#534:A-1": 0.0136,
+    "#534:A-11": 0.0227,
+    "#534:A-13": 0.0227,
+    "#534:A-15": 0.0227,
+    "#534:A-17": 0.0227,
+    "#534:A-19": 0.0273,
+    "#534:A-21": 0.0136,
+    "#534:A-3": 0.0273,
+    "#534:A-5": 0.0227,
+    "#534:A-7": 0.0227,
+    "#534:A-9": 0.0227,
+    "#534:B-1": 0.0273,
+    "#534:B-11": 0.0273,
+    "#534:B-13": 0.0273,
+    "#534:B-15": 0.0273,
+    "#534:B-17": 0.0273,
+    "#534:B-19": 0.0273,
+    "#534:B-21": 0.0273,
+    "#534:B-3": 0.0273,
+    "#534:B-5": 0.0273,
+    "#534:B-7": 0.0273,
+    "#534:B-9": 0.0273,
+    "#534:C-1": 0.0227,
+    "#534:C-11": 0.0273,
+    "#534:C-13": 0.0273,
+    "#534:C-15": 0.0273,
+    "#534:C-17": 0.0273,
+    "#534:C-19": 0.0273,
+    "#534:C-21": 0.0227,
+    "#534:C-3": 0.0273,
+    "#534:C-5": 0.0273,
+    "#534:C-7": 0.0273,
+    "#534:C-9": 0.0273,
+    "#534:D-1": 0.0227,
+    "#534:D-11": 0.0273,
+    "#534:D-13": 0.0273,
+    "#534:D-15": 0.0273,
+    "#534:D-17": 0.0273,
+    "#534:D-19": 0.0273,
+    "#534:D-21": 0.0227,
+    "#534:D-3": 0.0273,
+    "#534:D-5": 0.0273,
+    "#534:D-7": 0.0273,
+    "#534:D-9": 0.0273,
+    "#534:E-1": 0.0227,
+    "#534:E-11": 0.0273,
+    "#534:E-13": 0.0273,
+    "#534:E-15": 0.0273,
+    "#534:E-17": 0.0273,
+    "#534:E-19": 0.0273,
+    "#534:E-21": 0.0227,
+    "#534:E-3": 0.0273,
+    "#534:E-5": 0.0273,
+    "#534:E-7": 0.0273,
+    "#534:E-9": 0.0273,
+    "#534:F-1": 0.0227,
+    "#534:F-11": 0.0273,
+    "#534:F-13": 0.0273,
+    "#534:F-15": 0.0273,
+    "#534:F-17": 0.0273,
+    "#534:F-19": 0.0273,
+    "#534:F-21": 0.0227,
+    "#534:F-3": 0.0273,
+    "#534:F-5": 0.0273,
+    "#534:F-7": 0.0273,
+    "#534:F-9": 0.0273,
+    "#534:G-1": 0.0227,
+    "#534:G-11": 0.0273,
+    "#534:G-13": 0.0273,
+    "#534:G-15": 0.0273,
+    "#534:G-17": 0.0273,
+    "#534:G-19": 0.0273,
+    "#534:G-21": 0.0227,
+    "#534:G-3": 0.0273,
+    "#534:G-5": 0.0273,
+    "#534:G-7": 0.0273,
+    "#534:G-9": 0.0273,
+    "#534:H-1": 0.0227,
+    "#534:H-11": 0.0273,
+    "#534:H-13": 0.0273,
+    "#534:H-15": 0.0273,
+    "#534:H-17": 0.0273,
+    "#534:H-19": 0.0273,
+    "#534:H-21": 0.0227,
+    "#534:H-3": 0.0273,
+    "#534:H-5": 0.0273,
+    "#534:H-7": 0.0273,
+    "#534:H-9": 0.0273,
+    "#534:I-1": 0.0227,
+    "#534:I-11": 0.0273,
+    "#534:I-13": 0.0273,
+    "#534:I-15": 0.0273,
+    "#534:I-17": 0.0273,
+    "#534:I-19": 0.0273,
+    "#534:I-21": 0.0227,
+    "#534:I-3": 0.0273,
+    "#534:I-5": 0.0273,
+    "#534:I-7": 0.0273,
+    "#534:I-9": 0.0273,
+    "#534:J-1": 0.0273,
+    "#534:J-11": 0.0273,
+    "#534:J-13": 0.0273,
+    "#534:J-15": 0.0273,
+    "#534:J-17": 0.0273,
+    "#534:J-19": 0.0273,
+    "#534:J-21": 0.0273,
+    "#534:J-3": 0.0273,
+    "#534:J-5": 0.0227,
+    "#534:J-7": 0.0273,
+    "#534:J-9": 0.0227,
+    "#534:K-1": 0.0136,
+    "#534:K-11": 0.0227,
+    "#534:K-13": 0.0227,
+    "#534:K-15": 0.0227,
+    "#534:K-17": 0.0227,
+    "#534:K-19": 0.0273,
+    "#534:K-21": 0.0136,
+    "#534:K-3": 0.0273,
+    "#534:K-5": 0.0227,
+    "#534:K-7": 0.0227,
+    "#534:K-9": 0.0227,
+    "#534:a-10": 0.0273,
+    "#534:a-12": 0.0273,
+    "#534:a-14": 0.0273,
+    "#534:a-16": 0.0273,
+    "#534:a-18": 0.0273,
+    "#534:a-2": 0.0273,
+    "#534:a-20": 0.0273,
+    "#534:a-4": 0.0273,
+    "#534:a-6": 0.0273,
+    "#534:a-8": 0.0273,
+    "#534:b-10": 0.0273,
+    "#534:b-12": 0.0273,
+    "#534:b-14": 0.0273,
+    "#534:b-16": 0.0273,
+    "#534:b-18": 0.0273,
+    "#534:b-2": 0.0273,
+    "#534:b-20": 0.0273,
+    "#534:b-4": 0.0273,
+    "#534:b-6": 0.0273,
+    "#534:b-8": 0.0273,
+    "#534:c-10": 0.0273,
+    "#534:c-12": 0.0273,
+    "#534:c-14": 0.0273,
+    "#534:c-16": 0.0273,
+    "#534:c-18": 0.0273,
+    "#534:c-2": 0.0273,
+    "#534:c-20": 0.0273,
+    "#534:c-4": 0.0273,
+    "#534:c-6": 0.0273,
+    "#534:c-8": 0.0273,
+    "#534:d-10": 0.0273,
+    "#534:d-12": 0.0273,
+    "#534:d-14": 0.0273,
+    "#534:d-16": 0.0273,
+    "#534:d-18": 0.0273,
+    "#534:d-2": 0.0273,
+    "#534:d-20": 0.0273,
+    "#534:d-4": 0.0273,
+    "#534:d-6": 0.0273,
+    "#534:d-8": 0.0273,
+    "#534:e-10": 0.0273,
+    "#534:e-12": 0.0273,
+    "#534:e-14": 0.0273,
+    "#534:e-16": 0.0273,
+    "#534:e-18": 0.0273,
+    "#534:e-2": 0.0273,
+    "#534:e-20": 0.0273,
+    "#534:e-4": 0.0273,
+    "#534:e-6": 0.0273,
+    "#534:e-8": 0.0273,
+    "#534:f-10": 0.0273,
+    "#534:f-12": 0.0273,
+    "#534:f-14": 0.0273,
+    "#534:f-16": 0.0273,
+    "#534:f-18": 0.0273,
+    "#534:f-2": 0.0273,
+    "#534:f-20": 0.0273,
+    "#534:f-4": 0.0273,
+    "#534:f-6": 0.0273,
+    "#534:f-8": 0.0273,
+    "#534:g-10": 0.0273,
+    "#534:g-12": 0.0273,
+    "#534:g-14": 0.0273,
+    "#534:g-16": 0.0273,
+    "#534:g-18": 0.0273,
+    "#534:g-2": 0.0273,
+    "#534:g-20": 0.0273,
+    "#534:g-4": 0.0273,
+    "#534:g-6": 0.0273,
+    "#534:g-8": 0.0273,
+    "#534:h-10": 0.0273,
+    "#534:h-12": 0.0273,
+    "#534:h-14": 0.0273,
+    "#534:h-16": 0.0273,
+    "#534:h-18": 0.0273,
+    "#534:h-2": 0.0273,
+    "#534:h-20": 0.0273,
+    "#534:h-4": 0.0273,
+    "#534:h-6": 0.0273,
+    "#534:h-8": 0.0273,
+    "#534:i-10": 0.0273,
+    "#534:i-12": 0.0273,
+    "#534:i-14": 0.0273,
+    "#534:i-16": 0.0273,
+    "#534:i-18": 0.0273,
+    "#534:i-2": 0.0273,
+    "#534:i-20": 0.0273,
+    "#534:i-4": 0.0273,
+    "#534:i-6": 0.0273,
+    "#534:i-8": 0.0273,
+    "#534:j-10": 0.0273,
+    "#534:j-12": 0.0273,
+    "#534:j-14": 0.0273,
+    "#534:j-16": 0.0273,
+    "#534:j-18": 0.0273,
+    "#534:j-2": 0.0273,
+    "#534:j-20": 0.0273,
+    "#534:j-4": 0.0273,
+    "#534:j-6": 0.0273,
+    "#534:j-8": 0.0273
   },
   "betweenness_centrality": {
-    "SAMPLE-A1": 0.0,
-    "SAMPLE-B1": 0.5333,
-    "SAMPLE-B2": 0.2667,
-    "SAMPLE-C1": 0.2667,
-    "SAMPLE-C2": 0.0,
-    "SAMPLE-D1": 0.0,
-    "SAMPLE-Z1": 0.0
+    "#534:A-1": 0.0,
+    "#534:A-11": 0.0055,
+    "#534:A-13": 0.0052,
+    "#534:A-15": 0.0046,
+    "#534:A-17": 0.0039,
+    "#534:A-19": 0.0041,
+    "#534:A-21": 0.0,
+    "#534:A-3": 0.0041,
+    "#534:A-5": 0.004,
+    "#534:A-7": 0.0046,
+    "#534:A-9": 0.0053,
+    "#534:B-1": 0.0055,
+    "#534:B-11": 0.0188,
+    "#534:B-13": 0.0199,
+    "#534:B-15": 0.0187,
+    "#534:B-17": 0.0177,
+    "#534:B-19": 0.0166,
+    "#534:B-21": 0.0056,
+    "#534:B-3": 0.0158,
+    "#534:B-5": 0.0182,
+    "#534:B-7": 0.019,
+    "#534:B-9": 0.0214,
+    "#534:C-1": 0.0194,
+    "#534:C-11": 0.0441,
+    "#534:C-13": 0.0378,
+    "#534:C-15": 0.0399,
+    "#534:C-17": 0.031,
+    "#534:C-19": 0.0221,
+    "#534:C-21": 0.0215,
+    "#534:C-3": 0.02,
+    "#534:C-5": 0.0256,
+    "#534:C-7": 0.0458,
+    "#534:C-9": 0.0465,
+    "#534:D-1": 0.0218,
+    "#534:D-11": 0.0462,
+    "#534:D-13": 0.0526,
+    "#534:D-15": 0.0425,
+    "#534:D-17": 0.0343,
+    "#534:D-19": 0.0245,
+    "#534:D-21": 0.0241,
+    "#534:D-3": 0.0184,
+    "#534:D-5": 0.0303,
+    "#534:D-7": 0.056,
+    "#534:D-9": 0.0813,
+    "#534:E-1": 0.0338,
+    "#534:E-11": 0.0617,
+    "#534:E-13": 0.0504,
+    "#534:E-15": 0.0461,
+    "#534:E-17": 0.0338,
+    "#534:E-19": 0.0279,
+    "#534:E-21": 0.043,
+    "#534:E-3": 0.023,
+    "#534:E-5": 0.0288,
+    "#534:E-7": 0.0639,
+    "#534:E-9": 0.0954,
+    "#534:F-1": 0.0289,
+    "#534:F-11": 0.0619,
+    "#534:F-13": 0.0532,
+    "#534:F-15": 0.0443,
+    "#534:F-17": 0.035,
+    "#534:F-19": 0.0283,
+    "#534:F-21": 0.0339,
+    "#534:F-3": 0.0213,
+    "#534:F-5": 0.0312,
+    "#534:F-7": 0.0654,
+    "#534:F-9": 0.1033,
+    "#534:G-1": 0.035,
+    "#534:G-11": 0.0553,
+    "#534:G-13": 0.0549,
+    "#534:G-15": 0.0436,
+    "#534:G-17": 0.0349,
+    "#534:G-19": 0.0275,
+    "#534:G-21": 0.043,
+    "#534:G-3": 0.0213,
+    "#534:G-5": 0.0291,
+    "#534:G-7": 0.0654,
+    "#534:G-9": 0.0979,
+    "#534:H-1": 0.0221,
+    "#534:H-11": 0.0559,
+    "#534:H-13": 0.046,
+    "#534:H-15": 0.0461,
+    "#534:H-17": 0.0326,
+    "#534:H-19": 0.0253,
+    "#534:H-21": 0.024,
+    "#534:H-3": 0.02,
+    "#534:H-5": 0.0274,
+    "#534:H-7": 0.0602,
+    "#534:H-9": 0.074,
+    "#534:I-1": 0.0203,
+    "#534:I-11": 0.0353,
+    "#534:I-13": 0.043,
+    "#534:I-15": 0.037,
+    "#534:I-17": 0.0326,
+    "#534:I-19": 0.0212,
+    "#534:I-21": 0.0218,
+    "#534:I-3": 0.0174,
+    "#534:I-5": 0.0305,
+    "#534:I-7": 0.041,
+    "#534:I-9": 0.0535,
+    "#534:J-1": 0.0057,
+    "#534:J-11": 0.0212,
+    "#534:J-13": 0.0187,
+    "#534:J-15": 0.0194,
+    "#534:J-17": 0.0173,
+    "#534:J-19": 0.017,
+    "#534:J-21": 0.0057,
+    "#534:J-3": 0.017,
+    "#534:J-5": 0.0153,
+    "#534:J-7": 0.0205,
+    "#534:J-9": 0.0177,
+    "#534:K-1": 0.0,
+    "#534:K-11": 0.0055,
+    "#534:K-13": 0.0052,
+    "#534:K-15": 0.0046,
+    "#534:K-17": 0.0039,
+    "#534:K-19": 0.0041,
+    "#534:K-21": 0.0,
+    "#534:K-3": 0.0041,
+    "#534:K-5": 0.0042,
+    "#534:K-7": 0.0047,
+    "#534:K-9": 0.0054,
+    "#534:a-10": 0.0129,
+    "#534:a-12": 0.0116,
+    "#534:a-14": 0.0125,
+    "#534:a-16": 0.0096,
+    "#534:a-18": 0.0086,
+    "#534:a-2": 0.0009,
+    "#534:a-20": 0.0009,
+    "#534:a-4": 0.0086,
+    "#534:a-6": 0.0097,
+    "#534:a-8": 0.0123,
+    "#534:b-10": 0.0342,
+    "#534:b-12": 0.0388,
+    "#534:b-14": 0.0351,
+    "#534:b-16": 0.0324,
+    "#534:b-18": 0.0258,
+    "#534:b-2": 0.0128,
+    "#534:b-20": 0.0135,
+    "#534:b-4": 0.0232,
+    "#534:b-6": 0.037,
+    "#534:b-8": 0.0372,
+    "#534:c-10": 0.0697,
+    "#534:c-12": 0.0437,
+    "#534:c-14": 0.0479,
+    "#534:c-16": 0.0367,
+    "#534:c-18": 0.027,
+    "#534:c-2": 0.0129,
+    "#534:c-20": 0.0176,
+    "#534:c-4": 0.0254,
+    "#534:c-6": 0.0315,
+    "#534:c-8": 0.0604,
+    "#534:d-10": 0.0486,
+    "#534:d-12": 0.0627,
+    "#534:d-14": 0.0471,
+    "#534:d-16": 0.0404,
+    "#534:d-18": 0.028,
+    "#534:d-2": 0.0202,
+    "#534:d-20": 0.0257,
+    "#534:d-4": 0.0209,
+    "#534:d-6": 0.054,
+    "#534:d-8": 0.066,
+    "#534:e-10": 0.1033,
+    "#534:e-12": 0.0517,
+    "#534:e-14": 0.0529,
+    "#534:e-16": 0.0384,
+    "#534:e-18": 0.03,
+    "#534:e-2": 0.0142,
+    "#534:e-20": 0.0261,
+    "#534:e-4": 0.0303,
+    "#534:e-6": 0.0316,
+    "#534:e-8": 0.0796,
+    "#534:f-10": 0.0524,
+    "#534:f-12": 0.0678,
+    "#534:f-14": 0.0466,
+    "#534:f-16": 0.0404,
+    "#534:f-18": 0.0295,
+    "#534:f-2": 0.0192,
+    "#534:f-20": 0.0262,
+    "#534:f-4": 0.0209,
+    "#534:f-6": 0.0561,
+    "#534:f-8": 0.0728,
+    "#534:g-10": 0.0903,
+    "#534:g-12": 0.0488,
+    "#534:g-14": 0.053,
+    "#534:g-16": 0.0379,
+    "#534:g-18": 0.0291,
+    "#534:g-2": 0.0154,
+    "#534:g-20": 0.0253,
+    "#534:g-4": 0.0276,
+    "#534:g-6": 0.031,
+    "#534:g-8": 0.0731,
+    "#534:h-10": 0.0421,
+    "#534:h-12": 0.0534,
+    "#534:h-14": 0.043,
+    "#534:h-16": 0.0394,
+    "#534:h-18": 0.0255,
+    "#534:h-2": 0.0142,
+    "#534:h-20": 0.0183,
+    "#534:h-4": 0.02,
+    "#534:h-6": 0.0505,
+    "#534:h-8": 0.0558,
+    "#534:i-10": 0.0456,
+    "#534:i-12": 0.0338,
+    "#534:i-14": 0.038,
+    "#534:i-16": 0.0307,
+    "#534:i-18": 0.027,
+    "#534:i-2": 0.0109,
+    "#534:i-20": 0.0127,
+    "#534:i-4": 0.0268,
+    "#534:i-6": 0.0289,
+    "#534:i-8": 0.0391,
+    "#534:j-10": 0.0129,
+    "#534:j-12": 0.0116,
+    "#534:j-14": 0.0126,
+    "#534:j-16": 0.0096,
+    "#534:j-18": 0.0086,
+    "#534:j-2": 0.0009,
+    "#534:j-20": 0.0009,
+    "#534:j-4": 0.0084,
+    "#534:j-6": 0.0108,
+    "#534:j-8": 0.0123
   }
 }

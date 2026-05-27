@@ -16,6 +16,7 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 
 - Added the MVP under `tools/invasion_strategy_os/`.
 - Added CSV and Google Sheets CSV-export loading.
+- Added `config.google_history_534.json` to read live `拠点履歴_座標` data from spreadsheet `＃534`.
 - Added node and edge structures with `id`, `name`, `type`, `owner`, `protect_until`, `x`, `y`, `importance`, `from`, `to`, and `weight`.
 - Added adjacency parsing from a node-table `adjacent` column.
 - Added JST protection-timer handling.
@@ -25,6 +26,7 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - Writes `sample_output/map.html` and `sample_output/state.json`.
 - Generated HTML is UTF-8 and uses local vis-network assets under `sample_output/lib/`.
 - The initial inline-script HTML produced a black screen in the Codex in-app browser; the local-asset output rendered correctly after reload.
+- The first live `#534` output contains 221 nodes, 642 provisional distance edges, 1 connected component, and 0 CHOKE nodes under the current edge model.
 
 ## 4. Timeline
 
@@ -47,6 +49,7 @@ The sample input is synthetic smoke-test data only. It is not a real LastWar boa
 - CHOKE output is graph-structural, so it must be checked against game rules, protection windows, alliance pact state, and actual attack eligibility.
 - Google Sheets private/API access may require later credential or connector work; this MVP supports CSV export first because it is simpler to update daily.
 - Browser verification over `file://` was blocked by the Codex browser safety policy, but the same output was verified through `http://127.0.0.1:8000/sample_output/map.html` in the in-app browser.
+- The current live graph uses distance-derived same-area edges because `拠点履歴_座標` does not yet expose explicit adjacency. This is a workflow test, not confirmed game-rule adjacency.
 
 ## 7. Recommended actions
 
