@@ -21,6 +21,12 @@ from pyvis.network import Network
 
 
 JST = ZoneInfo("Asia/Tokyo")
+CENTRAL_COORD_PREFIX = "\u4e2d\u592e"
+DEFAULT_FISHERY_TYPE = "\u6f01\u5834"
+DEFAULT_ALTAR_TYPE = "\u796d\u58c7"
+DEFAULT_CENTRAL_EMPTY_TYPE = "\u4e2d\u592e\u7a7a\u767d"
+DEFAULT_ANCESTRAL_TEMPLE_TYPE = "\u7956\u970a\u795e\u6bbf"
+CENTRAL_REFERENCE_EMPTY_COORDS = {(10, 10), (10, 11), (11, 10), (11, 11)}
 
 NODE_ALIASES = {
     "id": ["id", "node_id", "key", "キー", "ID", "拠点ID", "位置キー"],
@@ -181,8 +187,35 @@ def parse_coord_letter(value: str) -> str:
     return match.group(1) if match else ""
 
 
+def is_reference_central_fishery(row: int, col: int) -> bool:
+    if row < 1 or row > 20 or col < 1 or col > 20:
+        return False
+    if row in {1, 2, 3, 18, 19, 20}:
+        return True
+    if row in {4, 17}:
+        return col <= 4 or col >= 17
+    return col <= 3 or col >= 18
+
+
+def central_reference_type(coord: str, config: dict[str, Any]) -> str | None:
+    if not config.get("central_type_from_reference"):
+        return None
+    match = re.match(rf"^{CENTRAL_COORD_PREFIX}-(\d+)-(\d+)$", coord.strip())
+    if not match:
+        return None
+    row, col = (int(match.group(1)), int(match.group(2)))
+    if (row, col) in CENTRAL_REFERENCE_EMPTY_COORDS:
+        return str(config.get("central_empty_type", DEFAULT_CENTRAL_EMPTY_TYPE))
+    if is_reference_central_fishery(row, col):
+        return str(config.get("fishery_type", DEFAULT_FISHERY_TYPE))
+    return str(config.get("altar_type", DEFAULT_ALTAR_TYPE))
+
+
 def normalize_node_type(raw_type: str, coord: str, config: dict[str, Any]) -> str:
     node_type = raw_type or "unknown"
+    reference_type = central_reference_type(coord, config)
+    if reference_type:
+        return reference_type
     if not config.get("type_from_coord_case"):
         return node_type
     isolated_types = {str(value) for value in config.get("isolated_types", [])}
@@ -204,6 +237,44 @@ def apply_area_offset(x: float, y: float, area: str, config: dict[str, Any]) -> 
     if len(offset) != 2:
         raise ValueError(f"area_offsets for {area} must have exactly two numbers")
     return x + float(offset[0]), y + float(offset[1])
+
+
+def add_central_ancestral_temple_node(
+    nodes: dict[str, Node],
+    config: dict[str, Any],
+    importance_by_type: dict[str, float],
+    area_filter: set[str],
+    excluded_areas: set[str],
+) -> None:
+    if not config.get("central_ancestral_temple_node"):
+        return
+    area = str(config.get("central_area", CENTRAL_COORD_PREFIX))
+    if area_filter and area not in area_filter:
+        return
+    if area in excluded_areas:
+        return
+
+    local_xy = config.get("central_ancestral_temple_local_xy", [499, 499])
+    if len(local_xy) != 2:
+        raise ValueError("central_ancestral_temple_local_xy must have exactly two numbers")
+    node_type = str(config.get("ancestral_temple_type", DEFAULT_ANCESTRAL_TEMPLE_TYPE))
+    name = str(config.get("central_ancestral_temple_name", node_type))
+    node_id = str(config.get("central_ancestral_temple_id", f"{area}:{name}"))
+    x, y = apply_area_offset(float(local_xy[0]), float(local_xy[1]), area, config)
+    nodes[node_id] = Node(
+        id=node_id,
+        name=name,
+        type=node_type,
+        owner=str(config.get("central_ancestral_temple_owner", "unknown")),
+        protect_until=None,
+        x=x,
+        y=y,
+        importance=importance_by_type.get(node_type, float(config.get("central_ancestral_temple_importance", 10))),
+        area=area,
+        acquired_at=None,
+        status=str(config.get("central_ancestral_temple_status", "")),
+        memo="Synthetic 2x2 central node replacing Central-10-10, 10-11, 11-10, and 11-11.",
+    )
 
 
 def parse_optional_time(value: str | None, tz: ZoneInfo) -> datetime | None:
@@ -237,6 +308,7 @@ def load_nodes(rows: list[dict[str, str]], config: dict[str, Any]) -> tuple[dict
     adjacency_edges: list[Edge] = []
     area_filter = set(config.get("areas", []))
     excluded_areas = set(config.get("exclude_areas", []))
+    excluded_types = {str(value) for value in config.get("exclude_types", [])}
     importance_by_type = {str(key): float(value) for key, value in config.get("importance_by_type", {}).items()}
     for row_number, row in enumerate(rows, start=2):
         node_id = pick(row, NODE_ALIASES, "id")
@@ -249,6 +321,8 @@ def load_nodes(rows: list[dict[str, str]], config: dict[str, Any]) -> tuple[dict
             continue
         node_name = pick(row, NODE_ALIASES, "name", node_id) or node_id
         node_type = normalize_node_type(pick(row, NODE_ALIASES, "type", "unknown"), node_name, config)
+        if node_type in excluded_types:
+            continue
         local_x = parse_float(pick(row, NODE_ALIASES, "x"))
         local_y = parse_float(pick(row, NODE_ALIASES, "y"))
         x, y = apply_area_offset(local_x, local_y, area, config)
@@ -273,6 +347,7 @@ def load_nodes(rows: list[dict[str, str]], config: dict[str, Any]) -> tuple[dict
         nodes[node.id] = node
         for neighbor_id in split_neighbors(pick(row, NODE_ALIASES, "adjacent")):
             adjacency_edges.append(Edge(node.id, neighbor_id, 1.0))
+    add_central_ancestral_temple_node(nodes, config, importance_by_type, area_filter, excluded_areas)
     return nodes, adjacency_edges
 
 

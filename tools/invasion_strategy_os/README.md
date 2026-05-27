@@ -116,6 +116,31 @@ Current rule assumptions:
 - Fishery nodes are displayed larger than city nodes in this view.
 - The full-map view uses smaller nodes and labels so city/fishery spacing is easier to read.
 - Clicking a node opens a fixed information panel with management-table fields: position key, type, alliance, status, acquisition time, protection time, and memo.
+- Central-area facility types are corrected from the Cpt Hedgehog Season 6 reference map pattern: outer central cells are fishery nodes, inner central cells are altar nodes, and the 2x2 center is represented as one large `祖霊神殿` node.
+- Central fishery nodes are connected by distance edges. Central altar nodes are displayed but isolated because altar ownership does not create adjacent movement.
+
+## Run The Interactive Local Map
+
+Use this when you want a cpt-hedge-style workflow with search, node selection, sheet refresh, and local manual edits.
+
+```powershell
+.\.venv\Scripts\python.exe tools\invasion_strategy_os\interactive_server.py --port 8010
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8010/
+```
+
+Interactive behavior:
+
+- Reads `sample_output/state.json` in the browser.
+- `Refresh Sheet` regenerates `sample_output/map.html` and `sample_output/state.json` from `config.google_full_map.json`.
+- Node edits are saved locally to `data/invasion_strategy_overrides.json`.
+- Manual edits override browser display after every refresh, so spreadsheet updates and local commander corrections can coexist.
+
+Current limitation: local edits do not write back to Google Sheets. Treat `data/invasion_strategy_overrides.json` as the safe editable layer until a Google Sheets write-back policy is decided.
 
 ## Tactical Use
 

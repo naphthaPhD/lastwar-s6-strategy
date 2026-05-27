@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LastWar Season 6 Interactive Map</title>
+  <link rel="stylesheet" href="/sample_output/lib/vis-9.1.2/vis-network.css">
+  <script src="/sample_output/lib/vis-9.1.2/vis-network.min.js"></script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0f172a;
+      --panel: #111827;
+      --panel-2: #172033;
+      --line: #334155;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --danger: #fb7185;
+      --ok: #34d399;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .app {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #map {
+      width: 100%;
+      height: 100%;
+      background: #0b1020;
+    }
+
+    .panel {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      height: 100%;
+      border-left: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .panel-header,
+    .panel-section {
+      padding: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .panel-header {
+      display: grid;
+      gap: 10px;
+      background: var(--panel-2);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .status {
+      min-height: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
+    }
+
+    .row {
+      display: grid;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    input,
+    textarea,
+    button {
+      width: 100%;
+      min-height: 34px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #0b1220;
+      color: var(--text);
+      font: inherit;
+      font-size: 13px;
+    }
+
+    input,
+    textarea {
+      padding: 7px 9px;
+    }
+
+    textarea {
+      min-height: 72px;
+      resize: vertical;
+    }
+
+    button {
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    button.primary {
+      border-color: #0ea5e9;
+      background: #0369a1;
+    }
+
+    button.secondary {
+      background: #1f2937;
+    }
+
+    button.danger {
+      border-color: #be123c;
+      background: #881337;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: .55;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stat {
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #0b1220;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .details {
+      flex: 1;
+      overflow: auto;
+    }
+
+    .kv {
+      display: grid;
+      grid-template-columns: 98px minmax(0, 1fr);
+      gap: 8px;
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(51, 65, 85, .65);
+      font-size: 13px;
+    }
+
+    .kv span:first-child {
+      color: var(--muted);
+    }
+
+    .kv span:last-child {
+      overflow-wrap: anywhere;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: #164e63;
+      color: #e0f2fe;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .changed {
+      color: var(--ok);
+      font-weight: 700;
+    }
+
+    .error {
+      color: var(--danger);
+    }
+
+    @media (max-width: 900px) {
+      .app {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(0, 1fr) 44vh;
+      }
+
+      .panel {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <div id="map"></div>
+    <aside class="panel">
+      <header class="panel-header">
+        <h1>Season 6 Map</h1>
+        <div class="actions">
+          <button id="refreshButton" class="primary" type="button">Refresh Sheet</button>
+          <button id="fitButton" class="secondary" type="button">Fit</button>
+        </div>
+        <div class="row">
+          <label for="searchInput">Search</label>
+          <input id="searchInput" type="search" placeholder="#534:D-11 / JDX / city">
+        </div>
+        <div id="status" class="status">Loading...</div>
+      </header>
+
+      <section class="panel-section">
+        <div class="stats">
+          <div class="stat"><strong id="nodeCount">0</strong>Nodes</div>
+          <div class="stat"><strong id="edgeCount">0</strong>Edges</div>
+          <div class="stat"><strong id="chokeCount">0</strong>CHOKE</div>
+          <div class="stat"><strong id="overrideCount">0</strong>Manual edits</div>
+        </div>
+      </section>
+
+      <section class="panel-section details">
+        <div id="emptyState" class="status">Select a node to edit local alliance/status values.</div>
+        <div id="nodeDetails" hidden>
+          <div class="row">
+            <label>Selected</label>
+            <div id="selectedTitle" class="pill"></div>
+          </div>
+          <div class="kv"><span>ID</span><span id="detailId"></span></div>
+          <div class="kv"><span>Area</span><span id="detailArea"></span></div>
+          <div class="kv"><span>Coord</span><span id="detailCoord"></span></div>
+          <div class="kv"><span>Type</span><span id="detailType"></span></div>
+          <div class="kv"><span>Sheet owner</span><span id="detailOriginalOwner"></span></div>
+          <div class="kv"><span>Protection</span><span id="detailProtection"></span></div>
+          <div class="kv"><span>Acquired</span><span id="detailAcquired"></span></div>
+
+          <div class="row">
+            <label for="ownerInput">Alliance</label>
+            <input id="ownerInput" autocomplete="off">
+          </div>
+          <div class="row">
+            <label for="statusInput">Status</label>
+            <input id="statusInput" autocomplete="off">
+          </div>
+          <div class="row">
+            <label for="memoInput">Memo</label>
+            <textarea id="memoInput"></textarea>
+          </div>
+          <div class="actions">
+            <button id="applyButton" class="primary" type="button">Save Edit</button>
+            <button id="clearButton" class="danger" type="button">Clear Edit</button>
+          </div>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <script>
+    const mapEl = document.getElementById("map");
+    const statusEl = document.getElementById("status");
+    const nodeCountEl = document.getElementById("nodeCount");
+    const edgeCountEl = document.getElementById("edgeCount");
+    const chokeCountEl = document.getElementById("chokeCount");
+    const overrideCountEl = document.getElementById("overrideCount");
+    const refreshButton = document.getElementById("refreshButton");
+    const fitButton = document.getElementById("fitButton");
+    const searchInput = document.getElementById("searchInput");
+    const emptyState = document.getElementById("emptyState");
+    const nodeDetails = document.getElementById("nodeDetails");
+    const selectedTitle = document.getElementById("selectedTitle");
+    const ownerInput = document.getElementById("ownerInput");
+    const statusInput = document.getElementById("statusInput");
+    const memoInput = document.getElementById("memoInput");
+    const applyButton = document.getElementById("applyButton");
+    const clearButton = document.getElementById("clearButton");
+
+    const detailFields = {
+      id: document.getElementById("detailId"),
+      area: document.getElementById("detailArea"),
+      coord: document.getElementById("detailCoord"),
+      type: document.getElementById("detailType"),
+      originalOwner: document.getElementById("detailOriginalOwner"),
+      protection: document.getElementById("detailProtection"),
+      acquired: document.getElementById("detailAcquired")
+    };
+
+    const palette = [
+      "#4f46e5", "#0891b2", "#16a34a", "#ca8a04", "#dc2626", "#9333ea",
+      "#0d9488", "#ea580c", "#2563eb", "#be123c", "#65a30d", "#7c3aed"
+    ];
+
+    let network;
+    let nodes;
+    let edges;
+    let state;
+    let selectedNodeId = null;
+    let overrides = {nodes: {}};
+
+    function setStatus(message, isError = false) {
+      statusEl.textContent = message;
+      statusEl.classList.toggle("error", isError);
+    }
+
+    function hashString(value) {
+      let hash = 0;
+      for (let i = 0; i < value.length; i += 1) {
+        hash = ((hash << 5) - hash) + value.charCodeAt(i);
+        hash |= 0;
+      }
+      return Math.abs(hash);
+    }
+
+    function colorForOwner(owner) {
+      const key = owner && owner !== "unknown" ? owner : "unknown";
+      if (key === "unknown") return "#64748b";
+      return palette[hashString(key) % palette.length];
+    }
+
+    function sizeForNode(node) {
+      if (node.type === "漁場") return 30;
+      if (node.type === "都市") return 16;
+      if (node.type === "交易地") return 11;
+      if (node.type === "祖霊神殿") return 46;
+      if (node.type === "祭壇") return 13;
+      return Math.max(10, Math.min(32, Number(node.importance || 3) * 2.8));
+    }
+
+    function labelForNode(node) {
+      if (node.type === "交易地") return "";
+      return node.name || node.id;
+    }
+
+    function shapeForNode(node) {
+      if (node.type === "都市") return "dot";
+      if (node.type === "漁場") return "diamond";
+      if (node.type === "交易地") return "triangle";
+      if (node.type === "祖霊神殿") return "star";
+      if (node.type === "祭壇") return "square";
+      return "dot";
+    }
+
+    function titleForNode(node) {
+      return [
+        `${node.area || ""} ${node.name || ""}`.trim(),
+        `type: ${node.type || "-"}`,
+        `owner: ${node.owner || "-"}`,
+        `status: ${node.status || "-"}`,
+        `protection: ${node.protect_until || "-"}`
+      ].join("\n");
+    }
+
+    function toVisNode(node) {
+      const isChanged = Boolean(overrides.nodes[node.id]);
+      const color = colorForOwner(node.owner);
+      return {
+        id: node.id,
+        label: labelForNode(node),
+        title: titleForNode(node),
+        x: Number(node.x || 0),
+        y: -Number(node.y || 0),
+        fixed: true,
+        shape: shapeForNode(node),
+        size: sizeForNode(node),
+        color: {
+          background: color,
+          border: isChanged ? "#f8fafc" : "#111827",
+          highlight: {background: color, border: "#facc15"}
+        },
+        borderWidth: isChanged ? 3 : 1,
+        font: {
+          color: "#e5e7eb",
+          size: 12,
+          strokeWidth: 3,
+          strokeColor: "#0b1020"
+        },
+        raw: node
+      };
+    }
+
+    function toVisEdge(edge) {
+      return {
+        id: `${edge.source}|${edge.target}`,
+        from: edge.source,
+        to: edge.target,
+        width: 1,
+        color: {color: "rgba(148, 163, 184, .42)", highlight: "#facc15"},
+        smooth: false
+      };
+    }
+
+    async function fetchJson(url, options) {
+      const response = await fetch(url, options);
+      const text = await response.text();
+      let data = {};
+      if (text) data = JSON.parse(text);
+      if (!response.ok) {
+        throw new Error(data.error || `${response.status} ${response.statusText}`);
+      }
+      return data;
+    }
+
+    async function loadState(keepView = false) {
+      setStatus("Loading state...");
+      state = await fetchJson("/api/state");
+      overrides = state.overrides || {nodes: {}};
+      const view = keepView && network ? network.getViewPosition() : null;
+      const scale = keepView && network ? network.getScale() : null;
+
+      nodes = new vis.DataSet((state.nodes || []).map(toVisNode));
+      edges = new vis.DataSet((state.connections || []).map(toVisEdge));
+      const options = {
+        autoResize: true,
+        physics: false,
+        interaction: {
+          hover: true,
+          multiselect: false,
+          navigationButtons: true,
+          keyboard: true,
+          tooltipDelay: 100
+        },
+        nodes: {chosen: true},
+        edges: {selectionWidth: 2}
+      };
+
+      if (!network) {
+        network = new vis.Network(mapEl, {nodes, edges}, options);
+        network.on("selectNode", event => selectNode(event.nodes[0]));
+        network.on("deselectNode", () => selectNode(null));
+      } else {
+        network.setData({nodes, edges});
+      }
+
+      nodeCountEl.textContent = String((state.nodes || []).length);
+      edgeCountEl.textContent = String((state.connections || []).length);
+      chokeCountEl.textContent = String((state.critical_nodes || []).length);
+      overrideCountEl.textContent = String(Object.keys(overrides.nodes || {}).length);
+      setStatus(`Generated: ${state.generated_at || "-"}`);
+
+      if (view && scale) {
+        network.moveTo({position: view, scale});
+      } else {
+        network.fit({animation: false});
+      }
+      if (selectedNodeId && nodes.get(selectedNodeId)) selectNode(selectedNodeId);
+    }
+
+    function selectNode(nodeId) {
+      selectedNodeId = nodeId;
+      const item = nodeId ? nodes.get(nodeId) : null;
+      if (!item) {
+        emptyState.hidden = false;
+        nodeDetails.hidden = true;
+        return;
+      }
+      const node = item.raw;
+      emptyState.hidden = true;
+      nodeDetails.hidden = false;
+      selectedTitle.textContent = `${node.area || ""} ${node.name || node.id}`.trim();
+      detailFields.id.textContent = node.id || "-";
+      detailFields.area.textContent = node.area || "-";
+      detailFields.coord.textContent = node.name || "-";
+      detailFields.type.textContent = node.type || "-";
+      detailFields.originalOwner.textContent = node.original?.owner || node.owner || "-";
+      detailFields.protection.textContent = node.protect_until || node.protection?.status || "-";
+      detailFields.acquired.textContent = node.acquired_at || "-";
+      ownerInput.value = node.owner || "";
+      statusInput.value = node.status || "";
+      memoInput.value = node.memo || "";
+      nodeDetails.classList.toggle("changed", Boolean(overrides.nodes[node.id]));
+    }
+
+    function currentOverrideFromForm() {
+      if (!selectedNodeId) return null;
+      return {
+        owner: ownerInput.value.trim(),
+        status: statusInput.value.trim(),
+        memo: memoInput.value.trim()
+      };
+    }
+
+    async function saveOverrides(nextOverrides) {
+      const result = await fetchJson("/api/overrides", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(nextOverrides)
+      });
+      overrides = result.overrides || {nodes: {}};
+      await loadState(true);
+      setStatus("Manual edits saved locally.");
+    }
+
+    applyButton.addEventListener("click", async () => {
+      if (!selectedNodeId) return;
+      applyButton.disabled = true;
+      try {
+        const next = structuredClone(overrides);
+        next.nodes[selectedNodeId] = currentOverrideFromForm();
+        await saveOverrides(next);
+      } catch (error) {
+        setStatus(error.message, true);
+      } finally {
+        applyButton.disabled = false;
+      }
+    });
+
+    clearButton.addEventListener("click", async () => {
+      if (!selectedNodeId) return;
+      clearButton.disabled = true;
+      try {
+        const next = structuredClone(overrides);
+        delete next.nodes[selectedNodeId];
+        await saveOverrides(next);
+      } catch (error) {
+        setStatus(error.message, true);
+      } finally {
+        clearButton.disabled = false;
+      }
+    });
+
+    refreshButton.addEventListener("click", async () => {
+      refreshButton.disabled = true;
+      setStatus("Refreshing Google Sheets data...");
+      try {
+        const result = await fetchJson("/api/refresh", {method: "POST"});
+        if (!result.ok) throw new Error(result.stderr || "Refresh failed");
+        await loadState(true);
+        setStatus("Sheet refresh completed.");
+      } catch (error) {
+        setStatus(error.message, true);
+      } finally {
+        refreshButton.disabled = false;
+      }
+    });
+
+    fitButton.addEventListener("click", () => {
+      if (network) network.fit({animation: {duration: 180, easingFunction: "easeInOutQuad"}});
+    });
+
+    searchInput.addEventListener("input", () => {
+      const query = searchInput.value.trim().toLowerCase();
+      if (!query || !state) return;
+      const found = (state.nodes || []).find(node => {
+        return [node.id, node.name, node.area, node.type, node.owner, node.status]
+          .filter(Boolean)
+          .some(value => String(value).toLowerCase().includes(query));
+      });
+      if (!found) return;
+      network.selectNodes([found.id]);
+      network.focus(found.id, {scale: 1.4, animation: {duration: 180, easingFunction: "easeInOutQuad"}});
+      selectNode(found.id);
+    });
+
+    loadState().catch(error => setStatus(error.message, true));
+  </script>
+</body>
+</html>

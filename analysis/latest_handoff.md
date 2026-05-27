@@ -6,11 +6,9 @@
 
 ## Context
 
-Built the first MVP of a LastWar invasion strategy OS for current-board visualization and connection analysis. The goal is strategic decision support: read map state from Google Sheets or CSV, generate a graph, extract CHOKE candidates, and output HTML plus JSON for review.
+Built and iterated the first MVP of a LastWar Season 6 invasion strategy OS for current-board visualization and connection analysis. The tool reads the operational Google Sheet through CSV export, generates a graph, extracts CHOKE candidates, and outputs HTML plus JSON for review.
 
-This does not automate gameplay. It is a repeatable analysis and visualization pipeline connected to the live Google Sheets operational map.
-
-The current live output reads `管理表たたき` from spreadsheet `＃534`, expands it to the full map using the Google Sheets layout, and now includes the central area.
+This does not automate gameplay. It is a repeatable analysis and visualization pipeline for commander review.
 
 ## Updated files
 
@@ -22,6 +20,8 @@ The current live output reads `管理表たたき` from spreadsheet `＃534`, ex
 - `tools/invasion_strategy_os/config.google_history_534.json`
 - `tools/invasion_strategy_os/config.google_full_map.json`
 - `tools/invasion_strategy_os/README.md`
+- `tools/invasion_strategy_os/interactive_app.html`
+- `tools/invasion_strategy_os/interactive_server.py`
 - `tools/invasion_strategy_os/requirements.txt`
 - `tools/invasion_strategy_os/sample_nodes.csv`
 - `tools/invasion_strategy_os/sample_edges.csv`
@@ -36,20 +36,22 @@ The current live output reads `管理表たたき` from spreadsheet `＃534`, ex
 4. CHOKE candidates are extracted from articulation points and scored by importance, graph degree, betweenness, major-node split, and major-node isolation.
 5. `sample_output/map.html` is generated with `pyvis`, owner-based node colors, importance-based size, edge display, click/hover node details, and protection-status border coloring.
 6. HTML generation uses local vis-network assets under `sample_output/lib/`, avoiding the inline-script black-screen issue seen in the in-app browser.
-7. The Google Sheets full-map output currently contains the 8 outer areas plus central area from `管理表たたき`: 2,168 nodes, 10,406 provisional distance edges, 81 connected components, and 0 CHOKE nodes under the current distance-edge model.
-8. The 81 components are expected in this model: 80 `交易地` nodes are intentionally isolated, and the remaining connected component is the outer-ring map.
-9. Lowercase coordinate letters are normalized to `都市`; uppercase coordinate letters are normalized to `漁場`; the central area is excluded.
-10. The full-map HTML uses smaller nodes and labels to create more visible spacing between cities and fisheries.
-11. Clicking a node now opens a fixed information panel with management-table fields, instead of relying on the small browser hover tooltip.
-12. The outer area placement is now clockwise from the upper-left: `#534`, `#509`, `#503`, `#480`, `#440`, `#511`, `#523`, `#476`.
-13. Fishery nodes are now displayed larger than city nodes; central nodes are included in the middle of the ring.
+7. The current full-map output contains the 8 outer areas plus central area: 2,165 nodes, 8,200 provisional distance edges, and 0 CHOKE nodes under the current distance-edge model.
+8. Central area typing now follows the Cpt Hedgehog Season 6 reference-map pattern plus the commander adjustment: 397 central nodes, 208 central fishery nodes, 188 central altar nodes, and one large `祖霊神殿` node replacing the 2x2 center.
+9. Central fishery nodes are connected by distance edges; central altar/temple nodes are displayed but isolated. Verification after regeneration: 1,764 central fishery-related edges, 0 central altar edges, and 0 `祖霊神殿` edges.
+10. Trade-post nodes are displayed but intentionally left unconnected.
+11. Lowercase coordinate letters are normalized to city nodes; uppercase coordinate letters are normalized to fishery nodes.
+12. The outer area placement is clockwise from the upper-left: `#534`, `#509`, `#503`, `#480`, `#440`, `#511`, `#523`, `#476`.
+13. Fishery nodes are displayed larger than city nodes, and the central area is included in the middle of the ring.
+14. Clicking a node opens a fixed information panel with management-table fields.
+15. Added a first local interactive-map server skeleton for a cpt-hedge-style workflow: browser rendering from `state.json`, sheet refresh endpoint, and local manual overrides in `data/invasion_strategy_overrides.json`.
 
 ## Current risks
 
-1. `管理表たたき` does not expose explicit adjacency. The current live graph derives provisional distance edges from coordinates, so CHOKE results must not be treated as confirmed game adjacency.
+1. The operational sheet does not expose explicit adjacency. The current live graph derives provisional distance edges from coordinates, so CHOKE results must not be treated as confirmed game adjacency.
 2. CHOKE candidates are graph evidence, not automatic orders; game rules, protection windows, pact state, and attack eligibility must still be checked.
 3. Diagonal adjacency and pact-assisted adjacency need explicit modeling rules before live operational use.
-4. The 3x3 area offsets are derived from the Google Sheets full-map layout. If the sheet layout changes, `config.google_full_map.json` should be updated.
+4. The 3x3 area offsets and central reference typing are derived from the Google Sheets full-map layout plus the Cpt Hedgehog Season 6 reference map. If either reference changes, update `config.google_full_map.json` and the central typing helper.
 
 ## Recommended next actions
 
@@ -57,7 +59,8 @@ The current live output reads `管理表たたき` from spreadsheet `＃534`, ex
 2. Add a live edge export tab only if adjacency is not stored in the node table.
 3. Review `sample_output/state.json` first, then use `sample_output/map.html` for commander sharing.
 4. For the current #534-only live test, run `.\.venv\Scripts\python.exe tools\invasion_strategy_os\invasion_strategy_os.py --config tools\invasion_strategy_os\config.google_history_534.json`.
-5. For the current full outer-map live test, run `.\.venv\Scripts\python.exe tools\invasion_strategy_os\invasion_strategy_os.py --config tools\invasion_strategy_os\config.google_full_map.json`.
+5. For the current full-map live test, run `.\.venv\Scripts\python.exe tools\invasion_strategy_os\invasion_strategy_os.py --config tools\invasion_strategy_os\config.google_full_map.json`.
+6. For the local interactive prototype, run `.\.venv\Scripts\python.exe tools\invasion_strategy_os\interactive_server.py --port 8010` and open `http://127.0.0.1:8010/`.
 
 ## Questions for ChatGPT
 
@@ -70,6 +73,6 @@ The current live output reads `管理表たたき` from spreadsheet `＃534`, ex
 
 - Dependencies were installed into the existing local `.venv` for verification.
 - The generated HTML is UTF-8 and uses local vis-network assets in `sample_output/lib/`.
-- The in-app browser successfully rendered the live full outer-map Google Sheets output at `http://127.0.0.1:8000/sample_output/map.html`.
-- The `tools/invasion_strategy_os/` directory was explicitly allowlisted in `.gitignore`; existing unrelated local `tools/` files remain ignored.
+- The in-app browser successfully rendered the regenerated full-map output at `http://127.0.0.1:8000/sample_output/map.html`.
+- The `tools/invasion_strategy_os/` directory is explicitly allowlisted in `.gitignore`; existing unrelated local `tools/` files remain ignored.
 - Existing unrelated local changes were not touched.

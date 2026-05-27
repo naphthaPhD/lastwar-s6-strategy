@@ -17,15 +17,17 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - Added the MVP under `tools/invasion_strategy_os/`.
 - Added CSV and Google Sheets CSV-export loading.
 - Added `config.google_history_534.json` for the first #534-only live test.
-- Added `config.google_full_map.json` for the current full outer-map live test.
+- Added `config.google_full_map.json` for the current full-map live test.
 - Added node and edge structures with `id`, `name`, `type`, `owner`, `protect_until`, `x`, `y`, `importance`, `from`, `to`, and `weight`.
 - Added JST protection-timer handling.
 - Added graph analysis for connected components, articulation points, shortest path, degree centrality, and betweenness centrality.
-- The full-map output now reads `管理表たたき`, includes the central area, and contains 2,168 nodes with 10,406 provisional distance edges.
+- The current full-map output reads the management-table sheet, includes the central area, and contains 2,165 nodes with 8,200 provisional distance edges.
+- Central area typing follows the Cpt Hedgehog Season 6 reference-map pattern plus the commander adjustment: 208 central fishery nodes are connected, 188 central altar nodes are isolated, and the 2x2 center is represented by one large isolated `祖霊神殿` node.
 - The outer area placement is clockwise from the upper-left: `#534`, `#509`, `#503`, `#480`, `#440`, `#511`, `#523`, `#476`.
-- `交易地` nodes are displayed but intentionally left unconnected.
-- Fishery nodes are now displayed larger than city nodes.
+- Trade-post nodes are displayed but intentionally left unconnected.
+- Fishery nodes are displayed larger than city nodes.
 - The full-map view has a fixed click information panel using management-table fields, so alliance/status/protection data is easier to inspect.
+- Added an initial local interactive-map server prototype for search, sheet refresh, and local manual owner/status/memo overrides.
 
 ## 4. Timeline
 
@@ -34,20 +36,23 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - Added `tools/invasion_strategy_os/README.md` and `requirements.txt`.
 - Generated `sample_output/map.html` and `sample_output/state.json`.
 - Updated `.gitignore` to allowlist only this durable tool directory under `tools/`.
-- Switched full-map input from `拠点履歴_座標` to `管理表たたき` for more direct ownership/type/status data.
+- Switched full-map input to the management-table sheet for more direct ownership/type/status data.
+- Adjusted central-area type classification and edge derivation from the Cpt Hedgehog Season 6 reference map.
 
 ## 5. Interpretation
 
 This MVP should be used as a bridge between the current Google Sheets operational map and later GPT/API analysis. The immediate value is not tactical automation; it is a repeatable way to convert the current map into graph evidence that commanders can review.
 
-The current full-map output is now useful for visual review across the outer 8 areas. The CHOKE result is still provisional because explicit game-rule adjacency is not yet modeled.
+The current full-map output is now useful for visual review across the outer 8 areas and the central area. The CHOKE result is still provisional because explicit game-rule adjacency is not yet modeled.
+
+Central-area altar ownership should not be treated as movement adjacency. The current graph therefore displays central altar/temple nodes while excluding them from edge derivation.
 
 ## 6. Risks
 
-- `管理表たたき` does not expose explicit adjacency. The current live graph derives provisional distance edges from coordinates, so CHOKE results must not be treated as confirmed game adjacency.
+- The management-table sheet does not expose explicit adjacency. The current live graph derives provisional distance edges from coordinates, so CHOKE results must not be treated as confirmed game adjacency.
 - CHOKE candidates are graph evidence, not automatic orders; game rules, protection windows, alliance pact state, and actual attack eligibility must still be checked.
 - Diagonal adjacency and pact-assisted adjacency need explicit modeling rules before live operational use.
-- The 3x3 area offsets are derived from the Google Sheets full-map layout. If the sheet layout changes, `config.google_full_map.json` should be updated.
+- The 3x3 area offsets and central reference typing are derived from external map references. If those references change, the config and central typing helper should be updated.
 
 ## 7. Recommended actions
 
@@ -55,12 +60,14 @@ The current full-map output is now useful for visual review across the outer 8 a
 2. Run the MVP after each meaningful map update and review `critical_nodes` in `sample_output/state.json`.
 3. Compare CHOKE candidates against the commander map before issuing any R4/R5 order.
 4. Continue adjusting the full-map visual density as commander review reveals crowded areas.
+5. Test the local interactive prototype before deciding whether manual overrides should write back to Google Sheets.
 
 ## 8. Unknowns
 
 - Whether diagonal adjacency should be represented as normal edges, lower-weight edges, or rule-dependent edges.
 - Whether pact territory should be modeled as direct edges or as a scenario layer.
-- Whether `交易地` should remain isolated in every scenario or only in the default tactical layer.
+- Whether trade-post nodes should remain isolated in every scenario or only in the default tactical layer.
+- Whether central altar subtypes need to be preserved separately or can remain grouped as `祭壇` for graph analysis.
 
 ## 9. Files referenced
 
@@ -70,6 +77,8 @@ The current full-map output is now useful for visual review across the outer 8 a
 - `tools/invasion_strategy_os/config.google_history_534.json`
 - `tools/invasion_strategy_os/config.google_full_map.json`
 - `tools/invasion_strategy_os/README.md`
+- `tools/invasion_strategy_os/interactive_app.html`
+- `tools/invasion_strategy_os/interactive_server.py`
 - `tools/invasion_strategy_os/requirements.txt`
 - `tools/invasion_strategy_os/sample_nodes.csv`
 - `tools/invasion_strategy_os/sample_edges.csv`
