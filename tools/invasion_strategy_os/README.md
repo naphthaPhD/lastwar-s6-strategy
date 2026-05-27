@@ -109,6 +109,7 @@ Important: the current sheet does not contain an explicit adjacency column. `con
 Current rule assumptions:
 
 - Central area rows are excluded for now.
+- Outer areas are placed clockwise from the upper-left: `#534`, `#509`, `#503`, `#480`, `#440`, `#511`, `#523`, `#476`.
 - `交易地` nodes are displayed but not connected by edges.
 - Lowercase coordinate letters are normalized to `都市`.
 - Uppercase coordinate letters are normalized to `漁場`.
