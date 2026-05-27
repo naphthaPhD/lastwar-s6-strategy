@@ -977,7 +977,8 @@ def write_html(
         }
 
     for source, target, edge_data in graph.edges(data=True):
-        network.add_edge(source, target, value=edge_data.get("weight", 1.0), title=f"weight: {edge_data.get('weight', 1.0)}")
+        edge_id = f"{source}|{target}"
+        network.add_edge(source, target, id=edge_id, value=edge_data.get("weight", 1.0), title=f"weight: {edge_data.get('weight', 1.0)}")
 
     network.set_options(
         json.dumps(
@@ -1465,6 +1466,36 @@ def add_node_info_panel_v3(html: str) -> str:
     font: 700 13px Arial, sans-serif;
     cursor: pointer;
   }
+  #map-highlight-boundary {
+    position: fixed;
+    left: 268px;
+    top: 16px;
+    z-index: 11;
+    min-width: 104px;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid rgba(148, 163, 184, 0.65);
+    border-radius: 6px;
+    background: rgba(15, 23, 42, 0.92);
+    color: #f8fafc;
+    font: 700 13px Arial, sans-serif;
+    cursor: pointer;
+  }
+  #map-clear-edge-highlight {
+    position: fixed;
+    left: 384px;
+    top: 16px;
+    z-index: 11;
+    min-width: 104px;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid rgba(148, 163, 184, 0.65);
+    border-radius: 6px;
+    background: rgba(15, 23, 42, 0.92);
+    color: #f8fafc;
+    font: 700 13px Arial, sans-serif;
+    cursor: pointer;
+  }
   #map-legend {
     position: fixed;
     left: 16px;
@@ -1508,6 +1539,8 @@ def add_node_info_panel_v3(html: str) -> str:
     panel = f"""
 <button id="map-label-toggle" type="button">&#36899;&#30431;&#21517;&#34920;&#31034;</button>
 <button id="map-reset-layout" type="button">&#20301;&#32622;&#12522;&#12475;&#12483;&#12488;</button>
+<button id="map-highlight-boundary" type="button">&#22659;&#30028;&#24375;&#35519;</button>
+<button id="map-clear-edge-highlight" type="button">&#24375;&#35519;&#35299;&#38500;</button>
 <div id="map-legend" aria-label="legend">
   <h3>凡例</h3>
   <div class="legend-row"><span class="legend-dot" style="background:#2563eb"></span><span>#534 / JDX</span></div>
@@ -1584,6 +1617,63 @@ def add_node_info_panel_v3(html: str) -> str:
                         network.fit({{ animation: {{ duration: 180, easingFunction: "easeInOutQuad" }} }});
                       }});
                     }}
+                    var defaultEdgeStyle = {{ color: {{ color: "#94a3b8", highlight: "#facc15" }}, width: 1 }};
+                    function resetEdgeHighlights() {{
+                      if (!edges) return;
+                      edges.update(edges.get().map(function (edge) {{
+                        return {{
+                          id: edge.id,
+                          color: defaultEdgeStyle.color,
+                          width: defaultEdgeStyle.width
+                        }};
+                      }}));
+                    }}
+                    function highlightEdges(edgeIds, color, width) {{
+                      if (!edges || !edgeIds.length) return;
+                      edges.update(edgeIds.map(function (edgeId) {{
+                        return {{
+                          id: edgeId,
+                          color: {{ color: color, highlight: color }},
+                          width: width
+                        }};
+                      }}));
+                    }}
+                    function highlightConnectedEdges(nodeId) {{
+                      if (!nodes || !edges || !nodeId) return;
+                      var node = nodes.get(nodeId);
+                      if (!node || node.nodeType !== "\\u6f01\\u5834") return;
+                      resetEdgeHighlights();
+                      var selectedEdges = edges.get().filter(function (edge) {{
+                        return edge.from === nodeId || edge.to === nodeId;
+                      }}).map(function (edge) {{ return edge.id; }});
+                      highlightEdges(selectedEdges, "#38bdf8", 4);
+                    }}
+                    function highlightSelfEnemyFisheryEdges() {{
+                      if (!nodes || !edges) return;
+                      resetEdgeHighlights();
+                      var selectedEdges = edges.get().filter(function (edge) {{
+                        var source = nodes.get(edge.from);
+                        var target = nodes.get(edge.to);
+                        if (!source || !target) return false;
+                        if (source.nodeType !== "\\u6f01\\u5834" || target.nodeType !== "\\u6f01\\u5834") return false;
+                        return (
+                          (source.affiliation === "self" && target.affiliation === "enemy") ||
+                          (source.affiliation === "enemy" && target.affiliation === "self")
+                        );
+                      }}).map(function (edge) {{ return edge.id; }});
+                      highlightEdges(selectedEdges, "#fb923c", 4);
+                    }}
+                    var boundaryButton = document.getElementById("map-highlight-boundary");
+                    if (boundaryButton) {{
+                      boundaryButton.addEventListener("click", highlightSelfEnemyFisheryEdges);
+                    }}
+                    var clearEdgeButton = document.getElementById("map-clear-edge-highlight");
+                    if (clearEdgeButton) {{
+                      clearEdgeButton.addEventListener("click", resetEdgeHighlights);
+                    }}
+                    window.highlightConnectedEdges = highlightConnectedEdges;
+                    window.highlightSelfEnemyFisheryEdges = highlightSelfEnemyFisheryEdges;
+                    window.resetEdgeHighlights = resetEdgeHighlights;
                     function renderNodeInfo(nodeId) {{
                       var panel = document.getElementById("node-info-panel");
                       if (!panel || !nodeId || !nodes) return;
@@ -1612,9 +1702,14 @@ def add_node_info_panel_v3(html: str) -> str:
                     }}
                     window.renderNodeInfo = renderNodeInfo;
                     network.on("selectNode", function (params) {{
-                      renderNodeInfo(params.nodes && params.nodes[0]);
+                      var nodeId = params.nodes && params.nodes[0];
+                      renderNodeInfo(nodeId);
+                      highlightConnectedEdges(nodeId);
                     }});
-                    network.on("deselectNode", resetNodeInfo);
+                    network.on("deselectNode", function () {{
+                      resetNodeInfo();
+                      resetEdgeHighlights();
+                    }});
                   }})();
 """
     if "</head>" in html:

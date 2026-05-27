@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T00:39:35.169174+09:00",
+  "generated_at": "2026-05-28T00:57:12.075711+09:00",
   "timezone": "Asia/Tokyo",
   "nodes": [
     {
@@ -248,7 +248,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 70.34,
+        "hours_remaining": 70.05,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -273,7 +273,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 70.34,
+        "hours_remaining": 70.05,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -373,7 +373,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 70.34,
+        "hours_remaining": 70.05,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -398,7 +398,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 70.34,
+        "hours_remaining": 70.05,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -423,7 +423,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 70.34,
+        "hours_remaining": 70.05,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -473,7 +473,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 70.34,
+        "hours_remaining": 70.05,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -498,7 +498,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 166.34,
+        "hours_remaining": 166.05,
         "protect_until": "2026-06-03T23:00:00+09:00"
       }
     },
@@ -548,7 +548,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 166.34,
+        "hours_remaining": 166.05,
         "protect_until": "2026-06-03T23:00:00+09:00"
       }
     },
@@ -598,7 +598,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 158.34,
+        "hours_remaining": 158.05,
         "protect_until": "2026-06-03T15:00:00+09:00"
       }
     },
@@ -623,7 +623,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 158.34,
+        "hours_remaining": 158.05,
         "protect_until": "2026-06-03T15:00:00+09:00"
       }
     },
@@ -648,7 +648,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 166.34,
+        "hours_remaining": 166.05,
         "protect_until": "2026-06-03T23:00:00+09:00"
       }
     },
@@ -823,7 +823,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -923,7 +923,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -948,7 +948,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -1423,7 +1423,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -2019,8 +2019,8 @@
       "visual_y": 1904.0,
       "display_owner": "UMN",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -3869,8 +3869,8 @@
       "visual_y": 1904.0,
       "display_owner": "UMN",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -4348,7 +4348,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -4373,7 +4373,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -4673,7 +4673,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -4823,7 +4823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -4898,7 +4898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -5023,7 +5023,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -5048,7 +5048,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -5073,7 +5073,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -5098,7 +5098,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -5148,7 +5148,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -5173,7 +5173,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -5223,7 +5223,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -5373,7 +5373,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -5498,7 +5498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -5573,7 +5573,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -5598,7 +5598,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -5623,7 +5623,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -5648,7 +5648,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -5923,7 +5923,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -5973,7 +5973,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -6098,7 +6098,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -6123,7 +6123,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -6298,7 +6298,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -6398,7 +6398,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -6498,7 +6498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -6548,7 +6548,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -6823,7 +6823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -6848,7 +6848,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -6856,25 +6856,25 @@
       "id": "#480:D-15",
       "name": "D-15",
       "type": "漁場",
-      "owner": "CDf8",
-      "protect_until": "安全時間要登録",
+      "owner": "SsQ",
+      "protect_until": "2026/05/31 7:00",
       "x": 2699.0,
       "y": 1299.0,
       "importance": 3.0,
       "area": "#480",
-      "acquired_at": "2026/05/24 11:16",
-      "status": "要確認",
-      "memo": "赤字OCR IMG_0904.PNG / #480 X:699 Y:299 Lv.3 / 中立/未登録 -> CDf8",
+      "acquired_at": "2026/05/27 23:13",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:13 / #480 X:699 Y:299 Lv.3 漁場 / CDf8 -> SsQ / 奪取",
       "visual_x": 3059.0,
       "visual_y": 1479.0,
-      "display_owner": "CDf8",
+      "display_owner": "SsQ",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -6898,7 +6898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -6948,7 +6948,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -6973,7 +6973,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -6998,7 +6998,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -7548,7 +7548,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -7569,8 +7569,8 @@
       "visual_y": 3338.0,
       "display_owner": "UMN",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -7648,7 +7648,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -7673,7 +7673,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -7681,25 +7681,25 @@
       "id": "#509:C-19",
       "name": "C-19",
       "type": "漁場",
-      "owner": "AoW",
-      "protect_until": "安全時間要登録",
+      "owner": "RCON",
+      "protect_until": "2026/05/30 15:00",
       "x": 1899.0,
       "y": 2199.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/24 7:08",
-      "status": "要確認",
-      "memo": "赤字OCR IMG_0873.PNG / #509 X:899 Y:199 Lv.1 / 中立/未登録 -> AoW / 時刻は前後スクショから推定",
+      "acquired_at": "2026/05/27 23:18",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:18 / #509 X:899 Y:199 Lv.1 漁場 / AoW -> RCON / 奪取",
       "visual_x": 2079.0,
       "visual_y": 2559.0,
-      "display_owner": "AoW",
+      "display_owner": "RCON",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 62.05,
+        "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
     {
@@ -7723,7 +7723,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -7731,21 +7731,21 @@
       "id": "#509:F-15",
       "name": "F-15",
       "type": "漁場",
-      "owner": "GX99",
+      "owner": "MOn",
       "protect_until": "安全時間要登録",
       "x": 1699.0,
       "y": 2499.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/24 7:08",
+      "acquired_at": "2026/05/27 23:13",
       "status": "要確認",
-      "memo": "赤字OCR IMG_0871.PNG / #509 X:699 Y:499 Lv.3 / AoW -> GX99",
+      "memo": "手入力ログ 2026/05/27 23:13 / #509 X:699 Y:499 Lv.3 漁場 / GX99 -> MOn / 奪取",
       "visual_x": 1879.0,
       "visual_y": 2859.0,
-      "display_owner": "GX99",
+      "display_owner": "MOn",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -7848,7 +7848,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -7873,7 +7873,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -7898,7 +7898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -8398,7 +8398,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -8423,7 +8423,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -8598,7 +8598,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -8623,7 +8623,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -8648,7 +8648,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -8798,7 +8798,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -8823,7 +8823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -8873,7 +8873,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -8923,7 +8923,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -8998,7 +8998,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -9198,7 +9198,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -9223,7 +9223,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -9373,7 +9373,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -9448,7 +9448,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -9623,7 +9623,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -9748,7 +9748,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 70.34,
+        "hours_remaining": 70.05,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -9773,7 +9773,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 70.34,
+        "hours_remaining": 70.05,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -9848,7 +9848,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 70.34,
+        "hours_remaining": 70.05,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -9948,7 +9948,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 70.34,
+        "hours_remaining": 70.05,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -10248,7 +10248,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -10681,25 +10681,25 @@
       "id": "#509:D-9",
       "name": "D-9",
       "type": "漁場",
-      "owner": "VEX",
-      "protect_until": "2026/05/27 23:00",
+      "owner": "476A",
+      "protect_until": "2026/05/31 7:00",
       "x": 1399.0,
       "y": 2299.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/23 15:42",
-      "status": "保護切れ",
-      "memo": "赤字OCR IMG_0701.PNG / #509 X:399 Y:299 Lv3 漁場 / 中立/未登録 -> VEX",
+      "acquired_at": "2026/05/27 23:07",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:07 / #509 X:399 Y:299 Lv.3 漁場 / VEX -> 476A / 奪取",
       "visual_x": 1579.0,
       "visual_y": 2659.0,
-      "display_owner": "VEX",
+      "display_owner": "476A",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -1.66,
-        "protect_until": "2026-05-27T23:00:00+09:00"
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -10773,7 +10773,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -10923,7 +10923,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -10998,7 +10998,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -11023,7 +11023,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -11073,7 +11073,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -11148,7 +11148,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -11173,7 +11173,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 70.34,
+        "hours_remaining": 70.05,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -11181,25 +11181,25 @@
       "id": "#509:A-17",
       "name": "A-17",
       "type": "漁場",
-      "owner": "4tH",
-      "protect_until": "2026/05/27 23:00",
+      "owner": "KTVS",
+      "protect_until": "2026/05/31 7:00",
       "x": 1799.0,
       "y": 2020.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/23 15:06",
-      "status": "保護切れ",
-      "memo": "赤字OCR IMG_0695.PNG / #509 X:799 Y:20 Lv1 漁場 / BHE -> 4tH",
+      "acquired_at": "2026/05/27 23:03",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:03 / #509 X:799 Y:20 Lv.1 漁場 / 4tH -> KTVS / 奪取",
       "visual_x": 1979.0,
       "visual_y": 2380.0,
-      "display_owner": "4tH",
+      "display_owner": "KTVS",
       "destroyed": false,
       "affiliation": "self",
       "strategic_color": "#2563eb",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -1.66,
-        "protect_until": "2026-05-27T23:00:00+09:00"
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -11248,7 +11248,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -11273,7 +11273,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -11298,7 +11298,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 70.34,
+        "hours_remaining": 70.05,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -11323,7 +11323,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 70.34,
+        "hours_remaining": 70.05,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -11331,25 +11331,25 @@
       "id": "#509:C-11",
       "name": "C-11",
       "type": "漁場",
-      "owner": "VEX",
-      "protect_until": "2026/05/27 23:00",
+      "owner": "476d",
+      "protect_until": "2026/05/30 15:00",
       "x": 1499.0,
       "y": 2199.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/23 15:00",
-      "status": "保護切れ",
-      "memo": "赤字OCR IMG_0694.PNG / #509 X:499 Y:199 Lv2 漁場 / 中立/未登録 -> VEX",
+      "acquired_at": "2026/05/27 23:03",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:03 / #509 X:499 Y:199 Lv.2 漁場 / VEX -> 476d / 奪取",
       "visual_x": 1679.0,
       "visual_y": 2559.0,
-      "display_owner": "VEX",
+      "display_owner": "476d",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -1.66,
-        "protect_until": "2026-05-27T23:00:00+09:00"
+        "status": "protected",
+        "hours_remaining": 62.05,
+        "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
     {
@@ -11398,7 +11398,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 70.34,
+        "hours_remaining": 70.05,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -11573,7 +11573,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -11673,7 +11673,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 62.34,
+        "hours_remaining": 62.05,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -11698,7 +11698,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 62.34,
+        "hours_remaining": 62.05,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -11723,7 +11723,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 62.34,
+        "hours_remaining": 62.05,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -11798,7 +11798,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 62.34,
+        "hours_remaining": 62.05,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -12056,25 +12056,25 @@
       "id": "#480:F-9",
       "name": "F-9",
       "type": "漁場",
-      "owner": "BgNa",
-      "protect_until": "2026/05/27 23:00",
+      "owner": "BAJ",
+      "protect_until": "2026/05/31 7:00",
       "x": 2399.0,
       "y": 1499.0,
       "importance": 3.0,
       "area": "#480",
-      "acquired_at": "2026/05/23 11:08",
-      "status": "保護切れ",
-      "memo": "赤字OCR IMG_0686.PNG / #480 X:399 Y:499 Lv4 漁場 / 中立/未登録 -> BgNa",
+      "acquired_at": "2026/05/27 23:07",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:07 / #480 X:399 Y:499 Lv.4 漁場 / BgNa -> BAJ / 奪取",
       "visual_x": 2759.0,
       "visual_y": 1679.0,
-      "display_owner": "BgNa",
+      "display_owner": "BAJ",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -1.66,
-        "protect_until": "2026-05-27T23:00:00+09:00"
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -12123,7 +12123,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -1.66,
+        "hours_remaining": -1.95,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -12481,25 +12481,25 @@
       "id": "#509:C-9",
       "name": "C-9",
       "type": "漁場",
-      "owner": "VEX",
-      "protect_until": "2026/05/23 15:00",
+      "owner": "476d",
+      "protect_until": "2026/05/30 15:00",
       "x": 1399.0,
       "y": 2199.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/23 7:09",
-      "status": "保護切れ",
-      "memo": "赤字OCR IMG_0641.PNG / #509 X:399 Y:199 Lv.2 / 中立/未登録 -> VEX",
+      "acquired_at": "2026/05/27 23:30",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:30 / #509 X:399 Y:199 Lv.2 漁場 / VEX -> 476d / 奪取",
       "visual_x": 1579.0,
       "visual_y": 2559.0,
-      "display_owner": "VEX",
+      "display_owner": "476d",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -105.66,
-        "protect_until": "2026-05-23T15:00:00+09:00"
+        "status": "protected",
+        "hours_remaining": 62.05,
+        "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
     {
@@ -12531,21 +12531,21 @@
       "id": "#509:C-17",
       "name": "C-17",
       "type": "漁場",
-      "owner": "AoW",
+      "owner": "one",
       "protect_until": "安全時間要登録",
       "x": 1799.0,
       "y": 2199.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/23 6:02",
+      "acquired_at": "2026/05/27 23:24",
       "status": "要確認",
-      "memo": "赤字OCR IMG_0639.PNG / #509 X:799 Y:199 Lv.2 / MOn -> AoW / 時刻は前後スクショから推定",
+      "memo": "手入力ログ 2026/05/27 23:24 / #509 X:799 Y:199 Lv.2 漁場 / AoW -> one / 奪取",
       "visual_x": 1979.0,
       "visual_y": 2559.0,
-      "display_owner": "AoW",
+      "display_owner": "one",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -12623,7 +12623,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -12673,7 +12673,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -12773,7 +12773,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -12831,25 +12831,25 @@
       "id": "中央:中央-1-18",
       "name": "中央-1-18",
       "type": "漁場",
-      "owner": "MOn",
-      "protect_until": "安全時間要登録",
+      "owner": "JDX",
+      "protect_until": "2026/05/30 15:00",
       "x": 1874.0,
       "y": 1974.0,
       "importance": 3.0,
       "area": "中央",
-      "acquired_at": "2026/05/23 3:07",
-      "status": "要確認",
-      "memo": "赤字OCR IMG_0635.PNG / #8061 X:874 Y:974 Lv.5 / 中立/未登録 -> MOn",
+      "acquired_at": "2026/05/27 23:51",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:51 / #8061 X:874 Y:974 Lv.5 漁場 / MOn -> JDX / 奪取",
       "visual_x": 2054.0,
       "visual_y": 2154.0,
-      "display_owner": "MOn",
+      "display_owner": "JDX",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "self",
+      "strategic_color": "#2563eb",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 62.05,
+        "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
     {
@@ -12923,7 +12923,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -105.66,
+        "hours_remaining": -105.95,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -13048,7 +13048,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -13073,7 +13073,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -13123,7 +13123,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -105.66,
+        "hours_remaining": -105.95,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -13148,7 +13148,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -13198,7 +13198,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -13394,8 +13394,8 @@
       "visual_y": 3159.0,
       "display_owner": "UMN",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -13498,7 +13498,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -13523,7 +13523,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -13794,8 +13794,8 @@
       "visual_y": 3059.0,
       "display_owner": "UMN",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -14173,7 +14173,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -14644,8 +14644,8 @@
       "visual_y": 3309.0,
       "display_owner": "UMN",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -15348,7 +15348,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -15423,7 +15423,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -15448,7 +15448,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -15598,7 +15598,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -15748,7 +15748,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -15798,7 +15798,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -16023,7 +16023,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -16148,7 +16148,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -16206,25 +16206,25 @@
       "id": "#511:I-15",
       "name": "I-15",
       "type": "漁場",
-      "owner": "DaNG",
-      "protect_until": "安全時間要登録",
+      "owner": "476X",
+      "protect_until": "2026/05/31 7:00",
       "x": 1699.0,
       "y": 799.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": "2026/05/22 11:23",
-      "status": "要確認",
-      "memo": "OCR IMG_0569.PNG / #511 X:699 Y:799 Lv.2 / 中立/未登録 -> DaNG",
+      "acquired_at": "2026/05/27 23:07",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:07 / #511 X:699 Y:799 Lv.2 漁場 / DaNG -> 476X / 奪取",
       "visual_x": 1879.0,
       "visual_y": 799.0,
-      "display_owner": "DaNG",
+      "display_owner": "476X",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -16248,7 +16248,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -16348,7 +16348,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -16448,7 +16448,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -16556,25 +16556,25 @@
       "id": "#509:D-15",
       "name": "D-15",
       "type": "漁場",
-      "owner": "AoW",
-      "protect_until": "安全時間要登録",
+      "owner": "Lghs",
+      "protect_until": "2026/05/30 15:00",
       "x": 1699.0,
       "y": 2299.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/22 7:41",
-      "status": "要確認",
-      "memo": "OCR IMG_0563.PNG / #509 X:699 Y:299 Lv.3 / 中立/未登録 -> AoW / 時刻は前後スクショから推定",
+      "acquired_at": "2026/05/27 23:56",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:56 / #509 X:699 Y:299 Lv.3 漁場 / AoW -> Lghs / 奪取",
       "visual_x": 1879.0,
       "visual_y": 2659.0,
-      "display_owner": "AoW",
+      "display_owner": "Lghs",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 62.05,
+        "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
     {
@@ -16706,18 +16706,18 @@
       "id": "#511:H-1",
       "name": "H-1",
       "type": "漁場",
-      "owner": "fIrE",
+      "owner": "ALj",
       "protect_until": "安全時間要登録",
       "x": 1020.0,
       "y": 699.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": "2026/05/22 4:49",
+      "acquired_at": "2026/05/27 23:46",
       "status": "要確認",
-      "memo": "OCR IMG_0559.PNG / #511 X:20 Y:699 Lv.1 / 中立/未登録 -> fIrE",
+      "memo": "手入力ログ 2026/05/27 23:46 / #511 X:20 Y:699 Lv.1 漁場 / 中立/未登録 -> ALj",
       "visual_x": 1200.0,
       "visual_y": 699.0,
-      "display_owner": "fIrE",
+      "display_owner": "ALj",
       "destroyed": false,
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
@@ -16781,25 +16781,25 @@
       "id": "#509:E-9",
       "name": "E-9",
       "type": "漁場",
-      "owner": "SsQ",
-      "protect_until": "2026/05/24 7:00",
+      "owner": "Lghs",
+      "protect_until": "2026/05/30 15:00",
       "x": 1399.0,
       "y": 2399.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/22 4:20",
-      "status": "保護切れ",
-      "memo": "OCR IMG_0558.PNG / #509 X:399 Y:399 Lv.4 / 中立/未登録 -> SsQ",
+      "acquired_at": "2026/05/27 23:18",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:18 / #509 X:399 Y:399 Lv.4 漁場 / SsQ -> Lghs / 奪取",
       "visual_x": 1579.0,
       "visual_y": 2759.0,
-      "display_owner": "SsQ",
+      "display_owner": "Lghs",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -89.66,
-        "protect_until": "2026-05-24T07:00:00+09:00"
+        "status": "protected",
+        "hours_remaining": 62.05,
+        "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
     {
@@ -16956,21 +16956,21 @@
       "id": "中央:中央-2-17",
       "name": "中央-2-17",
       "type": "漁場",
-      "owner": "BHE",
+      "owner": "TIKW",
       "protect_until": "安全時間要登録",
       "x": 1824.0,
       "y": 1924.0,
       "importance": 3.0,
       "area": "中央",
-      "acquired_at": "2026/05/22 3:18",
+      "acquired_at": "2026/05/27 23:37",
       "status": "要確認",
-      "memo": "OCR IMG_0555.PNG / #8061 X:824 Y:924 Lv.6 / 中立/未登録 -> BHE",
+      "memo": "手入力ログ 2026/05/27 23:37 / #8061 X:824 Y:924 Lv.6 漁場 / BHE -> TIKW / 奪取",
       "visual_x": 2004.0,
       "visual_y": 2104.0,
-      "display_owner": "BHE",
+      "display_owner": "TIKW",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -17006,25 +17006,25 @@
       "id": "中央:中央-1-16",
       "name": "中央-1-16",
       "type": "漁場",
-      "owner": "BHE",
-      "protect_until": "安全時間要登録",
+      "owner": "TkTk",
+      "protect_until": "2026/05/30 15:00",
       "x": 1774.0,
       "y": 1974.0,
       "importance": 3.0,
       "area": "中央",
-      "acquired_at": "2026/05/22 3:08",
-      "status": "要確認",
-      "memo": "OCR IMG_0555.PNG / #8061 X:774 Y:974 Lv.5 / 中立/未登録 -> BHE",
+      "acquired_at": "2026/05/27 23:46",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:46 / #8061 X:774 Y:974 Lv.5 漁場 / BHE -> TkTk / 奪取",
       "visual_x": 1954.0,
       "visual_y": 2154.0,
-      "display_owner": "BHE",
+      "display_owner": "TkTk",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 62.05,
+        "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
     {
@@ -17048,7 +17048,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -105.66,
+        "hours_remaining": -105.95,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -17323,7 +17323,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -17373,7 +17373,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -17398,7 +17398,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -17423,7 +17423,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -17473,7 +17473,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -17498,7 +17498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -17573,7 +17573,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -17623,7 +17623,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -17698,7 +17698,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -17923,7 +17923,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -17973,7 +17973,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -17998,7 +17998,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -18023,7 +18023,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -18048,7 +18048,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -18123,7 +18123,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -18198,7 +18198,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -105.66,
+        "hours_remaining": -105.95,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -18223,7 +18223,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -18273,7 +18273,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -105.66,
+        "hours_remaining": -105.95,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -18373,7 +18373,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -105.66,
+        "hours_remaining": -105.95,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -18473,7 +18473,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -18523,7 +18523,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -18548,7 +18548,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -18573,7 +18573,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -105.66,
+        "hours_remaining": -105.95,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -18598,7 +18598,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -18648,7 +18648,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -105.66,
+        "hours_remaining": -105.95,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -18673,7 +18673,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -18698,7 +18698,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -18773,7 +18773,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -105.66,
+        "hours_remaining": -105.95,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -18998,7 +18998,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -19073,7 +19073,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -19098,7 +19098,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -19123,7 +19123,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -105.66,
+        "hours_remaining": -105.95,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -19173,7 +19173,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -19198,7 +19198,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -19398,7 +19398,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -19406,25 +19406,25 @@
       "id": "#509:H-15",
       "name": "H-15",
       "type": "漁場",
-      "owner": "OWM",
-      "protect_until": "安全時間要登録",
+      "owner": "FHX",
+      "protect_until": "2026/05/31 7:00",
       "x": 1699.0,
       "y": 2699.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/21 4:24",
-      "status": "要確認",
-      "memo": "OCR IMG_0500.PNG / #509 X:699 Y:699 Lv.3",
+      "acquired_at": "2026/05/27 23:51",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:51 / #509 X:699 Y:699 Lv.3 漁場 / OWM -> FHX / 奪取",
       "visual_x": 1879.0,
       "visual_y": 3059.0,
-      "display_owner": "OWM",
+      "display_owner": "FHX",
       "destroyed": false,
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -19973,7 +19973,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -20023,7 +20023,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -20273,7 +20273,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -20298,7 +20298,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -105.66,
+        "hours_remaining": -105.95,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -20348,7 +20348,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -20398,7 +20398,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -20448,7 +20448,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -20473,7 +20473,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -20498,7 +20498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -20523,7 +20523,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -20623,7 +20623,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -20648,7 +20648,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -20806,18 +20806,18 @@
       "id": "#509:H-19",
       "name": "H-19",
       "type": "漁場",
-      "owner": "xjR",
+      "owner": "UMN",
       "protect_until": "安全時間要登録",
       "x": 1899.0,
       "y": 2699.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/20 23:55",
+      "acquired_at": "2026/05/27 23:13",
       "status": "要確認",
-      "memo": "OCR IMG_0475.PNG / #509 X:899 Y:699 Lv.1",
+      "memo": "手入力ログ 2026/05/27 23:13 / #509 X:899 Y:699 Lv.1 漁場 / xjR -> UMN / 奪取",
       "visual_x": 2079.0,
       "visual_y": 3059.0,
-      "display_owner": "xjR",
+      "display_owner": "UMN",
       "destroyed": false,
       "affiliation": "ally",
       "strategic_color": "#16a34a",
@@ -20873,7 +20873,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -21048,7 +21048,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -21073,7 +21073,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -21081,18 +21081,18 @@
       "id": "#509:I-13",
       "name": "I-13",
       "type": "漁場",
-      "owner": "AoW",
+      "owner": "Stj",
       "protect_until": "安全時間要登録",
       "x": 1599.0,
       "y": 2799.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/20 23:33",
+      "acquired_at": "2026/05/27 23:07",
       "status": "要確認",
-      "memo": "OCR IMG_0470.PNG / #509 X:599 Y:799 Lv.2",
+      "memo": "手入力ログ 2026/05/27 23:07 / #509 X:599 Y:799 Lv.2 漁場 / AoW -> Stj / 奪取",
       "visual_x": 1779.0,
       "visual_y": 3159.0,
-      "display_owner": "AoW",
+      "display_owner": "Stj",
       "destroyed": false,
       "affiliation": "ally",
       "strategic_color": "#16a34a",
@@ -21198,7 +21198,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -89.66,
+        "hours_remaining": -89.95,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -21298,7 +21298,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -21423,7 +21423,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -21448,7 +21448,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -21523,7 +21523,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -21548,7 +21548,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -21573,7 +21573,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -21598,7 +21598,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 6.34,
+        "hours_remaining": 6.05,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -21781,25 +21781,25 @@
       "id": "#534:B-5",
       "name": "B-5",
       "type": "漁場",
-      "owner": "MOE",
-      "protect_until": "2026/05/23 23:00",
+      "owner": "4tH",
+      "protect_until": "2026/05/31 7:00",
       "x": 199.0,
       "y": 2099.0,
       "importance": 3.0,
       "area": "#534",
-      "acquired_at": "2026/05/20 16:41",
-      "status": "保護切れ",
-      "memo": "OCR IMG_0452.PNG / #534 X:199 Y:99 Lv.1",
+      "acquired_at": "2026/05/27 23:07",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:07 / #534 X:199 Y:99 Lv.1 漁場 / 中立/未登録 -> 4tH",
       "visual_x": 199.0,
       "visual_y": 2459.0,
-      "display_owner": "MOE",
+      "display_owner": "4tH",
       "destroyed": false,
       "affiliation": "self",
       "strategic_color": "#2563eb",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -97.66,
-        "protect_until": "2026-05-23T23:00:00+09:00"
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -21948,7 +21948,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -21973,7 +21973,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -21998,7 +21998,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -22148,7 +22148,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -105.66,
+        "hours_remaining": -105.95,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -22198,7 +22198,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -22298,7 +22298,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -22423,7 +22423,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -97.66,
+        "hours_remaining": -97.95,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -22473,7 +22473,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -9.66,
+        "hours_remaining": -9.95,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -22748,7 +22748,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -177.66,
+        "hours_remaining": -177.95,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -22756,21 +22756,21 @@
       "id": "#509:A-15",
       "name": "A-15",
       "type": "漁場",
-      "owner": "BHE",
+      "owner": "TIKW",
       "protect_until": "安全時間要登録",
       "x": 1699.0,
       "y": 2020.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/20 3:38",
+      "acquired_at": "2026/05/27 23:51",
       "status": "要確認",
-      "memo": "新規画像: #509 X:699 Y:20 Lv.1",
+      "memo": "手入力ログ 2026/05/27 23:51 / #509 X:699 Y:20 Lv.1 漁場 / BHE -> TIKW / 奪取",
       "visual_x": 1879.0,
       "visual_y": 2380.0,
-      "display_owner": "BHE",
+      "display_owner": "TIKW",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -22823,7 +22823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -23119,8 +23119,8 @@
       "visual_y": 3259.0,
       "display_owner": "UMN",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -23198,7 +23198,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 62.34,
+        "hours_remaining": 62.05,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -23323,7 +23323,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -23373,7 +23373,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -23398,7 +23398,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 62.34,
+        "hours_remaining": 62.05,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -23498,7 +23498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -169.66,
+        "hours_remaining": -169.95,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -23523,7 +23523,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -169.66,
+        "hours_remaining": -169.95,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -23573,7 +23573,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -169.66,
+        "hours_remaining": -169.95,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -23648,7 +23648,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 62.34,
+        "hours_remaining": 62.05,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -23698,7 +23698,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -169.66,
+        "hours_remaining": -169.95,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -23723,7 +23723,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -169.66,
+        "hours_remaining": -169.95,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -23781,25 +23781,25 @@
       "id": "#476:B-15",
       "name": "B-15",
       "type": "漁場",
-      "owner": "476X",
-      "protect_until": "2026/05/20 23:00",
+      "owner": "R6q",
+      "protect_until": "安全時間要登録",
       "x": 699.0,
       "y": 1099.0,
       "importance": 3.0,
       "area": "#476",
-      "acquired_at": "2026/05/19 16:37",
-      "status": "保護切れ",
-      "memo": "画像10: #476 X:699 Y:99 Lv1",
+      "acquired_at": "2026/05/27 23:07",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/27 23:07 / #476 X:699 Y:99 Lv.1 漁場 / 中立/未登録 -> R6q",
       "visual_x": 699.0,
       "visual_y": 1279.0,
-      "display_owner": "476X",
+      "display_owner": "R6q",
       "destroyed": false,
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -169.66,
-        "protect_until": "2026-05-20T23:00:00+09:00"
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
       }
     },
     {
@@ -23823,7 +23823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 62.34,
+        "hours_remaining": 62.05,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -23848,7 +23848,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -169.66,
+        "hours_remaining": -169.95,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -24098,7 +24098,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -177.66,
+        "hours_remaining": -177.95,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -24106,21 +24106,21 @@
       "id": "#511:I-17",
       "name": "I-17",
       "type": "漁場",
-      "owner": "SVo",
+      "owner": "476M",
       "protect_until": "安全時間要登録",
       "x": 1799.0,
       "y": 799.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": "2026/05/19 11:13",
+      "acquired_at": "2026/05/27 23:18",
       "status": "要確認",
-      "memo": "画像3: #511 X:799 Y:799 Lv2",
+      "memo": "手入力ログ 2026/05/27 23:18 / #511 X:799 Y:799 Lv.2 漁場 / SVa -> 476M / 奪取",
       "visual_x": 1979.0,
       "visual_y": 799.0,
-      "display_owner": "SVo",
+      "display_owner": "476M",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -24131,25 +24131,25 @@
       "id": "#511:I-19",
       "name": "I-19",
       "type": "漁場",
-      "owner": "BgNa",
-      "protect_until": "2026/05/20 23:00",
+      "owner": "476X",
+      "protect_until": "2026/05/31 7:00",
       "x": 1899.0,
       "y": 799.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": "2026/05/19 11:07",
-      "status": "保護切れ",
-      "memo": "画像2/3: #511 X:899 Y:799 Lv1",
+      "acquired_at": "2026/05/27 23:30",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:30 / #511 X:899 Y:799 Lv.1 漁場 / 中立/未登録 -> 476X",
       "visual_x": 2079.0,
       "visual_y": 799.0,
-      "display_owner": "BgNa",
+      "display_owner": "476X",
       "destroyed": false,
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -169.66,
-        "protect_until": "2026-05-20T23:00:00+09:00"
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -24173,7 +24173,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -24198,7 +24198,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -177.66,
+        "hours_remaining": -177.95,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -24256,21 +24256,21 @@
       "id": "#511:J-17",
       "name": "J-17",
       "type": "漁場",
-      "owner": "SVo",
+      "owner": "AAOA",
       "protect_until": "安全時間要登録",
       "x": 1799.0,
       "y": 899.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": "2026/05/19 9:07",
+      "acquired_at": "2026/05/27 23:46",
       "status": "要確認",
-      "memo": "画像1: #511 X:799 Y:899 Lv1",
+      "memo": "手入力ログ 2026/05/27 23:46 / #511 X:799 Y:899 Lv.1 漁場 / SVa -> AAOA / 奪取",
       "visual_x": 1979.0,
       "visual_y": 899.0,
-      "display_owner": "SVo",
+      "display_owner": "AAOA",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -24348,7 +24348,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -177.66,
+        "hours_remaining": -177.95,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -24423,7 +24423,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -24448,7 +24448,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -177.66,
+        "hours_remaining": -177.95,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -24473,7 +24473,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -177.66,
+        "hours_remaining": -177.95,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -24498,7 +24498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -24523,7 +24523,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -24548,7 +24548,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -177.66,
+        "hours_remaining": -177.95,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -24573,7 +24573,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -24598,7 +24598,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -177.66,
+        "hours_remaining": -177.95,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -24623,7 +24623,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -24648,7 +24648,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -177.66,
+        "hours_remaining": -177.95,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -24673,7 +24673,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -177.66,
+        "hours_remaining": -177.95,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -24698,7 +24698,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 62.34,
+        "hours_remaining": 62.05,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -24723,7 +24723,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -24748,7 +24748,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -24773,7 +24773,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -177.66,
+        "hours_remaining": -177.95,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -24798,7 +24798,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -177.66,
+        "hours_remaining": -177.95,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -24823,7 +24823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -24898,7 +24898,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -24923,7 +24923,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -24948,7 +24948,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -24973,7 +24973,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -24998,7 +24998,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -105.66,
+        "hours_remaining": -105.95,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -25023,7 +25023,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -177.66,
+        "hours_remaining": -177.95,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -25073,7 +25073,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -25098,7 +25098,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -25123,7 +25123,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -25148,7 +25148,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -25173,7 +25173,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -25198,7 +25198,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -25223,7 +25223,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -161.66,
+        "hours_remaining": -161.95,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -25248,7 +25248,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -105.66,
+        "hours_remaining": -105.95,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -25273,7 +25273,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -273.66,
+        "hours_remaining": -273.95,
         "protect_until": "2026-05-16T15:00:00+09:00"
       }
     },
@@ -25281,25 +25281,25 @@
       "id": "#534:B-15",
       "name": "B-15",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": "安全時間要登録",
+      "owner": "MOE",
+      "protect_until": "2026/05/30 15:00",
       "x": 699.0,
       "y": 2099.0,
       "importance": 3.0,
       "area": "#534",
-      "acquired_at": "2026/05/12 14:42",
-      "status": "放棄",
-      "memo": "2026/05/27 22:53 右側パネル: 放棄確認 / 中立化 JDX -> 中立",
+      "acquired_at": "2026/05/27 23:13",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:13 / #534 X:699 Y:99 Lv.1 漁場 / 中立/未登録 -> MOE",
       "visual_x": 699.0,
       "visual_y": 2459.0,
-      "display_owner": "未取得",
+      "display_owner": "MOE",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "self",
+      "strategic_color": "#2563eb",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 62.05,
+        "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
     {
@@ -25323,7 +25323,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 174.34,
+        "hours_remaining": 174.05,
         "protect_until": "2026-06-04T07:00:00+09:00"
       }
     },
@@ -25923,7 +25923,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -26019,8 +26019,8 @@
       "visual_y": 99.0,
       "display_owner": "UMN",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -27494,8 +27494,8 @@
       "visual_y": 649.0,
       "display_owner": "UMN",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -30873,7 +30873,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -30981,21 +30981,21 @@
       "id": "#476:G-1",
       "name": "G-1",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "476K",
+      "protect_until": "安全時間要登録",
       "x": 20.0,
       "y": 1599.0,
       "importance": 3.0,
       "area": "#476",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 0:11",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/28 00:11 / #476 X:20 Y:599 Lv.1 漁場 / 中立/未登録 -> 476K",
       "visual_x": 20.0,
       "visual_y": 1779.0,
-      "display_owner": "未取得",
+      "display_owner": "476K",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -31206,25 +31206,25 @@
       "id": "#476:H-1",
       "name": "H-1",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "nO9",
+      "protect_until": "2026/05/31 7:00",
       "x": 20.0,
       "y": 1699.0,
       "importance": 3.0,
       "area": "#476",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:51",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:51 / #476 X:20 Y:699 Lv.1 漁場 / 中立/未登録 -> nO9",
       "visual_x": 20.0,
       "visual_y": 1879.0,
-      "display_owner": "未取得",
+      "display_owner": "nO9",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "self",
+      "strategic_color": "#2563eb",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -31881,21 +31881,21 @@
       "id": "#476:I-3",
       "name": "I-3",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "476K",
+      "protect_until": "安全時間要登録",
       "x": 99.0,
       "y": 1799.0,
       "importance": 3.0,
       "area": "#476",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 0:11",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/28 00:11 / #476 X:99 Y:799 Lv.1 漁場 / 中立/未登録 -> 476K",
       "visual_x": 99.0,
       "visual_y": 1979.0,
-      "display_owner": "未取得",
+      "display_owner": "476K",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -31931,25 +31931,25 @@
       "id": "#476:J-1",
       "name": "J-1",
       "type": "漁場",
-      "owner": "476H",
-      "protect_until": null,
+      "owner": "nO9",
+      "protect_until": "2026/05/31 7:00",
       "x": 20.0,
       "y": 1899.0,
       "importance": 3.0,
       "area": "#476",
-      "acquired_at": null,
-      "status": "",
-      "memo": "2026/05/24 12:14 右側パネル: 中立/未登録 -> 476H",
+      "acquired_at": "2026/05/27 23:30",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:30 / #476 X:20 Y:899 Lv.1 漁場 / 476H -> nO9 / 奪取",
       "visual_x": 20.0,
       "visual_y": 2079.0,
-      "display_owner": "476H",
+      "display_owner": "nO9",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "self",
+      "strategic_color": "#2563eb",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -31973,7 +31973,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -31981,21 +31981,21 @@
       "id": "#476:J-21",
       "name": "J-21",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "476H",
+      "protect_until": "安全時間要登録",
       "x": 978.0,
       "y": 1899.0,
       "importance": 3.0,
       "area": "#476",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:37",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/27 23:37 / #476 X:978 Y:899 Lv.1 漁場 / 中立/未登録 -> 476H",
       "visual_x": 978.0,
       "visual_y": 2079.0,
-      "display_owner": "未取得",
+      "display_owner": "476H",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -32056,24 +32056,24 @@
       "id": "#476:K-1",
       "name": "K-1",
       "type": "漁場",
-      "owner": "476X",
+      "owner": "89M",
       "protect_until": "2026/05/31 7:00",
       "x": 20.0,
       "y": 1978.0,
       "importance": 3.0,
       "area": "#476",
-      "acquired_at": "2026/05/27 23:30",
+      "acquired_at": "2026/05/27 23:24",
       "status": "保護中",
-      "memo": "手入力ログ 2026/05/27 23:30 / #511 X:899 Y:799 Lv.1 漁場 / 中立/未登録 -> 476X",
+      "memo": "手入力ログ 2026/05/27 23:24 / #476 X:20 Y:978 Lv.1 漁場 / 476K -> 89M / 奪取",
       "visual_x": 20.0,
       "visual_y": 2158.0,
-      "display_owner": "476X",
+      "display_owner": "89M",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "self",
+      "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -33231,25 +33231,25 @@
       "id": "#480:D-11",
       "name": "D-11",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "GcC",
+      "protect_until": "2026/05/31 7:00",
       "x": 2499.0,
       "y": 1299.0,
       "importance": 3.0,
       "area": "#480",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:07",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:07 / #480 X:499 Y:299 Lv.3 漁場 / WbW -> GcC / 奪取",
       "visual_x": 2859.0,
       "visual_y": 1479.0,
-      "display_owner": "未取得",
+      "display_owner": "GcC",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -35556,21 +35556,21 @@
       "id": "#503:a-6",
       "name": "a-6",
       "type": "都市",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "Bye",
+      "protect_until": "安全時間要登録",
       "x": 2249.0,
       "y": 2049.0,
       "importance": 8.0,
       "area": "#503",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:18",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/27 23:18 / #503 X:249 Y:49 Lv.1 湿地の村 / 中立/未登録 -> Bye / 種別は都市に正規化 / 最初の連盟",
       "visual_x": 2609.0,
       "visual_y": 2409.0,
-      "display_owner": "未取得",
+      "display_owner": "Bye",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -35906,25 +35906,25 @@
       "id": "#503:C-1",
       "name": "C-1",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "GcC",
+      "protect_until": "2026/05/31 7:00",
       "x": 2020.0,
       "y": 2199.0,
       "importance": 3.0,
       "area": "#503",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:13",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:13 / #503 X:20 Y:199 Lv.1 漁場 / TIKW -> GcC / 奪取",
       "visual_x": 2380.0,
       "visual_y": 2559.0,
-      "display_owner": "未取得",
+      "display_owner": "GcC",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -36831,21 +36831,21 @@
       "id": "#503:e-16",
       "name": "e-16",
       "type": "都市",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "TIKW",
+      "protect_until": "安全時間要登録",
       "x": 2749.0,
       "y": 2449.0,
       "importance": 8.0,
       "area": "#503",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 0:03",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/28 00:03 / #503 X:749 Y:449 Lv.2 湿地の兵舎 / 中立/未登録 -> TIKW / 種別は都市に正規化 / 最初の連盟",
       "visual_x": 3109.0,
       "visual_y": 2809.0,
-      "display_owner": "未取得",
+      "display_owner": "TIKW",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -37406,21 +37406,21 @@
       "id": "#503:G-1",
       "name": "G-1",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "GX99",
+      "protect_until": "安全時間要登録",
       "x": 2020.0,
       "y": 2599.0,
       "importance": 3.0,
       "area": "#503",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:13",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/27 23:13 / #503 X:20 Y:599 Lv.1 漁場 / FHX -> GX99 / 奪取",
       "visual_x": 2380.0,
       "visual_y": 2959.0,
-      "display_owner": "未取得",
+      "display_owner": "GX99",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -38031,21 +38031,21 @@
       "id": "#503:H-7",
       "name": "H-7",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "Bye",
+      "protect_until": "安全時間要登録",
       "x": 2299.0,
       "y": 2699.0,
       "importance": 3.0,
       "area": "#503",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:37",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/27 23:37 / #503 X:299 Y:699 Lv.3 漁場 / 中立/未登録 -> Bye",
       "visual_x": 2659.0,
       "visual_y": 3059.0,
-      "display_owner": "未取得",
+      "display_owner": "Bye",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -38356,21 +38356,21 @@
       "id": "#503:J-13",
       "name": "J-13",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "RING",
+      "protect_until": "安全時間要登録",
       "x": 2599.0,
       "y": 2899.0,
       "importance": 3.0,
       "area": "#503",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:24",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/27 23:24 / #503 X:599 Y:899 Lv.1 漁場 / 中立/未登録 -> RING",
       "visual_x": 2959.0,
       "visual_y": 3259.0,
-      "display_owner": "未取得",
+      "display_owner": "RING",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -39348,7 +39348,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 62.34,
+        "hours_remaining": 62.05,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -39406,21 +39406,21 @@
       "id": "#509:C-21",
       "name": "C-21",
       "type": "漁場",
-      "owner": "SsQ",
-      "protect_until": null,
+      "owner": "one",
+      "protect_until": "安全時間要登録",
       "x": 1978.0,
       "y": 2199.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": null,
-      "status": "",
-      "memo": "2026/05/23 22:20 サイドバー: 中立/未登録 -> SsQ",
+      "acquired_at": "2026/05/27 23:07",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/27 23:07 / #509 X:978 Y:199 Lv.1 漁場 / SsQ -> one / 奪取",
       "visual_x": 2158.0,
       "visual_y": 2559.0,
-      "display_owner": "SsQ",
+      "display_owner": "one",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -39598,7 +39598,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -39623,7 +39623,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 174.34,
+        "hours_remaining": 174.05,
         "protect_until": "2026-06-04T07:00:00+09:00"
       }
     },
@@ -39673,7 +39673,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 174.34,
+        "hours_remaining": 174.05,
         "protect_until": "2026-06-04T07:00:00+09:00"
       }
     },
@@ -40081,21 +40081,21 @@
       "id": "#509:F-21",
       "name": "F-21",
       "type": "漁場",
-      "owner": "FHX",
-      "protect_until": null,
+      "owner": "GX99",
+      "protect_until": "安全時間要登録",
       "x": 1978.0,
       "y": 2499.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": null,
-      "status": "",
-      "memo": "2026/05/23 22:55 サイドバー: 中立/未登録 -> FHX",
+      "acquired_at": "2026/05/27 23:13",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/27 23:13 / #509 X:978 Y:499 Lv.1 漁場 / FHX -> GX99 / 奪取",
       "visual_x": 2158.0,
       "visual_y": 2859.0,
-      "display_owner": "FHX",
+      "display_owner": "GX99",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -40256,25 +40256,25 @@
       "id": "#509:g-12",
       "name": "g-12",
       "type": "都市",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "FHX",
+      "protect_until": "2026/06/04 7:00",
       "x": 1549.0,
       "y": 2649.0,
       "importance": 8.0,
       "area": "#509",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 0:11",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/28 00:11 / #509 X:549 Y:649 Lv.3 密林の集会場 / 中立/未登録 -> FHX / 種別は都市に正規化 / 最初の連盟",
       "visual_x": 1729.0,
       "visual_y": 3009.0,
-      "display_owner": "未取得",
+      "display_owner": "FHX",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 174.05,
+        "protect_until": "2026-06-04T07:00:00+09:00"
       }
     },
     {
@@ -40298,7 +40298,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -40348,7 +40348,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -40398,7 +40398,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -40873,7 +40873,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 78.34,
+        "hours_remaining": 78.05,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -40994,8 +40994,8 @@
       "visual_y": 3159.0,
       "display_owner": "UMN",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -41206,21 +41206,21 @@
       "id": "#509:J-11",
       "name": "J-11",
       "type": "漁場",
-      "owner": "AoW",
-      "protect_until": null,
+      "owner": "fzn",
+      "protect_until": "安全時間要登録",
       "x": 1499.0,
       "y": 2899.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:30",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/27 23:30 / #509 X:499 Y:899 Lv.1 漁場 / AoW -> fzn / 奪取",
       "visual_x": 1679.0,
       "visual_y": 3259.0,
-      "display_owner": "AoW",
+      "display_owner": "fzn",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -41481,18 +41481,18 @@
       "id": "#509:J-7",
       "name": "J-7",
       "type": "漁場",
-      "owner": "OWM",
-      "protect_until": null,
+      "owner": "xjR",
+      "protect_until": "安全時間要登録",
       "x": 1299.0,
       "y": 2899.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": null,
-      "status": "",
-      "memo": "2026/05/23 20:07 右側パネル: 中立/未登録 -> OWM",
+      "acquired_at": "2026/05/27 23:56",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/27 23:56 / #509 X:299 Y:899 Lv.1 漁場 / OWM -> xjR / 奪取",
       "visual_x": 1479.0,
       "visual_y": 3259.0,
-      "display_owner": "OWM",
+      "display_owner": "xjR",
       "destroyed": false,
       "affiliation": "ally",
       "strategic_color": "#16a34a",
@@ -41631,18 +41631,18 @@
       "id": "#509:K-21",
       "name": "K-21",
       "type": "漁場",
-      "owner": "MOn",
-      "protect_until": null,
+      "owner": "UMN",
+      "protect_until": "安全時間要登録",
       "x": 1978.0,
       "y": 2978.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": null,
-      "status": "",
-      "memo": "2026/05/23 23:28 サイドバー: 中立/未登録 -> MOn",
+      "acquired_at": "2026/05/27 23:13",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/27 23:13 / #509 X:978 Y:978 Lv.1 漁場 / MOn -> UMN / 奪取",
       "visual_x": 2158.0,
       "visual_y": 3338.0,
-      "display_owner": "MOn",
+      "display_owner": "UMN",
       "destroyed": false,
       "affiliation": "ally",
       "strategic_color": "#16a34a",
@@ -43231,21 +43231,21 @@
       "id": "#511:E-13",
       "name": "E-13",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "WbW",
+      "protect_until": "安全時間要登録",
       "x": 1599.0,
       "y": 399.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:37",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/27 23:37 / #511 X:599 Y:399 Lv.4 漁場 / SVa -> WbW / 奪取",
       "visual_x": 1779.0,
       "visual_y": 399.0,
-      "display_owner": "未取得",
+      "display_owner": "WbW",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -43506,21 +43506,21 @@
       "id": "#511:F-13",
       "name": "F-13",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "WbW",
+      "protect_until": "安全時間要登録",
       "x": 1599.0,
       "y": 499.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:24",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/27 23:24 / #511 X:599 Y:499 Lv.4 漁場 / SVa -> WbW / 奪取",
       "visual_x": 1779.0,
       "visual_y": 499.0,
-      "display_owner": "未取得",
+      "display_owner": "WbW",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -43731,25 +43731,25 @@
       "id": "#511:G-13",
       "name": "G-13",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "BgNa",
+      "protect_until": "2026/05/31 7:00",
       "x": 1599.0,
       "y": 599.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:07",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:07 / #511 X:599 Y:599 Lv.4 漁場 / DaNG -> BgNa / 奪取",
       "visual_x": 1779.0,
       "visual_y": 599.0,
-      "display_owner": "未取得",
+      "display_owner": "BgNa",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -44398,7 +44398,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 62.34,
+        "hours_remaining": 62.05,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -44448,7 +44448,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 62.34,
+        "hours_remaining": 62.05,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -48731,50 +48731,50 @@
       "id": "#534:b-6",
       "name": "b-6",
       "type": "都市",
-      "owner": "MOE",
-      "protect_until": null,
+      "owner": "4tH",
+      "protect_until": "2026/06/04 7:00",
       "x": 249.0,
       "y": 2149.0,
       "importance": 8.0,
       "area": "#534",
-      "acquired_at": null,
-      "status": "",
-      "memo": "2026/05/21 19:37 右側パネル: 中立/未登録 -> MOE",
+      "acquired_at": "2026/05/27 23:24",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:24 / #534 X:249 Y:149 Lv.1 密林の村 / 中立/未登録 -> 4tH / 種別は都市に正規化",
       "visual_x": 249.0,
       "visual_y": 2509.0,
-      "display_owner": "MOE",
+      "display_owner": "4tH",
       "destroyed": false,
       "affiliation": "self",
       "strategic_color": "#2563eb",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 174.05,
+        "protect_until": "2026-06-04T07:00:00+09:00"
       }
     },
     {
       "id": "#534:b-8",
       "name": "b-8",
       "type": "都市",
-      "owner": "MOE",
-      "protect_until": null,
+      "owner": "SHA0",
+      "protect_until": "2026/06/04 7:00",
       "x": 349.0,
       "y": 2149.0,
       "importance": 8.0,
       "area": "#534",
-      "acquired_at": null,
-      "status": "",
-      "memo": "2026/05/21 19:37 右側パネル: 中立/未登録 -> MOE",
+      "acquired_at": "2026/05/27 23:37",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:37 / #534 X:349 Y:149 Lv.1 密林の村 / 中立/未登録 -> SHA0 / 種別は都市に正規化",
       "visual_x": 349.0,
       "visual_y": 2509.0,
-      "display_owner": "MOE",
+      "display_owner": "SHA0",
       "destroyed": false,
       "affiliation": "self",
       "strategic_color": "#2563eb",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 174.05,
+        "protect_until": "2026-06-04T07:00:00+09:00"
       }
     },
     {
@@ -49081,25 +49081,25 @@
       "id": "#534:D-11",
       "name": "D-11",
       "type": "漁場",
-      "owner": "SHA",
-      "protect_until": null,
+      "owner": "476C",
+      "protect_until": "2026/05/31 7:00",
       "x": 499.0,
       "y": 2299.0,
       "importance": 3.0,
       "area": "#534",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:07",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:07 / #534 X:499 Y:299 Lv.3 漁場 / SHA -> 476C / 奪取",
       "visual_x": 499.0,
       "visual_y": 2659.0,
-      "display_owner": "SHA",
+      "display_owner": "476C",
       "destroyed": false,
-      "affiliation": "self",
-      "strategic_color": "#2563eb",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -49131,50 +49131,50 @@
       "id": "#534:D-13",
       "name": "D-13",
       "type": "漁場",
-      "owner": "JDX",
-      "protect_until": null,
+      "owner": "476B",
+      "protect_until": "2026/05/31 7:00",
       "x": 599.0,
       "y": 2299.0,
       "importance": 3.0,
       "area": "#534",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:18",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:18 / #534 X:599 Y:299 Lv.3 漁場 / JDX -> 476B / 奪取",
       "visual_x": 599.0,
       "visual_y": 2659.0,
-      "display_owner": "JDX",
+      "display_owner": "476B",
       "destroyed": false,
-      "affiliation": "self",
-      "strategic_color": "#2563eb",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
       "id": "#534:D-15",
       "name": "D-15",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "Trh",
+      "protect_until": "2026/05/31 7:00",
       "x": 699.0,
       "y": 2299.0,
       "importance": 3.0,
       "area": "#534",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 0:03",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/28 00:03 / #534 X:699 Y:299 Lv.3 漁場 / 中立/未登録 -> Trh",
       "visual_x": 699.0,
       "visual_y": 2659.0,
-      "display_owner": "未取得",
+      "display_owner": "Trh",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "self",
+      "strategic_color": "#2563eb",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -49331,18 +49331,18 @@
       "id": "#534:D-3",
       "name": "D-3",
       "type": "漁場",
-      "owner": "nO9",
-      "protect_until": null,
+      "owner": "RGWC",
+      "protect_until": "安全時間要登録",
       "x": 99.0,
       "y": 2299.0,
       "importance": 3.0,
       "area": "#534",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:13",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/27 23:13 / #534 X:99 Y:299 Lv.1 漁場 / nO9 -> RGWC / 奪取",
       "visual_x": 99.0,
       "visual_y": 2659.0,
-      "display_owner": "nO9",
+      "display_owner": "RGWC",
       "destroyed": false,
       "affiliation": "self",
       "strategic_color": "#2563eb",
@@ -49531,25 +49531,25 @@
       "id": "#534:E-13",
       "name": "E-13",
       "type": "漁場",
-      "owner": "JDX",
-      "protect_until": null,
+      "owner": "476C",
+      "protect_until": "2026/05/31 7:00",
       "x": 599.0,
       "y": 2399.0,
       "importance": 3.0,
       "area": "#534",
-      "acquired_at": null,
-      "status": "",
-      "memo": "2026/05/23 19:26 サイドバー: 中立/未登録 -> JDX",
+      "acquired_at": "2026/05/27 23:30",
+      "status": "保護中",
+      "memo": "手入力ログ 2026/05/27 23:30 / #534 X:599 Y:399 Lv.4 漁場 / JDX -> 476C / 奪取",
       "visual_x": 599.0,
       "visual_y": 2759.0,
-      "display_owner": "JDX",
+      "display_owner": "476C",
       "destroyed": false,
-      "affiliation": "self",
-      "strategic_color": "#2563eb",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 78.05,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -53231,21 +53231,21 @@
       "id": "中央:中央-3-1",
       "name": "中央-3-1",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "476H",
+      "protect_until": "安全時間要登録",
       "x": 1024.0,
       "y": 1874.0,
       "importance": 3.0,
       "area": "中央",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:51",
+      "status": "要確認",
+      "memo": "手入力ログ 2026/05/27 23:51 / #8061 X:24 Y:874 Lv.5 漁場 / 中立/未登録 -> 476H",
       "visual_x": 1204.0,
       "visual_y": 2054.0,
-      "display_owner": "未取得",
+      "display_owner": "476H",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -82253,14 +82253,14 @@
   "owner_affiliations": {
     "JDX": "self",
     "476X": "enemy",
+    "476T": "enemy",
+    "476H": "enemy",
+    "476d": "enemy",
+    "476Z": "enemy",
+    "476M": "enemy",
+    "476B": "enemy",
     "476C": "enemy",
     "476A": "enemy",
-    "476B": "enemy",
-    "476M": "enemy",
-    "476T": "enemy",
-    "476d": "enemy",
-    "476H": "enemy",
-    "476Z": "enemy",
     "299": "enemy",
     "476K": "enemy",
     "WoW3": "ally",
@@ -82310,7 +82310,6 @@
     "59U": "self",
     "WbW": "enemy",
     "Kfk": "enemy",
-    "CDf8": "enemy",
     "FHX": "ally",
     "COZy": "enemy",
     "Stj": "ally",
@@ -82319,13 +82318,15 @@
     "ALi": "enemy",
     "OTT": "ally",
     "PmP": "enemy",
-    "UMN": "enemy",
+    "UMN": "ally",
+    "MOn": "ally",
     "KTVS": "self",
     "2N7": "ally",
     "JLO": "ally",
     "DaNG": "ally",
     "fIrE": "enemy",
     "WUG": "enemy",
+    "CDf8": "enemy",
     "Dao": "self",
     "89M": "self",
     "f4j": "self",
@@ -82334,19 +82335,18 @@
     "nO9": "self",
     "FarM": "enemy",
     "w6F": "self",
-    "MOn": "ally",
     "tWD": "ally",
     "VEX": "ally",
     "TaW": "ally",
     "Skh": "self",
-    "eXt": "ally",
     "ALj": "enemy",
+    "eXt": "ally",
     "kOi": "self",
     "RING": "enemy",
-    "MOE": "self",
     "JlZ": "ally",
     "SVo": "ally",
     "SHA0": "self",
+    "MOE": "self",
     "IXM": "enemy",
     "KOCH": "ally",
     "sg3": "self",
