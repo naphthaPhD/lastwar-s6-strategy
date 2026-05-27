@@ -42,9 +42,11 @@ This does not automate gameplay. It is a repeatable analysis and visualization p
 10. Trade-post nodes are displayed but intentionally left unconnected.
 11. Lowercase coordinate letters are normalized to city nodes; uppercase coordinate letters are normalized to fishery nodes.
 12. The outer area placement is clockwise from the upper-left: `#534`, `#509`, `#503`, `#480`, `#440`, `#511`, `#523`, `#476`.
-13. Fishery nodes are displayed larger than city nodes, and the central area is included in the middle of the ring.
-14. Clicking a node opens a fixed information panel with management-table fields.
-15. Added a first local interactive-map server skeleton for a cpt-hedge-style workflow: browser rendering from `state.json`, sheet refresh endpoint, and local manual overrides in `data/invasion_strategy_overrides.json`.
+13. Fishery nodes are displayed larger than city nodes, but central-area fishery nodes are displayed smaller than outer fisheries to reduce central clutter.
+14. The HTML map has a label toggle: coordinate labels by default, or alliance-name labels. In alliance-name mode, trade posts are always labeled `交易地`.
+15. Node colors are strategic colors from `管理表たたき` ownership: #534-side owners are blue, #509/#440/#511-side owners are green, enemy-side owners are red, and unowned nodes are white. Owners with server-number prefixes such as `476B` are classified by that prefix even when they occupy another area.
+16. Clicking a node opens a fixed information panel with management-table fields.
+17. Added a first local interactive-map server skeleton for a cpt-hedge-style workflow: browser rendering from `state.json`, sheet refresh endpoint, and local manual overrides in `data/invasion_strategy_overrides.json`.
 
 ## Current risks
 

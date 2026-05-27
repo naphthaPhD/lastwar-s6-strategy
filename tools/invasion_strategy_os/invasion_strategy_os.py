@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import csv
-import hashlib
 import inspect
 import json
 import re
@@ -27,6 +26,14 @@ DEFAULT_ALTAR_TYPE = "\u796d\u58c7"
 DEFAULT_CENTRAL_EMPTY_TYPE = "\u4e2d\u592e\u7a7a\u767d"
 DEFAULT_ANCESTRAL_TEMPLE_TYPE = "\u7956\u970a\u795e\u6bbf"
 CENTRAL_REFERENCE_EMPTY_COORDS = {(10, 10), (10, 11), (11, 10), (11, 11)}
+SELF_AREA = "#534"
+ALLY_AREAS = {"#509", "#440", "#511"}
+ENEMY_AREAS = {"#503", "#480", "#523", "#476"}
+SELF_SERVERS = {"534"}
+ALLY_SERVERS = {"509", "440", "511"}
+ENEMY_SERVERS = {"503", "480", "523", "476"}
+DEFAULT_SELF_OWNERS = {"JDX"}
+UNOWNED_OWNER_VALUES = {"", "unknown", "none", "neutral", "\u672a\u53d6\u5f97", "\u672a\u767b\u9332", "\u4e2d\u7acb", "\u4e2d\u7acb/\u672a\u767b\u9332"}
 
 NODE_ALIASES = {
     "id": ["id", "node_id", "key", "キー", "ID", "拠点ID", "位置キー"],
@@ -515,40 +522,116 @@ def round_mapping(values: dict[str, float]) -> dict[str, float]:
     return {key: round(value, 4) for key, value in sorted(values.items())}
 
 
-def owner_color(owner: str) -> str:
-    palette = [
-        "#2563eb",
-        "#dc2626",
-        "#16a34a",
-        "#d97706",
-        "#7c3aed",
-        "#0891b2",
-        "#be123c",
-        "#4b5563",
-    ]
-    digest = hashlib.sha256(owner.encode("utf-8")).hexdigest()
-    return palette[int(digest[:2], 16) % len(palette)]
+def is_unowned_owner(owner: str | None) -> bool:
+    normalized = str(owner or "").strip().lower()
+    return normalized in UNOWNED_OWNER_VALUES
 
 
-def owner_color_map(owners: set[str]) -> dict[str, str]:
-    palette = [
-        "#2563eb",
-        "#dc2626",
-        "#16a34a",
-        "#d97706",
-        "#7c3aed",
-        "#0891b2",
-        "#be123c",
-        "#4b5563",
-        "#ca8a04",
-        "#0f766e",
-        "#9333ea",
-        "#c2410c",
-    ]
-    colors: dict[str, str] = {}
-    for index, owner in enumerate(sorted(owners)):
-        colors[owner] = palette[index] if index < len(palette) else owner_color(owner)
-    return colors
+def display_owner(owner: str | None) -> str:
+    return "\u672a\u53d6\u5f97" if is_unowned_owner(owner) else str(owner).strip()
+
+
+def area_affiliation(area: str) -> str:
+    if area == SELF_AREA:
+        return "self"
+    if area in ALLY_AREAS:
+        return "ally"
+    if area in ENEMY_AREAS:
+        return "enemy"
+    return "neutral"
+
+
+def server_affiliation(server: str) -> str:
+    if server in SELF_SERVERS:
+        return "self"
+    if server in ALLY_SERVERS:
+        return "ally"
+    if server in ENEMY_SERVERS:
+        return "enemy"
+    return "enemy"
+
+
+def owner_server_prefix(owner: str) -> str | None:
+    match = re.match(r"^#?(\d{3})", owner.strip())
+    return match.group(1) if match else None
+
+
+def build_owner_affiliations(graph: nx.Graph, config: dict[str, Any]) -> dict[str, str]:
+    self_owners = DEFAULT_SELF_OWNERS | {str(value).strip() for value in config.get("self_owners", [])}
+    ally_owners = {str(value).strip() for value in config.get("ally_owners", [])}
+    enemy_owners = {str(value).strip() for value in config.get("enemy_owners", [])}
+    affiliations: dict[str, str] = {}
+    for owner in self_owners:
+        if owner:
+            affiliations[owner] = "self"
+    for owner in ally_owners:
+        if owner:
+            affiliations[owner] = "ally"
+    for owner in enemy_owners:
+        if owner:
+            affiliations[owner] = "enemy"
+
+    owner_area_counts: dict[str, dict[str, int]] = {}
+    for _, node_data in graph.nodes(data=True):
+        owner = str(node_data.get("owner", "")).strip()
+        if is_unowned_owner(owner) or owner in affiliations:
+            continue
+        server = owner_server_prefix(owner)
+        if server:
+            affiliations[owner] = server_affiliation(server)
+            continue
+        affiliation = area_affiliation(str(node_data.get("area", "")))
+        if affiliation == "neutral":
+            continue
+        counts = owner_area_counts.setdefault(owner, {"self": 0, "ally": 0, "enemy": 0})
+        counts[affiliation] += 1
+
+    for owner, counts in owner_area_counts.items():
+        affiliations[owner] = sorted(
+            counts.items(),
+            key=lambda item: (-item[1], {"self": 0, "ally": 1, "enemy": 2}[item[0]]),
+        )[0][0]
+    return affiliations
+
+
+def affiliation_color(affiliation: str) -> str:
+    return {
+        "self": "#2563eb",
+        "ally": "#16a34a",
+        "enemy": "#dc2626",
+    }.get(affiliation, "#f8fafc")
+
+
+def strategic_affiliation(node: Node, owner_affiliations: dict[str, str]) -> str:
+    if is_unowned_owner(node.owner):
+        return "unowned"
+    return owner_affiliations.get(str(node.owner).strip(), area_affiliation(node.area))
+
+
+def strategic_color(node: Node, owner_affiliations: dict[str, str] | None = None) -> str:
+    if is_unowned_owner(node.owner):
+        return "#f8fafc"
+    if owner_affiliations is None:
+        return affiliation_color(area_affiliation(node.area))
+    return affiliation_color(strategic_affiliation(node, owner_affiliations))
+
+
+def visual_node_size(node: Node, config: dict[str, Any]) -> float:
+    node_min_size = float(config.get("node_min_size", 12))
+    node_max_size = float(config.get("node_max_size", 55))
+    node_size_multiplier = float(config.get("node_size_multiplier", 4))
+    central_fishery_size = config.get("central_fishery_size")
+    if (
+        central_fishery_size is not None
+        and node.area == CENTRAL_COORD_PREFIX
+        and node.type == DEFAULT_FISHERY_TYPE
+    ):
+        return float(central_fishery_size)
+    visual_size_by_type = {str(key): float(value) for key, value in config.get("visual_size_by_type", {}).items()}
+    return visual_size_by_type.get(
+        node.type,
+        max(node_min_size, min(node_max_size, node_min_size + node.importance * node_size_multiplier)),
+    )
 
 
 def protection_status(node: Node, now: datetime, warning_hours: float, tz: ZoneInfo) -> dict[str, Any]:
@@ -581,12 +664,8 @@ def write_html(
     critical_ids = {item["node_id"] for item in analysis["critical_nodes"]}
     warning_hours = float(config.get("protect_warning_hours", 6))
     visual_scale = float(config.get("visual_scale", 1.0))
-    node_min_size = float(config.get("node_min_size", 12))
-    node_max_size = float(config.get("node_max_size", 55))
-    node_size_multiplier = float(config.get("node_size_multiplier", 4))
-    visual_size_by_type = {str(key): float(value) for key, value in config.get("visual_size_by_type", {}).items()}
     font_size = int(config.get("font_size", 18))
-    colors_by_owner = owner_color_map({str(node_data.get("owner", "unknown")) for _, node_data in graph.nodes(data=True)})
+    owner_affiliations = build_owner_affiliations(graph, config)
 
     network = Network(height="100vh", width="100%", bgcolor="#111827", font_color="#f9fafb", cdn_resources="local")
     network.toggle_physics(False)
@@ -599,7 +678,9 @@ def write_html(
             border = "#ef4444"
         elif protect["status"] == "soon":
             border = "#facc15"
-        title = f"{node.area} {node.name} / {node.type} / {node.owner}"
+        owner_label = display_owner(node.owner)
+        affiliation = strategic_affiliation(node, owner_affiliations)
+        title = f"{node.area} {node.name} / {node.type} / {owner_label}"
         network.add_node(
             node.id,
             label=node.name,
@@ -607,16 +688,17 @@ def write_html(
             x=node.x * visual_scale,
             y=-node.y * visual_scale,
             physics=False,
-            size=visual_size_by_type.get(
-                node.type,
-                max(node_min_size, min(node_max_size, node_min_size + node.importance * node_size_multiplier)),
-            ),
-            color={"background": colors_by_owner.get(node.owner, owner_color(node.owner)), "border": border},
+            size=visual_node_size(node, config),
+            color={"background": strategic_color(node, owner_affiliations), "border": border},
             borderWidth=6 if node_id in critical_ids else 2,
             area=node.area,
             coord=node.name,
+            coordLabel=node.name,
+            ownerLabel=owner_label,
             nodeType=node.type,
             owner=node.owner,
+            displayOwner=owner_label,
+            affiliation=affiliation,
             importance=node.importance,
             rawProtectUntil=node.protect_until or "",
             protectUntil=protect["protect_until"] or "",
@@ -926,9 +1008,25 @@ def add_node_info_panel_v2(html: str) -> str:
     white-space: pre-wrap;
     color: #e2e8f0;
   }
+  #map-label-toggle {
+    position: fixed;
+    left: 16px;
+    top: 16px;
+    z-index: 11;
+    min-width: 124px;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid rgba(148, 163, 184, 0.65);
+    border-radius: 6px;
+    background: rgba(15, 23, 42, 0.92);
+    color: #f8fafc;
+    font: 700 13px Arial, sans-serif;
+    cursor: pointer;
+  }
 </style>
 """
     panel = f"""
+<button id="map-label-toggle" type="button">連盟名表示</button>
 <div id="node-info-panel">
   <div class="node-info-empty">{empty_text}</div>
 </div>
@@ -1070,9 +1168,25 @@ def add_node_info_panel_v3(html: str) -> str:
     white-space: pre-wrap;
     color: #e2e8f0;
   }
+  #map-label-toggle {
+    position: fixed;
+    left: 16px;
+    top: 16px;
+    z-index: 11;
+    min-width: 124px;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid rgba(148, 163, 184, 0.65);
+    border-radius: 6px;
+    background: rgba(15, 23, 42, 0.92);
+    color: #f8fafc;
+    font: 700 13px Arial, sans-serif;
+    cursor: pointer;
+  }
 </style>
 """
     panel = f"""
+<button id="map-label-toggle" type="button">&#36899;&#30431;&#21517;&#34920;&#31034;</button>
 <div id="node-info-panel">
   <div class="node-info-empty">{empty_text}</div>
 </div>
@@ -1094,6 +1208,30 @@ def add_node_info_panel_v3(html: str) -> str:
                     function row(label, value) {{
                       return "<dt>" + escapeHtml(label) + "</dt><dd>" + escapeHtml(value) + "</dd>";
                     }}
+                    var labelMode = "coord";
+                    function applyLabelMode() {{
+                      if (!nodes) return;
+                      var updates = nodes.get().map(function (node) {{
+                        return {{
+                          id: node.id,
+                          label: labelMode === "owner"
+                            ? (node.nodeType === "\\u4ea4\\u6613\\u5730" ? "\\u4ea4\\u6613\\u5730" : valueOrDash(node.ownerLabel || node.displayOwner))
+                            : valueOrDash(node.coordLabel || node.coord)
+                        }};
+                      }});
+                      nodes.update(updates);
+                      var button = document.getElementById("map-label-toggle");
+                      if (button) {{
+                        button.textContent = labelMode === "owner" ? "\\u5ea7\\u6a19\\u8868\\u793a" : "\\u9023\\u76df\\u540d\\u8868\\u793a";
+                      }}
+                    }}
+                    var labelButton = document.getElementById("map-label-toggle");
+                    if (labelButton) {{
+                      labelButton.addEventListener("click", function () {{
+                        labelMode = labelMode === "owner" ? "coord" : "owner";
+                        applyLabelMode();
+                      }});
+                    }}
                     function renderNodeInfo(nodeId) {{
                       var panel = document.getElementById("node-info-panel");
                       if (!panel || !nodeId || !nodes) return;
@@ -1105,7 +1243,7 @@ def add_node_info_panel_v3(html: str) -> str:
                         "<dl>" +
                         row("Position key", node.id) +
                         row("Type", node.nodeType) +
-                        row("Alliance", node.owner) +
+                        row("Alliance", node.displayOwner || node.ownerLabel || node.owner) +
                         row("Status", node.mapStatus) +
                         row("Acquired", node.acquiredAt) +
                         row("Protect until", node.rawProtectUntil || node.protectUntil) +
@@ -1149,10 +1287,14 @@ def write_json(
 ) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     warning_hours = float(config.get("protect_warning_hours", 6))
+    owner_affiliations = build_owner_affiliations(graph, config)
     nodes = []
     for _, node_data in graph.nodes(data=True):
         node = Node(**{field: node_data[field] for field in Node.__dataclass_fields__})
         record = asdict(node)
+        record["display_owner"] = display_owner(node.owner)
+        record["affiliation"] = strategic_affiliation(node, owner_affiliations)
+        record["strategic_color"] = strategic_color(node, owner_affiliations)
         record["protection"] = protection_status(node, now, warning_hours, tz)
         nodes.append(record)
     payload = {
@@ -1160,6 +1302,7 @@ def write_json(
         "timezone": str(tz),
         "nodes": nodes,
         "connections": [asdict(edge) for edge in edges],
+        "owner_affiliations": owner_affiliations,
         **analysis,
     }
     output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")

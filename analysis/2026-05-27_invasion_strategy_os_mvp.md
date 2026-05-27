@@ -25,7 +25,9 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - Central area typing follows the Cpt Hedgehog Season 6 reference-map pattern plus the commander adjustment: 208 central fishery nodes are connected, 188 central altar nodes are isolated, and the 2x2 center is represented by one large isolated `祖霊神殿` node.
 - The outer area placement is clockwise from the upper-left: `#534`, `#509`, `#503`, `#480`, `#440`, `#511`, `#523`, `#476`.
 - Trade-post nodes are displayed but intentionally left unconnected.
-- Fishery nodes are displayed larger than city nodes.
+- Fishery nodes are displayed larger than city nodes, while central-area fishery nodes are displayed smaller than outer fisheries.
+- The HTML map can toggle labels between coordinates and alliance names. In alliance-name mode, trade posts are always labeled `交易地`.
+- Strategic colors are based on ownership from `管理表たたき`: #534-side owners blue, #509/#440/#511-side owners green, enemy-side owners red, and unowned nodes white. Owners with server-number prefixes such as `476B` are classified by that prefix even when they occupy another area.
 - The full-map view has a fixed click information panel using management-table fields, so alliance/status/protection data is easier to inspect.
 - Added an initial local interactive-map server prototype for search, sheet refresh, and local manual owner/status/memo overrides.
 

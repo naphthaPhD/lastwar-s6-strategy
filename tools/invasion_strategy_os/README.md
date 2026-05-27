@@ -117,7 +117,9 @@ Current rule assumptions:
 - The full-map view uses smaller nodes and labels so city/fishery spacing is easier to read.
 - Clicking a node opens a fixed information panel with management-table fields: position key, type, alliance, status, acquisition time, protection time, and memo.
 - Central-area facility types are corrected from the Cpt Hedgehog Season 6 reference map pattern: outer central cells are fishery nodes, inner central cells are altar nodes, and the 2x2 center is represented as one large `祖霊神殿` node.
-- Central fishery nodes are connected by distance edges. Central altar nodes are displayed but isolated because altar ownership does not create adjacent movement.
+- Central fishery nodes are connected by distance edges and displayed smaller than outer fisheries. Central altar nodes and `祖霊神殿` are displayed but isolated because altar ownership does not create adjacent movement.
+- The HTML map has a label toggle: coordinate labels by default, or alliance-name labels. In alliance-name mode, trade posts are always labeled `交易地`.
+- Node colors are strategic colors: #534-side owners are blue, #509/#440/#511-side owners are green, enemy-side owners are red, and unowned nodes are white. Owners with server-number prefixes such as `476B` are classified by that prefix even when they occupy another area.
 
 ## Run The Interactive Local Map
 

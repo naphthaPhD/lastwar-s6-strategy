@@ -59,6 +59,7 @@
     "node_min_size": 8,
     "node_max_size": 34,
     "node_size_multiplier": 2.7,
+    "central_fishery_size": 20.0,
     "visual_size_by_type": {
       "\u6f01\u5834": 29.6,
       "\u90fd\u5e02": 16.1,
@@ -66,7 +67,10 @@
       "\u7956\u970a\u795e\u6bbf": 46.0,
       "\u4ea4\u6613\u5730": 10.7
     },
-    "font_size": 13
+    "font_size": 13,
+    "self_owners": ["JDX"],
+    "ally_owners": [],
+    "enemy_owners": ["476A", "476B", "476C", "476H", "476M", "476T", "476X", "476Z", "476d"]
   },
   "shortest_path": {
     "from": "#476:K-11",

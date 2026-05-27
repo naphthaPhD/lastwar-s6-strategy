@@ -233,6 +233,7 @@
         <div class="actions">
           <button id="refreshButton" class="primary" type="button">Refresh Sheet</button>
           <button id="fitButton" class="secondary" type="button">Fit</button>
+          <button id="labelButton" class="secondary" type="button">Alliance Labels</button>
         </div>
         <div class="row">
           <label for="searchInput">Search</label>
@@ -295,6 +296,7 @@
     const overrideCountEl = document.getElementById("overrideCount");
     const refreshButton = document.getElementById("refreshButton");
     const fitButton = document.getElementById("fitButton");
+    const labelButton = document.getElementById("labelButton");
     const searchInput = document.getElementById("searchInput");
     const emptyState = document.getElementById("emptyState");
     const nodeDetails = document.getElementById("nodeDetails");
@@ -326,6 +328,7 @@
     let state;
     let selectedNodeId = null;
     let overrides = {nodes: {}};
+    let labelMode = "coord";
 
     function setStatus(message, isError = false) {
       statusEl.textContent = message;
@@ -341,13 +344,27 @@
       return Math.abs(hash);
     }
 
-    function colorForOwner(owner) {
-      const key = owner && owner !== "unknown" ? owner : "unknown";
-      if (key === "unknown") return "#64748b";
-      return palette[hashString(key) % palette.length];
+    function isUnownedOwner(owner) {
+      const key = String(owner || "").trim().toLowerCase();
+      return ["", "unknown", "none", "neutral", "未取得", "未登録", "中立", "中立/未登録"].includes(key);
+    }
+
+    function displayOwner(node) {
+      if (node.display_owner) return node.display_owner;
+      return isUnownedOwner(node.owner) ? "未取得" : String(node.owner || "").trim();
+    }
+
+    function strategicColor(node) {
+      if (node.strategic_color) return node.strategic_color;
+      if (isUnownedOwner(node.owner)) return "#f8fafc";
+      if (node.affiliation === "self") return "#2563eb";
+      if (node.affiliation === "ally") return "#16a34a";
+      if (node.affiliation === "enemy") return "#dc2626";
+      return "#dc2626";
     }
 
     function sizeForNode(node) {
+      if (node.area === "中央" && node.type === "漁場") return 20;
       if (node.type === "漁場") return 30;
       if (node.type === "都市") return 16;
       if (node.type === "交易地") return 11;
@@ -357,6 +374,7 @@
     }
 
     function labelForNode(node) {
+      if (labelMode === "owner") return node.type === "交易地" ? "交易地" : displayOwner(node);
       if (node.type === "交易地") return "";
       return node.name || node.id;
     }
@@ -382,7 +400,7 @@
 
     function toVisNode(node) {
       const isChanged = Boolean(overrides.nodes[node.id]);
-      const color = colorForOwner(node.owner);
+      const color = strategicColor(node);
       return {
         id: node.id,
         label: labelForNode(node),
@@ -406,6 +424,13 @@
         },
         raw: node
       };
+    }
+
+    function applyLabelMode() {
+      if (!nodes) return;
+      const updates = nodes.get().map(item => ({id: item.id, label: labelForNode(item.raw)}));
+      nodes.update(updates);
+      labelButton.textContent = labelMode === "owner" ? "Coord Labels" : "Alliance Labels";
     }
 
     function toVisEdge(edge) {
@@ -565,6 +590,11 @@
 
     fitButton.addEventListener("click", () => {
       if (network) network.fit({animation: {duration: 180, easingFunction: "easeInOutQuad"}});
+    });
+
+    labelButton.addEventListener("click", () => {
+      labelMode = labelMode === "owner" ? "coord" : "owner";
+      applyLabelMode();
     });
 
     searchInput.addEventListener("input", () => {
