@@ -35,6 +35,7 @@ This handoff uses the live Google Sheet and the previous #476B/#476C route analy
 6. The integrated map now displays alliance names from `取得入力マップ` without the four-area boundary headers, so #534/#509/#476/中央 can be scanned as one map.
 7. Current invadable/potentially invadable alliance classes are: existing #534 invaders `476B`, `476C`; #476-side boundary alliances `476K`, `476H`, `476A`, `476C`, `IXM`, `476d`, `476B`; and manually entered pact partners in `O2:Y9`.
 8. The user confirmed that `#476エリア` is the correct target. The integrated tab now copies the source map's cell merges from `取得入力マップ`.
+9. The integrated tab has been visually connected by removing the upper/lower seam and left/right area seam while preserving map formulas and merges.
 
 ## Current risks
 
@@ -68,4 +69,5 @@ This handoff uses the live Google Sheet and the previous #476B/#476C route analy
 - The integrated tab is a monitoring layer: red = existing #534 invader, orange = #476-side boundary alliance, purple = manually entered pact partner.
 - `#476エリア` is confirmed correct; no `#478` reinterpretation is needed.
 - `侵攻予測_20260527_統合` now matches `取得入力マップ` cell merges for the copied map areas.
+- Merge spot checks after the connection pass: `A52:B52` and `L52:M53` are still merged.
 - Existing unrelated local changes remain outside this analysis.
