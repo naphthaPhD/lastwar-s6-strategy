@@ -51,10 +51,32 @@ Manual sync verification:
 - `侵攻予測_20260527_取得入力型!DL2` now shows `5/27 13:08 手動反映済`.
 - The prediction tab now has an added warning in `A4` that `入力欄を管理表たたきへ反映` is not the sync command.
 
+Prediction-layer input added:
+
+- Right-side panel: `侵攻予測_20260527_取得入力型!DP1:DY90`
+- Scenario selector: `DQ2`
+- Layer table: `DP18:DY90`
+- Auto key formula: `DU19`
+- Map coloring range: `A6:CC88`
+- Current column count after adding the panel: `132`
+- Category colors: `敵主攻`, `破壊候補`, `防衛優先`, `捨て候補`, `再取得`, `反攻ルート`, `起点`, `要確認`
+- Scenario choices: `全表示`, `最悪パターン`, `476B上押し`, `476C右押し`, `503合流`, `反攻ルート`, `防衛ライン`, `捨て/交換`, `要確認`
+
+The layer table is intentionally separate from the map body. After copying `取得入力マップ` into the forecast tab, commanders can add or edit rows in `DP19:DY90`; rows with `ON=TRUE` are overlaid onto the map by conditional formatting. `DQ2=全表示` shows all active rows, while selecting a scenario shows only that scenario.
+
+Seeded scenarios:
+
+- `最悪パターン`: main enemy pressure on `#534:D-11`, `#534:D-9`, `#534:E-7`; city destruction candidates around `#534:c-12`, `#534:c-10`, `#534:c-8`, `#534:b-10`.
+- `防衛ライン`: denial priority remains `D-11 > D-9 > E-7`.
+- `捨て/交換`: `#534:c-8` is marked as both discard candidate and immediate recapture candidate.
+- `反攻ルート`: `#534:C-11` is the starting candidate; `#534:D-9`, `#476:D-9`, and `#476:C-11` are marked as short-window connection-cut candidates.
+- `476B上押し`, `476C右押し`, `503合流`: initial role-split and convergence hypotheses are included as editable rows.
+
 Verified properties:
 
 - Row count: `92`
-- Column count: `118`
+- Column count before prediction panel: `118`
+- Column count after prediction panel: `132`
 - Frozen rows: `5`
 - Gridlines: hidden
 - Sample merge retained: `A6:B6`
@@ -71,6 +93,8 @@ Verified properties:
 5. The safest working map is now `侵攻予測_20260527_取得入力型`, because it is an exact duplicate of `取得入力マップ`.
 6. `侵攻予測_20260527_統合` should be treated as a trial/reference tab, not the operational source of truth.
 7. The new sync patch copies only the map body, so top notes and tactical formatting on the prediction tab can remain while the map body is refreshed.
+8. The right-side prediction layer now turns the tab into a paint-map workflow: add a coordinate row, select a scenario and category, set `ON=TRUE`, and the map highlights that point.
+9. For command use, scenario switching is now simpler than creating separate tabs for every hypothesis.
 
 ## Current risks
 
@@ -82,6 +106,8 @@ Verified properties:
 6. If the sync patch is run, the map body becomes copied values rather than live formulas; therefore the manual copy or 5-minute trigger should be treated as part of the operating procedure.
 7. The patch is not live until it is reflected into `Code.gs`.
 8. Running `savePointFromDetail` with empty right-side inputs is expected to fail; do not use it for map sync.
+9. Prediction rows are hypotheses, not confirmed rules. If fishery ownership, city break eligibility, or pact access changes, the right-side table must be updated before using the colors operationally.
+10. The counterattack route layer should be treated as a short-window disruption plan; fixed occupation against #476/#503 pressure is still high-risk.
 
 ## Recommended next actions
 
@@ -92,6 +118,8 @@ Verified properties:
 5. Before the next city-fight window, confirm which #503-side pact alliances can actually use adjacency against #534.
 6. Reflect `AppsScript_地点詳細!A1241:A1316` into live `Code.gs` if automatic sync is needed during the fight window.
 7. After reflecting the script, run `copyLatestInputMapToInvasionMap` once to test, then run `installInvasionMapSyncTrigger` only if repeated refresh is needed.
+8. Use `DQ2=最悪パターン` to brief likely enemy break points, `DQ2=防衛ライン` for minimum defense, `DQ2=捨て/交換` for abandon/recapture, and `DQ2=反攻ルート` for attack planning.
+9. Add new rows under `DP19:DY90` whenever 476B/476C/503 captures a fishery or gains a new city-destruction adjacency.
 
 ## Questions for ChatGPT
 
@@ -99,10 +127,12 @@ Verified properties:
 2. Is `D-11 > D-9 > E-7` still the correct denial priority if #503 can join immediately?
 3. What short R4/R5 order should be shared for the next city-fight window?
 4. Which enemy/pact alliances should be highlighted first on the duplicated map?
+5. Are the seeded counterattack route candidates too aggressive given the current power gap, or useful as disruption-only options?
 
 ## Notes
 
 - This update intentionally stops trying to delete AO or remove map borders by restructuring cells.
 - The new tab keeps the same shape as `取得入力マップ`, including the difficult merged cells.
 - `侵攻予測_20260527_取得入力型!A1:A3` and `DL1:DL2` were updated with sync notes and last-sync status.
+- `侵攻予測_20260527_取得入力型!DP:DY` is now the operator-facing prediction input area; the map body should still be treated as copied/current-state terrain.
 - Existing unrelated local changes remain outside this analysis.
