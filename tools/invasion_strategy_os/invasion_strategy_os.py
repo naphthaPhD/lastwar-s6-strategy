@@ -978,7 +978,7 @@ def write_html(
 
     for source, target, edge_data in graph.edges(data=True):
         edge_id = f"{source}|{target}"
-        network.add_edge(source, target, id=edge_id, value=edge_data.get("weight", 1.0), title=f"weight: {edge_data.get('weight', 1.0)}")
+        network.add_edge(source, target, id=edge_id, width=1, title=f"weight: {edge_data.get('weight', 1.0)}")
 
     network.set_options(
         json.dumps(
@@ -1652,70 +1652,84 @@ def add_node_info_panel_v3(html: str) -> str:
                         }};
                       }}));
                     }}
-                    function shortestPath(startId, targetId) {{
+                    function shortestRouteEdges(startId, targetId) {{
                       if (!edges || !nodes || !startId || !targetId) return null;
-                      if (startId === targetId) return [startId];
+                      if (startId === targetId) return {{ edgeIds: [], distance: 0, routeCount: 1 }};
                       var adjacency = {{}};
                       nodes.getIds().forEach(function (nodeId) {{
                         adjacency[nodeId] = [];
                       }});
+                      var byPair = {{}};
                       edges.get().forEach(function (edge) {{
                         if (!adjacency[edge.from]) adjacency[edge.from] = [];
                         if (!adjacency[edge.to]) adjacency[edge.to] = [];
                         adjacency[edge.from].push(edge.to);
                         adjacency[edge.to].push(edge.from);
-                      }});
-                      var queue = [startId];
-                      var visited = {{}};
-                      var previous = {{}};
-                      visited[startId] = true;
-                      for (var i = 0; i < queue.length; i += 1) {{
-                        var current = queue[i];
-                        var neighbors = adjacency[current] || [];
-                        for (var j = 0; j < neighbors.length; j += 1) {{
-                          var next = neighbors[j];
-                          if (visited[next]) continue;
-                          visited[next] = true;
-                          previous[next] = current;
-                          if (next === targetId) {{
-                            var path = [targetId];
-                            var cursor = targetId;
-                            while (cursor !== startId) {{
-                              cursor = previous[cursor];
-                              path.push(cursor);
-                            }}
-                            path.reverse();
-                            return path;
-                          }}
-                          queue.push(next);
-                        }}
-                      }}
-                      return null;
-                    }}
-                    function edgeIdsForPath(path) {{
-                      if (!edges || !path || path.length < 2) return [];
-                      var byPair = {{}};
-                      edges.get().forEach(function (edge) {{
                         byPair[edge.from + "\\u0000" + edge.to] = edge.id;
                         byPair[edge.to + "\\u0000" + edge.from] = edge.id;
                       }});
-                      var ids = [];
-                      for (var i = 0; i < path.length - 1; i += 1) {{
-                        var id = byPair[path[i] + "\\u0000" + path[i + 1]];
-                        if (id) ids.push(id);
+                      var queue = [startId];
+                      var distance = {{}};
+                      var predecessors = {{}};
+                      var routeCounts = {{}};
+                      var targetDistance = null;
+                      distance[startId] = 0;
+                      routeCounts[startId] = 1;
+                      for (var i = 0; i < queue.length; i += 1) {{
+                        var current = queue[i];
+                        if (targetDistance !== null && distance[current] >= targetDistance) continue;
+                        var neighbors = adjacency[current] || [];
+                        for (var j = 0; j < neighbors.length; j += 1) {{
+                          var next = neighbors[j];
+                          var nextDistance = distance[current] + 1;
+                          if (distance[next] === undefined) {{
+                            distance[next] = nextDistance;
+                            predecessors[next] = [current];
+                            routeCounts[next] = routeCounts[current];
+                            if (next === targetId) {{
+                              targetDistance = nextDistance;
+                            }}
+                            queue.push(next);
+                          }} else if (distance[next] === nextDistance) {{
+                            predecessors[next].push(current);
+                            routeCounts[next] = Math.min(9999, (routeCounts[next] || 0) + (routeCounts[current] || 0));
+                          }}
+                        }}
                       }}
-                      return ids;
+                      if (distance[targetId] === undefined) return null;
+                      var edgeIdSet = {{}};
+                      var stack = [targetId];
+                      var seenNodes = {{}};
+                      while (stack.length) {{
+                        var nodeId = stack.pop();
+                        var preds = predecessors[nodeId] || [];
+                        for (var k = 0; k < preds.length; k += 1) {{
+                          var pred = preds[k];
+                          var edgeId = byPair[pred + "\\u0000" + nodeId];
+                          if (edgeId) edgeIdSet[edgeId] = true;
+                          if (pred !== startId && !seenNodes[pred]) {{
+                            seenNodes[pred] = true;
+                            stack.push(pred);
+                          }}
+                        }}
+                      }}
+                      return {{
+                        edgeIds: Object.keys(edgeIdSet),
+                        distance: distance[targetId],
+                        routeCount: routeCounts[targetId] || 1
+                      }};
                     }}
                     function showShortestRoute(startId, targetId) {{
-                      var path = shortestPath(startId, targetId);
+                      var route = shortestRouteEdges(startId, targetId);
                       resetEdgeHighlights();
-                      if (!path || path.length < 2) {{
+                      if (!route || !route.edgeIds.length) {{
                         alert("\\u9078\\u629e\\u3057\\u305f2\\u30ce\\u30fc\\u30c9\\u9593\\u306e\\u30eb\\u30fc\\u30c8\\u304c\\u3042\\u308a\\u307e\\u305b\\u3093\\u3002");
                         clearRouteState();
                         return;
                       }}
-                      routeEdgeIds = edgeIdsForPath(path);
+                      routeEdgeIds = route.edgeIds;
                       highlightEdges(routeEdgeIds, "#a855f7", 6);
+                      if (network) network.unselectAll();
                       clearRouteState();
                     }}
                     function handleRouteSelection(nodeId) {{
@@ -1723,6 +1737,7 @@ def add_node_info_panel_v3(html: str) -> str:
                       if (!routeStartNodeId) {{
                         routeStartNodeId = nodeId;
                         resetEdgeHighlights();
+                        if (network) network.unselectAll();
                         updateRouteButtonText();
                         return true;
                       }}
@@ -1771,6 +1786,7 @@ def add_node_info_panel_v3(html: str) -> str:
                         routeStartNodeId = null;
                         routeEdgeIds = [];
                         resetEdgeHighlights();
+                        if (network) network.unselectAll();
                         updateRouteButtonText();
                       }});
                     }}
