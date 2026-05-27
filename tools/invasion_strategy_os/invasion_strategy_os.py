@@ -22,6 +22,7 @@ from pyvis.network import Network
 JST = ZoneInfo("Asia/Tokyo")
 CENTRAL_COORD_PREFIX = "\u4e2d\u592e"
 DEFAULT_FISHERY_TYPE = "\u6f01\u5834"
+DEFAULT_CITY_TYPE = "\u90fd\u5e02"
 DEFAULT_ALTAR_TYPE = "\u796d\u58c7"
 DEFAULT_CENTRAL_EMPTY_TYPE = "\u4e2d\u592e\u7a7a\u767d"
 DEFAULT_ANCESTRAL_TEMPLE_TYPE = "\u7956\u970a\u795e\u6bbf"
@@ -372,6 +373,36 @@ def load_edges(rows: list[dict[str, str]]) -> list[Edge]:
     return edges
 
 
+def normalized_type_pair(source_type: str, target_type: str) -> tuple[str, str]:
+    return tuple(sorted((source_type, target_type)))
+
+
+def disallowed_edge_type_pairs(config: dict[str, Any]) -> set[tuple[str, str]]:
+    configured = config.get("disallowed_edge_type_pairs", [[DEFAULT_CITY_TYPE, DEFAULT_CITY_TYPE]])
+    return {
+        normalized_type_pair(str(pair[0]), str(pair[1]))
+        for pair in configured
+        if isinstance(pair, list | tuple) and len(pair) == 2
+    }
+
+
+def filter_edges_by_type_rules(edges: list[Edge], nodes: dict[str, Node], config: dict[str, Any]) -> list[Edge]:
+    isolated_types = {str(value) for value in config.get("isolated_types", [])}
+    blocked_type_pairs = disallowed_edge_type_pairs(config)
+    filtered: list[Edge] = []
+    for edge in edges:
+        source = nodes.get(edge.source)
+        target = nodes.get(edge.target)
+        if source is None or target is None:
+            continue
+        if source.type in isolated_types or target.type in isolated_types:
+            continue
+        if normalized_type_pair(source.type, target.type) in blocked_type_pairs:
+            continue
+        filtered.append(edge)
+    return filtered
+
+
 def derive_distance_edges(nodes: dict[str, Node], config: dict[str, Any]) -> list[Edge]:
     if config.get("type") != "distance":
         return []
@@ -379,6 +410,7 @@ def derive_distance_edges(nodes: dict[str, Node], config: dict[str, Any]) -> lis
     same_area_only = bool(config.get("same_area_only", True))
     max_edges_per_node = int(config.get("max_edges_per_node", 6))
     isolated_types = {str(value) for value in config.get("isolated_types", [])}
+    blocked_type_pairs = disallowed_edge_type_pairs(config)
     candidates: list[tuple[float, str, str]] = []
     node_items = sorted(nodes.items())
     for index, (source_id, source) in enumerate(node_items):
@@ -386,6 +418,8 @@ def derive_distance_edges(nodes: dict[str, Node], config: dict[str, Any]) -> lis
             continue
         for target_id, target in node_items[index + 1 :]:
             if target.type in isolated_types:
+                continue
+            if normalized_type_pair(source.type, target.type) in blocked_type_pairs:
                 continue
             if same_area_only and source.area != target.area:
                 continue
@@ -634,6 +668,27 @@ def visual_node_size(node: Node, config: dict[str, Any]) -> float:
     )
 
 
+def visual_font_size(node: Node, default_size: int, config: dict[str, Any]) -> int:
+    if node.type == DEFAULT_FISHERY_TYPE:
+        return int(config.get("fishery_font_size", max(9, default_size - 3)))
+    return default_size
+
+
+def visual_node_shape(node: Node, config: dict[str, Any]) -> str:
+    visual_shape_by_type = {str(key): str(value) for key, value in config.get("visual_shape_by_type", {}).items()}
+    return visual_shape_by_type.get(node.type, "dot")
+
+
+def visual_position(node: Node, config: dict[str, Any]) -> tuple[float, float]:
+    visual_gap = float(config.get("visual_area_gap", 0))
+    tile_size = float(config.get("visual_area_tile_size", 1000))
+    if visual_gap <= 0 or tile_size <= 0:
+        return node.x, node.y
+    column = int(node.x // tile_size)
+    row = int(node.y // tile_size)
+    return node.x + column * visual_gap, node.y + row * visual_gap
+
+
 def protection_status(node: Node, now: datetime, warning_hours: float, tz: ZoneInfo) -> dict[str, Any]:
     protect_until = parse_optional_time(node.protect_until, tz)
     if protect_until is None:
@@ -681,14 +736,17 @@ def write_html(
         owner_label = display_owner(node.owner)
         affiliation = strategic_affiliation(node, owner_affiliations)
         title = f"{node.area} {node.name} / {node.type} / {owner_label}"
+        visual_x, visual_y = visual_position(node, config)
         network.add_node(
             node.id,
             label=node.name,
             title=title,
-            x=node.x * visual_scale,
-            y=-node.y * visual_scale,
+            x=visual_x * visual_scale,
+            y=-visual_y * visual_scale,
             physics=False,
+            fixed=False,
             size=visual_node_size(node, config),
+            shape=visual_node_shape(node, config),
             color={"background": strategic_color(node, owner_affiliations), "border": border},
             borderWidth=6 if node_id in critical_ids else 2,
             area=node.area,
@@ -708,6 +766,13 @@ def write_html(
             mapStatus=node.status,
             memo=node.memo,
         )
+        network.node_map[node.id]["font"] = {
+            "size": visual_font_size(node, font_size, config),
+            "face": "arial",
+            "color": "#f9fafb",
+            "strokeWidth": 4,
+            "strokeColor": "#111827",
+        }
 
     for source, target, edge_data in graph.edges(data=True):
         network.add_edge(source, target, value=edge_data.get("weight", 1.0), title=f"weight: {edge_data.get('weight', 1.0)}")
@@ -1183,10 +1248,73 @@ def add_node_info_panel_v3(html: str) -> str:
     font: 700 13px Arial, sans-serif;
     cursor: pointer;
   }
+  #map-reset-layout {
+    position: fixed;
+    left: 152px;
+    top: 16px;
+    z-index: 11;
+    min-width: 104px;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid rgba(148, 163, 184, 0.65);
+    border-radius: 6px;
+    background: rgba(15, 23, 42, 0.92);
+    color: #f8fafc;
+    font: 700 13px Arial, sans-serif;
+    cursor: pointer;
+  }
+  #map-legend {
+    position: fixed;
+    left: 16px;
+    top: 62px;
+    z-index: 10;
+    width: 250px;
+    padding: 10px 12px;
+    border: 1px solid rgba(148, 163, 184, 0.55);
+    border-radius: 8px;
+    background: rgba(15, 23, 42, 0.9);
+    color: #e5e7eb;
+    font: 12px/1.35 Arial, sans-serif;
+  }
+  #map-legend h3 {
+    margin: 0 0 8px;
+    color: #f8fafc;
+    font-size: 13px;
+  }
+  #map-legend .legend-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0;
+  }
+  #map-legend .legend-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #111827;
+    flex: 0 0 auto;
+  }
+  #map-legend .legend-border {
+    width: 18px;
+    height: 10px;
+    border-radius: 8px;
+    background: transparent;
+    flex: 0 0 auto;
+  }
 </style>
 """
     panel = f"""
 <button id="map-label-toggle" type="button">&#36899;&#30431;&#21517;&#34920;&#31034;</button>
+<button id="map-reset-layout" type="button">&#20301;&#32622;&#12522;&#12475;&#12483;&#12488;</button>
+<div id="map-legend" aria-label="legend">
+  <h3>凡例</h3>
+  <div class="legend-row"><span class="legend-dot" style="background:#2563eb"></span><span>#534 / JDX</span></div>
+  <div class="legend-row"><span class="legend-dot" style="background:#16a34a"></span><span>味方</span></div>
+  <div class="legend-row"><span class="legend-dot" style="background:#dc2626"></span><span>敵</span></div>
+  <div class="legend-row"><span class="legend-dot" style="background:#f8fafc"></span><span>未取得</span></div>
+  <div class="legend-row"><span class="legend-border" style="border:3px solid #ef4444"></span><span>保護終了済み</span></div>
+  <div class="legend-row"><span class="legend-border" style="border:3px solid #facc15"></span><span>保護終了が近い</span></div>
+</div>
 <div id="node-info-panel">
   <div class="node-info-empty">{empty_text}</div>
 </div>
@@ -1208,6 +1336,12 @@ def add_node_info_panel_v3(html: str) -> str:
                     function row(label, value) {{
                       return "<dt>" + escapeHtml(label) + "</dt><dd>" + escapeHtml(value) + "</dd>";
                     }}
+                    var initialPositions = {{}};
+                    if (nodes) {{
+                      nodes.get().forEach(function (node) {{
+                        initialPositions[node.id] = {{ x: node.x, y: node.y }};
+                      }});
+                    }}
                     var labelMode = "coord";
                     function applyLabelMode() {{
                       if (!nodes) return;
@@ -1215,7 +1349,11 @@ def add_node_info_panel_v3(html: str) -> str:
                         return {{
                           id: node.id,
                           label: labelMode === "owner"
-                            ? (node.nodeType === "\\u4ea4\\u6613\\u5730" ? "\\u4ea4\\u6613\\u5730" : valueOrDash(node.ownerLabel || node.displayOwner))
+                            ? (
+                                node.nodeType === "\\u4ea4\\u6613\\u5730"
+                                  ? "\\u4ea4\\u6613\\u5730"
+                                  : valueOrDash(node.ownerLabel || node.displayOwner)
+                              )
                             : valueOrDash(node.coordLabel || node.coord)
                         }};
                       }});
@@ -1230,6 +1368,17 @@ def add_node_info_panel_v3(html: str) -> str:
                       labelButton.addEventListener("click", function () {{
                         labelMode = labelMode === "owner" ? "coord" : "owner";
                         applyLabelMode();
+                      }});
+                    }}
+                    var resetButton = document.getElementById("map-reset-layout");
+                    if (resetButton) {{
+                      resetButton.addEventListener("click", function () {{
+                        if (!nodes || !network) return;
+                        var updates = Object.keys(initialPositions).map(function (id) {{
+                          return {{ id: id, x: initialPositions[id].x, y: initialPositions[id].y }};
+                        }});
+                        nodes.update(updates);
+                        network.fit({{ animation: {{ duration: 180, easingFunction: "easeInOutQuad" }} }});
                       }});
                     }}
                     function renderNodeInfo(nodeId) {{
@@ -1292,6 +1441,9 @@ def write_json(
     for _, node_data in graph.nodes(data=True):
         node = Node(**{field: node_data[field] for field in Node.__dataclass_fields__})
         record = asdict(node)
+        visual_x, visual_y = visual_position(node, config)
+        record["visual_x"] = visual_x
+        record["visual_y"] = visual_y
         record["display_owner"] = display_owner(node.owner)
         record["affiliation"] = strategic_affiliation(node, owner_affiliations)
         record["strategic_color"] = strategic_color(node, owner_affiliations)
@@ -1341,8 +1493,9 @@ def main() -> int:
     explicit_edges = []
     if sources.get("edges"):
         explicit_edges = load_edges(read_csv_rows(sources["edges"], repo_root))
-    derived_edges = derive_distance_edges(nodes, config.get("edge_derivation", {}))
-    edges = dedupe_edges(adjacency_edges + explicit_edges + derived_edges)
+    edge_config = config.get("edge_derivation", {})
+    derived_edges = derive_distance_edges(nodes, edge_config)
+    edges = filter_edges_by_type_rules(dedupe_edges(adjacency_edges + explicit_edges + derived_edges), nodes, edge_config)
 
     graph = build_graph(nodes, edges)
     shortest = config.get("shortest_path", {})

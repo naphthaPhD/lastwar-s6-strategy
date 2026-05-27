@@ -373,15 +373,22 @@
       return Math.max(10, Math.min(32, Number(node.importance || 3) * 2.8));
     }
 
+    function fontSizeForNode(node) {
+      return node.type === "\u6f01\u5834" ? 9 : 12;
+    }
+
     function labelForNode(node) {
-      if (labelMode === "owner") return node.type === "交易地" ? "交易地" : displayOwner(node);
+      if (labelMode === "owner") {
+        if (node.type === "交易地") return "交易地";
+        return displayOwner(node);
+      }
       if (node.type === "交易地") return "";
       return node.name || node.id;
     }
 
     function shapeForNode(node) {
       if (node.type === "都市") return "dot";
-      if (node.type === "漁場") return "diamond";
+      if (node.type === "漁場") return "circle";
       if (node.type === "交易地") return "triangle";
       if (node.type === "祖霊神殿") return "star";
       if (node.type === "祭壇") return "square";
@@ -405,9 +412,9 @@
         id: node.id,
         label: labelForNode(node),
         title: titleForNode(node),
-        x: Number(node.x || 0),
-        y: -Number(node.y || 0),
-        fixed: true,
+        x: Number(node.visual_x ?? node.x ?? 0),
+        y: -Number(node.visual_y ?? node.y ?? 0),
+        fixed: false,
         shape: shapeForNode(node),
         size: sizeForNode(node),
         color: {
@@ -418,7 +425,7 @@
         borderWidth: isChanged ? 3 : 1,
         font: {
           color: "#e5e7eb",
-          size: 12,
+          size: fontSizeForNode(node),
           strokeWidth: 3,
           strokeColor: "#0b1020"
         },
