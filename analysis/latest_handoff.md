@@ -6,11 +6,12 @@
 
 ## Context
 
-The pact situation changed: #503-side alliances can now attack #534. The user asked for a worst-case forecast of how #534 holdings could change, and then asked for an integrated map based on `取得入力マップ`.
+The pact situation changed: #503-side alliances can now attack #534. The user first asked for worst-case invasion forecasting, then for a map view that can show currently invadable alliances. The map merge/position problem remained difficult when trying to forcibly connect four areas into one custom layout, so the latest decision is to return to the exact same shape as `取得入力マップ`.
 
-This handoff uses the live Google Sheet and the previous #476B/#476C route analysis. Two prediction/support tabs were added to the spreadsheet.
+Latest side classification for this handoff:
 
-Latest side classification for this handoff: #534 and #509 are allies; #476 and #503 are enemies.
+- Allies: #534, #509
+- Enemies: #476, #503
 
 ## Updated files
 
@@ -21,57 +22,59 @@ Latest side classification for this handoff: #534 and #509 are allies; #476 and 
 ## Updated Google Sheet
 
 - Spreadsheet ID: `12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g`
-- Added tab: `侵攻予測_20260527_最悪`
-- Added tab: `侵攻予測_20260527_統合`
-- Integrated map range: `侵攻予測_20260527_統合!A12:BT92`
-- Integrated map formula: `={'取得入力マップ'!A6:BT45;'取得入力マップ'!A49:BT89}`
-- Pact input range for purple display: `侵攻予測_20260527_統合!O2:Y9`
+- Existing forecast tab: `侵攻予測_20260527_最悪`
+- Existing trial tab: `侵攻予測_20260527_統合`
+- New recommended map tab: `侵攻予測_20260527_取得入力型`
+- Source tab for the new map: `取得入力マップ`
+- New map sheetId: `1280147971`
+
+`侵攻予測_20260527_取得入力型` was created by directly duplicating `取得入力マップ`. It preserves the source tab's structure instead of trying to rebuild the map manually.
+
+Verified properties:
+
+- Row count: `92`
+- Column count: `118`
+- Frozen rows: `5`
+- Gridlines: hidden
+- Sample merge retained: `A6:B6`
+- Sample merge retained: `A49:B49`
+- Sample merge retained: `L49:M50`
+- Sample values retained: `A6=RGWC`, `A49=476K`, `L49=476C`
 
 ## Key findings
 
 1. With #503 able to participate, #534 should treat #503 as a right-side convergence threat, not as secondary background pressure.
-2. The most dangerous pattern is #476C pressing upward/interior from `A-7 / B-7 / C-7 / C-9`, while #476B pushes rightward from `C-11 / D-7`.
-3. `D-11` is the highest-priority denial point. If it falls, `c-12(JDX)` and `d-12(JDX)` become a two-sided JDX problem.
-4. `D-9` is the second denial point because it creates the right-turn route toward `d-10(SHA)` and the later #503-side corridor.
-5. `E-7` is the third denial point because it lets the attack move beyond the D-line into deeper SHA/4tH territory.
-6. The integrated map now displays alliance names from `取得入力マップ` without the four-area boundary headers, so #534/#509/#476/中央 can be scanned as one map.
-7. Current invadable/potentially invadable alliance classes are: existing #534 invaders `476B`, `476C`; #476-side boundary alliances `476K`, `476H`, `476A`, `476C`, `IXM`, `476d`, `476B`; and manually entered pact partners in `O2:Y9`.
-8. The user confirmed that `#476エリア` is the correct target. The integrated tab now copies the source map's cell merges from `取得入力マップ`.
-9. The integrated tab has been visually connected by removing the upper/lower seam and left/right area seam while preserving map formulas and merges.
-10. Per the user's latest instruction, #534/#509 are treated as allies and #476/#503 as enemies. The attempted AO-column deletion was reverted because it shifted the map relative to `取得入力マップ`; the integrated tab is back to 72 columns and `A12:BT92`.
+2. The most dangerous pattern remains #476C pressing upward/interior while #476B pushes rightward and creates later #503-side convergence.
+3. `D-11`, `D-9`, and `E-7` remain the main denial points from the prior worst-case forecast.
+4. The attempt to remove seams and force a single connected custom map created too much risk of merge and position drift.
+5. The safest working map is now `侵攻予測_20260527_取得入力型`, because it is an exact duplicate of `取得入力マップ`.
+6. `侵攻予測_20260527_統合` should be treated as a trial/reference tab, not the operational source of truth.
 
 ## Current risks
 
-1. #534 may over-defend visible cities and lose `D-11 / D-9 / E-7`.
-2. If `D-11` and `D-9` both fall, the C-line stops being the real front; D/E become the new contested belt.
-3. #503 can amplify a rightward route once a shared/pact-enabled connection is usable.
-4. City destruction remains less reversible than fishing-ground exchange; `c-12`, `c-10`, `c-8`, and `b-10` should be watched but not at the cost of losing the denial points.
-5. Pact partners are not yet available as structured data in the sheet, so the purple class depends on manual entry into `O2:Y9`.
+1. #534 may over-defend visible cities and lose the denial line around `D-11 / D-9 / E-7`.
+2. If #476B and #476C split roles, one can pull attention upward while the other opens the right-side route toward the #503 side.
+3. If #503 pact access works immediately through connected territory, right-side pressure can accelerate faster than #534's recovery cycle.
+4. Map-based command mistakes are likely if members continue using the older `統合` tab after the latest change.
+5. Additional color rules on the new duplicated tab could conflict with inherited conditional formatting unless added carefully.
 
 ## Recommended next actions
 
-1. Assign one watch group to #476C upper/interior pressure.
-2. Assign one watch group to #476B/#503 right-side pressure.
-3. Make `D-11`, `D-9`, and `E-7` the map callouts for immediate denial.
-4. Use `侵攻予測_20260527_最悪` for the route forecast and `侵攻予測_20260527_統合` for current invadable alliance monitoring.
-5. Before the next 2026-05-27 response window, enter confirmed pact partners of the red/orange alliances into `侵攻予測_20260527_統合!O2:Y9`.
-6. Confirm in game whether #503 can use pact territory as attack adjacency immediately, and whether empty-owner city rows can be destroyed.
+1. Use `侵攻予測_20260527_取得入力型` as the current operational map.
+2. Stop treating `侵攻予測_20260527_統合` as the correct map shape; keep it only as an experiment/history unless it is later deleted.
+3. Add enemy/pact highlighting only on the duplicated tab, without changing row/column/merge structure.
+4. Keep the #476B / #476C / #503 analysis focused on city destruction risk and route-opening risk, not full-map fixed defense.
+5. Before the next city-fight window, confirm which #503-side pact alliances can actually use adjacency against #534.
 
 ## Questions for ChatGPT
 
-1. Is `D-11 > D-9 > E-7` the correct denial priority under the new pact situation?
-2. Should #534 intentionally abandon some city defense to preserve D/E-line denial?
-3. What should the short R4/R5 instruction be for the 23:00 JST window?
-4. Does the integrated map's three-class filter cover today's command needs, or should pact partners be split by source alliance?
-5. Which pact partners should be entered into `侵攻予測_20260527_統合!O2:Y9` before the fight window?
+1. Should the operational map now be standardized on `侵攻予測_20260527_取得入力型`?
+2. Is `D-11 > D-9 > E-7` still the correct denial priority if #503 can join immediately?
+3. What short R4/R5 order should be shared for the next city-fight window?
+4. Which enemy/pact alliances should be highlighted first on the duplicated map?
 
 ## Notes
 
-- The new prediction tab is a forecast layer, not a confirmed future state.
-- The tab uses colors for current enemy footholds, first denial points, city destruction candidates, and #503-side convergence route.
-- The integrated tab is a monitoring layer: red = existing #534 invader, orange = #476-side boundary alliance, purple = manually entered pact partner. Operational side classification is ally = #534/#509, enemy = #476/#503.
-- `#476エリア` is confirmed correct; no `#478` reinterpretation is needed.
-- `侵攻予測_20260527_統合` now matches `取得入力マップ` cell merges for the copied map areas.
-- AO is not deleted now. The tab keeps the same 72-column shape as `取得入力マップ`; visual connection should be handled by borders/formatting, not by removing a structural column.
-- Value checks after the revert: `AN12:AQ21` and `AN52:AQ61` match the corresponding `取得入力マップ` ranges. Merge spot checks: `A12:B12`, `A52:B52`, and `L52:M53` are still merged.
+- This update intentionally stops trying to delete AO or remove map borders by restructuring cells.
+- The new tab keeps the same shape as `取得入力マップ`, including the difficult merged cells.
 - Existing unrelated local changes remain outside this analysis.
