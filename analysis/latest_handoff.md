@@ -30,6 +30,19 @@ Latest side classification for this handoff:
 
 `侵攻予測_20260527_取得入力型` was created by directly duplicating `取得入力マップ`. It preserves the source tab's structure instead of trying to rebuild the map manually.
 
+The user then asked for this tab to periodically reflect `取得入力マップ` like `塗り絵マップ`. A sync patch was added to the preserved Apps Script source tab:
+
+- Source tab/range: `AppsScript_地点詳細!A1241:A1316`
+- Copy source: `取得入力マップ!A6:DN92`
+- Copy target: `侵攻予測_20260527_取得入力型!A6:DN92`
+- Manual function: `copyLatestInputMapToInvasionMap`
+- Trigger installer: `installInvasionMapSyncTrigger`
+- Trigger interval: 5 minutes
+- Stop function: `removeInvasionMapSyncTriggers`
+- Last-sync cell: `侵攻予測_20260527_取得入力型!DL2`
+
+Important: this is saved in the source tab only. The connector did not update the live Apps Script `Code.gs`. To activate the menu and time trigger, copy the block from `AppsScript_地点詳細!A1241:A1316` into the bound Apps Script project and add the three menu lines shown in the comments to the final `onOpen()`.
+
 Verified properties:
 
 - Row count: `92`
@@ -49,6 +62,7 @@ Verified properties:
 4. The attempt to remove seams and force a single connected custom map created too much risk of merge and position drift.
 5. The safest working map is now `侵攻予測_20260527_取得入力型`, because it is an exact duplicate of `取得入力マップ`.
 6. `侵攻予測_20260527_統合` should be treated as a trial/reference tab, not the operational source of truth.
+7. The new sync patch copies only the map body, so top notes and tactical formatting on the prediction tab can remain while the map body is refreshed.
 
 ## Current risks
 
@@ -57,6 +71,8 @@ Verified properties:
 3. If #503 pact access works immediately through connected territory, right-side pressure can accelerate faster than #534's recovery cycle.
 4. Map-based command mistakes are likely if members continue using the older `統合` tab after the latest change.
 5. Additional color rules on the new duplicated tab could conflict with inherited conditional formatting unless added carefully.
+6. If the sync patch is run, the map body becomes copied values rather than live formulas; therefore the manual copy or 5-minute trigger should be treated as part of the operating procedure.
+7. The patch is not live until it is reflected into `Code.gs`.
 
 ## Recommended next actions
 
@@ -65,6 +81,7 @@ Verified properties:
 3. Add enemy/pact highlighting only on the duplicated tab, without changing row/column/merge structure.
 4. Keep the #476B / #476C / #503 analysis focused on city destruction risk and route-opening risk, not full-map fixed defense.
 5. Before the next city-fight window, confirm which #503-side pact alliances can actually use adjacency against #534.
+6. Reflect `AppsScript_地点詳細!A1241:A1316` into live `Code.gs` if automatic sync is needed during the fight window.
 
 ## Questions for ChatGPT
 
@@ -77,4 +94,5 @@ Verified properties:
 
 - This update intentionally stops trying to delete AO or remove map borders by restructuring cells.
 - The new tab keeps the same shape as `取得入力マップ`, including the difficult merged cells.
+- `侵攻予測_20260527_取得入力型!A1:A3` and `DL1:DL2` were updated with sync notes and last-sync status.
 - Existing unrelated local changes remain outside this analysis.
