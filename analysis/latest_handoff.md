@@ -34,6 +34,7 @@ This handoff uses the live Google Sheet and the previous #476B/#476C route analy
 5. `E-7` is the third denial point because it lets the attack move beyond the D-line into deeper SHA/4tH territory.
 6. The integrated map now displays alliance names from `取得入力マップ` without the four-area boundary headers, so #534/#509/#476/中央 can be scanned as one map.
 7. Current invadable/potentially invadable alliance classes are: existing #534 invaders `476B`, `476C`; #476-side boundary alliances `476K`, `476H`, `476A`, `476C`, `IXM`, `476d`, `476B`; and manually entered pact partners in `O2:Y9`.
+8. The user confirmed that `#476エリア` is the correct target. The integrated tab now copies the source map's cell merges from `取得入力マップ`.
 
 ## Current risks
 
@@ -58,11 +59,13 @@ This handoff uses the live Google Sheet and the previous #476B/#476C route analy
 2. Should #534 intentionally abandon some city defense to preserve D/E-line denial?
 3. What should the short R4/R5 instruction be for the 23:00 JST window?
 4. Does the integrated map's three-class filter cover today's command needs, or should pact partners be split by source alliance?
-5. The user wrote `478エリア`; current implementation treats this as `#476エリア`. Please confirm whether this interpretation is acceptable.
+5. Which pact partners should be entered into `侵攻予測_20260527_統合!O2:Y9` before the fight window?
 
 ## Notes
 
 - The new prediction tab is a forecast layer, not a confirmed future state.
 - The tab uses colors for current enemy footholds, first denial points, city destruction candidates, and #503-side convergence route.
 - The integrated tab is a monitoring layer: red = existing #534 invader, orange = #476-side boundary alliance, purple = manually entered pact partner.
+- `#476エリア` is confirmed correct; no `#478` reinterpretation is needed.
+- `侵攻予測_20260527_統合` now matches `取得入力マップ` cell merges for the copied map areas.
 - Existing unrelated local changes remain outside this analysis.
