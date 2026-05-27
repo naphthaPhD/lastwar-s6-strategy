@@ -10,6 +10,8 @@ The pact situation changed: #503-side alliances can now attack #534. The user as
 
 This handoff uses the live Google Sheet and the previous #476B/#476C route analysis. Two prediction/support tabs were added to the spreadsheet.
 
+Latest side classification for this handoff: #534 and #509 are allies; #476 and #503 are enemies.
+
 ## Updated files
 
 - `analysis/2026-05-27_503_476_worst_case_invasion_forecast.md`
@@ -21,8 +23,8 @@ This handoff uses the live Google Sheet and the previous #476B/#476C route analy
 - Spreadsheet ID: `12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g`
 - Added tab: `侵攻予測_20260527_最悪`
 - Added tab: `侵攻予測_20260527_統合`
-- Integrated map range: `侵攻予測_20260527_統合!A12:BT92`
-- Integrated map formula: `={'取得入力マップ'!A6:BT45;'取得入力マップ'!A49:BT89}`
+- Integrated map range: `侵攻予測_20260527_統合!A12:BS92`
+- Integrated map formula: `={'取得入力マップ'!A6:AN45,'取得入力マップ'!AP6:BT45;'取得入力マップ'!A49:AN89,'取得入力マップ'!AP49:BT89}`
 - Pact input range for purple display: `侵攻予測_20260527_統合!O2:Y9`
 
 ## Key findings
@@ -36,6 +38,7 @@ This handoff uses the live Google Sheet and the previous #476B/#476C route analy
 7. Current invadable/potentially invadable alliance classes are: existing #534 invaders `476B`, `476C`; #476-side boundary alliances `476K`, `476H`, `476A`, `476C`, `IXM`, `476d`, `476B`; and manually entered pact partners in `O2:Y9`.
 8. The user confirmed that `#476エリア` is the correct target. The integrated tab now copies the source map's cell merges from `取得入力マップ`.
 9. The integrated tab has been visually connected by removing the upper/lower seam and left/right area seam while preserving map formulas and merges.
+10. Per the user's latest instruction, #534/#509 are treated as allies and #476/#503 as enemies. The integrated tab's AO column was deleted and the formula now skips `取得入力マップ` AO, connecting `A:AN` directly with `AP:BT` into `A:BS`.
 
 ## Current risks
 
@@ -66,8 +69,9 @@ This handoff uses the live Google Sheet and the previous #476B/#476C route analy
 
 - The new prediction tab is a forecast layer, not a confirmed future state.
 - The tab uses colors for current enemy footholds, first denial points, city destruction candidates, and #503-side convergence route.
-- The integrated tab is a monitoring layer: red = existing #534 invader, orange = #476-side boundary alliance, purple = manually entered pact partner.
+- The integrated tab is a monitoring layer: red = existing #534 invader, orange = #476-side boundary alliance, purple = manually entered pact partner. Operational side classification is ally = #534/#509, enemy = #476/#503.
 - `#476エリア` is confirmed correct; no `#478` reinterpretation is needed.
 - `侵攻予測_20260527_統合` now matches `取得入力マップ` cell merges for the copied map areas.
-- Merge spot checks after the connection pass: `A52:B52` and `L52:M53` are still merged.
+- AO was removed as a connector seam: the tab now has 71 columns, and the displayed map is `A12:BS92`.
+- Merge spot checks after the connection pass: `A12:B12`, `A52:B52`, and `L52:M53` are still merged.
 - Existing unrelated local changes remain outside this analysis.
