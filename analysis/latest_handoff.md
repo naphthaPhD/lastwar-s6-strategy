@@ -53,18 +53,36 @@ Manual sync verification:
 
 Prediction-layer input added:
 
-- Right-side panel: `侵攻予測_20260527_取得入力型!DO1:DX90`
+- Right-side panel: `侵攻予測_20260527_取得入力型!DO1:DY90`
 - Scenario selector: `DP2`
-- Layer table: `DO18:DX90`
+- Layer table: `DO18:DY90`
 - Auto key formula: `DT19`
+- Game coordinate helper column: `DY18:DY90`
 - Map coloring range: `A6:CC88`
 - Current column count after adding the panel and deleting the old usage column: `131`
 - Category colors: `敵主攻`, `破壊候補`, `防衛優先`, `捨て候補`, `再取得`, `反攻ルート`, `起点`, `要確認`
 - Scenario choices: `全表示`, `最悪パターン`, `476B上押し`, `476C右押し`, `503合流`, `反攻ルート`, `防衛ライン`, `捨て/交換`, `要確認`
 
-The layer table is intentionally separate from the map body. After copying `取得入力マップ` into the forecast tab, commanders can add or edit rows in `DO19:DX90`; rows with `ON=TRUE` are overlaid onto the map by conditional formatting. `DP2=全表示` shows all active rows, while selecting a scenario shows only that scenario.
+The layer table is intentionally separate from the map body. After copying `取得入力マップ` into the forecast tab, commanders can add or edit rows in `DO19:DY90`; rows with `ON=TRUE` are overlaid onto the map by conditional formatting. `DP2=全表示` shows all active rows, while selecting a scenario shows only that scenario.
 
 At 2026-05-27 13:42 JST, the old `取得入力マップの使い方` column was deleted from the prediction tab only. This removed `CD` from `侵攻予測_20260527_取得入力型`; the source `取得入力マップ` was not changed. The saved Apps Script source patch in `AppsScript_地点詳細!A1253` was also updated from `DL2` to `DK2`.
+
+At 2026-05-27 13:58 JST, the map display was adjusted for command readability:
+
+- `A6:CC88` now uses white background as the base. The operational goal is no alliance-color background copy on this prediction tab.
+- Enemy alliance names from `敵連盟_作業用!A2:A300` are red.
+- #534-side alliance names, detected from `管理表たたき` area `#534`, are blue unless they are also in the enemy list.
+- #509-side ally names, detected from `管理表たたき` area `#509`, are green unless they are also in the enemy list.
+- Other names remain black.
+- Enemy list matching has priority over #534/#509 area matching, so an enemy-held name inside a friendly server area still appears red.
+
+Verification samples:
+
+- `A6=RGWC`: blue #534-side text on white background.
+- `CB6=MOn`: green #509-side text on white background.
+- Enemy-list names such as 476-series entries appear red.
+
+The right-side table was also extended with `DY18:DY90` as `ゲーム座標(自動)`. It uses the `DT` auto key to look up `管理表たたき!T:T`, reads the source/memo field in `管理表たたき!L:L`, and extracts strings like `#534 X:449 Y:49`, displayed as `#534 X449 Y49`. Blank coordinate cells mean the source/memo field does not currently contain a game-coordinate string for that key.
 
 Seeded scenarios:
 
@@ -98,6 +116,8 @@ Verified properties:
 8. The right-side prediction layer now turns the tab into a paint-map workflow: add a coordinate row, select a scenario and category, set `ON=TRUE`, and the map highlights that point.
 9. For command use, scenario switching is now simpler than creating separate tabs for every hypothesis.
 10. The old `取得入力マップの使い方` column has been removed from the prediction tab to reduce clutter.
+11. The map body now prioritizes white background plus text-color classification: red enemy, blue #534, green #509 ally, black other.
+12. Game-coordinate display is available in `DY`, but only where `管理表たたき` already has a coordinate string in the memo/source field.
 
 ## Current risks
 
@@ -111,6 +131,8 @@ Verified properties:
 8. Running `savePointFromDetail` with empty right-side inputs is expected to fail; do not use it for map sync.
 9. Prediction rows are hypotheses, not confirmed rules. If fishery ownership, city break eligibility, or pact access changes, the right-side table must be updated before using the colors operationally.
 10. The counterattack route layer should be treated as a short-window disruption plan; fixed occupation against #476/#503 pressure is still high-risk.
+11. Because the map body background is intentionally white, prediction category background colors on `A6:CC88` are effectively secondary. Use `DP2` and the right-side table for category interpretation unless the white rule is later relaxed.
+12. Coordinate blanks in `DY` are data gaps, not formula failure, when the corresponding `管理表たたき` memo/source field has no `#... X... Y...` text.
 
 ## Recommended next actions
 
@@ -122,7 +144,8 @@ Verified properties:
 6. Reflect `AppsScript_地点詳細!A1241:A1316` into live `Code.gs` if automatic sync is needed during the fight window.
 7. After reflecting the script, run `copyLatestInputMapToInvasionMap` once to test, then run `installInvasionMapSyncTrigger` only if repeated refresh is needed.
 8. Use `DP2=最悪パターン` to brief likely enemy break points, `DP2=防衛ライン` for minimum defense, `DP2=捨て/交換` for abandon/recapture, and `DP2=反攻ルート` for attack planning.
-9. Add new rows under `DO19:DX90` whenever 476B/476C/503 captures a fishery or gains a new city-destruction adjacency.
+9. Add new rows under `DO19:DY90` whenever 476B/476C/503 captures a fishery or gains a new city-destruction adjacency.
+10. Add missing game coordinates to `管理表たたき` memo/source fields in `#534 X449 Y49` or `#534 X:449 Y:49` style if `DY` should show them.
 
 ## Questions for ChatGPT
 
@@ -131,11 +154,13 @@ Verified properties:
 3. What short R4/R5 order should be shared for the next city-fight window?
 4. Which enemy/pact alliances should be highlighted first on the duplicated map?
 5. Are the seeded counterattack route candidates too aggressive given the current power gap, or useful as disruption-only options?
+6. Should the command map keep white background only, or should prediction-category background colors be restored for specific scenarios?
 
 ## Notes
 
 - This update intentionally stops trying to delete AO or remove map borders by restructuring cells.
 - The new tab keeps the same shape as `取得入力マップ`, including the difficult merged cells.
 - `侵攻予測_20260527_取得入力型!A1:A3` and `DK1:DK2` were updated with sync notes and last-sync status.
-- `侵攻予測_20260527_取得入力型!DO:DX` is now the operator-facing prediction input area; the map body should still be treated as copied/current-state terrain.
+- `侵攻予測_20260527_取得入力型!DO:DY` is now the operator-facing prediction input area; the map body should still be treated as copied/current-state terrain.
+- The map body is now a white-background command view with text colors: red enemy, blue #534, green #509 ally, black other.
 - Existing unrelated local changes remain outside this analysis.
