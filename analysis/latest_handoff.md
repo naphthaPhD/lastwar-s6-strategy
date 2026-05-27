@@ -34,7 +34,8 @@ Previous tactical map work remains in Google Sheets; this update adds a local Py
 4. CHOKE candidates are extracted from articulation points and scored by importance, graph degree, betweenness, major-node split, and major-node isolation.
 5. `sample_output/state.json` currently reports three synthetic CHOKE candidates and one isolated synthetic node from the smoke-test fixture.
 6. `sample_output/map.html` is generated with `pyvis`, owner-based node colors, importance-based size, edge display, click/hover node details, and protection-status border coloring.
-7. The sample CSV is synthetic smoke-test data only. It is not a real board state and should not be used tactically.
+7. After an initial black-screen test in the Codex in-app browser, HTML generation was changed to use local vis-network assets under `sample_output/lib/` instead of a giant inline script.
+8. The sample CSV is synthetic smoke-test data only. It is not a real board state and should not be used tactically.
 
 ## Current risks
 
@@ -61,6 +62,6 @@ Previous tactical map work remains in Google Sheets; this update adds a local Py
 ## Notes
 
 - Dependencies were installed into the existing local `.venv` for verification.
-- The generated HTML is UTF-8 and has no external CDN dependency for vis-network.
+- The generated HTML is UTF-8 and uses local vis-network assets in `sample_output/lib/`, avoiding the inline-script black-screen issue seen in the in-app browser.
 - The `tools/invasion_strategy_os/` directory was explicitly allowlisted in `.gitignore`; existing unrelated local `tools/` files remain ignored.
 - Existing unrelated local changes were not touched.

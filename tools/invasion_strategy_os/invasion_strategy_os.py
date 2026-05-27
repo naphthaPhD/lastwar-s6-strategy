@@ -3,8 +3,10 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import inspect
 import json
 import re
+import shutil
 import sys
 from dataclasses import asdict, dataclass
 from datetime import datetime
@@ -353,7 +355,7 @@ def write_html(
     warning_hours = float(config.get("protect_warning_hours", 6))
     colors_by_owner = owner_color_map({str(node_data.get("owner", "unknown")) for _, node_data in graph.nodes(data=True)})
 
-    network = Network(height="820px", width="100%", bgcolor="#111827", font_color="#f9fafb", cdn_resources="in_line")
+    network = Network(height="820px", width="100%", bgcolor="#111827", font_color="#f9fafb", cdn_resources="local")
     network.toggle_physics(False)
 
     for node_id, node_data in graph.nodes(data=True):
@@ -407,8 +409,22 @@ def write_html(
         }
         """
     )
-    html = clean_generated_html(strip_remote_bootstrap(network.generate_html(notebook=False)))
+    copy_local_vis_assets(output_path)
+    html = network.generate_html(notebook=False)
+    html = localize_vis_resources(strip_remote_bootstrap(html))
+    html = clean_generated_html(html)
     output_path.write_text(html, encoding="utf-8")
+
+
+def copy_local_vis_assets(output_path: Path) -> None:
+    pyvis_root = Path(inspect.getfile(Network)).parent
+    source = pyvis_root / "templates" / "lib"
+    target = output_path.parent / "lib"
+    if target.exists():
+        shutil.rmtree(target)
+    target.mkdir(parents=True)
+    for asset_dir in ("bindings", "tom-select", "vis-9.1.2"):
+        shutil.copytree(source / asset_dir, target / asset_dir)
 
 
 def strip_remote_bootstrap(html: str) -> str:
@@ -423,6 +439,20 @@ def strip_remote_bootstrap(html: str) -> str:
         "",
         html,
         flags=re.DOTALL,
+    )
+    return html
+
+
+def localize_vis_resources(html: str) -> str:
+    html = re.sub(
+        r"<link[^>]+vis-network\.min\.css[^>]+>",
+        '<link rel="stylesheet" href="lib/vis-9.1.2/vis-network.css" />',
+        html,
+    )
+    html = re.sub(
+        r"<script[^>]+vis-network\.min\.js[^>]*></script>",
+        '<script src="lib/vis-9.1.2/vis-network.min.js"></script>',
+        html,
     )
     return html
 

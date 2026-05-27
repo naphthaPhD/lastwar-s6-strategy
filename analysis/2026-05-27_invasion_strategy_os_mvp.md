@@ -23,7 +23,8 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - Treats articulation points as CHOKE candidates.
 - Adds stronger CHOKE reasons when major city/stronghold groups split, a major node is isolated, or route degree is narrow.
 - Writes `sample_output/map.html` and `sample_output/state.json`.
-- Generated HTML is UTF-8 and does not require external CDN resources for vis-network.
+- Generated HTML is UTF-8 and uses local vis-network assets under `sample_output/lib/`.
+- The initial inline-script HTML produced a black screen in the Codex in-app browser; the local-asset output rendered correctly after reload.
 
 ## 4. Timeline
 
@@ -45,7 +46,7 @@ The sample input is synthetic smoke-test data only. It is not a real LastWar boa
 - The current live Google Sheet still needs a clean node/edge export or a mapping tab with stable ids.
 - CHOKE output is graph-structural, so it must be checked against game rules, protection windows, alliance pact state, and actual attack eligibility.
 - Google Sheets private/API access may require later credential or connector work; this MVP supports CSV export first because it is simpler to update daily.
-- Browser verification of the local `file://` HTML was blocked by the Codex browser safety policy, so verification used static HTML checks and JSON analysis output.
+- Browser verification over `file://` was blocked by the Codex browser safety policy, but the same output was verified through `http://127.0.0.1:8000/sample_output/map.html` in the in-app browser.
 
 ## 7. Recommended actions
 
