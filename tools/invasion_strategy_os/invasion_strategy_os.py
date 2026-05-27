@@ -451,6 +451,17 @@ def parse_outer_fishery_coord(coord: str) -> tuple[int, int] | None:
     return ord(letter) - ord("A"), (number - 1) // 2
 
 
+def parse_outer_city_coord(coord: str) -> tuple[int, int] | None:
+    match = re.match(r"^([a-j])-(\d+)$", coord.strip())
+    if not match:
+        return None
+    letter, number_text = match.groups()
+    number = int(number_text)
+    if number < 2 or number > 20 or number % 2 != 0:
+        return None
+    return ord(letter) - ord("a"), (number - 2) // 2
+
+
 def parse_central_grid_coord(coord: str) -> tuple[int, int] | None:
     match = re.match(rf"^{CENTRAL_COORD_PREFIX}-(\d+)-(\d+)$", coord.strip())
     if not match:
@@ -478,6 +489,21 @@ def add_edge_once(edge_map: dict[tuple[str, str], Edge], source_id: str, target_
     edge_map.setdefault(key, Edge(key[0], key[1], weight))
 
 
+def facility_blocks_fishery_diagonal(
+    facility_by_area_coord: dict[tuple[str, int, int], str],
+    area: str,
+    row: int,
+    col: int,
+    row_step: int,
+    col_step: int,
+) -> bool:
+    if abs(row_step) != 1 or abs(col_step) != 1:
+        return False
+    city_row = row if row_step > 0 else row - 1
+    city_col = col if col_step > 0 else col - 1
+    return (area, city_row, city_col) in facility_by_area_coord
+
+
 def outer_area_grid(nodes: dict[str, Node]) -> dict[str, tuple[int, int]]:
     areas: dict[str, list[Node]] = {}
     for node in nodes.values():
@@ -494,57 +520,73 @@ def outer_area_grid(nodes: dict[str, Node]) -> dict[str, tuple[int, int]]:
 def derive_coordinate_edges(nodes: dict[str, Node], config: dict[str, Any]) -> list[Edge]:
     isolated_types = {str(value) for value in config.get("isolated_types", [])}
     fishery_type = str(config.get("fishery_type", DEFAULT_FISHERY_TYPE))
+    city_type = str(config.get("city_type", DEFAULT_CITY_TYPE))
+    trade_type = str(config.get("trade_type", "\u4ea4\u6613\u5730"))
     include_central = bool(config.get("include_central_fishery_edges", True))
 
     outer_by_area_coord: dict[tuple[str, int, int], str] = {}
+    outer_city_by_area_coord: dict[tuple[str, int, int], str] = {}
+    outer_blocking_facility_by_area_coord: dict[tuple[str, int, int], str] = {}
     central_by_coord: dict[tuple[int, int], str] = {}
     for node_id, node in nodes.items():
-        if node.type in isolated_types or node.type != fishery_type:
+        if node.type == fishery_type:
+            if node.type in isolated_types:
+                continue
+            outer_coord = parse_outer_fishery_coord(node.name)
+            if outer_coord is not None:
+                outer_by_area_coord[(node.area, outer_coord[0], outer_coord[1])] = node_id
+                continue
+            central_coord = parse_central_grid_coord(node.name)
+            if include_central and central_coord is not None:
+                central_by_coord[central_coord] = node_id
             continue
-        outer_coord = parse_outer_fishery_coord(node.name)
-        if outer_coord is not None:
-            outer_by_area_coord[(node.area, outer_coord[0], outer_coord[1])] = node_id
-            continue
-        central_coord = parse_central_grid_coord(node.name)
-        if include_central and central_coord is not None:
-            central_by_coord[central_coord] = node_id
+        if node.type in {city_type, trade_type}:
+            outer_city_coord = parse_outer_city_coord(node.name)
+            if outer_city_coord is not None:
+                outer_blocking_facility_by_area_coord[(node.area, outer_city_coord[0], outer_city_coord[1])] = node_id
+                if node.type == city_type and node.type not in isolated_types:
+                    outer_city_by_area_coord[(node.area, outer_city_coord[0], outer_city_coord[1])] = node_id
 
     edges: dict[tuple[str, str], Edge] = {}
 
-    max_outer_index = 10
-    for (area, row, col), source_id in sorted(outer_by_area_coord.items()):
-        for next_row, next_col in ((row + 1, col), (row, col + 1)):
-            target_id = outer_by_area_coord.get((area, next_row, next_col))
-            if target_id:
-                add_edge_once(edges, source_id, target_id)
-
     grid_by_area = outer_area_grid(nodes)
-    area_by_grid = {grid: area for area, grid in grid_by_area.items()}
+    outer_by_global_coord: dict[tuple[int, int], str] = {}
+    outer_global_meta: dict[tuple[int, int], tuple[str, int, int]] = {}
     for (area, row, col), source_id in sorted(outer_by_area_coord.items()):
         area_grid = grid_by_area.get(area)
         if area_grid is None:
             continue
         area_col, area_row = area_grid
-        boundary_specs = []
-        if row == 0:
-            boundary_specs.append(((area_col, area_row - 1), max_outer_index, col, "vertical"))
-        if col == max_outer_index:
-            boundary_specs.append(((area_col + 1, area_row), row, 0, "horizontal"))
-        for target_grid, target_fixed, changing_index, direction in boundary_specs:
-            target_area = area_by_grid.get(target_grid)
-            if target_area is None:
+        global_coord = (area_row * 11 + row, area_col * 11 + col)
+        outer_by_global_coord[global_coord] = source_id
+        outer_global_meta[global_coord] = (area, row, col)
+
+    fishery_neighbor_steps = ((0, 1), (1, -1), (1, 0), (1, 1))
+    for (row, col), source_id in sorted(outer_by_global_coord.items()):
+        area, local_row, local_col = outer_global_meta[(row, col)]
+        for row_step, col_step in fishery_neighbor_steps:
+            if facility_blocks_fishery_diagonal(
+                outer_blocking_facility_by_area_coord,
+                area,
+                local_row,
+                local_col,
+                row_step,
+                col_step,
+            ):
                 continue
-            for variant in boundary_variants(changing_index, max_outer_index):
-                if direction == "vertical":
-                    target_id = outer_by_area_coord.get((target_area, target_fixed, variant))
-                else:
-                    target_id = outer_by_area_coord.get((target_area, variant, target_fixed))
-                if target_id:
-                    add_edge_once(edges, source_id, target_id)
+            target_id = outer_by_global_coord.get((row + row_step, col + col_step))
+            if target_id:
+                add_edge_once(edges, source_id, target_id)
+
+    for (area, row, col), city_id in sorted(outer_city_by_area_coord.items()):
+        for fishery_row, fishery_col in ((row, col), (row, col + 1), (row + 1, col), (row + 1, col + 1)):
+            target_id = outer_by_area_coord.get((area, fishery_row, fishery_col))
+            if target_id:
+                add_edge_once(edges, city_id, target_id)
 
     for (row, col), source_id in sorted(central_by_coord.items()):
-        for next_row, next_col in ((row + 1, col), (row, col + 1)):
-            target_id = central_by_coord.get((next_row, next_col))
+        for row_step, col_step in fishery_neighbor_steps:
+            target_id = central_by_coord.get((row + row_step, col + col_step))
             if target_id:
                 add_edge_once(edges, source_id, target_id)
 
