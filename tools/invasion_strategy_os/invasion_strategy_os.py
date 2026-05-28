@@ -1527,6 +1527,8 @@ def add_node_info_panel_v3(html: str) -> str:
 <button id="map-reset-layout" type="button">&#20301;&#32622;&#12522;&#12475;&#12483;&#12488;</button>
 <button id="map-highlight-boundary" type="button">&#22659;&#30028;&#24375;&#35519;</button>
 <button id="map-highlight-boundary-depth" type="button">&#22659;&#30028;+&#20869;&#20596;</button>
+<button id="map-highlight-boundary-depth-2" type="button">&#22659;&#30028;+&#20869;&#20596;+&#20869;&#20596;</button>
+<button id="map-highlight-boundary-depth-3" type="button">&#22659;&#30028;+&#20869;&#20596;+&#20869;&#20596;+&#20869;&#20596;</button>
 <button id="map-clear-edge-highlight" type="button">&#24375;&#35519;&#35299;&#38500;</button>
 <button id="map-refresh-sheet" type="button">&#12510;&#12483;&#12503;&#26368;&#26032;&#21270;</button>
 <button id="map-route-mode" type="button">&#12523;&#12540;&#12488;&#36984;&#25246;</button>
@@ -1813,8 +1815,14 @@ def add_node_info_panel_v3(html: str) -> str:
                       if (!nodes || !edges) return;
                       clearRouteState();
                       resetEdgeHighlights();
+                      var boundary = collectBoundaryFisheryEdges();
+                      highlightEdges(boundary.unownedBoundaryEdgeIds, "#facc15", 4);
+                      highlightEdges(boundary.friendlyBoundaryEdgeIds, "#fb923c", 5);
+                    }}
+                    function collectBoundaryFisheryEdges() {{
                       var friendlyBoundaryEdgeIds = [];
                       var unownedBoundaryEdgeIds = [];
+                      var boundaryFriendlyNodes = {{}};
                       edges.get().forEach(function (edge) {{
                         var source = nodes.get(edge.from);
                         var target = nodes.get(edge.to);
@@ -1825,6 +1833,11 @@ def add_node_info_panel_v3(html: str) -> str:
                           (source.affiliation === "enemy" && isFriendlyAffiliation(target.affiliation))
                         ) {{
                           friendlyBoundaryEdgeIds.push(edge.id);
+                          if (isFriendlyAffiliation(source.affiliation)) {{
+                            boundaryFriendlyNodes[source.id] = true;
+                          }} else {{
+                            boundaryFriendlyNodes[target.id] = true;
+                          }}
                         }} else if (
                           (source.affiliation === "enemy" && target.affiliation === "unowned") ||
                           (source.affiliation === "unowned" && target.affiliation === "enemy")
@@ -1832,45 +1845,62 @@ def add_node_info_panel_v3(html: str) -> str:
                           unownedBoundaryEdgeIds.push(edge.id);
                         }}
                       }});
-                      highlightEdges(unownedBoundaryEdgeIds, "#facc15", 4);
-                      highlightEdges(friendlyBoundaryEdgeIds, "#fb923c", 5);
+                      return {{
+                        friendlyBoundaryEdgeIds: friendlyBoundaryEdgeIds,
+                        unownedBoundaryEdgeIds: unownedBoundaryEdgeIds,
+                        boundaryFriendlyNodes: boundaryFriendlyNodes
+                      }};
                     }}
-                    function highlightSelfEnemyFisheryEdgesWithSelfDepth() {{
-                      if (!nodes || !edges) return;
-                      clearRouteState();
-                      resetEdgeHighlights();
-                      var friendlyBoundaryEdgeIds = [];
-                      var unownedBoundaryEdgeIds = [];
-                      var boundaryFriendlyNodes = {{}};
+                    function collectInteriorDepthEdgeIds(boundaryFriendlyNodes, maxDepth) {{
+                      var interiorEdges = [];
+                      var adjacency = {{}};
                       edges.get().forEach(function (edge) {{
                         var source = nodes.get(edge.from);
                         var target = nodes.get(edge.to);
                         if (!source || !target) return;
                         if (source.nodeType !== "\\u6f01\\u5834" || target.nodeType !== "\\u6f01\\u5834") return;
-                        if (isFriendlyAffiliation(source.affiliation) && target.affiliation === "enemy") {{
-                          friendlyBoundaryEdgeIds.push(edge.id);
-                          boundaryFriendlyNodes[source.id] = true;
-                        }} else if (source.affiliation === "enemy" && isFriendlyAffiliation(target.affiliation)) {{
-                          friendlyBoundaryEdgeIds.push(edge.id);
-                          boundaryFriendlyNodes[target.id] = true;
-                        }} else if (
-                          (source.affiliation === "enemy" && target.affiliation === "unowned") ||
-                          (source.affiliation === "unowned" && target.affiliation === "enemy")
-                        ) {{
-                          unownedBoundaryEdgeIds.push(edge.id);
-                        }}
+                        if (!isFriendlyInteriorAffiliation(source.affiliation) || !isFriendlyInteriorAffiliation(target.affiliation)) return;
+                        interiorEdges.push(edge);
+                        if (!adjacency[edge.from]) adjacency[edge.from] = [];
+                        if (!adjacency[edge.to]) adjacency[edge.to] = [];
+                        adjacency[edge.from].push(edge.to);
+                        adjacency[edge.to].push(edge.from);
                       }});
-                      var friendlyDepthEdgeIds = edges.get().filter(function (edge) {{
-                        var source = nodes.get(edge.from);
-                        var target = nodes.get(edge.to);
-                        if (!source || !target) return false;
-                        if (source.nodeType !== "\\u6f01\\u5834" || target.nodeType !== "\\u6f01\\u5834") return false;
-                        if (!isFriendlyInteriorAffiliation(source.affiliation) || !isFriendlyInteriorAffiliation(target.affiliation)) return false;
-                        return Boolean(boundaryFriendlyNodes[source.id] || boundaryFriendlyNodes[target.id]);
+                      var distances = {{}};
+                      var queue = [];
+                      Object.keys(boundaryFriendlyNodes).forEach(function (nodeId) {{
+                        distances[nodeId] = 0;
+                        queue.push(nodeId);
+                      }});
+                      for (var i = 0; i < queue.length; i += 1) {{
+                        var nodeId = queue[i];
+                        var distance = distances[nodeId];
+                        if (distance >= maxDepth) continue;
+                        var neighbors = adjacency[nodeId] || [];
+                        for (var j = 0; j < neighbors.length; j += 1) {{
+                          var next = neighbors[j];
+                          if (distances[next] === undefined) {{
+                            distances[next] = distance + 1;
+                            queue.push(next);
+                          }}
+                        }}
+                      }}
+                      return interiorEdges.filter(function (edge) {{
+                        var sourceDistance = distances[edge.from];
+                        var targetDistance = distances[edge.to];
+                        if (sourceDistance === undefined || targetDistance === undefined) return false;
+                        return Math.min(sourceDistance, targetDistance) < maxDepth && Math.max(sourceDistance, targetDistance) <= maxDepth;
                       }}).map(function (edge) {{ return edge.id; }});
+                    }}
+                    function highlightSelfEnemyFisheryEdgesWithSelfDepth(maxDepth) {{
+                      if (!nodes || !edges) return;
+                      clearRouteState();
+                      resetEdgeHighlights();
+                      var boundary = collectBoundaryFisheryEdges();
+                      var friendlyDepthEdgeIds = collectInteriorDepthEdgeIds(boundary.boundaryFriendlyNodes, maxDepth || 1);
                       highlightEdges(friendlyDepthEdgeIds, "#f43f5e", 4);
-                      highlightEdges(unownedBoundaryEdgeIds, "#facc15", 4);
-                      highlightEdges(friendlyBoundaryEdgeIds, "#fb923c", 5);
+                      highlightEdges(boundary.unownedBoundaryEdgeIds, "#facc15", 4);
+                      highlightEdges(boundary.friendlyBoundaryEdgeIds, "#fb923c", 5);
                     }}
                     var boundaryButton = document.getElementById("map-highlight-boundary");
                     if (boundaryButton) {{
@@ -1878,7 +1908,21 @@ def add_node_info_panel_v3(html: str) -> str:
                     }}
                     var boundaryDepthButton = document.getElementById("map-highlight-boundary-depth");
                     if (boundaryDepthButton) {{
-                      boundaryDepthButton.addEventListener("click", highlightSelfEnemyFisheryEdgesWithSelfDepth);
+                      boundaryDepthButton.addEventListener("click", function () {{
+                        highlightSelfEnemyFisheryEdgesWithSelfDepth(1);
+                      }});
+                    }}
+                    var boundaryDepth2Button = document.getElementById("map-highlight-boundary-depth-2");
+                    if (boundaryDepth2Button) {{
+                      boundaryDepth2Button.addEventListener("click", function () {{
+                        highlightSelfEnemyFisheryEdgesWithSelfDepth(2);
+                      }});
+                    }}
+                    var boundaryDepth3Button = document.getElementById("map-highlight-boundary-depth-3");
+                    if (boundaryDepth3Button) {{
+                      boundaryDepth3Button.addEventListener("click", function () {{
+                        highlightSelfEnemyFisheryEdgesWithSelfDepth(3);
+                      }});
                     }}
                     var clearEdgeButton = document.getElementById("map-clear-edge-highlight");
                     if (clearEdgeButton) {{
