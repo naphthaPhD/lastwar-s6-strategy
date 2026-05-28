@@ -1662,6 +1662,9 @@ def add_node_info_panel_v3(html: str) -> str:
                     function isFriendlyAffiliation(affiliation) {{
                       return affiliation === "self" || affiliation === "ally";
                     }}
+                    function isFriendlyInteriorAffiliation(affiliation) {{
+                      return isFriendlyAffiliation(affiliation) || affiliation === "unowned";
+                    }}
                     function adjacentFisheryIds(nodeId) {{
                       if (!edges || !nodes || !nodeId) return [];
                       var found = {{}};
@@ -1862,7 +1865,7 @@ def add_node_info_panel_v3(html: str) -> str:
                         var target = nodes.get(edge.to);
                         if (!source || !target) return false;
                         if (source.nodeType !== "\\u6f01\\u5834" || target.nodeType !== "\\u6f01\\u5834") return false;
-                        if (!isFriendlyAffiliation(source.affiliation) || !isFriendlyAffiliation(target.affiliation)) return false;
+                        if (!isFriendlyInteriorAffiliation(source.affiliation) || !isFriendlyInteriorAffiliation(target.affiliation)) return false;
                         return Boolean(boundaryFriendlyNodes[source.id] || boundaryFriendlyNodes[target.id]);
                       }}).map(function (edge) {{ return edge.id; }});
                       highlightEdges(friendlyDepthEdgeIds, "#f43f5e", 4);
