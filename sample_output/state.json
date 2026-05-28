@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T00:35:16.586419+09:00",
+  "generated_at": "2026-05-29T00:52:07.330139+09:00",
   "timezone": "Asia/Tokyo",
   "nodes": [
     {
@@ -84,7 +84,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -119,7 +119,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -399,7 +399,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -434,7 +434,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -469,7 +469,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -539,7 +539,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -2464,7 +2464,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -6551,7 +6551,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 134.41,
+        "hours_remaining": 134.13,
         "protect_until": "2026-06-03T15:00:00+09:00"
       },
       "alliance_power": {
@@ -6621,7 +6621,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -33.59,
+        "hours_remaining": -33.87,
         "protect_until": "2026-05-27T15:00:00+09:00"
       },
       "alliance_power": {
@@ -6656,7 +6656,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -6831,7 +6831,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -6866,7 +6866,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -6901,7 +6901,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -7181,7 +7181,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -7216,7 +7216,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -7321,7 +7321,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -7356,7 +7356,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -7496,7 +7496,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -7531,7 +7531,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -7566,7 +7566,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -129.59,
+        "hours_remaining": -129.87,
         "protect_until": "2026-05-23T15:00:00+09:00"
       },
       "alliance_power": {
@@ -7653,7 +7653,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -8318,7 +8318,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -8388,7 +8388,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -8633,7 +8633,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 134.41,
+        "hours_remaining": 134.13,
         "protect_until": "2026-06-03T15:00:00+09:00"
       },
       "alliance_power": {
@@ -8860,7 +8860,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -8895,7 +8895,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -8965,7 +8965,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -33.59,
+        "hours_remaining": -33.87,
         "protect_until": "2026-05-27T15:00:00+09:00"
       },
       "alliance_power": {
@@ -9000,7 +9000,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -11829,7 +11829,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": null
@@ -12309,7 +12309,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -12781,7 +12781,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": null
@@ -12938,7 +12938,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -13393,7 +13393,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -13533,7 +13533,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -13743,7 +13743,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -13778,7 +13778,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -13813,7 +13813,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -33.59,
+        "hours_remaining": -33.87,
         "protect_until": "2026-05-27T15:00:00+09:00"
       },
       "alliance_power": {
@@ -13988,7 +13988,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -14093,7 +14093,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -14198,7 +14198,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -14233,7 +14233,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -14408,7 +14408,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -14443,7 +14443,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -14478,7 +14478,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -14513,7 +14513,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -14723,7 +14723,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -14898,7 +14898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -15038,7 +15038,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -129.59,
+        "hours_remaining": -129.87,
         "protect_until": "2026-05-23T15:00:00+09:00"
       },
       "alliance_power": {
@@ -15676,7 +15676,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -129.59,
+        "hours_remaining": -129.87,
         "protect_until": "2026-05-23T15:00:00+09:00"
       },
       "alliance_power": {
@@ -15781,7 +15781,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -15816,7 +15816,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -15851,7 +15851,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -15956,7 +15956,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -16096,7 +16096,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -33.59,
+        "hours_remaining": -33.87,
         "protect_until": "2026-05-27T15:00:00+09:00"
       },
       "alliance_power": {
@@ -16131,7 +16131,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -33.59,
+        "hours_remaining": -33.87,
         "protect_until": "2026-05-27T15:00:00+09:00"
       },
       "alliance_power": {
@@ -16166,7 +16166,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -33.59,
+        "hours_remaining": -33.87,
         "protect_until": "2026-05-27T15:00:00+09:00"
       },
       "alliance_power": {
@@ -16323,7 +16323,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -16419,7 +16419,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -33.59,
+        "hours_remaining": -33.87,
         "protect_until": "2026-05-27T15:00:00+09:00"
       },
       "alliance_power": {
@@ -16664,7 +16664,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -17793,7 +17793,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -18114,7 +18114,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -20242,7 +20242,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -33.59,
+        "hours_remaining": -33.87,
         "protect_until": "2026-05-27T15:00:00+09:00"
       },
       "alliance_power": {
@@ -20277,7 +20277,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -33.59,
+        "hours_remaining": -33.87,
         "protect_until": "2026-05-27T15:00:00+09:00"
       },
       "alliance_power": {
@@ -20312,7 +20312,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -20758,7 +20758,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -20828,7 +20828,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -22613,7 +22613,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -33.59,
+        "hours_remaining": -33.87,
         "protect_until": "2026-05-27T15:00:00+09:00"
       },
       "alliance_power": {
@@ -22858,7 +22858,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -193.59,
+        "hours_remaining": -193.87,
         "protect_until": "2026-05-20T23:00:00+09:00"
       },
       "alliance_power": {
@@ -23414,7 +23414,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -23579,7 +23579,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -26711,7 +26711,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -26746,7 +26746,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 142.41,
+        "hours_remaining": 142.13,
         "protect_until": "2026-06-03T23:00:00+09:00"
       },
       "alliance_power": {
@@ -26816,7 +26816,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -26851,7 +26851,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -26886,7 +26886,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -27026,7 +27026,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -27061,7 +27061,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -27096,7 +27096,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -27463,7 +27463,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -27813,7 +27813,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -27953,7 +27953,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -28058,7 +28058,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -28128,7 +28128,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -28163,7 +28163,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -28233,7 +28233,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -28268,7 +28268,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -28303,7 +28303,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -28373,7 +28373,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -28863,7 +28863,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -28959,7 +28959,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -29020,7 +29020,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -29116,7 +29116,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -29221,7 +29221,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -129.59,
+        "hours_remaining": -129.87,
         "protect_until": "2026-05-23T15:00:00+09:00"
       },
       "alliance_power": {
@@ -29256,7 +29256,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -29378,7 +29378,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -33.59,
+        "hours_remaining": -33.87,
         "protect_until": "2026-05-27T15:00:00+09:00"
       },
       "alliance_power": {
@@ -29413,7 +29413,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -29553,7 +29553,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -29588,7 +29588,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -29649,7 +29649,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -29859,7 +29859,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -29999,7 +29999,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -31997,7 +31997,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 150.41,
+        "hours_remaining": 150.13,
         "protect_until": "2026-06-04T07:00:00+09:00"
       },
       "alliance_power": {
@@ -34083,7 +34083,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -34328,7 +34328,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -35028,7 +35028,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -33.59,
+        "hours_remaining": -33.87,
         "protect_until": "2026-05-27T15:00:00+09:00"
       },
       "alliance_power": {
@@ -35133,7 +35133,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -36121,7 +36121,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -36366,7 +36366,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -36977,7 +36977,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -37143,7 +37143,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -39392,7 +39392,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -39427,7 +39427,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -41159,7 +41159,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -41229,7 +41229,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -42130,7 +42130,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -129.59,
+        "hours_remaining": -129.87,
         "protect_until": "2026-05-23T15:00:00+09:00"
       },
       "alliance_power": {
@@ -46958,7 +46958,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -46993,7 +46993,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 142.41,
+        "hours_remaining": 142.13,
         "protect_until": "2026-06-03T23:00:00+09:00"
       },
       "alliance_power": {
@@ -47028,7 +47028,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 134.41,
+        "hours_remaining": 134.13,
         "protect_until": "2026-06-03T15:00:00+09:00"
       },
       "alliance_power": {
@@ -47063,7 +47063,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 142.41,
+        "hours_remaining": 142.13,
         "protect_until": "2026-06-03T23:00:00+09:00"
       },
       "alliance_power": {
@@ -47343,7 +47343,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -47378,7 +47378,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -47413,7 +47413,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -47448,7 +47448,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -47483,7 +47483,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -47728,7 +47728,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": null
@@ -47850,7 +47850,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -47955,7 +47955,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -47990,7 +47990,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -48305,7 +48305,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -48375,7 +48375,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -48410,7 +48410,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -48445,7 +48445,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": null
@@ -48471,7 +48471,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": null
@@ -48497,7 +48497,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -48593,7 +48593,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -48628,7 +48628,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -48689,7 +48689,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -48724,7 +48724,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": null
@@ -48750,7 +48750,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -48811,7 +48811,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -48846,7 +48846,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -48881,7 +48881,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -48986,7 +48986,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -49021,7 +49021,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -49056,7 +49056,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -49091,7 +49091,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": null
@@ -49117,7 +49117,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -49152,7 +49152,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -49187,7 +49187,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 142.41,
+        "hours_remaining": 142.13,
         "protect_until": "2026-06-03T23:00:00+09:00"
       },
       "alliance_power": {
@@ -49222,7 +49222,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -201.59,
+        "hours_remaining": -201.87,
         "protect_until": "2026-05-20T15:00:00+09:00"
       },
       "alliance_power": {
@@ -49257,7 +49257,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -49292,7 +49292,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -49327,7 +49327,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -49362,7 +49362,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -49397,7 +49397,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -49432,7 +49432,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -49467,7 +49467,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -49502,7 +49502,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -49537,7 +49537,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -129.59,
+        "hours_remaining": -129.87,
         "protect_until": "2026-05-23T15:00:00+09:00"
       },
       "alliance_power": {
@@ -49572,7 +49572,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -49607,7 +49607,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -49738,7 +49738,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 134.41,
+        "hours_remaining": 134.13,
         "protect_until": "2026-06-03T15:00:00+09:00"
       },
       "alliance_power": {
@@ -49878,7 +49878,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 150.41,
+        "hours_remaining": 150.13,
         "protect_until": "2026-06-04T07:00:00+09:00"
       },
       "alliance_power": {
@@ -49913,7 +49913,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 150.41,
+        "hours_remaining": 150.13,
         "protect_until": "2026-06-04T07:00:00+09:00"
       },
       "alliance_power": {
@@ -50035,7 +50035,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -50332,7 +50332,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -50393,7 +50393,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -50428,7 +50428,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -50908,7 +50908,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 54.41,
+        "hours_remaining": 54.13,
         "protect_until": "2026-05-31T07:00:00+09:00"
       },
       "alliance_power": {
@@ -50943,7 +50943,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -51257,7 +51257,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 150.41,
+        "hours_remaining": 150.13,
         "protect_until": "2026-06-04T07:00:00+09:00"
       },
       "alliance_power": {
@@ -51466,7 +51466,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 134.41,
+        "hours_remaining": 134.13,
         "protect_until": "2026-06-03T15:00:00+09:00"
       },
       "alliance_power": {
@@ -54198,7 +54198,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -54233,7 +54233,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -59035,7 +59035,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -59140,7 +59140,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -33.59,
+        "hours_remaining": -33.87,
         "protect_until": "2026-05-27T15:00:00+09:00"
       },
       "alliance_power": {
@@ -59210,7 +59210,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -33.59,
+        "hours_remaining": -33.87,
         "protect_until": "2026-05-27T15:00:00+09:00"
       },
       "alliance_power": {
@@ -59245,7 +59245,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -59280,7 +59280,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -59315,7 +59315,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -59350,7 +59350,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -59455,7 +59455,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -59595,7 +59595,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -59630,7 +59630,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -59857,7 +59857,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -59927,7 +59927,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -60032,7 +60032,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -60067,7 +60067,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -60312,7 +60312,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -60382,7 +60382,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -60522,7 +60522,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -33.59,
+        "hours_remaining": -33.87,
         "protect_until": "2026-05-27T15:00:00+09:00"
       },
       "alliance_power": {
@@ -60557,7 +60557,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -60592,7 +60592,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -60662,7 +60662,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -17.59,
+        "hours_remaining": -17.87,
         "protect_until": "2026-05-28T07:00:00+09:00"
       },
       "alliance_power": {
@@ -60767,7 +60767,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -60802,7 +60802,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -60837,7 +60837,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -60872,7 +60872,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -60907,7 +60907,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -25.59,
+        "hours_remaining": -25.87,
         "protect_until": "2026-05-27T23:00:00+09:00"
       },
       "alliance_power": {
@@ -61117,7 +61117,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -61222,7 +61222,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -61257,7 +61257,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -61327,7 +61327,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -61362,7 +61362,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -61458,7 +61458,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -61528,7 +61528,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -61668,7 +61668,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -61738,7 +61738,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -61913,7 +61913,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -62053,7 +62053,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -62263,7 +62263,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 38.41,
+        "hours_remaining": 38.13,
         "protect_until": "2026-05-30T15:00:00+09:00"
       },
       "alliance_power": {
@@ -62298,7 +62298,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -129.59,
+        "hours_remaining": -129.87,
         "protect_until": "2026-05-23T15:00:00+09:00"
       },
       "alliance_power": {
@@ -62368,7 +62368,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -62403,7 +62403,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -62438,7 +62438,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -62499,7 +62499,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -62674,7 +62674,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -62709,7 +62709,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -62744,7 +62744,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -62814,7 +62814,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -62919,7 +62919,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -62989,7 +62989,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -63024,7 +63024,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -63059,7 +63059,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -129.59,
+        "hours_remaining": -129.87,
         "protect_until": "2026-05-23T15:00:00+09:00"
       },
       "alliance_power": {
@@ -63094,7 +63094,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -63164,7 +63164,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -129.59,
+        "hours_remaining": -129.87,
         "protect_until": "2026-05-23T15:00:00+09:00"
       },
       "alliance_power": {
@@ -63199,7 +63199,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -63234,7 +63234,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -63269,7 +63269,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -63409,7 +63409,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -113.59,
+        "hours_remaining": -113.87,
         "protect_until": "2026-05-24T07:00:00+09:00"
       },
       "alliance_power": {
@@ -63444,7 +63444,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -129.59,
+        "hours_remaining": -129.87,
         "protect_until": "2026-05-23T15:00:00+09:00"
       },
       "alliance_power": {
@@ -63549,7 +63549,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -129.59,
+        "hours_remaining": -129.87,
         "protect_until": "2026-05-23T15:00:00+09:00"
       },
       "alliance_power": {
@@ -63584,7 +63584,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -121.59,
+        "hours_remaining": -121.87,
         "protect_until": "2026-05-23T23:00:00+09:00"
       },
       "alliance_power": {
@@ -63654,7 +63654,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -201.59,
+        "hours_remaining": -201.87,
         "protect_until": "2026-05-20T15:00:00+09:00"
       },
       "alliance_power": {
@@ -63689,7 +63689,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -63759,7 +63759,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -63794,7 +63794,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -63864,7 +63864,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -193.59,
+        "hours_remaining": -193.87,
         "protect_until": "2026-05-20T23:00:00+09:00"
       },
       "alliance_power": {
@@ -63899,7 +63899,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -193.59,
+        "hours_remaining": -193.87,
         "protect_until": "2026-05-20T23:00:00+09:00"
       },
       "alliance_power": {
@@ -63934,7 +63934,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -193.59,
+        "hours_remaining": -193.87,
         "protect_until": "2026-05-20T23:00:00+09:00"
       },
       "alliance_power": {
@@ -63969,7 +63969,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -193.59,
+        "hours_remaining": -193.87,
         "protect_until": "2026-05-20T23:00:00+09:00"
       },
       "alliance_power": {
@@ -64030,7 +64030,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -193.59,
+        "hours_remaining": -193.87,
         "protect_until": "2026-05-20T23:00:00+09:00"
       },
       "alliance_power": {
@@ -64065,7 +64065,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -193.59,
+        "hours_remaining": -193.87,
         "protect_until": "2026-05-20T23:00:00+09:00"
       },
       "alliance_power": {
@@ -64231,7 +64231,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -201.59,
+        "hours_remaining": -201.87,
         "protect_until": "2026-05-20T15:00:00+09:00"
       },
       "alliance_power": {
@@ -64301,7 +64301,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -201.59,
+        "hours_remaining": -201.87,
         "protect_until": "2026-05-20T15:00:00+09:00"
       },
       "alliance_power": {
@@ -64406,7 +64406,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -201.59,
+        "hours_remaining": -201.87,
         "protect_until": "2026-05-20T15:00:00+09:00"
       },
       "alliance_power": {
@@ -64511,7 +64511,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -64546,7 +64546,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -201.59,
+        "hours_remaining": -201.87,
         "protect_until": "2026-05-20T15:00:00+09:00"
       },
       "alliance_power": {
@@ -64581,7 +64581,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -201.59,
+        "hours_remaining": -201.87,
         "protect_until": "2026-05-20T15:00:00+09:00"
       },
       "alliance_power": {
@@ -64616,7 +64616,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -64651,7 +64651,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -64686,7 +64686,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -201.59,
+        "hours_remaining": -201.87,
         "protect_until": "2026-05-20T15:00:00+09:00"
       },
       "alliance_power": {
@@ -64721,7 +64721,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -64756,7 +64756,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -201.59,
+        "hours_remaining": -201.87,
         "protect_until": "2026-05-20T15:00:00+09:00"
       },
       "alliance_power": {
@@ -64791,7 +64791,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -64826,7 +64826,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -201.59,
+        "hours_remaining": -201.87,
         "protect_until": "2026-05-20T15:00:00+09:00"
       },
       "alliance_power": {
@@ -64861,7 +64861,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -201.59,
+        "hours_remaining": -201.87,
         "protect_until": "2026-05-20T15:00:00+09:00"
       },
       "alliance_power": {
@@ -64896,7 +64896,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -64931,7 +64931,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -64966,7 +64966,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -65001,7 +65001,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -201.59,
+        "hours_remaining": -201.87,
         "protect_until": "2026-05-20T15:00:00+09:00"
       },
       "alliance_power": {
@@ -65036,7 +65036,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -201.59,
+        "hours_remaining": -201.87,
         "protect_until": "2026-05-20T15:00:00+09:00"
       },
       "alliance_power": {
@@ -65071,7 +65071,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -185.59,
+        "hours_remaining": -185.87,
         "protect_until": "2026-05-21T07:00:00+09:00"
       },
       "alliance_power": {
@@ -66025,7 +66025,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -66216,7 +66216,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 46.41,
+        "hours_remaining": 46.13,
         "protect_until": "2026-05-30T23:00:00+09:00"
       },
       "alliance_power": {
@@ -97199,15 +97199,15 @@
   ],
   "owner_affiliations": {
     "JDX": "self",
-    "476X": "enemy",
     "476T": "enemy",
-    "476H": "enemy",
-    "476M": "enemy",
-    "476B": "enemy",
-    "476d": "enemy",
-    "476A": "enemy",
-    "476C": "enemy",
     "476Z": "enemy",
+    "476H": "enemy",
+    "476X": "enemy",
+    "476A": "enemy",
+    "476B": "enemy",
+    "476C": "enemy",
+    "476d": "enemy",
+    "476M": "enemy",
     "476K": "enemy",
     "299": "enemy",
     "WoW3": "ally",

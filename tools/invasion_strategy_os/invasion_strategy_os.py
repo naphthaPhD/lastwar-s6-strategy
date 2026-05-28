@@ -1883,9 +1883,14 @@ def add_node_info_panel_v3(html: str) -> str:
 <button id="map-highlight-boundary-depth" type="button">&#22659;&#30028;+&#20869;&#20596;</button>
 <button id="map-highlight-boundary-depth-2" type="button">&#22659;&#30028;+&#20869;&#20596;+&#20869;&#20596;</button>
 <button id="map-highlight-boundary-depth-3" type="button">&#22659;&#30028;+&#20869;&#20596;+&#20869;&#20596;+&#20869;&#20596;</button>
+<button id="map-highlight-enemy-threat" type="button">&#25973;&#20405;&#25915;&#20104;&#28204;</button>
+<button id="map-highlight-friendly-pressure" type="button">&#21619;&#26041;&#20405;&#25915;&#20505;&#35036;</button>
+<button id="map-highlight-enemy-expand" type="button">&#25973;&#26410;&#21462;&#24471;&#25313;&#24373;</button>
+<button id="map-highlight-friendly-expand" type="button">&#21619;&#26041;&#26410;&#21462;&#24471;&#25313;&#24373;</button>
 <button id="map-clear-edge-highlight" type="button">&#24375;&#35519;&#35299;&#38500;</button>
 <button id="map-refresh-sheet" type="button">&#12510;&#12483;&#12503;&#26368;&#26032;&#21270;</button>
-<button id="map-route-mode" type="button">&#12523;&#12540;&#12488;&#36984;&#25246;</button>
+<button id="map-route-ignore-power" type="button">&#25126;&#21147;&#28961;&#35222;&#12523;&#12540;&#12488;</button>
+<button id="map-route-weaker-power" type="button">&#22987;&#28857;&#12424;&#12426;&#20302;&#25126;&#21147;&#36890;&#36942;</button>
 <button id="map-clear-route" type="button">&#12523;&#12540;&#12488;&#35299;&#38500;</button>
 </div>
 <div id="map-legend" aria-label="legend">
@@ -1965,22 +1970,63 @@ def add_node_info_panel_v3(html: str) -> str:
                       }});
                     }}
                     var defaultEdgeStyle = {{ color: {{ color: "#94a3b8", highlight: "#facc15" }}, width: 1 }};
-                    var routeMode = false;
+                    var routeMode = null;
                     var routeStartNodeId = null;
                     var routeEdgeIds = [];
                     function updateRouteButtonText() {{
-                      var routeButton = document.getElementById("map-route-mode");
-                      if (!routeButton) return;
-                      if (!routeMode) {{
-                        routeButton.textContent = "\\u30eb\\u30fc\\u30c8\\u9078\\u629e";
-                      }} else if (routeStartNodeId) {{
-                        routeButton.textContent = "\\u7d42\\u70b9\\u9078\\u629e\\u4e2d";
-                      }} else {{
-                        routeButton.textContent = "\\u59cb\\u70b9\\u9078\\u629e\\u4e2d";
+                      var ignoreButton = document.getElementById("map-route-ignore-power");
+                      var weakerButton = document.getElementById("map-route-weaker-power");
+                      var buttons = [
+                        {{ element: ignoreButton, mode: "ignore", label: "\\u6226\\u529b\\u7121\\u8996\\u30eb\\u30fc\\u30c8" }},
+                        {{ element: weakerButton, mode: "weaker", label: "\\u59cb\\u70b9\\u3088\\u308a\\u4f4e\\u6226\\u529b\\u901a\\u904e" }}
+                      ];
+                      buttons.forEach(function (button) {{
+                        if (!button.element) return;
+                        if (routeMode !== button.mode) {{
+                          button.element.textContent = button.label;
+                          button.element.style.outline = "";
+                        }} else if (routeStartNodeId) {{
+                          button.element.textContent = "\\u7d42\\u70b9\\u9078\\u629e\\u4e2d";
+                          button.element.style.outline = "2px solid #facc15";
+                        }} else {{
+                          button.element.textContent = "\\u59cb\\u70b9\\u9078\\u629e\\u4e2d";
+                          button.element.style.outline = "2px solid #facc15";
+                        }}
+                      }});
+                    }}
+                    function startRouteMode(mode) {{
+                      routeMode = mode;
+                      routeStartNodeId = null;
+                      routeEdgeIds = [];
+                      resetEdgeHighlights();
+                      if (network) network.unselectAll();
+                      updateRouteButtonText();
+                    }}
+                    function routeStartAlliancePowerValue() {{
+                      if (!nodes || !routeStartNodeId) return 0;
+                      var startNode = nodes.get(routeStartNodeId);
+                      return Number(startNode && startNode.alliancePower ? startNode.alliancePower : 0);
+                    }}
+                    function canUseRouteNode(node, mode, isEndpoint) {{
+                      if (!isFisheryNode(node)) return false;
+                      if (mode !== "weaker" || isEndpoint) return true;
+                      if (node.affiliation !== "enemy") return true;
+                      var selfPower = routeStartAlliancePowerValue();
+                      var enemyPower = Number(node.alliancePower || 0);
+                      if (!selfPower || !enemyPower) return false;
+                      return enemyPower < selfPower;
+                    }}
+                    function routeColor() {{
+                      return routeMode === "weaker" ? "#10b981" : "#a855f7";
+                    }}
+                    function routeNoPathMessage() {{
+                      if (routeMode === "weaker") {{
+                        return "\\u9078\\u629e\\u3057\\u305f2\\u30ce\\u30fc\\u30c9\\u9593\\u306b\\u3001\\u59cb\\u70b9\\u9023\\u76df\\u3088\\u308a\\u4f4e\\u6226\\u529b\\u306e\\u6575\\u9023\\u76df\\u3060\\u3051\\u3092\\u901a\\u308b\\u30eb\\u30fc\\u30c8\\u304c\\u3042\\u308a\\u307e\\u305b\\u3093\\u3002";
                       }}
+                      return "\\u9078\\u629e\\u3057\\u305f2\\u30ce\\u30fc\\u30c9\\u9593\\u306e\\u30eb\\u30fc\\u30c8\\u304c\\u3042\\u308a\\u307e\\u305b\\u3093\\u3002";
                     }}
                     function clearRouteState() {{
-                      routeMode = false;
+                      routeMode = null;
                       routeStartNodeId = null;
                       routeEdgeIds = [];
                       updateRouteButtonText();
@@ -2043,7 +2089,7 @@ def add_node_info_panel_v3(html: str) -> str:
                       if (isCityNode(node)) return adjacentFisheryIds(nodeId);
                       return [];
                     }}
-                    function shortestRouteEdges(startId, targetId) {{
+                    function shortestRouteEdges(startId, targetId, mode) {{
                       if (!edges || !nodes || !startId || !targetId) return null;
                       var startCandidates = routeEndpointCandidates(startId);
                       var targetCandidates = routeEndpointCandidates(targetId);
@@ -2056,6 +2102,8 @@ def add_node_info_panel_v3(html: str) -> str:
                         var source = nodes.get(edge.from);
                         var target = nodes.get(edge.to);
                         if (!isFisheryNode(source) || !isFisheryNode(target)) return;
+                        if (!canUseRouteNode(source, mode, Boolean(targetSet[edge.from])) && startCandidates.indexOf(edge.from) === -1) return;
+                        if (!canUseRouteNode(target, mode, Boolean(targetSet[edge.to])) && startCandidates.indexOf(edge.to) === -1) return;
                         if (!adjacency[edge.from]) adjacency[edge.from] = [];
                         if (!adjacency[edge.to]) adjacency[edge.to] = [];
                         adjacency[edge.from].push(edge.to);
@@ -2081,6 +2129,7 @@ def add_node_info_panel_v3(html: str) -> str:
                         var neighbors = adjacency[current] || [];
                         for (var j = 0; j < neighbors.length; j += 1) {{
                           var next = neighbors[j];
+                          if (!targetSet[next] && !canUseRouteNode(nodes.get(next), mode, false)) continue;
                           var nextDistance = distance[current] + 1;
                           if (distance[next] === undefined) {{
                             distance[next] = nextDistance;
@@ -2125,10 +2174,10 @@ def add_node_info_panel_v3(html: str) -> str:
                       }};
                     }}
                     function showShortestRoute(startId, targetId) {{
-                      var route = shortestRouteEdges(startId, targetId);
+                      var route = shortestRouteEdges(startId, targetId, routeMode || "ignore");
                       resetEdgeHighlights();
                       if (!route) {{
-                        alert("\\u9078\\u629e\\u3057\\u305f2\\u30ce\\u30fc\\u30c9\\u9593\\u306e\\u30eb\\u30fc\\u30c8\\u304c\\u3042\\u308a\\u307e\\u305b\\u3093\\u3002");
+                        alert(routeNoPathMessage());
                         clearRouteState();
                         return;
                       }}
@@ -2138,7 +2187,7 @@ def add_node_info_panel_v3(html: str) -> str:
                         return;
                       }}
                       routeEdgeIds = route.edgeIds;
-                      highlightEdges(routeEdgeIds, "#a855f7", 6);
+                      highlightEdges(routeEdgeIds, routeColor(), 6);
                       if (network) network.unselectAll();
                       clearRouteState();
                     }}
@@ -2256,6 +2305,54 @@ def add_node_info_panel_v3(html: str) -> str:
                       highlightEdges(boundary.unownedBoundaryEdgeIds, "#facc15", 4);
                       highlightEdges(boundary.friendlyBoundaryEdgeIds, "#fb923c", 5);
                     }}
+                    function scoreCandidateEdge(source, target) {{
+                      var sourcePower = Number(source.alliancePower || 0);
+                      var targetPower = Number(target.alliancePower || 0);
+                      var powerScore = sourcePower && targetPower ? sourcePower / targetPower : sourcePower / 1000000000;
+                      return powerScore + Number(target.importance || 0) / 10;
+                    }}
+                    function candidateEdgeRecords(kind, maxItems) {{
+                      var records = [];
+                      edges.get().forEach(function (edge) {{
+                        var source = nodes.get(edge.from);
+                        var target = nodes.get(edge.to);
+                        if (!source || !target) return;
+                        if (!isFisheryNode(source) || !isFisheryNode(target)) return;
+                        function pushRecord(attacker, defender) {{
+                          records.push({{
+                            id: edge.id,
+                            score: scoreCandidateEdge(attacker, defender),
+                            attacker: attacker.id,
+                            defender: defender.id
+                          }});
+                        }}
+                        if (kind === "enemyThreat") {{
+                          if (source.affiliation === "enemy" && isFriendlyAffiliation(target.affiliation)) pushRecord(source, target);
+                          if (target.affiliation === "enemy" && isFriendlyAffiliation(source.affiliation)) pushRecord(target, source);
+                        }} else if (kind === "friendlyPressure") {{
+                          if (isFriendlyAffiliation(source.affiliation) && target.affiliation === "enemy") pushRecord(source, target);
+                          if (isFriendlyAffiliation(target.affiliation) && source.affiliation === "enemy") pushRecord(target, source);
+                        }} else if (kind === "enemyExpand") {{
+                          if (source.affiliation === "enemy" && target.affiliation === "unowned") pushRecord(source, target);
+                          if (target.affiliation === "enemy" && source.affiliation === "unowned") pushRecord(target, source);
+                        }} else if (kind === "friendlyExpand") {{
+                          if (isFriendlyAffiliation(source.affiliation) && target.affiliation === "unowned") pushRecord(source, target);
+                          if (isFriendlyAffiliation(target.affiliation) && source.affiliation === "unowned") pushRecord(target, source);
+                        }}
+                      }});
+                      records.sort(function (left, right) {{
+                        if (right.score !== left.score) return right.score - left.score;
+                        return left.id < right.id ? -1 : 1;
+                      }});
+                      return records.slice(0, maxItems || 30);
+                    }}
+                    function highlightCandidateEdges(kind, color, width) {{
+                      if (!nodes || !edges) return;
+                      clearRouteState();
+                      resetEdgeHighlights();
+                      var records = candidateEdgeRecords(kind, 30);
+                      highlightEdges(records.map(function (record) {{ return record.id; }}), color, width || 6);
+                    }}
                     var boundaryButton = document.getElementById("map-highlight-boundary");
                     if (boundaryButton) {{
                       boundaryButton.addEventListener("click", highlightSelfEnemyFisheryEdges);
@@ -2278,19 +2375,44 @@ def add_node_info_panel_v3(html: str) -> str:
                         highlightSelfEnemyFisheryEdgesWithSelfDepth(3);
                       }});
                     }}
+                    var enemyThreatButton = document.getElementById("map-highlight-enemy-threat");
+                    if (enemyThreatButton) {{
+                      enemyThreatButton.addEventListener("click", function () {{
+                        highlightCandidateEdges("enemyThreat", "#ef4444", 7);
+                      }});
+                    }}
+                    var friendlyPressureButton = document.getElementById("map-highlight-friendly-pressure");
+                    if (friendlyPressureButton) {{
+                      friendlyPressureButton.addEventListener("click", function () {{
+                        highlightCandidateEdges("friendlyPressure", "#f97316", 7);
+                      }});
+                    }}
+                    var enemyExpandButton = document.getElementById("map-highlight-enemy-expand");
+                    if (enemyExpandButton) {{
+                      enemyExpandButton.addEventListener("click", function () {{
+                        highlightCandidateEdges("enemyExpand", "#eab308", 6);
+                      }});
+                    }}
+                    var friendlyExpandButton = document.getElementById("map-highlight-friendly-expand");
+                    if (friendlyExpandButton) {{
+                      friendlyExpandButton.addEventListener("click", function () {{
+                        highlightCandidateEdges("friendlyExpand", "#22c55e", 6);
+                      }});
+                    }}
                     var clearEdgeButton = document.getElementById("map-clear-edge-highlight");
                     if (clearEdgeButton) {{
                       clearEdgeButton.addEventListener("click", clearAllEdgeHighlights);
                     }}
-                    var routeButton = document.getElementById("map-route-mode");
-                    if (routeButton) {{
-                      routeButton.addEventListener("click", function () {{
-                        routeMode = true;
-                        routeStartNodeId = null;
-                        routeEdgeIds = [];
-                        resetEdgeHighlights();
-                        if (network) network.unselectAll();
-                        updateRouteButtonText();
+                    var routeIgnoreButton = document.getElementById("map-route-ignore-power");
+                    if (routeIgnoreButton) {{
+                      routeIgnoreButton.addEventListener("click", function () {{
+                        startRouteMode("ignore");
+                      }});
+                    }}
+                    var routeWeakerButton = document.getElementById("map-route-weaker-power");
+                    if (routeWeakerButton) {{
+                      routeWeakerButton.addEventListener("click", function () {{
+                        startRouteMode("weaker");
                       }});
                     }}
                     var clearRouteButton = document.getElementById("map-clear-route");
@@ -2352,6 +2474,7 @@ def add_node_info_panel_v3(html: str) -> str:
                     window.highlightConnectedEdges = highlightConnectedEdges;
                     window.highlightSelfEnemyFisheryEdges = highlightSelfEnemyFisheryEdges;
                     window.highlightSelfEnemyFisheryEdgesWithSelfDepth = highlightSelfEnemyFisheryEdgesWithSelfDepth;
+                    window.highlightCandidateEdges = highlightCandidateEdges;
                     window.resetEdgeHighlights = resetEdgeHighlights;
                     window.showShortestRoute = showShortestRoute;
                     window.refreshMapFromSheet = refreshMapFromSheet;
