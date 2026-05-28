@@ -66,6 +66,8 @@ Latest update adds local Excel alliance-strength integration and the first simul
 31. Current regenerated simulation counts: 357 friendly/enemy fishery boundary edges, 165 boundary friendly fishery nodes, 109 one-step interior edges, 198 two-step interior edges, and 263 three-step interior edges under the current graph and owner data.
 32. Added generated-map simulation highlight buttons: `敵侵攻予測`, `味方侵攻候補`, `敵未取得拡張`, and `味方未取得拡張`. These rank fishery-to-fishery candidates in-browser using alliance power plus target importance and highlight the top 30 edges.
 33. Split route selection into two modes. `戦力無視ルート` keeps the current fishery-only shortest route behavior and ignores enemy power. `始点より低戦力通過` still avoids city transit, but permits transit through enemy fisheries only when that enemy alliance power is lower than the alliance power of the selected start node.
+34. Added separate simulation score models: `attack_score_options`, `interdiction_score_options`, and `risk_avoidance_options`. Attack favors enemy boundary fisheries near enemy cities while penalizing stronger enemy pockets; interdiction favors enemy cities destroyable from adjacent friendly fisheries; risk avoidance flags high-power or dense enemy boundary areas.
+35. Added generated-map `遮断候補` and `危険回避` buttons to highlight the corresponding score-model candidates.
 
 ## Current risks
 
@@ -75,6 +77,7 @@ Latest update adds local Excel alliance-strength integration and the first simul
 4. The 3x3 area offsets and central reference typing are derived from the Google Sheets full-map layout plus the Cpt Hedgehog Season 6 reference map. If either reference changes, update `config.google_full_map.json` and the central typing helper.
 5. Alliance ranking power is a coarse proxy only. It does not account for live attendance, capture caps, protection windows, march timing, rally availability, or tactical city-destruction sequencing.
 6. Current game-rule modeling covers map connectivity rules, but not all operational timing rules. Included: trade posts/altars/temple isolated, destroyed cities isolated, city-city edges blocked, cities excluded as route transit, fishery adjacency, city-to-surrounding-fishery edges, and boundary/interior pact-like reach. Not yet included: battle windows, protection expiry eligibility, capture caps, live player attendance, rally timing, and explicit current pact target.
+7. Excel power file remains fixed-name input: `s6powerrank_8server_power_2026-05-10_en.xlsx`. Replacing that file and regenerating updates the derived cache and map output.
 
 ## Recommended next actions
 
@@ -105,6 +108,7 @@ Latest update adds local Excel alliance-strength integration and the first simul
 - The in-app browser verified the generated route toolbar: `ルート選択` is visible and changes to `始点選択中`; node click handling changed to route mode for the first selected node.
 - The latest generation succeeded with the current Google Sheet plus local Excel ranking workbook. Browser visual verification was attempted, but `127.0.0.1:8000` was not serving at that moment; JSON and generated HTML contents were verified directly instead.
 - Latest route/simulation button update was regenerated and verified by generated HTML text checks. Browser file navigation was blocked by the browser security policy, so visual browser verification was not completed in this turn.
+- Latest score-model update regenerated successfully after one Google Sheets CSV timeout retry. Verification found 30 attack candidates, 25 interdiction candidates, and 30 risk-avoidance candidates in `sample_output/state.json`.
 - Visual reference screenshots supplied by the user for tactical map geometry: `C:/Users/kitazaki/FIT Dropbox/訓北﨑/lastwar/S6/IMG_1219.PNG` and `C:/Users/kitazaki/FIT Dropbox/訓北﨑/lastwar/S6/IMG_1220.PNG`. These were used as reference only and were not committed.
 - The `tools/invasion_strategy_os/` directory is explicitly allowlisted in `.gitignore`; existing unrelated local `tools/` files remain ignored.
 - Existing unrelated local changes were not touched.

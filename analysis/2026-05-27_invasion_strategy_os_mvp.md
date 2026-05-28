@@ -29,6 +29,7 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - The HTML map can toggle labels between coordinates and alliance names at the same node-center position. In alliance-name mode, trade posts are always labeled `交易地`.
 - The HTML map can reset moved nodes to the generated layout with `位置リセット`.
 - The HTML map can highlight tactical edges: selecting a fishery highlights all connected edges, `境界強調` highlights friendly-side (#534/#509/#440/#511 group) fishery to enemy-side fishery edges plus enemy-side fishery to unowned fishery edges, `境界+内側` / `境界+内側+内側` / `境界+内側+内側+内側` extend that view from friendly/enemy boundary friendly-side fisheries into friendly-side or unowned fisheries for 1/2/3 interior steps, and `敵侵攻予測` / `味方侵攻候補` / `敵未取得拡張` / `味方未取得拡張` highlight the top 30 fishery-edge candidates ranked by alliance power plus target importance.
+- The simulation now separates score models into attack, interdiction, and risk avoidance. Attack favors enemy boundary fisheries near enemy cities while penalizing stronger enemy pockets; interdiction favors enemy cities that can be destroyed from adjacent friendly fisheries to cut city adjacency; risk avoidance flags high-power or dense enemy boundary areas.
 - The HTML map now has two route modes: `戦力無視ルート` ignores enemy alliance power, while `始点より低戦力通過` allows transit through enemy fisheries only when that enemy alliance has lower ranking power than the alliance owning the selected start node. Both modes avoid city transit nodes and can route to the nearest fishery adjacent to a city target.
 - Default generated-map edges are fixed at width `1`, including outer-to-central edges; only interactive highlights use thicker lines.
 - The HTML map can refresh from the latest `管理表たたき` sheet with `マップ最新化` when the local interactive server is running.
@@ -56,6 +57,7 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - Added a generated-map refresh button backed by the local interactive server refresh API.
 - Added generated-map shortest-route highlighting with two-click route selection.
 - Added local Excel alliance-power loading, node-detail power display, JSON ranking export, and first-pass invasion simulation output.
+- Added separate attack/interdiction/risk-avoidance score outputs and matching generated-map highlight controls.
 
 ## 5. Interpretation
 

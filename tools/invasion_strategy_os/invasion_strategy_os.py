@@ -1113,6 +1113,127 @@ def invasion_edge_score(
     return round(power_ratio + float(target.get("importance", 0)) / 10, 4)
 
 
+def summary_power_value(summary: dict[str, Any]) -> float:
+    power = summary.get("alliance_power") or {}
+    return float(power.get("power") or 0)
+
+
+def ratio_or_zero(numerator: float, denominator: float) -> float:
+    return numerator / denominator if numerator and denominator else 0.0
+
+
+def adjacent_node_ids_by_affiliation(
+    graph: nx.Graph,
+    node_id: str,
+    owner_affiliations: dict[str, str],
+    affiliations: set[str],
+    node_types: set[str] | None = None,
+) -> list[str]:
+    results: list[str] = []
+    for neighbor_id in graph.neighbors(node_id):
+        neighbor = graph.nodes[neighbor_id]
+        if node_types is not None and str(neighbor.get("type", "")) not in node_types:
+            continue
+        affiliation = simulation_node_summary(graph, neighbor_id, owner_affiliations, {})["affiliation"]
+        if affiliation in affiliations:
+            results.append(neighbor_id)
+    return sorted(results)
+
+
+def tactical_score_breakdown(
+    graph: nx.Graph,
+    source_id: str,
+    target_id: str,
+    owner_affiliations: dict[str, str],
+    alliance_powers: dict[str, AlliancePower],
+    model: str,
+) -> dict[str, Any]:
+    source = simulation_node_summary(graph, source_id, owner_affiliations, alliance_powers)
+    target = simulation_node_summary(graph, target_id, owner_affiliations, alliance_powers)
+    source_power = summary_power_value(source)
+    target_power = summary_power_value(target)
+    target_importance = float(target.get("importance", 0) or 0)
+    target_enemy_cities = adjacent_node_ids_by_affiliation(
+        graph,
+        target_id,
+        owner_affiliations,
+        {"enemy"},
+        {DEFAULT_CITY_TYPE},
+    )
+    target_enemy_fisheries = adjacent_node_ids_by_affiliation(
+        graph,
+        target_id,
+        owner_affiliations,
+        {"enemy"},
+        {DEFAULT_FISHERY_TYPE},
+    )
+    target_friendly_fisheries = adjacent_node_ids_by_affiliation(
+        graph,
+        target_id,
+        owner_affiliations,
+        {"self", "ally"},
+        {DEFAULT_FISHERY_TYPE},
+    )
+    power_ratio = ratio_or_zero(source_power, target_power)
+    enemy_power_ratio = ratio_or_zero(target_power, source_power)
+    nearby_enemy_city_value = sum(float(graph.nodes[node_id].get("importance", 0) or 0) for node_id in target_enemy_cities)
+
+    if model == "attack":
+        score = (
+            target_importance * 1.2
+            + nearby_enemy_city_value * 0.9
+            + len(target_enemy_cities) * 2.0
+            + power_ratio * 2.0
+            - len(target_enemy_fisheries) * 0.35
+            - max(0.0, enemy_power_ratio - 1.0) * 2.5
+        )
+        reasons = [
+            "enemy_boundary_target",
+            "near_enemy_city" if target_enemy_cities else "no_adjacent_enemy_city",
+            "power_advantage" if power_ratio >= 1 else "power_disadvantage",
+        ]
+    elif model == "interdiction":
+        score = (
+            target_importance * 2.0
+            + graph.degree(target_id) * 0.8
+            + len(target_enemy_fisheries) * 0.8
+            + len(target_friendly_fisheries) * 0.6
+            + target_power / 10_000_000_000
+        )
+        reasons = [
+            "enemy_city_destroy_candidate",
+            "cuts_city_adjacency",
+            "high_degree_city" if graph.degree(target_id) >= 4 else "local_city",
+        ]
+    elif model == "risk":
+        score = (
+            enemy_power_ratio * 3.0
+            + len(target_enemy_fisheries) * 0.8
+            + len(target_enemy_cities) * 1.2
+            + target_importance * 0.5
+        )
+        reasons = [
+            "high_power_enemy_boundary" if enemy_power_ratio > 1 else "enemy_boundary",
+            "enemy_dense_area" if len(target_enemy_fisheries) + len(target_enemy_cities) >= 3 else "local_pressure",
+        ]
+    else:
+        score = invasion_edge_score(source, target, alliance_powers)
+        reasons = ["simple_power_importance_score"]
+
+    return {
+        "model": model,
+        "score": round(score, 4),
+        "source_power": int(source_power) if source_power else None,
+        "target_power": int(target_power) if target_power else None,
+        "source_to_target_power_ratio": round(power_ratio, 4) if power_ratio else None,
+        "target_to_source_power_ratio": round(enemy_power_ratio, 4) if enemy_power_ratio else None,
+        "target_enemy_city_neighbors": target_enemy_cities,
+        "target_enemy_fishery_neighbors": target_enemy_fisheries,
+        "target_friendly_fishery_neighbors": target_friendly_fisheries,
+        "reasons": reasons,
+    }
+
+
 def invasion_edge_record(
     graph: nx.Graph,
     source_id: str,
@@ -1120,15 +1241,25 @@ def invasion_edge_record(
     label: str,
     owner_affiliations: dict[str, str],
     alliance_powers: dict[str, AlliancePower],
+    score_model: str = "simple",
 ) -> dict[str, Any]:
     source = simulation_node_summary(graph, source_id, owner_affiliations, alliance_powers)
     target = simulation_node_summary(graph, target_id, owner_affiliations, alliance_powers)
+    breakdown = tactical_score_breakdown(
+        graph,
+        source_id,
+        target_id,
+        owner_affiliations,
+        alliance_powers,
+        score_model,
+    )
     return {
         "label": label,
         "edge": [source_id, target_id],
         "source": source,
         "target": target,
-        "score": invasion_edge_score(source, target, alliance_powers),
+        "score": breakdown["score"],
+        "score_breakdown": breakdown,
     }
 
 
@@ -1196,31 +1327,40 @@ def build_invasion_simulation(
     enemy_threats: list[dict[str, Any]] = []
     friendly_expansion: list[dict[str, Any]] = []
     enemy_expansion: list[dict[str, Any]] = []
+    attack_score_options: list[dict[str, Any]] = []
+    interdiction_score_options: list[dict[str, Any]] = []
+    risk_avoidance_options: list[dict[str, Any]] = []
 
     for source_id, target_id in graph.edges():
         source = graph.nodes[source_id]
         target = graph.nodes[target_id]
-        if not is_fishery_node_data(source) or not is_fishery_node_data(target):
-            continue
         if is_destroyed_node_data(source) or is_destroyed_node_data(target):
             continue
         source_affiliation = simulation_node_summary(graph, source_id, owner_affiliations, alliance_powers)["affiliation"]
         target_affiliation = simulation_node_summary(graph, target_id, owner_affiliations, alliance_powers)["affiliation"]
 
-        if source_affiliation in friendly_affiliations and target_affiliation == "enemy":
+        if is_fishery_node_data(source) and is_fishery_node_data(target) and source_affiliation in friendly_affiliations and target_affiliation == "enemy":
             friendly_pressure.append(invasion_edge_record(graph, source_id, target_id, "friendly_to_enemy_boundary", owner_affiliations, alliance_powers))
             enemy_threats.append(invasion_edge_record(graph, target_id, source_id, "enemy_to_friendly_boundary", owner_affiliations, alliance_powers))
-        elif target_affiliation in friendly_affiliations and source_affiliation == "enemy":
+            attack_score_options.append(invasion_edge_record(graph, source_id, target_id, "attack_score", owner_affiliations, alliance_powers, "attack"))
+            risk_avoidance_options.append(invasion_edge_record(graph, source_id, target_id, "risk_avoidance", owner_affiliations, alliance_powers, "risk"))
+        elif is_fishery_node_data(source) and is_fishery_node_data(target) and target_affiliation in friendly_affiliations and source_affiliation == "enemy":
             friendly_pressure.append(invasion_edge_record(graph, target_id, source_id, "friendly_to_enemy_boundary", owner_affiliations, alliance_powers))
             enemy_threats.append(invasion_edge_record(graph, source_id, target_id, "enemy_to_friendly_boundary", owner_affiliations, alliance_powers))
-        elif source_affiliation in friendly_affiliations and target_affiliation == "unowned":
+            attack_score_options.append(invasion_edge_record(graph, target_id, source_id, "attack_score", owner_affiliations, alliance_powers, "attack"))
+            risk_avoidance_options.append(invasion_edge_record(graph, target_id, source_id, "risk_avoidance", owner_affiliations, alliance_powers, "risk"))
+        elif is_fishery_node_data(source) and is_fishery_node_data(target) and source_affiliation in friendly_affiliations and target_affiliation == "unowned":
             friendly_expansion.append(invasion_edge_record(graph, source_id, target_id, "friendly_to_unowned", owner_affiliations, alliance_powers))
-        elif target_affiliation in friendly_affiliations and source_affiliation == "unowned":
+        elif is_fishery_node_data(source) and is_fishery_node_data(target) and target_affiliation in friendly_affiliations and source_affiliation == "unowned":
             friendly_expansion.append(invasion_edge_record(graph, target_id, source_id, "friendly_to_unowned", owner_affiliations, alliance_powers))
-        elif source_affiliation == "enemy" and target_affiliation == "unowned":
+        elif is_fishery_node_data(source) and is_fishery_node_data(target) and source_affiliation == "enemy" and target_affiliation == "unowned":
             enemy_expansion.append(invasion_edge_record(graph, source_id, target_id, "enemy_to_unowned", owner_affiliations, alliance_powers))
-        elif target_affiliation == "enemy" and source_affiliation == "unowned":
+        elif is_fishery_node_data(source) and is_fishery_node_data(target) and target_affiliation == "enemy" and source_affiliation == "unowned":
             enemy_expansion.append(invasion_edge_record(graph, target_id, source_id, "enemy_to_unowned", owner_affiliations, alliance_powers))
+        elif is_fishery_node_data(source) and str(target.get("type", "")) == DEFAULT_CITY_TYPE and source_affiliation in friendly_affiliations and target_affiliation == "enemy":
+            interdiction_score_options.append(invasion_edge_record(graph, source_id, target_id, "interdiction_score", owner_affiliations, alliance_powers, "interdiction"))
+        elif is_fishery_node_data(target) and str(source.get("type", "")) == DEFAULT_CITY_TYPE and target_affiliation in friendly_affiliations and source_affiliation == "enemy":
+            interdiction_score_options.append(invasion_edge_record(graph, target_id, source_id, "interdiction_score", owner_affiliations, alliance_powers, "interdiction"))
 
     def top_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
         return sorted(items, key=lambda item: (-item["score"], item["source"]["id"], item["target"]["id"]))[:max_items]
@@ -1229,6 +1369,9 @@ def build_invasion_simulation(
         "assumptions": [
             "Alliance strength uses the Alliance Power ranking from the local Excel file.",
             "Only fishery-to-fishery tactical edges are treated as attack-front candidates in this MVP.",
+            "Attack score favors enemy boundary fisheries near enemy cities and penalizes stronger enemy power pockets.",
+            "Interdiction score favors enemy cities that can be destroyed from adjacent friendly fisheries to cut city adjacency.",
+            "Risk avoidance score flags high-power or dense enemy boundary areas to avoid or reinforce.",
             "Trade posts, altars, and the ancestral temple are not used as movement adjacency.",
             "Destroyed cities are isolated and do not provide adjacency.",
             "Boundary plus interior depth approximates pact-assisted connected-land reach; it is not an automatic attack order.",
@@ -1243,6 +1386,9 @@ def build_invasion_simulation(
         "enemy_threat_options": top_items(enemy_threats),
         "friendly_expansion_options": top_items(friendly_expansion),
         "enemy_expansion_options": top_items(enemy_expansion),
+        "attack_score_options": top_items(attack_score_options),
+        "interdiction_score_options": top_items(interdiction_score_options),
+        "risk_avoidance_options": top_items(risk_avoidance_options),
         "interior_depth_counts": collect_boundary_interior_counts(
             graph,
             owner_affiliations,
@@ -1885,6 +2031,8 @@ def add_node_info_panel_v3(html: str) -> str:
 <button id="map-highlight-boundary-depth-3" type="button">&#22659;&#30028;+&#20869;&#20596;+&#20869;&#20596;+&#20869;&#20596;</button>
 <button id="map-highlight-enemy-threat" type="button">&#25973;&#20405;&#25915;&#20104;&#28204;</button>
 <button id="map-highlight-friendly-pressure" type="button">&#21619;&#26041;&#20405;&#25915;&#20505;&#35036;</button>
+<button id="map-highlight-interdiction" type="button">&#36974;&#26029;&#20505;&#35036;</button>
+<button id="map-highlight-risk-avoidance" type="button">&#21361;&#38522;&#22238;&#36991;</button>
 <button id="map-highlight-enemy-expand" type="button">&#25973;&#26410;&#21462;&#24471;&#25313;&#24373;</button>
 <button id="map-highlight-friendly-expand" type="button">&#21619;&#26041;&#26410;&#21462;&#24471;&#25313;&#24373;</button>
 <button id="map-clear-edge-highlight" type="button">&#24375;&#35519;&#35299;&#38500;</button>
@@ -2311,27 +2459,108 @@ def add_node_info_panel_v3(html: str) -> str:
                       var powerScore = sourcePower && targetPower ? sourcePower / targetPower : sourcePower / 1000000000;
                       return powerScore + Number(target.importance || 0) / 10;
                     }}
+                    function adjacentNodes(nodeId, predicate) {{
+                      var results = [];
+                      if (!edges || !nodes) return results;
+                      edges.get().forEach(function (edge) {{
+                        var otherId = null;
+                        if (edge.from === nodeId) {{
+                          otherId = edge.to;
+                        }} else if (edge.to === nodeId) {{
+                          otherId = edge.from;
+                        }}
+                        if (!otherId) return;
+                        var other = nodes.get(otherId);
+                        if (other && predicate(other)) results.push(other);
+                      }});
+                      return results;
+                    }}
+                    function enemyFisheryDensity(node) {{
+                      return adjacentNodes(node.id, function (other) {{
+                        return isFisheryNode(other) && other.affiliation === "enemy";
+                      }}).length;
+                    }}
+                    function adjacentEnemyCityValue(node) {{
+                      return adjacentNodes(node.id, function (other) {{
+                        return isCityNode(other) && other.affiliation === "enemy";
+                      }}).reduce(function (total, city) {{
+                        return total + Number(city.importance || 0);
+                      }}, 0);
+                    }}
+                    function scoreAttackCandidate(attacker, defender) {{
+                      var sourcePower = Number(attacker.alliancePower || 0);
+                      var targetPower = Number(defender.alliancePower || 0);
+                      var powerRatio = sourcePower && targetPower ? sourcePower / targetPower : sourcePower / 1000000000;
+                      var enemyPowerRatio = sourcePower && targetPower ? targetPower / sourcePower : 0;
+                      return (
+                        Number(defender.importance || 0) * 1.2 +
+                        adjacentEnemyCityValue(defender) * 0.9 +
+                        powerRatio * 2.0 -
+                        enemyFisheryDensity(defender) * 0.35 -
+                        Math.max(0, enemyPowerRatio - 1) * 2.5
+                      );
+                    }}
+                    function scoreInterdictionCandidate(attacker, city) {{
+                      var targetPower = Number(city.alliancePower || 0);
+                      var targetDegree = adjacentNodes(city.id, function () {{ return true; }}).length;
+                      var friendlyNeighbors = adjacentNodes(city.id, function (other) {{
+                        return isFisheryNode(other) && isFriendlyAffiliation(other.affiliation);
+                      }}).length;
+                      var enemyNeighbors = adjacentNodes(city.id, function (other) {{
+                        return isFisheryNode(other) && other.affiliation === "enemy";
+                      }}).length;
+                      return (
+                        Number(city.importance || 0) * 2.0 +
+                        targetDegree * 0.8 +
+                        enemyNeighbors * 0.8 +
+                        friendlyNeighbors * 0.6 +
+                        targetPower / 10000000000
+                      );
+                    }}
+                    function scoreRiskCandidate(friendly, enemy) {{
+                      var friendlyPower = Number(friendly.alliancePower || 0);
+                      var enemyPower = Number(enemy.alliancePower || 0);
+                      var enemyRatio = friendlyPower && enemyPower ? enemyPower / friendlyPower : enemyPower / 1000000000;
+                      return (
+                        enemyRatio * 3.0 +
+                        enemyFisheryDensity(enemy) * 0.8 +
+                        adjacentEnemyCityValue(enemy) * 0.15 +
+                        Number(enemy.importance || 0) * 0.5
+                      );
+                    }}
                     function candidateEdgeRecords(kind, maxItems) {{
                       var records = [];
                       edges.get().forEach(function (edge) {{
                         var source = nodes.get(edge.from);
                         var target = nodes.get(edge.to);
                         if (!source || !target) return;
-                        if (!isFisheryNode(source) || !isFisheryNode(target)) return;
-                        function pushRecord(attacker, defender) {{
+                        function pushRecord(attacker, defender, score) {{
                           records.push({{
                             id: edge.id,
-                            score: scoreCandidateEdge(attacker, defender),
+                            score: score === undefined ? scoreCandidateEdge(attacker, defender) : score,
                             attacker: attacker.id,
                             defender: defender.id
                           }});
                         }}
+                        if (kind === "interdiction") {{
+                          if (isFisheryNode(source) && isFriendlyAffiliation(source.affiliation) && isCityNode(target) && target.affiliation === "enemy") {{
+                            pushRecord(source, target, scoreInterdictionCandidate(source, target));
+                          }}
+                          if (isFisheryNode(target) && isFriendlyAffiliation(target.affiliation) && isCityNode(source) && source.affiliation === "enemy") {{
+                            pushRecord(target, source, scoreInterdictionCandidate(target, source));
+                          }}
+                          return;
+                        }}
+                        if (!isFisheryNode(source) || !isFisheryNode(target)) return;
                         if (kind === "enemyThreat") {{
-                          if (source.affiliation === "enemy" && isFriendlyAffiliation(target.affiliation)) pushRecord(source, target);
-                          if (target.affiliation === "enemy" && isFriendlyAffiliation(source.affiliation)) pushRecord(target, source);
+                          if (source.affiliation === "enemy" && isFriendlyAffiliation(target.affiliation)) pushRecord(source, target, scoreRiskCandidate(target, source));
+                          if (target.affiliation === "enemy" && isFriendlyAffiliation(source.affiliation)) pushRecord(target, source, scoreRiskCandidate(source, target));
                         }} else if (kind === "friendlyPressure") {{
-                          if (isFriendlyAffiliation(source.affiliation) && target.affiliation === "enemy") pushRecord(source, target);
-                          if (isFriendlyAffiliation(target.affiliation) && source.affiliation === "enemy") pushRecord(target, source);
+                          if (isFriendlyAffiliation(source.affiliation) && target.affiliation === "enemy") pushRecord(source, target, scoreAttackCandidate(source, target));
+                          if (isFriendlyAffiliation(target.affiliation) && source.affiliation === "enemy") pushRecord(target, source, scoreAttackCandidate(target, source));
+                        }} else if (kind === "riskAvoidance") {{
+                          if (isFriendlyAffiliation(source.affiliation) && target.affiliation === "enemy") pushRecord(source, target, scoreRiskCandidate(source, target));
+                          if (isFriendlyAffiliation(target.affiliation) && source.affiliation === "enemy") pushRecord(target, source, scoreRiskCandidate(target, source));
                         }} else if (kind === "enemyExpand") {{
                           if (source.affiliation === "enemy" && target.affiliation === "unowned") pushRecord(source, target);
                           if (target.affiliation === "enemy" && source.affiliation === "unowned") pushRecord(target, source);
@@ -2385,6 +2614,18 @@ def add_node_info_panel_v3(html: str) -> str:
                     if (friendlyPressureButton) {{
                       friendlyPressureButton.addEventListener("click", function () {{
                         highlightCandidateEdges("friendlyPressure", "#f97316", 7);
+                      }});
+                    }}
+                    var interdictionButton = document.getElementById("map-highlight-interdiction");
+                    if (interdictionButton) {{
+                      interdictionButton.addEventListener("click", function () {{
+                        highlightCandidateEdges("interdiction", "#0ea5e9", 7);
+                      }});
+                    }}
+                    var riskAvoidanceButton = document.getElementById("map-highlight-risk-avoidance");
+                    if (riskAvoidanceButton) {{
+                      riskAvoidanceButton.addEventListener("click", function () {{
+                        highlightCandidateEdges("riskAvoidance", "#be123c", 7);
                       }});
                     }}
                     var enemyExpandButton = document.getElementById("map-highlight-enemy-expand");
