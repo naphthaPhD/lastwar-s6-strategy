@@ -60,7 +60,7 @@
     "route_limited_degree": 2,
     "protect_warning_hours": 6,
     "visual_scale": 1.25,
-    "visual_area_gap": 180,
+    "visual_area_gap": 90,
     "visual_area_tile_size": 1000,
     "node_min_size": 8,
     "node_max_size": 34,

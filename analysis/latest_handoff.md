@@ -49,7 +49,7 @@ This does not automate gameplay. It is a repeatable analysis and visualization p
 17. The HTML map has a `位置リセット` button that returns moved nodes to the generated layout.
 18. Clicking a node opens a fixed information panel with management-table fields.
 19. Fishery nodes now use circle styling and smaller in-node label text so alliance-name mode is easier to read; central fishery node size is reduced to 14.
-20. The HTML map applies display-only gaps between the 3x3 area blocks; graph coordinates and edge derivation remain unchanged.
+20. The HTML map applies display-only gaps between the 3x3 area blocks; graph coordinates and edge derivation remain unchanged. The current display gap is 90, reducing inter-area and outer-to-central edge spans compared with the earlier 180 gap.
 21. The HTML map includes a fixed legend explaining strategic colors, gray destroyed-city nodes, and red/yellow protection borders.
 22. Added a first local interactive-map server skeleton for a cpt-hedge-style workflow: browser rendering from `state.json`, sheet refresh endpoint, and local manual overrides in `data/invasion_strategy_overrides.json`.
 23. Added edge-highlight controls to the generated HTML map: selecting a fishery highlights its connected edges in cyan, `境界強調` highlights #534-side fishery to enemy-side fishery edges in orange, `境界+内側` additionally highlights #534-side self-to-self fishery edges touching those boundary #534 fisheries in rose red, and `強調解除` resets edge styling. Current live data contains 82 self-enemy fishery boundary edges, 39 boundary #534 fishery nodes, and 55 self-depth edges.

@@ -34,7 +34,7 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - Strategic colors are based on ownership from `管理表たたき`: #534-side owners blue, #509/#440/#511-side owners green, enemy-side owners red, and unowned nodes white. Owners with server-number prefixes such as `476B` are classified by that prefix even when they occupy another area.
 - Edge rules are tactical and coordinate-based, not pure distance: fisheries connect to adjacent fisheries in 8 directions unless the diagonal crosses a city/trade-post cell, cities connect only to their four surrounding fisheries, destroyed cities are isolated, outer-area fisheries connect to nearby central fisheries with a small coordinate tolerance, city-city edges are blocked, trade posts remain isolated and are never treated as cities, and altar/temple nodes are isolated.
 - Fishery nodes use circle styling and smaller in-node label text so alliance-name labels fit better; central fishery node size is reduced to 14.
-- The full-map HTML applies display-only gaps between area blocks and includes a fixed legend for strategic colors, gray destroyed-city nodes, and red/yellow protection borders.
+- The full-map HTML applies display-only gaps between area blocks and includes a fixed legend for strategic colors, gray destroyed-city nodes, and red/yellow protection borders. The current display gap is 90, reducing inter-area and outer-to-central edge spans compared with the earlier 180 gap.
 - The full-map view has a fixed click information panel using management-table fields, so alliance/status/protection data is easier to inspect.
 - Added an initial local interactive-map server prototype for search, sheet refresh, and local manual owner/status/memo overrides.
 

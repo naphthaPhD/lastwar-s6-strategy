@@ -116,7 +116,7 @@ Current rule assumptions:
 - Fishery nodes are displayed larger than city nodes in this view.
 - The full-map view uses smaller nodes and labels so city/fishery spacing is easier to read.
 - Fishery labels use smaller in-node text in alliance-label mode.
-- The full-map view adds display-only gaps between area blocks while preserving graph coordinates for edge derivation.
+- The full-map view adds display-only gaps between area blocks while preserving graph coordinates for edge derivation. The current display gap is 90, so inter-area and outer-to-central edge spans are shorter while the rule graph remains unchanged.
 - A fixed legend explains strategic colors, gray destroyed-city nodes, and red/yellow protection borders.
 - Clicking a node opens a fixed information panel with management-table fields: position key, type, alliance, status, acquisition time, protection time, and memo.
 - Central-area facility types are corrected from the Cpt Hedgehog Season 6 reference map pattern: outer central cells are fishery nodes, inner central cells are altar nodes, and the 2x2 center is represented as one large `祖霊神殿` node.
