@@ -2,13 +2,15 @@
 
 ## Date
 
-2026-05-28
+2026-05-29
 
 ## Context
 
 Built and iterated the first MVP of a LastWar Season 6 invasion strategy OS for current-board visualization and connection analysis. The tool reads the operational Google Sheet through CSV export, generates a graph, extracts CHOKE candidates, and outputs HTML plus JSON for review.
 
 This does not automate gameplay. It is a repeatable analysis and visualization pipeline for commander review.
+
+Latest update adds local Excel alliance-strength integration and the first simulation layer. The current full-map generation reads `s6powerrank_8server_power_2026-05-10_en.xlsx` sheet `Alliance Power`, attaches matching alliance ranking power to map nodes, exports a derived JSON ranking cache, and writes invasion/threat candidate lists to `sample_output/state.json`.
 
 ## Updated files
 
@@ -23,6 +25,7 @@ This does not automate gameplay. It is a repeatable analysis and visualization p
 - `tools/invasion_strategy_os/interactive_app.html`
 - `tools/invasion_strategy_os/interactive_server.py`
 - `tools/invasion_strategy_os/requirements.txt`
+- `data/alliance_power_rankings_2026-05-10.json`
 - `tools/invasion_strategy_os/sample_nodes.csv`
 - `tools/invasion_strategy_os/sample_edges.csv`
 - `sample_output/map.html`
@@ -56,6 +59,11 @@ This does not automate gameplay. It is a repeatable analysis and visualization p
 24. Added a generated-map `マップ最新化` button. It calls the local `/api/refresh` endpoint, regenerates from the latest `管理表たたき` Google Sheet through `config.google_full_map.json`, and reloads the map. The interactive server now permits local CORS fallback from `127.0.0.1:8000` to `127.0.0.1:8010`.
 25. Added generated-map shortest-route highlighting. `ルート選択` puts the map into two-click route mode; the first selected node is the start, the second selected node is the target, and all equal-length shortest-route fishery edges are shown with thick purple edges. Cities are excluded as transit nodes; if the selected target is a city, the route is drawn to the nearest fishery adjacent to that city. Route mode clears the normal yellow adjacent-edge selection highlight. `ルート解除` clears route/edge highlighting.
 26. Default generated-map edge width is fixed at `1`, including outer-to-central edges; thicker lines are reserved for interactive highlights.
+27. Local Excel alliance power integration is now wired through `config.google_full_map.json`. The parser reads `Alliance Power` rows from `s6powerrank_8server_power_2026-05-10_en.xlsx`; regenerated output matched JDX at 26.39B overall rank 13, 476A at 33.94B rank 1, 476B at 27.55B rank 8, FHX at 31.95B rank 2, and BAJ at 30.09B rank 3.
+28. Node click details in `sample_output/map.html` now include alliance power, overall rank/server, and alliance name when the owner tag matches the ranking workbook.
+29. `sample_output/state.json` now includes `alliance_power_rankings` with 287 alliance records and node-level `alliance_power` payloads for matched owners.
+30. Added an initial `invasion_simulation` JSON block. It produces top-30 lists for `friendly_pressure_options`, `enemy_threat_options`, `friendly_expansion_options`, and `enemy_expansion_options` from fishery-to-fishery tactical edges, scored by alliance ranking power plus target importance.
+31. Current regenerated simulation counts: 357 friendly/enemy fishery boundary edges, 165 boundary friendly fishery nodes, 109 one-step interior edges, 198 two-step interior edges, and 263 three-step interior edges under the current graph and owner data.
 
 ## Current risks
 
@@ -63,6 +71,7 @@ This does not automate gameplay. It is a repeatable analysis and visualization p
 2. CHOKE candidates are graph evidence, not automatic orders; game rules, protection windows, pact state, and attack eligibility must still be checked.
 3. Diagonal adjacency and pact-assisted adjacency need explicit modeling rules before live operational use.
 4. The 3x3 area offsets and central reference typing are derived from the Google Sheets full-map layout plus the Cpt Hedgehog Season 6 reference map. If either reference changes, update `config.google_full_map.json` and the central typing helper.
+5. Alliance ranking power is a coarse proxy only. It does not account for live attendance, capture caps, protection windows, march timing, rally availability, or tactical city-destruction sequencing.
 
 ## Recommended next actions
 
@@ -72,6 +81,7 @@ This does not automate gameplay. It is a repeatable analysis and visualization p
 4. For the current #534-only live test, run `.\.venv\Scripts\python.exe tools\invasion_strategy_os\invasion_strategy_os.py --config tools\invasion_strategy_os\config.google_history_534.json`.
 5. For the current full-map live test, run `.\.venv\Scripts\python.exe tools\invasion_strategy_os\invasion_strategy_os.py --config tools\invasion_strategy_os\config.google_full_map.json`.
 6. For refresh buttons and the local interactive prototype, run `.\.venv\Scripts\python.exe tools\invasion_strategy_os\interactive_server.py --port 8010`; then open either `http://127.0.0.1:8010/` or the generated map at `http://127.0.0.1:8010/sample_output/map.html`.
+7. Review `sample_output/state.json` under `invasion_simulation.enemy_threat_options` and `friendly_pressure_options` as a first queue for commander review, then confirm protection/cap/pact constraints manually before treating any candidate as an order.
 
 ## Questions for ChatGPT
 
@@ -79,6 +89,8 @@ This does not automate gameplay. It is a repeatable analysis and visualization p
 2. Should diagonal adjacency be treated as normal, weighted, or scenario-dependent?
 3. Should pact access be modeled as graph edges, temporary scenario edges, or a separate layer?
 4. Which node types should count as major nodes for CHOKE scoring in Week 3?
+5. Which Excel-derived fields beyond alliance ranking power should affect route/threat scoring?
+6. Should pact state be represented as a config scenario, a sheet column, or a temporary graph layer?
 
 ## Notes
 
@@ -88,6 +100,7 @@ This does not automate gameplay. It is a repeatable analysis and visualization p
 - The in-app browser visually verified the new `境界強調` and `強調解除` buttons on the generated `sample_output/map.html`.
 - The in-app browser visually verified `マップ最新化`: it called the local refresh API, regenerated from Google Sheets, and reloaded `sample_output/map.html` with a cache-busting URL.
 - The in-app browser verified the generated route toolbar: `ルート選択` is visible and changes to `始点選択中`; node click handling changed to route mode for the first selected node.
+- The latest generation succeeded with the current Google Sheet plus local Excel ranking workbook. Browser visual verification was attempted, but `127.0.0.1:8000` was not serving at that moment; JSON and generated HTML contents were verified directly instead.
 - Visual reference screenshots supplied by the user for tactical map geometry: `C:/Users/kitazaki/FIT Dropbox/訓北﨑/lastwar/S6/IMG_1219.PNG` and `C:/Users/kitazaki/FIT Dropbox/訓北﨑/lastwar/S6/IMG_1220.PNG`. These were used as reference only and were not committed.
 - The `tools/invasion_strategy_os/` directory is explicitly allowlisted in `.gitignore`; existing unrelated local `tools/` files remain ignored.
 - Existing unrelated local changes were not touched.

@@ -31,6 +31,10 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - The HTML map can highlight tactical edges: selecting a fishery highlights all connected edges, `境界強調` highlights friendly-side (#534/#509/#440/#511 group) fishery to enemy-side fishery edges plus enemy-side fishery to unowned fishery edges, `境界+内側` / `境界+内側+内側` / `境界+内側+内側+内側` extend that view from friendly/enemy boundary friendly-side fisheries into friendly-side or unowned fisheries for 1/2/3 interior steps, `ルート選択` highlights all equal-length shortest-route fishery edges while avoiding city transit nodes, and `強調解除` / `ルート解除` clear edge highlighting.
 - Default generated-map edges are fixed at width `1`, including outer-to-central edges; only interactive highlights use thicker lines.
 - The HTML map can refresh from the latest `管理表たたき` sheet with `マップ最新化` when the local interactive server is running.
+- The full-map config now reads local alliance ranking strength from `s6powerrank_8server_power_2026-05-10_en.xlsx`, sheet `Alliance Power`, and writes a derived JSON cache at `data/alliance_power_rankings_2026-05-10.json`.
+- Node click details now include alliance power, overall rank, server rank, and alliance name when the owner tag matches the ranking workbook.
+- `sample_output/state.json` now includes `alliance_power_rankings` and an `invasion_simulation` block. The first simulation layer ranks friendly pressure options, enemy threat options, friendly expansion options, and enemy expansion options from fishery-to-fishery tactical edges using alliance power plus target importance.
+- The simulation also reports boundary/interior-depth counts for 1/2/3 steps, matching the current boundary plus interior highlight concept used to approximate pact-assisted adjacency.
 - Strategic colors are based on ownership from `管理表たたき`: #534-side owners blue, #509/#440/#511-side owners green, enemy-side owners red, and unowned nodes white. Owners with server-number prefixes such as `476B` are classified by that prefix even when they occupy another area.
 - Edge rules are tactical and coordinate-based, not pure distance: fisheries connect to adjacent fisheries in 8 directions unless the diagonal crosses a city/trade-post cell, cities connect only to their four surrounding fisheries, destroyed cities are isolated, outer-area fisheries connect to nearby central fisheries with a small coordinate tolerance, city-city edges are blocked, trade posts remain isolated and are never treated as cities, and altar/temple nodes are isolated.
 - Fishery nodes use circle styling and smaller in-node label text so alliance-name labels fit better; central fishery node size is reduced to 14.
@@ -50,6 +54,7 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - Added generated-HTML edge highlighting for selected fisheries and #534-side versus enemy fishery borders.
 - Added a generated-map refresh button backed by the local interactive server refresh API.
 - Added generated-map shortest-route highlighting with two-click route selection.
+- Added local Excel alliance-power loading, node-detail power display, JSON ranking export, and first-pass invasion simulation output.
 
 ## 5. Interpretation
 
@@ -59,12 +64,15 @@ The current full-map output is now useful for visual review across the outer 8 a
 
 Central-area altar ownership should not be treated as movement adjacency. The current graph therefore displays central altar/temple nodes while excluding them from edge derivation.
 
+The first invasion simulation should be treated as a triage layer. It can point commanders toward likely pressure edges and likely enemy attack edges, but it does not yet solve protection time, daily capture cap, battle-window eligibility, real attendance, or city-destruction sequencing.
+
 ## 6. Risks
 
 - The management-table sheet does not expose explicit adjacency. The current live graph derives provisional distance edges from coordinates, so CHOKE results must not be treated as confirmed game adjacency.
 - CHOKE candidates are graph evidence, not automatic orders; game rules, protection windows, alliance pact state, and actual attack eligibility must still be checked.
 - Diagonal adjacency and pact-assisted adjacency need explicit modeling rules before live operational use.
 - The 3x3 area offsets and central reference typing are derived from external map references. If those references change, the config and central typing helper should be updated.
+- Alliance power is a coarse ranking value, not a live combat forecast. The simulation should not treat it as enough to decide attacks without protection/cap/attendance checks.
 
 ## 7. Recommended actions
 
@@ -73,6 +81,7 @@ Central-area altar ownership should not be treated as movement adjacency. The cu
 3. Compare CHOKE candidates against the commander map before issuing any R4/R5 order.
 4. Continue adjusting the full-map visual density as commander review reveals crowded areas.
 5. Test the local interactive prototype before deciding whether manual overrides should write back to Google Sheets.
+6. Use the `invasion_simulation.enemy_threat_options` and `friendly_pressure_options` lists as review queues, then manually confirm game timing and pact/cap constraints before issuing orders.
 
 ## 8. Unknowns
 
@@ -80,6 +89,8 @@ Central-area altar ownership should not be treated as movement adjacency. The cu
 - Whether pact territory should be modeled as direct edges or as a scenario layer.
 - Whether trade-post nodes should remain isolated in every scenario or only in the default tactical layer.
 - Whether central altar subtypes need to be preserved separately or can remain grouped as `祭壇` for graph analysis.
+- Which additional Excel fields, beyond alliance ranking power, should enter the simulation scoring.
+- How to represent pact state explicitly when the active pact target changes.
 
 ## 9. Files referenced
 
@@ -96,5 +107,6 @@ Central-area altar ownership should not be treated as movement adjacency. The cu
 - `tools/invasion_strategy_os/requirements.txt`
 - `tools/invasion_strategy_os/sample_nodes.csv`
 - `tools/invasion_strategy_os/sample_edges.csv`
+- `data/alliance_power_rankings_2026-05-10.json`
 - `sample_output/map.html`
 - `sample_output/state.json`

@@ -86,6 +86,20 @@
     "from": "#476:K-11",
     "to": "#534:D-11"
   },
+  "alliance_power": {
+    "type": "xlsx",
+    "path": "s6powerrank_8server_power_2026-05-10_en.xlsx",
+    "sheet": "Alliance Power",
+    "header_row": 4,
+    "cache_json": "data/alliance_power_rankings_2026-05-10.json"
+  },
+  "simulation": {
+    "enabled": true,
+    "max_items": 30,
+    "friendly_affiliations": ["self", "ally"],
+    "interior_affiliations": ["self", "ally", "unowned"],
+    "interior_depths": [1, 2, 3]
+  },
   "output": {
     "html": "sample_output/map.html",
     "json": "sample_output/state.json"

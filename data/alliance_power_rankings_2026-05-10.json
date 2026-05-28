@@ -1,0 +1,2895 @@
+{
+  "source": "C:\\Users\\kitazaki\\Documents\\S6\\s6powerrank_8server_power_2026-05-10_en.xlsx",
+  "alliances": [
+    {
+      "server": "#476",
+      "alliance": "476A",
+      "alliance_name": "476 ALPHA",
+      "power": 33940715221,
+      "side": "Enemy",
+      "overall_rank": 1,
+      "server_rank": 1,
+      "power_label": "33.94B"
+    },
+    {
+      "server": "#509",
+      "alliance": "FHX",
+      "alliance_name": "Easy To Kill u",
+      "power": 31948668157,
+      "side": "Ally",
+      "overall_rank": 2,
+      "server_rank": 1,
+      "power_label": "31.95B"
+    },
+    {
+      "server": "#440",
+      "alliance": "BAJ",
+      "alliance_name": "Blood and Judgement",
+      "power": 30092173317,
+      "side": "Ally",
+      "overall_rank": 3,
+      "server_rank": 1,
+      "power_label": "30.09B"
+    },
+    {
+      "server": "#440",
+      "alliance": "GcC",
+      "alliance_name": "GcC",
+      "power": 29973947565,
+      "side": "Ally",
+      "overall_rank": 4,
+      "server_rank": 2,
+      "power_label": "29.97B"
+    },
+    {
+      "server": "#476",
+      "alliance": "476C",
+      "alliance_name": "476 Gamma",
+      "power": 28120774784,
+      "side": "Enemy",
+      "overall_rank": 5,
+      "server_rank": 2,
+      "power_label": "28.12B"
+    },
+    {
+      "server": "#476",
+      "alliance": "476X",
+      "alliance_name": "476 CHI",
+      "power": 27928167625,
+      "side": "Enemy",
+      "overall_rank": 6,
+      "server_rank": 3,
+      "power_label": "27.93B"
+    },
+    {
+      "server": "#480",
+      "alliance": "BgNa",
+      "alliance_name": "We have the meats",
+      "power": 27591259047,
+      "side": "Enemy",
+      "overall_rank": 7,
+      "server_rank": 1,
+      "power_label": "27.59B"
+    },
+    {
+      "server": "#476",
+      "alliance": "476B",
+      "alliance_name": "476 Beta",
+      "power": 27547634141,
+      "side": "Enemy",
+      "overall_rank": 8,
+      "server_rank": 4,
+      "power_label": "27.55B"
+    },
+    {
+      "server": "#503",
+      "alliance": "GX99",
+      "alliance_name": "gGn Xo5 with 9E9",
+      "power": 27523111859,
+      "side": "Enemy",
+      "overall_rank": 9,
+      "server_rank": 1,
+      "power_label": "27.52B"
+    },
+    {
+      "server": "#503",
+      "alliance": "Lghs",
+      "alliance_name": "弐共會",
+      "power": 26823676857,
+      "side": "Enemy",
+      "overall_rank": 10,
+      "server_rank": 2,
+      "power_label": "26.82B"
+    },
+    {
+      "server": "#476",
+      "alliance": "476D",
+      "alliance_name": "476 Delta",
+      "power": 26547392176,
+      "side": "Enemy",
+      "overall_rank": 11,
+      "server_rank": 5,
+      "power_label": "26.55B"
+    },
+    {
+      "server": "#509",
+      "alliance": "MOn",
+      "alliance_name": "A0W MEDITERRANEAN",
+      "power": 26485159498,
+      "side": "Ally",
+      "overall_rank": 12,
+      "server_rank": 2,
+      "power_label": "26.49B"
+    },
+    {
+      "server": "#534",
+      "alliance": "JDX",
+      "alliance_name": "Revo",
+      "power": 26388296429,
+      "side": "Ally",
+      "overall_rank": 13,
+      "server_rank": 1,
+      "power_label": "26.39B"
+    },
+    {
+      "server": "#509",
+      "alliance": "SsQ",
+      "alliance_name": "Gummibärenbande V",
+      "power": 25186952492,
+      "side": "Ally",
+      "overall_rank": 14,
+      "server_rank": 3,
+      "power_label": "25.19B"
+    },
+    {
+      "server": "#480",
+      "alliance": "WbW",
+      "alliance_name": "WreckinbishsWeekly",
+      "power": 24542849657,
+      "side": "Enemy",
+      "overall_rank": 15,
+      "server_rank": 2,
+      "power_label": "24.54B"
+    },
+    {
+      "server": "#523",
+      "alliance": "WUG",
+      "alliance_name": "x Wolf Pack x",
+      "power": 24480397281,
+      "side": "Enemy",
+      "overall_rank": 16,
+      "server_rank": 1,
+      "power_label": "24.48B"
+    },
+    {
+      "server": "#534",
+      "alliance": "KTVS",
+      "alliance_name": "TAMA Cream Cat",
+      "power": 24028556233,
+      "side": "Ally",
+      "overall_rank": 17,
+      "server_rank": 2,
+      "power_label": "24.03B"
+    },
+    {
+      "server": "#480",
+      "alliance": "TkTk",
+      "alliance_name": "Tiki Taka",
+      "power": 23603227317,
+      "side": "Enemy",
+      "overall_rank": 18,
+      "server_rank": 3,
+      "power_label": "23.60B"
+    },
+    {
+      "server": "#509",
+      "alliance": "tWD",
+      "alliance_name": "The WalkingDead",
+      "power": 23596229062,
+      "side": "Ally",
+      "overall_rank": 19,
+      "server_rank": 4,
+      "power_label": "23.60B"
+    },
+    {
+      "server": "#523",
+      "alliance": "NBNH",
+      "alliance_name": "no brain no headache",
+      "power": 23583866369,
+      "side": "Enemy",
+      "overall_rank": 20,
+      "server_rank": 2,
+      "power_label": "23.58B"
+    },
+    {
+      "server": "#509",
+      "alliance": "BHE",
+      "alliance_name": "BLACK HEARTS",
+      "power": 23393263477,
+      "side": "Ally",
+      "overall_rank": 21,
+      "server_rank": 5,
+      "power_label": "23.39B"
+    },
+    {
+      "server": "#480",
+      "alliance": "RCON",
+      "alliance_name": "알콘",
+      "power": 23144818732,
+      "side": "Enemy",
+      "overall_rank": 22,
+      "server_rank": 4,
+      "power_label": "23.14B"
+    },
+    {
+      "server": "#476",
+      "alliance": "476M",
+      "alliance_name": "476 Mu",
+      "power": 23134531277,
+      "side": "Enemy",
+      "overall_rank": 23,
+      "server_rank": 6,
+      "power_label": "23.13B"
+    },
+    {
+      "server": "#440",
+      "alliance": "GoDs",
+      "alliance_name": "Gods of Sparta",
+      "power": 22679918576,
+      "side": "Ally",
+      "overall_rank": 24,
+      "server_rank": 3,
+      "power_label": "22.68B"
+    },
+    {
+      "server": "#523",
+      "alliance": "fIrE",
+      "alliance_name": "flrE",
+      "power": 22586813691,
+      "side": "Enemy",
+      "overall_rank": 25,
+      "server_rank": 3,
+      "power_label": "22.59B"
+    },
+    {
+      "server": "#476",
+      "alliance": "476Z",
+      "alliance_name": "476 Zeta",
+      "power": 22496679381,
+      "side": "Enemy",
+      "overall_rank": 26,
+      "server_rank": 7,
+      "power_label": "22.50B"
+    },
+    {
+      "server": "#503",
+      "alliance": "one",
+      "alliance_name": "Choronos",
+      "power": 22491509000,
+      "side": "Enemy",
+      "overall_rank": 27,
+      "server_rank": 3,
+      "power_label": "22.49B"
+    },
+    {
+      "server": "#476",
+      "alliance": "476H",
+      "alliance_name": "476 Eta",
+      "power": 22476000814,
+      "side": "Enemy",
+      "overall_rank": 28,
+      "server_rank": 8,
+      "power_label": "22.48B"
+    },
+    {
+      "server": "#476",
+      "alliance": "476K",
+      "alliance_name": "476 Kappa",
+      "power": 21771127948,
+      "side": "Enemy",
+      "overall_rank": 29,
+      "server_rank": 9,
+      "power_label": "21.77B"
+    },
+    {
+      "server": "#509",
+      "alliance": "VEX",
+      "alliance_name": "Vanguard Elite X",
+      "power": 21769694627,
+      "side": "Ally",
+      "overall_rank": 30,
+      "server_rank": 6,
+      "power_label": "21.77B"
+    },
+    {
+      "server": "#511",
+      "alliance": "2N7",
+      "alliance_name": "Flexible Allies",
+      "power": 20459399263,
+      "side": "Ally",
+      "overall_rank": 31,
+      "server_rank": 1,
+      "power_label": "20.46B"
+    },
+    {
+      "server": "#480",
+      "alliance": "CDf8",
+      "alliance_name": "Obsidian fire vow",
+      "power": 20299096515,
+      "side": "Enemy",
+      "overall_rank": 32,
+      "server_rank": 5,
+      "power_label": "20.30B"
+    },
+    {
+      "server": "#503",
+      "alliance": "Stj",
+      "alliance_name": "ray of hope",
+      "power": 19610538332,
+      "side": "Enemy",
+      "overall_rank": 33,
+      "server_rank": 4,
+      "power_label": "19.61B"
+    },
+    {
+      "server": "#503",
+      "alliance": "xjR",
+      "alliance_name": "Marble",
+      "power": 19557542834,
+      "side": "Enemy",
+      "overall_rank": 34,
+      "server_rank": 5,
+      "power_label": "19.56B"
+    },
+    {
+      "server": "#534",
+      "alliance": "SHA",
+      "alliance_name": "企業戦士社畜団",
+      "power": 19019515786,
+      "side": "Ally",
+      "overall_rank": 35,
+      "server_rank": 3,
+      "power_label": "19.02B"
+    },
+    {
+      "server": "#511",
+      "alliance": "JLO",
+      "alliance_name": "Jackalope app",
+      "power": 18916223627,
+      "side": "Ally",
+      "overall_rank": 36,
+      "server_rank": 2,
+      "power_label": "18.92B"
+    },
+    {
+      "server": "#523",
+      "alliance": "K4TR",
+      "alliance_name": "The Eternals",
+      "power": 18876383757,
+      "side": "Enemy",
+      "overall_rank": 37,
+      "server_rank": 4,
+      "power_label": "18.88B"
+    },
+    {
+      "server": "#523",
+      "alliance": "5DU",
+      "alliance_name": "SmurfsNDragonsUnite",
+      "power": 18832466594,
+      "side": "Enemy",
+      "overall_rank": 38,
+      "server_rank": 5,
+      "power_label": "18.83B"
+    },
+    {
+      "server": "#534",
+      "alliance": "n09",
+      "alliance_name": "100LDK",
+      "power": 17685879487,
+      "side": "Ally",
+      "overall_rank": 39,
+      "server_rank": 4,
+      "power_label": "17.69B"
+    },
+    {
+      "server": "#503",
+      "alliance": "TIKW",
+      "alliance_name": "ちいかわ連合",
+      "power": 17496110302,
+      "side": "Enemy",
+      "overall_rank": 40,
+      "server_rank": 6,
+      "power_label": "17.50B"
+    },
+    {
+      "server": "#503",
+      "alliance": "fzn",
+      "alliance_name": "Re star",
+      "power": 17346805949,
+      "side": "Enemy",
+      "overall_rank": 41,
+      "server_rank": 7,
+      "power_label": "17.35B"
+    },
+    {
+      "server": "#440",
+      "alliance": "TaW",
+      "alliance_name": "Tactical Warzone",
+      "power": 17140808037,
+      "side": "Ally",
+      "overall_rank": 42,
+      "server_rank": 4,
+      "power_label": "17.14B"
+    },
+    {
+      "server": "#523",
+      "alliance": "u3o",
+      "alliance_name": "Rallygjengen",
+      "power": 16935539884,
+      "side": "Enemy",
+      "overall_rank": 43,
+      "server_rank": 6,
+      "power_label": "16.94B"
+    },
+    {
+      "server": "#534",
+      "alliance": "89M",
+      "alliance_name": "るるぷミー",
+      "power": 16641298430,
+      "side": "Ally",
+      "overall_rank": 44,
+      "server_rank": 5,
+      "power_label": "16.64B"
+    },
+    {
+      "server": "#534",
+      "alliance": "4TH",
+      "alliance_name": "QUINTET",
+      "power": 16517834871,
+      "side": "Ally",
+      "overall_rank": 45,
+      "server_rank": 6,
+      "power_label": "16.52B"
+    },
+    {
+      "server": "#511",
+      "alliance": "SVa",
+      "alliance_name": "savage assassins",
+      "power": 16064571307,
+      "side": "Ally",
+      "overall_rank": 46,
+      "server_rank": 3,
+      "power_label": "16.06B"
+    },
+    {
+      "server": "#503",
+      "alliance": "UMN",
+      "alliance_name": "ゆったりまったりのんびり",
+      "power": 15024630091,
+      "side": "Enemy",
+      "overall_rank": 47,
+      "server_rank": 8,
+      "power_label": "15.02B"
+    },
+    {
+      "server": "#480",
+      "alliance": "AAOA",
+      "alliance_name": "AoA",
+      "power": 14557921673,
+      "side": "Enemy",
+      "overall_rank": 48,
+      "server_rank": 6,
+      "power_label": "14.56B"
+    },
+    {
+      "server": "#440",
+      "alliance": "TrX",
+      "alliance_name": "TrX",
+      "power": 14544920129,
+      "side": "Ally",
+      "overall_rank": 49,
+      "server_rank": 5,
+      "power_label": "14.54B"
+    },
+    {
+      "server": "#476",
+      "alliance": "ALj",
+      "alliance_name": "alijans",
+      "power": 13924027075,
+      "side": "Enemy",
+      "overall_rank": 50,
+      "server_rank": 10,
+      "power_label": "13.92B"
+    },
+    {
+      "server": "#523",
+      "alliance": "EDFS",
+      "alliance_name": "Ehpad des fous",
+      "power": 12776123204,
+      "side": "Enemy",
+      "overall_rank": 51,
+      "server_rank": 7,
+      "power_label": "12.78B"
+    },
+    {
+      "server": "#509",
+      "alliance": "OTT",
+      "alliance_name": "Spaßgang",
+      "power": 11891466204,
+      "side": "Ally",
+      "overall_rank": 52,
+      "server_rank": 7,
+      "power_label": "11.89B"
+    },
+    {
+      "server": "#440",
+      "alliance": "IMp",
+      "alliance_name": "GalacticSyndicate",
+      "power": 11309594714,
+      "side": "Ally",
+      "overall_rank": 53,
+      "server_rank": 6,
+      "power_label": "11.31B"
+    },
+    {
+      "server": "#534",
+      "alliance": "jOH",
+      "alliance_name": "jOH with Ta1",
+      "power": 11188970810,
+      "side": "Ally",
+      "overall_rank": 54,
+      "server_rank": 7,
+      "power_label": "11.19B"
+    },
+    {
+      "server": "#503",
+      "alliance": "Bye",
+      "alliance_name": "環遊世界",
+      "power": 10990156128,
+      "side": "Enemy",
+      "overall_rank": 55,
+      "server_rank": 9,
+      "power_label": "10.99B"
+    },
+    {
+      "server": "#534",
+      "alliance": "n01",
+      "alliance_name": "イカの塩辛",
+      "power": 10437107836,
+      "side": "Ally",
+      "overall_rank": 56,
+      "server_rank": 8,
+      "power_label": "10.44B"
+    },
+    {
+      "server": "#503",
+      "alliance": "YDR",
+      "alliance_name": "あの女のハウス",
+      "power": 9918846287,
+      "side": "Enemy",
+      "overall_rank": 57,
+      "server_rank": 10,
+      "power_label": "9.92B"
+    },
+    {
+      "server": "#509",
+      "alliance": "0WM",
+      "alliance_name": "Modern World Order",
+      "power": 8786024330,
+      "side": "Ally",
+      "overall_rank": 58,
+      "server_rank": 8,
+      "power_label": "8.79B"
+    },
+    {
+      "server": "#509",
+      "alliance": "AoW",
+      "alliance_name": "Art Of War",
+      "power": 8370958198,
+      "side": "Ally",
+      "overall_rank": 59,
+      "server_rank": 9,
+      "power_label": "8.37B"
+    },
+    {
+      "server": "#534",
+      "alliance": "MOE",
+      "alliance_name": "最後の桃源郷",
+      "power": 8330797349,
+      "side": "Ally",
+      "overall_rank": 60,
+      "server_rank": 9,
+      "power_label": "8.33B"
+    },
+    {
+      "server": "#503",
+      "alliance": "299",
+      "alliance_name": "肉球ぱんち団",
+      "power": 8124181928,
+      "side": "Enemy",
+      "overall_rank": 61,
+      "server_rank": 11,
+      "power_label": "8.12B"
+    },
+    {
+      "server": "#480",
+      "alliance": "Digg",
+      "alliance_name": "Woof",
+      "power": 8005132773,
+      "side": "Enemy",
+      "overall_rank": 62,
+      "server_rank": 7,
+      "power_label": "8.01B"
+    },
+    {
+      "server": "#503",
+      "alliance": "COzy",
+      "alliance_name": "洗純会",
+      "power": 7155823822,
+      "side": "Enemy",
+      "overall_rank": 63,
+      "server_rank": 12,
+      "power_label": "7.16B"
+    },
+    {
+      "server": "#509",
+      "alliance": "eXt",
+      "alliance_name": "Exit",
+      "power": 7153868458,
+      "side": "Ally",
+      "overall_rank": 64,
+      "server_rank": 10,
+      "power_label": "7.15B"
+    },
+    {
+      "server": "#480",
+      "alliance": "PmP",
+      "alliance_name": "Land of the Penguins",
+      "power": 7010957684,
+      "side": "Enemy",
+      "overall_rank": 65,
+      "server_rank": 8,
+      "power_label": "7.01B"
+    },
+    {
+      "server": "#534",
+      "alliance": "RGWC",
+      "alliance_name": "GGWC Reborn",
+      "power": 6942560050,
+      "side": "Ally",
+      "overall_rank": 66,
+      "server_rank": 10,
+      "power_label": "6.94B"
+    },
+    {
+      "server": "#534",
+      "alliance": "Ryu1",
+      "alliance_name": "新生ゆったり",
+      "power": 6866047162,
+      "side": "Ally",
+      "overall_rank": 67,
+      "server_rank": 11,
+      "power_label": "6.87B"
+    },
+    {
+      "server": "#534",
+      "alliance": "f4j",
+      "alliance_name": "猫を愛でる会",
+      "power": 6573034919,
+      "side": "Ally",
+      "overall_rank": 68,
+      "server_rank": 12,
+      "power_label": "6.57B"
+    },
+    {
+      "server": "#511",
+      "alliance": "DaNG",
+      "alliance_name": "Those who Remain",
+      "power": 6369837685,
+      "side": "Ally",
+      "overall_rank": 69,
+      "server_rank": 4,
+      "power_label": "6.37B"
+    },
+    {
+      "server": "#476",
+      "alliance": "c7d",
+      "alliance_name": "Rasierer",
+      "power": 6286808366,
+      "side": "Enemy",
+      "overall_rank": 70,
+      "server_rank": 11,
+      "power_label": "6.29B"
+    },
+    {
+      "server": "#534",
+      "alliance": "w6f",
+      "alliance_name": "気分屋",
+      "power": 5481841042,
+      "side": "Ally",
+      "overall_rank": 71,
+      "server_rank": 13,
+      "power_label": "5.48B"
+    },
+    {
+      "server": "#534",
+      "alliance": "moca",
+      "alliance_name": "moca cafe",
+      "power": 5420272468,
+      "side": "Ally",
+      "overall_rank": 72,
+      "server_rank": 14,
+      "power_label": "5.42B"
+    },
+    {
+      "server": "#534",
+      "alliance": "Sg3",
+      "alliance_name": "SUPER GOOD",
+      "power": 4764607188,
+      "side": "Ally",
+      "overall_rank": 73,
+      "server_rank": 15,
+      "power_label": "4.76B"
+    },
+    {
+      "server": "#511",
+      "alliance": "JL2",
+      "alliance_name": "jackalope app 2",
+      "power": 4648607164,
+      "side": "Ally",
+      "overall_rank": 74,
+      "server_rank": 5,
+      "power_label": "4.65B"
+    },
+    {
+      "server": "#440",
+      "alliance": "DOLU",
+      "alliance_name": "ANADOLU BİRLİĞİ",
+      "power": 4603830416,
+      "side": "Ally",
+      "overall_rank": 75,
+      "server_rank": 7,
+      "power_label": "4.60B"
+    },
+    {
+      "server": "#511",
+      "alliance": "TRh",
+      "alliance_name": "The Retirement home",
+      "power": 4213839843,
+      "side": "Ally",
+      "overall_rank": 76,
+      "server_rank": 6,
+      "power_label": "4.21B"
+    },
+    {
+      "server": "#509",
+      "alliance": "KOCH",
+      "alliance_name": "Kings of Chaos",
+      "power": 4204956581,
+      "side": "Ally",
+      "overall_rank": 77,
+      "server_rank": 11,
+      "power_label": "4.20B"
+    },
+    {
+      "server": "#503",
+      "alliance": "GA9",
+      "alliance_name": "ガンバラ騎士",
+      "power": 4053993306,
+      "side": "Enemy",
+      "overall_rank": 78,
+      "server_rank": 13,
+      "power_label": "4.05B"
+    },
+    {
+      "server": "#534",
+      "alliance": "Dao",
+      "alliance_name": "Dao",
+      "power": 3788512238,
+      "side": "Ally",
+      "overall_rank": 79,
+      "server_rank": 16,
+      "power_label": "3.79B"
+    },
+    {
+      "server": "#476",
+      "alliance": "R6q",
+      "alliance_name": "Knights",
+      "power": 3520829653,
+      "side": "Enemy",
+      "overall_rank": 80,
+      "server_rank": 12,
+      "power_label": "3.52B"
+    },
+    {
+      "server": "#476",
+      "alliance": "KFk",
+      "alliance_name": "Kings69",
+      "power": 3477934154,
+      "side": "Enemy",
+      "overall_rank": 81,
+      "server_rank": 13,
+      "power_label": "3.48B"
+    },
+    {
+      "server": "#534",
+      "alliance": "SHA0",
+      "alliance_name": "社畜楽園",
+      "power": 3433631937,
+      "side": "Ally",
+      "overall_rank": 82,
+      "server_rank": 17,
+      "power_label": "3.43B"
+    },
+    {
+      "server": "#480",
+      "alliance": "MtG",
+      "alliance_name": "March of The Glory",
+      "power": 3300656979,
+      "side": "Enemy",
+      "overall_rank": 83,
+      "server_rank": 9,
+      "power_label": "3.30B"
+    },
+    {
+      "server": "#534",
+      "alliance": "k0i",
+      "alliance_name": "komunitas Orang indo",
+      "power": 3262223394,
+      "side": "Ally",
+      "overall_rank": 84,
+      "server_rank": 18,
+      "power_label": "3.26B"
+    },
+    {
+      "server": "#503",
+      "alliance": "hMt",
+      "alliance_name": "ハクナマタタ",
+      "power": 3258210656,
+      "side": "Enemy",
+      "overall_rank": 85,
+      "server_rank": 14,
+      "power_label": "3.26B"
+    },
+    {
+      "server": "#440",
+      "alliance": "ANH2",
+      "alliance_name": "ANH2",
+      "power": 3209028111,
+      "side": "Ally",
+      "overall_rank": 86,
+      "server_rank": 8,
+      "power_label": "3.21B"
+    },
+    {
+      "server": "#503",
+      "alliance": "SMK4",
+      "alliance_name": "隅っこ死守団",
+      "power": 3157362450,
+      "side": "Enemy",
+      "overall_rank": 87,
+      "server_rank": 15,
+      "power_label": "3.16B"
+    },
+    {
+      "server": "#511",
+      "alliance": "sbM",
+      "alliance_name": "Small But Mighty",
+      "power": 3113545070,
+      "side": "Ally",
+      "overall_rank": 88,
+      "server_rank": 7,
+      "power_label": "3.11B"
+    },
+    {
+      "server": "#440",
+      "alliance": "WoW3",
+      "alliance_name": "World of War III",
+      "power": 2801146371,
+      "side": "Ally",
+      "overall_rank": 89,
+      "server_rank": 9,
+      "power_label": "2.80B"
+    },
+    {
+      "server": "#503",
+      "alliance": "Z00",
+      "alliance_name": "気軽に遊ぶ",
+      "power": 2642446114,
+      "side": "Enemy",
+      "overall_rank": 90,
+      "server_rank": 16,
+      "power_label": "2.64B"
+    },
+    {
+      "server": "#476",
+      "alliance": "IXM",
+      "alliance_name": "IX LEGIO MIXTA",
+      "power": 2623702528,
+      "side": "Enemy",
+      "overall_rank": 91,
+      "server_rank": 14,
+      "power_label": "2.62B"
+    },
+    {
+      "server": "#503",
+      "alliance": "FarM",
+      "alliance_name": "fARm",
+      "power": 2556291518,
+      "side": "Enemy",
+      "overall_rank": 92,
+      "server_rank": 17,
+      "power_label": "2.56B"
+    },
+    {
+      "server": "#509",
+      "alliance": "AFS",
+      "alliance_name": "DEATHMARCH",
+      "power": 2520309214,
+      "side": "Ally",
+      "overall_rank": 93,
+      "server_rank": 12,
+      "power_label": "2.52B"
+    },
+    {
+      "server": "#534",
+      "alliance": "SKh",
+      "alliance_name": "SKH",
+      "power": 2450776827,
+      "side": "Ally",
+      "overall_rank": 94,
+      "server_rank": 19,
+      "power_label": "2.45B"
+    },
+    {
+      "server": "#534",
+      "alliance": "Trh",
+      "alliance_name": "たまごスープ",
+      "power": 2447326586,
+      "side": "Ally",
+      "overall_rank": 95,
+      "server_rank": 20,
+      "power_label": "2.45B"
+    },
+    {
+      "server": "#509",
+      "alliance": "CZX",
+      "alliance_name": "Europe Extreme",
+      "power": 2418086863,
+      "side": "Ally",
+      "overall_rank": 96,
+      "server_rank": 13,
+      "power_label": "2.42B"
+    },
+    {
+      "server": "#534",
+      "alliance": "RYo",
+      "alliance_name": "Ryo",
+      "power": 2417017678,
+      "side": "Ally",
+      "overall_rank": 97,
+      "server_rank": 21,
+      "power_label": "2.42B"
+    },
+    {
+      "server": "#440",
+      "alliance": "aTA",
+      "alliance_name": "Warriors of Tengri",
+      "power": 2399657010,
+      "side": "Ally",
+      "overall_rank": 98,
+      "server_rank": 10,
+      "power_label": "2.40B"
+    },
+    {
+      "server": "#440",
+      "alliance": "nv8",
+      "alliance_name": "Italia",
+      "power": 2395660651,
+      "side": "Ally",
+      "overall_rank": 99,
+      "server_rank": 11,
+      "power_label": "2.40B"
+    },
+    {
+      "server": "#503",
+      "alliance": "RING",
+      "alliance_name": "ωω",
+      "power": 2331235688,
+      "side": "Enemy",
+      "overall_rank": 100,
+      "server_rank": 18,
+      "power_label": "2.33B"
+    },
+    {
+      "server": "#509",
+      "alliance": "Iran",
+      "alliance_name": "Vicious Elif X",
+      "power": 2279437718,
+      "side": "Ally",
+      "overall_rank": 101,
+      "server_rank": 14,
+      "power_label": "2.28B"
+    },
+    {
+      "server": "#534",
+      "alliance": "CROW",
+      "alliance_name": "鳥",
+      "power": 2261888425,
+      "side": "Ally",
+      "overall_rank": 102,
+      "server_rank": 22,
+      "power_label": "2.26B"
+    },
+    {
+      "server": "#503",
+      "alliance": "ASp",
+      "alliance_name": "アスパラasupa",
+      "power": 2076766342,
+      "side": "Enemy",
+      "overall_rank": 103,
+      "server_rank": 19,
+      "power_label": "2.08B"
+    },
+    {
+      "server": "#511",
+      "alliance": "SVh",
+      "alliance_name": "Savage Hulks",
+      "power": 1990637404,
+      "side": "Ally",
+      "overall_rank": 104,
+      "server_rank": 8,
+      "power_label": "1.99B"
+    },
+    {
+      "server": "#523",
+      "alliance": "UrE",
+      "alliance_name": "YourEnd",
+      "power": 1885723230,
+      "side": "Enemy",
+      "overall_rank": 105,
+      "server_rank": 8,
+      "power_label": "1.89B"
+    },
+    {
+      "server": "#480",
+      "alliance": "HHu",
+      "alliance_name": "Hell Hounds",
+      "power": 1850944095,
+      "side": "Enemy",
+      "overall_rank": 106,
+      "server_rank": 10,
+      "power_label": "1.85B"
+    },
+    {
+      "server": "#534",
+      "alliance": "C7w",
+      "alliance_name": "明月秋時",
+      "power": 1846867800,
+      "side": "Ally",
+      "overall_rank": 107,
+      "server_rank": 23,
+      "power_label": "1.85B"
+    },
+    {
+      "server": "#523",
+      "alliance": "IER",
+      "alliance_name": "TheLastSoldiers",
+      "power": 1721330644,
+      "side": "Enemy",
+      "overall_rank": 108,
+      "server_rank": 9,
+      "power_label": "1.72B"
+    },
+    {
+      "server": "#511",
+      "alliance": "00E",
+      "alliance_name": "토리넹",
+      "power": 1699314550,
+      "side": "Ally",
+      "overall_rank": 109,
+      "server_rank": 9,
+      "power_label": "1.70B"
+    },
+    {
+      "server": "#476",
+      "alliance": "476Y",
+      "alliance_name": "476 Psi",
+      "power": 1664569962,
+      "side": "Enemy",
+      "overall_rank": 110,
+      "server_rank": 15,
+      "power_label": "1.66B"
+    },
+    {
+      "server": "#503",
+      "alliance": "pSs",
+      "alliance_name": "パイスラ",
+      "power": 1660801016,
+      "side": "Enemy",
+      "overall_rank": 111,
+      "server_rank": 20,
+      "power_label": "1.66B"
+    },
+    {
+      "server": "#534",
+      "alliance": "59U",
+      "alliance_name": "初心者連",
+      "power": 1616385486,
+      "side": "Ally",
+      "overall_rank": 112,
+      "server_rank": 24,
+      "power_label": "1.62B"
+    },
+    {
+      "server": "#503",
+      "alliance": "haka",
+      "alliance_name": "永代供養墓",
+      "power": 1585361840,
+      "side": "Enemy",
+      "overall_rank": 113,
+      "server_rank": 21,
+      "power_label": "1.59B"
+    },
+    {
+      "server": "#480",
+      "alliance": "IMo",
+      "alliance_name": "Honor and Allegiance",
+      "power": 1576509747,
+      "side": "Enemy",
+      "overall_rank": 114,
+      "server_rank": 11,
+      "power_label": "1.58B"
+    },
+    {
+      "server": "#523",
+      "alliance": "Lw2",
+      "alliance_name": "warriors1",
+      "power": 1472284754,
+      "side": "Enemy",
+      "overall_rank": 115,
+      "server_rank": 10,
+      "power_label": "1.47B"
+    },
+    {
+      "server": "#534",
+      "alliance": "DAK",
+      "alliance_name": "natural killers",
+      "power": 1462600572,
+      "side": "Ally",
+      "overall_rank": 116,
+      "server_rank": 25,
+      "power_label": "1.46B"
+    },
+    {
+      "server": "#503",
+      "alliance": "GLT",
+      "alliance_name": "ぎるてぃ",
+      "power": 1293090554,
+      "side": "Enemy",
+      "overall_rank": 117,
+      "server_rank": 22,
+      "power_label": "1.29B"
+    },
+    {
+      "server": "#509",
+      "alliance": "Lk0",
+      "alliance_name": "عرب تاون",
+      "power": 1288380218,
+      "side": "Ally",
+      "overall_rank": 118,
+      "server_rank": 15,
+      "power_label": "1.29B"
+    },
+    {
+      "server": "#509",
+      "alliance": "XTq",
+      "alliance_name": "Aqu",
+      "power": 1217300161,
+      "side": "Ally",
+      "overall_rank": 119,
+      "server_rank": 16,
+      "power_label": "1.22B"
+    },
+    {
+      "server": "#509",
+      "alliance": "Fi3",
+      "alliance_name": "Warriors F",
+      "power": 1198830905,
+      "side": "Ally",
+      "overall_rank": 120,
+      "server_rank": 17,
+      "power_label": "1.20B"
+    },
+    {
+      "server": "#480",
+      "alliance": "h0e",
+      "alliance_name": "Hit one on Evil",
+      "power": 1004932044,
+      "side": "Enemy",
+      "overall_rank": 121,
+      "server_rank": 12,
+      "power_label": "1.00B"
+    },
+    {
+      "server": "#440",
+      "alliance": "MN10",
+      "alliance_name": "pain",
+      "power": 1002322223,
+      "side": "Ally",
+      "overall_rank": 122,
+      "server_rank": 12,
+      "power_label": "1.00B"
+    },
+    {
+      "server": "#509",
+      "alliance": "QZW",
+      "alliance_name": "World warriors",
+      "power": 997695400,
+      "side": "Ally",
+      "overall_rank": 123,
+      "server_rank": 18,
+      "power_label": "997.70M"
+    },
+    {
+      "server": "#534",
+      "alliance": "BCO",
+      "alliance_name": "Blade Calls",
+      "power": 970912061,
+      "side": "Ally",
+      "overall_rank": 124,
+      "server_rank": 26,
+      "power_label": "970.91M"
+    },
+    {
+      "server": "#503",
+      "alliance": "0pi",
+      "alliance_name": "'-Hang out-",
+      "power": 881152740,
+      "side": "Enemy",
+      "overall_rank": 125,
+      "server_rank": 23,
+      "power_label": "881.15M"
+    },
+    {
+      "server": "#476",
+      "alliance": "sRZ",
+      "alliance_name": "UAE Sharks",
+      "power": 810695752,
+      "side": "Enemy",
+      "overall_rank": 126,
+      "server_rank": 16,
+      "power_label": "810.70M"
+    },
+    {
+      "server": "#503",
+      "alliance": "gx1",
+      "alliance_name": "おわおわ",
+      "power": 796816648,
+      "side": "Enemy",
+      "overall_rank": 127,
+      "server_rank": 24,
+      "power_label": "796.82M"
+    },
+    {
+      "server": "#523",
+      "alliance": "WhL",
+      "alliance_name": "The White Lotus",
+      "power": 745675988,
+      "side": "Enemy",
+      "overall_rank": 128,
+      "server_rank": 11,
+      "power_label": "745.68M"
+    },
+    {
+      "server": "#534",
+      "alliance": "VXb",
+      "alliance_name": "ALLIANCE 16",
+      "power": 717196974,
+      "side": "Ally",
+      "overall_rank": 129,
+      "server_rank": 27,
+      "power_label": "717.20M"
+    },
+    {
+      "server": "#534",
+      "alliance": "jox",
+      "alliance_name": "台湾人站出来",
+      "power": 654781559,
+      "side": "Ally",
+      "overall_rank": 130,
+      "server_rank": 28,
+      "power_label": "654.78M"
+    },
+    {
+      "server": "#509",
+      "alliance": "RBs",
+      "alliance_name": "Red Bulls",
+      "power": 641593443,
+      "side": "Ally",
+      "overall_rank": 131,
+      "server_rank": 19,
+      "power_label": "641.59M"
+    },
+    {
+      "server": "#523",
+      "alliance": "rzx",
+      "alliance_name": "districto survival",
+      "power": 625357478,
+      "side": "Enemy",
+      "overall_rank": 132,
+      "server_rank": 12,
+      "power_label": "625.36M"
+    },
+    {
+      "server": "#440",
+      "alliance": "WZ6",
+      "alliance_name": "Wizard6",
+      "power": 609172403,
+      "side": "Ally",
+      "overall_rank": 133,
+      "server_rank": 13,
+      "power_label": "609.17M"
+    },
+    {
+      "server": "#511",
+      "alliance": "Lj8",
+      "alliance_name": "Skywalker",
+      "power": 604275585,
+      "side": "Ally",
+      "overall_rank": 134,
+      "server_rank": 10,
+      "power_label": "604.28M"
+    },
+    {
+      "server": "#503",
+      "alliance": "3s3",
+      "alliance_name": "のぞみ",
+      "power": 601992604,
+      "side": "Enemy",
+      "overall_rank": 135,
+      "server_rank": 25,
+      "power_label": "601.99M"
+    },
+    {
+      "server": "#534",
+      "alliance": "MnN",
+      "alliance_name": "無理なくのんびり",
+      "power": 592636737,
+      "side": "Ally",
+      "overall_rank": 136,
+      "server_rank": 29,
+      "power_label": "592.64M"
+    },
+    {
+      "server": "#503",
+      "alliance": "qbo",
+      "alliance_name": "世紀末覇者",
+      "power": 532851254,
+      "side": "Enemy",
+      "overall_rank": 137,
+      "server_rank": 26,
+      "power_label": "532.85M"
+    },
+    {
+      "server": "#523",
+      "alliance": "B2FF",
+      "alliance_name": "BORN 2 FIGHT FOREVER",
+      "power": 521061331,
+      "side": "Enemy",
+      "overall_rank": 138,
+      "server_rank": 13,
+      "power_label": "521.06M"
+    },
+    {
+      "server": "#509",
+      "alliance": "DEo",
+      "alliance_name": "Kaiserreich",
+      "power": 503084744,
+      "side": "Ally",
+      "overall_rank": 139,
+      "server_rank": 20,
+      "power_label": "503.08M"
+    },
+    {
+      "server": "#523",
+      "alliance": "ROCK",
+      "alliance_name": "Bank Rock Inc",
+      "power": 498616015,
+      "side": "Enemy",
+      "overall_rank": 140,
+      "server_rank": 14,
+      "power_label": "498.62M"
+    },
+    {
+      "server": "#523",
+      "alliance": "DNp",
+      "alliance_name": "F E A R",
+      "power": 473463802,
+      "side": "Enemy",
+      "overall_rank": 141,
+      "server_rank": 15,
+      "power_label": "473.46M"
+    },
+    {
+      "server": "#480",
+      "alliance": "o5w",
+      "alliance_name": "Grey59",
+      "power": 467694582,
+      "side": "Enemy",
+      "overall_rank": 142,
+      "server_rank": 13,
+      "power_label": "467.69M"
+    },
+    {
+      "server": "#503",
+      "alliance": "exr",
+      "alliance_name": "アズールレーン",
+      "power": 462679252,
+      "side": "Enemy",
+      "overall_rank": 143,
+      "server_rank": 27,
+      "power_label": "462.68M"
+    },
+    {
+      "server": "#534",
+      "alliance": "bAy",
+      "alliance_name": "BAYFLOW",
+      "power": 452030213,
+      "side": "Ally",
+      "overall_rank": 144,
+      "server_rank": 30,
+      "power_label": "452.03M"
+    },
+    {
+      "server": "#503",
+      "alliance": "PhC",
+      "alliance_name": "PH Campers",
+      "power": 450517625,
+      "side": "Enemy",
+      "overall_rank": 145,
+      "server_rank": 28,
+      "power_label": "450.52M"
+    },
+    {
+      "server": "#476",
+      "alliance": "L55",
+      "alliance_name": "Phantomlegion",
+      "power": 429974515,
+      "side": "Enemy",
+      "overall_rank": 146,
+      "server_rank": 17,
+      "power_label": "429.97M"
+    },
+    {
+      "server": "#440",
+      "alliance": "2jr",
+      "alliance_name": "Mendoclan63",
+      "power": 414937161,
+      "side": "Ally",
+      "overall_rank": 147,
+      "server_rank": 14,
+      "power_label": "414.94M"
+    },
+    {
+      "server": "#534",
+      "alliance": "z2w",
+      "alliance_name": "隅っこぐらし",
+      "power": 406423869,
+      "side": "Ally",
+      "overall_rank": 148,
+      "server_rank": 31,
+      "power_label": "406.42M"
+    },
+    {
+      "server": "#534",
+      "alliance": "mji",
+      "alliance_name": "ナツコの部屋",
+      "power": 378591494,
+      "side": "Ally",
+      "overall_rank": 149,
+      "server_rank": 32,
+      "power_label": "378.59M"
+    },
+    {
+      "server": "#503",
+      "alliance": "jVc",
+      "alliance_name": "JVC FORCE of nature",
+      "power": 371137428,
+      "side": "Enemy",
+      "overall_rank": 150,
+      "server_rank": 29,
+      "power_label": "371.14M"
+    },
+    {
+      "server": "#503",
+      "alliance": "GsK",
+      "alliance_name": "脳ーkiwamiー筋",
+      "power": 370348841,
+      "side": "Enemy",
+      "overall_rank": 151,
+      "server_rank": 30,
+      "power_label": "370.35M"
+    },
+    {
+      "server": "#503",
+      "alliance": "BBF5",
+      "alliance_name": "ByeByeFIGHT",
+      "power": 369465091,
+      "side": "Enemy",
+      "overall_rank": 152,
+      "server_rank": 31,
+      "power_label": "369.47M"
+    },
+    {
+      "server": "#534",
+      "alliance": "YaN",
+      "alliance_name": "やんやん党",
+      "power": 359722421,
+      "side": "Ally",
+      "overall_rank": 153,
+      "server_rank": 33,
+      "power_label": "359.72M"
+    },
+    {
+      "server": "#440",
+      "alliance": "KL6",
+      "alliance_name": "Kings lands",
+      "power": 338660530,
+      "side": "Ally",
+      "overall_rank": 154,
+      "server_rank": 15,
+      "power_label": "338.66M"
+    },
+    {
+      "server": "#503",
+      "alliance": "FUY",
+      "alliance_name": "manchester city",
+      "power": 333245933,
+      "side": "Enemy",
+      "overall_rank": 155,
+      "server_rank": 32,
+      "power_label": "333.25M"
+    },
+    {
+      "server": "#511",
+      "alliance": "OwOz",
+      "alliance_name": "휴가중OwO",
+      "power": 326530266,
+      "side": "Ally",
+      "overall_rank": 156,
+      "server_rank": 11,
+      "power_label": "326.53M"
+    },
+    {
+      "server": "#503",
+      "alliance": "5DA",
+      "alliance_name": "EDF第5支部",
+      "power": 311076600,
+      "side": "Enemy",
+      "overall_rank": 157,
+      "server_rank": 33,
+      "power_label": "311.08M"
+    },
+    {
+      "server": "#503",
+      "alliance": "7er",
+      "alliance_name": "funnyface",
+      "power": 306196422,
+      "side": "Enemy",
+      "overall_rank": 158,
+      "server_rank": 34,
+      "power_label": "306.20M"
+    },
+    {
+      "server": "#534",
+      "alliance": "zz89",
+      "alliance_name": "おやすみzzz",
+      "power": 293526944,
+      "side": "Ally",
+      "overall_rank": 159,
+      "server_rank": 34,
+      "power_label": "293.53M"
+    },
+    {
+      "server": "#440",
+      "alliance": "0sm",
+      "alliance_name": "Teşkilat Mahsûsâ",
+      "power": 284590332,
+      "side": "Ally",
+      "overall_rank": 160,
+      "server_rank": 16,
+      "power_label": "284.59M"
+    },
+    {
+      "server": "#476",
+      "alliance": "97w",
+      "alliance_name": "TR01",
+      "power": 267782737,
+      "side": "Enemy",
+      "overall_rank": 161,
+      "server_rank": 18,
+      "power_label": "267.78M"
+    },
+    {
+      "server": "#509",
+      "alliance": "6SA",
+      "alliance_name": "SexiestSoldiersAlive",
+      "power": 261852879,
+      "side": "Ally",
+      "overall_rank": 162,
+      "server_rank": 21,
+      "power_label": "261.85M"
+    },
+    {
+      "server": "#503",
+      "alliance": "R00D",
+      "alliance_name": "ロッソ",
+      "power": 261167869,
+      "side": "Enemy",
+      "overall_rank": 163,
+      "server_rank": 35,
+      "power_label": "261.17M"
+    },
+    {
+      "server": "#480",
+      "alliance": "H69",
+      "alliance_name": "Soundsoftheaven7",
+      "power": 260332473,
+      "side": "Enemy",
+      "overall_rank": 164,
+      "server_rank": 14,
+      "power_label": "260.33M"
+    },
+    {
+      "server": "#503",
+      "alliance": "Pqq",
+      "alliance_name": "パワー",
+      "power": 259171881,
+      "side": "Enemy",
+      "overall_rank": 165,
+      "server_rank": 36,
+      "power_label": "259.17M"
+    },
+    {
+      "server": "#476",
+      "alliance": "rsq",
+      "alliance_name": "Northern Italy",
+      "power": 258398740,
+      "side": "Enemy",
+      "overall_rank": 166,
+      "server_rank": 19,
+      "power_label": "258.40M"
+    },
+    {
+      "server": "#509",
+      "alliance": "Uc5",
+      "alliance_name": "ALLIANCE 13",
+      "power": 253578860,
+      "side": "Ally",
+      "overall_rank": 167,
+      "server_rank": 22,
+      "power_label": "253.58M"
+    },
+    {
+      "server": "#476",
+      "alliance": "OSx",
+      "alliance_name": "Original Stalkers",
+      "power": 248493607,
+      "side": "Enemy",
+      "overall_rank": 168,
+      "server_rank": 20,
+      "power_label": "248.49M"
+    },
+    {
+      "server": "#534",
+      "alliance": "GGSX",
+      "alliance_name": "RESPAWN ME",
+      "power": 240447150,
+      "side": "Ally",
+      "overall_rank": 169,
+      "server_rank": 35,
+      "power_label": "240.45M"
+    },
+    {
+      "server": "#476",
+      "alliance": "BPy",
+      "alliance_name": "MEN OF MAYHEM",
+      "power": 237742705,
+      "side": "Enemy",
+      "overall_rank": 170,
+      "server_rank": 21,
+      "power_label": "237.74M"
+    },
+    {
+      "server": "#534",
+      "alliance": "HTt",
+      "alliance_name": "暇つぶし隊",
+      "power": 236371253,
+      "side": "Ally",
+      "overall_rank": 171,
+      "server_rank": 36,
+      "power_label": "236.37M"
+    },
+    {
+      "server": "#503",
+      "alliance": "AFo",
+      "alliance_name": "ゾンビ集団",
+      "power": 235071922,
+      "side": "Enemy",
+      "overall_rank": 172,
+      "server_rank": 37,
+      "power_label": "235.07M"
+    },
+    {
+      "server": "#509",
+      "alliance": "N4M",
+      "alliance_name": "Nightmares1",
+      "power": 232513261,
+      "side": "Ally",
+      "overall_rank": 173,
+      "server_rank": 23,
+      "power_label": "232.51M"
+    },
+    {
+      "server": "#509",
+      "alliance": "FG8",
+      "alliance_name": "KSA 2030 KSA GO HMS",
+      "power": 226161609,
+      "side": "Ally",
+      "overall_rank": 174,
+      "server_rank": 24,
+      "power_label": "226.16M"
+    },
+    {
+      "server": "#509",
+      "alliance": "lgg",
+      "alliance_name": "ALLIANCE 23",
+      "power": 214312432,
+      "side": "Ally",
+      "overall_rank": 175,
+      "server_rank": 25,
+      "power_label": "214.31M"
+    },
+    {
+      "server": "#503",
+      "alliance": "RY1",
+      "alliance_name": "Raymond",
+      "power": 213628655,
+      "side": "Enemy",
+      "overall_rank": 176,
+      "server_rank": 38,
+      "power_label": "213.63M"
+    },
+    {
+      "server": "#476",
+      "alliance": "bvx",
+      "alliance_name": "TDO",
+      "power": 210598991,
+      "side": "Enemy",
+      "overall_rank": 177,
+      "server_rank": 22,
+      "power_label": "210.60M"
+    },
+    {
+      "server": "#534",
+      "alliance": "RAB",
+      "alliance_name": "うちのうさぎを愛でる会",
+      "power": 203145392,
+      "side": "Ally",
+      "overall_rank": 178,
+      "server_rank": 37,
+      "power_label": "203.15M"
+    },
+    {
+      "server": "#480",
+      "alliance": "9fy",
+      "alliance_name": "Descending Sword",
+      "power": 200273446,
+      "side": "Enemy",
+      "overall_rank": 179,
+      "server_rank": 15,
+      "power_label": "200.27M"
+    },
+    {
+      "server": "#534",
+      "alliance": "Omom",
+      "alliance_name": "FOC 訓覺嘅地方",
+      "power": 195083860,
+      "side": "Ally",
+      "overall_rank": 180,
+      "server_rank": 38,
+      "power_label": "195.08M"
+    },
+    {
+      "server": "#440",
+      "alliance": "BY0",
+      "alliance_name": "BEYOND",
+      "power": 189383459,
+      "side": "Ally",
+      "overall_rank": 181,
+      "server_rank": 17,
+      "power_label": "189.38M"
+    },
+    {
+      "server": "#503",
+      "alliance": "8kR",
+      "alliance_name": "八咫烏と龍",
+      "power": 188546882,
+      "side": "Enemy",
+      "overall_rank": 182,
+      "server_rank": 39,
+      "power_label": "188.55M"
+    },
+    {
+      "server": "#503",
+      "alliance": "ZaRa",
+      "alliance_name": "ぞんび研究所",
+      "power": 184640711,
+      "side": "Enemy",
+      "overall_rank": 183,
+      "server_rank": 40,
+      "power_label": "184.64M"
+    },
+    {
+      "server": "#509",
+      "alliance": "FOo",
+      "alliance_name": "FOO",
+      "power": 183401436,
+      "side": "Ally",
+      "overall_rank": 184,
+      "server_rank": 26,
+      "power_label": "183.40M"
+    },
+    {
+      "server": "#534",
+      "alliance": "z0ff",
+      "alliance_name": "てんこしゃ",
+      "power": 180497728,
+      "side": "Ally",
+      "overall_rank": 185,
+      "server_rank": 39,
+      "power_label": "180.50M"
+    },
+    {
+      "server": "#523",
+      "alliance": "M8j",
+      "alliance_name": "Donjon Numéro 5",
+      "power": 180390597,
+      "side": "Enemy",
+      "overall_rank": 186,
+      "server_rank": 16,
+      "power_label": "180.39M"
+    },
+    {
+      "server": "#476",
+      "alliance": "dw6",
+      "alliance_name": "Black Watch",
+      "power": 175287430,
+      "side": "Enemy",
+      "overall_rank": 187,
+      "server_rank": 23,
+      "power_label": "175.29M"
+    },
+    {
+      "server": "#523",
+      "alliance": "nsfw",
+      "alliance_name": "Not safe for work",
+      "power": 175038299,
+      "side": "Enemy",
+      "overall_rank": 188,
+      "server_rank": 17,
+      "power_label": "175.04M"
+    },
+    {
+      "server": "#534",
+      "alliance": "E16A",
+      "alliance_name": "OOE FACTORY",
+      "power": 175022372,
+      "side": "Ally",
+      "overall_rank": 189,
+      "server_rank": 40,
+      "power_label": "175.02M"
+    },
+    {
+      "server": "#503",
+      "alliance": "Peco",
+      "alliance_name": "Peco Warriors",
+      "power": 169040644,
+      "side": "Enemy",
+      "overall_rank": 190,
+      "server_rank": 41,
+      "power_label": "169.04M"
+    },
+    {
+      "server": "#503",
+      "alliance": "MS4",
+      "alliance_name": "ACAB4LIFE",
+      "power": 166650394,
+      "side": "Enemy",
+      "overall_rank": 191,
+      "server_rank": 42,
+      "power_label": "166.65M"
+    },
+    {
+      "server": "#440",
+      "alliance": "KAN9",
+      "alliance_name": "Kanonenfutter",
+      "power": 164999495,
+      "side": "Ally",
+      "overall_rank": 192,
+      "server_rank": 18,
+      "power_label": "165.00M"
+    },
+    {
+      "server": "#534",
+      "alliance": "sBM",
+      "alliance_name": "Submarine",
+      "power": 163337387,
+      "side": "Ally",
+      "overall_rank": 193,
+      "server_rank": 41,
+      "power_label": "163.34M"
+    },
+    {
+      "server": "#511",
+      "alliance": "IS5",
+      "alliance_name": "The Irish Sound",
+      "power": 162704345,
+      "side": "Ally",
+      "overall_rank": 194,
+      "server_rank": 12,
+      "power_label": "162.70M"
+    },
+    {
+      "server": "#534",
+      "alliance": "i9z",
+      "alliance_name": "yuukook",
+      "power": 161583760,
+      "side": "Ally",
+      "overall_rank": 195,
+      "server_rank": 42,
+      "power_label": "161.58M"
+    },
+    {
+      "server": "#503",
+      "alliance": "aZL",
+      "alliance_name": "AZL",
+      "power": 161073466,
+      "side": "Enemy",
+      "overall_rank": 196,
+      "server_rank": 43,
+      "power_label": "161.07M"
+    },
+    {
+      "server": "#534",
+      "alliance": "rmu",
+      "alliance_name": "Rimau",
+      "power": 158335038,
+      "side": "Ally",
+      "overall_rank": 197,
+      "server_rank": 43,
+      "power_label": "158.34M"
+    },
+    {
+      "server": "#534",
+      "alliance": "3can",
+      "alliance_name": "みかん畑",
+      "power": 157506546,
+      "side": "Ally",
+      "overall_rank": 198,
+      "server_rank": 44,
+      "power_label": "157.51M"
+    },
+    {
+      "server": "#476",
+      "alliance": "Kgp",
+      "alliance_name": "Ghost·sa",
+      "power": 154434671,
+      "side": "Enemy",
+      "overall_rank": 199,
+      "server_rank": 24,
+      "power_label": "154.43M"
+    },
+    {
+      "server": "#440",
+      "alliance": "NA8",
+      "alliance_name": "SpecialForces",
+      "power": 152881770,
+      "side": "Ally",
+      "overall_rank": 200,
+      "server_rank": 19,
+      "power_label": "152.88M"
+    },
+    {
+      "server": "#476",
+      "alliance": "3TU",
+      "alliance_name": "Ayyildiz 2",
+      "power": 148410269,
+      "side": "Enemy",
+      "overall_rank": 201,
+      "server_rank": 25,
+      "power_label": "148.41M"
+    },
+    {
+      "server": "#534",
+      "alliance": "vgu",
+      "alliance_name": "ショコタルト",
+      "power": 147719475,
+      "side": "Ally",
+      "overall_rank": 202,
+      "server_rank": 45,
+      "power_label": "147.72M"
+    },
+    {
+      "server": "#503",
+      "alliance": "koro",
+      "alliance_name": "コロちゃん",
+      "power": 147046230,
+      "side": "Enemy",
+      "overall_rank": 203,
+      "server_rank": 44,
+      "power_label": "147.05M"
+    },
+    {
+      "server": "#511",
+      "alliance": "Ou0",
+      "alliance_name": "Little Island",
+      "power": 146595979,
+      "side": "Ally",
+      "overall_rank": 204,
+      "server_rank": 13,
+      "power_label": "146.60M"
+    },
+    {
+      "server": "#534",
+      "alliance": "Tamp",
+      "alliance_name": "TampBac",
+      "power": 145110377,
+      "side": "Ally",
+      "overall_rank": 205,
+      "server_rank": 46,
+      "power_label": "145.11M"
+    },
+    {
+      "server": "#534",
+      "alliance": "TOT",
+      "alliance_name": "TOTOT",
+      "power": 142270534,
+      "side": "Ally",
+      "overall_rank": 206,
+      "server_rank": 47,
+      "power_label": "142.27M"
+    },
+    {
+      "server": "#534",
+      "alliance": "LYI",
+      "alliance_name": "Leo yukichi",
+      "power": 139411574,
+      "side": "Ally",
+      "overall_rank": 207,
+      "server_rank": 48,
+      "power_label": "139.41M"
+    },
+    {
+      "server": "#476",
+      "alliance": "nx8",
+      "alliance_name": "Ghost 1",
+      "power": 137800953,
+      "side": "Enemy",
+      "overall_rank": 208,
+      "server_rank": 26,
+      "power_label": "137.80M"
+    },
+    {
+      "server": "#440",
+      "alliance": "a4b",
+      "alliance_name": "M18",
+      "power": 134255697,
+      "side": "Ally",
+      "overall_rank": 209,
+      "server_rank": 20,
+      "power_label": "134.26M"
+    },
+    {
+      "server": "#480",
+      "alliance": "Btu",
+      "alliance_name": "Black Lotus",
+      "power": 131514721,
+      "side": "Enemy",
+      "overall_rank": 210,
+      "server_rank": 16,
+      "power_label": "131.51M"
+    },
+    {
+      "server": "#476",
+      "alliance": "A6I",
+      "alliance_name": "UAE 007",
+      "power": 129834874,
+      "side": "Enemy",
+      "overall_rank": 211,
+      "server_rank": 27,
+      "power_label": "129.83M"
+    },
+    {
+      "server": "#523",
+      "alliance": "GiL",
+      "alliance_name": "Gold is Life",
+      "power": 129404882,
+      "side": "Enemy",
+      "overall_rank": 212,
+      "server_rank": 18,
+      "power_label": "129.40M"
+    },
+    {
+      "server": "#509",
+      "alliance": "3KK",
+      "alliance_name": "AHM",
+      "power": 129325265,
+      "side": "Ally",
+      "overall_rank": 213,
+      "server_rank": 27,
+      "power_label": "129.33M"
+    },
+    {
+      "server": "#534",
+      "alliance": "pal2",
+      "alliance_name": "pal 2",
+      "power": 127383458,
+      "side": "Ally",
+      "overall_rank": 214,
+      "server_rank": 49,
+      "power_label": "127.38M"
+    },
+    {
+      "server": "#503",
+      "alliance": "9tD",
+      "alliance_name": "MIYAKKO",
+      "power": 127207380,
+      "side": "Enemy",
+      "overall_rank": 215,
+      "server_rank": 45,
+      "power_label": "127.21M"
+    },
+    {
+      "server": "#534",
+      "alliance": "2Bo",
+      "alliance_name": "Botcht two",
+      "power": 126973509,
+      "side": "Ally",
+      "overall_rank": 216,
+      "server_rank": 50,
+      "power_label": "126.97M"
+    },
+    {
+      "server": "#523",
+      "alliance": "RMg",
+      "alliance_name": "Rick et morty gang",
+      "power": 126451107,
+      "side": "Enemy",
+      "overall_rank": 217,
+      "server_rank": 19,
+      "power_label": "126.45M"
+    },
+    {
+      "server": "#523",
+      "alliance": "Ns8",
+      "alliance_name": "phénix RIL bis",
+      "power": 123617635,
+      "side": "Enemy",
+      "overall_rank": 218,
+      "server_rank": 20,
+      "power_label": "123.62M"
+    },
+    {
+      "server": "#509",
+      "alliance": "Enab",
+      "alliance_name": "Bane",
+      "power": 119932929,
+      "side": "Ally",
+      "overall_rank": 219,
+      "server_rank": 28,
+      "power_label": "119.93M"
+    },
+    {
+      "server": "#503",
+      "alliance": "TLRe",
+      "alliance_name": "たまごLAND",
+      "power": 116864634,
+      "side": "Enemy",
+      "overall_rank": 220,
+      "server_rank": 46,
+      "power_label": "116.86M"
+    },
+    {
+      "server": "#476",
+      "alliance": "N0n0",
+      "alliance_name": "You can’t kick me",
+      "power": 116721638,
+      "side": "Enemy",
+      "overall_rank": 221,
+      "server_rank": 28,
+      "power_label": "116.72M"
+    },
+    {
+      "server": "#440",
+      "alliance": "rlh",
+      "alliance_name": "we can do",
+      "power": 113784732,
+      "side": "Ally",
+      "overall_rank": 222,
+      "server_rank": 21,
+      "power_label": "113.78M"
+    },
+    {
+      "server": "#480",
+      "alliance": "9w7",
+      "alliance_name": "DeathStorm29",
+      "power": 113532265,
+      "side": "Enemy",
+      "overall_rank": 223,
+      "server_rank": 17,
+      "power_label": "113.53M"
+    },
+    {
+      "server": "#440",
+      "alliance": "MEr",
+      "alliance_name": "BigMercenaries",
+      "power": 112163652,
+      "side": "Ally",
+      "overall_rank": 224,
+      "server_rank": 22,
+      "power_label": "112.16M"
+    },
+    {
+      "server": "#503",
+      "alliance": "veM",
+      "alliance_name": "Aftermath77",
+      "power": 110583345,
+      "side": "Enemy",
+      "overall_rank": 225,
+      "server_rank": 47,
+      "power_label": "110.58M"
+    },
+    {
+      "server": "#476",
+      "alliance": "TpG",
+      "alliance_name": "TPG ALLIANCE",
+      "power": 110239440,
+      "side": "Enemy",
+      "overall_rank": 226,
+      "server_rank": 29,
+      "power_label": "110.24M"
+    },
+    {
+      "server": "#480",
+      "alliance": "C17",
+      "alliance_name": "Ciudad 17",
+      "power": 109806788,
+      "side": "Enemy",
+      "overall_rank": 227,
+      "server_rank": 18,
+      "power_label": "109.81M"
+    },
+    {
+      "server": "#503",
+      "alliance": "krH",
+      "alliance_name": "すーらしあ",
+      "power": 109401998,
+      "side": "Enemy",
+      "overall_rank": 228,
+      "server_rank": 48,
+      "power_label": "109.40M"
+    },
+    {
+      "server": "#509",
+      "alliance": "YGZ",
+      "alliance_name": "Gzzly",
+      "power": 105974129,
+      "side": "Ally",
+      "overall_rank": 229,
+      "server_rank": 29,
+      "power_label": "105.97M"
+    },
+    {
+      "server": "#503",
+      "alliance": "emv",
+      "alliance_name": "okioki",
+      "power": 105628547,
+      "side": "Enemy",
+      "overall_rank": 230,
+      "server_rank": 49,
+      "power_label": "105.63M"
+    },
+    {
+      "server": "#503",
+      "alliance": "iyz",
+      "alliance_name": "kee",
+      "power": 105306716,
+      "side": "Enemy",
+      "overall_rank": 231,
+      "server_rank": 50,
+      "power_label": "105.31M"
+    },
+    {
+      "server": "#476",
+      "alliance": "m3ql",
+      "alliance_name": "المعقل لنا",
+      "power": 104146976,
+      "side": "Enemy",
+      "overall_rank": 232,
+      "server_rank": 30,
+      "power_label": "104.15M"
+    },
+    {
+      "server": "#440",
+      "alliance": "gEb",
+      "alliance_name": "GermanBerserker",
+      "power": 100845009,
+      "side": "Ally",
+      "overall_rank": 233,
+      "server_rank": 23,
+      "power_label": "100.85M"
+    },
+    {
+      "server": "#480",
+      "alliance": "Humr",
+      "alliance_name": "Your mom",
+      "power": 100330505,
+      "side": "Enemy",
+      "overall_rank": 234,
+      "server_rank": 19,
+      "power_label": "100.33M"
+    },
+    {
+      "server": "#476",
+      "alliance": "FwL",
+      "alliance_name": "FreeWill",
+      "power": 99069124,
+      "side": "Enemy",
+      "overall_rank": 235,
+      "server_rank": 31,
+      "power_label": "99.07M"
+    },
+    {
+      "server": "#476",
+      "alliance": "cHa",
+      "alliance_name": "ChaOs",
+      "power": 97732605,
+      "side": "Enemy",
+      "overall_rank": 236,
+      "server_rank": 32,
+      "power_label": "97.73M"
+    },
+    {
+      "server": "#476",
+      "alliance": "RLN",
+      "alliance_name": "Strong team",
+      "power": 96114643,
+      "side": "Enemy",
+      "overall_rank": 237,
+      "server_rank": 33,
+      "power_label": "96.11M"
+    },
+    {
+      "server": "#440",
+      "alliance": "UbN",
+      "alliance_name": "United Blood Nation",
+      "power": 94660647,
+      "side": "Ally",
+      "overall_rank": 238,
+      "server_rank": 24,
+      "power_label": "94.66M"
+    },
+    {
+      "server": "#509",
+      "alliance": "TwB",
+      "alliance_name": "TakeWithBread",
+      "power": 92949783,
+      "side": "Ally",
+      "overall_rank": 239,
+      "server_rank": 30,
+      "power_label": "92.95M"
+    },
+    {
+      "server": "#476",
+      "alliance": "LWX",
+      "alliance_name": "Last Warrior",
+      "power": 92411702,
+      "side": "Enemy",
+      "overall_rank": 240,
+      "server_rank": 34,
+      "power_label": "92.41M"
+    },
+    {
+      "server": "#480",
+      "alliance": "WoNW",
+      "alliance_name": "Wolves of No Where",
+      "power": 91527594,
+      "side": "Enemy",
+      "overall_rank": 241,
+      "server_rank": 20,
+      "power_label": "91.53M"
+    },
+    {
+      "server": "#476",
+      "alliance": "Owl",
+      "alliance_name": "the nutty Squirrels",
+      "power": 90142353,
+      "side": "Enemy",
+      "overall_rank": 242,
+      "server_rank": 35,
+      "power_label": "90.14M"
+    },
+    {
+      "server": "#480",
+      "alliance": "a97",
+      "alliance_name": "Acrover",
+      "power": 88811597,
+      "side": "Enemy",
+      "overall_rank": 243,
+      "server_rank": 21,
+      "power_label": "88.81M"
+    },
+    {
+      "server": "#509",
+      "alliance": "wJx",
+      "alliance_name": "ALLIANCE 44",
+      "power": 88114944,
+      "side": "Ally",
+      "overall_rank": 244,
+      "server_rank": 31,
+      "power_label": "88.11M"
+    },
+    {
+      "server": "#511",
+      "alliance": "A3j",
+      "alliance_name": "G1Joes",
+      "power": 84889010,
+      "side": "Ally",
+      "overall_rank": 245,
+      "server_rank": 14,
+      "power_label": "84.89M"
+    },
+    {
+      "server": "#440",
+      "alliance": "koo",
+      "alliance_name": "kook",
+      "power": 84160391,
+      "side": "Ally",
+      "overall_rank": 246,
+      "server_rank": 25,
+      "power_label": "84.16M"
+    },
+    {
+      "server": "#509",
+      "alliance": "L2v",
+      "alliance_name": "龍龍戰會",
+      "power": 83686430,
+      "side": "Ally",
+      "overall_rank": 247,
+      "server_rank": 32,
+      "power_label": "83.69M"
+    },
+    {
+      "server": "#476",
+      "alliance": "ntc",
+      "alliance_name": "Artvin08",
+      "power": 80550982,
+      "side": "Enemy",
+      "overall_rank": 248,
+      "server_rank": 36,
+      "power_label": "80.55M"
+    },
+    {
+      "server": "#523",
+      "alliance": "qa3",
+      "alliance_name": "Legion of war",
+      "power": 79073486,
+      "side": "Enemy",
+      "overall_rank": 249,
+      "server_rank": 21,
+      "power_label": "79.07M"
+    },
+    {
+      "server": "#509",
+      "alliance": "3oo",
+      "alliance_name": "UnitedSJH",
+      "power": 77163471,
+      "side": "Ally",
+      "overall_rank": 250,
+      "server_rank": 33,
+      "power_label": "77.16M"
+    },
+    {
+      "server": "#509",
+      "alliance": "87F",
+      "alliance_name": "TÜRK GÜCLÜ",
+      "power": 72555227,
+      "side": "Ally",
+      "overall_rank": 251,
+      "server_rank": 34,
+      "power_label": "72.56M"
+    },
+    {
+      "server": "#523",
+      "alliance": "NPCZ",
+      "alliance_name": "CasualPlayaz",
+      "power": 72425754,
+      "side": "Enemy",
+      "overall_rank": 252,
+      "server_rank": 22,
+      "power_label": "72.43M"
+    },
+    {
+      "server": "#440",
+      "alliance": "xa9",
+      "alliance_name": "Liberi",
+      "power": 66394114,
+      "side": "Ally",
+      "overall_rank": 253,
+      "server_rank": 26,
+      "power_label": "66.39M"
+    },
+    {
+      "server": "#509",
+      "alliance": "LAn",
+      "alliance_name": "LastAlliance",
+      "power": 65475299,
+      "side": "Ally",
+      "overall_rank": 254,
+      "server_rank": 35,
+      "power_label": "65.48M"
+    },
+    {
+      "server": "#511",
+      "alliance": "SsV",
+      "alliance_name": "발해를 꿈꾸며",
+      "power": 64884364,
+      "side": "Ally",
+      "overall_rank": 255,
+      "server_rank": 15,
+      "power_label": "64.88M"
+    },
+    {
+      "server": "#509",
+      "alliance": "VIT",
+      "alliance_name": "VII Torinese",
+      "power": 63037314,
+      "side": "Ally",
+      "overall_rank": 256,
+      "server_rank": 36,
+      "power_label": "63.04M"
+    },
+    {
+      "server": "#476",
+      "alliance": "1Bx",
+      "alliance_name": "Fuocoefiamme",
+      "power": 62386511,
+      "side": "Enemy",
+      "overall_rank": 257,
+      "server_rank": 37,
+      "power_label": "62.39M"
+    },
+    {
+      "server": "#476",
+      "alliance": "cuq",
+      "alliance_name": "dominationman",
+      "power": 61393510,
+      "side": "Enemy",
+      "overall_rank": 258,
+      "server_rank": 38,
+      "power_label": "61.39M"
+    },
+    {
+      "server": "#509",
+      "alliance": "AqA2",
+      "alliance_name": "AqA Academy",
+      "power": 60520777,
+      "side": "Ally",
+      "overall_rank": 259,
+      "server_rank": 37,
+      "power_label": "60.52M"
+    },
+    {
+      "server": "#476",
+      "alliance": "SCQ",
+      "alliance_name": "SUICIDE SQUAD",
+      "power": 56724980,
+      "side": "Enemy",
+      "overall_rank": 260,
+      "server_rank": 39,
+      "power_label": "56.72M"
+    },
+    {
+      "server": "#476",
+      "alliance": "EY7",
+      "alliance_name": "UluSancaK2",
+      "power": 56046280,
+      "side": "Enemy",
+      "overall_rank": 261,
+      "server_rank": 40,
+      "power_label": "56.05M"
+    },
+    {
+      "server": "#511",
+      "alliance": "1967",
+      "alliance_name": "Hole",
+      "power": 53635449,
+      "side": "Ally",
+      "overall_rank": 262,
+      "server_rank": 16,
+      "power_label": "53.64M"
+    },
+    {
+      "server": "#440",
+      "alliance": "CoLe",
+      "alliance_name": "Core of Legends",
+      "power": 50618003,
+      "side": "Ally",
+      "overall_rank": 263,
+      "server_rank": 27,
+      "power_label": "50.62M"
+    },
+    {
+      "server": "#440",
+      "alliance": "F2y",
+      "alliance_name": "Fur2",
+      "power": 46691366,
+      "side": "Ally",
+      "overall_rank": 264,
+      "server_rank": 28,
+      "power_label": "46.69M"
+    },
+    {
+      "server": "#440",
+      "alliance": "URZ",
+      "alliance_name": "Take Breath",
+      "power": 45514848,
+      "side": "Ally",
+      "overall_rank": 265,
+      "server_rank": 29,
+      "power_label": "45.51M"
+    },
+    {
+      "server": "#440",
+      "alliance": "Gcc2",
+      "alliance_name": "Gcc2",
+      "power": 42849303,
+      "side": "Ally",
+      "overall_rank": 266,
+      "server_rank": 30,
+      "power_label": "42.85M"
+    },
+    {
+      "server": "#509",
+      "alliance": "iz35",
+      "alliance_name": "sığınak",
+      "power": 38428576,
+      "side": "Ally",
+      "overall_rank": 267,
+      "server_rank": 38,
+      "power_label": "38.43M"
+    },
+    {
+      "server": "#476",
+      "alliance": "Tor5",
+      "alliance_name": "HL3",
+      "power": 35488081,
+      "side": "Enemy",
+      "overall_rank": 268,
+      "server_rank": 41,
+      "power_label": "35.49M"
+    },
+    {
+      "server": "#509",
+      "alliance": "NFI",
+      "alliance_name": "NFL",
+      "power": 33221644,
+      "side": "Ally",
+      "overall_rank": 269,
+      "server_rank": 39,
+      "power_label": "33.22M"
+    },
+    {
+      "server": "#509",
+      "alliance": "ARz",
+      "alliance_name": "Dangerous 1",
+      "power": 26491527,
+      "side": "Ally",
+      "overall_rank": 270,
+      "server_rank": 40,
+      "power_label": "26.49M"
+    },
+    {
+      "server": "#509",
+      "alliance": "pers",
+      "alliance_name": "personal76",
+      "power": 25711902,
+      "side": "Ally",
+      "overall_rank": 271,
+      "server_rank": 41,
+      "power_label": "25.71M"
+    },
+    {
+      "server": "#476",
+      "alliance": "ON2",
+      "alliance_name": "THE ONE",
+      "power": 23052174,
+      "side": "Enemy",
+      "overall_rank": 272,
+      "server_rank": 42,
+      "power_label": "23.05M"
+    },
+    {
+      "server": "#509",
+      "alliance": "EST",
+      "alliance_name": "Eestivõim",
+      "power": 22665332,
+      "side": "Ally",
+      "overall_rank": 273,
+      "server_rank": 42,
+      "power_label": "22.67M"
+    },
+    {
+      "server": "#476",
+      "alliance": "dan8",
+      "alliance_name": "Husaria88",
+      "power": 22479224,
+      "side": "Enemy",
+      "overall_rank": 274,
+      "server_rank": 43,
+      "power_label": "22.48M"
+    },
+    {
+      "server": "#480",
+      "alliance": "Xxe",
+      "alliance_name": "Vooooorro",
+      "power": 18933764,
+      "side": "Enemy",
+      "overall_rank": 275,
+      "server_rank": 22,
+      "power_label": "18.93M"
+    },
+    {
+      "server": "#509",
+      "alliance": "oo3o",
+      "alliance_name": "KSAARMY15",
+      "power": 12380120,
+      "side": "Ally",
+      "overall_rank": 276,
+      "server_rank": 43,
+      "power_label": "12.38M"
+    },
+    {
+      "server": "#509",
+      "alliance": "ge04",
+      "alliance_name": "s04",
+      "power": 11456600,
+      "side": "Ally",
+      "overall_rank": 277,
+      "server_rank": 44,
+      "power_label": "11.46M"
+    },
+    {
+      "server": "#523",
+      "alliance": "Moi",
+      "alliance_name": "The A Team 17",
+      "power": 7690487,
+      "side": "Enemy",
+      "overall_rank": 278,
+      "server_rank": 23,
+      "power_label": "7.69M"
+    },
+    {
+      "server": "#509",
+      "alliance": "KksA",
+      "alliance_name": "KSA1000",
+      "power": 7043589,
+      "side": "Ally",
+      "overall_rank": 279,
+      "server_rank": 45,
+      "power_label": "7.04M"
+    },
+    {
+      "server": "#523",
+      "alliance": "Wsc",
+      "alliance_name": "Whisky sans coca",
+      "power": 5658783,
+      "side": "Enemy",
+      "overall_rank": 280,
+      "server_rank": 24,
+      "power_label": "5.66M"
+    },
+    {
+      "server": "#440",
+      "alliance": "uuyu",
+      "alliance_name": "gcc hell uu",
+      "power": 5137760,
+      "side": "Ally",
+      "overall_rank": 281,
+      "server_rank": 31,
+      "power_label": "5.14M"
+    },
+    {
+      "server": "#476",
+      "alliance": "fno",
+      "alliance_name": "TuranBirliği",
+      "power": 4936910,
+      "side": "Enemy",
+      "overall_rank": 282,
+      "server_rank": 44,
+      "power_label": "4.94M"
+    },
+    {
+      "server": "#480",
+      "alliance": "Rawi",
+      "alliance_name": "Voro king",
+      "power": 4330820,
+      "side": "Enemy",
+      "overall_rank": 283,
+      "server_rank": 23,
+      "power_label": "4.33M"
+    },
+    {
+      "server": "#440",
+      "alliance": "sese",
+      "alliance_name": "fria",
+      "power": 4228381,
+      "side": "Ally",
+      "overall_rank": 284,
+      "server_rank": 32,
+      "power_label": "4.23M"
+    },
+    {
+      "server": "#509",
+      "alliance": "DD13",
+      "alliance_name": "Lord Helmchen",
+      "power": 3016632,
+      "side": "Ally",
+      "overall_rank": 285,
+      "server_rank": 46,
+      "power_label": "3.02M"
+    },
+    {
+      "server": "#440",
+      "alliance": "EYE",
+      "alliance_name": "the old eyes",
+      "power": 2929815,
+      "side": "Ally",
+      "overall_rank": 286,
+      "server_rank": 33,
+      "power_label": "2.93M"
+    },
+    {
+      "server": "#509",
+      "alliance": "502",
+      "alliance_name": "Communists",
+      "power": 2859521,
+      "side": "Ally",
+      "overall_rank": 287,
+      "server_rank": 47,
+      "power_label": "2.86M"
+    },
+    {
+      "server": "#476",
+      "alliance": "zpm2",
+      "alliance_name": "خليفه",
+      "power": 2037275,
+      "side": "Enemy",
+      "overall_rank": 288,
+      "server_rank": 45,
+      "power_label": "2.04M"
+    },
+    {
+      "server": "#440",
+      "alliance": "uyu",
+      "alliance_name": "gcc smell uu",
+      "power": 1732673,
+      "side": "Ally",
+      "overall_rank": 289,
+      "server_rank": 34,
+      "power_label": "1.73M"
+    }
+  ]
+}

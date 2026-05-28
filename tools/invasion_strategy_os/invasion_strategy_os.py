@@ -80,6 +80,17 @@ class Edge:
     weight: float = 1.0
 
 
+@dataclass(frozen=True)
+class AlliancePower:
+    server: str
+    alliance: str
+    alliance_name: str
+    power: int | None
+    side: str = ""
+    overall_rank: int | None = None
+    server_rank: int | None = None
+
+
 def read_config(path: str | None) -> dict[str, Any]:
     if not path:
         return {}
@@ -909,6 +920,339 @@ def protection_status(node: Node, now: datetime, warning_hours: float, tz: ZoneI
     }
 
 
+def parse_int(value: Any) -> int | None:
+    if value is None or value == "":
+        return None
+    if isinstance(value, (int, float)):
+        return int(value)
+    digits = re.sub(r"[^\d]", "", str(value))
+    return int(digits) if digits else None
+
+
+def format_power(power: int | None) -> str:
+    if power is None:
+        return "-"
+    if abs(power) >= 1_000_000_000:
+        return f"{power / 1_000_000_000:.2f}B"
+    if abs(power) >= 1_000_000:
+        return f"{power / 1_000_000:.2f}M"
+    return f"{power:,}"
+
+
+def normalize_lookup_key(value: str | None) -> str:
+    return re.sub(r"\s+", "", str(value or "").strip()).upper()
+
+
+def owner_lookup_keys(owner: str | None) -> list[str]:
+    raw = str(owner or "").strip()
+    keys: list[str] = []
+    if raw:
+        keys.append(normalize_lookup_key(raw))
+    bracket_match = re.search(r"\[([^\]]+)\]", raw)
+    if bracket_match:
+        keys.append(normalize_lookup_key(bracket_match.group(1)))
+    parts = raw.split(maxsplit=1)
+    if raw.startswith("#") and len(parts) > 1:
+        keys.append(normalize_lookup_key(parts[1]))
+    return list(dict.fromkeys(key for key in keys if key))
+
+
+def alliance_power_to_record(item: AlliancePower) -> dict[str, Any]:
+    record = asdict(item)
+    record["power_label"] = format_power(item.power)
+    return record
+
+
+def index_alliance_powers(records: list[AlliancePower]) -> dict[str, AlliancePower]:
+    indexed: dict[str, AlliancePower] = {}
+    for item in records:
+        for key in owner_lookup_keys(item.alliance):
+            indexed[key] = item
+    return indexed
+
+
+def read_alliance_power_cache(path: Path) -> dict[str, AlliancePower]:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    records = [
+        AlliancePower(
+            server=str(item.get("server", "")),
+            alliance=str(item.get("alliance", "")),
+            alliance_name=str(item.get("alliance_name", "")),
+            power=parse_int(item.get("power")),
+            side=str(item.get("side", "")),
+            overall_rank=parse_int(item.get("overall_rank")),
+            server_rank=parse_int(item.get("server_rank")),
+        )
+        for item in payload.get("alliances", [])
+    ]
+    return index_alliance_powers(records)
+
+
+def write_alliance_power_cache(path: Path, records: list[AlliancePower], source_path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "source": str(source_path),
+        "alliances": [alliance_power_to_record(item) for item in records],
+    }
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def load_alliance_powers(config: dict[str, Any], base_dir: Path) -> dict[str, AlliancePower]:
+    if not config:
+        return {}
+
+    cache_value = config.get("cache_json")
+    cache_path = (base_dir / str(cache_value)) if cache_value else None
+    source_type = str(config.get("type", "")).lower()
+    if source_type not in {"xlsx", "excel"}:
+        if cache_path and cache_path.exists():
+            return read_alliance_power_cache(cache_path)
+        return {}
+
+    raw_path = Path(str(config.get("path", "")))
+    source_path = raw_path if raw_path.is_absolute() else base_dir / raw_path
+    if not source_path.exists():
+        if cache_path and cache_path.exists():
+            return read_alliance_power_cache(cache_path)
+        return {}
+
+    try:
+        import openpyxl
+    except ImportError as exc:
+        if cache_path and cache_path.exists():
+            return read_alliance_power_cache(cache_path)
+        raise RuntimeError("openpyxl is required to read alliance power Excel data") from exc
+
+    workbook = openpyxl.load_workbook(source_path, read_only=True, data_only=True)
+    sheet_name = str(config.get("sheet", "Alliance Power"))
+    if sheet_name not in workbook.sheetnames:
+        raise ValueError(f"Alliance power sheet not found: {sheet_name}")
+    worksheet = workbook[sheet_name]
+    header_row = int(config.get("header_row", 4))
+    headers = [
+        str(value).strip() if value is not None else ""
+        for value in next(worksheet.iter_rows(min_row=header_row, max_row=header_row, values_only=True))
+    ]
+    header_index = {name: index for index, name in enumerate(headers) if name}
+
+    def cell(row: tuple[Any, ...], name: str) -> Any:
+        index = header_index.get(name)
+        if index is None or index >= len(row):
+            return None
+        return row[index]
+
+    records: list[AlliancePower] = []
+    for row in worksheet.iter_rows(min_row=header_row + 1, values_only=True):
+        alliance = str(cell(row, "Alliance") or "").strip()
+        if not alliance:
+            continue
+        records.append(
+            AlliancePower(
+                server=str(cell(row, "Server") or "").strip(),
+                alliance=alliance,
+                alliance_name=str(cell(row, "Alliance Name") or "").strip(),
+                power=parse_int(cell(row, "Power")),
+                side=str(cell(row, "Side") or "").strip(),
+                overall_rank=parse_int(cell(row, "Overall Rank")),
+                server_rank=parse_int(cell(row, "Server Rank")),
+            )
+        )
+
+    if cache_path:
+        write_alliance_power_cache(cache_path, records, source_path)
+    return index_alliance_powers(records)
+
+
+def alliance_power_for_owner(owner: str | None, powers: dict[str, AlliancePower]) -> AlliancePower | None:
+    for key in owner_lookup_keys(owner):
+        if key in powers:
+            return powers[key]
+    return None
+
+
+def alliance_power_payload(owner: str | None, powers: dict[str, AlliancePower]) -> dict[str, Any] | None:
+    item = alliance_power_for_owner(owner, powers)
+    return alliance_power_to_record(item) if item else None
+
+
+def is_fishery_node_data(node_data: dict[str, Any]) -> bool:
+    return str(node_data.get("type", "")) == DEFAULT_FISHERY_TYPE
+
+
+def simulation_node_summary(
+    graph: nx.Graph,
+    node_id: str,
+    owner_affiliations: dict[str, str],
+    alliance_powers: dict[str, AlliancePower],
+) -> dict[str, Any]:
+    node = graph.nodes[node_id]
+    owner = str(node.get("owner", "")).strip()
+    power = alliance_power_payload(owner, alliance_powers)
+    return {
+        "id": node_id,
+        "area": node.get("area", ""),
+        "name": node.get("name", node_id),
+        "type": node.get("type", ""),
+        "owner": display_owner(owner),
+        "affiliation": "destroyed" if is_destroyed_node_data(node) else ("unowned" if is_unowned_owner(owner) else owner_affiliations.get(owner, area_affiliation(str(node.get("area", ""))))),
+        "importance": node.get("importance", 0),
+        "alliance_power": power,
+    }
+
+
+def invasion_edge_score(
+    source: dict[str, Any],
+    target: dict[str, Any],
+    alliance_powers: dict[str, AlliancePower],
+) -> float:
+    source_power = alliance_power_for_owner(str(source.get("owner", "")), alliance_powers)
+    target_power = alliance_power_for_owner(str(target.get("owner", "")), alliance_powers)
+    source_value = float(source_power.power or 0) if source_power else 0.0
+    target_value = float(target_power.power or 0) if target_power else 0.0
+    power_ratio = (source_value / target_value) if source_value and target_value else (source_value / 1_000_000_000)
+    return round(power_ratio + float(target.get("importance", 0)) / 10, 4)
+
+
+def invasion_edge_record(
+    graph: nx.Graph,
+    source_id: str,
+    target_id: str,
+    label: str,
+    owner_affiliations: dict[str, str],
+    alliance_powers: dict[str, AlliancePower],
+) -> dict[str, Any]:
+    source = simulation_node_summary(graph, source_id, owner_affiliations, alliance_powers)
+    target = simulation_node_summary(graph, target_id, owner_affiliations, alliance_powers)
+    return {
+        "label": label,
+        "edge": [source_id, target_id],
+        "source": source,
+        "target": target,
+        "score": invasion_edge_score(source, target, alliance_powers),
+    }
+
+
+def collect_boundary_interior_counts(
+    graph: nx.Graph,
+    owner_affiliations: dict[str, str],
+    friendly_affiliations: set[str],
+    interior_affiliations: set[str],
+    depths: list[int],
+) -> dict[str, Any]:
+    boundary_friendly_nodes: set[str] = set()
+    boundary_edge_count = 0
+    for source_id, target_id in graph.edges():
+        source = graph.nodes[source_id]
+        target = graph.nodes[target_id]
+        if not is_fishery_node_data(source) or not is_fishery_node_data(target):
+            continue
+        source_affiliation = simulation_node_summary(graph, source_id, owner_affiliations, {})["affiliation"]
+        target_affiliation = simulation_node_summary(graph, target_id, owner_affiliations, {})["affiliation"]
+        if source_affiliation in friendly_affiliations and target_affiliation == "enemy":
+            boundary_friendly_nodes.add(source_id)
+            boundary_edge_count += 1
+        elif target_affiliation in friendly_affiliations and source_affiliation == "enemy":
+            boundary_friendly_nodes.add(target_id)
+            boundary_edge_count += 1
+
+    counts: dict[str, Any] = {"boundary_edges": boundary_edge_count, "boundary_friendly_nodes": len(boundary_friendly_nodes)}
+    for depth in depths:
+        visited = set(boundary_friendly_nodes)
+        frontier = set(boundary_friendly_nodes)
+        edges: set[tuple[str, str]] = set()
+        for _ in range(depth):
+            next_frontier: set[str] = set()
+            for node_id in frontier:
+                for neighbor_id in graph.neighbors(node_id):
+                    if neighbor_id in visited:
+                        continue
+                    neighbor = graph.nodes[neighbor_id]
+                    if not is_fishery_node_data(neighbor):
+                        continue
+                    affiliation = simulation_node_summary(graph, neighbor_id, owner_affiliations, {})["affiliation"]
+                    if affiliation not in interior_affiliations:
+                        continue
+                    edges.add(tuple(sorted((node_id, neighbor_id))))
+                    visited.add(neighbor_id)
+                    next_frontier.add(neighbor_id)
+            frontier = next_frontier
+        counts[f"depth_{depth}_edges"] = len(edges)
+        counts[f"depth_{depth}_nodes"] = max(0, len(visited) - len(boundary_friendly_nodes))
+    return counts
+
+
+def build_invasion_simulation(
+    graph: nx.Graph,
+    owner_affiliations: dict[str, str],
+    alliance_powers: dict[str, AlliancePower],
+    config: dict[str, Any],
+) -> dict[str, Any]:
+    friendly_affiliations = {str(value) for value in config.get("friendly_affiliations", ["self", "ally"])}
+    interior_affiliations = {str(value) for value in config.get("interior_affiliations", ["self", "ally", "unowned"])}
+    depths = [int(value) for value in config.get("interior_depths", [1, 2, 3])]
+    max_items = int(config.get("max_items", 30))
+
+    friendly_pressure: list[dict[str, Any]] = []
+    enemy_threats: list[dict[str, Any]] = []
+    friendly_expansion: list[dict[str, Any]] = []
+    enemy_expansion: list[dict[str, Any]] = []
+
+    for source_id, target_id in graph.edges():
+        source = graph.nodes[source_id]
+        target = graph.nodes[target_id]
+        if not is_fishery_node_data(source) or not is_fishery_node_data(target):
+            continue
+        if is_destroyed_node_data(source) or is_destroyed_node_data(target):
+            continue
+        source_affiliation = simulation_node_summary(graph, source_id, owner_affiliations, alliance_powers)["affiliation"]
+        target_affiliation = simulation_node_summary(graph, target_id, owner_affiliations, alliance_powers)["affiliation"]
+
+        if source_affiliation in friendly_affiliations and target_affiliation == "enemy":
+            friendly_pressure.append(invasion_edge_record(graph, source_id, target_id, "friendly_to_enemy_boundary", owner_affiliations, alliance_powers))
+            enemy_threats.append(invasion_edge_record(graph, target_id, source_id, "enemy_to_friendly_boundary", owner_affiliations, alliance_powers))
+        elif target_affiliation in friendly_affiliations and source_affiliation == "enemy":
+            friendly_pressure.append(invasion_edge_record(graph, target_id, source_id, "friendly_to_enemy_boundary", owner_affiliations, alliance_powers))
+            enemy_threats.append(invasion_edge_record(graph, source_id, target_id, "enemy_to_friendly_boundary", owner_affiliations, alliance_powers))
+        elif source_affiliation in friendly_affiliations and target_affiliation == "unowned":
+            friendly_expansion.append(invasion_edge_record(graph, source_id, target_id, "friendly_to_unowned", owner_affiliations, alliance_powers))
+        elif target_affiliation in friendly_affiliations and source_affiliation == "unowned":
+            friendly_expansion.append(invasion_edge_record(graph, target_id, source_id, "friendly_to_unowned", owner_affiliations, alliance_powers))
+        elif source_affiliation == "enemy" and target_affiliation == "unowned":
+            enemy_expansion.append(invasion_edge_record(graph, source_id, target_id, "enemy_to_unowned", owner_affiliations, alliance_powers))
+        elif target_affiliation == "enemy" and source_affiliation == "unowned":
+            enemy_expansion.append(invasion_edge_record(graph, target_id, source_id, "enemy_to_unowned", owner_affiliations, alliance_powers))
+
+    def top_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        return sorted(items, key=lambda item: (-item["score"], item["source"]["id"], item["target"]["id"]))[:max_items]
+
+    return {
+        "assumptions": [
+            "Alliance strength uses the Alliance Power ranking from the local Excel file.",
+            "Only fishery-to-fishery tactical edges are treated as attack-front candidates in this MVP.",
+            "Trade posts, altars, and the ancestral temple are not used as movement adjacency.",
+            "Destroyed cities are isolated and do not provide adjacency.",
+            "Boundary plus interior depth approximates pact-assisted connected-land reach; it is not an automatic attack order.",
+            "Protection windows, battle windows, capture caps, online attendance, and march timing are not solved yet.",
+        ],
+        "strategic_read": [
+            "#534-side actions should first protect central access and the #509/#440/#511 friendly line before deep overextension.",
+            "Enemy-side pressure is most dangerous where high-power enemy alliances touch #534-side or ally fisheries, then can chain through interior friendly/unowned fisheries.",
+            "#476 remains the most important enemy pressure source by ranking power; central and #534-side boundary edges should be reviewed first.",
+        ],
+        "friendly_pressure_options": top_items(friendly_pressure),
+        "enemy_threat_options": top_items(enemy_threats),
+        "friendly_expansion_options": top_items(friendly_expansion),
+        "enemy_expansion_options": top_items(enemy_expansion),
+        "interior_depth_counts": collect_boundary_interior_counts(
+            graph,
+            owner_affiliations,
+            friendly_affiliations,
+            interior_affiliations,
+            depths,
+        ),
+    }
+
+
 def write_html(
     graph: nx.Graph,
     analysis: dict[str, Any],
@@ -916,6 +1260,7 @@ def write_html(
     now: datetime,
     config: dict[str, Any],
     tz: ZoneInfo,
+    alliance_powers: dict[str, AlliancePower],
 ) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     critical_ids = {item["node_id"] for item in analysis["critical_nodes"]}
@@ -936,8 +1281,10 @@ def write_html(
         elif protect["status"] == "soon":
             border = "#facc15"
         owner_label = display_node_owner(node)
+        power_payload = alliance_power_payload(node.owner, alliance_powers)
         affiliation = strategic_affiliation(node, owner_affiliations)
-        title = f"{node.area} {node.name} / {node.type} / {owner_label}"
+        power_label = power_payload["power_label"] if power_payload else "-"
+        title = f"{node.area} {node.name} / {node.type} / {owner_label} / {power_label}"
         visual_x, visual_y = visual_position(node, config)
         network.add_node(
             node.id,
@@ -958,6 +1305,13 @@ def write_html(
             nodeType=node.type,
             owner=node.owner,
             displayOwner=owner_label,
+            allianceName=power_payload["alliance_name"] if power_payload else "",
+            alliancePower=power_payload["power"] if power_payload else None,
+            alliancePowerLabel=power_payload["power_label"] if power_payload else "",
+            alliancePowerServer=power_payload["server"] if power_payload else "",
+            alliancePowerRank=power_payload["overall_rank"] if power_payload else None,
+            alliancePowerServerRank=power_payload["server_rank"] if power_payload else None,
+            alliancePowerSide=power_payload["side"] if power_payload else "",
             affiliation=affiliation,
             importance=node.importance,
             rawProtectUntil=node.protect_until or "",
@@ -2013,6 +2367,9 @@ def add_node_info_panel_v3(html: str) -> str:
                         row("Position key", node.id) +
                         row("Type", node.nodeType) +
                         row("Alliance", node.displayOwner || node.ownerLabel || node.owner) +
+                        row("Alliance power", node.alliancePowerLabel || "-") +
+                        row("Alliance rank", node.alliancePowerRank ? ("#" + node.alliancePowerRank + " / " + valueOrDash(node.alliancePowerServer)) : "-") +
+                        row("Alliance name", node.allianceName || "-") +
                         row("Status", node.mapStatus) +
                         row("Acquired", node.acquiredAt) +
                         row("Protect until", node.rawProtectUntil || node.protectUntil) +
@@ -2059,6 +2416,7 @@ def write_json(
     now: datetime,
     config: dict[str, Any],
     tz: ZoneInfo,
+    alliance_powers: dict[str, AlliancePower],
 ) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     warning_hours = float(config.get("protect_warning_hours", 6))
@@ -2075,12 +2433,18 @@ def write_json(
         record["affiliation"] = strategic_affiliation(node, owner_affiliations)
         record["strategic_color"] = strategic_color(node, owner_affiliations)
         record["protection"] = protection_status(node, now, warning_hours, tz)
+        record["alliance_power"] = alliance_power_payload(node.owner, alliance_powers)
         nodes.append(record)
+    alliance_rankings = sorted(
+        {item.alliance: item for item in alliance_powers.values()}.values(),
+        key=lambda item: (item.overall_rank is None, item.overall_rank or 999999, item.alliance),
+    )
     payload = {
         "generated_at": now.isoformat(),
         "timezone": str(tz),
         "nodes": nodes,
         "connections": [asdict(edge) for edge in edges],
+        "alliance_power_rankings": [alliance_power_to_record(item) for item in alliance_rankings],
         "owner_affiliations": owner_affiliations,
         **analysis,
     }
@@ -2105,6 +2469,7 @@ def main() -> int:
     repo_root = Path.cwd()
     config = read_config(args.config)
     tz = ZoneInfo(config.get("timezone", "Asia/Tokyo"))
+    alliance_powers = load_alliance_powers(config.get("alliance_power", {}), repo_root)
 
     sources = config.get("sources", {})
     if args.nodes:
@@ -2130,6 +2495,14 @@ def main() -> int:
     shortest_to = args.shortest_to or shortest.get("to")
     analysis_config = config.get("analysis", {})
     analysis = analyze_graph(graph, analysis_config, shortest_from, shortest_to)
+    owner_affiliations = build_owner_affiliations(graph, analysis_config)
+    analysis["invasion_simulation"] = build_invasion_simulation(
+        graph,
+        owner_affiliations,
+        alliance_powers,
+        config.get("simulation", {}),
+    )
+    analysis["alliance_power_source"] = config.get("alliance_power", {})
 
     now = parse_optional_time(args.now, tz) if args.now else datetime.now(tz)
     assert now is not None
@@ -2137,8 +2510,8 @@ def main() -> int:
     output_config = config.get("output", {})
     html_path = Path(args.html or output_config.get("html", "sample_output/map.html"))
     json_path = Path(args.json_output or output_config.get("json", "sample_output/state.json"))
-    write_html(graph, analysis, repo_root / html_path, now, analysis_config, tz)
-    write_json(graph, edges, analysis, repo_root / json_path, now, analysis_config, tz)
+    write_html(graph, analysis, repo_root / html_path, now, analysis_config, tz, alliance_powers)
+    write_json(graph, edges, analysis, repo_root / json_path, now, analysis_config, tz, alliance_powers)
     print(f"Wrote {html_path}")
     print(f"Wrote {json_path}")
     print(f"Critical nodes: {len(analysis['critical_nodes'])}")

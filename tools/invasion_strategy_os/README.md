@@ -12,6 +12,8 @@ This is a prototype strategy-support tool for Season 6 map analysis. It is not a
 - Writes a zoomable `pyvis` HTML map.
 - Writes machine-readable JSON for later GPT/API workflows.
 - Uses JST by default for protection-timer calculations.
+- Optionally reads alliance ranking power from a local Excel workbook and shows it in node details.
+- Writes first-pass invasion simulation candidates based on fishery boundaries and alliance power.
 
 ## Input Schema
 
@@ -46,6 +48,8 @@ Japanese column aliases such as `拠点名`, `種別`, `所有連盟`, `保護�
 ```
 
 If `.venv` does not exist on a fresh machine, create it first with any available Python 3.11+ interpreter, then run the install command above.
+
+The full-map config reads alliance strength from `s6powerrank_8server_power_2026-05-10_en.xlsx`, sheet `Alliance Power`, and writes a derived cache to `data/alliance_power_rankings_2026-05-10.json`. The cache is useful for review and reruns, but the Excel workbook remains the source for the ranking values.
 
 ## Run With Local CSV
 
@@ -119,6 +123,7 @@ Current rule assumptions:
 - The full-map view adds display-only gaps between area blocks while preserving graph coordinates for edge derivation. The current display gap is 90, so inter-area and outer-to-central edge spans are shorter while the rule graph remains unchanged.
 - A fixed legend explains strategic colors, gray destroyed-city nodes, and red/yellow protection borders.
 - Clicking a node opens a fixed information panel with management-table fields: position key, type, alliance, status, acquisition time, protection time, and memo.
+- Clicking a node also shows alliance ranking power when the node owner matches an alliance tag in the local ranking workbook. Example fields are alliance power, overall rank, server rank, and alliance name.
 - Central-area facility types are corrected from the Cpt Hedgehog Season 6 reference map pattern: outer central cells are fishery nodes, inner central cells are altar nodes, and the 2x2 center is represented as one large `祖霊神殿` node.
 - Central fishery nodes are connected by orthogonal coordinate edges and displayed smaller than outer fisheries. Central altar nodes and `祖霊神殿` are displayed but isolated because altar ownership does not create adjacent movement.
 - The HTML map has a label toggle: coordinate labels by default, or alliance-name labels at the same node-center position. In alliance-name mode, trade posts are always labeled `交易地`.
@@ -129,6 +134,8 @@ Current rule assumptions:
 - Node colors are strategic colors: #534-side owners are blue, #509/#440/#511-side owners are green, enemy-side owners are red, and unowned nodes are white. Owners with server-number prefixes such as `476B` are classified by that prefix even when they occupy another area.
 - Edge rules are tactical and coordinate-based, not pure distance: fisheries connect to adjacent fisheries in 8 directions unless the diagonal crosses a city/trade-post cell, cities connect only to their four surrounding fisheries, destroyed cities are isolated, outer-area fisheries connect to nearby central fisheries with a small coordinate tolerance, city-city edges are blocked, trade posts remain isolated and are never treated as cities, and altar/temple nodes are isolated.
 - Default edge display width is fixed at `1`, including outer-to-central edges; only interactive highlights use thicker lines.
+- `sample_output/state.json` includes an `invasion_simulation` block. This MVP evaluates fishery-to-fishery tactical boundaries, ranks friendly pressure options, enemy threat options, and unowned expansion options by alliance power plus target importance, and reports boundary/interior-depth counts for the same pact-adjacency idea used by the map highlight buttons.
+- Simulation assumptions are conservative: trade posts, altars, and the ancestral temple do not create movement adjacency; destroyed cities are isolated; cities are not used as fishery-route transit; protection windows, battle windows, capture caps, actual online participation, and march timing are not solved yet.
 - Example verification: `#534:a-2` is a trade post and has no edges; `#534:b-2` is a city and connects to `#534:B-1`, `#534:B-3`, `#534:C-1`, and `#534:C-3`.
 - Central-boundary example: `#534:A-21` connects to `中央-1-1`.
 - If a city row later contains `破壊`, `destroyed`, or `ruined` in owner/status/memo, the city node is shown in gray, labels as `破壊`, and receives no edges.
