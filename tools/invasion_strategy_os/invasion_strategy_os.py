@@ -1760,23 +1760,34 @@ def add_node_info_panel_v3(html: str) -> str:
                       if (!nodes || !edges) return;
                       clearRouteState();
                       resetEdgeHighlights();
-                      var selectedEdges = edges.get().filter(function (edge) {{
+                      var enemyBoundaryEdgeIds = [];
+                      var unownedBoundaryEdgeIds = [];
+                      edges.get().forEach(function (edge) {{
                         var source = nodes.get(edge.from);
                         var target = nodes.get(edge.to);
-                        if (!source || !target) return false;
-                        if (source.nodeType !== "\\u6f01\\u5834" || target.nodeType !== "\\u6f01\\u5834") return false;
-                        return (
+                        if (!source || !target) return;
+                        if (source.nodeType !== "\\u6f01\\u5834" || target.nodeType !== "\\u6f01\\u5834") return;
+                        if (
                           (source.affiliation === "self" && target.affiliation === "enemy") ||
                           (source.affiliation === "enemy" && target.affiliation === "self")
-                        );
-                      }}).map(function (edge) {{ return edge.id; }});
-                      highlightEdges(selectedEdges, "#fb923c", 4);
+                        ) {{
+                          enemyBoundaryEdgeIds.push(edge.id);
+                        }} else if (
+                          (source.affiliation === "enemy" && target.affiliation === "unowned") ||
+                          (source.affiliation === "unowned" && target.affiliation === "enemy")
+                        ) {{
+                          unownedBoundaryEdgeIds.push(edge.id);
+                        }}
+                      }});
+                      highlightEdges(unownedBoundaryEdgeIds, "#facc15", 4);
+                      highlightEdges(enemyBoundaryEdgeIds, "#fb923c", 5);
                     }}
                     function highlightSelfEnemyFisheryEdgesWithSelfDepth() {{
                       if (!nodes || !edges) return;
                       clearRouteState();
                       resetEdgeHighlights();
-                      var boundaryEdgeIds = [];
+                      var enemyBoundaryEdgeIds = [];
+                      var unownedBoundaryEdgeIds = [];
                       var boundarySelfNodes = {{}};
                       edges.get().forEach(function (edge) {{
                         var source = nodes.get(edge.from);
@@ -1784,11 +1795,16 @@ def add_node_info_panel_v3(html: str) -> str:
                         if (!source || !target) return;
                         if (source.nodeType !== "\\u6f01\\u5834" || target.nodeType !== "\\u6f01\\u5834") return;
                         if (source.affiliation === "self" && target.affiliation === "enemy") {{
-                          boundaryEdgeIds.push(edge.id);
+                          enemyBoundaryEdgeIds.push(edge.id);
                           boundarySelfNodes[source.id] = true;
                         }} else if (source.affiliation === "enemy" && target.affiliation === "self") {{
-                          boundaryEdgeIds.push(edge.id);
+                          enemyBoundaryEdgeIds.push(edge.id);
                           boundarySelfNodes[target.id] = true;
+                        }} else if (
+                          (source.affiliation === "enemy" && target.affiliation === "unowned") ||
+                          (source.affiliation === "unowned" && target.affiliation === "enemy")
+                        ) {{
+                          unownedBoundaryEdgeIds.push(edge.id);
                         }}
                       }});
                       var selfDepthEdgeIds = edges.get().filter(function (edge) {{
@@ -1800,7 +1816,8 @@ def add_node_info_panel_v3(html: str) -> str:
                         return Boolean(boundarySelfNodes[source.id] || boundarySelfNodes[target.id]);
                       }}).map(function (edge) {{ return edge.id; }});
                       highlightEdges(selfDepthEdgeIds, "#f43f5e", 4);
-                      highlightEdges(boundaryEdgeIds, "#fb923c", 5);
+                      highlightEdges(unownedBoundaryEdgeIds, "#facc15", 4);
+                      highlightEdges(enemyBoundaryEdgeIds, "#fb923c", 5);
                     }}
                     var boundaryButton = document.getElementById("map-highlight-boundary");
                     if (boundaryButton) {{
