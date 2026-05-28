@@ -1526,6 +1526,7 @@ def add_node_info_panel_v3(html: str) -> str:
 <button id="map-label-toggle" type="button">&#36899;&#30431;&#21517;&#34920;&#31034;</button>
 <button id="map-reset-layout" type="button">&#20301;&#32622;&#12522;&#12475;&#12483;&#12488;</button>
 <button id="map-highlight-boundary" type="button">&#22659;&#30028;&#24375;&#35519;</button>
+<button id="map-highlight-boundary-depth" type="button">&#22659;&#30028;+&#20869;&#20596;</button>
 <button id="map-clear-edge-highlight" type="button">&#24375;&#35519;&#35299;&#38500;</button>
 <button id="map-refresh-sheet" type="button">&#12510;&#12483;&#12503;&#26368;&#26032;&#21270;</button>
 <button id="map-route-mode" type="button">&#12523;&#12540;&#12488;&#36984;&#25246;</button>
@@ -1771,9 +1772,43 @@ def add_node_info_panel_v3(html: str) -> str:
                       }}).map(function (edge) {{ return edge.id; }});
                       highlightEdges(selectedEdges, "#fb923c", 4);
                     }}
+                    function highlightSelfEnemyFisheryEdgesWithSelfDepth() {{
+                      if (!nodes || !edges) return;
+                      clearRouteState();
+                      resetEdgeHighlights();
+                      var boundaryEdgeIds = [];
+                      var boundarySelfNodes = {{}};
+                      edges.get().forEach(function (edge) {{
+                        var source = nodes.get(edge.from);
+                        var target = nodes.get(edge.to);
+                        if (!source || !target) return;
+                        if (source.nodeType !== "\\u6f01\\u5834" || target.nodeType !== "\\u6f01\\u5834") return;
+                        if (source.affiliation === "self" && target.affiliation === "enemy") {{
+                          boundaryEdgeIds.push(edge.id);
+                          boundarySelfNodes[source.id] = true;
+                        }} else if (source.affiliation === "enemy" && target.affiliation === "self") {{
+                          boundaryEdgeIds.push(edge.id);
+                          boundarySelfNodes[target.id] = true;
+                        }}
+                      }});
+                      var selfDepthEdgeIds = edges.get().filter(function (edge) {{
+                        var source = nodes.get(edge.from);
+                        var target = nodes.get(edge.to);
+                        if (!source || !target) return false;
+                        if (source.nodeType !== "\\u6f01\\u5834" || target.nodeType !== "\\u6f01\\u5834") return false;
+                        if (source.affiliation !== "self" || target.affiliation !== "self") return false;
+                        return Boolean(boundarySelfNodes[source.id] || boundarySelfNodes[target.id]);
+                      }}).map(function (edge) {{ return edge.id; }});
+                      highlightEdges(selfDepthEdgeIds, "#38bdf8", 4);
+                      highlightEdges(boundaryEdgeIds, "#fb923c", 5);
+                    }}
                     var boundaryButton = document.getElementById("map-highlight-boundary");
                     if (boundaryButton) {{
                       boundaryButton.addEventListener("click", highlightSelfEnemyFisheryEdges);
+                    }}
+                    var boundaryDepthButton = document.getElementById("map-highlight-boundary-depth");
+                    if (boundaryDepthButton) {{
+                      boundaryDepthButton.addEventListener("click", highlightSelfEnemyFisheryEdgesWithSelfDepth);
                     }}
                     var clearEdgeButton = document.getElementById("map-clear-edge-highlight");
                     if (clearEdgeButton) {{
@@ -1848,6 +1883,7 @@ def add_node_info_panel_v3(html: str) -> str:
                     }}
                     window.highlightConnectedEdges = highlightConnectedEdges;
                     window.highlightSelfEnemyFisheryEdges = highlightSelfEnemyFisheryEdges;
+                    window.highlightSelfEnemyFisheryEdgesWithSelfDepth = highlightSelfEnemyFisheryEdgesWithSelfDepth;
                     window.resetEdgeHighlights = resetEdgeHighlights;
                     window.showShortestRoute = showShortestRoute;
                     window.refreshMapFromSheet = refreshMapFromSheet;

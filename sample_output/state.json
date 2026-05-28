@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T02:49:26.736913+09:00",
+  "generated_at": "2026-05-28T10:20:40.054906+09:00",
   "timezone": "Asia/Tokyo",
   "nodes": [
     {
@@ -73,7 +73,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.18,
+        "hours_remaining": 60.66,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -88,7 +88,7 @@
       "importance": 3.0,
       "area": "#440",
       "acquired_at": "2026/05/27 6:16",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "手入力ログ 2026/05/27 6:16 / #440 X:199 Y:399 Lv.2 漁場 / 中立/未登録 -> BAJ / 画像:269C1960-ECB0-4A5E-8F25-98B00614784B.jpeg",
       "visual_x": 2559.0,
       "visual_y": 399.0,
@@ -97,8 +97,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -288,7 +288,7 @@
       "importance": 3.0,
       "area": "#440",
       "acquired_at": "2026/05/26 0:21",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "赤字OCR IMG_1090.PNG / #440 X:199 Y:299 Lv.2 漁場 / 中立/未登録 -> BAJ / 最初の連盟",
       "visual_x": 2559.0,
       "visual_y": 299.0,
@@ -297,8 +297,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -313,7 +313,7 @@
       "importance": 3.0,
       "area": "#440",
       "acquired_at": "2026/05/25 23:41",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "赤字OCR IMG_1089.PNG / #440 X:399 Y:399 Lv.4 漁場 / 中立/未登録 -> SsQ",
       "visual_x": 2759.0,
       "visual_y": 399.0,
@@ -322,8 +322,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -338,7 +338,7 @@
       "importance": 3.0,
       "area": "#440",
       "acquired_at": "2026/05/25 5:06",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "手入力ログ 2026/05/25 05:06 / #440 X:299 Y:299 Lv.3 漁場 / 中立/未登録 -> BAJ / 最初の連盟",
       "visual_x": 2659.0,
       "visual_y": 299.0,
@@ -347,8 +347,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -388,7 +388,7 @@
       "importance": 3.0,
       "area": "#440",
       "acquired_at": "2026/05/25 1:36",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "手入力ログ 2026/05/25 01:36 / #440 X:299 Y:499 Lv.3 漁場 / 中立/未登録 -> BAJ",
       "visual_x": 2659.0,
       "visual_y": 499.0,
@@ -397,8 +397,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -1763,7 +1763,7 @@
       "importance": 8.0,
       "area": "#440",
       "acquired_at": "2026/05/20 23:01",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "OCR IMG_0456.PNG / #440 X:449 Y:649 Lv.3",
       "visual_x": 2809.0,
       "visual_y": 649.0,
@@ -1772,8 +1772,8 @@
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -5573,7 +5573,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 156.18,
+        "hours_remaining": 148.66,
         "protect_until": "2026-06-03T15:00:00+09:00"
       }
     },
@@ -5623,7 +5623,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -5648,7 +5648,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -5773,7 +5773,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -5798,7 +5798,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -5823,7 +5823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -6023,7 +6023,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -6048,7 +6048,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -6123,7 +6123,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -6148,7 +6148,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -6248,7 +6248,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.18,
+        "hours_remaining": 60.66,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -6273,7 +6273,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.18,
+        "hours_remaining": 60.66,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -6298,7 +6298,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.82,
+        "hours_remaining": -115.34,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -6373,7 +6373,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -6848,7 +6848,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -6898,7 +6898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -7238,7 +7238,7 @@
       "importance": 8.0,
       "area": "#476",
       "acquired_at": "2026/05/21 0:05",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "OCR IMG_0477.PNG / #476 X:649 Y:649 Lv.3 / 476A維持",
       "visual_x": 649.0,
       "visual_y": 1829.0,
@@ -7247,8 +7247,8 @@
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -7263,7 +7263,7 @@
       "importance": 8.0,
       "area": "#476",
       "acquired_at": "2026/05/21 0:00",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "OCR IMG_0476.PNG / #476 X:349 Y:649 Lv.3",
       "visual_x": 349.0,
       "visual_y": 1829.0,
@@ -7272,8 +7272,8 @@
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -7323,7 +7323,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -7338,7 +7338,7 @@
       "importance": 8.0,
       "area": "#476",
       "acquired_at": "2026/05/20 23:01",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "OCR IMG_0456.PNG / #476 X:649 Y:349 Lv.3",
       "visual_x": 649.0,
       "visual_y": 1529.0,
@@ -7347,8 +7347,8 @@
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -9962,9 +9962,9 @@
       "y": 1699.0,
       "importance": 3.0,
       "area": "#476",
-      "acquired_at": "2026/05/27 23:51",
+      "acquired_at": "2026/05/27 23:46",
       "status": "保護中",
-      "memo": "手入力ログ 2026/05/27 23:51 / #476 X:20 Y:699 Lv.1 漁場 / 中立/未登録 -> nO9",
+      "memo": "Dropbox赤字OCR IMG_1272.PNG / #476 X:20 Y:699 Lv.1 漁場 / 中立/未登録 -> nO9 / 画像内時刻で補正（23:51->23:46）",
       "visual_x": 20.0,
       "visual_y": 1879.0,
       "display_owner": "nO9",
@@ -9973,7 +9973,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -10348,7 +10348,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -10698,7 +10698,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -10823,7 +10823,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -11148,7 +11148,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.18,
+        "hours_remaining": 60.66,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -11248,7 +11248,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -11398,7 +11398,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -11423,7 +11423,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -11448,7 +11448,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -11563,7 +11563,7 @@
       "importance": 3.0,
       "area": "#480",
       "acquired_at": "2026/05/23 23:30",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "赤字OCR IMG_0754.PNG / #480 X:299 Y:399 Lv.3 / 中立/未登録 -> BAJ",
       "visual_x": 2659.0,
       "visual_y": 1579.0,
@@ -11572,8 +11572,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -11638,7 +11638,7 @@
       "importance": 3.0,
       "area": "#480",
       "acquired_at": "2026/05/23 23:07",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "赤字OCR IMG_0747.PNG / #480 X:499 Y:199 Lv.2 / 中立/未登録 -> BgNa / 時刻は前後スクショから推定",
       "visual_x": 2859.0,
       "visual_y": 1379.0,
@@ -11647,8 +11647,8 @@
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -11723,7 +11723,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.18,
+        "hours_remaining": 60.66,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -11748,7 +11748,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.18,
+        "hours_remaining": 60.66,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -11873,7 +11873,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.18,
+        "hours_remaining": 52.66,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -11898,7 +11898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.18,
+        "hours_remaining": 52.66,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -11923,7 +11923,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.18,
+        "hours_remaining": 52.66,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -11948,7 +11948,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.18,
+        "hours_remaining": 52.66,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -12098,7 +12098,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -12323,7 +12323,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.82,
+        "hours_remaining": -115.34,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -12798,7 +12798,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.82,
+        "hours_remaining": -115.34,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -12864,7 +12864,7 @@
       "area": "#480",
       "acquired_at": "2026/05/21 7:15",
       "status": "保護切れ",
-      "memo": "OCR IMG_0507.PNG / #480 X:499 Y:99 Lv.1",
+      "memo": "OCR IMG_0507.PNG / #480 X:499 Y:99 Lv.1 / 中立/未登録 -> GcC",
       "visual_x": 2859.0,
       "visual_y": 1279.0,
       "display_owner": "GcC",
@@ -12873,7 +12873,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -12898,7 +12898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -12923,7 +12923,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -13098,7 +13098,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -13123,7 +13123,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -13148,7 +13148,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -13188,7 +13188,7 @@
       "importance": 8.0,
       "area": "#480",
       "acquired_at": "2026/05/20 23:06",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "OCR IMG_0459.PNG / #480 X:449 Y:349 Lv.3",
       "visual_x": 2809.0,
       "visual_y": 1529.0,
@@ -13197,8 +13197,8 @@
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -13273,7 +13273,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -13348,7 +13348,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -14548,7 +14548,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -16773,7 +16773,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -16798,7 +16798,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -16823,7 +16823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -17148,7 +17148,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.18,
+        "hours_remaining": 60.66,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -17198,7 +17198,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.18,
+        "hours_remaining": 60.66,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -18473,7 +18473,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -18648,7 +18648,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.82,
+        "hours_remaining": -179.34,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -19298,7 +19298,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -22223,7 +22223,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.18,
+        "hours_remaining": 60.66,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -22248,7 +22248,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 164.18,
+        "hours_remaining": 156.66,
         "protect_until": "2026-06-03T23:00:00+09:00"
       }
     },
@@ -22288,7 +22288,7 @@
       "importance": 3.0,
       "area": "#509",
       "acquired_at": "2026/05/25 6:01",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "手入力ログ 2026/05/25 06:01 / #509 X:399 Y:499 Lv.4 漁場 / 中立/未登録 -> GcC",
       "visual_x": 1579.0,
       "visual_y": 2859.0,
@@ -22297,8 +22297,8 @@
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -22323,7 +22323,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -22348,7 +22348,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -22473,7 +22473,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.18,
+        "hours_remaining": 52.66,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -22498,7 +22498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -22713,7 +22713,7 @@
       "importance": 3.0,
       "area": "#509",
       "acquired_at": "2026/05/23 23:24",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "赤字OCR IMG_0751.PNG / #509 X:978 Y:20 Lv.1 / SsQ -> SsQ / 時刻は前後スクショから推定",
       "visual_x": 2158.0,
       "visual_y": 2380.0,
@@ -22722,8 +22722,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -22763,7 +22763,7 @@
       "importance": 3.0,
       "area": "#509",
       "acquired_at": "2026/05/23 23:07",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "赤字OCR IMG_0746.PNG / #509 X:978 Y:299 Lv.1 / SsQ -> SsQ",
       "visual_x": 2158.0,
       "visual_y": 2659.0,
@@ -22772,8 +22772,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -22789,7 +22789,7 @@
       "area": "#509",
       "acquired_at": "2026/05/23 23:07",
       "status": "要確認",
-      "memo": "赤字OCR IMG_0746.PNG / #509 X:799 Y:899 Lv.1 / 中立/未登録 -> OTT",
+      "memo": "赤字OCR IMG_0746.PNG / #509 X:799 Y:899 Lv.1 / 中立/未登録 -> fzn",
       "visual_x": 1979.0,
       "visual_y": 3259.0,
       "display_owner": "fzn",
@@ -23023,7 +23023,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -23123,7 +23123,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -23198,7 +23198,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -23248,7 +23248,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -23273,7 +23273,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -23323,7 +23323,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -23348,7 +23348,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -23373,7 +23373,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.18,
+        "hours_remaining": 52.66,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -23423,7 +23423,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.18,
+        "hours_remaining": 52.66,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -23773,7 +23773,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -23837,9 +23837,9 @@
       "y": 2299.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/27 23:56",
+      "acquired_at": "2026/05/27 23:52",
       "status": "保護中",
-      "memo": "手入力ログ 2026/05/27 23:56 / #509 X:699 Y:299 Lv.3 漁場 / AoW -> Lghs / 奪取",
+      "memo": "Dropbox赤字OCR IMG_1273.PNG / #509 X:699 Y:299 Lv.3 漁場 / AoW -> Lghs / 画像内時刻で補正（23:56->23:52） / 奪取",
       "visual_x": 1879.0,
       "visual_y": 2659.0,
       "display_owner": "Lghs",
@@ -23848,7 +23848,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.18,
+        "hours_remaining": 52.66,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -23898,7 +23898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.18,
+        "hours_remaining": 52.66,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -23973,7 +23973,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -24048,7 +24048,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.82,
+        "hours_remaining": -115.34,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -24073,7 +24073,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -24173,7 +24173,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -24187,9 +24187,9 @@
       "y": 2699.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/27 23:51",
+      "acquired_at": "2026/05/27 23:52",
       "status": "保護中",
-      "memo": "手入力ログ 2026/05/27 23:51 / #509 X:699 Y:699 Lv.3 漁場 / OWM -> FHX / 奪取",
+      "memo": "Dropbox赤字OCR IMG_1273.PNG / #509 X:699 Y:699 Lv.3 漁場 / OWM -> FHX / 画像内時刻で補正（23:51->23:52） / 奪取",
       "visual_x": 1879.0,
       "visual_y": 3059.0,
       "display_owner": "FHX",
@@ -24198,7 +24198,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -24298,7 +24298,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -24323,7 +24323,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -24338,7 +24338,7 @@
       "importance": 8.0,
       "area": "#509",
       "acquired_at": "2026/05/21 0:11",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "OCR IMG_0479.PNG / #509 X:449 Y:349 Lv.3 / SsQ維持",
       "visual_x": 1629.0,
       "visual_y": 2709.0,
@@ -24347,8 +24347,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -24363,7 +24363,7 @@
       "importance": 8.0,
       "area": "#509",
       "acquired_at": "2026/05/21 0:11",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "OCR IMG_0479.PNG / #509 X:649 Y:649 Lv.3 / 中立/未登録→FHX",
       "visual_x": 1829.0,
       "visual_y": 3009.0,
@@ -24372,8 +24372,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -24513,7 +24513,7 @@
       "importance": 8.0,
       "area": "#509",
       "acquired_at": "2026/05/20 23:01",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "OCR IMG_0456.PNG / #509 X:649 Y:549 Lv.3 / FHX維持",
       "visual_x": 1829.0,
       "visual_y": 2909.0,
@@ -24522,8 +24522,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -24623,7 +24623,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -24637,9 +24637,9 @@
       "y": 2020.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/27 23:51",
+      "acquired_at": "2026/05/27 23:52",
       "status": "要確認",
-      "memo": "手入力ログ 2026/05/27 23:51 / #509 X:699 Y:20 Lv.1 漁場 / BHE -> TIKW / 奪取",
+      "memo": "Dropbox赤字OCR IMG_1273.PNG / #509 X:699 Y:20 Lv.1 漁場 / BHE -> TIKW / 画像内時刻で補正（23:51->23:52） / 奪取",
       "visual_x": 1879.0,
       "visual_y": 2380.0,
       "display_owner": "TIKW",
@@ -26198,7 +26198,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 172.18,
+        "hours_remaining": 164.66,
         "protect_until": "2026-06-04T07:00:00+09:00"
       }
     },
@@ -27412,9 +27412,9 @@
       "y": 2899.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/27 23:56",
+      "acquired_at": "2026/05/27 23:52",
       "status": "要確認",
-      "memo": "手入力ログ 2026/05/27 23:56 / #509 X:299 Y:899 Lv.1 漁場 / OWM -> xjR / 奪取",
+      "memo": "Dropbox赤字OCR IMG_1273.PNG / #509 X:299 Y:899 Lv.1 漁場 / OWM -> xjR / 画像内時刻で補正（23:56->23:52） / 奪取",
       "visual_x": 1479.0,
       "visual_y": 3259.0,
       "display_owner": "xjR",
@@ -27456,21 +27456,21 @@
       "id": "#509:J-9",
       "name": "J-9",
       "type": "漁場",
-      "owner": "AoW",
-      "protect_until": null,
+      "owner": "fzn",
+      "protect_until": "安全時間要登録",
       "x": 1399.0,
       "y": 2899.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:37",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1270.PNG / #509 X:399 Y:899 Lv.1 漁場 / AoW -> fzn / 奪取",
       "visual_x": 1579.0,
       "visual_y": 3259.0,
-      "display_owner": "AoW",
+      "display_owner": "fzn",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -27988,7 +27988,7 @@
       "importance": 3.0,
       "area": "#511",
       "acquired_at": "2026/05/25 1:22",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "手入力ログ 2026/05/25 01:22 / #511 X:978 Y:499 Lv.1 漁場 / 中立/未登録 -> TRh / 最初の連盟",
       "visual_x": 2158.0,
       "visual_y": 499.0,
@@ -27997,8 +27997,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -28498,7 +28498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -28563,7 +28563,7 @@
       "importance": 3.0,
       "area": "#511",
       "acquired_at": "2026/05/23 23:24",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "赤字OCR IMG_0752.PNG / #511 X:499 Y:899 Lv.1 / 中立/未登録 -> 476X / 時刻は前後スクショから推定",
       "visual_x": 1679.0,
       "visual_y": 899.0,
@@ -28572,8 +28572,8 @@
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -29298,7 +29298,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -29323,7 +29323,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -29387,9 +29387,9 @@
       "y": 699.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": "2026/05/27 23:46",
+      "acquired_at": "2026/05/27 23:42",
       "status": "要確認",
-      "memo": "手入力ログ 2026/05/27 23:46 / #511 X:20 Y:699 Lv.1 漁場 / 中立/未登録 -> ALj",
+      "memo": "Dropbox赤字OCR IMG_1271.PNG / #511 X:20 Y:699 Lv.1 漁場 / 中立/未登録 -> ALj / 画像内時刻で補正（23:46->23:42）",
       "visual_x": 1200.0,
       "visual_y": 699.0,
       "display_owner": "ALj",
@@ -29473,7 +29473,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -29948,7 +29948,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -30073,7 +30073,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -32148,7 +32148,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -33623,7 +33623,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.18,
+        "hours_remaining": 60.66,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -33673,7 +33673,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.18,
+        "hours_remaining": 60.66,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -34298,7 +34298,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.82,
+        "hours_remaining": -115.34,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -34323,7 +34323,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.82,
+        "hours_remaining": -115.34,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -38723,7 +38723,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.18,
+        "hours_remaining": 60.66,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -38748,7 +38748,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 164.18,
+        "hours_remaining": 156.66,
         "protect_until": "2026-06-03T23:00:00+09:00"
       }
     },
@@ -38773,7 +38773,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 156.18,
+        "hours_remaining": 148.66,
         "protect_until": "2026-06-03T15:00:00+09:00"
       }
     },
@@ -38798,7 +38798,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 164.18,
+        "hours_remaining": 156.66,
         "protect_until": "2026-06-03T23:00:00+09:00"
       }
     },
@@ -38998,7 +38998,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -39023,7 +39023,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -39048,7 +39048,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -39073,7 +39073,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -39098,7 +39098,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -39263,7 +39263,7 @@
       "importance": 3.0,
       "area": "#534",
       "acquired_at": "2026/05/23 23:07",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "赤字OCR IMG_0748.PNG / #534 X:99 Y:99 Lv.1 / 中立/未登録 -> nO9 / 時刻は前後スクショから推定",
       "visual_x": 99.0,
       "visual_y": 2459.0,
@@ -39272,8 +39272,8 @@
       "affiliation": "self",
       "strategic_color": "#2563eb",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -39357,14 +39357,14 @@
       "name": "B-13",
       "type": "漁場",
       "owner": "SHA",
-      "protect_until": null,
+      "protect_until": "2026/05/31 7:00",
       "x": 599.0,
       "y": 2099.0,
       "importance": 3.0,
       "area": "#534",
-      "acquired_at": null,
-      "status": "",
-      "memo": "赤字OCR IMG_0632.PNG / #534 X:599 Y:99 Lv.1 / 中立/放棄 -> Trh / 時刻は前後スクショから推定2026/05/28 02:34 サイドバー: 所有変更 Trh -> SHA",
+      "acquired_at": "2026/05/27 23:37",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1270.PNG / #534 X:599 Y:99 Lv.1 漁場 / Trh -> SHA / 奪取",
       "visual_x": 599.0,
       "visual_y": 2459.0,
       "display_owner": "SHA",
@@ -39372,9 +39372,9 @@
       "affiliation": "self",
       "strategic_color": "#2563eb",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 68.66,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -39448,7 +39448,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -39473,7 +39473,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -39698,7 +39698,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -39748,7 +39748,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -39773,7 +39773,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -39798,7 +39798,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -39823,7 +39823,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -39848,7 +39848,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -39863,7 +39863,7 @@
       "importance": 8.0,
       "area": "#534",
       "acquired_at": "2026/05/20 23:55",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "OCR IMG_0475.PNG / #534 X:349 Y:449 Lv.3",
       "visual_x": 349.0,
       "visual_y": 2809.0,
@@ -39872,8 +39872,8 @@
       "affiliation": "self",
       "strategic_color": "#2563eb",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -39923,7 +39923,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -39938,7 +39938,7 @@
       "importance": 8.0,
       "area": "#534",
       "acquired_at": "2026/05/20 23:39",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "OCR IMG_0472.PNG / #534 X:549 Y:649 Lv.3",
       "visual_x": 549.0,
       "visual_y": 3009.0,
@@ -39947,8 +39947,8 @@
       "affiliation": "self",
       "strategic_color": "#2563eb",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -39998,7 +39998,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -40013,7 +40013,7 @@
       "importance": 8.0,
       "area": "#534",
       "acquired_at": "2026/05/20 23:22",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "OCR IMG_0468.PNG / #534 X:349 Y:649 Lv.3",
       "visual_x": 349.0,
       "visual_y": 3009.0,
@@ -40022,8 +40022,8 @@
       "affiliation": "self",
       "strategic_color": "#2563eb",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -40038,7 +40038,7 @@
       "importance": 8.0,
       "area": "#534",
       "acquired_at": "2026/05/20 23:12",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "OCR IMG_0463.PNG / #534 X:249 Y:649 Lv.2 / 4tH維持",
       "visual_x": 249.0,
       "visual_y": 3009.0,
@@ -40047,8 +40047,8 @@
       "affiliation": "self",
       "strategic_color": "#2563eb",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -40073,7 +40073,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -40098,7 +40098,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -40123,7 +40123,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -40148,7 +40148,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -40223,7 +40223,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40248,7 +40248,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40273,7 +40273,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40298,7 +40298,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40323,7 +40323,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40348,7 +40348,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40373,7 +40373,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.82,
+        "hours_remaining": -115.34,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -40398,7 +40398,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.82,
+        "hours_remaining": -187.34,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -40423,7 +40423,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40448,7 +40448,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40473,7 +40473,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40498,7 +40498,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40523,7 +40523,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40548,7 +40548,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40573,7 +40573,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40598,7 +40598,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40623,7 +40623,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.82,
+        "hours_remaining": -115.34,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -40631,25 +40631,25 @@
       "id": "#534:F-13",
       "name": "F-13",
       "type": "漁場",
-      "owner": "JDX",
-      "protect_until": "2026/05/16 15:00",
+      "owner": "476B",
+      "protect_until": "2026/05/31 7:00",
       "x": 599.0,
       "y": 2499.0,
       "importance": 3.0,
       "area": "#534",
-      "acquired_at": "2026/05/16 10:40",
-      "status": "保護切れ",
-      "memo": "",
+      "acquired_at": "2026/05/27 23:37",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1270.PNG / #534 X:599 Y:499 Lv.4 漁場 / JDX -> 476B / 奪取",
       "visual_x": 599.0,
       "visual_y": 2859.0,
-      "display_owner": "JDX",
+      "display_owner": "476B",
       "destroyed": false,
-      "affiliation": "self",
-      "strategic_color": "#2563eb",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -275.82,
-        "protect_until": "2026-05-16T15:00:00+09:00"
+        "status": "protected",
+        "hours_remaining": 68.66,
+        "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
     {
@@ -40673,7 +40673,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.18,
+        "hours_remaining": 52.66,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -40873,7 +40873,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 172.18,
+        "hours_remaining": 164.66,
         "protect_until": "2026-06-04T07:00:00+09:00"
       }
     },
@@ -40898,7 +40898,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 172.18,
+        "hours_remaining": 164.66,
         "protect_until": "2026-06-04T07:00:00+09:00"
       }
     },
@@ -41223,7 +41223,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -41273,7 +41273,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -41298,7 +41298,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -41673,7 +41673,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 76.18,
+        "hours_remaining": 68.66,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -41948,7 +41948,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 172.18,
+        "hours_remaining": 164.66,
         "protect_until": "2026-06-04T07:00:00+09:00"
       }
     },
@@ -44248,7 +44248,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.18,
+        "hours_remaining": 60.66,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -44273,7 +44273,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.18,
+        "hours_remaining": 60.66,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -47748,7 +47748,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -47823,7 +47823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -47873,7 +47873,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -47888,7 +47888,7 @@
       "importance": 3.0,
       "area": "中央",
       "acquired_at": "2026/05/26 0:06",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "赤字OCR IMG_1090.PNG / #8061 X:974 Y:174 Lv.5 漁場 / 中立/未登録 -> BgNa",
       "visual_x": 2154.0,
       "visual_y": 1354.0,
@@ -47897,8 +47897,8 @@
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -47913,7 +47913,7 @@
       "importance": 3.0,
       "area": "中央",
       "acquired_at": "2026/05/25 23:53",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "赤字OCR IMG_1089.PNG / #8061 X:124 Y:824 Lv.7 漁場 / 中立/未登録 -> 476C",
       "visual_x": 1304.0,
       "visual_y": 2004.0,
@@ -47922,8 +47922,8 @@
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -47937,9 +47937,9 @@
       "y": 1124.0,
       "importance": 3.0,
       "area": "中央",
-      "acquired_at": "2026/05/25 23:11",
-      "status": "保護中",
-      "memo": "RAW_OCR_LOG row7 / #8061 X:24 Y:124 Lv.5 漁場 / 中立/未登録 -> 476X / RAW時刻優先 / 画像:0AC145A4",
+      "acquired_at": "2026/05/25 23:04",
+      "status": "保護切れ",
+      "memo": "赤字OCR IMG_1087.PNG / #8061 X:24 Y:124 Lv.5 漁場 / 中立/未登録 -> 476X / 画像内時刻で補正（23:11->23:04）",
       "visual_x": 1204.0,
       "visual_y": 1304.0,
       "display_owner": "476X",
@@ -47947,8 +47947,8 @@
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -47963,7 +47963,7 @@
       "importance": 3.0,
       "area": "中央",
       "acquired_at": "2026/05/25 23:11",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "赤字OCR IMG_1088.PNG / #8061 X:974 Y:24 Lv.5 漁場 / GcC -> SsQ / OCR補正:SsO->SsQ",
       "visual_x": 2154.0,
       "visual_y": 1204.0,
@@ -47972,8 +47972,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -48048,7 +48048,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -48138,7 +48138,7 @@
       "importance": 3.0,
       "area": "中央",
       "acquired_at": "2026/05/25 5:18",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "手入力ログ 2026/05/25 05:18 / #8061 X:974 Y:324 Lv.5 漁場 / BAJ -> SsQ",
       "visual_x": 2154.0,
       "visual_y": 1504.0,
@@ -48147,8 +48147,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -48163,7 +48163,7 @@
       "importance": 3.0,
       "area": "中央",
       "acquired_at": "2026/05/25 5:06",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "手入力ログ 2026/05/25 05:06 / #8061 X:874 Y:324 Lv.7 漁場 / GcC -> SsQ",
       "visual_x": 2054.0,
       "visual_y": 1504.0,
@@ -48172,8 +48172,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -48348,7 +48348,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -48398,7 +48398,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -48473,7 +48473,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -48498,7 +48498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -48673,7 +48673,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -48723,7 +48723,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -48823,7 +48823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.82,
+        "hours_remaining": -19.34,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -48863,7 +48863,7 @@
       "importance": 3.0,
       "area": "中央",
       "acquired_at": "2026/05/23 23:35",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "赤字OCR IMG_0755.PNG / #8061 X:924 Y:824 Lv.6 / SsQ -> SsQ",
       "visual_x": 2104.0,
       "visual_y": 2004.0,
@@ -48872,8 +48872,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -48913,7 +48913,7 @@
       "importance": 3.0,
       "area": "中央",
       "acquired_at": "2026/05/23 23:24",
-      "status": "保護中",
+      "status": "保護切れ",
       "memo": "赤字OCR IMG_0753.PNG / #8061 X:924 Y:874 Lv.6 / SsQ -> SsQ",
       "visual_x": 2104.0,
       "visual_y": 2054.0,
@@ -48922,8 +48922,8 @@
       "affiliation": "ally",
       "strategic_color": "#16a34a",
       "protection": {
-        "status": "soon",
-        "hours_remaining": 4.18,
+        "status": "expired",
+        "hours_remaining": -3.34,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -48998,7 +48998,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -49023,7 +49023,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -49048,7 +49048,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -49073,7 +49073,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -49098,7 +49098,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.82,
+        "hours_remaining": -11.34,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -49248,7 +49248,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -49312,9 +49312,9 @@
       "y": 1974.0,
       "importance": 3.0,
       "area": "中央",
-      "acquired_at": "2026/05/27 23:51",
+      "acquired_at": "2026/05/27 23:46",
       "status": "保護中",
-      "memo": "手入力ログ 2026/05/27 23:51 / #8061 X:874 Y:974 Lv.5 漁場 / MOn -> JDX / 奪取",
+      "memo": "Dropbox赤字OCR IMG_1272.PNG / #8061 X:874 Y:974 Lv.5 漁場 / MOn -> JDX / 画像内時刻で補正（23:51->23:46） / 奪取",
       "visual_x": 2054.0,
       "visual_y": 2154.0,
       "display_owner": "JDX",
@@ -49323,7 +49323,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.18,
+        "hours_remaining": 52.66,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -49348,7 +49348,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -49398,7 +49398,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -49423,7 +49423,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -49498,7 +49498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -49548,7 +49548,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -49648,7 +49648,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -49698,7 +49698,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -49823,7 +49823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -49923,7 +49923,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50073,7 +50073,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.18,
+        "hours_remaining": 52.66,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -50098,7 +50098,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.82,
+        "hours_remaining": -115.34,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -50148,7 +50148,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -50173,7 +50173,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -50198,7 +50198,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -50248,7 +50248,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50373,7 +50373,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50398,7 +50398,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50423,7 +50423,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50473,7 +50473,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50548,7 +50548,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50598,7 +50598,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50623,7 +50623,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50648,7 +50648,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.82,
+        "hours_remaining": -115.34,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -50673,7 +50673,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50723,7 +50723,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.82,
+        "hours_remaining": -115.34,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -50748,7 +50748,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50773,7 +50773,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50798,7 +50798,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -50898,7 +50898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -91.82,
+        "hours_remaining": -99.34,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -50923,7 +50923,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.82,
+        "hours_remaining": -115.34,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -50998,7 +50998,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.82,
+        "hours_remaining": -115.34,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -51023,7 +51023,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.82,
+        "hours_remaining": -107.34,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -51073,7 +51073,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.82,
+        "hours_remaining": -187.34,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51098,7 +51098,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51148,7 +51148,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51173,7 +51173,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51223,7 +51223,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.82,
+        "hours_remaining": -179.34,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -51248,7 +51248,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.82,
+        "hours_remaining": -179.34,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -51273,7 +51273,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.82,
+        "hours_remaining": -179.34,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -51298,7 +51298,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.82,
+        "hours_remaining": -179.34,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -51348,7 +51348,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.82,
+        "hours_remaining": -179.34,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -51373,7 +51373,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.82,
+        "hours_remaining": -179.34,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -51498,7 +51498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.82,
+        "hours_remaining": -187.34,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51548,7 +51548,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.82,
+        "hours_remaining": -187.34,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51623,7 +51623,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.82,
+        "hours_remaining": -187.34,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51698,7 +51698,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51723,7 +51723,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.82,
+        "hours_remaining": -187.34,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51748,7 +51748,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.82,
+        "hours_remaining": -187.34,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51773,7 +51773,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51798,7 +51798,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51823,7 +51823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.82,
+        "hours_remaining": -187.34,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51848,7 +51848,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51873,7 +51873,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.82,
+        "hours_remaining": -187.34,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51898,7 +51898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51923,7 +51923,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.82,
+        "hours_remaining": -187.34,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51948,7 +51948,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.82,
+        "hours_remaining": -187.34,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51973,7 +51973,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51998,7 +51998,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -52023,7 +52023,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -52048,7 +52048,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.82,
+        "hours_remaining": -187.34,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -52073,7 +52073,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.82,
+        "hours_remaining": -187.34,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -52098,7 +52098,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -163.82,
+        "hours_remaining": -171.34,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -53262,9 +53262,9 @@
       "y": 1874.0,
       "importance": 3.0,
       "area": "中央",
-      "acquired_at": "2026/05/27 23:51",
+      "acquired_at": "2026/05/27 23:46",
       "status": "要確認",
-      "memo": "手入力ログ 2026/05/27 23:51 / #8061 X:24 Y:874 Lv.5 漁場 / 中立/未登録 -> 476H",
+      "memo": "Dropbox赤字OCR IMG_1273.PNG / #8061 X:24 Y:874 Lv.5 漁場 / 中立/未登録 -> 476H / 画像内時刻で補正（23:51->23:46）",
       "visual_x": 1204.0,
       "visual_y": 2054.0,
       "display_owner": "476H",
@@ -81437,14 +81437,14 @@
   ],
   "owner_affiliations": {
     "JDX": "self",
+    "476C": "enemy",
     "476M": "enemy",
     "476X": "enemy",
-    "476C": "enemy",
+    "476A": "enemy",
+    "476B": "enemy",
+    "476T": "enemy",
     "476Z": "enemy",
     "476H": "enemy",
-    "476T": "enemy",
-    "476B": "enemy",
-    "476A": "enemy",
     "476d": "enemy",
     "476K": "enemy",
     "299": "enemy",

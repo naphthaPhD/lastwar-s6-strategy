@@ -28,7 +28,7 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - Fishery nodes are displayed larger than city nodes, while central-area fishery nodes are displayed smaller than outer fisheries.
 - The HTML map can toggle labels between coordinates and alliance names at the same node-center position. In alliance-name mode, trade posts are always labeled `交易地`.
 - The HTML map can reset moved nodes to the generated layout with `位置リセット`.
-- The HTML map can highlight tactical edges: selecting a fishery highlights all connected edges, `境界強調` highlights #534-side fishery to enemy-side fishery edges, `ルート選択` highlights all equal-length shortest-route edges between two selected nodes, and `強調解除` / `ルート解除` clear edge highlighting.
+- The HTML map can highlight tactical edges: selecting a fishery highlights all connected edges, `境界強調` highlights #534-side fishery to enemy-side fishery edges, `境界+内側` extends that view to the #534-side self-to-self fishery edges touching boundary #534 fisheries, `ルート選択` highlights all equal-length shortest-route edges between two selected nodes, and `強調解除` / `ルート解除` clear edge highlighting.
 - Default generated-map edges are fixed at width `1`, including outer-to-central edges; only interactive highlights use thicker lines.
 - The HTML map can refresh from the latest `管理表たたき` sheet with `マップ最新化` when the local interactive server is running.
 - Strategic colors are based on ownership from `管理表たたき`: #534-side owners blue, #509/#440/#511-side owners green, enemy-side owners red, and unowned nodes white. Owners with server-number prefixes such as `476B` are classified by that prefix even when they occupy another area.
