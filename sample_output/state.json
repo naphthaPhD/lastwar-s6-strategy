@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T10:20:40.054906+09:00",
+  "generated_at": "2026-05-28T10:26:24.899931+09:00",
   "timezone": "Asia/Tokyo",
   "nodes": [
     {
@@ -73,7 +73,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.66,
+        "hours_remaining": 60.56,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -98,7 +98,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -298,7 +298,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -323,7 +323,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -348,7 +348,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -398,7 +398,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -1773,7 +1773,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -5573,7 +5573,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 148.66,
+        "hours_remaining": 148.56,
         "protect_until": "2026-06-03T15:00:00+09:00"
       }
     },
@@ -5623,7 +5623,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -19.34,
+        "hours_remaining": -19.44,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -5648,7 +5648,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -5773,7 +5773,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -5798,7 +5798,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -5823,7 +5823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -6023,7 +6023,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -6048,7 +6048,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -6123,7 +6123,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -6148,7 +6148,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -6248,7 +6248,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.66,
+        "hours_remaining": 60.56,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -6273,7 +6273,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.66,
+        "hours_remaining": 60.56,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -6298,7 +6298,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -115.34,
+        "hours_remaining": -115.44,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -6373,7 +6373,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -6848,7 +6848,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -6898,7 +6898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -7056,25 +7056,25 @@
       "id": "#476:f-16",
       "name": "f-16",
       "type": "都市",
-      "owner": "ALj",
-      "protect_until": "安全時間要登録",
+      "owner": "476d",
+      "protect_until": "2026/06/03 15:00",
       "x": 749.0,
       "y": 1549.0,
       "importance": 8.0,
       "area": "#476",
-      "acquired_at": "2026/05/21 3:16",
-      "status": "要確認",
-      "memo": "OCR IMG_0495.PNG / #476 X:749 Y:549 Lv.2",
+      "acquired_at": "2026/05/28 7:02",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1304.PNG / #476 X:749 Y:549 Lv.2 湿地の兵舎 / ALj -> 476d / 種別は都市に正規化",
       "visual_x": 749.0,
       "visual_y": 1729.0,
-      "display_owner": "ALj",
+      "display_owner": "476d",
       "destroyed": false,
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 148.56,
+        "protect_until": "2026-06-03T15:00:00+09:00"
       }
     },
     {
@@ -7248,7 +7248,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -7273,7 +7273,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -7323,7 +7323,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -19.34,
+        "hours_remaining": -19.44,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -7348,7 +7348,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -7581,21 +7581,21 @@
       "id": "#476:A-15",
       "name": "A-15",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "R6q",
+      "protect_until": "安全時間要登録",
       "x": 699.0,
       "y": 1020.0,
       "importance": 3.0,
       "area": "#476",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 2:07",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1301.PNG / #476 X:699 Y:20 Lv.1 漁場 / 中立/未登録 -> R6q",
       "visual_x": 699.0,
       "visual_y": 1200.0,
-      "display_owner": "未取得",
+      "display_owner": "R6q",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -7681,21 +7681,21 @@
       "id": "#476:A-3",
       "name": "A-3",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "476T",
+      "protect_until": "安全時間要登録",
       "x": 99.0,
       "y": 1020.0,
       "importance": 3.0,
       "area": "#476",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 7:30",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1308.PNG / #476 X:99 Y:20 Lv.1 漁場 / 中立/未登録 -> 476T / 最初の連盟",
       "visual_x": 99.0,
       "visual_y": 1200.0,
-      "display_owner": "未取得",
+      "display_owner": "476T",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -9973,7 +9973,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -10348,7 +10348,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -10556,21 +10556,21 @@
       "id": "#476:i-2",
       "name": "i-2",
       "type": "都市",
-      "owner": "476H",
+      "owner": "破壊",
       "protect_until": null,
       "x": 49.0,
       "y": 1849.0,
       "importance": 8.0,
       "area": "#476",
-      "acquired_at": null,
+      "acquired_at": "2026/05/27 20:02",
       "status": "",
-      "memo": "マップスクショ IMG_0649.PNG / #476 X:49 Y:849 Lv.1 / 一番左側の476H湿地の村 / 現況確認・取得日時不明 / ユーザー座標指定",
+      "memo": "都市破壊ログ 2026/05/27 20:02:38 / #476 X:49 Y:849 Lv.1都市 / 攻撃側 #534[nO9] / 防衛側 #476[476H] / 宝箱×2 / 破壊済み・復活なし",
       "visual_x": 49.0,
       "visual_y": 2029.0,
-      "display_owner": "476H",
-      "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "display_owner": "破壊",
+      "destroyed": true,
+      "affiliation": "destroyed",
+      "strategic_color": "#6b7280",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -10698,7 +10698,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -10823,7 +10823,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -11148,7 +11148,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.66,
+        "hours_remaining": 60.56,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -11248,7 +11248,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -11398,7 +11398,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -11423,7 +11423,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -11448,7 +11448,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -19.34,
+        "hours_remaining": -19.44,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -11573,7 +11573,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -11648,7 +11648,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -11723,7 +11723,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.66,
+        "hours_remaining": 60.56,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -11748,7 +11748,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.66,
+        "hours_remaining": 60.56,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -11873,7 +11873,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 52.66,
+        "hours_remaining": 52.56,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -11898,7 +11898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 52.66,
+        "hours_remaining": 52.56,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -11923,7 +11923,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 52.66,
+        "hours_remaining": 52.56,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -11948,7 +11948,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 52.66,
+        "hours_remaining": 52.56,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -12098,7 +12098,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -12206,25 +12206,25 @@
       "id": "#480:I-7",
       "name": "I-7",
       "type": "漁場",
-      "owner": "TIKW",
-      "protect_until": "安全時間要登録",
+      "owner": "TkTk",
+      "protect_until": "2026/05/30 15:00",
       "x": 2299.0,
       "y": 1799.0,
       "importance": 3.0,
       "area": "#480",
-      "acquired_at": "2026/05/23 7:34",
-      "status": "要確認",
-      "memo": "赤字OCR IMG_0641.PNG / #480 X:299 Y:799 Lv.2 / 中立/未登録 -> TIKW",
+      "acquired_at": "2026/05/28 9:36",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1313.PNG / #480 X:299 Y:799 Lv.2 漁場 / TIKW -> TkTk / 時刻は前後スクショから推定（09:36直下）",
       "visual_x": 2659.0,
       "visual_y": 1979.0,
-      "display_owner": "TIKW",
+      "display_owner": "TkTk",
       "destroyed": false,
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 52.56,
+        "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
     {
@@ -12323,7 +12323,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -115.34,
+        "hours_remaining": -115.44,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -12798,7 +12798,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -115.34,
+        "hours_remaining": -115.44,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -12873,7 +12873,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -12898,7 +12898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -12923,7 +12923,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -13098,7 +13098,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -19.34,
+        "hours_remaining": -19.44,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -13123,7 +13123,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -19.34,
+        "hours_remaining": -19.44,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -13148,7 +13148,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -19.34,
+        "hours_remaining": -19.44,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -13181,46 +13181,46 @@
       "id": "#480:d-10",
       "name": "d-10",
       "type": "都市",
-      "owner": "BgNa",
-      "protect_until": "2026/05/28 7:00",
+      "owner": "破壊",
+      "protect_until": "安全時間要登録",
       "x": 2449.0,
       "y": 1349.0,
       "importance": 8.0,
       "area": "#480",
-      "acquired_at": "2026/05/20 23:06",
-      "status": "保護切れ",
-      "memo": "OCR IMG_0459.PNG / #480 X:449 Y:349 Lv.3",
+      "acquired_at": "2026/05/27 20:12",
+      "status": "要確認",
+      "memo": "都市破壊ログ 2026/05/27 20:12:18 / #480 X:449 Y:349 Lv.3都市 / 攻撃側 #440[GcC] / 防衛側 #480[BgNa] / 宝箱×10 / 破壊済み・復活なし",
       "visual_x": 2809.0,
       "visual_y": 1529.0,
-      "display_owner": "BgNa",
-      "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "display_owner": "破壊",
+      "destroyed": true,
+      "affiliation": "destroyed",
+      "strategic_color": "#6b7280",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -3.34,
-        "protect_until": "2026-05-28T07:00:00+09:00"
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
       }
     },
     {
       "id": "#480:d-12",
       "name": "d-12",
       "type": "都市",
-      "owner": "WbW",
+      "owner": "破壊",
       "protect_until": "安全時間要登録",
       "x": 2549.0,
       "y": 1349.0,
       "importance": 8.0,
       "area": "#480",
-      "acquired_at": "2026/05/20 23:06",
+      "acquired_at": "2026/05/27 20:23",
       "status": "要確認",
-      "memo": "OCR IMG_0459.PNG / #480 X:549 Y:349 Lv.3",
+      "memo": "都市破壊ログ 2026/05/27 20:23:21 / #480 X:549 Y:349 Lv.3都市 / 攻撃側 #440[GcC] / 防衛側 #480[WbW] / 宝箱×10 / 破壊済み・復活なし",
       "visual_x": 2909.0,
       "visual_y": 1529.0,
-      "display_owner": "WbW",
-      "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "display_owner": "破壊",
+      "destroyed": true,
+      "affiliation": "destroyed",
+      "strategic_color": "#6b7280",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -13273,7 +13273,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -13348,7 +13348,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -19.34,
+        "hours_remaining": -19.44,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -13656,21 +13656,21 @@
       "id": "#480:A-11",
       "name": "A-11",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "IMP",
+      "protect_until": "安全時間要登録",
       "x": 2499.0,
       "y": 1020.0,
       "importance": 3.0,
       "area": "#480",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 7:18",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1306.PNG / #480 X:499 Y:20 Lv.1 漁場 / 中立/未登録 -> IMP",
       "visual_x": 2859.0,
       "visual_y": 1200.0,
-      "display_owner": "未取得",
+      "display_owner": "IMP",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -13806,21 +13806,21 @@
       "id": "#480:A-9",
       "name": "A-9",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "TaW",
+      "protect_until": "安全時間要登録",
       "x": 2399.0,
       "y": 1020.0,
       "importance": 3.0,
       "area": "#480",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 7:34",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1309.PNG / #480 X:399 Y:20 Lv.1 漁場 / IMo -> TaW / 奪取",
       "visual_x": 2759.0,
       "visual_y": 1200.0,
-      "display_owner": "未取得",
+      "display_owner": "TaW",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -14548,7 +14548,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -14831,25 +14831,25 @@
       "id": "#480:E-15",
       "name": "E-15",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "SsQ",
+      "protect_until": "2026/05/30 23:00",
       "x": 2699.0,
       "y": 1399.0,
       "importance": 3.0,
       "area": "#480",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 7:22",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1307.PNG / #480 X:699 Y:399 Lv.3 漁場 / CDf8 -> SsQ / 奪取",
       "visual_x": 3059.0,
       "visual_y": 1579.0,
-      "display_owner": "未取得",
+      "display_owner": "SsQ",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 60.56,
+        "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
     {
@@ -15306,21 +15306,21 @@
       "id": "#480:G-15",
       "name": "G-15",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "CDf8",
+      "protect_until": "安全時間要登録",
       "x": 2699.0,
       "y": 1599.0,
       "importance": 3.0,
       "area": "#480",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 8:30",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1311.PNG / #480 X:699 Y:599 Lv.3 漁場 / 中立/未登録 -> CDf8",
       "visual_x": 3059.0,
       "visual_y": 1779.0,
-      "display_owner": "未取得",
+      "display_owner": "CDf8",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -16306,21 +16306,21 @@
       "id": "#480:j-16",
       "name": "j-16",
       "type": "都市",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "MtG",
+      "protect_until": "安全時間要登録",
       "x": 2749.0,
       "y": 1949.0,
       "importance": 8.0,
       "area": "#480",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 9:36",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1313.PNG / #480 X:749 Y:949 Lv.1 湿地の村 / 中立/未登録 -> MtG / 種別は都市に正規化 / 最初の連盟",
       "visual_x": 3109.0,
       "visual_y": 2129.0,
-      "display_owner": "未取得",
+      "display_owner": "MtG",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -16773,7 +16773,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -19.34,
+        "hours_remaining": -19.44,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -16798,7 +16798,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -19.34,
+        "hours_remaining": -19.44,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -16823,7 +16823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -17148,7 +17148,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.66,
+        "hours_remaining": 60.56,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -17198,7 +17198,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.66,
+        "hours_remaining": 60.56,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -18473,7 +18473,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -19.34,
+        "hours_remaining": -19.44,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -18648,7 +18648,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.34,
+        "hours_remaining": -179.44,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -19031,21 +19031,21 @@
       "id": "#503:b-10",
       "name": "b-10",
       "type": "都市",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "one",
+      "protect_until": "安全時間要登録",
       "x": 2449.0,
       "y": 2149.0,
       "importance": 8.0,
       "area": "#503",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 8:30",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1311.PNG / #503 X:449 Y:149 Lv.1 湿地の村 / 中立/未登録 -> one / 種別は都市に正規化 / 最初の連盟",
       "visual_x": 2809.0,
       "visual_y": 2509.0,
-      "display_owner": "未取得",
+      "display_owner": "one",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -19298,7 +19298,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -19956,21 +19956,21 @@
       "id": "#503:d-4",
       "name": "d-4",
       "type": "都市",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "TIKW",
+      "protect_until": "安全時間要登録",
       "x": 2149.0,
       "y": 2349.0,
       "importance": 8.0,
       "area": "#503",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 8:02",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1310.PNG / #503 X:149 Y:349 Lv.1 湿地の村 / 中立/未登録 -> TIKW / 種別は都市に正規化",
       "visual_x": 2509.0,
       "visual_y": 2709.0,
-      "display_owner": "未取得",
+      "display_owner": "TIKW",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -22106,21 +22106,21 @@
       "id": "#503:K-9",
       "name": "K-9",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "RING",
+      "protect_until": "安全時間要登録",
       "x": 2399.0,
       "y": 2978.0,
       "importance": 3.0,
       "area": "#503",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 8:11",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1310.PNG / #503 X:399 Y:978 Lv.1 漁場 / 中立/未登録 -> RING",
       "visual_x": 2759.0,
       "visual_y": 3338.0,
-      "display_owner": "未取得",
+      "display_owner": "RING",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -22223,7 +22223,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.66,
+        "hours_remaining": 60.56,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -22248,7 +22248,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 156.66,
+        "hours_remaining": 156.56,
         "protect_until": "2026-06-03T23:00:00+09:00"
       }
     },
@@ -22281,25 +22281,25 @@
       "id": "#509:F-9",
       "name": "F-9",
       "type": "漁場",
-      "owner": "GcC",
-      "protect_until": "2026/05/28 7:00",
+      "owner": "476A",
+      "protect_until": "2026/05/30 23:00",
       "x": 1399.0,
       "y": 2499.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/25 6:01",
-      "status": "保護切れ",
-      "memo": "手入力ログ 2026/05/25 06:01 / #509 X:399 Y:499 Lv.4 漁場 / 中立/未登録 -> GcC",
+      "acquired_at": "2026/05/28 7:42",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1309.PNG / #509 X:399 Y:499 Lv.4 漁場 / GcC -> 476A / 奪取",
       "visual_x": 1579.0,
       "visual_y": 2859.0,
-      "display_owner": "GcC",
+      "display_owner": "476A",
       "destroyed": false,
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -3.34,
-        "protect_until": "2026-05-28T07:00:00+09:00"
+        "status": "protected",
+        "hours_remaining": 60.56,
+        "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
     {
@@ -22323,7 +22323,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -22348,7 +22348,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -22431,25 +22431,25 @@
       "id": "#509:H-17",
       "name": "H-17",
       "type": "漁場",
-      "owner": "xjR",
-      "protect_until": "安全時間要登録",
+      "owner": "FHX",
+      "protect_until": "2026/05/30 23:00",
       "x": 1799.0,
       "y": 2699.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": "2026/05/24 7:16",
-      "status": "要確認",
-      "memo": "赤字OCR IMG_0875.PNG / #509 X:799 Y:699 Lv.2 / OTT -> xjR / 時刻は前後スクショから推定",
+      "acquired_at": "2026/05/28 7:34",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1309.PNG / #509 X:799 Y:699 Lv.2 漁場 / xjR -> FHX / 奪取",
       "visual_x": 1979.0,
       "visual_y": 3059.0,
-      "display_owner": "xjR",
+      "display_owner": "FHX",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 60.56,
+        "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
     {
@@ -22473,7 +22473,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 52.66,
+        "hours_remaining": 52.56,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -22498,7 +22498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -22723,7 +22723,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -22773,7 +22773,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -23023,7 +23023,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -23123,7 +23123,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -23198,7 +23198,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -23248,7 +23248,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -23273,7 +23273,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -23323,7 +23323,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -23348,7 +23348,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -23373,7 +23373,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 52.66,
+        "hours_remaining": 52.56,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -23423,7 +23423,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 52.66,
+        "hours_remaining": 52.56,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -23773,7 +23773,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -23848,7 +23848,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 52.66,
+        "hours_remaining": 52.56,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -23898,7 +23898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 52.66,
+        "hours_remaining": 52.56,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -23973,7 +23973,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -24048,7 +24048,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -115.34,
+        "hours_remaining": -115.44,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -24073,7 +24073,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -24173,7 +24173,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -19.34,
+        "hours_remaining": -19.44,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -24198,7 +24198,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -24298,7 +24298,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -24323,7 +24323,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -24331,25 +24331,25 @@
       "id": "#509:d-10",
       "name": "d-10",
       "type": "都市",
-      "owner": "SsQ",
-      "protect_until": "2026/05/28 7:00",
+      "owner": "破壊",
+      "protect_until": "安全時間要登録",
       "x": 1449.0,
       "y": 2349.0,
       "importance": 8.0,
       "area": "#509",
-      "acquired_at": "2026/05/21 0:11",
-      "status": "保護切れ",
-      "memo": "OCR IMG_0479.PNG / #509 X:449 Y:349 Lv.3 / SsQ維持",
+      "acquired_at": "2026/05/27 20:17",
+      "status": "要確認",
+      "memo": "都市破壊ログ 2026/05/27 20:17:55 / #509 X:449 Y:349 Lv.3都市 / 攻撃側 #476[476A] / 防衛側 #509[SsQ] / 宝箱×10 / 破壊済み・復活なし",
       "visual_x": 1629.0,
       "visual_y": 2709.0,
-      "display_owner": "SsQ",
-      "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "display_owner": "破壊",
+      "destroyed": true,
+      "affiliation": "destroyed",
+      "strategic_color": "#6b7280",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -3.34,
-        "protect_until": "2026-05-28T07:00:00+09:00"
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
       }
     },
     {
@@ -24373,7 +24373,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -24523,7 +24523,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -24623,7 +24623,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -25406,21 +25406,21 @@
       "id": "#509:d-12",
       "name": "d-12",
       "type": "都市",
-      "owner": "SsQ",
-      "protect_until": null,
+      "owner": "破壊",
+      "protect_until": "安全時間要登録",
       "x": 1549.0,
       "y": 2349.0,
       "importance": 8.0,
       "area": "#509",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 20:04",
+      "status": "要確認",
+      "memo": "都市破壊ログ 2026/05/27 20:04:04 / #509 X:549 Y:349 Lv.3都市 / 攻撃側 #476[476A] / 防衛側 #509[SsQ] / 宝箱×10 / 破壊済み・復活なし",
       "visual_x": 1729.0,
       "visual_y": 2709.0,
-      "display_owner": "SsQ",
-      "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "display_owner": "破壊",
+      "destroyed": true,
+      "affiliation": "destroyed",
+      "strategic_color": "#6b7280",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -26198,7 +26198,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 164.66,
+        "hours_remaining": 164.56,
         "protect_until": "2026-06-04T07:00:00+09:00"
       }
     },
@@ -26881,21 +26881,21 @@
       "id": "#509:i-16",
       "name": "i-16",
       "type": "都市",
-      "owner": "OTT",
-      "protect_until": null,
+      "owner": "破壊",
+      "protect_until": "安全時間要登録",
       "x": 1749.0,
       "y": 2849.0,
       "importance": 8.0,
       "area": "#509",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 20:23",
+      "status": "要確認",
+      "memo": "都市破壊ログ 2026/05/27 20:23:18 / #509 X:749 Y:849 Lv.1都市 / 攻撃側 #503[UMN] / 防衛側 #509[OTT] / 宝箱×2 / 破壊済み・復活なし",
       "visual_x": 1929.0,
       "visual_y": 3209.0,
-      "display_owner": "OTT",
-      "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "display_owner": "破壊",
+      "destroyed": true,
+      "affiliation": "destroyed",
+      "strategic_color": "#6b7280",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -27581,21 +27581,21 @@
       "id": "#509:K-3",
       "name": "K-3",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "OWM",
+      "protect_until": "安全時間要登録",
       "x": 1099.0,
       "y": 2978.0,
       "importance": 3.0,
       "area": "#509",
-      "acquired_at": null,
-      "status": "放棄",
-      "memo": "2026/05/23 19:49 右側パネル: 中立/未登録 -> OWM2026/05/24 16:40 右側パネル: 放棄確認 / 中立化 OWM -> 中立",
+      "acquired_at": "2026/05/28 4:30",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1302.PNG / #509 X:99 Y:978 Lv.1 漁場 / 中立/未登録 -> OWM / 放棄日時をクリア",
       "visual_x": 1279.0,
       "visual_y": 3338.0,
-      "display_owner": "未取得",
+      "display_owner": "OWM",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -27806,43 +27806,43 @@
       "id": "#511:D-7",
       "name": "D-7",
       "type": "漁場",
-      "owner": "SVh",
-      "protect_until": "安全時間要登録",
+      "owner": "WUG",
+      "protect_until": "2026/05/30 15:00",
       "x": 1299.0,
       "y": 299.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": "2026/05/26 5:22",
-      "status": "要確認",
-      "memo": "RAW_OCR_LOG row22 / #511 X:299 Y:299 Lv.3 漁場 / 中立/未登録 -> SVh / 画像:1E0D536C",
+      "acquired_at": "2026/05/28 7:18",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1306.PNG / #511 X:299 Y:299 Lv.3 漁場 / SVh -> WUG / 奪取",
       "visual_x": 1479.0,
       "visual_y": 299.0,
-      "display_owner": "SVh",
+      "display_owner": "WUG",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 52.56,
+        "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
     {
       "id": "#511:C-9",
       "name": "C-9",
       "type": "漁場",
-      "owner": "SVh",
+      "owner": "2N7",
       "protect_until": "安全時間要登録",
       "x": 1399.0,
       "y": 199.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": "2026/05/25 20:04",
+      "acquired_at": "2026/05/28 7:30",
       "status": "要確認",
-      "memo": "手入力ログ 2026/05/25 20:04 / #511 X:399 Y:199 Lv.2 漁場 / 中立/未登録 -> SVh / 最初の連盟",
+      "memo": "Dropbox赤字OCR IMG_1308.PNG / #511 X:399 Y:199 Lv.2 漁場 / SVh -> 2N7",
       "visual_x": 1579.0,
       "visual_y": 199.0,
-      "display_owner": "SVh",
+      "display_owner": "2N7",
       "destroyed": false,
       "affiliation": "ally",
       "strategic_color": "#16a34a",
@@ -27998,7 +27998,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -28381,21 +28381,21 @@
       "id": "#511:E-7",
       "name": "E-7",
       "type": "漁場",
-      "owner": "JLO",
+      "owner": "fIrE",
       "protect_until": "安全時間要登録",
       "x": 1299.0,
       "y": 399.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": "2026/05/24 0:45",
+      "acquired_at": "2026/05/28 7:10",
       "status": "要確認",
-      "memo": "赤字OCR IMG_0861.PNG / #511 X:299 Y:399 Lv.3 / 中立/未登録 -> JLO",
+      "memo": "Dropbox赤字OCR IMG_1305.PNG / #511 X:299 Y:399 Lv.3 漁場 / JLO -> fIrE / 奪取",
       "visual_x": 1479.0,
       "visual_y": 399.0,
-      "display_owner": "JLO",
+      "display_owner": "fIrE",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -28498,7 +28498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -19.34,
+        "hours_remaining": -19.44,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -28573,7 +28573,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -29298,7 +29298,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -29306,25 +29306,25 @@
       "id": "#511:J-15",
       "name": "J-15",
       "type": "漁場",
-      "owner": "BgNa",
-      "protect_until": "2026/05/23 23:00",
+      "owner": "CDf8",
+      "protect_until": "安全時間要登録",
       "x": 1699.0,
       "y": 899.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": "2026/05/22 11:23",
-      "status": "保護切れ",
-      "memo": "OCR IMG_0569.PNG / #511 X:699 Y:899 Lv.1 / 中立/未登録 -> BgNa / BgNa視認補正",
+      "acquired_at": "2026/05/28 9:36",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1313.PNG / #511 X:699 Y:899 Lv.1 漁場 / BgNa -> CDf8 / 時刻は前後スクショから推定（09:36直下）",
       "visual_x": 1879.0,
       "visual_y": 899.0,
-      "display_owner": "BgNa",
+      "display_owner": "CDf8",
       "destroyed": false,
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -107.34,
-        "protect_until": "2026-05-23T23:00:00+09:00"
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
       }
     },
     {
@@ -29473,7 +29473,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -29681,21 +29681,21 @@
       "id": "#511:g-10",
       "name": "g-10",
       "type": "都市",
-      "owner": "DaNG",
+      "owner": "破壊",
       "protect_until": null,
       "x": 1449.0,
       "y": 649.0,
       "importance": 8.0,
       "area": "#511",
-      "acquired_at": "2026/05/20 23:28",
+      "acquired_at": "2026/05/27 20:20",
       "status": "",
-      "memo": "OCR IMG_0469.PNG / #511 X:449 Y:649 Lv.3 / 中立/未登録→DaNG",
+      "memo": "都市破壊ログ 2026/05/27 20:20:19 / #511 X:449 Y:649 Lv.3都市 / 攻撃側 #480[WbW] / 防衛側 #511[DaNG] / 宝箱×10 / 破壊済み・復活なし",
       "visual_x": 1629.0,
       "visual_y": 649.0,
-      "display_owner": "DaNG",
-      "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "display_owner": "破壊",
+      "destroyed": true,
+      "affiliation": "destroyed",
+      "strategic_color": "#6b7280",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -29881,21 +29881,21 @@
       "id": "#511:e-8",
       "name": "e-8",
       "type": "都市",
-      "owner": "JLO",
+      "owner": "破壊",
       "protect_until": "安全時間要登録",
       "x": 1349.0,
       "y": 449.0,
       "importance": 8.0,
       "area": "#511",
-      "acquired_at": "2026/05/20 0:00",
+      "acquired_at": "2026/05/27 20:23",
       "status": "要確認",
-      "memo": "OCR IMG_0460.PNG / #511 X:349 Y:449 Lv.3 / 時刻OCR要確認 / 読取要確認",
+      "memo": "都市破壊ログ 2026/05/27 20:23:12 / #511 X:349 Y:449 Lv.3都市 / 攻撃側 #523[WUG] / 防衛側 #511[JLO] / 宝箱×10 / 破壊済み・復活なし",
       "visual_x": 1529.0,
       "visual_y": 449.0,
-      "display_owner": "JLO",
-      "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "display_owner": "破壊",
+      "destroyed": true,
+      "affiliation": "destroyed",
+      "strategic_color": "#6b7280",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -29948,7 +29948,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -29956,21 +29956,21 @@
       "id": "#511:G-3",
       "name": "G-3",
       "type": "漁場",
-      "owner": "JlZ",
+      "owner": "EDFS",
       "protect_until": "#REF!",
       "x": 1099.0,
       "y": 599.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": "2026/05/19 15:21",
+      "acquired_at": "2026/05/28 7:34",
       "status": "#REF!",
-      "memo": "画像7: #511 X:99 Y:599 Lv1（連盟名JlZは画像読取）",
+      "memo": "Dropbox赤字OCR IMG_1309.PNG / #511 X:99 Y:599 Lv.1 漁場 / JL2 -> EDFS / 奪取",
       "visual_x": 1279.0,
       "visual_y": 599.0,
-      "display_owner": "JlZ",
+      "display_owner": "EDFS",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -30073,7 +30073,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -30606,21 +30606,21 @@
       "id": "#511:b-10",
       "name": "b-10",
       "type": "都市",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "sbM",
+      "protect_until": "安全時間要登録",
       "x": 1449.0,
       "y": 149.0,
       "importance": 8.0,
       "area": "#511",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 6:59",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1304.PNG / #511 X:449 Y:149 Lv.1 密林の村 / 中立/未登録 -> sbM / 種別は都市に正規化 / 最初の連盟",
       "visual_x": 1629.0,
       "visual_y": 149.0,
-      "display_owner": "未取得",
+      "display_owner": "sbM",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -30631,21 +30631,21 @@
       "id": "#511:B-11",
       "name": "B-11",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "sbM",
+      "protect_until": "安全時間要登録",
       "x": 1499.0,
       "y": 99.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 9:13",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1312.PNG / #511 X:499 Y:99 Lv.1 漁場 / 中立/未登録 -> sbM",
       "visual_x": 1679.0,
       "visual_y": 99.0,
-      "display_owner": "未取得",
+      "display_owner": "sbM",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -30656,21 +30656,21 @@
       "id": "#511:b-12",
       "name": "b-12",
       "type": "都市",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "sbM",
+      "protect_until": "安全時間要登録",
       "x": 1549.0,
       "y": 149.0,
       "importance": 8.0,
       "area": "#511",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 7:30",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1308.PNG / #511 X:549 Y:149 Lv.1 密林の村 / 中立/未登録 -> sbM / 種別は都市に正規化 / 最初の連盟",
       "visual_x": 1729.0,
       "visual_y": 149.0,
-      "display_owner": "未取得",
+      "display_owner": "sbM",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -30956,21 +30956,21 @@
       "id": "#511:B-9",
       "name": "B-9",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "2N7",
+      "protect_until": "安全時間要登録",
       "x": 1399.0,
       "y": 99.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 8:11",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1310.PNG / #511 X:399 Y:99 Lv.1 漁場 / 中立/未登録 -> 2N7",
       "visual_x": 1579.0,
       "visual_y": 99.0,
-      "display_owner": "未取得",
+      "display_owner": "2N7",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -31256,21 +31256,21 @@
       "id": "#511:c-8",
       "name": "c-8",
       "type": "都市",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "JLO",
+      "protect_until": "安全時間要登録",
       "x": 1349.0,
       "y": 249.0,
       "importance": 8.0,
       "area": "#511",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 7:42",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1309.PNG / #511 X:349 Y:249 Lv.2 密林の兵舎 / 中立/未登録 -> JLO / 種別は都市に正規化 / 最初の連盟 / 目視追加",
       "visual_x": 1529.0,
       "visual_y": 249.0,
-      "display_owner": "未取得",
+      "display_owner": "JLO",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -31531,21 +31531,21 @@
       "id": "#511:d-6",
       "name": "d-6",
       "type": "都市",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "2N7",
+      "protect_until": "安全時間要登録",
       "x": 1249.0,
       "y": 349.0,
       "importance": 8.0,
       "area": "#511",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 7:18",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1306.PNG / #511 X:249 Y:349 Lv.2 密林の兵舎 / 中立/未登録 -> 2N7 / 種別は都市に正規化 / 最初の連盟",
       "visual_x": 1429.0,
       "visual_y": 349.0,
-      "display_owner": "未取得",
+      "display_owner": "2N7",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -32106,25 +32106,25 @@
       "id": "#511:G-11",
       "name": "G-11",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "BgNa",
+      "protect_until": "2026/05/30 23:00",
       "x": 1499.0,
       "y": 599.0,
       "importance": 3.0,
       "area": "#511",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 7:10",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1305.PNG / #511 X:499 Y:599 Lv.4 漁場 / DaNG -> BgNa / 奪取",
       "visual_x": 1679.0,
       "visual_y": 599.0,
-      "display_owner": "未取得",
+      "display_owner": "BgNa",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 60.56,
+        "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
     {
@@ -32148,7 +32148,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -32281,21 +32281,21 @@
       "id": "#511:g-6",
       "name": "g-6",
       "type": "都市",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "破壊",
+      "protect_until": "安全時間要登録",
       "x": 1249.0,
       "y": 649.0,
       "importance": 8.0,
       "area": "#511",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/27 20:25",
+      "status": "要確認",
+      "memo": "都市破壊ログ 2026/05/27 20:25:53 / #511 X:249 Y:649 Lv.2都市 / 攻撃側 #523[WUG] / 防衛側 #511[JLO] / 宝箱×5 / 破壊済み・復活なし",
       "visual_x": 1429.0,
       "visual_y": 649.0,
-      "display_owner": "未取得",
-      "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "display_owner": "破壊",
+      "destroyed": true,
+      "affiliation": "destroyed",
+      "strategic_color": "#6b7280",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -32531,21 +32531,21 @@
       "id": "#511:h-8",
       "name": "h-8",
       "type": "都市",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "JLO",
+      "protect_until": "安全時間要登録",
       "x": 1349.0,
       "y": 749.0,
       "importance": 8.0,
       "area": "#511",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 7:34",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1309.PNG / #511 X:349 Y:749 Lv.2 密林の兵舎 / 中立/未登録 -> JLO / 種別は都市に正規化 / 最初の連盟 / 目視追加",
       "visual_x": 1529.0,
       "visual_y": 749.0,
-      "display_owner": "未取得",
+      "display_owner": "JLO",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "ally",
+      "strategic_color": "#16a34a",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -33381,18 +33381,18 @@
       "id": "#523:C-21",
       "name": "C-21",
       "type": "漁場",
-      "owner": "2N7",
+      "owner": "JL0",
       "protect_until": "安全時間要登録",
       "x": 978.0,
       "y": 199.0,
       "importance": 3.0,
       "area": "#523",
-      "acquired_at": "2026/05/23 23:24",
+      "acquired_at": "2026/05/28 7:22",
       "status": "要確認",
-      "memo": "赤字OCR IMG_0750.PNG / #523 X:978 Y:199 Lv.1 / 中立/未登録 -> 2N7 / 時刻は前後スクショから推定",
+      "memo": "Dropbox赤字OCR IMG_1307.PNG / #523 X:978 Y:199 Lv.1 漁場 / K4TR -> JL0 / 奪取",
       "visual_x": 978.0,
       "visual_y": 199.0,
-      "display_owner": "2N7",
+      "display_owner": "JL0",
       "destroyed": false,
       "affiliation": "ally",
       "strategic_color": "#16a34a",
@@ -33623,7 +33623,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.66,
+        "hours_remaining": 60.56,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -33673,7 +33673,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.66,
+        "hours_remaining": 60.56,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -34281,25 +34281,25 @@
       "id": "#523:J-17",
       "name": "J-17",
       "type": "漁場",
-      "owner": "WUG",
-      "protect_until": "2026/05/23 15:00",
+      "owner": "476Z",
+      "protect_until": "安全時間要登録",
       "x": 799.0,
       "y": 899.0,
       "importance": 3.0,
       "area": "#523",
-      "acquired_at": "2026/05/21 13:59",
-      "status": "保護切れ",
-      "memo": "OCR IMG_0532.PNG / #523 X:799 Y:899 Lv.1 / 中立/未登録 -> WUG",
+      "acquired_at": "2026/05/28 4:14",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1302.PNG / #523 X:799 Y:899 Lv.1 漁場 / WUG -> 476Z",
       "visual_x": 799.0,
       "visual_y": 899.0,
-      "display_owner": "WUG",
+      "display_owner": "476Z",
       "destroyed": false,
       "affiliation": "enemy",
       "strategic_color": "#dc2626",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -115.34,
-        "protect_until": "2026-05-23T15:00:00+09:00"
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
       }
     },
     {
@@ -34323,7 +34323,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -115.34,
+        "hours_remaining": -115.44,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -35081,21 +35081,21 @@
       "id": "#523:A-17",
       "name": "A-17",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "5DU",
+      "protect_until": "安全時間要登録",
       "x": 799.0,
       "y": 20.0,
       "importance": 3.0,
       "area": "#523",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 6:30",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1303.PNG / #523 X:799 Y:20 Lv.1 漁場 / 中立/未登録 -> 5DU / 最初の連盟",
       "visual_x": 799.0,
       "visual_y": 20.0,
-      "display_owner": "未取得",
+      "display_owner": "5DU",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -35431,21 +35431,21 @@
       "id": "#523:B-17",
       "name": "B-17",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "5DU",
+      "protect_until": "安全時間要登録",
       "x": 799.0,
       "y": 99.0,
       "importance": 3.0,
       "area": "#523",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 6:25",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1303.PNG / #523 X:799 Y:99 Lv.1 漁場 / 中立/未登録 -> 5DU",
       "visual_x": 799.0,
       "visual_y": 99.0,
-      "display_owner": "未取得",
+      "display_owner": "5DU",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -38723,7 +38723,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.66,
+        "hours_remaining": 60.56,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -38748,7 +38748,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 156.66,
+        "hours_remaining": 156.56,
         "protect_until": "2026-06-03T23:00:00+09:00"
       }
     },
@@ -38773,7 +38773,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 148.66,
+        "hours_remaining": 148.56,
         "protect_until": "2026-06-03T15:00:00+09:00"
       }
     },
@@ -38798,7 +38798,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 156.66,
+        "hours_remaining": 156.56,
         "protect_until": "2026-06-03T23:00:00+09:00"
       }
     },
@@ -38998,7 +38998,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -39023,7 +39023,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -39048,7 +39048,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -39073,7 +39073,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -39098,7 +39098,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -39273,7 +39273,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -39373,7 +39373,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -39448,7 +39448,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -39473,7 +39473,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -39698,7 +39698,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -39748,7 +39748,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -39773,7 +39773,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -39798,7 +39798,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -39823,7 +39823,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -39848,7 +39848,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -39856,25 +39856,25 @@
       "id": "#534:e-8",
       "name": "e-8",
       "type": "都市",
-      "owner": "SHA",
-      "protect_until": "2026/05/28 7:00",
+      "owner": "RGWC",
+      "protect_until": "安全時間要登録",
       "x": 349.0,
       "y": 2449.0,
       "importance": 8.0,
       "area": "#534",
-      "acquired_at": "2026/05/20 23:55",
-      "status": "保護切れ",
-      "memo": "OCR IMG_0475.PNG / #534 X:349 Y:449 Lv.3",
+      "acquired_at": "2026/05/28 7:22",
+      "status": "要確認",
+      "memo": "Dropbox赤字OCR IMG_1307.PNG / #534 X:349 Y:449 Lv.3 密林の集会場 / SHA -> RGWC / 種別は都市に正規化",
       "visual_x": 349.0,
       "visual_y": 2809.0,
-      "display_owner": "SHA",
+      "display_owner": "RGWC",
       "destroyed": false,
       "affiliation": "self",
       "strategic_color": "#2563eb",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -3.34,
-        "protect_until": "2026-05-28T07:00:00+09:00"
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
       }
     },
     {
@@ -39923,7 +39923,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -39948,7 +39948,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -39998,7 +39998,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -40023,7 +40023,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -40048,7 +40048,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -40056,25 +40056,25 @@
       "id": "#534:d-14",
       "name": "d-14",
       "type": "都市",
-      "owner": "JDX",
-      "protect_until": "2026/05/27 15:00",
+      "owner": "破壊",
+      "protect_until": "安全時間要登録",
       "x": 649.0,
       "y": 2349.0,
       "importance": 8.0,
       "area": "#534",
-      "acquired_at": "2026/05/20 23:06",
-      "status": "保護切れ",
-      "memo": "OCR IMG_0459.PNG / #534 X:649 Y:349 Lv.3 / 中立/未登録→JDX",
+      "acquired_at": "2026/05/27 20:04",
+      "status": "要確認",
+      "memo": "都市破壊ログ 2026/05/27 20:04:34 / #534 X:649 Y:349 Lv.3都市 / 攻撃側 #476[476B] / 防衛側 #534[JDX] / 宝箱×10 / 破壊済み・復活なし",
       "visual_x": 649.0,
       "visual_y": 2709.0,
-      "display_owner": "JDX",
-      "destroyed": false,
-      "affiliation": "self",
-      "strategic_color": "#2563eb",
+      "display_owner": "破壊",
+      "destroyed": true,
+      "affiliation": "destroyed",
+      "strategic_color": "#6b7280",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -19.34,
-        "protect_until": "2026-05-27T15:00:00+09:00"
+        "status": "unknown",
+        "hours_remaining": null,
+        "protect_until": null
       }
     },
     {
@@ -40098,7 +40098,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -40123,7 +40123,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -40148,7 +40148,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -40223,7 +40223,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40248,7 +40248,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40273,7 +40273,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40298,7 +40298,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40323,7 +40323,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40348,7 +40348,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40356,25 +40356,25 @@
       "id": "#534:f-16",
       "name": "f-16",
       "type": "都市",
-      "owner": "JDX",
-      "protect_until": "2026/05/23 15:00",
+      "owner": "KTVS",
+      "protect_until": "2026/06/03 23:00",
       "x": 749.0,
       "y": 2549.0,
       "importance": 8.0,
       "area": "#534",
-      "acquired_at": "2026/05/16 23:16",
-      "status": "保護切れ",
-      "memo": "",
+      "acquired_at": "2026/05/28 7:18",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1306.PNG / #534 X:749 Y:549 Lv.2 密林の兵舎 / JDX -> KTVS / 種別は都市に正規化",
       "visual_x": 749.0,
       "visual_y": 2909.0,
-      "display_owner": "JDX",
+      "display_owner": "KTVS",
       "destroyed": false,
       "affiliation": "self",
       "strategic_color": "#2563eb",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -115.34,
-        "protect_until": "2026-05-23T15:00:00+09:00"
+        "status": "protected",
+        "hours_remaining": 156.56,
+        "protect_until": "2026-06-03T23:00:00+09:00"
       }
     },
     {
@@ -40398,7 +40398,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -187.34,
+        "hours_remaining": -187.44,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -40423,7 +40423,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40448,7 +40448,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40456,25 +40456,25 @@
       "id": "#534:A-13",
       "name": "A-13",
       "type": "漁場",
-      "owner": "w6F",
-      "protect_until": "2026/05/21 7:00",
+      "owner": "4tH",
+      "protect_until": "2026/05/30 23:00",
       "x": 599.0,
       "y": 2020.0,
       "importance": 3.0,
       "area": "#534",
-      "acquired_at": "2026/05/16 23:05",
-      "status": "保護切れ",
-      "memo": "",
+      "acquired_at": "2026/05/28 7:18",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1306.PNG / #534 X:599 Y:20 Lv.1 漁場 / w6F -> 4tH / 奪取",
       "visual_x": 599.0,
       "visual_y": 2380.0,
-      "display_owner": "w6F",
+      "display_owner": "4tH",
       "destroyed": false,
       "affiliation": "self",
       "strategic_color": "#2563eb",
       "protection": {
-        "status": "expired",
-        "hours_remaining": -171.34,
-        "protect_until": "2026-05-21T07:00:00+09:00"
+        "status": "protected",
+        "hours_remaining": 60.56,
+        "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
     {
@@ -40498,7 +40498,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40523,7 +40523,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40548,7 +40548,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40573,7 +40573,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40598,7 +40598,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -40623,7 +40623,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -115.34,
+        "hours_remaining": -115.44,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -40648,7 +40648,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -40673,7 +40673,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 52.66,
+        "hours_remaining": 52.56,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -40756,25 +40756,25 @@
       "id": "#534:b-16",
       "name": "b-16",
       "type": "都市",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "MOE",
+      "protect_until": "2026/06/03 15:00",
       "x": 749.0,
       "y": 2149.0,
       "importance": 8.0,
       "area": "#534",
-      "acquired_at": null,
-      "status": "放棄",
-      "memo": "2026/05/21 19:39 右側パネル: 中立/未登録 -> JDX2026/05/28 02:36 サイドバー: 放棄確認 / 中立化 JDX -> 中立",
+      "acquired_at": "2026/05/28 7:02",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1304.PNG / #534 X:749 Y:149 Lv.1 密林の村 / 中立/未登録 -> MOE / 種別は都市に正規化 / 放棄日時をクリア",
       "visual_x": 749.0,
       "visual_y": 2509.0,
-      "display_owner": "未取得",
+      "display_owner": "MOE",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "self",
+      "strategic_color": "#2563eb",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 148.56,
+        "protect_until": "2026-06-03T15:00:00+09:00"
       }
     },
     {
@@ -40873,7 +40873,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 164.66,
+        "hours_remaining": 164.56,
         "protect_until": "2026-06-04T07:00:00+09:00"
       }
     },
@@ -40898,7 +40898,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 164.66,
+        "hours_remaining": 164.56,
         "protect_until": "2026-06-04T07:00:00+09:00"
       }
     },
@@ -40981,25 +40981,25 @@
       "id": "#534:C-17",
       "name": "C-17",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "MOE",
+      "protect_until": "2026/05/30 15:00",
       "x": 799.0,
       "y": 2199.0,
       "importance": 3.0,
       "area": "#534",
-      "acquired_at": null,
-      "status": "放棄",
-      "memo": "2026/05/27 22:56 右側パネル: 放棄確認 / 中立化 JDX -> 中立",
+      "acquired_at": "2026/05/28 7:22",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1307.PNG / #534 X:799 Y:199 Lv.2 漁場 / 中立/未登録 -> MOE / OCR補正: MO0E->MOE / 放棄日時をクリア",
       "visual_x": 799.0,
       "visual_y": 2559.0,
-      "display_owner": "未取得",
+      "display_owner": "MOE",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "self",
+      "strategic_color": "#2563eb",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 52.56,
+        "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
     {
@@ -41223,7 +41223,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -41231,21 +41231,21 @@
       "id": "#534:d-12",
       "name": "d-12",
       "type": "都市",
-      "owner": "JDX",
-      "protect_until": null,
+      "owner": "破壊",
+      "protect_until": "安全時間要登録",
       "x": 549.0,
       "y": 2349.0,
       "importance": 8.0,
       "area": "#534",
-      "acquired_at": null,
-      "status": "",
-      "memo": "2026/05/23 19:26 サイドバー: 中立/未登録 -> JDX",
+      "acquired_at": "2026/05/27 20:02",
+      "status": "要確認",
+      "memo": "都市破壊ログ 2026/05/27 20:02:15 / #534 X:549 Y:349 Lv.3都市 / 攻撃側 #476[476B] / 防衛側 #534[JDX] / 宝箱×10 / 破壊済み・復活なし",
       "visual_x": 549.0,
       "visual_y": 2709.0,
-      "display_owner": "JDX",
-      "destroyed": false,
-      "affiliation": "self",
-      "strategic_color": "#2563eb",
+      "display_owner": "破壊",
+      "destroyed": true,
+      "affiliation": "destroyed",
+      "strategic_color": "#6b7280",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -41273,7 +41273,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -41298,7 +41298,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -41673,7 +41673,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 68.66,
+        "hours_remaining": 68.56,
         "protect_until": "2026-05-31T07:00:00+09:00"
       }
     },
@@ -41681,25 +41681,25 @@
       "id": "#534:E-15",
       "name": "E-15",
       "type": "漁場",
-      "owner": "unknown",
-      "protect_until": null,
+      "owner": "Sg3",
+      "protect_until": "2026/05/30 15:00",
       "x": 699.0,
       "y": 2399.0,
       "importance": 3.0,
       "area": "#534",
-      "acquired_at": null,
-      "status": "",
-      "memo": "",
+      "acquired_at": "2026/05/28 2:13",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1301.PNG / #534 X:699 Y:399 Lv.3 漁場 / 中立/未登録 -> Sg3 / 視認補正: Sg3",
       "visual_x": 699.0,
       "visual_y": 2759.0,
-      "display_owner": "未取得",
+      "display_owner": "Sg3",
       "destroyed": false,
-      "affiliation": "unowned",
-      "strategic_color": "#f8fafc",
+      "affiliation": "self",
+      "strategic_color": "#2563eb",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 52.56,
+        "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
     {
@@ -41948,7 +41948,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 164.66,
+        "hours_remaining": 164.56,
         "protect_until": "2026-06-04T07:00:00+09:00"
       }
     },
@@ -42106,25 +42106,25 @@
       "id": "#534:f-14",
       "name": "f-14",
       "type": "都市",
-      "owner": "KTVS",
-      "protect_until": null,
+      "owner": "JDX",
+      "protect_until": "2026/06/03 15:00",
       "x": 649.0,
       "y": 2549.0,
       "importance": 8.0,
       "area": "#534",
-      "acquired_at": null,
-      "status": "",
-      "memo": "2026/05/23 18:56 右側パネル: 中立/未登録 -> KTVS",
+      "acquired_at": "2026/05/28 7:02",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1304.PNG / #534 X:649 Y:549 Lv.3 密林の集会場 / KTVS -> JDX / 種別は都市に正規化",
       "visual_x": 649.0,
       "visual_y": 2909.0,
-      "display_owner": "KTVS",
+      "display_owner": "JDX",
       "destroyed": false,
       "affiliation": "self",
       "strategic_color": "#2563eb",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 148.56,
+        "protect_until": "2026-06-03T15:00:00+09:00"
       }
     },
     {
@@ -44248,7 +44248,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.66,
+        "hours_remaining": 60.56,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -44273,7 +44273,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "protected",
-        "hours_remaining": 60.66,
+        "hours_remaining": 60.56,
         "protect_until": "2026-05-30T23:00:00+09:00"
       }
     },
@@ -46594,8 +46594,8 @@
       "visual_y": 1354.0,
       "display_owner": "IMP",
       "destroyed": false,
-      "affiliation": "neutral",
-      "strategic_color": "#f8fafc",
+      "affiliation": "enemy",
+      "strategic_color": "#dc2626",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -47748,7 +47748,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -47823,7 +47823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -19.34,
+        "hours_remaining": -19.44,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -47873,7 +47873,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -19.34,
+        "hours_remaining": -19.44,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -47898,7 +47898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -47923,7 +47923,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -47948,7 +47948,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -47973,7 +47973,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -48048,7 +48048,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -48148,7 +48148,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -48173,7 +48173,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -48348,7 +48348,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -48398,7 +48398,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -48473,7 +48473,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -48498,7 +48498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -48673,7 +48673,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -48723,7 +48723,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -48823,7 +48823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -19.34,
+        "hours_remaining": -19.44,
         "protect_until": "2026-05-27T15:00:00+09:00"
       }
     },
@@ -48831,25 +48831,25 @@
       "id": "中央:中央-2-18",
       "name": "中央-2-18",
       "type": "漁場",
-      "owner": "TIKW",
-      "protect_until": "安全時間要登録",
+      "owner": "JDX",
+      "protect_until": "2026/05/30 15:00",
       "x": 1874.0,
       "y": 1924.0,
       "importance": 3.0,
       "area": "中央",
-      "acquired_at": "2026/05/24 7:08",
-      "status": "要確認",
-      "memo": "赤字OCR IMG_0873.PNG / #8061 X:874 Y:924 Lv.6 / FHX -> TIKW / 時刻は前後スクショから推定",
+      "acquired_at": "2026/05/28 7:10",
+      "status": "保護中",
+      "memo": "Dropbox赤字OCR IMG_1305.PNG / #8061 X:874 Y:924 Lv.6 漁場 / TIKW -> JDX / 奪取",
       "visual_x": 2054.0,
       "visual_y": 2104.0,
-      "display_owner": "TIKW",
+      "display_owner": "JDX",
       "destroyed": false,
-      "affiliation": "enemy",
-      "strategic_color": "#dc2626",
+      "affiliation": "self",
+      "strategic_color": "#2563eb",
       "protection": {
-        "status": "unknown",
-        "hours_remaining": null,
-        "protect_until": null
+        "status": "protected",
+        "hours_remaining": 52.56,
+        "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
     {
@@ -48873,7 +48873,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -48923,7 +48923,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -3.34,
+        "hours_remaining": -3.44,
         "protect_until": "2026-05-28T07:00:00+09:00"
       }
     },
@@ -48998,7 +48998,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -49023,7 +49023,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -49048,7 +49048,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -49073,7 +49073,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -49098,7 +49098,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -11.34,
+        "hours_remaining": -11.44,
         "protect_until": "2026-05-27T23:00:00+09:00"
       }
     },
@@ -49248,7 +49248,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -49323,7 +49323,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "protected",
-        "hours_remaining": 52.66,
+        "hours_remaining": 52.56,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -49348,7 +49348,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -49398,7 +49398,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -49423,7 +49423,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -49498,7 +49498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -49548,7 +49548,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -49648,7 +49648,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -49698,7 +49698,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -49823,7 +49823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -49923,7 +49923,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50073,7 +50073,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "protected",
-        "hours_remaining": 52.66,
+        "hours_remaining": 52.56,
         "protect_until": "2026-05-30T15:00:00+09:00"
       }
     },
@@ -50098,7 +50098,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -115.34,
+        "hours_remaining": -115.44,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -50148,7 +50148,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -50173,7 +50173,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -50198,7 +50198,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -50248,7 +50248,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50373,7 +50373,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50398,7 +50398,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50423,7 +50423,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50473,7 +50473,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50548,7 +50548,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50598,7 +50598,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50623,7 +50623,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50648,7 +50648,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -115.34,
+        "hours_remaining": -115.44,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -50673,7 +50673,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50723,7 +50723,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -115.34,
+        "hours_remaining": -115.44,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -50748,7 +50748,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50773,7 +50773,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -50798,7 +50798,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -50898,7 +50898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -99.34,
+        "hours_remaining": -99.44,
         "protect_until": "2026-05-24T07:00:00+09:00"
       }
     },
@@ -50923,7 +50923,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -115.34,
+        "hours_remaining": -115.44,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -50998,7 +50998,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -115.34,
+        "hours_remaining": -115.44,
         "protect_until": "2026-05-23T15:00:00+09:00"
       }
     },
@@ -51023,7 +51023,7 @@
       "strategic_color": "#2563eb",
       "protection": {
         "status": "expired",
-        "hours_remaining": -107.34,
+        "hours_remaining": -107.44,
         "protect_until": "2026-05-23T23:00:00+09:00"
       }
     },
@@ -51073,7 +51073,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -187.34,
+        "hours_remaining": -187.44,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51098,7 +51098,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51148,7 +51148,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51173,7 +51173,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51223,7 +51223,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.34,
+        "hours_remaining": -179.44,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -51248,7 +51248,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.34,
+        "hours_remaining": -179.44,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -51273,7 +51273,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.34,
+        "hours_remaining": -179.44,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -51298,7 +51298,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.34,
+        "hours_remaining": -179.44,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -51348,7 +51348,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.34,
+        "hours_remaining": -179.44,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -51373,7 +51373,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -179.34,
+        "hours_remaining": -179.44,
         "protect_until": "2026-05-20T23:00:00+09:00"
       }
     },
@@ -51444,8 +51444,8 @@
       "visual_y": 1204.0,
       "display_owner": "JlZ",
       "destroyed": false,
-      "affiliation": "ally",
-      "strategic_color": "#16a34a",
+      "affiliation": "neutral",
+      "strategic_color": "#f8fafc",
       "protection": {
         "status": "unknown",
         "hours_remaining": null,
@@ -51498,7 +51498,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -187.34,
+        "hours_remaining": -187.44,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51548,7 +51548,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -187.34,
+        "hours_remaining": -187.44,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51623,7 +51623,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -187.34,
+        "hours_remaining": -187.44,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51698,7 +51698,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51723,7 +51723,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -187.34,
+        "hours_remaining": -187.44,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51748,7 +51748,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -187.34,
+        "hours_remaining": -187.44,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51773,7 +51773,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51798,7 +51798,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51823,7 +51823,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -187.34,
+        "hours_remaining": -187.44,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51848,7 +51848,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51873,7 +51873,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -187.34,
+        "hours_remaining": -187.44,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51898,7 +51898,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51923,7 +51923,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -187.34,
+        "hours_remaining": -187.44,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51948,7 +51948,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -187.34,
+        "hours_remaining": -187.44,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -51973,7 +51973,7 @@
       "strategic_color": "#16a34a",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -51998,7 +51998,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -52023,7 +52023,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -52048,7 +52048,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -187.34,
+        "hours_remaining": -187.44,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -52073,7 +52073,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -187.34,
+        "hours_remaining": -187.44,
         "protect_until": "2026-05-20T15:00:00+09:00"
       }
     },
@@ -52098,7 +52098,7 @@
       "strategic_color": "#dc2626",
       "protection": {
         "status": "expired",
-        "hours_remaining": -171.34,
+        "hours_remaining": -171.44,
         "protect_until": "2026-05-21T07:00:00+09:00"
       }
     },
@@ -67595,26 +67595,6 @@
       "weight": 1.0
     },
     {
-      "source": "#476:I-1",
-      "target": "#476:i-2",
-      "weight": 1.0
-    },
-    {
-      "source": "#476:I-3",
-      "target": "#476:i-2",
-      "weight": 1.0
-    },
-    {
-      "source": "#476:J-1",
-      "target": "#476:i-2",
-      "weight": 1.0
-    },
-    {
-      "source": "#476:J-3",
-      "target": "#476:i-2",
-      "weight": 1.0
-    },
-    {
       "source": "#476:I-3",
       "target": "#476:i-4",
       "weight": 1.0
@@ -68172,46 +68152,6 @@
     {
       "source": "#480:E-9",
       "target": "#480:d-8",
-      "weight": 1.0
-    },
-    {
-      "source": "#480:D-9",
-      "target": "#480:d-10",
-      "weight": 1.0
-    },
-    {
-      "source": "#480:D-11",
-      "target": "#480:d-10",
-      "weight": 1.0
-    },
-    {
-      "source": "#480:E-9",
-      "target": "#480:d-10",
-      "weight": 1.0
-    },
-    {
-      "source": "#480:E-11",
-      "target": "#480:d-10",
-      "weight": 1.0
-    },
-    {
-      "source": "#480:D-11",
-      "target": "#480:d-12",
-      "weight": 1.0
-    },
-    {
-      "source": "#480:D-13",
-      "target": "#480:d-12",
-      "weight": 1.0
-    },
-    {
-      "source": "#480:E-11",
-      "target": "#480:d-12",
-      "weight": 1.0
-    },
-    {
-      "source": "#480:E-13",
-      "target": "#480:d-12",
       "weight": 1.0
     },
     {
@@ -71755,46 +71695,6 @@
       "weight": 1.0
     },
     {
-      "source": "#509:D-9",
-      "target": "#509:d-10",
-      "weight": 1.0
-    },
-    {
-      "source": "#509:D-11",
-      "target": "#509:d-10",
-      "weight": 1.0
-    },
-    {
-      "source": "#509:E-9",
-      "target": "#509:d-10",
-      "weight": 1.0
-    },
-    {
-      "source": "#509:E-11",
-      "target": "#509:d-10",
-      "weight": 1.0
-    },
-    {
-      "source": "#509:D-11",
-      "target": "#509:d-12",
-      "weight": 1.0
-    },
-    {
-      "source": "#509:D-13",
-      "target": "#509:d-12",
-      "weight": 1.0
-    },
-    {
-      "source": "#509:E-11",
-      "target": "#509:d-12",
-      "weight": 1.0
-    },
-    {
-      "source": "#509:E-13",
-      "target": "#509:d-12",
-      "weight": 1.0
-    },
-    {
       "source": "#509:D-13",
       "target": "#509:d-14",
       "weight": 1.0
@@ -72552,26 +72452,6 @@
     {
       "source": "#509:J-13",
       "target": "#509:i-12",
-      "weight": 1.0
-    },
-    {
-      "source": "#509:I-15",
-      "target": "#509:i-16",
-      "weight": 1.0
-    },
-    {
-      "source": "#509:I-17",
-      "target": "#509:i-16",
-      "weight": 1.0
-    },
-    {
-      "source": "#509:J-15",
-      "target": "#509:i-16",
-      "weight": 1.0
-    },
-    {
-      "source": "#509:J-17",
-      "target": "#509:i-16",
       "weight": 1.0
     },
     {
@@ -73415,26 +73295,6 @@
       "weight": 1.0
     },
     {
-      "source": "#511:E-7",
-      "target": "#511:e-8",
-      "weight": 1.0
-    },
-    {
-      "source": "#511:E-9",
-      "target": "#511:e-8",
-      "weight": 1.0
-    },
-    {
-      "source": "#511:F-7",
-      "target": "#511:e-8",
-      "weight": 1.0
-    },
-    {
-      "source": "#511:F-9",
-      "target": "#511:e-8",
-      "weight": 1.0
-    },
-    {
       "source": "#511:E-9",
       "target": "#511:e-10",
       "weight": 1.0
@@ -73735,26 +73595,6 @@
       "weight": 1.0
     },
     {
-      "source": "#511:G-5",
-      "target": "#511:g-6",
-      "weight": 1.0
-    },
-    {
-      "source": "#511:G-7",
-      "target": "#511:g-6",
-      "weight": 1.0
-    },
-    {
-      "source": "#511:H-5",
-      "target": "#511:g-6",
-      "weight": 1.0
-    },
-    {
-      "source": "#511:H-7",
-      "target": "#511:g-6",
-      "weight": 1.0
-    },
-    {
       "source": "#511:G-7",
       "target": "#511:g-8",
       "weight": 1.0
@@ -73772,26 +73612,6 @@
     {
       "source": "#511:H-9",
       "target": "#511:g-8",
-      "weight": 1.0
-    },
-    {
-      "source": "#511:G-9",
-      "target": "#511:g-10",
-      "weight": 1.0
-    },
-    {
-      "source": "#511:G-11",
-      "target": "#511:g-10",
-      "weight": 1.0
-    },
-    {
-      "source": "#511:H-9",
-      "target": "#511:g-10",
-      "weight": 1.0
-    },
-    {
-      "source": "#511:H-11",
-      "target": "#511:g-10",
       "weight": 1.0
     },
     {
@@ -76492,46 +76312,6 @@
     {
       "source": "#534:E-11",
       "target": "#534:d-10",
-      "weight": 1.0
-    },
-    {
-      "source": "#534:D-11",
-      "target": "#534:d-12",
-      "weight": 1.0
-    },
-    {
-      "source": "#534:D-13",
-      "target": "#534:d-12",
-      "weight": 1.0
-    },
-    {
-      "source": "#534:E-11",
-      "target": "#534:d-12",
-      "weight": 1.0
-    },
-    {
-      "source": "#534:E-13",
-      "target": "#534:d-12",
-      "weight": 1.0
-    },
-    {
-      "source": "#534:D-13",
-      "target": "#534:d-14",
-      "weight": 1.0
-    },
-    {
-      "source": "#534:D-15",
-      "target": "#534:d-14",
-      "weight": 1.0
-    },
-    {
-      "source": "#534:E-13",
-      "target": "#534:d-14",
-      "weight": 1.0
-    },
-    {
-      "source": "#534:E-15",
-      "target": "#534:d-14",
       "weight": 1.0
     },
     {
@@ -81437,15 +81217,15 @@
   ],
   "owner_affiliations": {
     "JDX": "self",
-    "476C": "enemy",
-    "476M": "enemy",
-    "476X": "enemy",
     "476A": "enemy",
     "476B": "enemy",
-    "476T": "enemy",
     "476Z": "enemy",
+    "476M": "enemy",
+    "476X": "enemy",
+    "476C": "enemy",
     "476H": "enemy",
     "476d": "enemy",
+    "476T": "enemy",
     "476K": "enemy",
     "299": "enemy",
     "WoW3": "ally",
@@ -81484,6 +81264,7 @@
     "CDf8": "enemy",
     "KTVS": "self",
     "hOe": "enemy",
+    "IMP": "enemy",
     "hMt": "enemy",
     "YDR": "enemy",
     "fzn": "enemy",
@@ -81506,6 +81287,8 @@
     "K4TR": "enemy",
     "u3o": "enemy",
     "JL0": "ally",
+    "WUG": "enemy",
+    "2N7": "ally",
     "SVh": "ally",
     "sbM": "ally",
     "5DU": "enemy",
@@ -81514,12 +81297,9 @@
     "NBNH": "enemy",
     "EDFS": "enemy",
     "SVa": "ally",
-    "2N7": "ally",
     "JLO": "ally",
     "DaNG": "ally",
-    "WUG": "enemy",
     "OOEf": "ally",
-    "JlZ": "ally",
     "SVo": "ally",
     "UrE": "enemy",
     "ALi": "enemy",
@@ -81535,6 +81315,7 @@
     "SHA0": "self",
     "MOE": "self",
     "sg3": "self",
+    "Sg3": "self",
     "Sq3": "self",
     "nol": "self",
     "Ryu1": "self",
@@ -81962,7 +81743,6 @@
       "#476:i-14",
       "#476:i-16",
       "#476:i-18",
-      "#476:i-2",
       "#476:i-20",
       "#476:i-4",
       "#476:i-6",
@@ -82103,8 +81883,6 @@
       "#480:c-20",
       "#480:c-4",
       "#480:c-8",
-      "#480:d-10",
-      "#480:d-12",
       "#480:d-14",
       "#480:d-16",
       "#480:d-18",
@@ -82524,8 +82302,6 @@
       "#509:c-4",
       "#509:c-6",
       "#509:c-8",
-      "#509:d-10",
-      "#509:d-12",
       "#509:d-14",
       "#509:d-16",
       "#509:d-18",
@@ -82564,7 +82340,6 @@
       "#509:h-8",
       "#509:i-10",
       "#509:i-12",
-      "#509:i-16",
       "#509:i-18",
       "#509:i-2",
       "#509:i-4",
@@ -82737,7 +82512,6 @@
       "#511:e-18",
       "#511:e-20",
       "#511:e-6",
-      "#511:e-8",
       "#511:f-10",
       "#511:f-12",
       "#511:f-14",
@@ -82747,13 +82521,11 @@
       "#511:f-4",
       "#511:f-6",
       "#511:f-8",
-      "#511:g-10",
       "#511:g-12",
       "#511:g-14",
       "#511:g-16",
       "#511:g-20",
       "#511:g-4",
-      "#511:g-6",
       "#511:g-8",
       "#511:h-16",
       "#511:h-18",
@@ -83124,8 +82896,6 @@
       "#534:c-4",
       "#534:c-6",
       "#534:d-10",
-      "#534:d-12",
-      "#534:d-14",
       "#534:d-16",
       "#534:d-18",
       "#534:d-2",
@@ -83466,6 +83236,9 @@
       "#476:g-2"
     ],
     [
+      "#476:i-2"
+    ],
+    [
       "#480:a-18"
     ],
     [
@@ -83494,6 +83267,12 @@
     ],
     [
       "#480:a-6"
+    ],
+    [
+      "#480:d-10"
+    ],
+    [
+      "#480:d-12"
     ],
     [
       "#480:b-6"
@@ -83571,6 +83350,9 @@
       "#509:j-20"
     ],
     [
+      "#509:d-10"
+    ],
+    [
       "#509:a-10"
     ],
     [
@@ -83595,6 +83377,9 @@
       "#509:c-18"
     ],
     [
+      "#509:d-12"
+    ],
+    [
       "#509:e-16"
     ],
     [
@@ -83617,6 +83402,9 @@
     ],
     [
       "#509:i-14"
+    ],
+    [
+      "#509:i-16"
     ],
     [
       "#511:h-2"
@@ -83655,10 +83443,16 @@
       "#511:d-14"
     ],
     [
+      "#511:g-10"
+    ],
+    [
       "#511:j-20"
     ],
     [
       "#511:h-14"
+    ],
+    [
+      "#511:e-8"
     ],
     [
       "#511:b-4"
@@ -83677,6 +83471,9 @@
     ],
     [
       "#511:g-18"
+    ],
+    [
+      "#511:g-6"
     ],
     [
       "#511:h-10"
@@ -83760,10 +83557,16 @@
       "#534:a-8"
     ],
     [
+      "#534:d-14"
+    ],
+    [
       "#534:c-10"
     ],
     [
       "#534:c-8"
+    ],
+    [
+      "#534:d-12"
     ],
     [
       "中央:中央-11-15"
@@ -84347,6 +84150,7 @@
     "#440:j-6",
     "#440:j-8",
     "#476:g-2",
+    "#476:i-2",
     "#476:j-10",
     "#476:j-12",
     "#476:j-14",
@@ -84372,6 +84176,8 @@
     "#480:c-14",
     "#480:c-16",
     "#480:c-6",
+    "#480:d-10",
+    "#480:d-12",
     "#503:a-2",
     "#503:b-2",
     "#503:c-2",
@@ -84393,6 +84199,8 @@
     "#509:c-10",
     "#509:c-18",
     "#509:c-20",
+    "#509:d-10",
+    "#509:d-12",
     "#509:d-20",
     "#509:e-16",
     "#509:e-20",
@@ -84406,6 +84214,7 @@
     "#509:h-18",
     "#509:h-20",
     "#509:i-14",
+    "#509:i-16",
     "#509:i-20",
     "#509:j-20",
     "#511:a-2",
@@ -84420,9 +84229,12 @@
     "#511:e-14",
     "#511:e-2",
     "#511:e-4",
+    "#511:e-8",
     "#511:f-2",
+    "#511:g-10",
     "#511:g-18",
     "#511:g-2",
+    "#511:g-6",
     "#511:h-10",
     "#511:h-12",
     "#511:h-14",
@@ -84457,6 +84269,8 @@
     "#534:a-8",
     "#534:c-10",
     "#534:c-8",
+    "#534:d-12",
+    "#534:d-14",
     "中央:中央-10-12",
     "中央:中央-10-13",
     "中央:中央-10-14",
@@ -84969,25 +84783,25 @@
     "#476:H-5": 0.0037,
     "#476:H-7": 0.0037,
     "#476:H-9": 0.0037,
-    "#476:I-1": 0.0023,
+    "#476:I-1": 0.0018,
     "#476:I-11": 0.0037,
     "#476:I-13": 0.0037,
     "#476:I-15": 0.0037,
     "#476:I-17": 0.0037,
     "#476:I-19": 0.0037,
     "#476:I-21": 0.0032,
-    "#476:I-3": 0.0037,
+    "#476:I-3": 0.0032,
     "#476:I-5": 0.0037,
     "#476:I-7": 0.0037,
     "#476:I-9": 0.0037,
-    "#476:J-1": 0.0018,
+    "#476:J-1": 0.0014,
     "#476:J-11": 0.0028,
     "#476:J-13": 0.0028,
     "#476:J-15": 0.0028,
     "#476:J-17": 0.0028,
     "#476:J-19": 0.0028,
     "#476:J-21": 0.0028,
-    "#476:J-3": 0.0028,
+    "#476:J-3": 0.0023,
     "#476:J-5": 0.0028,
     "#476:J-7": 0.0028,
     "#476:J-9": 0.0028,
@@ -85087,7 +84901,7 @@
     "#476:i-14": 0.0018,
     "#476:i-16": 0.0018,
     "#476:i-18": 0.0018,
-    "#476:i-2": 0.0018,
+    "#476:i-2": 0.0,
     "#476:i-20": 0.0018,
     "#476:i-4": 0.0018,
     "#476:i-6": 0.0018,
@@ -85136,8 +84950,8 @@
     "#480:C-7": 0.0023,
     "#480:C-9": 0.0032,
     "#480:D-1": 0.0032,
-    "#480:D-11": 0.0037,
-    "#480:D-13": 0.0032,
+    "#480:D-11": 0.0028,
+    "#480:D-13": 0.0028,
     "#480:D-15": 0.0028,
     "#480:D-17": 0.0032,
     "#480:D-19": 0.0037,
@@ -85145,10 +84959,10 @@
     "#480:D-3": 0.0037,
     "#480:D-5": 0.0032,
     "#480:D-7": 0.0032,
-    "#480:D-9": 0.0037,
+    "#480:D-9": 0.0032,
     "#480:E-1": 0.0032,
-    "#480:E-11": 0.0037,
-    "#480:E-13": 0.0037,
+    "#480:E-11": 0.0028,
+    "#480:E-13": 0.0032,
     "#480:E-15": 0.0037,
     "#480:E-17": 0.0037,
     "#480:E-19": 0.0037,
@@ -85156,7 +84970,7 @@
     "#480:E-3": 0.0037,
     "#480:E-5": 0.0037,
     "#480:E-7": 0.0037,
-    "#480:E-9": 0.0037,
+    "#480:E-9": 0.0032,
     "#480:F-1": 0.0032,
     "#480:F-11": 0.0037,
     "#480:F-13": 0.0037,
@@ -85253,8 +85067,8 @@
     "#480:c-4": 0.0018,
     "#480:c-6": 0.0,
     "#480:c-8": 0.0018,
-    "#480:d-10": 0.0018,
-    "#480:d-12": 0.0018,
+    "#480:d-10": 0.0,
+    "#480:d-12": 0.0,
     "#480:d-14": 0.0018,
     "#480:d-16": 0.0018,
     "#480:d-18": 0.0018,
@@ -85578,8 +85392,8 @@
     "#509:C-7": 0.0037,
     "#509:C-9": 0.0032,
     "#509:D-1": 0.0037,
-    "#509:D-11": 0.0032,
-    "#509:D-13": 0.0037,
+    "#509:D-11": 0.0023,
+    "#509:D-13": 0.0032,
     "#509:D-15": 0.0037,
     "#509:D-17": 0.0032,
     "#509:D-19": 0.0023,
@@ -85587,10 +85401,10 @@
     "#509:D-3": 0.0037,
     "#509:D-5": 0.0037,
     "#509:D-7": 0.0037,
-    "#509:D-9": 0.0032,
+    "#509:D-9": 0.0028,
     "#509:E-1": 0.0037,
-    "#509:E-11": 0.0037,
-    "#509:E-13": 0.0037,
+    "#509:E-11": 0.0028,
+    "#509:E-13": 0.0032,
     "#509:E-15": 0.0032,
     "#509:E-17": 0.0032,
     "#509:E-19": 0.0028,
@@ -85598,7 +85412,7 @@
     "#509:E-3": 0.0037,
     "#509:E-5": 0.0037,
     "#509:E-7": 0.0037,
-    "#509:E-9": 0.0037,
+    "#509:E-9": 0.0032,
     "#509:F-1": 0.0037,
     "#509:F-11": 0.0037,
     "#509:F-13": 0.0037,
@@ -85635,8 +85449,8 @@
     "#509:I-1": 0.0037,
     "#509:I-11": 0.0037,
     "#509:I-13": 0.0032,
-    "#509:I-15": 0.0028,
-    "#509:I-17": 0.0028,
+    "#509:I-15": 0.0023,
+    "#509:I-17": 0.0023,
     "#509:I-19": 0.0023,
     "#509:I-21": 0.0028,
     "#509:I-3": 0.0037,
@@ -85646,8 +85460,8 @@
     "#509:J-1": 0.0037,
     "#509:J-11": 0.0037,
     "#509:J-13": 0.0032,
-    "#509:J-15": 0.0032,
-    "#509:J-17": 0.0037,
+    "#509:J-15": 0.0028,
+    "#509:J-17": 0.0032,
     "#509:J-19": 0.0028,
     "#509:J-21": 0.0028,
     "#509:J-3": 0.0037,
@@ -85695,8 +85509,8 @@
     "#509:c-4": 0.0018,
     "#509:c-6": 0.0018,
     "#509:c-8": 0.0018,
-    "#509:d-10": 0.0018,
-    "#509:d-12": 0.0018,
+    "#509:d-10": 0.0,
+    "#509:d-12": 0.0,
     "#509:d-14": 0.0018,
     "#509:d-16": 0.0018,
     "#509:d-18": 0.0018,
@@ -85748,7 +85562,7 @@
     "#509:i-10": 0.0018,
     "#509:i-12": 0.0018,
     "#509:i-14": 0.0,
-    "#509:i-16": 0.0018,
+    "#509:i-16": 0.0,
     "#509:i-18": 0.0018,
     "#509:i-2": 0.0018,
     "#509:i-20": 0.0,
@@ -85818,8 +85632,8 @@
     "#511:E-21": 0.0037,
     "#511:E-3": 0.0023,
     "#511:E-5": 0.0032,
-    "#511:E-7": 0.0037,
-    "#511:E-9": 0.0037,
+    "#511:E-7": 0.0032,
+    "#511:E-9": 0.0032,
     "#511:F-1": 0.0028,
     "#511:F-11": 0.0037,
     "#511:F-13": 0.0032,
@@ -85829,30 +85643,30 @@
     "#511:F-21": 0.0037,
     "#511:F-3": 0.0023,
     "#511:F-5": 0.0032,
-    "#511:F-7": 0.0037,
-    "#511:F-9": 0.0037,
+    "#511:F-7": 0.0032,
+    "#511:F-9": 0.0032,
     "#511:G-1": 0.0028,
-    "#511:G-11": 0.0037,
+    "#511:G-11": 0.0032,
     "#511:G-13": 0.0037,
     "#511:G-15": 0.0037,
     "#511:G-17": 0.0032,
     "#511:G-19": 0.0032,
     "#511:G-21": 0.0037,
     "#511:G-3": 0.0028,
-    "#511:G-5": 0.0037,
-    "#511:G-7": 0.0037,
-    "#511:G-9": 0.0037,
+    "#511:G-5": 0.0032,
+    "#511:G-7": 0.0032,
+    "#511:G-9": 0.0032,
     "#511:H-1": 0.0028,
-    "#511:H-11": 0.0028,
+    "#511:H-11": 0.0023,
     "#511:H-13": 0.0028,
     "#511:H-15": 0.0032,
     "#511:H-17": 0.0032,
     "#511:H-19": 0.0028,
     "#511:H-21": 0.0032,
     "#511:H-3": 0.0028,
-    "#511:H-5": 0.0032,
-    "#511:H-7": 0.0032,
-    "#511:H-9": 0.0032,
+    "#511:H-5": 0.0028,
+    "#511:H-7": 0.0028,
+    "#511:H-9": 0.0028,
     "#511:I-1": 0.0028,
     "#511:I-11": 0.0028,
     "#511:I-13": 0.0028,
@@ -85935,7 +85749,7 @@
     "#511:e-20": 0.0018,
     "#511:e-4": 0.0,
     "#511:e-6": 0.0018,
-    "#511:e-8": 0.0018,
+    "#511:e-8": 0.0,
     "#511:f-10": 0.0018,
     "#511:f-12": 0.0018,
     "#511:f-14": 0.0018,
@@ -85946,7 +85760,7 @@
     "#511:f-4": 0.0018,
     "#511:f-6": 0.0018,
     "#511:f-8": 0.0018,
-    "#511:g-10": 0.0018,
+    "#511:g-10": 0.0,
     "#511:g-12": 0.0018,
     "#511:g-14": 0.0018,
     "#511:g-16": 0.0018,
@@ -85954,7 +85768,7 @@
     "#511:g-2": 0.0,
     "#511:g-20": 0.0018,
     "#511:g-4": 0.0018,
-    "#511:g-6": 0.0018,
+    "#511:g-6": 0.0,
     "#511:g-8": 0.0018,
     "#511:h-10": 0.0,
     "#511:h-12": 0.0,
@@ -86241,9 +86055,9 @@
     "#534:C-7": 0.0032,
     "#534:C-9": 0.0028,
     "#534:D-1": 0.0023,
-    "#534:D-11": 0.0032,
-    "#534:D-13": 0.0037,
-    "#534:D-15": 0.0037,
+    "#534:D-11": 0.0028,
+    "#534:D-13": 0.0028,
+    "#534:D-15": 0.0032,
     "#534:D-17": 0.0037,
     "#534:D-19": 0.0037,
     "#534:D-21": 0.0037,
@@ -86252,9 +86066,9 @@
     "#534:D-7": 0.0032,
     "#534:D-9": 0.0028,
     "#534:E-1": 0.0023,
-    "#534:E-11": 0.0037,
-    "#534:E-13": 0.0037,
-    "#534:E-15": 0.0037,
+    "#534:E-11": 0.0032,
+    "#534:E-13": 0.0028,
+    "#534:E-15": 0.0032,
     "#534:E-17": 0.0037,
     "#534:E-19": 0.0037,
     "#534:E-21": 0.0037,
@@ -86359,8 +86173,8 @@
     "#534:c-6": 0.0018,
     "#534:c-8": 0.0,
     "#534:d-10": 0.0018,
-    "#534:d-12": 0.0018,
-    "#534:d-14": 0.0018,
+    "#534:d-12": 0.0,
+    "#534:d-14": 0.0,
     "#534:d-16": 0.0018,
     "#534:d-18": 0.0018,
     "#534:d-2": 0.0018,
@@ -86828,127 +86642,127 @@
     "自動（エリア:座標）": 0.0
   },
   "betweenness_centrality": {
-    "#440:A-1": 0.0013,
+    "#440:A-1": 0.0012,
     "#440:A-11": 0.0011,
-    "#440:A-13": 0.001,
+    "#440:A-13": 0.0009,
     "#440:A-15": 0.0008,
     "#440:A-17": 0.0006,
     "#440:A-19": 0.0004,
     "#440:A-21": 0.0,
-    "#440:A-3": 0.0013,
-    "#440:A-5": 0.0013,
+    "#440:A-3": 0.0012,
+    "#440:A-5": 0.0012,
     "#440:A-7": 0.0012,
-    "#440:A-9": 0.0012,
-    "#440:B-1": 0.0048,
+    "#440:A-9": 0.0011,
+    "#440:B-1": 0.0047,
     "#440:B-11": 0.0041,
     "#440:B-13": 0.0037,
-    "#440:B-15": 0.0033,
-    "#440:B-17": 0.0027,
+    "#440:B-15": 0.0032,
+    "#440:B-17": 0.0026,
     "#440:B-19": 0.0018,
     "#440:B-21": 0.0004,
     "#440:B-3": 0.0047,
-    "#440:B-5": 0.0048,
+    "#440:B-5": 0.0047,
     "#440:B-7": 0.0046,
     "#440:B-9": 0.0044,
-    "#440:C-1": 0.0083,
-    "#440:C-11": 0.0063,
+    "#440:C-1": 0.0082,
+    "#440:C-11": 0.0062,
     "#440:C-13": 0.0056,
     "#440:C-15": 0.0048,
     "#440:C-17": 0.0039,
-    "#440:C-19": 0.0027,
+    "#440:C-19": 0.0026,
     "#440:C-21": 0.0006,
-    "#440:C-3": 0.0076,
-    "#440:C-5": 0.0077,
+    "#440:C-3": 0.0075,
+    "#440:C-5": 0.0076,
     "#440:C-7": 0.0073,
-    "#440:C-9": 0.0069,
-    "#440:D-1": 0.0117,
-    "#440:D-11": 0.0079,
-    "#440:D-13": 0.007,
+    "#440:C-9": 0.0068,
+    "#440:D-1": 0.0116,
+    "#440:D-11": 0.0078,
+    "#440:D-13": 0.0069,
     "#440:D-15": 0.006,
     "#440:D-17": 0.0048,
-    "#440:D-19": 0.0033,
+    "#440:D-19": 0.0032,
     "#440:D-21": 0.0008,
-    "#440:D-3": 0.01,
-    "#440:D-5": 0.01,
-    "#440:D-7": 0.0094,
-    "#440:D-9": 0.0087,
-    "#440:E-1": 0.0147,
+    "#440:D-3": 0.0099,
+    "#440:D-5": 0.0099,
+    "#440:D-7": 0.0093,
+    "#440:D-9": 0.0086,
+    "#440:E-1": 0.0146,
     "#440:E-11": 0.009,
-    "#440:E-13": 0.0081,
+    "#440:E-13": 0.008,
     "#440:E-15": 0.007,
     "#440:E-17": 0.0056,
     "#440:E-19": 0.0037,
     "#440:E-21": 0.001,
     "#440:E-3": 0.0116,
-    "#440:E-5": 0.0116,
+    "#440:E-5": 0.0115,
     "#440:E-7": 0.0108,
-    "#440:E-9": 0.01,
+    "#440:E-9": 0.0099,
     "#440:F-1": 0.0168,
     "#440:F-11": 0.01,
     "#440:F-13": 0.009,
-    "#440:F-15": 0.0079,
-    "#440:F-17": 0.0063,
+    "#440:F-15": 0.0078,
+    "#440:F-17": 0.0062,
     "#440:F-19": 0.0041,
     "#440:F-21": 0.0011,
     "#440:F-3": 0.0125,
     "#440:F-5": 0.0126,
-    "#440:F-7": 0.0119,
+    "#440:F-7": 0.0118,
     "#440:F-9": 0.011,
-    "#440:G-1": 0.0191,
+    "#440:G-1": 0.0192,
     "#440:G-11": 0.0109,
     "#440:G-13": 0.0099,
-    "#440:G-15": 0.0087,
-    "#440:G-17": 0.0069,
+    "#440:G-15": 0.0086,
+    "#440:G-17": 0.0068,
     "#440:G-19": 0.0044,
-    "#440:G-21": 0.0012,
-    "#440:G-3": 0.0132,
+    "#440:G-21": 0.0011,
+    "#440:G-3": 0.0133,
     "#440:G-5": 0.0134,
     "#440:G-7": 0.0127,
     "#440:G-9": 0.0119,
     "#440:H-1": 0.0221,
-    "#440:H-11": 0.0117,
-    "#440:H-13": 0.0108,
-    "#440:H-15": 0.0094,
-    "#440:H-17": 0.0073,
+    "#440:H-11": 0.0118,
+    "#440:H-13": 0.0107,
+    "#440:H-15": 0.0093,
+    "#440:H-17": 0.0072,
     "#440:H-19": 0.0046,
     "#440:H-21": 0.0012,
     "#440:H-3": 0.014,
-    "#440:H-5": 0.0142,
-    "#440:H-7": 0.0135,
-    "#440:H-9": 0.0127,
-    "#440:I-1": 0.0248,
-    "#440:I-11": 0.0123,
+    "#440:H-5": 0.0141,
+    "#440:H-7": 0.0134,
+    "#440:H-9": 0.0126,
+    "#440:I-1": 0.0247,
+    "#440:I-11": 0.0124,
     "#440:I-13": 0.0114,
-    "#440:I-15": 0.0099,
-    "#440:I-17": 0.0076,
+    "#440:I-15": 0.0098,
+    "#440:I-17": 0.0075,
     "#440:I-19": 0.0047,
     "#440:I-21": 0.0013,
-    "#440:I-3": 0.0143,
-    "#440:I-5": 0.0145,
-    "#440:I-7": 0.014,
+    "#440:I-3": 0.0142,
+    "#440:I-5": 0.0144,
+    "#440:I-7": 0.0139,
     "#440:I-9": 0.0132,
-    "#440:J-1": 0.0267,
-    "#440:J-11": 0.012,
+    "#440:J-1": 0.0264,
+    "#440:J-11": 0.0121,
     "#440:J-13": 0.0112,
-    "#440:J-15": 0.0097,
-    "#440:J-17": 0.0073,
+    "#440:J-15": 0.0096,
+    "#440:J-17": 0.0072,
     "#440:J-19": 0.0045,
     "#440:J-21": 0.0013,
-    "#440:J-3": 0.0139,
-    "#440:J-5": 0.0139,
-    "#440:J-7": 0.0135,
+    "#440:J-3": 0.0138,
+    "#440:J-5": 0.0138,
+    "#440:J-7": 0.0134,
     "#440:J-9": 0.0127,
-    "#440:K-1": 0.0624,
-    "#440:K-11": 0.0154,
+    "#440:K-1": 0.0614,
+    "#440:K-11": 0.0156,
     "#440:K-13": 0.0137,
-    "#440:K-15": 0.0112,
-    "#440:K-17": 0.0078,
+    "#440:K-15": 0.011,
+    "#440:K-17": 0.0077,
     "#440:K-19": 0.0045,
     "#440:K-21": 0.0014,
-    "#440:K-3": 0.0253,
-    "#440:K-5": 0.0226,
-    "#440:K-7": 0.0202,
-    "#440:K-9": 0.0174,
+    "#440:K-3": 0.0249,
+    "#440:K-5": 0.0222,
+    "#440:K-7": 0.0201,
+    "#440:K-9": 0.0175,
     "#440:a-10": 0.0002,
     "#440:a-12": 0.0002,
     "#440:a-14": 0.0002,
@@ -86959,7 +86773,7 @@
     "#440:a-4": 0.0002,
     "#440:a-6": 0.0002,
     "#440:a-8": 0.0002,
-    "#440:b-10": 0.0005,
+    "#440:b-10": 0.0004,
     "#440:b-12": 0.0004,
     "#440:b-14": 0.0004,
     "#440:b-16": 0.0003,
@@ -86997,18 +86811,18 @@
     "#440:e-2": 0.001,
     "#440:e-20": 0.0002,
     "#440:e-4": 0.001,
-    "#440:e-6": 0.0009,
+    "#440:e-6": 0.001,
     "#440:e-8": 0.0009,
     "#440:f-10": 0.0009,
     "#440:f-12": 0.0008,
     "#440:f-14": 0.0008,
     "#440:f-16": 0.0006,
-    "#440:f-18": 0.0005,
-    "#440:f-2": 0.001,
+    "#440:f-18": 0.0004,
+    "#440:f-2": 0.0011,
     "#440:f-20": 0.0002,
     "#440:f-4": 0.001,
     "#440:f-6": 0.001,
-    "#440:f-8": 0.0009,
+    "#440:f-8": 0.001,
     "#440:g-10": 0.0009,
     "#440:g-12": 0.0009,
     "#440:g-14": 0.0008,
@@ -87029,7 +86843,7 @@
     "#440:h-4": 0.0009,
     "#440:h-6": 0.0009,
     "#440:h-8": 0.0009,
-    "#440:i-10": 0.0009,
+    "#440:i-10": 0.001,
     "#440:i-12": 0.0009,
     "#440:i-14": 0.0009,
     "#440:i-16": 0.0007,
@@ -87050,126 +86864,126 @@
     "#440:j-6": 0.0,
     "#440:j-8": 0.0,
     "#476:A-1": 0.0008,
-    "#476:A-11": 0.0197,
-    "#476:A-13": 0.0232,
-    "#476:A-15": 0.0271,
-    "#476:A-17": 0.0336,
-    "#476:A-19": 0.0586,
-    "#476:A-21": 0.0512,
+    "#476:A-11": 0.0195,
+    "#476:A-13": 0.023,
+    "#476:A-15": 0.0269,
+    "#476:A-17": 0.0333,
+    "#476:A-19": 0.0578,
+    "#476:A-21": 0.0506,
     "#476:A-3": 0.0041,
-    "#476:A-5": 0.0081,
+    "#476:A-5": 0.008,
     "#476:A-7": 0.012,
-    "#476:A-9": 0.016,
+    "#476:A-9": 0.0159,
     "#476:B-1": 0.001,
-    "#476:B-11": 0.0169,
-    "#476:B-13": 0.0199,
-    "#476:B-15": 0.0234,
-    "#476:B-17": 0.0288,
-    "#476:B-19": 0.0406,
-    "#476:B-21": 0.0353,
+    "#476:B-11": 0.0167,
+    "#476:B-13": 0.0197,
+    "#476:B-15": 0.0231,
+    "#476:B-17": 0.0285,
+    "#476:B-19": 0.04,
+    "#476:B-21": 0.0348,
     "#476:B-3": 0.0043,
     "#476:B-5": 0.0075,
-    "#476:B-7": 0.0107,
-    "#476:B-9": 0.0138,
+    "#476:B-7": 0.0106,
+    "#476:B-9": 0.0137,
     "#476:C-1": 0.0011,
-    "#476:C-11": 0.0176,
-    "#476:C-13": 0.0212,
-    "#476:C-15": 0.0252,
-    "#476:C-17": 0.0293,
-    "#476:C-19": 0.0353,
-    "#476:C-21": 0.0325,
-    "#476:C-3": 0.0047,
-    "#476:C-5": 0.0079,
-    "#476:C-7": 0.011,
-    "#476:C-9": 0.0142,
+    "#476:C-11": 0.0175,
+    "#476:C-13": 0.021,
+    "#476:C-15": 0.0249,
+    "#476:C-17": 0.029,
+    "#476:C-19": 0.0347,
+    "#476:C-21": 0.032,
+    "#476:C-3": 0.0046,
+    "#476:C-5": 0.0078,
+    "#476:C-7": 0.0109,
+    "#476:C-9": 0.0141,
     "#476:D-1": 0.0012,
-    "#476:D-11": 0.0182,
-    "#476:D-13": 0.0222,
-    "#476:D-15": 0.0263,
-    "#476:D-17": 0.0292,
-    "#476:D-19": 0.0323,
-    "#476:D-21": 0.0314,
-    "#476:D-3": 0.0049,
-    "#476:D-5": 0.0082,
-    "#476:D-7": 0.0113,
-    "#476:D-9": 0.0146,
+    "#476:D-11": 0.018,
+    "#476:D-13": 0.022,
+    "#476:D-15": 0.026,
+    "#476:D-17": 0.0289,
+    "#476:D-19": 0.0317,
+    "#476:D-21": 0.0309,
+    "#476:D-3": 0.0048,
+    "#476:D-5": 0.0081,
+    "#476:D-7": 0.0112,
+    "#476:D-9": 0.0145,
     "#476:E-1": 0.0012,
-    "#476:E-11": 0.0186,
-    "#476:E-13": 0.0228,
-    "#476:E-15": 0.0268,
-    "#476:E-17": 0.0291,
-    "#476:E-19": 0.0309,
-    "#476:E-21": 0.031,
+    "#476:E-11": 0.0184,
+    "#476:E-13": 0.0226,
+    "#476:E-15": 0.0266,
+    "#476:E-17": 0.0287,
+    "#476:E-19": 0.0304,
+    "#476:E-21": 0.0305,
     "#476:E-3": 0.0049,
-    "#476:E-5": 0.0084,
-    "#476:E-7": 0.0116,
-    "#476:E-9": 0.0149,
+    "#476:E-5": 0.0083,
+    "#476:E-7": 0.0114,
+    "#476:E-9": 0.0147,
     "#476:F-1": 0.0012,
-    "#476:F-11": 0.0187,
-    "#476:F-13": 0.0228,
-    "#476:F-15": 0.0269,
-    "#476:F-17": 0.0291,
-    "#476:F-19": 0.0307,
-    "#476:F-21": 0.031,
-    "#476:F-3": 0.0049,
-    "#476:F-5": 0.0084,
-    "#476:F-7": 0.0116,
-    "#476:F-9": 0.015,
+    "#476:F-11": 0.0185,
+    "#476:F-13": 0.0227,
+    "#476:F-15": 0.0267,
+    "#476:F-17": 0.0287,
+    "#476:F-19": 0.0302,
+    "#476:F-21": 0.0305,
+    "#476:F-3": 0.0048,
+    "#476:F-5": 0.0082,
+    "#476:F-7": 0.0114,
+    "#476:F-9": 0.0148,
     "#476:G-1": 0.0012,
-    "#476:G-11": 0.0185,
-    "#476:G-13": 0.0225,
-    "#476:G-15": 0.0265,
-    "#476:G-17": 0.0293,
-    "#476:G-19": 0.0317,
-    "#476:G-21": 0.0313,
-    "#476:G-3": 0.0046,
-    "#476:G-5": 0.0083,
-    "#476:G-7": 0.0115,
-    "#476:G-9": 0.0149,
+    "#476:G-11": 0.0183,
+    "#476:G-13": 0.0224,
+    "#476:G-15": 0.0264,
+    "#476:G-17": 0.0289,
+    "#476:G-19": 0.0312,
+    "#476:G-21": 0.0309,
+    "#476:G-3": 0.0045,
+    "#476:G-5": 0.0081,
+    "#476:G-7": 0.0113,
+    "#476:G-9": 0.0147,
     "#476:H-1": 0.0012,
-    "#476:H-11": 0.018,
-    "#476:H-13": 0.0217,
-    "#476:H-15": 0.0257,
-    "#476:H-17": 0.0295,
-    "#476:H-19": 0.034,
-    "#476:H-21": 0.0321,
-    "#476:H-3": 0.0045,
-    "#476:H-5": 0.008,
-    "#476:H-7": 0.0112,
-    "#476:H-9": 0.0145,
+    "#476:H-11": 0.0179,
+    "#476:H-13": 0.0216,
+    "#476:H-15": 0.0255,
+    "#476:H-17": 0.0291,
+    "#476:H-19": 0.0335,
+    "#476:H-21": 0.0317,
+    "#476:H-3": 0.0043,
+    "#476:H-5": 0.0078,
+    "#476:H-7": 0.011,
+    "#476:H-9": 0.0144,
     "#476:I-1": 0.0011,
-    "#476:I-11": 0.0172,
+    "#476:I-11": 0.0171,
     "#476:I-13": 0.0204,
-    "#476:I-15": 0.0243,
-    "#476:I-17": 0.0295,
-    "#476:I-19": 0.038,
-    "#476:I-21": 0.0339,
-    "#476:I-3": 0.0044,
-    "#476:I-5": 0.0075,
-    "#476:I-7": 0.0107,
-    "#476:I-9": 0.014,
+    "#476:I-15": 0.0241,
+    "#476:I-17": 0.029,
+    "#476:I-19": 0.0375,
+    "#476:I-21": 0.0334,
+    "#476:I-3": 0.004,
+    "#476:I-5": 0.0074,
+    "#476:I-7": 0.0106,
+    "#476:I-9": 0.0139,
     "#476:J-1": 0.001,
-    "#476:J-11": 0.0163,
-    "#476:J-13": 0.0187,
-    "#476:J-15": 0.0222,
-    "#476:J-17": 0.0281,
-    "#476:J-19": 0.0443,
-    "#476:J-21": 0.0378,
-    "#476:J-3": 0.004,
-    "#476:J-5": 0.0071,
-    "#476:J-7": 0.0103,
-    "#476:J-9": 0.0135,
+    "#476:J-11": 0.0162,
+    "#476:J-13": 0.0188,
+    "#476:J-15": 0.0219,
+    "#476:J-17": 0.0275,
+    "#476:J-19": 0.0438,
+    "#476:J-21": 0.0374,
+    "#476:J-3": 0.0036,
+    "#476:J-5": 0.0069,
+    "#476:J-7": 0.0101,
+    "#476:J-9": 0.0134,
     "#476:K-1": 0.0009,
-    "#476:K-11": 0.0186,
-    "#476:K-13": 0.0217,
-    "#476:K-15": 0.0261,
-    "#476:K-17": 0.0336,
-    "#476:K-19": 0.0587,
-    "#476:K-21": 0.0505,
-    "#476:K-3": 0.004,
-    "#476:K-5": 0.0076,
-    "#476:K-7": 0.0114,
-    "#476:K-9": 0.0153,
+    "#476:K-11": 0.0184,
+    "#476:K-13": 0.0216,
+    "#476:K-15": 0.0257,
+    "#476:K-17": 0.0329,
+    "#476:K-19": 0.058,
+    "#476:K-21": 0.0499,
+    "#476:K-3": 0.0037,
+    "#476:K-5": 0.0074,
+    "#476:K-7": 0.0111,
+    "#476:K-9": 0.015,
     "#476:a-10": 0.0017,
     "#476:a-12": 0.0021,
     "#476:a-14": 0.0025,
@@ -87191,8 +87005,8 @@
     "#476:b-6": 0.0009,
     "#476:b-8": 0.0014,
     "#476:c-10": 0.0019,
-    "#476:c-12": 0.0025,
-    "#476:c-14": 0.003,
+    "#476:c-12": 0.0024,
+    "#476:c-14": 0.0029,
     "#476:c-16": 0.0033,
     "#476:c-18": 0.0029,
     "#476:c-2": 0.0002,
@@ -87201,14 +87015,14 @@
     "#476:c-6": 0.001,
     "#476:c-8": 0.0014,
     "#476:d-10": 0.002,
-    "#476:d-12": 0.0026,
-    "#476:d-14": 0.0031,
+    "#476:d-12": 0.0025,
+    "#476:d-14": 0.003,
     "#476:d-16": 0.0032,
     "#476:d-18": 0.0025,
     "#476:d-2": 0.0002,
     "#476:d-20": 0.0007,
     "#476:d-4": 0.0006,
-    "#476:d-6": 0.0011,
+    "#476:d-6": 0.001,
     "#476:d-8": 0.0015,
     "#476:e-10": 0.002,
     "#476:e-12": 0.0026,
@@ -87218,17 +87032,17 @@
     "#476:e-2": 0.0002,
     "#476:e-20": 0.0007,
     "#476:e-4": 0.0006,
-    "#476:e-6": 0.0011,
+    "#476:e-6": 0.001,
     "#476:e-8": 0.0015,
     "#476:f-10": 0.002,
     "#476:f-12": 0.0026,
     "#476:f-14": 0.0031,
-    "#476:f-16": 0.0032,
-    "#476:f-18": 0.0025,
+    "#476:f-16": 0.0031,
+    "#476:f-18": 0.0024,
     "#476:f-2": 0.0002,
     "#476:f-20": 0.0007,
     "#476:f-4": 0.0006,
-    "#476:f-6": 0.0011,
+    "#476:f-6": 0.001,
     "#476:f-8": 0.0015,
     "#476:g-10": 0.002,
     "#476:g-12": 0.0025,
@@ -87237,8 +87051,8 @@
     "#476:g-18": 0.0027,
     "#476:g-2": 0.0,
     "#476:g-20": 0.0008,
-    "#476:g-4": 0.0007,
-    "#476:g-6": 0.0011,
+    "#476:g-4": 0.0006,
+    "#476:g-6": 0.001,
     "#476:g-8": 0.0015,
     "#476:h-10": 0.0019,
     "#476:h-12": 0.0024,
@@ -87248,14 +87062,14 @@
     "#476:h-2": 0.0002,
     "#476:h-20": 0.001,
     "#476:h-4": 0.0005,
-    "#476:h-6": 0.001,
+    "#476:h-6": 0.0009,
     "#476:h-8": 0.0014,
     "#476:i-10": 0.0018,
     "#476:i-12": 0.0022,
     "#476:i-14": 0.0026,
-    "#476:i-16": 0.0033,
+    "#476:i-16": 0.0032,
     "#476:i-18": 0.0041,
-    "#476:i-2": 0.0002,
+    "#476:i-2": 0.0,
     "#476:i-20": 0.0016,
     "#476:i-4": 0.0005,
     "#476:i-6": 0.0009,
@@ -87270,127 +87084,127 @@
     "#476:j-4": 0.0,
     "#476:j-6": 0.0,
     "#476:j-8": 0.0,
-    "#480:A-1": 0.05,
+    "#480:A-1": 0.0495,
     "#480:A-11": 0.0191,
-    "#480:A-13": 0.0154,
-    "#480:A-15": 0.0116,
+    "#480:A-13": 0.0152,
+    "#480:A-15": 0.0115,
     "#480:A-17": 0.0078,
     "#480:A-19": 0.0041,
     "#480:A-21": 0.0009,
-    "#480:A-3": 0.0576,
-    "#480:A-5": 0.0321,
-    "#480:A-7": 0.026,
-    "#480:A-9": 0.0225,
-    "#480:B-1": 0.0375,
-    "#480:B-11": 0.0168,
-    "#480:B-13": 0.0135,
-    "#480:B-15": 0.0104,
+    "#480:A-3": 0.0569,
+    "#480:A-5": 0.0316,
+    "#480:A-7": 0.0256,
+    "#480:A-9": 0.0224,
+    "#480:B-1": 0.0372,
+    "#480:B-11": 0.0167,
+    "#480:B-13": 0.0133,
+    "#480:B-15": 0.0103,
     "#480:B-17": 0.0074,
     "#480:B-19": 0.0041,
     "#480:B-21": 0.001,
-    "#480:B-3": 0.0439,
-    "#480:B-5": 0.0253,
-    "#480:B-7": 0.0214,
-    "#480:B-9": 0.0196,
-    "#480:C-1": 0.0336,
-    "#480:C-11": 0.0177,
-    "#480:C-13": 0.0135,
-    "#480:C-15": 0.0102,
-    "#480:C-17": 0.0079,
+    "#480:B-3": 0.0435,
+    "#480:B-5": 0.0249,
+    "#480:B-7": 0.0208,
+    "#480:B-9": 0.0192,
+    "#480:C-1": 0.0332,
+    "#480:C-11": 0.0172,
+    "#480:C-13": 0.0133,
+    "#480:C-15": 0.0103,
+    "#480:C-17": 0.008,
     "#480:C-19": 0.0047,
     "#480:C-21": 0.0012,
-    "#480:C-3": 0.039,
-    "#480:C-5": 0.0284,
-    "#480:C-7": 0.0228,
-    "#480:C-9": 0.0201,
-    "#480:D-1": 0.0317,
-    "#480:D-11": 0.0181,
-    "#480:D-13": 0.0142,
-    "#480:D-15": 0.0106,
-    "#480:D-17": 0.0081,
+    "#480:C-3": 0.0388,
+    "#480:C-5": 0.0282,
+    "#480:C-7": 0.0222,
+    "#480:C-9": 0.0196,
+    "#480:D-1": 0.0313,
+    "#480:D-11": 0.0168,
+    "#480:D-13": 0.0141,
+    "#480:D-15": 0.0109,
+    "#480:D-17": 0.0082,
     "#480:D-19": 0.005,
     "#480:D-21": 0.0012,
-    "#480:D-3": 0.0348,
-    "#480:D-5": 0.03,
+    "#480:D-3": 0.0346,
+    "#480:D-5": 0.0301,
     "#480:D-7": 0.0238,
-    "#480:D-9": 0.0215,
-    "#480:E-1": 0.0308,
-    "#480:E-11": 0.018,
-    "#480:E-13": 0.0144,
-    "#480:E-15": 0.0114,
-    "#480:E-17": 0.0084,
-    "#480:E-19": 0.005,
+    "#480:D-9": 0.0205,
+    "#480:E-1": 0.0304,
+    "#480:E-11": 0.0168,
+    "#480:E-13": 0.0139,
+    "#480:E-15": 0.0116,
+    "#480:E-17": 0.0085,
+    "#480:E-19": 0.0051,
     "#480:E-21": 0.0012,
-    "#480:E-3": 0.0319,
-    "#480:E-5": 0.0295,
-    "#480:E-7": 0.0261,
-    "#480:E-9": 0.0221,
-    "#480:F-1": 0.0304,
-    "#480:F-11": 0.0181,
-    "#480:F-13": 0.0146,
-    "#480:F-15": 0.0117,
+    "#480:E-3": 0.0318,
+    "#480:E-5": 0.0296,
+    "#480:E-7": 0.0264,
+    "#480:E-9": 0.0214,
+    "#480:F-1": 0.03,
+    "#480:F-11": 0.0177,
+    "#480:F-13": 0.0144,
+    "#480:F-15": 0.0116,
     "#480:F-17": 0.0086,
     "#480:F-19": 0.0051,
     "#480:F-21": 0.0012,
-    "#480:F-3": 0.0306,
+    "#480:F-3": 0.0304,
     "#480:F-5": 0.0292,
-    "#480:F-7": 0.027,
-    "#480:F-9": 0.0225,
-    "#480:G-1": 0.0303,
-    "#480:G-11": 0.0181,
-    "#480:G-13": 0.0147,
-    "#480:G-15": 0.0116,
-    "#480:G-17": 0.0085,
+    "#480:F-7": 0.0268,
+    "#480:F-9": 0.0219,
+    "#480:G-1": 0.0299,
+    "#480:G-11": 0.018,
+    "#480:G-13": 0.0145,
+    "#480:G-15": 0.0115,
+    "#480:G-17": 0.0084,
     "#480:G-19": 0.005,
     "#480:G-21": 0.0012,
-    "#480:G-3": 0.0306,
-    "#480:G-5": 0.0292,
-    "#480:G-7": 0.0271,
-    "#480:G-9": 0.0224,
-    "#480:H-1": 0.0306,
+    "#480:G-3": 0.0304,
+    "#480:G-5": 0.0289,
+    "#480:G-7": 0.0266,
+    "#480:G-9": 0.0221,
+    "#480:H-1": 0.0302,
     "#480:H-11": 0.0179,
-    "#480:H-13": 0.0145,
-    "#480:H-15": 0.0114,
-    "#480:H-17": 0.0083,
+    "#480:H-13": 0.0144,
+    "#480:H-15": 0.0113,
+    "#480:H-17": 0.0082,
     "#480:H-19": 0.0049,
     "#480:H-21": 0.0012,
-    "#480:H-3": 0.0319,
-    "#480:H-5": 0.0294,
-    "#480:H-7": 0.0266,
-    "#480:H-9": 0.022,
-    "#480:I-1": 0.0317,
-    "#480:I-11": 0.0175,
-    "#480:I-13": 0.0142,
-    "#480:I-15": 0.011,
-    "#480:I-17": 0.008,
+    "#480:H-3": 0.0316,
+    "#480:H-5": 0.0289,
+    "#480:H-7": 0.026,
+    "#480:H-9": 0.0218,
+    "#480:I-1": 0.0313,
+    "#480:I-11": 0.0174,
+    "#480:I-13": 0.0141,
+    "#480:I-15": 0.0109,
+    "#480:I-17": 0.0079,
     "#480:I-19": 0.0047,
     "#480:I-21": 0.0011,
-    "#480:I-3": 0.035,
-    "#480:I-5": 0.0295,
-    "#480:I-7": 0.0254,
-    "#480:I-9": 0.0211,
-    "#480:J-1": 0.0345,
+    "#480:I-3": 0.0345,
+    "#480:I-5": 0.029,
+    "#480:I-7": 0.025,
+    "#480:I-9": 0.021,
+    "#480:J-1": 0.034,
     "#480:J-11": 0.0168,
-    "#480:J-13": 0.0137,
-    "#480:J-15": 0.0106,
+    "#480:J-13": 0.0136,
+    "#480:J-15": 0.0105,
     "#480:J-17": 0.0075,
     "#480:J-19": 0.0043,
     "#480:J-21": 0.001,
-    "#480:J-3": 0.0404,
-    "#480:J-5": 0.029,
-    "#480:J-7": 0.0235,
-    "#480:J-9": 0.0199,
-    "#480:K-1": 0.0504,
-    "#480:K-11": 0.0197,
-    "#480:K-13": 0.0159,
-    "#480:K-15": 0.012,
-    "#480:K-17": 0.0081,
+    "#480:J-3": 0.0397,
+    "#480:J-5": 0.0285,
+    "#480:J-7": 0.0232,
+    "#480:J-9": 0.0198,
+    "#480:K-1": 0.0498,
+    "#480:K-11": 0.0196,
+    "#480:K-13": 0.0158,
+    "#480:K-15": 0.0119,
+    "#480:K-17": 0.008,
     "#480:K-19": 0.0041,
     "#480:K-21": 0.0008,
-    "#480:K-3": 0.0587,
-    "#480:K-5": 0.0339,
-    "#480:K-7": 0.0273,
-    "#480:K-9": 0.0233,
+    "#480:K-3": 0.0577,
+    "#480:K-5": 0.0334,
+    "#480:K-7": 0.0271,
+    "#480:K-9": 0.0232,
     "#480:a-10": 0.0,
     "#480:a-12": 0.0,
     "#480:a-14": 0.0,
@@ -87401,9 +87215,9 @@
     "#480:a-4": 0.0,
     "#480:a-6": 0.0,
     "#480:a-8": 0.0,
-    "#480:b-10": 0.0024,
+    "#480:b-10": 0.0025,
     "#480:b-12": 0.0018,
-    "#480:b-14": 0.0014,
+    "#480:b-14": 0.0013,
     "#480:b-16": 0.001,
     "#480:b-18": 0.0005,
     "#480:b-2": 0.0016,
@@ -87411,7 +87225,7 @@
     "#480:b-4": 0.004,
     "#480:b-6": 0.0,
     "#480:b-8": 0.0,
-    "#480:c-10": 0.0024,
+    "#480:c-10": 0.0023,
     "#480:c-12": 0.0021,
     "#480:c-14": 0.0,
     "#480:c-16": 0.0,
@@ -87420,37 +87234,37 @@
     "#480:c-20": 0.0002,
     "#480:c-4": 0.0035,
     "#480:c-6": 0.0,
-    "#480:c-8": 0.003,
-    "#480:d-10": 0.0024,
-    "#480:d-12": 0.0019,
-    "#480:d-14": 0.0015,
+    "#480:c-8": 0.0028,
+    "#480:d-10": 0.0,
+    "#480:d-12": 0.0,
+    "#480:d-14": 0.0016,
     "#480:d-16": 0.0011,
     "#480:d-18": 0.0006,
     "#480:d-2": 0.0008,
     "#480:d-20": 0.0002,
     "#480:d-4": 0.0028,
-    "#480:d-6": 0.0036,
-    "#480:d-8": 0.0029,
+    "#480:d-6": 0.0037,
+    "#480:d-8": 0.003,
     "#480:e-10": 0.0025,
     "#480:e-12": 0.0019,
     "#480:e-14": 0.0015,
     "#480:e-16": 0.0011,
-    "#480:e-18": 0.0006,
+    "#480:e-18": 0.0007,
     "#480:e-2": 0.0007,
     "#480:e-20": 0.0002,
-    "#480:e-4": 0.0024,
+    "#480:e-4": 0.0025,
     "#480:e-6": 0.0034,
-    "#480:e-8": 0.0031,
+    "#480:e-8": 0.003,
     "#480:f-10": 0.0025,
     "#480:f-12": 0.002,
-    "#480:f-14": 0.0016,
+    "#480:f-14": 0.0015,
     "#480:f-16": 0.0011,
     "#480:f-18": 0.0007,
     "#480:f-2": 0.0007,
     "#480:f-20": 0.0002,
     "#480:f-4": 0.0024,
-    "#480:f-6": 0.0034,
-    "#480:f-8": 0.0031,
+    "#480:f-6": 0.0033,
+    "#480:f-8": 0.003,
     "#480:g-10": 0.0025,
     "#480:g-12": 0.002,
     "#480:g-14": 0.0015,
@@ -87459,142 +87273,142 @@
     "#480:g-2": 0.0007,
     "#480:g-20": 0.0002,
     "#480:g-4": 0.0025,
-    "#480:g-6": 0.0034,
-    "#480:g-8": 0.0031,
-    "#480:h-10": 0.0024,
+    "#480:g-6": 0.0033,
+    "#480:g-8": 0.003,
+    "#480:h-10": 0.0025,
     "#480:h-12": 0.0019,
-    "#480:h-14": 0.0015,
+    "#480:h-14": 0.0014,
     "#480:h-16": 0.001,
     "#480:h-18": 0.0006,
     "#480:h-2": 0.0008,
     "#480:h-20": 0.0002,
     "#480:h-4": 0.0029,
-    "#480:h-6": 0.0034,
+    "#480:h-6": 0.0033,
     "#480:h-8": 0.003,
     "#480:i-10": 0.0023,
-    "#480:i-12": 0.0018,
+    "#480:i-12": 0.0019,
     "#480:i-14": 0.0014,
     "#480:i-16": 0.0009,
     "#480:i-18": 0.0005,
     "#480:i-2": 0.0012,
     "#480:i-20": 0.0002,
-    "#480:i-4": 0.0037,
-    "#480:i-6": 0.0034,
+    "#480:i-4": 0.0036,
+    "#480:i-6": 0.0033,
     "#480:i-8": 0.0028,
     "#480:j-10": 0.0021,
-    "#480:j-12": 0.0017,
+    "#480:j-12": 0.0018,
     "#480:j-14": 0.0013,
     "#480:j-16": 0.0009,
     "#480:j-18": 0.0005,
     "#480:j-2": 0.002,
     "#480:j-20": 0.0002,
-    "#480:j-4": 0.0048,
-    "#480:j-6": 0.0031,
+    "#480:j-4": 0.0046,
+    "#480:j-6": 0.003,
     "#480:j-8": 0.0025,
-    "#503:A-1": 0.0632,
+    "#503:A-1": 0.062,
     "#503:A-11": 0.017,
-    "#503:A-13": 0.0146,
-    "#503:A-15": 0.0116,
+    "#503:A-13": 0.0145,
+    "#503:A-15": 0.0115,
     "#503:A-17": 0.0082,
-    "#503:A-19": 0.0048,
+    "#503:A-19": 0.0047,
     "#503:A-21": 0.0013,
-    "#503:A-3": 0.0262,
-    "#503:A-5": 0.0236,
-    "#503:A-7": 0.0209,
-    "#503:A-9": 0.0191,
-    "#503:B-1": 0.0251,
+    "#503:A-3": 0.0259,
+    "#503:A-5": 0.0234,
+    "#503:A-7": 0.0208,
+    "#503:A-9": 0.019,
+    "#503:B-1": 0.0248,
     "#503:B-11": 0.0128,
     "#503:B-13": 0.0117,
-    "#503:B-15": 0.01,
-    "#503:B-17": 0.0076,
+    "#503:B-15": 0.0099,
+    "#503:B-17": 0.0075,
     "#503:B-19": 0.0047,
     "#503:B-21": 0.0013,
-    "#503:B-3": 0.0137,
-    "#503:B-5": 0.014,
-    "#503:B-7": 0.0137,
-    "#503:B-9": 0.0134,
-    "#503:C-1": 0.0216,
-    "#503:C-11": 0.0128,
+    "#503:B-3": 0.0136,
+    "#503:B-5": 0.0139,
+    "#503:B-7": 0.0136,
+    "#503:B-9": 0.0133,
+    "#503:C-1": 0.0215,
+    "#503:C-11": 0.0127,
     "#503:C-13": 0.0116,
-    "#503:C-15": 0.01,
+    "#503:C-15": 0.0099,
     "#503:C-17": 0.0076,
-    "#503:C-19": 0.0048,
-    "#503:C-21": 0.0013,
+    "#503:C-19": 0.0047,
+    "#503:C-21": 0.0012,
     "#503:C-3": 0.0135,
-    "#503:C-5": 0.0143,
-    "#503:C-7": 0.0139,
-    "#503:C-9": 0.0135,
+    "#503:C-5": 0.0142,
+    "#503:C-7": 0.0138,
+    "#503:C-9": 0.0134,
     "#503:D-1": 0.0188,
     "#503:D-11": 0.0119,
-    "#503:D-13": 0.0109,
-    "#503:D-15": 0.0094,
+    "#503:D-13": 0.0108,
+    "#503:D-15": 0.0093,
     "#503:D-17": 0.0073,
     "#503:D-19": 0.0046,
     "#503:D-21": 0.0012,
     "#503:D-3": 0.0131,
     "#503:D-5": 0.0137,
     "#503:D-7": 0.0132,
-    "#503:D-9": 0.0127,
+    "#503:D-9": 0.0126,
     "#503:E-1": 0.0168,
     "#503:E-11": 0.011,
     "#503:E-13": 0.01,
     "#503:E-15": 0.0087,
     "#503:E-17": 0.0068,
     "#503:E-19": 0.0044,
-    "#503:E-21": 0.0012,
-    "#503:E-3": 0.0125,
+    "#503:E-21": 0.0011,
+    "#503:E-3": 0.0126,
     "#503:E-5": 0.0131,
     "#503:E-7": 0.0125,
-    "#503:E-9": 0.0119,
-    "#503:F-1": 0.0159,
+    "#503:E-9": 0.0118,
+    "#503:F-1": 0.0157,
     "#503:F-11": 0.0101,
     "#503:F-13": 0.0091,
     "#503:F-15": 0.0079,
     "#503:F-17": 0.0063,
     "#503:F-19": 0.0041,
     "#503:F-21": 0.0011,
-    "#503:F-3": 0.0124,
+    "#503:F-3": 0.0123,
     "#503:F-5": 0.0126,
-    "#503:F-7": 0.0119,
+    "#503:F-7": 0.0118,
     "#503:F-9": 0.011,
-    "#503:G-1": 0.0141,
+    "#503:G-1": 0.0137,
     "#503:G-11": 0.0091,
     "#503:G-13": 0.0081,
     "#503:G-15": 0.007,
     "#503:G-17": 0.0056,
     "#503:G-19": 0.0037,
     "#503:G-21": 0.001,
-    "#503:G-3": 0.0115,
-    "#503:G-5": 0.0117,
-    "#503:G-7": 0.0109,
-    "#503:G-9": 0.0101,
-    "#503:H-1": 0.011,
+    "#503:G-3": 0.0113,
+    "#503:G-5": 0.0115,
+    "#503:G-7": 0.0108,
+    "#503:G-9": 0.01,
+    "#503:H-1": 0.0108,
     "#503:H-11": 0.0079,
     "#503:H-13": 0.007,
     "#503:H-15": 0.006,
-    "#503:H-17": 0.0049,
-    "#503:H-19": 0.0033,
+    "#503:H-17": 0.0048,
+    "#503:H-19": 0.0032,
     "#503:H-21": 0.0008,
-    "#503:H-3": 0.0096,
-    "#503:H-5": 0.0099,
-    "#503:H-7": 0.0094,
-    "#503:H-9": 0.0087,
-    "#503:I-1": 0.0077,
-    "#503:I-11": 0.0063,
+    "#503:H-3": 0.0094,
+    "#503:H-5": 0.0098,
+    "#503:H-7": 0.0093,
+    "#503:H-9": 0.0086,
+    "#503:I-1": 0.0076,
+    "#503:I-11": 0.0062,
     "#503:I-13": 0.0056,
     "#503:I-15": 0.0048,
     "#503:I-17": 0.0039,
-    "#503:I-19": 0.0027,
+    "#503:I-19": 0.0026,
     "#503:I-21": 0.0006,
     "#503:I-3": 0.0071,
-    "#503:I-5": 0.0075,
+    "#503:I-5": 0.0074,
     "#503:I-7": 0.0072,
     "#503:I-9": 0.0068,
     "#503:J-1": 0.0044,
-    "#503:J-11": 0.0041,
+    "#503:J-11": 0.004,
     "#503:J-13": 0.0037,
     "#503:J-15": 0.0032,
-    "#503:J-17": 0.0027,
+    "#503:J-17": 0.0026,
     "#503:J-19": 0.0018,
     "#503:J-21": 0.0004,
     "#503:J-3": 0.0044,
@@ -87608,7 +87422,7 @@
     "#503:K-17": 0.0006,
     "#503:K-19": 0.0004,
     "#503:K-21": 0.0,
-    "#503:K-3": 0.0013,
+    "#503:K-3": 0.0012,
     "#503:K-5": 0.0012,
     "#503:K-7": 0.0012,
     "#503:K-9": 0.0011,
@@ -87659,8 +87473,8 @@
     "#503:e-18": 0.0004,
     "#503:e-2": 0.0,
     "#503:e-20": 0.0002,
-    "#503:e-4": 0.0009,
-    "#503:e-6": 0.0009,
+    "#503:e-4": 0.001,
+    "#503:e-6": 0.001,
     "#503:e-8": 0.0009,
     "#503:f-10": 0.0008,
     "#503:f-12": 0.0008,
@@ -87692,7 +87506,7 @@
     "#503:h-4": 0.0007,
     "#503:h-6": 0.0007,
     "#503:h-8": 0.0007,
-    "#503:i-10": 0.0005,
+    "#503:i-10": 0.0004,
     "#503:i-12": 0.0004,
     "#503:i-14": 0.0004,
     "#503:i-16": 0.0003,
@@ -87712,107 +87526,107 @@
     "#503:j-4": 0.0002,
     "#503:j-6": 0.0002,
     "#503:j-8": 0.0002,
-    "#509:A-1": 0.0511,
-    "#509:A-11": 0.0315,
-    "#509:A-13": 0.0317,
-    "#509:A-15": 0.0322,
-    "#509:A-17": 0.0341,
-    "#509:A-19": 0.0384,
-    "#509:A-21": 0.0505,
-    "#509:A-3": 0.0345,
-    "#509:A-5": 0.0325,
-    "#509:A-7": 0.0318,
-    "#509:A-9": 0.0316,
-    "#509:B-1": 0.0593,
-    "#509:B-11": 0.0305,
-    "#509:B-13": 0.0316,
-    "#509:B-15": 0.0347,
-    "#509:B-17": 0.0393,
-    "#509:B-19": 0.0451,
-    "#509:B-21": 0.0583,
-    "#509:B-3": 0.0414,
-    "#509:B-5": 0.0349,
-    "#509:B-7": 0.0317,
-    "#509:B-9": 0.0306,
-    "#509:C-1": 0.0341,
-    "#509:C-11": 0.0291,
-    "#509:C-13": 0.03,
-    "#509:C-15": 0.0308,
-    "#509:C-17": 0.0309,
-    "#509:C-19": 0.0268,
-    "#509:C-21": 0.0322,
-    "#509:C-3": 0.0293,
-    "#509:C-5": 0.0296,
-    "#509:C-7": 0.0292,
-    "#509:C-9": 0.0289,
-    "#509:D-1": 0.0274,
-    "#509:D-11": 0.0268,
-    "#509:D-13": 0.0273,
-    "#509:D-15": 0.0269,
-    "#509:D-17": 0.0239,
-    "#509:D-19": 0.0224,
-    "#509:D-21": 0.0256,
-    "#509:D-3": 0.0235,
+    "#509:A-1": 0.0506,
+    "#509:A-11": 0.0313,
+    "#509:A-13": 0.0315,
+    "#509:A-15": 0.0319,
+    "#509:A-17": 0.0338,
+    "#509:A-19": 0.038,
+    "#509:A-21": 0.05,
+    "#509:A-3": 0.0342,
+    "#509:A-5": 0.0323,
+    "#509:A-7": 0.0316,
+    "#509:A-9": 0.0314,
+    "#509:B-1": 0.0584,
+    "#509:B-11": 0.0306,
+    "#509:B-13": 0.0315,
+    "#509:B-15": 0.0343,
+    "#509:B-17": 0.0386,
+    "#509:B-19": 0.0441,
+    "#509:B-21": 0.0572,
+    "#509:B-3": 0.0406,
+    "#509:B-5": 0.0344,
+    "#509:B-7": 0.0315,
+    "#509:B-9": 0.0305,
+    "#509:C-1": 0.0334,
+    "#509:C-11": 0.0295,
+    "#509:C-13": 0.0298,
+    "#509:C-15": 0.03,
+    "#509:C-17": 0.0301,
+    "#509:C-19": 0.0263,
+    "#509:C-21": 0.0319,
+    "#509:C-3": 0.0284,
+    "#509:C-5": 0.0288,
+    "#509:C-7": 0.0287,
+    "#509:C-9": 0.0291,
+    "#509:D-1": 0.0276,
+    "#509:D-11": 0.0253,
+    "#509:D-13": 0.0256,
+    "#509:D-15": 0.0265,
+    "#509:D-17": 0.0241,
+    "#509:D-19": 0.0227,
+    "#509:D-21": 0.0257,
+    "#509:D-3": 0.0238,
     "#509:D-5": 0.0253,
-    "#509:D-7": 0.0262,
-    "#509:D-9": 0.0264,
+    "#509:D-7": 0.0258,
+    "#509:D-9": 0.0252,
     "#509:E-1": 0.0233,
-    "#509:E-11": 0.0227,
-    "#509:E-13": 0.0222,
+    "#509:E-11": 0.0211,
+    "#509:E-13": 0.0218,
     "#509:E-15": 0.0218,
-    "#509:E-17": 0.0202,
+    "#509:E-17": 0.0201,
     "#509:E-19": 0.0188,
-    "#509:E-21": 0.0216,
+    "#509:E-21": 0.0215,
     "#509:E-3": 0.0199,
-    "#509:E-5": 0.0212,
-    "#509:E-7": 0.0221,
-    "#509:E-9": 0.0227,
-    "#509:F-1": 0.0198,
-    "#509:F-11": 0.0184,
-    "#509:F-13": 0.0178,
-    "#509:F-15": 0.0167,
-    "#509:F-17": 0.0158,
-    "#509:F-19": 0.015,
-    "#509:F-21": 0.0181,
-    "#509:F-3": 0.017,
-    "#509:F-5": 0.0177,
-    "#509:F-7": 0.0183,
-    "#509:F-9": 0.0186,
-    "#509:G-1": 0.016,
-    "#509:G-11": 0.0148,
-    "#509:G-13": 0.0143,
+    "#509:E-5": 0.021,
+    "#509:E-7": 0.0216,
+    "#509:E-9": 0.0215,
+    "#509:F-1": 0.0194,
+    "#509:F-11": 0.0186,
+    "#509:F-13": 0.018,
+    "#509:F-15": 0.0166,
+    "#509:F-17": 0.0156,
+    "#509:F-19": 0.0147,
+    "#509:F-21": 0.0177,
+    "#509:F-3": 0.0166,
+    "#509:F-5": 0.0173,
+    "#509:F-7": 0.0179,
+    "#509:F-9": 0.0185,
+    "#509:G-1": 0.0157,
+    "#509:G-11": 0.0149,
+    "#509:G-13": 0.0144,
     "#509:G-15": 0.0132,
-    "#509:G-17": 0.0123,
-    "#509:G-19": 0.0119,
-    "#509:G-21": 0.0145,
-    "#509:G-3": 0.0139,
-    "#509:G-5": 0.0143,
-    "#509:G-7": 0.0147,
+    "#509:G-17": 0.0122,
+    "#509:G-19": 0.0117,
+    "#509:G-21": 0.0142,
+    "#509:G-3": 0.0136,
+    "#509:G-5": 0.0141,
+    "#509:G-7": 0.0146,
     "#509:G-9": 0.0149,
-    "#509:H-1": 0.012,
+    "#509:H-1": 0.0119,
     "#509:H-11": 0.0115,
-    "#509:H-13": 0.0112,
+    "#509:H-13": 0.0111,
     "#509:H-15": 0.0102,
-    "#509:H-17": 0.0096,
-    "#509:H-19": 0.0095,
-    "#509:H-21": 0.0111,
-    "#509:H-3": 0.0107,
-    "#509:H-5": 0.011,
-    "#509:H-7": 0.0114,
+    "#509:H-17": 0.0094,
+    "#509:H-19": 0.0093,
+    "#509:H-21": 0.0109,
+    "#509:H-3": 0.0106,
+    "#509:H-5": 0.0109,
+    "#509:H-7": 0.0113,
     "#509:H-9": 0.0116,
     "#509:I-1": 0.008,
     "#509:I-11": 0.0083,
-    "#509:I-13": 0.008,
-    "#509:I-15": 0.0078,
-    "#509:I-17": 0.0077,
-    "#509:I-19": 0.0075,
-    "#509:I-21": 0.0079,
+    "#509:I-13": 0.0078,
+    "#509:I-15": 0.0074,
+    "#509:I-17": 0.0072,
+    "#509:I-19": 0.0073,
+    "#509:I-21": 0.0077,
     "#509:I-3": 0.0075,
     "#509:I-5": 0.0079,
     "#509:I-7": 0.0082,
     "#509:I-9": 0.0084,
     "#509:J-1": 0.0041,
-    "#509:J-11": 0.005,
+    "#509:J-11": 0.0051,
     "#509:J-13": 0.005,
     "#509:J-15": 0.005,
     "#509:J-17": 0.0049,
@@ -87843,62 +87657,62 @@
     "#509:a-4": 0.0,
     "#509:a-6": 0.0,
     "#509:a-8": 0.0,
-    "#509:b-10": 0.0024,
-    "#509:b-12": 0.0023,
-    "#509:b-14": 0.0028,
-    "#509:b-16": 0.0034,
-    "#509:b-18": 0.0045,
-    "#509:b-2": 0.0047,
+    "#509:b-10": 0.0025,
+    "#509:b-12": 0.0024,
+    "#509:b-14": 0.0027,
+    "#509:b-16": 0.0032,
+    "#509:b-18": 0.0043,
+    "#509:b-2": 0.0046,
     "#509:b-20": 0.0,
-    "#509:b-4": 0.0037,
-    "#509:b-6": 0.0028,
-    "#509:b-8": 0.0024,
+    "#509:b-4": 0.0035,
+    "#509:b-6": 0.0027,
+    "#509:b-8": 0.0023,
     "#509:c-10": 0.0,
     "#509:c-12": 0.0035,
-    "#509:c-14": 0.0037,
-    "#509:c-16": 0.0039,
+    "#509:c-14": 0.0034,
+    "#509:c-16": 0.0038,
     "#509:c-18": 0.0,
     "#509:c-2": 0.0031,
     "#509:c-20": 0.0,
-    "#509:c-4": 0.0035,
-    "#509:c-6": 0.0034,
-    "#509:c-8": 0.0034,
-    "#509:d-10": 0.0032,
-    "#509:d-12": 0.0029,
-    "#509:d-14": 0.0029,
-    "#509:d-16": 0.003,
-    "#509:d-18": 0.0027,
-    "#509:d-2": 0.0025,
+    "#509:c-4": 0.0034,
+    "#509:c-6": 0.0033,
+    "#509:c-8": 0.0032,
+    "#509:d-10": 0.0,
+    "#509:d-12": 0.0,
+    "#509:d-14": 0.0032,
+    "#509:d-16": 0.0032,
+    "#509:d-18": 0.0028,
+    "#509:d-2": 0.0026,
     "#509:d-20": 0.0,
-    "#509:d-4": 0.0028,
-    "#509:d-6": 0.0029,
-    "#509:d-8": 0.0029,
+    "#509:d-4": 0.0029,
+    "#509:d-6": 0.0031,
+    "#509:d-8": 0.0032,
     "#509:e-10": 0.0026,
     "#509:e-12": 0.0026,
-    "#509:e-14": 0.0025,
+    "#509:e-14": 0.0024,
     "#509:e-16": 0.0,
     "#509:e-18": 0.0024,
     "#509:e-2": 0.0022,
     "#509:e-20": 0.0,
     "#509:e-4": 0.0023,
-    "#509:e-6": 0.0025,
-    "#509:e-8": 0.0026,
+    "#509:e-6": 0.0024,
+    "#509:e-8": 0.0024,
     "#509:f-10": 0.0021,
-    "#509:f-12": 0.002,
+    "#509:f-12": 0.0021,
     "#509:f-14": 0.0019,
     "#509:f-16": 0.0,
     "#509:f-18": 0.0,
-    "#509:f-2": 0.0018,
+    "#509:f-2": 0.0017,
     "#509:f-20": 0.0,
-    "#509:f-4": 0.0019,
-    "#509:f-6": 0.002,
-    "#509:f-8": 0.0021,
+    "#509:f-4": 0.0018,
+    "#509:f-6": 0.0019,
+    "#509:f-8": 0.002,
     "#509:g-10": 0.0016,
     "#509:g-12": 0.0016,
     "#509:g-14": 0.0014,
     "#509:g-16": 0.0,
     "#509:g-18": 0.0,
-    "#509:g-2": 0.0014,
+    "#509:g-2": 0.0013,
     "#509:g-20": 0.0,
     "#509:g-4": 0.0014,
     "#509:g-6": 0.0015,
@@ -87916,8 +87730,8 @@
     "#509:i-10": 0.0007,
     "#509:i-12": 0.0007,
     "#509:i-14": 0.0,
-    "#509:i-16": 0.0007,
-    "#509:i-18": 0.0006,
+    "#509:i-16": 0.0,
+    "#509:i-18": 0.0007,
     "#509:i-2": 0.0005,
     "#509:i-20": 0.0,
     "#509:i-4": 0.0006,
@@ -87935,7 +87749,7 @@
     "#509:j-8": 0.0002,
     "#511:A-1": 0.0009,
     "#511:A-11": 0.0013,
-    "#511:A-13": 0.0012,
+    "#511:A-13": 0.0013,
     "#511:A-15": 0.0012,
     "#511:A-17": 0.0011,
     "#511:A-19": 0.001,
@@ -87948,112 +87762,112 @@
     "#511:B-11": 0.0052,
     "#511:B-13": 0.0052,
     "#511:B-15": 0.0051,
-    "#511:B-17": 0.0048,
+    "#511:B-17": 0.0047,
     "#511:B-19": 0.0043,
     "#511:B-21": 0.0041,
     "#511:B-3": 0.0042,
-    "#511:B-5": 0.0045,
+    "#511:B-5": 0.0046,
     "#511:B-7": 0.0048,
-    "#511:B-9": 0.005,
+    "#511:B-9": 0.0051,
     "#511:C-1": 0.0074,
-    "#511:C-11": 0.0083,
-    "#511:C-13": 0.0087,
-    "#511:C-15": 0.0086,
-    "#511:C-17": 0.0081,
+    "#511:C-11": 0.0084,
+    "#511:C-13": 0.0086,
+    "#511:C-15": 0.0085,
+    "#511:C-17": 0.008,
     "#511:C-19": 0.0076,
-    "#511:C-21": 0.0081,
+    "#511:C-21": 0.008,
     "#511:C-3": 0.0065,
     "#511:C-5": 0.0067,
-    "#511:C-7": 0.0071,
-    "#511:C-9": 0.0078,
+    "#511:C-7": 0.0073,
+    "#511:C-9": 0.0079,
     "#511:D-1": 0.0109,
     "#511:D-11": 0.0114,
-    "#511:D-13": 0.0115,
-    "#511:D-15": 0.0114,
-    "#511:D-17": 0.0112,
-    "#511:D-19": 0.0109,
-    "#511:D-21": 0.0122,
+    "#511:D-13": 0.0114,
+    "#511:D-15": 0.0113,
+    "#511:D-17": 0.0111,
+    "#511:D-19": 0.0108,
+    "#511:D-21": 0.0121,
     "#511:D-3": 0.0095,
-    "#511:D-5": 0.0101,
-    "#511:D-7": 0.0108,
-    "#511:D-9": 0.0113,
+    "#511:D-5": 0.0103,
+    "#511:D-7": 0.0111,
+    "#511:D-9": 0.0114,
     "#511:E-1": 0.0145,
     "#511:E-11": 0.0147,
     "#511:E-13": 0.0139,
-    "#511:E-15": 0.0138,
-    "#511:E-17": 0.0144,
-    "#511:E-19": 0.0143,
-    "#511:E-21": 0.0164,
+    "#511:E-15": 0.0137,
+    "#511:E-17": 0.0142,
+    "#511:E-19": 0.0141,
+    "#511:E-21": 0.0162,
     "#511:E-3": 0.0128,
-    "#511:E-5": 0.0136,
-    "#511:E-7": 0.0146,
-    "#511:E-9": 0.0149,
-    "#511:F-1": 0.018,
-    "#511:F-11": 0.0184,
-    "#511:F-13": 0.018,
-    "#511:F-15": 0.0175,
-    "#511:F-17": 0.0175,
-    "#511:F-19": 0.0174,
-    "#511:F-21": 0.0203,
-    "#511:F-3": 0.0154,
+    "#511:E-5": 0.0137,
+    "#511:E-7": 0.0145,
+    "#511:E-9": 0.0145,
+    "#511:F-1": 0.0179,
+    "#511:F-11": 0.0181,
+    "#511:F-13": 0.0177,
+    "#511:F-15": 0.0172,
+    "#511:F-17": 0.0172,
+    "#511:F-19": 0.0172,
+    "#511:F-21": 0.0201,
+    "#511:F-3": 0.0153,
     "#511:F-5": 0.0171,
-    "#511:F-7": 0.0181,
-    "#511:F-9": 0.0184,
+    "#511:F-7": 0.0172,
+    "#511:F-9": 0.0179,
     "#511:G-1": 0.0216,
-    "#511:G-11": 0.023,
-    "#511:G-13": 0.0232,
-    "#511:G-15": 0.022,
-    "#511:G-17": 0.0197,
-    "#511:G-19": 0.0194,
+    "#511:G-11": 0.0218,
+    "#511:G-13": 0.0227,
+    "#511:G-15": 0.0218,
+    "#511:G-17": 0.0196,
+    "#511:G-19": 0.0193,
     "#511:G-21": 0.0239,
-    "#511:G-3": 0.019,
-    "#511:G-5": 0.0213,
-    "#511:G-7": 0.0218,
-    "#511:G-9": 0.0224,
-    "#511:H-1": 0.0265,
-    "#511:H-11": 0.0253,
-    "#511:H-13": 0.0252,
-    "#511:H-15": 0.0256,
+    "#511:G-3": 0.0188,
+    "#511:G-5": 0.0208,
+    "#511:G-7": 0.0205,
+    "#511:G-9": 0.0218,
+    "#511:H-1": 0.0264,
+    "#511:H-11": 0.0247,
+    "#511:H-13": 0.0248,
+    "#511:H-15": 0.0253,
     "#511:H-17": 0.0239,
     "#511:H-19": 0.0209,
     "#511:H-21": 0.0282,
-    "#511:H-3": 0.0233,
-    "#511:H-5": 0.0256,
-    "#511:H-7": 0.025,
-    "#511:H-9": 0.026,
-    "#511:I-1": 0.034,
-    "#511:I-11": 0.0277,
-    "#511:I-13": 0.0275,
-    "#511:I-15": 0.0275,
-    "#511:I-17": 0.0285,
-    "#511:I-19": 0.0266,
-    "#511:I-21": 0.0341,
-    "#511:I-3": 0.0285,
-    "#511:I-5": 0.0284,
-    "#511:I-7": 0.0294,
-    "#511:I-9": 0.0281,
-    "#511:J-1": 0.0576,
-    "#511:J-11": 0.0318,
+    "#511:H-3": 0.0228,
+    "#511:H-5": 0.0239,
+    "#511:H-7": 0.0243,
+    "#511:H-9": 0.0249,
+    "#511:I-1": 0.0333,
+    "#511:I-11": 0.0278,
+    "#511:I-13": 0.0273,
+    "#511:I-15": 0.0272,
+    "#511:I-17": 0.028,
+    "#511:I-19": 0.0262,
+    "#511:I-21": 0.0337,
+    "#511:I-3": 0.0275,
+    "#511:I-5": 0.028,
+    "#511:I-7": 0.0295,
+    "#511:I-9": 0.0282,
+    "#511:J-1": 0.0567,
+    "#511:J-11": 0.0319,
     "#511:J-13": 0.0318,
-    "#511:J-15": 0.0323,
-    "#511:J-17": 0.0353,
-    "#511:J-19": 0.0417,
-    "#511:J-21": 0.0576,
-    "#511:J-3": 0.0432,
+    "#511:J-15": 0.0321,
+    "#511:J-17": 0.0348,
+    "#511:J-19": 0.0409,
+    "#511:J-21": 0.0568,
+    "#511:J-3": 0.0427,
     "#511:J-5": 0.0375,
-    "#511:J-7": 0.0341,
-    "#511:J-9": 0.0323,
-    "#511:K-1": 0.051,
-    "#511:K-11": 0.0324,
-    "#511:K-13": 0.0327,
-    "#511:K-15": 0.0333,
-    "#511:K-17": 0.0342,
-    "#511:K-19": 0.0365,
-    "#511:K-21": 0.0507,
-    "#511:K-3": 0.0387,
-    "#511:K-5": 0.0349,
-    "#511:K-7": 0.0333,
-    "#511:K-9": 0.0326,
+    "#511:J-7": 0.0344,
+    "#511:J-9": 0.0325,
+    "#511:K-1": 0.0505,
+    "#511:K-11": 0.0323,
+    "#511:K-13": 0.0324,
+    "#511:K-15": 0.0331,
+    "#511:K-17": 0.0339,
+    "#511:K-19": 0.0362,
+    "#511:K-21": 0.0502,
+    "#511:K-3": 0.0384,
+    "#511:K-5": 0.0348,
+    "#511:K-7": 0.0332,
+    "#511:K-9": 0.0325,
     "#511:a-10": 0.0002,
     "#511:a-12": 0.0002,
     "#511:a-14": 0.0002,
@@ -88082,8 +87896,8 @@
     "#511:c-2": 0.0,
     "#511:c-20": 0.0009,
     "#511:c-4": 0.0,
-    "#511:c-6": 0.0009,
-    "#511:c-8": 0.001,
+    "#511:c-6": 0.001,
+    "#511:c-8": 0.0011,
     "#511:d-10": 0.0015,
     "#511:d-12": 0.0015,
     "#511:d-14": 0.0,
@@ -88093,55 +87907,55 @@
     "#511:d-20": 0.0014,
     "#511:d-4": 0.0014,
     "#511:d-6": 0.0013,
-    "#511:d-8": 0.0015,
-    "#511:e-10": 0.0021,
-    "#511:e-12": 0.002,
+    "#511:d-8": 0.0016,
+    "#511:e-10": 0.0022,
+    "#511:e-12": 0.0021,
     "#511:e-14": 0.0,
     "#511:e-16": 0.0019,
     "#511:e-18": 0.002,
     "#511:e-2": 0.0,
     "#511:e-20": 0.0019,
     "#511:e-4": 0.0,
-    "#511:e-6": 0.0021,
-    "#511:e-8": 0.0021,
-    "#511:f-10": 0.0025,
-    "#511:f-12": 0.0025,
-    "#511:f-14": 0.0027,
+    "#511:e-6": 0.0023,
+    "#511:e-8": 0.0,
+    "#511:f-10": 0.0024,
+    "#511:f-12": 0.0023,
+    "#511:f-14": 0.0026,
     "#511:f-16": 0.0021,
     "#511:f-18": 0.0023,
     "#511:f-2": 0.0,
     "#511:f-20": 0.0022,
-    "#511:f-4": 0.0024,
-    "#511:f-6": 0.0024,
-    "#511:f-8": 0.0025,
-    "#511:g-10": 0.003,
-    "#511:g-12": 0.003,
-    "#511:g-14": 0.0032,
-    "#511:g-16": 0.0028,
+    "#511:f-4": 0.0023,
+    "#511:f-6": 0.0023,
+    "#511:f-8": 0.0023,
+    "#511:g-10": 0.0,
+    "#511:g-12": 0.0032,
+    "#511:g-14": 0.0033,
+    "#511:g-16": 0.0029,
     "#511:g-18": 0.0,
     "#511:g-2": 0.0,
-    "#511:g-20": 0.0028,
-    "#511:g-4": 0.0028,
-    "#511:g-6": 0.0031,
-    "#511:g-8": 0.0027,
+    "#511:g-20": 0.0029,
+    "#511:g-4": 0.003,
+    "#511:g-6": 0.0,
+    "#511:g-8": 0.0031,
     "#511:h-10": 0.0,
     "#511:h-12": 0.0,
     "#511:h-14": 0.0,
-    "#511:h-16": 0.0038,
-    "#511:h-18": 0.0037,
+    "#511:h-16": 0.0037,
+    "#511:h-18": 0.0036,
     "#511:h-2": 0.0,
     "#511:h-20": 0.0,
-    "#511:h-4": 0.0039,
+    "#511:h-4": 0.0035,
     "#511:h-6": 0.0,
-    "#511:h-8": 0.004,
+    "#511:h-8": 0.0038,
     "#511:i-10": 0.0025,
     "#511:i-12": 0.0024,
     "#511:i-14": 0.0025,
     "#511:i-16": 0.0027,
-    "#511:i-18": 0.0038,
+    "#511:i-18": 0.0037,
     "#511:i-2": 0.0,
     "#511:i-20": 0.0,
-    "#511:i-4": 0.0038,
+    "#511:i-4": 0.0037,
     "#511:i-6": 0.0033,
     "#511:i-8": 0.0025,
     "#511:j-10": 0.0008,
@@ -88153,7 +87967,7 @@
     "#511:j-20": 0.0,
     "#511:j-4": 0.0015,
     "#511:j-6": 0.001,
-    "#511:j-8": 0.0008,
+    "#511:j-8": 0.0009,
     "#523:A-1": 0.0,
     "#523:A-11": 0.001,
     "#523:A-13": 0.0011,
@@ -88166,9 +87980,9 @@
     "#523:A-7": 0.0008,
     "#523:A-9": 0.0009,
     "#523:B-1": 0.0004,
-    "#523:B-11": 0.0041,
-    "#523:B-13": 0.0044,
-    "#523:B-15": 0.0046,
+    "#523:B-11": 0.004,
+    "#523:B-13": 0.0043,
+    "#523:B-15": 0.0045,
     "#523:B-17": 0.0047,
     "#523:B-19": 0.0045,
     "#523:B-21": 0.0046,
@@ -88178,103 +87992,103 @@
     "#523:B-9": 0.0037,
     "#523:C-1": 0.0006,
     "#523:C-11": 0.0062,
-    "#523:C-13": 0.0068,
+    "#523:C-13": 0.0067,
     "#523:C-15": 0.0072,
-    "#523:C-17": 0.0076,
-    "#523:C-19": 0.0073,
+    "#523:C-17": 0.0075,
+    "#523:C-19": 0.0072,
     "#523:C-21": 0.0079,
     "#523:C-3": 0.0027,
     "#523:C-5": 0.0039,
     "#523:C-7": 0.0048,
-    "#523:C-9": 0.0056,
+    "#523:C-9": 0.0055,
     "#523:D-1": 0.0008,
     "#523:D-11": 0.0078,
-    "#523:D-13": 0.0086,
-    "#523:D-15": 0.0092,
-    "#523:D-17": 0.0097,
-    "#523:D-19": 0.0093,
-    "#523:D-21": 0.0105,
+    "#523:D-13": 0.0085,
+    "#523:D-15": 0.0091,
+    "#523:D-17": 0.0095,
+    "#523:D-19": 0.0092,
+    "#523:D-21": 0.0103,
     "#523:D-3": 0.0033,
-    "#523:D-5": 0.0049,
+    "#523:D-5": 0.0048,
     "#523:D-7": 0.006,
-    "#523:D-9": 0.007,
+    "#523:D-9": 0.0069,
     "#523:E-1": 0.001,
-    "#523:E-11": 0.0091,
+    "#523:E-11": 0.009,
     "#523:E-13": 0.0099,
     "#523:E-15": 0.0107,
-    "#523:E-17": 0.0114,
-    "#523:E-19": 0.0111,
-    "#523:E-21": 0.0132,
-    "#523:E-3": 0.0038,
+    "#523:E-17": 0.0113,
+    "#523:E-19": 0.011,
+    "#523:E-21": 0.0131,
+    "#523:E-3": 0.0037,
     "#523:E-5": 0.0056,
     "#523:E-7": 0.007,
     "#523:E-9": 0.0081,
     "#523:F-1": 0.0011,
     "#523:F-11": 0.0101,
-    "#523:F-13": 0.011,
-    "#523:F-15": 0.0118,
-    "#523:F-17": 0.0124,
-    "#523:F-19": 0.0121,
-    "#523:F-21": 0.0153,
+    "#523:F-13": 0.0109,
+    "#523:F-15": 0.0117,
+    "#523:F-17": 0.0123,
+    "#523:F-19": 0.0119,
+    "#523:F-21": 0.0152,
     "#523:F-3": 0.0041,
     "#523:F-5": 0.0063,
     "#523:F-7": 0.0079,
     "#523:F-9": 0.0091,
-    "#523:G-1": 0.0012,
-    "#523:G-11": 0.0111,
+    "#523:G-1": 0.0011,
+    "#523:G-11": 0.011,
     "#523:G-13": 0.0119,
     "#523:G-15": 0.0126,
-    "#523:G-17": 0.0131,
-    "#523:G-19": 0.0126,
-    "#523:G-21": 0.0169,
+    "#523:G-17": 0.0132,
+    "#523:G-19": 0.0127,
+    "#523:G-21": 0.0172,
     "#523:G-3": 0.0044,
     "#523:G-5": 0.0069,
     "#523:G-7": 0.0087,
-    "#523:G-9": 0.0101,
+    "#523:G-9": 0.01,
     "#523:H-1": 0.0012,
-    "#523:H-11": 0.012,
-    "#523:H-13": 0.0128,
-    "#523:H-15": 0.0134,
+    "#523:H-11": 0.0119,
+    "#523:H-13": 0.0127,
+    "#523:H-15": 0.0133,
     "#523:H-17": 0.0139,
     "#523:H-19": 0.0134,
-    "#523:H-21": 0.0195,
-    "#523:H-3": 0.0047,
-    "#523:H-5": 0.0074,
+    "#523:H-21": 0.0198,
+    "#523:H-3": 0.0046,
+    "#523:H-5": 0.0073,
     "#523:H-7": 0.0094,
     "#523:H-9": 0.0109,
     "#523:I-1": 0.0013,
-    "#523:I-11": 0.0128,
-    "#523:I-13": 0.0135,
-    "#523:I-15": 0.0139,
-    "#523:I-17": 0.0144,
-    "#523:I-19": 0.0138,
-    "#523:I-21": 0.0224,
+    "#523:I-11": 0.0127,
+    "#523:I-13": 0.0134,
+    "#523:I-15": 0.0138,
+    "#523:I-17": 0.0143,
+    "#523:I-19": 0.0137,
+    "#523:I-21": 0.0222,
     "#523:I-3": 0.0048,
-    "#523:I-5": 0.0077,
+    "#523:I-5": 0.0076,
     "#523:I-7": 0.01,
-    "#523:I-9": 0.0117,
+    "#523:I-9": 0.0116,
     "#523:J-1": 0.0013,
-    "#523:J-11": 0.0128,
-    "#523:J-13": 0.0134,
-    "#523:J-15": 0.0136,
-    "#523:J-17": 0.0141,
-    "#523:J-19": 0.0138,
-    "#523:J-21": 0.0261,
-    "#523:J-3": 0.0048,
+    "#523:J-11": 0.0127,
+    "#523:J-13": 0.0133,
+    "#523:J-15": 0.0135,
+    "#523:J-17": 0.014,
+    "#523:J-19": 0.0137,
+    "#523:J-21": 0.0255,
+    "#523:J-3": 0.0047,
     "#523:J-5": 0.0076,
     "#523:J-7": 0.01,
     "#523:J-9": 0.0117,
     "#523:K-1": 0.0013,
-    "#523:K-11": 0.017,
-    "#523:K-13": 0.019,
-    "#523:K-15": 0.0208,
-    "#523:K-17": 0.0235,
-    "#523:K-19": 0.0261,
-    "#523:K-21": 0.063,
+    "#523:K-11": 0.0169,
+    "#523:K-13": 0.0188,
+    "#523:K-15": 0.0206,
+    "#523:K-17": 0.0233,
+    "#523:K-19": 0.0258,
+    "#523:K-21": 0.0619,
     "#523:K-3": 0.0048,
-    "#523:K-5": 0.0083,
-    "#523:K-7": 0.0117,
-    "#523:K-9": 0.0146,
+    "#523:K-5": 0.0082,
+    "#523:K-7": 0.0116,
+    "#523:K-9": 0.0145,
     "#523:a-10": 0.0002,
     "#523:a-12": 0.0002,
     "#523:a-14": 0.0002,
@@ -88303,7 +88117,7 @@
     "#523:c-2": 0.0001,
     "#523:c-20": 0.0,
     "#523:c-4": 0.0003,
-    "#523:c-6": 0.0005,
+    "#523:c-6": 0.0004,
     "#523:c-8": 0.0005,
     "#523:d-10": 0.0007,
     "#523:d-12": 0.0008,
@@ -88319,13 +88133,13 @@
     "#523:e-12": 0.0008,
     "#523:e-14": 0.0009,
     "#523:e-16": 0.0009,
-    "#523:e-18": 0.001,
+    "#523:e-18": 0.0009,
     "#523:e-2": 0.0002,
     "#523:e-20": 0.0,
     "#523:e-4": 0.0004,
     "#523:e-6": 0.0006,
     "#523:e-8": 0.0007,
-    "#523:f-10": 0.0008,
+    "#523:f-10": 0.0009,
     "#523:f-12": 0.0009,
     "#523:f-14": 0.0009,
     "#523:f-16": 0.001,
@@ -88338,8 +88152,8 @@
     "#523:g-10": 0.0009,
     "#523:g-12": 0.0009,
     "#523:g-14": 0.001,
-    "#523:g-16": 0.0009,
-    "#523:g-18": 0.0009,
+    "#523:g-16": 0.001,
+    "#523:g-18": 0.001,
     "#523:g-2": 0.0002,
     "#523:g-20": 0.0,
     "#523:g-4": 0.0005,
@@ -88376,100 +88190,100 @@
     "#523:j-6": 0.0007,
     "#523:j-8": 0.0009,
     "#534:A-1": 0.0014,
-    "#534:A-11": 0.0152,
-    "#534:A-13": 0.0173,
-    "#534:A-15": 0.0193,
-    "#534:A-17": 0.0221,
-    "#534:A-19": 0.0262,
-    "#534:A-21": 0.0644,
+    "#534:A-11": 0.015,
+    "#534:A-13": 0.0169,
+    "#534:A-15": 0.0187,
+    "#534:A-17": 0.0217,
+    "#534:A-19": 0.0258,
+    "#534:A-21": 0.0636,
     "#534:A-3": 0.0046,
-    "#534:A-5": 0.0079,
-    "#534:A-7": 0.011,
-    "#534:A-9": 0.0133,
+    "#534:A-5": 0.0077,
+    "#534:A-7": 0.0108,
+    "#534:A-9": 0.0131,
     "#534:B-1": 0.0013,
     "#534:B-11": 0.0116,
-    "#534:B-13": 0.0126,
-    "#534:B-15": 0.013,
-    "#534:B-17": 0.0136,
-    "#534:B-19": 0.0139,
-    "#534:B-21": 0.0265,
+    "#534:B-13": 0.0123,
+    "#534:B-15": 0.0126,
+    "#534:B-17": 0.0134,
+    "#534:B-19": 0.0137,
+    "#534:B-21": 0.0262,
     "#534:B-3": 0.0046,
-    "#534:B-5": 0.0074,
-    "#534:B-7": 0.0098,
-    "#534:B-9": 0.0109,
+    "#534:B-5": 0.0073,
+    "#534:B-7": 0.0097,
+    "#534:B-9": 0.0108,
     "#534:C-1": 0.0013,
-    "#534:C-11": 0.0114,
-    "#534:C-13": 0.0128,
-    "#534:C-15": 0.0133,
-    "#534:C-17": 0.0139,
-    "#534:C-19": 0.0137,
-    "#534:C-21": 0.0233,
+    "#534:C-11": 0.0113,
+    "#534:C-13": 0.0123,
+    "#534:C-15": 0.0128,
+    "#534:C-17": 0.0136,
+    "#534:C-19": 0.0134,
+    "#534:C-21": 0.023,
     "#534:C-3": 0.0048,
     "#534:C-5": 0.0077,
     "#534:C-7": 0.01,
-    "#534:C-9": 0.0105,
+    "#534:C-9": 0.0106,
     "#534:D-1": 0.0012,
     "#534:D-11": 0.0117,
-    "#534:D-13": 0.0125,
-    "#534:D-15": 0.0131,
-    "#534:D-17": 0.0138,
-    "#534:D-19": 0.0135,
-    "#534:D-21": 0.0209,
+    "#534:D-13": 0.0114,
+    "#534:D-15": 0.0119,
+    "#534:D-17": 0.0132,
+    "#534:D-19": 0.0131,
+    "#534:D-21": 0.0206,
     "#534:D-3": 0.0047,
     "#534:D-5": 0.0074,
     "#534:D-7": 0.009,
     "#534:D-9": 0.0104,
     "#534:E-1": 0.0012,
-    "#534:E-11": 0.0111,
-    "#534:E-13": 0.0118,
-    "#534:E-15": 0.0126,
+    "#534:E-11": 0.0107,
+    "#534:E-13": 0.0115,
+    "#534:E-15": 0.0125,
     "#534:E-17": 0.0134,
     "#534:E-19": 0.0133,
-    "#534:E-21": 0.019,
+    "#534:E-21": 0.0191,
     "#534:E-3": 0.0044,
     "#534:E-5": 0.0068,
-    "#534:E-7": 0.0085,
+    "#534:E-7": 0.0084,
     "#534:E-9": 0.0099,
     "#534:F-1": 0.0011,
-    "#534:F-11": 0.0101,
+    "#534:F-11": 0.01,
     "#534:F-13": 0.011,
     "#534:F-15": 0.0119,
     "#534:F-17": 0.0127,
     "#534:F-19": 0.0127,
-    "#534:F-21": 0.017,
+    "#534:F-21": 0.0169,
     "#534:F-3": 0.0041,
     "#534:F-5": 0.0062,
-    "#534:F-7": 0.0078,
-    "#534:F-9": 0.0091,
+    "#534:F-7": 0.0077,
+    "#534:F-9": 0.009,
     "#534:G-1": 0.001,
     "#534:G-11": 0.0091,
     "#534:G-13": 0.01,
-    "#534:G-15": 0.0109,
+    "#534:G-15": 0.0108,
     "#534:G-17": 0.0116,
-    "#534:G-19": 0.0117,
-    "#534:G-21": 0.0146,
+    "#534:G-19": 0.0116,
+    "#534:G-21": 0.0144,
     "#534:G-3": 0.0037,
-    "#534:G-5": 0.0056,
+    "#534:G-5": 0.0055,
     "#534:G-7": 0.0069,
     "#534:G-9": 0.0081,
     "#534:H-1": 0.0008,
     "#534:H-11": 0.0079,
     "#534:H-13": 0.0087,
-    "#534:H-15": 0.0094,
-    "#534:H-17": 0.01,
-    "#534:H-19": 0.01,
-    "#534:H-21": 0.0117,
+    "#534:H-15": 0.0093,
+    "#534:H-17": 0.0099,
+    "#534:H-19": 0.0099,
+    "#534:H-21": 0.0115,
     "#534:H-3": 0.0032,
     "#534:H-5": 0.0048,
     "#534:H-7": 0.006,
     "#534:H-9": 0.007,
     "#534:I-1": 0.0006,
     "#534:I-11": 0.0063,
-    "#534:I-13": 0.0069,
+    "#534:I-13": 0.0068,
     "#534:I-15": 0.0073,
-    "#534:I-17": 0.0077,
-    "#534:I-19": 0.0076,
-    "#534:I-21": 0.0083,
+    "#534:I-17": 0.0076,
+    "#534:I-19": 0.0075,
+    "#534:I-21": 0.0082,
     "#534:I-3": 0.0026,
     "#534:I-5": 0.0039,
     "#534:I-7": 0.0048,
@@ -88478,12 +88292,12 @@
     "#534:J-11": 0.0041,
     "#534:J-13": 0.0044,
     "#534:J-15": 0.0046,
-    "#534:J-17": 0.0048,
+    "#534:J-17": 0.0047,
     "#534:J-19": 0.0047,
-    "#534:J-21": 0.0048,
+    "#534:J-21": 0.0047,
     "#534:J-3": 0.0018,
-    "#534:J-5": 0.0027,
-    "#534:J-7": 0.0033,
+    "#534:J-5": 0.0026,
+    "#534:J-7": 0.0032,
     "#534:J-9": 0.0037,
     "#534:K-1": 0.0,
     "#534:K-11": 0.0011,
@@ -88495,7 +88309,7 @@
     "#534:K-3": 0.0004,
     "#534:K-5": 0.0006,
     "#534:K-7": 0.0008,
-    "#534:K-9": 0.001,
+    "#534:K-9": 0.0009,
     "#534:a-10": 0.0,
     "#534:a-12": 0.0,
     "#534:a-14": 0.0,
@@ -88519,30 +88333,30 @@
     "#534:c-10": 0.0,
     "#534:c-12": 0.001,
     "#534:c-14": 0.0009,
-    "#534:c-16": 0.0009,
-    "#534:c-18": 0.0009,
+    "#534:c-16": 0.0008,
+    "#534:c-18": 0.0008,
     "#534:c-2": 0.0002,
     "#534:c-20": 0.0009,
     "#534:c-4": 0.0005,
     "#534:c-6": 0.0008,
     "#534:c-8": 0.0,
-    "#534:d-10": 0.0009,
-    "#534:d-12": 0.0009,
-    "#534:d-14": 0.0009,
-    "#534:d-16": 0.0009,
-    "#534:d-18": 0.0009,
+    "#534:d-10": 0.001,
+    "#534:d-12": 0.0,
+    "#534:d-14": 0.0,
+    "#534:d-16": 0.001,
+    "#534:d-18": 0.001,
     "#534:d-2": 0.0002,
     "#534:d-20": 0.001,
     "#534:d-4": 0.0005,
     "#534:d-6": 0.0006,
     "#534:d-8": 0.0008,
-    "#534:e-10": 0.0009,
+    "#534:e-10": 0.0008,
     "#534:e-12": 0.0009,
     "#534:e-14": 0.0009,
-    "#534:e-16": 0.001,
+    "#534:e-16": 0.0009,
     "#534:e-18": 0.001,
     "#534:e-2": 0.0002,
-    "#534:e-20": 0.001,
+    "#534:e-20": 0.0011,
     "#534:e-4": 0.0004,
     "#534:e-6": 0.0006,
     "#534:e-8": 0.0008,
@@ -88567,7 +88381,7 @@
     "#534:g-6": 0.0005,
     "#534:g-8": 0.0006,
     "#534:h-10": 0.0006,
-    "#534:h-12": 0.0006,
+    "#534:h-12": 0.0007,
     "#534:h-14": 0.0007,
     "#534:h-16": 0.0007,
     "#534:h-18": 0.0007,
@@ -88596,7 +88410,7 @@
     "#534:j-4": 0.0001,
     "#534:j-6": 0.0001,
     "#534:j-8": 0.0002,
-    "中央:中央-1-1": 0.0339,
+    "中央:中央-1-1": 0.0337,
     "中央:中央-1-10": 0.0029,
     "中央:中央-1-11": 0.0029,
     "中央:中央-1-12": 0.0028,
@@ -88605,18 +88419,18 @@
     "中央:中央-1-15": 0.0025,
     "中央:中央-1-16": 0.0027,
     "中央:中央-1-17": 0.0033,
-    "中央:中央-1-18": 0.0046,
-    "中央:中央-1-19": 0.0063,
+    "中央:中央-1-18": 0.0045,
+    "中央:中央-1-19": 0.0062,
     "中央:中央-1-2": 0.0063,
-    "中央:中央-1-20": 0.0338,
+    "中央:中央-1-20": 0.0336,
     "中央:中央-1-3": 0.0046,
     "中央:中央-1-4": 0.0033,
     "中央:中央-1-5": 0.0027,
     "中央:中央-1-6": 0.0025,
     "中央:中央-1-7": 0.0028,
     "中央:中央-1-8": 0.0029,
-    "中央:中央-1-9": 0.0029,
-    "中央:中央-10-1": 0.0029,
+    "中央:中央-1-9": 0.0028,
+    "中央:中央-10-1": 0.0028,
     "中央:中央-10-12": 0.0,
     "中央:中央-10-13": 0.0,
     "中央:中央-10-14": 0.0,
@@ -88626,7 +88440,7 @@
     "中央:中央-10-18": 0.0027,
     "中央:中央-10-19": 0.0055,
     "中央:中央-10-2": 0.0055,
-    "中央:中央-10-20": 0.0029,
+    "中央:中央-10-20": 0.0028,
     "中央:中央-10-3": 0.0027,
     "中央:中央-10-4": 0.0,
     "中央:中央-10-5": 0.0,
@@ -88634,7 +88448,7 @@
     "中央:中央-10-7": 0.0,
     "中央:中央-10-8": 0.0,
     "中央:中央-10-9": 0.0,
-    "中央:中央-11-1": 0.0029,
+    "中央:中央-11-1": 0.0028,
     "中央:中央-11-12": 0.0,
     "中央:中央-11-13": 0.0,
     "中央:中央-11-14": 0.0,
@@ -88644,7 +88458,7 @@
     "中央:中央-11-18": 0.0027,
     "中央:中央-11-19": 0.0055,
     "中央:中央-11-2": 0.0055,
-    "中央:中央-11-20": 0.0029,
+    "中央:中央-11-20": 0.0028,
     "中央:中央-11-3": 0.0027,
     "中央:中央-11-4": 0.0,
     "中央:中央-11-5": 0.0,
@@ -88723,7 +88537,7 @@
     "中央:中央-15-17": 0.0,
     "中央:中央-15-18": 0.0031,
     "中央:中央-15-19": 0.006,
-    "中央:中央-15-2": 0.006,
+    "中央:中央-15-2": 0.0059,
     "中央:中央-15-20": 0.0025,
     "中央:中央-15-3": 0.0031,
     "中央:中央-15-4": 0.0,
@@ -88742,7 +88556,7 @@
     "中央:中央-16-16": 0.0,
     "中央:中央-16-17": 0.0,
     "中央:中央-16-18": 0.0043,
-    "中央:中央-16-19": 0.0053,
+    "中央:中央-16-19": 0.0052,
     "中央:中央-16-2": 0.0052,
     "中央:中央-16-20": 0.0027,
     "中央:中央-16-3": 0.0043,
@@ -88752,7 +88566,7 @@
     "中央:中央-16-7": 0.0,
     "中央:中央-16-8": 0.0,
     "中央:中央-16-9": 0.0,
-    "中央:中央-17-1": 0.0033,
+    "中央:中央-17-1": 0.0032,
     "中央:中央-17-10": 0.0,
     "中央:中央-17-11": 0.0,
     "中央:中央-17-12": 0.0,
@@ -88762,7 +88576,7 @@
     "中央:中央-17-16": 0.0,
     "中央:中央-17-17": 0.0023,
     "中央:中央-17-18": 0.0027,
-    "中央:中央-17-19": 0.006,
+    "中央:中央-17-19": 0.0059,
     "中央:中央-17-2": 0.0059,
     "中央:中央-17-20": 0.0033,
     "中央:中央-17-3": 0.0027,
@@ -88775,17 +88589,17 @@
     "中央:中央-18-1": 0.0045,
     "中央:中央-18-10": 0.0027,
     "中央:中央-18-11": 0.0027,
-    "中央:中央-18-12": 0.0028,
+    "中央:中央-18-12": 0.0027,
     "中央:中央-18-13": 0.0028,
     "中央:中央-18-14": 0.0029,
     "中央:中央-18-15": 0.0031,
     "中央:中央-18-16": 0.0043,
     "中央:中央-18-17": 0.0027,
-    "中央:中央-18-18": 0.0063,
+    "中央:中央-18-18": 0.0062,
     "中央:中央-18-19": 0.0067,
     "中央:中央-18-2": 0.0067,
-    "中央:中央-18-20": 0.0046,
-    "中央:中央-18-3": 0.0063,
+    "中央:中央-18-20": 0.0045,
+    "中央:中央-18-3": 0.0062,
     "中央:中央-18-4": 0.0027,
     "中央:中央-18-5": 0.0043,
     "中央:中央-18-6": 0.0031,
@@ -88802,37 +88616,37 @@
     "中央:中央-19-16": 0.0052,
     "中央:中央-19-17": 0.0059,
     "中央:中央-19-18": 0.0067,
-    "中央:中央-19-19": 0.0193,
-    "中央:中央-19-2": 0.0194,
-    "中央:中央-19-20": 0.0063,
+    "中央:中央-19-19": 0.0192,
+    "中央:中央-19-2": 0.0192,
+    "中央:中央-19-20": 0.0062,
     "中央:中央-19-3": 0.0068,
     "中央:中央-19-4": 0.006,
     "中央:中央-19-5": 0.0053,
-    "中央:中央-19-6": 0.0061,
+    "中央:中央-19-6": 0.006,
     "中央:中央-19-7": 0.0058,
     "中央:中央-19-8": 0.0057,
     "中央:中央-19-9": 0.0057,
-    "中央:中央-2-1": 0.0063,
+    "中央:中央-2-1": 0.0062,
     "中央:中央-2-10": 0.0056,
     "中央:中央-2-11": 0.0056,
-    "中央:中央-2-12": 0.0057,
+    "中央:中央-2-12": 0.0056,
     "中央:中央-2-13": 0.0057,
     "中央:中央-2-14": 0.0058,
     "中央:中央-2-15": 0.006,
-    "中央:中央-2-16": 0.0053,
-    "中央:中央-2-17": 0.006,
-    "中央:中央-2-18": 0.0068,
-    "中央:中央-2-19": 0.0193,
-    "中央:中央-2-2": 0.0194,
-    "中央:中央-2-20": 0.0063,
-    "中央:中央-2-3": 0.0068,
+    "中央:中央-2-16": 0.0052,
+    "中央:中央-2-17": 0.0059,
+    "中央:中央-2-18": 0.0067,
+    "中央:中央-2-19": 0.0192,
+    "中央:中央-2-2": 0.0192,
+    "中央:中央-2-20": 0.0062,
+    "中央:中央-2-3": 0.0067,
     "中央:中央-2-4": 0.006,
     "中央:中央-2-5": 0.0053,
-    "中央:中央-2-6": 0.0061,
+    "中央:中央-2-6": 0.006,
     "中央:中央-2-7": 0.0058,
     "中央:中央-2-8": 0.0057,
-    "中央:中央-2-9": 0.0057,
-    "中央:中央-20-1": 0.0339,
+    "中央:中央-2-9": 0.0056,
+    "中央:中央-20-1": 0.0336,
     "中央:中央-20-10": 0.0029,
     "中央:中央-20-11": 0.0029,
     "中央:中央-20-12": 0.0028,
@@ -88841,18 +88655,18 @@
     "中央:中央-20-15": 0.0025,
     "中央:中央-20-16": 0.0027,
     "中央:中央-20-17": 0.0033,
-    "中央:中央-20-18": 0.0046,
-    "中央:中央-20-19": 0.0063,
+    "中央:中央-20-18": 0.0045,
+    "中央:中央-20-19": 0.0062,
     "中央:中央-20-2": 0.0063,
-    "中央:中央-20-20": 0.0338,
+    "中央:中央-20-20": 0.0336,
     "中央:中央-20-3": 0.0046,
     "中央:中央-20-4": 0.0033,
     "中央:中央-20-5": 0.0027,
-    "中央:中央-20-6": 0.0026,
+    "中央:中央-20-6": 0.0025,
     "中央:中央-20-7": 0.0028,
     "中央:中央-20-8": 0.0029,
-    "中央:中央-20-9": 0.0029,
-    "中央:中央-3-1": 0.0046,
+    "中央:中央-20-9": 0.0028,
+    "中央:中央-3-1": 0.0045,
     "中央:中央-3-10": 0.0027,
     "中央:中央-3-11": 0.0027,
     "中央:中央-3-12": 0.0028,
@@ -88861,18 +88675,18 @@
     "中央:中央-3-15": 0.0031,
     "中央:中央-3-16": 0.0043,
     "中央:中央-3-17": 0.0027,
-    "中央:中央-3-18": 0.0063,
+    "中央:中央-3-18": 0.0062,
     "中央:中央-3-19": 0.0067,
     "中央:中央-3-2": 0.0067,
-    "中央:中央-3-20": 0.0046,
-    "中央:中央-3-3": 0.0063,
+    "中央:中央-3-20": 0.0045,
+    "中央:中央-3-3": 0.0062,
     "中央:中央-3-4": 0.0027,
     "中央:中央-3-5": 0.0043,
     "中央:中央-3-6": 0.0031,
     "中央:中央-3-7": 0.003,
     "中央:中央-3-8": 0.0028,
     "中央:中央-3-9": 0.0028,
-    "中央:中央-4-1": 0.0033,
+    "中央:中央-4-1": 0.0032,
     "中央:中央-4-10": 0.0,
     "中央:中央-4-11": 0.0,
     "中央:中央-4-12": 0.0,
@@ -88883,8 +88697,8 @@
     "中央:中央-4-17": 0.0023,
     "中央:中央-4-18": 0.0027,
     "中央:中央-4-19": 0.0059,
-    "中央:中央-4-2": 0.006,
-    "中央:中央-4-20": 0.0033,
+    "中央:中央-4-2": 0.0059,
+    "中央:中央-4-20": 0.0032,
     "中央:中央-4-3": 0.0027,
     "中央:中央-4-4": 0.0023,
     "中央:中央-4-5": 0.0,
@@ -88922,7 +88736,7 @@
     "中央:中央-6-16": 0.0,
     "中央:中央-6-17": 0.0,
     "中央:中央-6-18": 0.0031,
-    "中央:中央-6-19": 0.006,
+    "中央:中央-6-19": 0.0059,
     "中央:中央-6-2": 0.006,
     "中央:中央-6-20": 0.0025,
     "中央:中央-6-3": 0.0031,

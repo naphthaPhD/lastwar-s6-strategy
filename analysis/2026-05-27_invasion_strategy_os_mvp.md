@@ -21,7 +21,7 @@ Input target: Google Sheets or CSV export. The MVP has a replaceable source laye
 - Added node and edge structures with `id`, `name`, `type`, `owner`, `protect_until`, `x`, `y`, `importance`, `from`, `to`, and `weight`.
 - Added JST protection-timer handling.
 - Added graph analysis for connected components, articulation points, shortest path, degree centrality, and betweenness centrality.
-- The current full-map output reads the management-table sheet, includes the central area, and contains 2,166 nodes with 5,456 coordinate-rule tactical edges.
+- The current full-map output reads the management-table sheet, includes the central area, and contains 2,166 nodes with 5,412 coordinate-rule tactical edges.
 - Central area typing follows the Cpt Hedgehog Season 6 reference-map pattern plus the commander adjustment: 208 central fishery nodes are connected by 636 adjacent central-fishery edges, 188 central altar nodes are isolated, and the 2x2 center is represented by one large isolated `祖霊神殿` node.
 - The outer area placement is clockwise from the upper-left: `#534`, `#509`, `#503`, `#480`, `#440`, `#511`, `#523`, `#476`.
 - Trade-post nodes are displayed but intentionally left unconnected.

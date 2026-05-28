@@ -1799,7 +1799,7 @@ def add_node_info_panel_v3(html: str) -> str:
                         if (source.affiliation !== "self" || target.affiliation !== "self") return false;
                         return Boolean(boundarySelfNodes[source.id] || boundarySelfNodes[target.id]);
                       }}).map(function (edge) {{ return edge.id; }});
-                      highlightEdges(selfDepthEdgeIds, "#38bdf8", 4);
+                      highlightEdges(selfDepthEdgeIds, "#f43f5e", 4);
                       highlightEdges(boundaryEdgeIds, "#fb923c", 5);
                     }}
                     var boundaryButton = document.getElementById("map-highlight-boundary");
