@@ -1653,15 +1653,50 @@ def add_node_info_panel_v3(html: str) -> str:
                         }};
                       }}));
                     }}
+                    function isFisheryNode(node) {{
+                      return Boolean(node && node.nodeType === "\\u6f01\\u5834");
+                    }}
+                    function isCityNode(node) {{
+                      return Boolean(node && node.nodeType === "\\u90fd\\u5e02");
+                    }}
+                    function isFriendlyAffiliation(affiliation) {{
+                      return affiliation === "self" || affiliation === "ally";
+                    }}
+                    function adjacentFisheryIds(nodeId) {{
+                      if (!edges || !nodes || !nodeId) return [];
+                      var found = {{}};
+                      edges.get().forEach(function (edge) {{
+                        var otherId = null;
+                        if (edge.from === nodeId) {{
+                          otherId = edge.to;
+                        }} else if (edge.to === nodeId) {{
+                          otherId = edge.from;
+                        }}
+                        if (!otherId) return;
+                        var other = nodes.get(otherId);
+                        if (isFisheryNode(other)) found[otherId] = true;
+                      }});
+                      return Object.keys(found);
+                    }}
+                    function routeEndpointCandidates(nodeId) {{
+                      var node = nodes.get(nodeId);
+                      if (isFisheryNode(node)) return [nodeId];
+                      if (isCityNode(node)) return adjacentFisheryIds(nodeId);
+                      return [];
+                    }}
                     function shortestRouteEdges(startId, targetId) {{
                       if (!edges || !nodes || !startId || !targetId) return null;
-                      if (startId === targetId) return {{ edgeIds: [], distance: 0, routeCount: 1 }};
+                      var startCandidates = routeEndpointCandidates(startId);
+                      var targetCandidates = routeEndpointCandidates(targetId);
+                      if (!startCandidates.length || !targetCandidates.length) return null;
                       var adjacency = {{}};
-                      nodes.getIds().forEach(function (nodeId) {{
-                        adjacency[nodeId] = [];
-                      }});
+                      var targetSet = {{}};
+                      targetCandidates.forEach(function (nodeId) {{ targetSet[nodeId] = true; }});
                       var byPair = {{}};
                       edges.get().forEach(function (edge) {{
+                        var source = nodes.get(edge.from);
+                        var target = nodes.get(edge.to);
+                        if (!isFisheryNode(source) || !isFisheryNode(target)) return;
                         if (!adjacency[edge.from]) adjacency[edge.from] = [];
                         if (!adjacency[edge.to]) adjacency[edge.to] = [];
                         adjacency[edge.from].push(edge.to);
@@ -1669,13 +1704,18 @@ def add_node_info_panel_v3(html: str) -> str:
                         byPair[edge.from + "\\u0000" + edge.to] = edge.id;
                         byPair[edge.to + "\\u0000" + edge.from] = edge.id;
                       }});
-                      var queue = [startId];
+                      var queue = [];
                       var distance = {{}};
                       var predecessors = {{}};
                       var routeCounts = {{}};
                       var targetDistance = null;
-                      distance[startId] = 0;
-                      routeCounts[startId] = 1;
+                      startCandidates.forEach(function (nodeId) {{
+                        if (distance[nodeId] !== undefined) return;
+                        distance[nodeId] = 0;
+                        routeCounts[nodeId] = 1;
+                        queue.push(nodeId);
+                        if (targetSet[nodeId]) targetDistance = 0;
+                      }});
                       for (var i = 0; i < queue.length; i += 1) {{
                         var current = queue[i];
                         if (targetDistance !== null && distance[current] >= targetDistance) continue;
@@ -1687,7 +1727,7 @@ def add_node_info_panel_v3(html: str) -> str:
                             distance[next] = nextDistance;
                             predecessors[next] = [current];
                             routeCounts[next] = routeCounts[current];
-                            if (next === targetId) {{
+                            if (targetSet[next]) {{
                               targetDistance = nextDistance;
                             }}
                             queue.push(next);
@@ -1697,9 +1737,12 @@ def add_node_info_panel_v3(html: str) -> str:
                           }}
                         }}
                       }}
-                      if (distance[targetId] === undefined) return null;
+                      if (targetDistance === null) return null;
+                      var targetNodes = targetCandidates.filter(function (nodeId) {{
+                        return distance[nodeId] === targetDistance;
+                      }});
                       var edgeIdSet = {{}};
-                      var stack = [targetId];
+                      var stack = targetNodes.slice();
                       var seenNodes = {{}};
                       while (stack.length) {{
                         var nodeId = stack.pop();
@@ -1708,7 +1751,7 @@ def add_node_info_panel_v3(html: str) -> str:
                           var pred = preds[k];
                           var edgeId = byPair[pred + "\\u0000" + nodeId];
                           if (edgeId) edgeIdSet[edgeId] = true;
-                          if (pred !== startId && !seenNodes[pred]) {{
+                          if (distance[pred] !== 0 && !seenNodes[pred]) {{
                             seenNodes[pred] = true;
                             stack.push(pred);
                           }}
@@ -1716,15 +1759,22 @@ def add_node_info_panel_v3(html: str) -> str:
                       }}
                       return {{
                         edgeIds: Object.keys(edgeIdSet),
-                        distance: distance[targetId],
-                        routeCount: routeCounts[targetId] || 1
+                        distance: targetDistance,
+                        routeCount: targetNodes.reduce(function (total, nodeId) {{
+                          return Math.min(9999, total + (routeCounts[nodeId] || 0));
+                        }}, 0) || 1
                       }};
                     }}
                     function showShortestRoute(startId, targetId) {{
                       var route = shortestRouteEdges(startId, targetId);
                       resetEdgeHighlights();
-                      if (!route || !route.edgeIds.length) {{
+                      if (!route) {{
                         alert("\\u9078\\u629e\\u3057\\u305f2\\u30ce\\u30fc\\u30c9\\u9593\\u306e\\u30eb\\u30fc\\u30c8\\u304c\\u3042\\u308a\\u307e\\u305b\\u3093\\u3002");
+                        clearRouteState();
+                        return;
+                      }}
+                      if (!route.edgeIds.length) {{
+                        alert("\\u59cb\\u70b9\\u304c\\u76ee\\u7684\\u5730\\u90fd\\u5e02\\u306b\\u96a3\\u63a5\\u3059\\u308b\\u6700\\u77ed\\u306e\\u6f01\\u5834\\u3067\\u3059\\u3002");
                         clearRouteState();
                         return;
                       }}
@@ -1760,7 +1810,7 @@ def add_node_info_panel_v3(html: str) -> str:
                       if (!nodes || !edges) return;
                       clearRouteState();
                       resetEdgeHighlights();
-                      var enemyBoundaryEdgeIds = [];
+                      var friendlyBoundaryEdgeIds = [];
                       var unownedBoundaryEdgeIds = [];
                       edges.get().forEach(function (edge) {{
                         var source = nodes.get(edge.from);
@@ -1768,10 +1818,10 @@ def add_node_info_panel_v3(html: str) -> str:
                         if (!source || !target) return;
                         if (source.nodeType !== "\\u6f01\\u5834" || target.nodeType !== "\\u6f01\\u5834") return;
                         if (
-                          (source.affiliation === "self" && target.affiliation === "enemy") ||
-                          (source.affiliation === "enemy" && target.affiliation === "self")
+                          (isFriendlyAffiliation(source.affiliation) && target.affiliation === "enemy") ||
+                          (source.affiliation === "enemy" && isFriendlyAffiliation(target.affiliation))
                         ) {{
-                          enemyBoundaryEdgeIds.push(edge.id);
+                          friendlyBoundaryEdgeIds.push(edge.id);
                         }} else if (
                           (source.affiliation === "enemy" && target.affiliation === "unowned") ||
                           (source.affiliation === "unowned" && target.affiliation === "enemy")
@@ -1780,26 +1830,26 @@ def add_node_info_panel_v3(html: str) -> str:
                         }}
                       }});
                       highlightEdges(unownedBoundaryEdgeIds, "#facc15", 4);
-                      highlightEdges(enemyBoundaryEdgeIds, "#fb923c", 5);
+                      highlightEdges(friendlyBoundaryEdgeIds, "#fb923c", 5);
                     }}
                     function highlightSelfEnemyFisheryEdgesWithSelfDepth() {{
                       if (!nodes || !edges) return;
                       clearRouteState();
                       resetEdgeHighlights();
-                      var enemyBoundaryEdgeIds = [];
+                      var friendlyBoundaryEdgeIds = [];
                       var unownedBoundaryEdgeIds = [];
-                      var boundarySelfNodes = {{}};
+                      var boundaryFriendlyNodes = {{}};
                       edges.get().forEach(function (edge) {{
                         var source = nodes.get(edge.from);
                         var target = nodes.get(edge.to);
                         if (!source || !target) return;
                         if (source.nodeType !== "\\u6f01\\u5834" || target.nodeType !== "\\u6f01\\u5834") return;
-                        if (source.affiliation === "self" && target.affiliation === "enemy") {{
-                          enemyBoundaryEdgeIds.push(edge.id);
-                          boundarySelfNodes[source.id] = true;
-                        }} else if (source.affiliation === "enemy" && target.affiliation === "self") {{
-                          enemyBoundaryEdgeIds.push(edge.id);
-                          boundarySelfNodes[target.id] = true;
+                        if (isFriendlyAffiliation(source.affiliation) && target.affiliation === "enemy") {{
+                          friendlyBoundaryEdgeIds.push(edge.id);
+                          boundaryFriendlyNodes[source.id] = true;
+                        }} else if (source.affiliation === "enemy" && isFriendlyAffiliation(target.affiliation)) {{
+                          friendlyBoundaryEdgeIds.push(edge.id);
+                          boundaryFriendlyNodes[target.id] = true;
                         }} else if (
                           (source.affiliation === "enemy" && target.affiliation === "unowned") ||
                           (source.affiliation === "unowned" && target.affiliation === "enemy")
@@ -1807,17 +1857,17 @@ def add_node_info_panel_v3(html: str) -> str:
                           unownedBoundaryEdgeIds.push(edge.id);
                         }}
                       }});
-                      var selfDepthEdgeIds = edges.get().filter(function (edge) {{
+                      var friendlyDepthEdgeIds = edges.get().filter(function (edge) {{
                         var source = nodes.get(edge.from);
                         var target = nodes.get(edge.to);
                         if (!source || !target) return false;
                         if (source.nodeType !== "\\u6f01\\u5834" || target.nodeType !== "\\u6f01\\u5834") return false;
-                        if (source.affiliation !== "self" || target.affiliation !== "self") return false;
-                        return Boolean(boundarySelfNodes[source.id] || boundarySelfNodes[target.id]);
+                        if (!isFriendlyAffiliation(source.affiliation) || !isFriendlyAffiliation(target.affiliation)) return false;
+                        return Boolean(boundaryFriendlyNodes[source.id] || boundaryFriendlyNodes[target.id]);
                       }}).map(function (edge) {{ return edge.id; }});
-                      highlightEdges(selfDepthEdgeIds, "#f43f5e", 4);
+                      highlightEdges(friendlyDepthEdgeIds, "#f43f5e", 4);
                       highlightEdges(unownedBoundaryEdgeIds, "#facc15", 4);
-                      highlightEdges(enemyBoundaryEdgeIds, "#fb923c", 5);
+                      highlightEdges(friendlyBoundaryEdgeIds, "#fb923c", 5);
                     }}
                     var boundaryButton = document.getElementById("map-highlight-boundary");
                     if (boundaryButton) {{
