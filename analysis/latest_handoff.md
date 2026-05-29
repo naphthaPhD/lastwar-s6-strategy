@@ -71,6 +71,7 @@ Latest update adds local Excel alliance-strength integration and the first simul
 35. Added generated-map `遮断候補` and `危険回避` buttons to highlight the corresponding score-model candidates.
 36. Phase 3 separates the strategic rule engine into `tools/invasion_strategy_os/simulation.py`. `invasion_strategy_os.py` now builds the sheet/map/graph state, writes the same state shape used by `sample_output/state.json`, and delegates `invasion_simulation` scoring to the separated module.
 37. The Phase 3 rule engine writes JSON score reasons and factor breakdowns for protection expiry, battle windows, capture-limit pressure, enemy adjacency, city-destruction reach, central connection value, and counterattack risk. GPT is not used in this engine.
+38. The generated map now exposes Phase 3 results visually. `Phase3攻撃TOP`, `Phase3遮断TOP`, `Phase3危険TOP`, and `Phase3総合TOP` open a score panel from embedded `invasion_simulation` JSON, list top candidates with scores/reasons, and highlight/select the corresponding edge or node.
 
 ## Current risks
 

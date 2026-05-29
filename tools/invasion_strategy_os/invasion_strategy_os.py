@@ -1088,6 +1088,7 @@ def write_html(
     config: dict[str, Any],
     tz: ZoneInfo,
     alliance_powers: dict[str, AlliancePower],
+    phase3_simulation: dict[str, Any] | None = None,
 ) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     critical_ids = {item["node_id"] for item in analysis["critical_nodes"]}
@@ -1193,7 +1194,7 @@ def write_html(
     copy_local_vis_assets(output_path)
     html = network.generate_html(notebook=False)
     html = localize_vis_resources(strip_remote_bootstrap(html))
-    html = add_node_info_panel_v3(html)
+    html = add_node_info_panel_v3(html, phase3_simulation)
     html = clean_generated_html(html)
     output_path.write_text(html, encoding="utf-8")
 
@@ -1541,8 +1542,9 @@ def add_node_info_panel_v2(html: str) -> str:
     return html.replace("</body>", script + "\n</body>", 1)
 
 
-def add_node_info_panel_v3(html: str) -> str:
+def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None = None) -> str:
     empty_text = "Click a node to show area, coordinate, type, alliance, and protection data from the management table."
+    phase3_json = json.dumps(phase3_simulation or {}, ensure_ascii=False)
     style = """
 <style>
   html,
@@ -1616,6 +1618,84 @@ def add_node_info_panel_v3(html: str) -> str:
     border-top: 1px solid rgba(148, 163, 184, 0.35);
     white-space: pre-wrap;
     color: #e2e8f0;
+  }
+  #phase3-score-panel {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    z-index: 11;
+    width: min(420px, calc(100vw - 32px));
+    max-height: min(48vh, 520px);
+    overflow: auto;
+    padding: 12px;
+    border: 1px solid rgba(248, 113, 113, 0.62);
+    border-radius: 8px;
+    background: rgba(15, 23, 42, 0.94);
+    color: #f8fafc;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.38);
+    font-family: Arial, sans-serif;
+  }
+  #phase3-score-panel h2 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    line-height: 1.3;
+  }
+  #phase3-score-panel .phase3-subtitle {
+    margin: 0 0 8px;
+    color: #cbd5e1;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+  #phase3-score-panel .phase3-empty {
+    color: #cbd5e1;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  #phase3-score-panel .phase3-item {
+    width: 100%;
+    margin: 6px 0;
+    padding: 8px;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+    border-radius: 6px;
+    background: rgba(30, 41, 59, 0.86);
+    color: #f8fafc;
+    text-align: left;
+    cursor: pointer;
+  }
+  #phase3-score-panel .phase3-item:hover {
+    border-color: rgba(248, 113, 113, 0.86);
+    background: rgba(51, 65, 85, 0.92);
+  }
+  #phase3-score-panel .phase3-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: baseline;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  #phase3-score-panel .phase3-score {
+    color: #fca5a5;
+    white-space: nowrap;
+  }
+  #phase3-score-panel .phase3-route {
+    margin-top: 3px;
+    color: #cbd5e1;
+    font-size: 12px;
+  }
+  #phase3-score-panel .phase3-reasons {
+    margin-top: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  #phase3-score-panel .phase3-reason {
+    padding: 2px 6px;
+    border-radius: 999px;
+    background: rgba(248, 113, 113, 0.16);
+    color: #fecaca;
+    font-size: 11px;
+    line-height: 1.4;
   }
   #map-toolbar {
     position: fixed;
@@ -1714,6 +1794,10 @@ def add_node_info_panel_v3(html: str) -> str:
 <button id="map-highlight-friendly-pressure" type="button">&#21619;&#26041;&#20405;&#25915;&#20505;&#35036;</button>
 <button id="map-highlight-interdiction" type="button">&#36974;&#26029;&#20505;&#35036;</button>
 <button id="map-highlight-risk-avoidance" type="button">&#21361;&#38522;&#22238;&#36991;</button>
+<button id="map-phase3-attack" type="button">Phase3攻撃TOP</button>
+<button id="map-phase3-interdiction" type="button">Phase3遮断TOP</button>
+<button id="map-phase3-risk" type="button">Phase3危険TOP</button>
+<button id="map-phase3-overall" type="button">Phase3総合TOP</button>
 <button id="map-highlight-enemy-expand" type="button">&#25973;&#26410;&#21462;&#24471;&#25313;&#24373;</button>
 <button id="map-highlight-friendly-expand" type="button">&#21619;&#26041;&#26410;&#21462;&#24471;&#25313;&#24373;</button>
 <button id="map-clear-edge-highlight" type="button">&#24375;&#35519;&#35299;&#38500;</button>
@@ -1735,10 +1819,15 @@ def add_node_info_panel_v3(html: str) -> str:
 <div id="node-info-panel">
   <div class="node-info-empty">{empty_text}</div>
 </div>
+<div id="phase3-score-panel">
+  <h2>Phase3スコア</h2>
+  <div class="phase3-empty">攻撃TOP・遮断TOP・危険TOPを押すと、state.jsonのスコア根拠を表示します。</div>
+</div>
 """
     attach_js = f"""
                   (function () {{
                     var emptyText = {json.dumps(empty_text)};
+                    var phase3Simulation = {phase3_json};
                     function valueOrDash(value) {{
                       return value === undefined || value === null || value === "" ? "-" : String(value);
                     }}
@@ -2263,6 +2352,118 @@ def add_node_info_panel_v3(html: str) -> str:
                       var records = candidateEdgeRecords(kind, 30);
                       highlightEdges(records.map(function (record) {{ return record.id; }}), color, width || 6);
                     }}
+                    function phase3CandidateConfig(kind) {{
+                      var configs = {{
+                        attack: {{
+                          title: "Phase3 攻撃候補 TOP",
+                          subtitle: "敵境界・中央接続・保護終了・反撃リスクを含む攻撃スコア",
+                          key: "attack_score_options",
+                          color: "#f97316",
+                          width: 8
+                        }},
+                        interdiction: {{
+                          title: "Phase3 遮断候補 TOP",
+                          subtitle: "都市破壊による到達不能化や隣接遮断を重視",
+                          key: "interdiction_score_options",
+                          color: "#0ea5e9",
+                          width: 8
+                        }},
+                        risk: {{
+                          title: "Phase3 危険回避 TOP",
+                          subtitle: "反撃リスク・高戦力敵隣接・敵密集を重視",
+                          key: "risk_avoidance_options",
+                          color: "#be123c",
+                          width: 8
+                        }},
+                        overall: {{
+                          title: "Phase3 総合スコア TOP",
+                          subtitle: "攻撃・遮断・危険回避をまとめた上位候補",
+                          key: "rule_score_samples",
+                          color: "#f43f5e",
+                          width: 8
+                        }}
+                      }};
+                      return configs[kind] || configs.attack;
+                    }}
+                    function phase3TargetLabel(record) {{
+                      var target = record && record.target ? record.target : {{}};
+                      return valueOrDash(target.area || "") + " " + valueOrDash(record.node || target.name || record.node_id);
+                    }}
+                    function phase3SourceLabel(record) {{
+                      var source = record && record.source ? record.source : {{}};
+                      return valueOrDash(source.area || "") + " " + valueOrDash(source.name || source.id);
+                    }}
+                    function phase3ReasonBadges(record) {{
+                      var reasons = Array.isArray(record.reasons) ? record.reasons.slice(0, 5) : [];
+                      if (!reasons.length) return "";
+                      return '<div class="phase3-reasons">' + reasons.map(function (reason) {{
+                        return '<span class="phase3-reason">' + escapeHtml(reason) + '</span>';
+                      }}).join("") + '</div>';
+                    }}
+                    function phase3EdgeId(record) {{
+                      if (!record) return null;
+                      if (record.edge_id && edges && edges.get(record.edge_id)) return record.edge_id;
+                      if (Array.isArray(record.edge) && record.edge.length === 2) {{
+                        var forward = record.edge[0] + "|" + record.edge[1];
+                        var reverse = record.edge[1] + "|" + record.edge[0];
+                        if (edges && edges.get(forward)) return forward;
+                        if (edges && edges.get(reverse)) return reverse;
+                        return record.edge_id || forward;
+                      }}
+                      return record.edge_id || null;
+                    }}
+                    function focusPhase3Candidate(record, config) {{
+                      if (!record || !nodes || !edges) return;
+                      clearRouteState();
+                      resetEdgeHighlights();
+                      var edgeId = phase3EdgeId(record);
+                      if (edgeId) {{
+                        highlightEdges([edgeId], config.color, config.width || 8);
+                      }}
+                      var nodeId = record.node_id || (record.target && record.target.id);
+                      if (nodeId && nodes.get(nodeId)) {{
+                        network.selectNodes([nodeId]);
+                        network.focus(nodeId, {{
+                          scale: 1.0,
+                          animation: {{ duration: 220, easingFunction: "easeInOutQuad" }}
+                        }});
+                        renderNodeInfo(nodeId);
+                      }}
+                    }}
+                    function renderPhase3Candidates(kind) {{
+                      var panel = document.getElementById("phase3-score-panel");
+                      if (!panel) return;
+                      var config = phase3CandidateConfig(kind);
+                      var records = phase3Simulation && Array.isArray(phase3Simulation[config.key])
+                        ? phase3Simulation[config.key].slice(0, 10)
+                        : [];
+                      if (!records.length) {{
+                        panel.innerHTML =
+                          '<h2>' + escapeHtml(config.title) + '</h2>' +
+                          '<div class="phase3-empty">候補がありません。state.jsonの invasion_simulation を確認してください。</div>';
+                        return;
+                      }}
+                      clearRouteState();
+                      resetEdgeHighlights();
+                      highlightEdges(records.map(phase3EdgeId).filter(Boolean), config.color, config.width || 8);
+                      panel.innerHTML =
+                        '<h2>' + escapeHtml(config.title) + '</h2>' +
+                        '<p class="phase3-subtitle">' + escapeHtml(config.subtitle) + '</p>' +
+                        records.map(function (record, index) {{
+                          return '<button class="phase3-item" type="button" data-phase3-index="' + index + '">' +
+                            '<div class="phase3-main"><span>' + (index + 1) + '. ' + escapeHtml(phase3TargetLabel(record)) + '</span>' +
+                            '<span class="phase3-score">' + escapeHtml(Number(record.score || 0).toFixed(1)) + '</span></div>' +
+                            '<div class="phase3-route">' + escapeHtml(phase3SourceLabel(record)) + ' → ' + escapeHtml(phase3TargetLabel(record)) + '</div>' +
+                            phase3ReasonBadges(record) +
+                          '</button>';
+                        }}).join("");
+                      panel.querySelectorAll(".phase3-item").forEach(function (button) {{
+                        button.addEventListener("click", function () {{
+                          var index = Number(button.getAttribute("data-phase3-index"));
+                          focusPhase3Candidate(records[index], config);
+                        }});
+                      }});
+                    }}
                     var boundaryButton = document.getElementById("map-highlight-boundary");
                     if (boundaryButton) {{
                       boundaryButton.addEventListener("click", highlightSelfEnemyFisheryEdges);
@@ -2307,6 +2508,30 @@ def add_node_info_panel_v3(html: str) -> str:
                     if (riskAvoidanceButton) {{
                       riskAvoidanceButton.addEventListener("click", function () {{
                         highlightCandidateEdges("riskAvoidance", "#be123c", 7);
+                      }});
+                    }}
+                    var phase3AttackButton = document.getElementById("map-phase3-attack");
+                    if (phase3AttackButton) {{
+                      phase3AttackButton.addEventListener("click", function () {{
+                        renderPhase3Candidates("attack");
+                      }});
+                    }}
+                    var phase3InterdictionButton = document.getElementById("map-phase3-interdiction");
+                    if (phase3InterdictionButton) {{
+                      phase3InterdictionButton.addEventListener("click", function () {{
+                        renderPhase3Candidates("interdiction");
+                      }});
+                    }}
+                    var phase3RiskButton = document.getElementById("map-phase3-risk");
+                    if (phase3RiskButton) {{
+                      phase3RiskButton.addEventListener("click", function () {{
+                        renderPhase3Candidates("risk");
+                      }});
+                    }}
+                    var phase3OverallButton = document.getElementById("map-phase3-overall");
+                    if (phase3OverallButton) {{
+                      phase3OverallButton.addEventListener("click", function () {{
+                        renderPhase3Candidates("overall");
                       }});
                     }}
                     var enemyExpandButton = document.getElementById("map-highlight-enemy-expand");
@@ -2453,18 +2678,16 @@ def clean_generated_html(html: str) -> str:
     return "\n".join(line.rstrip() for line in html.splitlines()) + "\n"
 
 
-def write_json(
+def build_state_payload(
     graph: nx.Graph,
     edges: list[Edge],
     analysis: dict[str, Any],
-    output_path: Path,
     now: datetime,
     config: dict[str, Any],
     tz: ZoneInfo,
     alliance_powers: dict[str, AlliancePower],
     simulation_config: dict[str, Any] | None = None,
-) -> None:
-    output_path.parent.mkdir(parents=True, exist_ok=True)
+) -> dict[str, Any]:
     warning_hours = float(config.get("protect_warning_hours", 6))
     owner_affiliations = build_owner_affiliations(graph, config)
     nodes = []
@@ -2495,7 +2718,27 @@ def write_json(
         **analysis,
     }
     payload["invasion_simulation"] = build_state_invasion_simulation(payload, simulation_config or {})
+    return payload
+
+
+def write_json_payload(payload: dict[str, Any], output_path: Path) -> None:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def write_json(
+    graph: nx.Graph,
+    edges: list[Edge],
+    analysis: dict[str, Any],
+    output_path: Path,
+    now: datetime,
+    config: dict[str, Any],
+    tz: ZoneInfo,
+    alliance_powers: dict[str, AlliancePower],
+    simulation_config: dict[str, Any] | None = None,
+) -> None:
+    payload = build_state_payload(graph, edges, analysis, now, config, tz, alliance_powers, simulation_config)
+    write_json_payload(payload, output_path)
 
 
 def parse_args() -> argparse.Namespace:
@@ -2550,8 +2793,9 @@ def main() -> int:
     output_config = config.get("output", {})
     html_path = Path(args.html or output_config.get("html", "sample_output/map.html"))
     json_path = Path(args.json_output or output_config.get("json", "sample_output/state.json"))
-    write_html(graph, analysis, repo_root / html_path, now, analysis_config, tz, alliance_powers)
-    write_json(graph, edges, analysis, repo_root / json_path, now, analysis_config, tz, alliance_powers, config.get("simulation", {}))
+    state_payload = build_state_payload(graph, edges, analysis, now, analysis_config, tz, alliance_powers, config.get("simulation", {}))
+    write_html(graph, analysis, repo_root / html_path, now, analysis_config, tz, alliance_powers, state_payload.get("invasion_simulation"))
+    write_json_payload(state_payload, repo_root / json_path)
     print(f"Wrote {html_path}")
     print(f"Wrote {json_path}")
     print(f"Critical nodes: {len(analysis['critical_nodes'])}")
