@@ -2,7 +2,7 @@
 
 ## Date
 
-2026-05-29
+2026-05-30
 
 ## Context
 
@@ -18,6 +18,7 @@ Latest update adds local Excel alliance-strength integration and the first simul
 - `analysis/2026-05-27_invasion_strategy_os_mvp.md`
 - `analysis/latest_handoff.md`
 - `tools/invasion_strategy_os/invasion_strategy_os.py`
+- `tools/invasion_strategy_os/simulation.py`
 - `tools/invasion_strategy_os/config.example.json`
 - `tools/invasion_strategy_os/config.google_history_534.json`
 - `tools/invasion_strategy_os/config.google_full_map.json`
@@ -68,6 +69,8 @@ Latest update adds local Excel alliance-strength integration and the first simul
 33. Split route selection into two modes. `戦力無視ルート` keeps the current fishery-only shortest route behavior and ignores enemy power. `始点より低戦力通過` still avoids city transit, but permits transit through enemy fisheries only when that enemy alliance power is lower than the alliance power of the selected start node.
 34. Added separate simulation score models: `attack_score_options`, `interdiction_score_options`, and `risk_avoidance_options`. Attack favors enemy boundary fisheries near enemy cities while penalizing stronger enemy pockets; interdiction favors enemy cities destroyable from adjacent friendly fisheries; risk avoidance flags high-power or dense enemy boundary areas.
 35. Added generated-map `遮断候補` and `危険回避` buttons to highlight the corresponding score-model candidates.
+36. Phase 3 separates the strategic rule engine into `tools/invasion_strategy_os/simulation.py`. `invasion_strategy_os.py` now builds the sheet/map/graph state, writes the same state shape used by `sample_output/state.json`, and delegates `invasion_simulation` scoring to the separated module.
+37. The Phase 3 rule engine writes JSON score reasons and factor breakdowns for protection expiry, battle windows, capture-limit pressure, enemy adjacency, city-destruction reach, central connection value, and counterattack risk. GPT is not used in this engine.
 
 ## Current risks
 
@@ -76,7 +79,7 @@ Latest update adds local Excel alliance-strength integration and the first simul
 3. Diagonal adjacency and pact-assisted adjacency need explicit modeling rules before live operational use.
 4. The 3x3 area offsets and central reference typing are derived from the Google Sheets full-map layout plus the Cpt Hedgehog Season 6 reference map. If either reference changes, update `config.google_full_map.json` and the central typing helper.
 5. Alliance ranking power is a coarse proxy only. It does not account for live attendance, capture caps, protection windows, march timing, rally availability, or tactical city-destruction sequencing.
-6. Current game-rule modeling covers map connectivity rules, but not all operational timing rules. Included: trade posts/altars/temple isolated, destroyed cities isolated, city-city edges blocked, cities excluded as route transit, fishery adjacency, city-to-surrounding-fishery edges, and boundary/interior pact-like reach. Not yet included: battle windows, protection expiry eligibility, capture caps, live player attendance, rally timing, and explicit current pact target.
+6. Current game-rule modeling covers map connectivity rules plus an initial Phase 3 scoring layer for protection expiry, battle windows, capture-limit pressure, enemy adjacency, city-destruction reach, central connection value, and counterattack risk. Capture-limit usage is still a proxy based on currently owned city/fishery nodes, and live player attendance, rally timing, and explicit current pact target are not solved yet.
 7. Excel power file remains fixed-name input: `s6powerrank_8server_power_2026-05-10_en.xlsx`. Replacing that file and regenerating updates the derived cache and map output.
 
 ## Recommended next actions

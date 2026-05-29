@@ -18,6 +18,11 @@ from zoneinfo import ZoneInfo
 import networkx as nx
 from pyvis.network import Network
 
+try:
+    from .simulation import build_invasion_simulation as build_state_invasion_simulation
+except ImportError:
+    from simulation import build_invasion_simulation as build_state_invasion_simulation
+
 
 JST = ZoneInfo("Asia/Tokyo")
 CENTRAL_COORD_PREFIX = "\u4e2d\u592e"
@@ -1073,330 +1078,6 @@ def alliance_power_for_owner(owner: str | None, powers: dict[str, AlliancePower]
 def alliance_power_payload(owner: str | None, powers: dict[str, AlliancePower]) -> dict[str, Any] | None:
     item = alliance_power_for_owner(owner, powers)
     return alliance_power_to_record(item) if item else None
-
-
-def is_fishery_node_data(node_data: dict[str, Any]) -> bool:
-    return str(node_data.get("type", "")) == DEFAULT_FISHERY_TYPE
-
-
-def simulation_node_summary(
-    graph: nx.Graph,
-    node_id: str,
-    owner_affiliations: dict[str, str],
-    alliance_powers: dict[str, AlliancePower],
-) -> dict[str, Any]:
-    node = graph.nodes[node_id]
-    owner = str(node.get("owner", "")).strip()
-    power = alliance_power_payload(owner, alliance_powers)
-    return {
-        "id": node_id,
-        "area": node.get("area", ""),
-        "name": node.get("name", node_id),
-        "type": node.get("type", ""),
-        "owner": display_owner(owner),
-        "affiliation": "destroyed" if is_destroyed_node_data(node) else ("unowned" if is_unowned_owner(owner) else owner_affiliations.get(owner, area_affiliation(str(node.get("area", ""))))),
-        "importance": node.get("importance", 0),
-        "alliance_power": power,
-    }
-
-
-def invasion_edge_score(
-    source: dict[str, Any],
-    target: dict[str, Any],
-    alliance_powers: dict[str, AlliancePower],
-) -> float:
-    source_power = alliance_power_for_owner(str(source.get("owner", "")), alliance_powers)
-    target_power = alliance_power_for_owner(str(target.get("owner", "")), alliance_powers)
-    source_value = float(source_power.power or 0) if source_power else 0.0
-    target_value = float(target_power.power or 0) if target_power else 0.0
-    power_ratio = (source_value / target_value) if source_value and target_value else (source_value / 1_000_000_000)
-    return round(power_ratio + float(target.get("importance", 0)) / 10, 4)
-
-
-def summary_power_value(summary: dict[str, Any]) -> float:
-    power = summary.get("alliance_power") or {}
-    return float(power.get("power") or 0)
-
-
-def ratio_or_zero(numerator: float, denominator: float) -> float:
-    return numerator / denominator if numerator and denominator else 0.0
-
-
-def adjacent_node_ids_by_affiliation(
-    graph: nx.Graph,
-    node_id: str,
-    owner_affiliations: dict[str, str],
-    affiliations: set[str],
-    node_types: set[str] | None = None,
-) -> list[str]:
-    results: list[str] = []
-    for neighbor_id in graph.neighbors(node_id):
-        neighbor = graph.nodes[neighbor_id]
-        if node_types is not None and str(neighbor.get("type", "")) not in node_types:
-            continue
-        affiliation = simulation_node_summary(graph, neighbor_id, owner_affiliations, {})["affiliation"]
-        if affiliation in affiliations:
-            results.append(neighbor_id)
-    return sorted(results)
-
-
-def tactical_score_breakdown(
-    graph: nx.Graph,
-    source_id: str,
-    target_id: str,
-    owner_affiliations: dict[str, str],
-    alliance_powers: dict[str, AlliancePower],
-    model: str,
-) -> dict[str, Any]:
-    source = simulation_node_summary(graph, source_id, owner_affiliations, alliance_powers)
-    target = simulation_node_summary(graph, target_id, owner_affiliations, alliance_powers)
-    source_power = summary_power_value(source)
-    target_power = summary_power_value(target)
-    target_importance = float(target.get("importance", 0) or 0)
-    target_enemy_cities = adjacent_node_ids_by_affiliation(
-        graph,
-        target_id,
-        owner_affiliations,
-        {"enemy"},
-        {DEFAULT_CITY_TYPE},
-    )
-    target_enemy_fisheries = adjacent_node_ids_by_affiliation(
-        graph,
-        target_id,
-        owner_affiliations,
-        {"enemy"},
-        {DEFAULT_FISHERY_TYPE},
-    )
-    target_friendly_fisheries = adjacent_node_ids_by_affiliation(
-        graph,
-        target_id,
-        owner_affiliations,
-        {"self", "ally"},
-        {DEFAULT_FISHERY_TYPE},
-    )
-    power_ratio = ratio_or_zero(source_power, target_power)
-    enemy_power_ratio = ratio_or_zero(target_power, source_power)
-    nearby_enemy_city_value = sum(float(graph.nodes[node_id].get("importance", 0) or 0) for node_id in target_enemy_cities)
-
-    if model == "attack":
-        score = (
-            target_importance * 1.2
-            + nearby_enemy_city_value * 0.9
-            + len(target_enemy_cities) * 2.0
-            + power_ratio * 2.0
-            - len(target_enemy_fisheries) * 0.35
-            - max(0.0, enemy_power_ratio - 1.0) * 2.5
-        )
-        reasons = [
-            "enemy_boundary_target",
-            "near_enemy_city" if target_enemy_cities else "no_adjacent_enemy_city",
-            "power_advantage" if power_ratio >= 1 else "power_disadvantage",
-        ]
-    elif model == "interdiction":
-        score = (
-            target_importance * 2.0
-            + graph.degree(target_id) * 0.8
-            + len(target_enemy_fisheries) * 0.8
-            + len(target_friendly_fisheries) * 0.6
-            + target_power / 10_000_000_000
-        )
-        reasons = [
-            "enemy_city_destroy_candidate",
-            "cuts_city_adjacency",
-            "high_degree_city" if graph.degree(target_id) >= 4 else "local_city",
-        ]
-    elif model == "risk":
-        score = (
-            enemy_power_ratio * 3.0
-            + len(target_enemy_fisheries) * 0.8
-            + len(target_enemy_cities) * 1.2
-            + target_importance * 0.5
-        )
-        reasons = [
-            "high_power_enemy_boundary" if enemy_power_ratio > 1 else "enemy_boundary",
-            "enemy_dense_area" if len(target_enemy_fisheries) + len(target_enemy_cities) >= 3 else "local_pressure",
-        ]
-    else:
-        score = invasion_edge_score(source, target, alliance_powers)
-        reasons = ["simple_power_importance_score"]
-
-    return {
-        "model": model,
-        "score": round(score, 4),
-        "source_power": int(source_power) if source_power else None,
-        "target_power": int(target_power) if target_power else None,
-        "source_to_target_power_ratio": round(power_ratio, 4) if power_ratio else None,
-        "target_to_source_power_ratio": round(enemy_power_ratio, 4) if enemy_power_ratio else None,
-        "target_enemy_city_neighbors": target_enemy_cities,
-        "target_enemy_fishery_neighbors": target_enemy_fisheries,
-        "target_friendly_fishery_neighbors": target_friendly_fisheries,
-        "reasons": reasons,
-    }
-
-
-def invasion_edge_record(
-    graph: nx.Graph,
-    source_id: str,
-    target_id: str,
-    label: str,
-    owner_affiliations: dict[str, str],
-    alliance_powers: dict[str, AlliancePower],
-    score_model: str = "simple",
-) -> dict[str, Any]:
-    source = simulation_node_summary(graph, source_id, owner_affiliations, alliance_powers)
-    target = simulation_node_summary(graph, target_id, owner_affiliations, alliance_powers)
-    breakdown = tactical_score_breakdown(
-        graph,
-        source_id,
-        target_id,
-        owner_affiliations,
-        alliance_powers,
-        score_model,
-    )
-    return {
-        "label": label,
-        "edge": [source_id, target_id],
-        "source": source,
-        "target": target,
-        "score": breakdown["score"],
-        "score_breakdown": breakdown,
-    }
-
-
-def collect_boundary_interior_counts(
-    graph: nx.Graph,
-    owner_affiliations: dict[str, str],
-    friendly_affiliations: set[str],
-    interior_affiliations: set[str],
-    depths: list[int],
-) -> dict[str, Any]:
-    boundary_friendly_nodes: set[str] = set()
-    boundary_edge_count = 0
-    for source_id, target_id in graph.edges():
-        source = graph.nodes[source_id]
-        target = graph.nodes[target_id]
-        if not is_fishery_node_data(source) or not is_fishery_node_data(target):
-            continue
-        source_affiliation = simulation_node_summary(graph, source_id, owner_affiliations, {})["affiliation"]
-        target_affiliation = simulation_node_summary(graph, target_id, owner_affiliations, {})["affiliation"]
-        if source_affiliation in friendly_affiliations and target_affiliation == "enemy":
-            boundary_friendly_nodes.add(source_id)
-            boundary_edge_count += 1
-        elif target_affiliation in friendly_affiliations and source_affiliation == "enemy":
-            boundary_friendly_nodes.add(target_id)
-            boundary_edge_count += 1
-
-    counts: dict[str, Any] = {"boundary_edges": boundary_edge_count, "boundary_friendly_nodes": len(boundary_friendly_nodes)}
-    for depth in depths:
-        visited = set(boundary_friendly_nodes)
-        frontier = set(boundary_friendly_nodes)
-        edges: set[tuple[str, str]] = set()
-        for _ in range(depth):
-            next_frontier: set[str] = set()
-            for node_id in frontier:
-                for neighbor_id in graph.neighbors(node_id):
-                    if neighbor_id in visited:
-                        continue
-                    neighbor = graph.nodes[neighbor_id]
-                    if not is_fishery_node_data(neighbor):
-                        continue
-                    affiliation = simulation_node_summary(graph, neighbor_id, owner_affiliations, {})["affiliation"]
-                    if affiliation not in interior_affiliations:
-                        continue
-                    edges.add(tuple(sorted((node_id, neighbor_id))))
-                    visited.add(neighbor_id)
-                    next_frontier.add(neighbor_id)
-            frontier = next_frontier
-        counts[f"depth_{depth}_edges"] = len(edges)
-        counts[f"depth_{depth}_nodes"] = max(0, len(visited) - len(boundary_friendly_nodes))
-    return counts
-
-
-def build_invasion_simulation(
-    graph: nx.Graph,
-    owner_affiliations: dict[str, str],
-    alliance_powers: dict[str, AlliancePower],
-    config: dict[str, Any],
-) -> dict[str, Any]:
-    friendly_affiliations = {str(value) for value in config.get("friendly_affiliations", ["self", "ally"])}
-    interior_affiliations = {str(value) for value in config.get("interior_affiliations", ["self", "ally", "unowned"])}
-    depths = [int(value) for value in config.get("interior_depths", [1, 2, 3])]
-    max_items = int(config.get("max_items", 30))
-
-    friendly_pressure: list[dict[str, Any]] = []
-    enemy_threats: list[dict[str, Any]] = []
-    friendly_expansion: list[dict[str, Any]] = []
-    enemy_expansion: list[dict[str, Any]] = []
-    attack_score_options: list[dict[str, Any]] = []
-    interdiction_score_options: list[dict[str, Any]] = []
-    risk_avoidance_options: list[dict[str, Any]] = []
-
-    for source_id, target_id in graph.edges():
-        source = graph.nodes[source_id]
-        target = graph.nodes[target_id]
-        if is_destroyed_node_data(source) or is_destroyed_node_data(target):
-            continue
-        source_affiliation = simulation_node_summary(graph, source_id, owner_affiliations, alliance_powers)["affiliation"]
-        target_affiliation = simulation_node_summary(graph, target_id, owner_affiliations, alliance_powers)["affiliation"]
-
-        if is_fishery_node_data(source) and is_fishery_node_data(target) and source_affiliation in friendly_affiliations and target_affiliation == "enemy":
-            friendly_pressure.append(invasion_edge_record(graph, source_id, target_id, "friendly_to_enemy_boundary", owner_affiliations, alliance_powers))
-            enemy_threats.append(invasion_edge_record(graph, target_id, source_id, "enemy_to_friendly_boundary", owner_affiliations, alliance_powers))
-            attack_score_options.append(invasion_edge_record(graph, source_id, target_id, "attack_score", owner_affiliations, alliance_powers, "attack"))
-            risk_avoidance_options.append(invasion_edge_record(graph, source_id, target_id, "risk_avoidance", owner_affiliations, alliance_powers, "risk"))
-        elif is_fishery_node_data(source) and is_fishery_node_data(target) and target_affiliation in friendly_affiliations and source_affiliation == "enemy":
-            friendly_pressure.append(invasion_edge_record(graph, target_id, source_id, "friendly_to_enemy_boundary", owner_affiliations, alliance_powers))
-            enemy_threats.append(invasion_edge_record(graph, source_id, target_id, "enemy_to_friendly_boundary", owner_affiliations, alliance_powers))
-            attack_score_options.append(invasion_edge_record(graph, target_id, source_id, "attack_score", owner_affiliations, alliance_powers, "attack"))
-            risk_avoidance_options.append(invasion_edge_record(graph, target_id, source_id, "risk_avoidance", owner_affiliations, alliance_powers, "risk"))
-        elif is_fishery_node_data(source) and is_fishery_node_data(target) and source_affiliation in friendly_affiliations and target_affiliation == "unowned":
-            friendly_expansion.append(invasion_edge_record(graph, source_id, target_id, "friendly_to_unowned", owner_affiliations, alliance_powers))
-        elif is_fishery_node_data(source) and is_fishery_node_data(target) and target_affiliation in friendly_affiliations and source_affiliation == "unowned":
-            friendly_expansion.append(invasion_edge_record(graph, target_id, source_id, "friendly_to_unowned", owner_affiliations, alliance_powers))
-        elif is_fishery_node_data(source) and is_fishery_node_data(target) and source_affiliation == "enemy" and target_affiliation == "unowned":
-            enemy_expansion.append(invasion_edge_record(graph, source_id, target_id, "enemy_to_unowned", owner_affiliations, alliance_powers))
-        elif is_fishery_node_data(source) and is_fishery_node_data(target) and target_affiliation == "enemy" and source_affiliation == "unowned":
-            enemy_expansion.append(invasion_edge_record(graph, target_id, source_id, "enemy_to_unowned", owner_affiliations, alliance_powers))
-        elif is_fishery_node_data(source) and str(target.get("type", "")) == DEFAULT_CITY_TYPE and source_affiliation in friendly_affiliations and target_affiliation == "enemy":
-            interdiction_score_options.append(invasion_edge_record(graph, source_id, target_id, "interdiction_score", owner_affiliations, alliance_powers, "interdiction"))
-        elif is_fishery_node_data(target) and str(source.get("type", "")) == DEFAULT_CITY_TYPE and target_affiliation in friendly_affiliations and source_affiliation == "enemy":
-            interdiction_score_options.append(invasion_edge_record(graph, target_id, source_id, "interdiction_score", owner_affiliations, alliance_powers, "interdiction"))
-
-    def top_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
-        return sorted(items, key=lambda item: (-item["score"], item["source"]["id"], item["target"]["id"]))[:max_items]
-
-    return {
-        "assumptions": [
-            "Alliance strength uses the Alliance Power ranking from the local Excel file.",
-            "Only fishery-to-fishery tactical edges are treated as attack-front candidates in this MVP.",
-            "Attack score favors enemy boundary fisheries near enemy cities and penalizes stronger enemy power pockets.",
-            "Interdiction score favors enemy cities that can be destroyed from adjacent friendly fisheries to cut city adjacency.",
-            "Risk avoidance score flags high-power or dense enemy boundary areas to avoid or reinforce.",
-            "Trade posts, altars, and the ancestral temple are not used as movement adjacency.",
-            "Destroyed cities are isolated and do not provide adjacency.",
-            "Boundary plus interior depth approximates pact-assisted connected-land reach; it is not an automatic attack order.",
-            "Protection windows, battle windows, capture caps, online attendance, and march timing are not solved yet.",
-        ],
-        "strategic_read": [
-            "#534-side actions should first protect central access and the #509/#440/#511 friendly line before deep overextension.",
-            "Enemy-side pressure is most dangerous where high-power enemy alliances touch #534-side or ally fisheries, then can chain through interior friendly/unowned fisheries.",
-            "#476 remains the most important enemy pressure source by ranking power; central and #534-side boundary edges should be reviewed first.",
-        ],
-        "friendly_pressure_options": top_items(friendly_pressure),
-        "enemy_threat_options": top_items(enemy_threats),
-        "friendly_expansion_options": top_items(friendly_expansion),
-        "enemy_expansion_options": top_items(enemy_expansion),
-        "attack_score_options": top_items(attack_score_options),
-        "interdiction_score_options": top_items(interdiction_score_options),
-        "risk_avoidance_options": top_items(risk_avoidance_options),
-        "interior_depth_counts": collect_boundary_interior_counts(
-            graph,
-            owner_affiliations,
-            friendly_affiliations,
-            interior_affiliations,
-            depths,
-        ),
-    }
 
 
 def write_html(
@@ -2781,6 +2462,7 @@ def write_json(
     config: dict[str, Any],
     tz: ZoneInfo,
     alliance_powers: dict[str, AlliancePower],
+    simulation_config: dict[str, Any] | None = None,
 ) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     warning_hours = float(config.get("protect_warning_hours", 6))
@@ -2812,6 +2494,7 @@ def write_json(
         "owner_affiliations": owner_affiliations,
         **analysis,
     }
+    payload["invasion_simulation"] = build_state_invasion_simulation(payload, simulation_config or {})
     output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
@@ -2859,13 +2542,6 @@ def main() -> int:
     shortest_to = args.shortest_to or shortest.get("to")
     analysis_config = config.get("analysis", {})
     analysis = analyze_graph(graph, analysis_config, shortest_from, shortest_to)
-    owner_affiliations = build_owner_affiliations(graph, analysis_config)
-    analysis["invasion_simulation"] = build_invasion_simulation(
-        graph,
-        owner_affiliations,
-        alliance_powers,
-        config.get("simulation", {}),
-    )
     analysis["alliance_power_source"] = config.get("alliance_power", {})
 
     now = parse_optional_time(args.now, tz) if args.now else datetime.now(tz)
@@ -2875,7 +2551,7 @@ def main() -> int:
     html_path = Path(args.html or output_config.get("html", "sample_output/map.html"))
     json_path = Path(args.json_output or output_config.get("json", "sample_output/state.json"))
     write_html(graph, analysis, repo_root / html_path, now, analysis_config, tz, alliance_powers)
-    write_json(graph, edges, analysis, repo_root / json_path, now, analysis_config, tz, alliance_powers)
+    write_json(graph, edges, analysis, repo_root / json_path, now, analysis_config, tz, alliance_powers, config.get("simulation", {}))
     print(f"Wrote {html_path}")
     print(f"Wrote {json_path}")
     print(f"Critical nodes: {len(analysis['critical_nodes'])}")

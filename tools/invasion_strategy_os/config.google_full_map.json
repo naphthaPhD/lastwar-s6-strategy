@@ -98,7 +98,16 @@
     "max_items": 30,
     "friendly_affiliations": ["self", "ally"],
     "interior_affiliations": ["self", "ally", "unowned"],
-    "interior_depths": [1, 2, 3]
+    "interior_depths": [1, 2, 3],
+    "battle_windows": [
+      {"weekday": 2, "start": "00:00", "end": "23:59"},
+      {"weekday": 5, "start": "00:00", "end": "23:59"}
+    ],
+    "capture_limit": {
+      "enabled": true,
+      "default_limit": 6,
+      "usage_source": "owned_nodes"
+    }
   },
   "output": {
     "html": "sample_output/map.html",
