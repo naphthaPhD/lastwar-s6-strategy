@@ -1,0 +1,33 @@
+{
+  "input_video": "input.mp4",
+  "output_dir": ".",
+  "ffmpeg_binary": "ffmpeg",
+  "fps": 1,
+  "roi": {
+    "x": 0,
+    "y": 0,
+    "width": 720,
+    "height": 1280,
+    "relative": false
+  },
+  "diff": {
+    "threshold": 8.0,
+    "min_changed_pixels_ratio": 0.002,
+    "save_debug_diff": true
+  },
+  "preprocess": {
+    "scale": 2.0,
+    "threshold_method": "otsu",
+    "adaptive_block_size": 31,
+    "adaptive_c": 7
+  },
+  "dedupe": {
+    "enabled": true,
+    "line_min_height": 12,
+    "line_padding": 4,
+    "hash_size": 16,
+    "hamming_threshold": 6,
+    "ignore_top_ratio": 0.0,
+    "ignore_bottom_ratio": 0.0
+  }
+}
