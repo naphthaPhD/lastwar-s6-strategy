@@ -1,0 +1,1661 @@
+{
+  "generated_at": "2026-05-30T01:39:18.717710+09:00",
+  "engine": "strategic_rule_engine_v2",
+  "scenario": {
+    "friendly_affiliations": [
+      "self",
+      "ally"
+    ],
+    "battle_windows": [
+      {
+        "weekday": 2,
+        "start": "00:00",
+        "end": "23:59"
+      },
+      {
+        "weekday": 5,
+        "start": "00:00",
+        "end": "23:59"
+      }
+    ]
+  },
+  "top_defense": [
+    {
+      "node": "E-7",
+      "node_id": "#480:E-7",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "戦闘可能時間",
+        "土曜戦闘日"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 37.0,
+        "choke": 10.92,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "F-7",
+      "node_id": "#480:F-7",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方グループ保有"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 39.0,
+        "choke": 11.04,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-13-19",
+      "node_id": "中央:中央-13-19",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-7-19",
+      "node_id": "中央:中央-7-19",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "K-1",
+      "node_id": "#511:K-1",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方グループ保有"
+      ],
+      "scores": {
+        "alliance": 21.0,
+        "coalition": 38.0,
+        "choke": 26.15,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-1-5",
+      "node_id": "中央:中央-1-5",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 57.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-14-20",
+      "node_id": "中央:中央-14-20",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 57.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-2-8",
+      "node_id": "中央:中央-2-8",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "味方グループ保有",
+        "中央接続",
+        "中央隣接"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 8.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-9-19",
+      "node_id": "中央:中央-9-19",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "味方グループ保有",
+        "中央接続",
+        "中央隣接"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "E-15",
+      "node_id": "#480:E-15",
+      "score": 93.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方グループ保有"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 37.0,
+        "choke": 6.48,
+        "isolation": 0.0,
+        "invasion": 93,
+        "protection": 8.0,
+        "time": 45.0
+      }
+    }
+  ],
+  "top_attack": [
+    {
+      "node": "中央-20-1",
+      "node_id": "中央:中央-20-1",
+      "score": 48.1928,
+      "classification": "attack",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "保護切れ",
+        "戦闘可能時間",
+        "土曜戦闘日"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 37.0,
+        "choke": 33.08,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-17-18",
+      "node_id": "中央:中央-17-18",
+      "score": 48.02,
+      "classification": "attack",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "保護切れ",
+        "戦闘可能時間",
+        "土曜戦闘日"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 44.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-18-4",
+      "node_id": "中央:中央-18-4",
+      "score": 48.02,
+      "classification": "attack",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "保護切れ",
+        "戦闘可能時間",
+        "土曜戦闘日"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 44.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-1-4",
+      "node_id": "中央:中央-1-4",
+      "score": 47.38,
+      "classification": "attack",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "保護切れ",
+        "戦闘可能時間",
+        "土曜戦闘日"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 42.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-17-3",
+      "node_id": "中央:中央-17-3",
+      "score": 47.38,
+      "classification": "attack",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "保護切れ",
+        "戦闘可能時間",
+        "土曜戦闘日"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 42.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-2-4",
+      "node_id": "中央:中央-2-4",
+      "score": 47.38,
+      "classification": "attack",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "保護切れ",
+        "戦闘可能時間",
+        "土曜戦闘日"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 42.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-2-2",
+      "node_id": "中央:中央-2-2",
+      "score": 46.8616,
+      "classification": "attack",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "保護切れ",
+        "戦闘可能時間",
+        "土曜戦闘日"
+      ],
+      "scores": {
+        "alliance": 21.0,
+        "coalition": 35.0,
+        "choke": 28.76,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-1-3",
+      "node_id": "中央:中央-1-3",
+      "score": 46.58,
+      "classification": "attack",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "保護切れ",
+        "戦闘可能時間",
+        "土曜戦闘日"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 37.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-20-2",
+      "node_id": "中央:中央-20-2",
+      "score": 46.58,
+      "classification": "attack",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "保護切れ",
+        "戦闘可能時間",
+        "土曜戦闘日"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 37.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-1-17",
+      "node_id": "中央:中央-1-17",
+      "score": 46.5,
+      "classification": "attack",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "保護切れ",
+        "味方連盟間の接続維持",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 27.0,
+        "coalition": 65.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 80,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    }
+  ],
+  "top_interdiction": [
+    {
+      "node": "f-6",
+      "node_id": "#480:f-6",
+      "score": 19.82,
+      "classification": "interdict",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方隣接"
+      ],
+      "scores": {
+        "alliance": 27.0,
+        "coalition": 16.0,
+        "choke": 8.0,
+        "isolation": 0.0,
+        "invasion": 70,
+        "protection": 8.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "d-6",
+      "node_id": "#480:d-6",
+      "score": 19.18,
+      "classification": "interdict",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方隣接"
+      ],
+      "scores": {
+        "alliance": 27.0,
+        "coalition": 16.0,
+        "choke": 8.0,
+        "isolation": 0.0,
+        "invasion": 70,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "e-6",
+      "node_id": "#480:e-6",
+      "score": 18.2,
+      "classification": "interdict",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方隣接"
+      ],
+      "scores": {
+        "alliance": 26.0,
+        "coalition": 15.0,
+        "choke": 8.0,
+        "isolation": 0.0,
+        "invasion": 60,
+        "protection": 8.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "h-2",
+      "node_id": "#476:h-2",
+      "score": 17.8,
+      "classification": "interdict",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "自連盟隣接"
+      ],
+      "scores": {
+        "alliance": 30.0,
+        "coalition": 15.0,
+        "choke": 8.0,
+        "isolation": 0.0,
+        "invasion": 60,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "e-16",
+      "node_id": "#480:e-16",
+      "score": 17.78,
+      "classification": "interdict",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方隣接"
+      ],
+      "scores": {
+        "alliance": 27.0,
+        "coalition": 16.0,
+        "choke": 8.0,
+        "isolation": 0.0,
+        "invasion": 60,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "h-18",
+      "node_id": "#523:h-18",
+      "score": 16.36,
+      "classification": "interdict",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方隣接"
+      ],
+      "scores": {
+        "alliance": 24.0,
+        "coalition": 13.0,
+        "choke": 8.0,
+        "isolation": 0.0,
+        "invasion": 50,
+        "protection": 8.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "d-16",
+      "node_id": "#480:d-16",
+      "score": 14.76,
+      "classification": "interdict",
+      "reasons": [
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "敵隣接",
+        "敵到達距離0",
+        "味方隣接",
+        "自連盟境界リスク"
+      ],
+      "scores": {
+        "alliance": 26.0,
+        "coalition": 15.0,
+        "choke": 8.0,
+        "isolation": 0.0,
+        "invasion": 40,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "f-8",
+      "node_id": "#480:f-8",
+      "score": 14.74,
+      "classification": "interdict",
+      "reasons": [
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "味方隣接"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 12.0,
+        "choke": 8.0,
+        "isolation": 0.0,
+        "invasion": 40,
+        "protection": 8.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "d-14",
+      "node_id": "#480:d-14",
+      "score": 14.1,
+      "classification": "interdict",
+      "reasons": [
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "味方隣接"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 12.0,
+        "choke": 8.0,
+        "isolation": 0.0,
+        "invasion": 40,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "b-14",
+      "node_id": "#480:b-14",
+      "score": 13.66,
+      "classification": "interdict",
+      "reasons": [
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "味方隣接"
+      ],
+      "scores": {
+        "alliance": 21.0,
+        "coalition": 10.0,
+        "choke": 8.0,
+        "isolation": 0.0,
+        "invasion": 40,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    }
+  ],
+  "risk_watchlist": [
+    {
+      "node": "E-7",
+      "node_id": "#480:E-7",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "戦闘可能時間",
+        "土曜戦闘日"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 37.0,
+        "choke": 10.92,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "F-7",
+      "node_id": "#480:F-7",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方グループ保有"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 39.0,
+        "choke": 11.04,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-13-19",
+      "node_id": "中央:中央-13-19",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-7-19",
+      "node_id": "中央:中央-7-19",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "K-1",
+      "node_id": "#511:K-1",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方グループ保有"
+      ],
+      "scores": {
+        "alliance": 21.0,
+        "coalition": 38.0,
+        "choke": 26.15,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-1-5",
+      "node_id": "中央:中央-1-5",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 57.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-14-20",
+      "node_id": "中央:中央-14-20",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 57.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-2-8",
+      "node_id": "中央:中央-2-8",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "味方グループ保有",
+        "中央接続",
+        "中央隣接"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 8.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-9-19",
+      "node_id": "中央:中央-9-19",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "味方グループ保有",
+        "中央接続",
+        "中央隣接"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "E-15",
+      "node_id": "#480:E-15",
+      "score": 93.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方グループ保有"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 37.0,
+        "choke": 6.48,
+        "isolation": 0.0,
+        "invasion": 93,
+        "protection": 8.0,
+        "time": 45.0
+      }
+    }
+  ],
+  "time_sensitive": [
+    {
+      "node": "E-7",
+      "node_id": "#480:E-7",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "戦闘可能時間",
+        "土曜戦闘日"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 37.0,
+        "choke": 10.92,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "F-7",
+      "node_id": "#480:F-7",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方グループ保有"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 39.0,
+        "choke": 11.04,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-13-19",
+      "node_id": "中央:中央-13-19",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-7-19",
+      "node_id": "中央:中央-7-19",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "K-1",
+      "node_id": "#511:K-1",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方グループ保有"
+      ],
+      "scores": {
+        "alliance": 21.0,
+        "coalition": 38.0,
+        "choke": 26.15,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-1-5",
+      "node_id": "中央:中央-1-5",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 57.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-14-20",
+      "node_id": "中央:中央-14-20",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 57.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-2-8",
+      "node_id": "中央:中央-2-8",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "味方グループ保有",
+        "中央接続",
+        "中央隣接"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 8.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-9-19",
+      "node_id": "中央:中央-9-19",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "味方グループ保有",
+        "中央接続",
+        "中央隣接"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "E-15",
+      "node_id": "#480:E-15",
+      "score": 93.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方グループ保有"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 37.0,
+        "choke": 6.48,
+        "isolation": 0.0,
+        "invasion": 93,
+        "protection": 8.0,
+        "time": 45.0
+      }
+    }
+  ],
+  "protection_watchlist": [
+    {
+      "node": "E-7",
+      "node_id": "#480:E-7",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "戦闘可能時間",
+        "土曜戦闘日"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 37.0,
+        "choke": 10.92,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-13-19",
+      "node_id": "中央:中央-13-19",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-7-19",
+      "node_id": "中央:中央-7-19",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-1-5",
+      "node_id": "中央:中央-1-5",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 57.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-14-20",
+      "node_id": "中央:中央-14-20",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 57.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "A-5",
+      "node_id": "#534:A-5",
+      "score": 87.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "自連盟保有",
+        "自連盟隣接"
+      ],
+      "scores": {
+        "alliance": 59.0,
+        "coalition": 36.0,
+        "choke": 3.0,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "A-9",
+      "node_id": "#534:A-9",
+      "score": 87.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "自連盟保有",
+        "自連盟隣接"
+      ],
+      "scores": {
+        "alliance": 59.0,
+        "coalition": 36.0,
+        "choke": 6.93,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-1-6",
+      "node_id": "中央:中央-1-6",
+      "score": 87.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 22.0,
+        "coalition": 56.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-1-7",
+      "node_id": "中央:中央-1-7",
+      "score": 87.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 22.0,
+        "coalition": 56.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-11-18",
+      "node_id": "中央:中央-11-18",
+      "score": 87.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 20.0,
+        "coalition": 54.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    }
+  ],
+  "coalition_lines": [
+    {
+      "node": "E-7",
+      "node_id": "#480:E-7",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "戦闘可能時間",
+        "土曜戦闘日"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 37.0,
+        "choke": 10.92,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "F-7",
+      "node_id": "#480:F-7",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方グループ保有"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 39.0,
+        "choke": 11.04,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-13-19",
+      "node_id": "中央:中央-13-19",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-7-19",
+      "node_id": "中央:中央-7-19",
+      "score": 100.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "K-1",
+      "node_id": "#511:K-1",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方グループ保有"
+      ],
+      "scores": {
+        "alliance": 21.0,
+        "coalition": 38.0,
+        "choke": 26.15,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-1-5",
+      "node_id": "中央:中央-1-5",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 57.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-14-20",
+      "node_id": "中央:中央-14-20",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 57.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-2-8",
+      "node_id": "中央:中央-2-8",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "味方グループ保有",
+        "中央接続",
+        "中央隣接"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 8.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "中央-9-19",
+      "node_id": "中央:中央-9-19",
+      "score": 97.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "味方グループ保有",
+        "中央接続",
+        "中央隣接"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 0.0,
+        "time": 45.0
+      }
+    },
+    {
+      "node": "E-15",
+      "node_id": "#480:E-15",
+      "score": 93.0,
+      "classification": "risk",
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "味方グループ保有"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 37.0,
+        "choke": 6.48,
+        "isolation": 0.0,
+        "invasion": 93,
+        "protection": 8.0,
+        "time": 45.0
+      }
+    }
+  ],
+  "assumptions": [
+    "Input is the current state.json shape, not raw Google Sheets rows.",
+    "Node-level strategy scoring is split into choke, isolation, coalition, alliance, invasion, protection, and time functions.",
+    "Protection timing uses node.protection.hours_remaining when available.",
+    "Battle windows and capture limits are configurable under config.simulation.",
+    "Trade posts, altars, and the ancestral temple are expected to be isolated before simulation.",
+    "Destroyed cities are treated as unavailable connection sources.",
+    "GPT is not used by this engine."
+  ],
+  "missing_data": [
+    "保護更新可能性が未登録の拠点は unknown として評価",
+    "実稼働人数は未反映",
+    "外交上の攻撃禁止対象は未反映",
+    "占領上限は設定値または暫定推定を使用"
+  ]
+}

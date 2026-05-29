@@ -111,6 +111,7 @@
   },
   "output": {
     "html": "sample_output/map.html",
-    "json": "sample_output/state.json"
+    "json": "sample_output/state.json",
+    "briefing": "sample_output/briefing_input.json"
   }
 }

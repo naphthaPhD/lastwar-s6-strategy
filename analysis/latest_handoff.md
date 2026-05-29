@@ -31,6 +31,8 @@ Latest update adds local Excel alliance-strength integration and the first simul
 - `tools/invasion_strategy_os/sample_edges.csv`
 - `sample_output/map.html`
 - `sample_output/state.json`
+- `sample_output/briefing_input.json`
+- `spec_phase3.md`
 
 ## Key findings
 
@@ -72,6 +74,10 @@ Latest update adds local Excel alliance-strength integration and the first simul
 36. Phase 3 separates the strategic rule engine into `tools/invasion_strategy_os/simulation.py`. `invasion_strategy_os.py` now builds the sheet/map/graph state, writes the same state shape used by `sample_output/state.json`, and delegates `invasion_simulation` scoring to the separated module.
 37. The Phase 3 rule engine writes JSON score reasons and factor breakdowns for protection expiry, battle windows, capture-limit pressure, enemy adjacency, city-destruction reach, central connection value, and counterattack risk. GPT is not used in this engine.
 38. The generated map now exposes Phase 3 results visually. `Phase3攻撃TOP`, `Phase3遮断TOP`, `Phase3危険TOP`, and `Phase3総合TOP` open a score panel from embedded `invasion_simulation` JSON, list top candidates with scores/reasons, and highlight/select the corresponding edge or node.
+39. Phase 3 v2 adds node-level scoring functions in `simulation.py`: `choke_score`, `isolation_score`, `coalition_score`, `alliance_score`, `invasion_score`, `protection_score`, and `time_score`.
+40. Regenerated `sample_output/state.json` now reports `engine: strategic_rule_engine_v2` and includes 120 node evaluations, 30 defense priorities, 30 attack priorities, 18 interdiction priorities, 30 risk-watch nodes, 30 protection-watch nodes, and 30 time-sensitive nodes.
+41. `sample_output/briefing_input.json` is now generated for future GPT briefing use. It compresses Phase 3 outputs to top strategic lists, reasons, assumptions, missing data, and map metadata instead of sending the full state.
+42. The generated map UI now includes `Phase3防衛TOP`, `Phase3保護TOP`, and `Phase3時間TOP` in addition to attack, interdiction, risk, and overall buttons. Node-level Phase 3 candidates show classification and score factors in the side panel.
 
 ## Current risks
 
@@ -82,6 +88,7 @@ Latest update adds local Excel alliance-strength integration and the first simul
 5. Alliance ranking power is a coarse proxy only. It does not account for live attendance, capture caps, protection windows, march timing, rally availability, or tactical city-destruction sequencing.
 6. Current game-rule modeling covers map connectivity rules plus an initial Phase 3 scoring layer for protection expiry, battle windows, capture-limit pressure, enemy adjacency, city-destruction reach, central connection value, and counterattack risk. Capture-limit usage is still a proxy based on currently owned city/fishery nodes, and live player attendance, rally timing, and explicit current pact target are not solved yet.
 7. Excel power file remains fixed-name input: `s6powerrank_8server_power_2026-05-10_en.xlsx`. Replacing that file and regenerating updates the derived cache and map output.
+8. `protection_score` and `time_score` use available sheet/config data. Protection renewal possibility, live battle-day schedule changes, rally attendance, and capture-cap counters still need explicit data columns before operational use.
 
 ## Recommended next actions
 
@@ -92,6 +99,7 @@ Latest update adds local Excel alliance-strength integration and the first simul
 5. For the current full-map live test, run `.\.venv\Scripts\python.exe tools\invasion_strategy_os\invasion_strategy_os.py --config tools\invasion_strategy_os\config.google_full_map.json`.
 6. For refresh buttons and the local interactive prototype, run `.\.venv\Scripts\python.exe tools\invasion_strategy_os\interactive_server.py --port 8010`; then open either `http://127.0.0.1:8010/` or the generated map at `http://127.0.0.1:8010/sample_output/map.html`.
 7. Review `sample_output/state.json` under `invasion_simulation.enemy_threat_options` and `friendly_pressure_options` as a first queue for commander review, then confirm protection/cap/pact constraints manually before treating any candidate as an order.
+8. For Phase 3 v2 review, open `sample_output/map.html`, use the `Phase3防衛TOP`, `Phase3保護TOP`, `Phase3時間TOP`, and `Phase3総合TOP` buttons, then compare the corresponding records in `sample_output/briefing_input.json`.
 
 ## Questions for ChatGPT
 
@@ -113,6 +121,7 @@ Latest update adds local Excel alliance-strength integration and the first simul
 - The latest generation succeeded with the current Google Sheet plus local Excel ranking workbook. Browser visual verification was attempted, but `127.0.0.1:8000` was not serving at that moment; JSON and generated HTML contents were verified directly instead.
 - Latest route/simulation button update was regenerated and verified by generated HTML text checks. Browser file navigation was blocked by the browser security policy, so visual browser verification was not completed in this turn.
 - Latest score-model update regenerated successfully after one Google Sheets CSV timeout retry. Verification found 30 attack candidates, 25 interdiction candidates, and 30 risk-avoidance candidates in `sample_output/state.json`.
+- Latest Phase 3 v2 generation succeeded against the current Google Sheet and local Excel ranking workbook. Verification found `strategic_rule_engine_v2`, 120 node evaluations, 30 defense priorities, 30 attack priorities, 18 interdiction priorities, 30 risk-watch nodes, 30 protection-watch nodes, and 30 time-sensitive nodes.
 - Visual reference screenshots supplied by the user for tactical map geometry: `C:/Users/kitazaki/FIT Dropbox/訓北﨑/lastwar/S6/IMG_1219.PNG` and `C:/Users/kitazaki/FIT Dropbox/訓北﨑/lastwar/S6/IMG_1220.PNG`. These were used as reference only and were not committed.
 - The `tools/invasion_strategy_os/` directory is explicitly allowlisted in `.gitignore`; existing unrelated local `tools/` files remain ignored.
 - Existing unrelated local changes were not touched.

@@ -20,8 +20,10 @@ from pyvis.network import Network
 
 try:
     from .simulation import build_invasion_simulation as build_state_invasion_simulation
+    from .simulation import build_briefing_input
 except ImportError:
     from simulation import build_invasion_simulation as build_state_invasion_simulation
+    from simulation import build_briefing_input
 
 
 JST = ZoneInfo("Asia/Tokyo")
@@ -1794,9 +1796,12 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
 <button id="map-highlight-friendly-pressure" type="button">&#21619;&#26041;&#20405;&#25915;&#20505;&#35036;</button>
 <button id="map-highlight-interdiction" type="button">&#36974;&#26029;&#20505;&#35036;</button>
 <button id="map-highlight-risk-avoidance" type="button">&#21361;&#38522;&#22238;&#36991;</button>
+<button id="map-phase3-defense" type="button">Phase3防衛TOP</button>
 <button id="map-phase3-attack" type="button">Phase3攻撃TOP</button>
 <button id="map-phase3-interdiction" type="button">Phase3遮断TOP</button>
 <button id="map-phase3-risk" type="button">Phase3危険TOP</button>
+<button id="map-phase3-protection" type="button">Phase3保護TOP</button>
+<button id="map-phase3-time" type="button">Phase3時間TOP</button>
 <button id="map-phase3-overall" type="button">Phase3総合TOP</button>
 <button id="map-highlight-enemy-expand" type="button">&#25973;&#26410;&#21462;&#24471;&#25313;&#24373;</button>
 <button id="map-highlight-friendly-expand" type="button">&#21619;&#26041;&#26410;&#21462;&#24471;&#25313;&#24373;</button>
@@ -2353,32 +2358,53 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
                       highlightEdges(records.map(function (record) {{ return record.id; }}), color, width || 6);
                     }}
                     function phase3CandidateConfig(kind) {{
-                      var configs = {{
+                    var configs = {{
+                        defense: {{
+                          title: "Phase3 防衛候補 TOP",
+                          subtitle: "分断リスク・味方防衛線・中央接続・敵隣接を含む防衛優先度",
+                          key: "defense_priorities",
+                          color: "#2563eb",
+                          width: 8
+                        }},
                         attack: {{
                           title: "Phase3 攻撃候補 TOP",
                           subtitle: "敵境界・中央接続・保護終了・反撃リスクを含む攻撃スコア",
-                          key: "attack_score_options",
+                          key: "attack_priorities",
                           color: "#f97316",
                           width: 8
                         }},
                         interdiction: {{
                           title: "Phase3 遮断候補 TOP",
                           subtitle: "都市破壊による到達不能化や隣接遮断を重視",
-                          key: "interdiction_score_options",
+                          key: "interdiction_priorities",
                           color: "#0ea5e9",
                           width: 8
                         }},
                         risk: {{
                           title: "Phase3 危険回避 TOP",
                           subtitle: "反撃リスク・高戦力敵隣接・敵密集を重視",
-                          key: "risk_avoidance_options",
+                          key: "risk_watchlist",
                           color: "#be123c",
+                          width: 8
+                        }},
+                        protection: {{
+                          title: "Phase3 保護終了 TOP",
+                          subtitle: "保護切れ・保護終了間近・保護更新可能性を重視",
+                          key: "protection_watchlist",
+                          color: "#facc15",
+                          width: 8
+                        }},
+                        time: {{
+                          title: "Phase3 時間評価 TOP",
+                          subtitle: "水曜/土曜戦闘日・応戦期間・現在時刻との距離を重視",
+                          key: "time_sensitive_nodes",
+                          color: "#14b8a6",
                           width: 8
                         }},
                         overall: {{
                           title: "Phase3 総合スコア TOP",
-                          subtitle: "攻撃・遮断・危険回避をまとめた上位候補",
-                          key: "rule_score_samples",
+                          subtitle: "防衛・攻撃・遮断・危険・保護・時間を統合した上位候補",
+                          key: "node_evaluations",
                           color: "#f43f5e",
                           width: 8
                         }}
@@ -2392,6 +2418,17 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
                     function phase3SourceLabel(record) {{
                       var source = record && record.source ? record.source : {{}};
                       return valueOrDash(source.area || "") + " " + valueOrDash(source.name || source.id);
+                    }}
+                    function phase3RouteText(record) {{
+                      if (record && record.source) {{
+                        return phase3SourceLabel(record) + ' → ' + phase3TargetLabel(record);
+                      }}
+                      var labels = [];
+                      if (record && record.classification) labels.push("分類: " + record.classification);
+                      if (record && record.defense_score !== undefined) labels.push("防衛 " + Number(record.defense_score || 0).toFixed(1));
+                      if (record && record.attack_score !== undefined) labels.push("攻撃 " + Number(record.attack_score || 0).toFixed(1));
+                      if (record && record.interdiction_score !== undefined) labels.push("遮断 " + Number(record.interdiction_score || 0).toFixed(1));
+                      return labels.length ? labels.join(" / ") : phase3TargetLabel(record);
                     }}
                     function phase3ReasonBadges(record) {{
                       var reasons = Array.isArray(record.reasons) ? record.reasons.slice(0, 5) : [];
@@ -2453,7 +2490,7 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
                           return '<button class="phase3-item" type="button" data-phase3-index="' + index + '">' +
                             '<div class="phase3-main"><span>' + (index + 1) + '. ' + escapeHtml(phase3TargetLabel(record)) + '</span>' +
                             '<span class="phase3-score">' + escapeHtml(Number(record.score || 0).toFixed(1)) + '</span></div>' +
-                            '<div class="phase3-route">' + escapeHtml(phase3SourceLabel(record)) + ' → ' + escapeHtml(phase3TargetLabel(record)) + '</div>' +
+                            '<div class="phase3-route">' + escapeHtml(phase3RouteText(record)) + '</div>' +
                             phase3ReasonBadges(record) +
                           '</button>';
                         }}).join("");
@@ -2510,6 +2547,12 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
                         highlightCandidateEdges("riskAvoidance", "#be123c", 7);
                       }});
                     }}
+                    var phase3DefenseButton = document.getElementById("map-phase3-defense");
+                    if (phase3DefenseButton) {{
+                      phase3DefenseButton.addEventListener("click", function () {{
+                        renderPhase3Candidates("defense");
+                      }});
+                    }}
                     var phase3AttackButton = document.getElementById("map-phase3-attack");
                     if (phase3AttackButton) {{
                       phase3AttackButton.addEventListener("click", function () {{
@@ -2526,6 +2569,18 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
                     if (phase3RiskButton) {{
                       phase3RiskButton.addEventListener("click", function () {{
                         renderPhase3Candidates("risk");
+                      }});
+                    }}
+                    var phase3ProtectionButton = document.getElementById("map-phase3-protection");
+                    if (phase3ProtectionButton) {{
+                      phase3ProtectionButton.addEventListener("click", function () {{
+                        renderPhase3Candidates("protection");
+                      }});
+                    }}
+                    var phase3TimeButton = document.getElementById("map-phase3-time");
+                    if (phase3TimeButton) {{
+                      phase3TimeButton.addEventListener("click", function () {{
+                        renderPhase3Candidates("time");
                       }});
                     }}
                     var phase3OverallButton = document.getElementById("map-phase3-overall");
@@ -2793,11 +2848,14 @@ def main() -> int:
     output_config = config.get("output", {})
     html_path = Path(args.html or output_config.get("html", "sample_output/map.html"))
     json_path = Path(args.json_output or output_config.get("json", "sample_output/state.json"))
+    briefing_path = Path(output_config.get("briefing", "sample_output/briefing_input.json"))
     state_payload = build_state_payload(graph, edges, analysis, now, analysis_config, tz, alliance_powers, config.get("simulation", {}))
     write_html(graph, analysis, repo_root / html_path, now, analysis_config, tz, alliance_powers, state_payload.get("invasion_simulation"))
     write_json_payload(state_payload, repo_root / json_path)
+    write_json_payload(build_briefing_input(state_payload, state_payload.get("invasion_simulation"), config.get("simulation", {})), repo_root / briefing_path)
     print(f"Wrote {html_path}")
     print(f"Wrote {json_path}")
+    print(f"Wrote {briefing_path}")
     print(f"Critical nodes: {len(analysis['critical_nodes'])}")
     return 0
 
