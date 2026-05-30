@@ -1,8 +1,6 @@
 ﻿friendly_from_node,friendly_from_coord,friendly_from_alliance,friendly_from_server,enemy_to_node,enemy_to_coord,enemy_to_alliance,enemy_to_server,edge_type,attack_reason,recommended_action,confidence,execution_class,recommended_owner,review_priority,human_check
-#534:D-5,D-5,4tH,534,#534:d-4,d-4,nO9,476,self_to_enemy_adjacent,city +30; enemy_flag +40; frontline_adjacent +15,都市破壊候補,medium,self_action,#534,high,発射元拠点確認; 都市破壊時間確認; 協定確認
-#534:F-15,F-15,JDX,534,#534:e-14,e-14,SHA,503,self_to_enemy_adjacent,city +30; enemy_flag +40; frontline_adjacent +15,都市破壊候補,medium,self_action,#534,high,発射元拠点確認; 都市破壊時間確認; 協定確認
-#534:E-7,E-7,4tH,534,#534:e-6,e-6,SHA,503,self_to_enemy_adjacent,city +30; enemy_flag +40; frontline_adjacent +15,都市破壊候補,medium,self_action,#534,high,発射元拠点確認; 都市破壊時間確認; 協定確認
-#534:c-12,c-12,JDX,534,#534:D-11,D-11,476C,476,self_to_enemy_adjacent,fishery +10; enemy_flag +40; frontline_core +30,攻撃候補,medium,self_action,#534,high,発射元拠点確認; 協定確認
+#534:D-9,D-9,SHA,534,#534:D-11,D-11,476C,476,self_to_enemy_adjacent,fishery +10; enemy_flag +40; frontline_core +30,攻撃候補,medium,self_action,#534,high,発射元拠点確認; 協定確認
+#534:E-11,E-11,SHA,534,#534:D-11,D-11,476C,476,self_to_enemy_adjacent,fishery +10; enemy_flag +40; frontline_core +30,攻撃候補,medium,self_action,#534,high,発射元拠点確認; 協定確認
 #534:C-13,C-13,JDX,534,#534:D-13,D-13,476B,476,self_to_enemy_adjacent,fishery +10; enemy_flag +40; frontline_core +30,攻撃候補,medium,self_action,#534,high,発射元拠点確認; 協定確認
-#534:c-12,c-12,JDX,534,#534:D-13,D-13,476B,476,self_to_enemy_adjacent,fishery +10; enemy_flag +40; frontline_core +30,攻撃候補,medium,self_action,#534,high,発射元拠点確認; 協定確認
 #534:c-14,c-14,JDX,534,#534:D-13,D-13,476B,476,self_to_enemy_adjacent,fishery +10; enemy_flag +40; frontline_core +30,攻撃候補,medium,self_action,#534,high,発射元拠点確認; 協定確認
+#534:E-11,E-11,SHA,534,#534:E-13,E-13,476C,476,self_to_enemy_adjacent,fishery +10; enemy_flag +40; frontline_core +30,攻撃候補,medium,self_action,#534,high,発射元拠点確認; 協定確認

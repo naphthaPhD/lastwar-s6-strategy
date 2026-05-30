@@ -1,12 +1,6 @@
 ﻿enemy_from_node,enemy_from_coord,enemy_from_alliance,enemy_from_server,friendly_to_node,friendly_to_coord,friendly_to_alliance,friendly_to_server,edge_type,risk_reason,recommended_action,confidence,execution_class,recommended_owner,review_priority,human_check
-#480:d-14,d-14,BgNa,480,#480:D-15,D-15,SsQ,509,enemy_to_ally_adjacent,city +30; enemy_flag +40; frontline_core +30,防衛確認,medium,ally_coordination,#509/#440/#511,critical,味方連携確認; 防衛ライン確認
-#480:d-14,d-14,BgNa,480,#480:E-15,E-15,SsQ,509,enemy_to_ally_adjacent,city +30; enemy_flag +40; frontline_core +30,防衛確認,medium,ally_coordination,#509/#440/#511,critical,味方連携確認; 防衛ライン確認
-#480:e-8,e-8,BgNa,480,#480:E-7,E-7,BAJ,440,enemy_to_ally_adjacent,city +30; enemy_flag +40; frontline_adjacent +15,隣接確認,medium,ally_coordination,#509/#440/#511,high,味方連携確認; 防衛ライン確認
-#480:e-8,e-8,BgNa,480,#480:F-7,F-7,GoDs,440,enemy_to_ally_adjacent,city +30; enemy_flag +40; frontline_adjacent +15,隣接確認,medium,ally_coordination,#509/#440/#511,high,味方連携確認; 防衛ライン確認
-#480:e-8,e-8,BgNa,480,#480:F-9,F-9,BAJ,440,enemy_to_ally_adjacent,city +30; enemy_flag +40; frontline_adjacent +15,隣接確認,medium,ally_coordination,#509/#440/#511,high,味方連携確認; 防衛ライン確認
 #509:D-11,D-11,476A,476,#509:E-11,E-11,FHX,509,enemy_to_ally_adjacent,fishery +10; enemy_flag +40; frontline_core +30,防衛確認,medium,ally_coordination,#509/#440/#511,high,味方連携確認; 防衛ライン確認
-#509:D-11,D-11,476A,476,#509:c-12,c-12,VEX,509,enemy_to_ally_adjacent,fishery +10; enemy_flag +40; frontline_core +30,防衛確認,medium,ally_coordination,#509/#440/#511,high,味方連携確認; 防衛ライン確認
 #509:D-13,D-13,476A,476,#509:E-13,E-13,FHX,509,enemy_to_ally_adjacent,fishery +10; enemy_flag +40; frontline_core +30,防衛確認,medium,ally_coordination,#509/#440/#511,high,味方連携確認; 防衛ライン確認
-#509:D-13,D-13,476A,476,#509:c-12,c-12,VEX,509,enemy_to_ally_adjacent,fishery +10; enemy_flag +40; frontline_core +30,防衛確認,medium,ally_coordination,#509/#440/#511,high,味方連携確認; 防衛ライン確認
-#509:D-13,D-13,476A,476,#509:c-14,c-14,SsQ,509,enemy_to_ally_adjacent,fishery +10; enemy_flag +40; frontline_core +30,防衛確認,medium,ally_coordination,#509/#440/#511,high,味方連携確認; 防衛ライン確認
 #509:D-13,D-13,476A,476,#509:d-14,d-14,FHX,509,enemy_to_ally_adjacent,fishery +10; enemy_flag +40; frontline_core +30,防衛確認,medium,ally_coordination,#509/#440/#511,high,味方連携確認; 防衛ライン確認
+#480:D-17,D-17,AAOA,480,#480:D-15,D-15,SsQ,509,enemy_to_ally_adjacent,fishery +10; enemy_flag +40; frontline_adjacent +15,隣接確認,medium,ally_coordination,#509/#440/#511,high,味方連携確認; 防衛ライン確認
+#480:E-5,E-5,RCON,480,#480:E-7,E-7,BAJ,440,enemy_to_ally_adjacent,fishery +10; enemy_flag +40; frontline_adjacent +15,隣接確認,medium,ally_coordination,#509/#440/#511,high,味方連携確認; 防衛ライン確認

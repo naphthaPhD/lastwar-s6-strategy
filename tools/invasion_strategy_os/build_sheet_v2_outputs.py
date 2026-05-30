@@ -346,27 +346,48 @@ def normalized_lookup_key(value: Any) -> str:
 
 def read_alliance_directory(path: Path) -> dict[str, tuple[str, str]]:
     directory: dict[str, tuple[str, str]] = {}
+    directory_priority: dict[str, int] = {}
     normalized: dict[str, tuple[str, str, str]] = {}
+    normalized_priority: dict[str, int] = {}
     ambiguous_normalized: set[str] = set()
+
+    source_priority = {
+        "manual_override": 100,
+        "alliance_directory": 80,
+        "alliance_alias": 70,
+    }
 
     def add_entry(value: str, server: str, source: str) -> None:
         compact = compact_lookup_value(value)
         if not server or not compact:
             return
-        directory.setdefault(exact_lookup_key(compact), (server, source))
+        priority = source_priority.get(source, 50)
+        exact_key = exact_lookup_key(compact)
+        if priority >= directory_priority.get(exact_key, -1):
+            directory[exact_key] = (server, source)
+            directory_priority[exact_key] = priority
         norm_key = normalized_lookup_key(compact)
         existing = normalized.get(norm_key)
         if existing and existing[2] != compact:
-            ambiguous_normalized.add(norm_key)
+            if priority > normalized_priority.get(norm_key, -1):
+                normalized[norm_key] = (server, source, compact)
+                normalized_priority[norm_key] = priority
+                ambiguous_normalized.discard(norm_key)
+            elif priority == normalized_priority.get(norm_key, -1):
+                ambiguous_normalized.add(norm_key)
         elif norm_key not in ambiguous_normalized:
             normalized[norm_key] = (server, source, compact)
+            normalized_priority[norm_key] = priority
 
     for row in read_csv(path):
         server = normalize_server(row.get("server", ""))
         alliance = row.get("alliance", "").strip()
-        add_entry(alliance, server, "alliance_directory")
+        row_source = row.get("source", "").strip()
+        alliance_source = "manual_override" if row_source == "manual_override" else "alliance_directory"
+        alias_source = "manual_override" if row_source == "manual_override" else "alliance_alias"
+        add_entry(alliance, server, alliance_source)
         for alias in re.split(r"[,;/\s]+", row.get("alliance_alias", "")):
-            add_entry(alias.strip(), server, "alliance_alias")
+            add_entry(alias.strip(), server, alias_source)
     for key, (server, source, _value) in normalized.items():
         if key not in ambiguous_normalized:
             directory.setdefault(key, (server, source))
@@ -407,12 +428,17 @@ def resolve_owner_server(
     node: dict[str, Any],
     directory: dict[str, tuple[str, str]],
 ) -> tuple[str, str]:
+    owner_alliance = str(node.get("owner_alliance", "") or "").strip()
+    if owner_alliance:
+        manual_match = directory.get(exact_lookup_key(owner_alliance)) or directory.get(normalized_lookup_key(owner_alliance))
+        if manual_match and manual_match[1] == "manual_override":
+            return manual_match
+
     owner_server = normalize_server(node.get("owner_server", ""))
     owner_source = str(node.get("owner_server_source", "") or "unknown")
     if owner_server:
         return owner_server, owner_source
 
-    owner_alliance = str(node.get("owner_alliance", "") or "").strip()
     if owner_alliance:
         match = re.match(r"^#?(\d{3})", owner_alliance)
         if match:

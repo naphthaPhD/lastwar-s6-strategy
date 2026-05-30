@@ -321,6 +321,7 @@ def write_markdown(rows: list[dict[str, Any]]) -> None:
         f"- risk_flag rows: {len(risk_rows)}",
         f"- unknown resolved_server rows: {len(unknown_rows)}",
         f"- appears_as_enemy but maybe self/ally rows: {len(maybe_self_ally_rows)}",
+        f"- side_check_required rows: {sum(1 for row in rows if row['review_status'] == 'needs_review')}",
         "",
         "## 2. 最優先確認",
         "",
@@ -371,6 +372,7 @@ def main() -> None:
     print(f"risk_flag rows={len(risk_rows)}")
     print(f"unknown resolved_server rows={len(unknown_rows)}")
     print(f"appears_as_enemy but maybe self/ally rows={len(maybe_self_ally_rows)}")
+    print(f"side_check_required rows={sum(1 for row in rows if row['review_status'] == 'needs_review')}")
     for alliance in ["SHA", "nO9", "JDX", "4tH"]:
         row = by_alliance.get(alliance, {})
         print(

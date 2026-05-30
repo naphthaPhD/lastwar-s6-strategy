@@ -1,5 +1,43 @@
 # Handoff summary
 
+## 2026-05-31 SHA/nO9 manual side override
+
+## Context
+
+Manually confirmed `SHA` and `nO9` as #534-side alliances and regenerated local V2 CSV/Markdown outputs. Google Sheets write-back was not performed.
+
+## Updated files
+
+- `sample_output/sheet_migration/alliance_directory.csv`
+- `tools/invasion_strategy_os/build_sheet_v2_outputs.py`
+- `tools/invasion_strategy_os/build_alliance_side_audit.py`
+- `sample_output/sheet_migration/node_current_v2.csv`
+- `sample_output/sheet_migration/risk_map_v2.csv`
+- `sample_output/sheet_migration/current_enemy_nodes_v2.csv`
+- `sample_output/sheet_migration/current_friendly_nodes_v2.csv`
+- `sample_output/sheet_migration/*edge*_v2.csv`
+- `analysis/commander_review_2026-05-31.md`
+- `analysis/r4_r5_briefing_2026-05-31.md`
+- `sample_output/sheet_migration/alliance_side_audit_v2.csv`
+- `analysis/alliance_side_audit_2026-05-31.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. `SHA` classification is now `server=534`, `side=self`, `risk=none`.
+2. `nO9` classification is now `server=534`, `side=self`, `risk=none`.
+3. `JDX` and `4tH` remain `server=534`, `side=self`, `risk=none`.
+4. `current_enemy_nodes=401`, `current_friendly_nodes=302`.
+5. Attack edge split: self `5`, ally `3`, unknown `25`.
+6. Defense edge split: self `5`, ally `5`, unknown `23`.
+7. `side_check_required rows=77`.
+
+## Recommended next actions
+
+1. Re-review the refreshed R4/R5 briefing before sharing any order language.
+2. Treat `side_check_required` rows as data-quality review work before further candidate expansion.
+3. Do not write refreshed outputs into production `#534` until human approval.
+
 ## 2026-05-31 Alliance side audit
 
 ## Context

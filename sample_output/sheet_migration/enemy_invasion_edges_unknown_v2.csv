@@ -1,6 +1,7 @@
 ﻿enemy_from_node,enemy_from_coord,enemy_from_alliance,enemy_from_server,friendly_to_node,friendly_to_coord,friendly_to_alliance,friendly_to_server,edge_type,risk_reason,recommended_action,confidence,execution_class,recommended_owner,review_priority,human_check
 #476:d-12,d-12,476B,476,,,,,edge_unknown,city +30; enemy_flag +40; frontline_core +30,地図確認,medium,map_check_required,R4/R5確認,critical,防衛先確認; 地図確認
 #476:d-14,d-14,476B,476,,,,,edge_unknown,city +30; enemy_flag +40; frontline_core +30,地図確認,medium,map_check_required,R4/R5確認,critical,防衛先確認; 地図確認
+#480:d-14,d-14,BgNa,480,,,,,edge_unknown,city +30; enemy_flag +40; frontline_core +30,地図確認,medium,map_check_required,R4/R5確認,critical,防衛先確認; 地図確認
 #476:d-10,d-10,476B,476,,,,,edge_unknown,city +30; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
 #476:d-2,d-2,476K,476,,,,,edge_unknown,city +30; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
 #476:d-6,d-6,476M,476,,,,,edge_unknown,city +30; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
@@ -8,15 +9,16 @@
 #476:e-18,e-18,476Z,476,,,,,edge_unknown,city +30; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
 #480:e-18,e-18,AAOA,480,,,,,edge_unknown,city +30; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
 #480:e-6,e-6,TkTk,480,,,,,edge_unknown,city +30; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
+#480:e-8,e-8,BgNa,480,,,,,edge_unknown,city +30; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
 #503:d-10,d-10,Lghs,503,,,,,edge_unknown,city +30; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
 #503:e-8,e-8,Lghs,503,,,,,edge_unknown,city +30; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
-#534:d-10,d-10,SHA,503,,,,,edge_unknown,city +30; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
-#534:e-4,e-4,nO9,476,,,,,edge_unknown,city +30; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
-#534:E-11,E-11,SHA,503,,,,,edge_unknown,fishery +10; enemy_flag +40; frontline_core +30,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
-#534:E-13,E-13,476C,476,,,,,edge_unknown,fishery +10; enemy_flag +40; frontline_core +30,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
 #503:d-2,d-2,GX99,503,,,,,edge_unknown,trade +20; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
 #509:d-20,d-20,476A,476,,,,,edge_unknown,trade +20; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
 #509:e-20,e-20,476B,476,,,,,edge_unknown,trade +20; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
 #511:e-2,e-2,AAOA,480,,,,,edge_unknown,trade +20; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
 #523:d-20,d-20,476X,476,,,,,edge_unknown,trade +20; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
 #476:D-3,D-3,476K,476,,,,,edge_unknown,fishery +10; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
+#480:D-19,D-19,TkTk,480,,,,,edge_unknown,fishery +10; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
+#480:E-19,E-19,TkTk,480,,,,,edge_unknown,fishery +10; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
+#503:D-15,D-15,299,299,,,,,edge_unknown,fishery +10; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認
+#503:D-3,D-3,GX99,503,,,,,edge_unknown,fishery +10; enemy_flag +40; frontline_adjacent +15,地図確認,medium,map_check_required,R4/R5確認,high,防衛先確認; 地図確認

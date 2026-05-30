@@ -1,0 +1,24 @@
+server,alliance,alliance_alias,confidence,source,last_confirmed_at,note
+534,JDX,,high,manual,,
+509,Sq,"SsQ,SQ",high,manual,,phase3.6 example
+440,God,"GoDs,GOD",high,manual,,phase3.6 example
+480,RCON,,high,map_snapshot,,phase3.6 example
+534,SHA,,high,manual_override,,side=self confirmed by user
+480,BgNa,,medium,manual_sample,,
+511,2N7,,medium,manual_sample,,
+503,GX99,,medium,manual_sample,,
+534,KTVS,,medium,manual_sample,,
+534,4tH,,medium,manual_sample,,
+503,Lghs,,medium,manual_sample,,
+480,AAOA,,medium,manual_sample,,
+440,BAJ,,medium,manual_sample,,
+509,FHX,,medium,manual_sample,,
+509,tWD,,medium,manual_sample,,
+534,89M,,medium,manual_sample,,
+511,DaNG,,medium,manual_sample,,
+534,nO9,,high,manual_override,,side=self confirmed by user
+511,SVa,,medium,manual_sample,,
+480,TkTk,,medium,manual_sample,,
+509,VEX,,medium,manual_sample,,
+503,fzn,,medium,manual_sample,,
+480,Digg,,medium,manual_sample,,

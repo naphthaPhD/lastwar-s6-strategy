@@ -396,7 +396,7 @@
 #476:G-21,G-21,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #476:g-6,g-6,city,476C,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
 #476:G-7,G-7,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
-#476:H-1,H-1,fishery,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
+#476:H-1,H-1,fishery,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #476:h-10,h-10,city,476A,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
 #476:H-11,H-11,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #476:h-12,h-12,city,476H,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
@@ -425,7 +425,7 @@
 #476:I-21,I-21,fishery,Kfk,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #476:I-3,I-3,fishery,476K,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #476:i-4,i-4,city,476C,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
-#476:J-1,J-1,fishery,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
+#476:J-1,J-1,fishery,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #476:J-13,J-13,fishery,476H,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #476:J-21,J-21,fishery,476H,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #476:J-7,J-7,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
@@ -500,7 +500,7 @@
 #480:a-8,a-8,trade,RCON,owned,safe_time_missing,,other,enemy,TRUE,FALSE,20,60,high,trade +20; enemy_flag +40
 #480:a-10,a-10,trade,GcC,owned,safe_time_missing,,other,unknown,FALSE,FALSE,20,20,low,trade +20
 #480:a-20,a-20,trade,KTVS,owned,safe_time_missing,,other,self,FALSE,FALSE,20,20,low,trade +20
-#480:a-6,a-6,trade,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,20,60,high,trade +20; enemy_flag +40
+#480:a-6,a-6,trade,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,20,20,low,trade +20
 #480:K-7,K-7,fishery,GX99,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #480:K-5,K-5,fishery,Lghs,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #480:I-21,I-21,fishery,Digg,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
@@ -886,8 +886,8 @@
 #509:b-14,b-14,city,AoW,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #509:B-15,B-15,fishery,OWM,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:C-15,C-15,fishery,AoW,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
-#509:B-17,B-17,fishery,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
-#509:a-16,a-16,city,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
+#509:B-17,B-17,fishery,SHA,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
+#509:a-16,a-16,city,SHA,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #509:K-9,K-9,fishery,AoW,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:F-9,F-9,fishery,476A,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #509:D-11,D-11,fishery,476A,owned,safe_time_missing,,frontline_core,enemy,TRUE,FALSE,10,80,high,fishery +10; enemy_flag +40; frontline_core +30
@@ -956,11 +956,11 @@
 #509:E-9,E-9,fishery,Lghs,owned,safe_time_missing,,frontline_adjacent,enemy,TRUE,FALSE,10,65,high,fishery +10; enemy_flag +40; frontline_adjacent +15
 #509:K-15,K-15,fishery,OTT,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:C-7,C-7,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
-#509:C-5,C-5,fishery,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
+#509:C-5,C-5,fishery,SHA,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #509:E-5,E-5,fishery,tWD,owned,safe_time_missing,,frontline_adjacent,ally,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
 #509:D-1,D-1,fishery,eXt,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
 #509:F-19,F-19,fishery,Lghs,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
-#509:C-3,C-3,fishery,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
+#509:C-3,C-3,fishery,SHA,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #509:C-1,C-1,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:J-19,J-19,fishery,fzn,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #509:G-15,G-15,fishery,OWM,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
@@ -990,7 +990,7 @@
 #509:a-12,a-12,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #509:A-13,A-13,fishery,MOn,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:a-14,a-14,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
-#509:a-2,a-2,city,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
+#509:a-2,a-2,city,SHA,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #509:A-3,A-3,fishery,VEX,owned,safe_time_missing,,other,ally,FALSE,FALSE,10,10,low,fishery +10
 #509:a-4,a-4,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #509:A-5,A-5,fishery,476Z,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
@@ -1001,7 +1001,7 @@
 #509:B-1,B-1,fishery,tWD,owned,safe_time_missing,,other,ally,FALSE,FALSE,10,10,low,fishery +10
 #509:b-12,b-12,city,VEX,owned,safe_time_missing,,other,ally,FALSE,FALSE,30,30,mid,city +30
 #509:b-18,b-18,city,AoW,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#509:b-2,b-2,city,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
+#509:b-2,b-2,city,SHA,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #509:B-21,B-21,fishery,one,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:b-4,b-4,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #509:B-5,B-5,fishery,eXt,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
@@ -1355,7 +1355,7 @@
 #523:e-20,e-20,trade,BAJ,owned,safe_time_missing,,frontline_adjacent,ally,FALSE,FALSE,20,35,mid,trade +20; frontline_adjacent +15
 #523:f-20,f-20,trade,476A,owned,safe_time_missing,,other,enemy,TRUE,FALSE,20,60,high,trade +20; enemy_flag +40
 #523:d-20,d-20,trade,476X,owned,safe_time_missing,,frontline_adjacent,enemy,TRUE,FALSE,20,75,high,trade +20; enemy_flag +40; frontline_adjacent +15
-#523:a-20,a-20,trade,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,20,60,high,trade +20; enemy_flag +40
+#523:a-20,a-20,trade,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,20,20,low,trade +20
 #523:g-20,g-20,trade,SsQ,owned,safe_time_missing,,other,ally,FALSE,FALSE,20,20,low,trade +20
 #523:h-20,h-20,trade,SsQ,owned,safe_time_missing,,other,ally,FALSE,FALSE,20,20,low,trade +20
 #523:i-20,i-20,trade,BAJ,owned,safe_time_missing,,other,ally,FALSE,FALSE,20,20,low,trade +20
@@ -1554,7 +1554,7 @@
 #534:F-7,F-7,fishery,RGWC,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:G-7,G-7,fishery,RGWC,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:H-19,H-19,fishery,59U,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
-#534:e-14,e-14,city,SHA,owned,safe_time_missing,,frontline_adjacent,enemy,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15
+#534:e-14,e-14,city,SHA,owned,safe_time_missing,,frontline_adjacent,self,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #534:g-10,g-10,city,4tH,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #534:d-8,d-8,city,4tH,owned,safe_time_missing,,frontline_adjacent,self,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #534:C-11,C-11,fishery,476B,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
@@ -1568,17 +1568,17 @@
 #534:j-16,j-16,city,Dao,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #534:f-20,f-20,city,89M,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #534:i-12,i-12,city,f4j,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#534:B-3,B-3,fishery,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
-#534:c-4,c-4,city,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
+#534:B-3,B-3,fishery,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
+#534:c-4,c-4,city,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #534:b-20,b-20,city,w6F,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #534:b-2,b-2,city,Skh,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#534:B-13,B-13,fishery,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
+#534:B-13,B-13,fishery,SHA,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #534:a-4,a-4,trade,JDX,owned,safe_time_missing,,other,self,FALSE,FALSE,20,20,low,trade +20
 #534:a-6,a-6,trade,KTVS,owned,safe_time_missing,,other,self,FALSE,FALSE,20,20,low,trade +20
 #534:B-11,B-11,fishery,Trh,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:B-21,B-21,fishery,w6F,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:a-16,a-16,trade,fzn,owned,safe_time_missing,,other,enemy,TRUE,FALSE,20,60,high,trade +20; enemy_flag +40
-#534:a-10,a-10,trade,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,20,60,high,trade +20; enemy_flag +40
+#534:a-10,a-10,trade,SHA,owned,safe_time_missing,,other,self,FALSE,FALSE,20,20,low,trade +20
 #534:a-12,a-12,trade,476X,owned,safe_time_missing,,other,enemy,TRUE,FALSE,20,60,high,trade +20; enemy_flag +40
 #534:a-14,a-14,trade,JDX,owned,safe_time_missing,,other,self,FALSE,FALSE,20,20,low,trade +20
 #534:a-18,a-18,trade,476A,owned,safe_time_missing,,other,enemy,TRUE,FALSE,20,60,high,trade +20; enemy_flag +40
@@ -1589,8 +1589,8 @@
 #534:K-11,K-11,fishery,f4j,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:G-15,G-15,fishery,KTVS,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #534:D-21,D-21,fishery,89M,owned,safe_time_missing,,frontline_adjacent,self,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
-#534:H-11,H-11,fishery,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
-#534:H-9,H-9,fishery,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
+#534:H-11,H-11,fishery,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
+#534:H-9,H-9,fishery,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #534:B-19,B-19,fishery,w6F,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:e-8,e-8,city,RGWC,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #534:f-2,f-2,city,kOi,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
@@ -1598,7 +1598,7 @@
 #534:g-12,g-12,city,KTVS,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #534:E-5,E-5,fishery,kOi,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
 #534:G-9,G-9,fishery,4tH,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
-#534:g-8,g-8,city,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
+#534:g-8,g-8,city,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #534:g-6,g-6,city,4tH,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #534:d-14,d-14,city,,destroyed,destroyed,,frontline_core,destroyed,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
 #534:B-5,B-5,fishery,4tH,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
@@ -1609,7 +1609,7 @@
 #534:H-13,H-13,fishery,89M,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #534:A-19,A-19,fishery,KTVS,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #534:A-21,A-21,fishery,KTVS,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
-#534:C-3,C-3,fishery,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
+#534:C-3,C-3,fishery,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #534:C-5,C-5,fishery,4tH,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #534:B-1,B-1,fishery,Skh,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:f-16,f-16,city,KTVS,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
@@ -1625,9 +1625,9 @@
 #534:c-12,c-12,city,JDX,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #534:F-13,F-13,fishery,476B,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #534:B-15,B-15,fishery,MOE,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
-#534:A-1,A-1,fishery,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
-#534:b-10,b-10,city,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
-#534:b-12,b-12,city,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
+#534:A-1,A-1,fishery,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
+#534:b-10,b-10,city,SHA,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
+#534:b-12,b-12,city,SHA,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #534:b-16,b-16,city,MOE,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #534:B-17,B-17,fishery,w6F,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:b-18,b-18,city,JDX,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
@@ -1640,12 +1640,12 @@
 #534:C-17,C-17,fishery,MOE,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:c-18,c-18,city,sg3,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #534:C-19,C-19,fishery,KTVS,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
-#534:c-2,c-2,city,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
+#534:c-2,c-2,city,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #534:c-20,c-20,city,KTVS,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
-#534:C-21,C-21,fishery,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
+#534:C-21,C-21,fishery,SHA,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #534:c-8,c-8,city,,destroyed,destroyed,,frontline_core,destroyed,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
 #534:D-1,D-1,fishery,Skh,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
-#534:d-10,d-10,city,SHA,owned,safe_time_missing,,frontline_adjacent,enemy,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15
+#534:d-10,d-10,city,SHA,owned,safe_time_missing,,frontline_adjacent,self,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #534:D-11,D-11,fishery,476C,owned,safe_time_missing,,frontline_core,enemy,TRUE,FALSE,10,80,high,fishery +10; enemy_flag +40; frontline_core +30
 #534:d-12,d-12,city,,destroyed,destroyed,,frontline_core,destroyed,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
 #534:D-13,D-13,fishery,476B,owned,safe_time_missing,,frontline_core,enemy,TRUE,FALSE,10,80,high,fishery +10; enemy_flag +40; frontline_core +30
@@ -1657,12 +1657,12 @@
 #534:d-2,d-2,city,kOi,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #534:d-20,d-20,city,KTVS,owned,safe_time_missing,,frontline_adjacent,self,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #534:D-3,D-3,fishery,RGWC,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
-#534:d-4,d-4,city,nO9,owned,safe_time_missing,,frontline_adjacent,enemy,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15
+#534:d-4,d-4,city,nO9,owned,safe_time_missing,,frontline_adjacent,self,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #534:D-5,D-5,fishery,4tH,owned,safe_time_missing,,frontline_adjacent,self,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
-#534:D-9,D-9,fishery,SHA,owned,safe_time_missing,,frontline_adjacent,enemy,TRUE,FALSE,10,65,high,fishery +10; enemy_flag +40; frontline_adjacent +15
+#534:D-9,D-9,fishery,SHA,owned,safe_time_missing,,frontline_adjacent,self,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
 #534:E-1,E-1,fishery,Skh,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
 #534:e-10,e-10,city,,neutral_or_unknown,neutral_or_unknown,,frontline_adjacent,unknown,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
-#534:E-11,E-11,fishery,SHA,owned,safe_time_missing,,frontline_core,enemy,TRUE,FALSE,10,80,high,fishery +10; enemy_flag +40; frontline_core +30
+#534:E-11,E-11,fishery,SHA,owned,safe_time_missing,,frontline_core,self,FALSE,FALSE,10,40,mid,fishery +10; frontline_core +30
 #534:e-12,e-12,city,,neutral_or_unknown,neutral_or_unknown,,frontline_adjacent,unknown,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #534:E-13,E-13,fishery,476C,owned,safe_time_missing,,frontline_core,enemy,TRUE,FALSE,10,80,high,fishery +10; enemy_flag +40; frontline_core +30
 #534:E-15,E-15,fishery,sg3,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
@@ -1674,10 +1674,10 @@
 #534:e-20,e-20,city,89M,owned,safe_time_missing,,frontline_adjacent,self,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #534:E-21,E-21,fishery,89M,owned,safe_time_missing,,frontline_adjacent,self,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
 #534:E-3,E-3,fishery,kOi,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
-#534:e-4,e-4,city,nO9,owned,safe_time_missing,,frontline_adjacent,enemy,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15
-#534:e-6,e-6,city,SHA,owned,safe_time_missing,,frontline_adjacent,enemy,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15
+#534:e-4,e-4,city,nO9,owned,safe_time_missing,,frontline_adjacent,self,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
+#534:e-6,e-6,city,SHA,owned,safe_time_missing,,frontline_adjacent,self,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #534:E-7,E-7,fishery,4tH,owned,safe_time_missing,,frontline_adjacent,self,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
-#534:E-9,E-9,fishery,SHA,owned,safe_time_missing,,frontline_adjacent,enemy,TRUE,FALSE,10,65,high,fishery +10; enemy_flag +40; frontline_adjacent +15
+#534:E-9,E-9,fishery,SHA,owned,safe_time_missing,,frontline_adjacent,self,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
 #534:F-1,F-1,fishery,kOi,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:f-10,f-10,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #534:F-11,F-11,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
@@ -1689,7 +1689,7 @@
 #534:F-21,F-21,fishery,noI,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:F-3,F-3,fishery,kOi,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:f-4,f-4,city,kOi,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#534:F-5,F-5,fishery,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
+#534:F-5,F-5,fishery,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #534:f-6,f-6,city,4tH,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #534:G-1,G-1,fishery,kOi,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:G-13,G-13,fishery,KTVS,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
@@ -1702,7 +1702,7 @@
 #534:G-21,G-21,fishery,noI,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:G-3,G-3,fishery,kOi,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:g-4,g-4,city,kOi,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#534:G-5,G-5,fishery,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
+#534:G-5,G-5,fishery,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #534:H-1,H-1,fishery,Ryu1,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:h-10,h-10,city,RGWC,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #534:h-12,h-12,city,Dao,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
@@ -1716,8 +1716,8 @@
 #534:H-21,H-21,fishery,89M,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #534:H-3,H-3,fishery,Ryu1,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:h-4,h-4,city,Ryu1,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#534:h-6,h-6,city,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
-#534:h-8,h-8,city,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
+#534:h-6,h-6,city,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
+#534:h-8,h-8,city,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #534:I-1,I-1,fishery,kOi,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #534:i-10,i-10,city,Dao,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #534:I-11,I-11,fishery,Dao,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
@@ -1793,7 +1793,7 @@
 中央:中央-4-14,中央-4-14,unknown,xjR,owned,safe_time_missing,,other,unknown,FALSE,FALSE,0,0,low,
 中央:中央-12-6,中央-12-6,unknown,2N7,owned,safe_time_missing,,other,ally,FALSE,FALSE,0,0,low,
 中央:中央-14-16,中央-14-16,unknown,TkTk,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40
-中央:中央-14-4,中央-14-4,unknown,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40
+中央:中央-14-4,中央-14-4,unknown,SHA,owned,safe_time_missing,,other,self,FALSE,FALSE,0,0,low,
 中央:中央-15-9,中央-15-9,unknown,fIrE,owned,safe_time_missing,,other,unknown,FALSE,FALSE,0,0,low,
 中央:中央-16-9,中央-16-9,unknown,BAJ,owned,safe_time_missing,,other,ally,FALSE,FALSE,0,0,low,
 中央:中央-6-11,中央-6-11,unknown,KTVS,owned,safe_time_missing,,other,self,FALSE,FALSE,0,0,low,
@@ -1845,7 +1845,7 @@
 中央:中央-15-15,中央-15-15,unknown,RCON,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40
 中央:中央-15-17,中央-15-17,unknown,DaNG,owned,safe_time_missing,,other,ally,FALSE,FALSE,0,0,low,
 中央:中央-15-7,中央-15-7,unknown,4tH,owned,safe_time_missing,,other,self,FALSE,FALSE,0,0,low,
-中央:中央-15-8,中央-15-8,unknown,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40
+中央:中央-15-8,中央-15-8,unknown,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,0,0,low,
 中央:中央-16-10,中央-16-10,unknown,WUG,owned,safe_time_missing,,other,unknown,FALSE,FALSE,0,0,low,
 中央:中央-16-11,中央-16-11,unknown,SsQ,owned,safe_time_missing,,other,ally,FALSE,FALSE,0,0,low,
 中央:中央-16-12,中央-16-12,unknown,BAJ,owned,safe_time_missing,,other,ally,FALSE,FALSE,0,0,low,
@@ -1855,7 +1855,7 @@
 中央:中央-16-17,中央-16-17,unknown,TrX,owned,safe_time_missing,,other,unknown,FALSE,FALSE,0,0,low,
 中央:中央-16-6,中央-16-6,unknown,NBNH,owned,safe_time_missing,,other,unknown,FALSE,FALSE,0,0,low,
 中央:中央-16-7,中央-16-7,unknown,4tH,owned,safe_time_missing,,other,self,FALSE,FALSE,0,0,low,
-中央:中央-16-8,中央-16-8,unknown,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40
+中央:中央-16-8,中央-16-8,unknown,nO9,owned,safe_time_missing,,other,self,FALSE,FALSE,0,0,low,
 中央:中央-17-11,中央-17-11,unknown,SsQ,owned,safe_time_missing,,other,ally,FALSE,FALSE,0,0,low,
 中央:中央-17-12,中央-17-12,unknown,BHE,owned,safe_time_missing,,other,unknown,FALSE,FALSE,0,0,low,
 中央:中央-17-13,中央-17-13,unknown,EDFS,owned,safe_time_missing,,other,unknown,FALSE,FALSE,0,0,low,
@@ -1875,7 +1875,7 @@
 中央:中央-4-9,中央-4-9,unknown,476A,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40
 中央:中央-5-11,中央-5-11,unknown,Bye,owned,safe_time_missing,,other,unknown,FALSE,FALSE,0,0,low,
 中央:中央-5-12,中央-5-12,unknown,Stj,owned,safe_time_missing,,other,unknown,FALSE,FALSE,0,0,low,
-中央:中央-5-13,中央-5-13,unknown,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40
+中央:中央-5-13,中央-5-13,unknown,SHA,owned,safe_time_missing,,other,self,FALSE,FALSE,0,0,low,
 中央:中央-5-14,中央-5-14,unknown,GX99,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40
 中央:中央-5-17,中央-5-17,unknown,Lghs,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40
 中央:中央-5-4,中央-5-4,unknown,476M,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40
@@ -1886,7 +1886,7 @@
 中央:中央-5-9,中央-5-9,unknown,476B,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40
 中央:中央-6-10,中央-6-10,unknown,476B,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40
 中央:中央-6-12,中央-6-12,unknown,UMN,owned,safe_time_missing,,other,unknown,FALSE,FALSE,0,0,low,
-中央:中央-6-13,中央-6-13,unknown,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40
+中央:中央-6-13,中央-6-13,unknown,SHA,owned,safe_time_missing,,other,self,FALSE,FALSE,0,0,low,
 中央:中央-6-14,中央-6-14,unknown,fzn,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40
 中央:中央-6-17,中央-6-17,unknown,GX99,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40
 中央:中央-6-7,中央-6-7,unknown,476d,owned,safe_time_missing,,other,enemy,TRUE,FALSE,0,40,mid,enemy_flag +40

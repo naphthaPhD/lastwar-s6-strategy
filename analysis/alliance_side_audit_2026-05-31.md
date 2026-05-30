@@ -6,28 +6,28 @@
 ## 1. Summary
 
 - alliance_side_audit rows: 108
-- risk_flag rows: 79
+- risk_flag rows: 77
 - unknown resolved_server rows: 70
-- appears_as_enemy but maybe self/ally rows: 2
+- appears_as_enemy but maybe self/ally rows: 0
+- side_check_required rows: 77
 
 ## 2. 最優先確認
 
 | alliance | resolved_server | server_side | appearance_count | appears_as_enemy | appears_as_self_or_ally | appears_in_areas | risk_flag | review_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| SHA | 503 | enemy | 44 | TRUE | FALSE | #509; #534; 中央 | enemy_in_534_area; enemy_but_known_self_or_ally_candidate | needs_review |
-| nO9 | 476 | enemy | 42 | TRUE | FALSE | #476; #480; #523; #534; 中央 | enemy_in_534_area; enemy_but_known_self_or_ally_candidate | needs_review |
-| 4tH | 534 | self | 48 | FALSE | TRUE | #534; 中央 |  | ok |
-| JDX | 534 | self | 36 | FALSE | TRUE | #534; 中央 |  | ok |
+| JDX | 534 | self | 30 | FALSE | TRUE | #534; 中央 |  | ok |
+| SHA | 534 | self | 46 | FALSE | TRUE | #509; #534; 中央 |  | ok |
+| 4tH | 534 | self | 44 | FALSE | TRUE | #534; 中央 |  | ok |
+| nO9 | 534 | self | 40 | FALSE | TRUE | #476; #480; #523; #534; 中央 |  | ok |
 
 ## 3. risk_flagあり
 
 | alliance | resolved_server | server_side | appearance_count | appears_as_enemy | appears_as_self_or_ally | appears_in_areas | risk_flag | review_status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 476B | 476 | enemy | 62 | TRUE | FALSE | #440; #476; #509; #511; #534; 中央 | enemy_in_534_area | needs_review |
-| 476C | 476 | enemy | 58 | TRUE | FALSE | #476; #534; 中央 | enemy_in_534_area | needs_review |
-| SHA | 503 | enemy | 44 | TRUE | FALSE | #509; #534; 中央 | enemy_in_534_area; enemy_but_known_self_or_ally_candidate | needs_review |
-| nO9 | 476 | enemy | 42 | TRUE | FALSE | #476; #480; #523; #534; 中央 | enemy_in_534_area; enemy_but_known_self_or_ally_candidate | needs_review |
-| 476A | 476 | enemy | 88 | TRUE | FALSE | #440; #476; #503; #509; #523; #534; 中央 | enemy_in_534_area | needs_review |
+| 476A | 476 | enemy | 82 | TRUE | FALSE | #440; #476; #503; #509; #523; #534; 中央 | enemy_in_534_area | needs_review |
+| 476B | 476 | enemy | 60 | TRUE | FALSE | #440; #476; #509; #511; #534; 中央 | enemy_in_534_area | needs_review |
+| 476C | 476 | enemy | 62 | TRUE | FALSE | #476; #534; 中央 | enemy_in_534_area | needs_review |
+| RCON | 480 | enemy | 45 | TRUE | FALSE | #480; #503; #509; #534; 中央 | enemy_in_534_area | needs_review |
 | 476X | 476 | enemy | 54 | TRUE | FALSE | #476; #511; #523; #534; 中央 | enemy_in_534_area | needs_review |
 | 59U | unknown | unknown | 1 | FALSE | FALSE | #534 | unknown_resolved_server | needs_review |
 | 5DU | unknown | unknown | 9 | FALSE | FALSE | #511; #523 | unknown_resolved_server | needs_review |
@@ -65,7 +65,6 @@
 | OWM | unknown | unknown | 12 | FALSE | FALSE | #509 | unknown_resolved_server | needs_review |
 | PmP | unknown | unknown | 12 | FALSE | FALSE | #480; 中央 | unknown_resolved_server | needs_review |
 | R6q | unknown | unknown | 13 | FALSE | FALSE | #476; #523 | unknown_resolved_server | needs_review |
-| RCON | 480 | enemy | 44 | TRUE | FALSE | #480; #503; #509; #534; 中央 | enemy_in_534_area | needs_review |
 | RGWC | unknown | unknown | 16 | FALSE | FALSE | #534 | unknown_resolved_server | needs_review |
 | RING | unknown | unknown | 4 | FALSE | FALSE | #503 | unknown_resolved_server | needs_review |
 | Ryu1 | unknown | unknown | 5 | FALSE | FALSE | #534 | unknown_resolved_server | needs_review |
