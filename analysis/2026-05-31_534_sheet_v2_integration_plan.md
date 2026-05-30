@@ -556,6 +556,45 @@ ally-source attack edges count=11
 
 Rows with blank friendly/source nodes are intentionally kept with `edge_type=edge_unknown` and `recommended_action=地図確認`.
 
+## 11.7 Edge execution classification
+
+Split concrete edge candidates into three execution classes:
+
+- `self_action`: #534単独で確認・実行可能
+- `ally_coordination`: 味方連携が必要
+- `map_check_required`: 地図確認が必要
+
+Added outputs:
+
+```text
+sample_output/sheet_migration/server_534_attack_edges_self_v2.csv
+sample_output/sheet_migration/server_534_attack_edges_ally_v2.csv
+sample_output/sheet_migration/server_534_attack_edges_unknown_v2.csv
+sample_output/sheet_migration/enemy_invasion_edges_self_defense_v2.csv
+sample_output/sheet_migration/enemy_invasion_edges_ally_defense_v2.csv
+sample_output/sheet_migration/enemy_invasion_edges_unknown_v2.csv
+```
+
+Each classified row adds:
+
+```text
+execution_class
+recommended_owner
+review_priority
+human_check
+```
+
+Current classification check:
+
+```text
+self attack edges count=7
+ally attack edges count=11
+unknown attack edges count=21
+self defense edges count=7
+ally defense edges count=11
+unknown defense edges count=21
+```
+
 ## 12. Unknowns
 
 - Whether `node_current_v2` should be fully generated or allow manual override columns.

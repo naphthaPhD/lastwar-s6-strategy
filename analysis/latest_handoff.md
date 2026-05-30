@@ -1,5 +1,36 @@
 # Handoff summary
 
+## 2026-05-31 Edge execution classification
+
+## Context
+
+Split concrete edge candidates into execution classes for R4/R5 review. This is still a triage layer, not an operation order. Google Sheets write-back was not performed.
+
+## Updated files
+
+- `tools/invasion_strategy_os/build_sheet_v2_outputs.py`
+- `sample_output/sheet_migration/server_534_attack_edges_self_v2.csv`
+- `sample_output/sheet_migration/server_534_attack_edges_ally_v2.csv`
+- `sample_output/sheet_migration/server_534_attack_edges_unknown_v2.csv`
+- `sample_output/sheet_migration/enemy_invasion_edges_self_defense_v2.csv`
+- `sample_output/sheet_migration/enemy_invasion_edges_ally_defense_v2.csv`
+- `sample_output/sheet_migration/enemy_invasion_edges_unknown_v2.csv`
+- `analysis/commander_review_2026-05-31.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. #534 attack edges split into self action `7`, ally coordination `11`, and map-check required `21`.
+2. Enemy invasion defense edges split into #534 defense `7`, ally defense `11`, and map-check required `21`.
+3. Classified CSVs add `execution_class`, `recommended_owner`, `review_priority`, and `human_check`.
+4. `analysis/commander_review_2026-05-31.md` now has six edge-classification sections, each capped at 10 displayed rows.
+
+## Recommended next actions
+
+1. Review `server_534_attack_edges_self_v2.csv` first for #534-only candidate actions.
+2. Use ally-classified files only as coordination candidates with #509/#440/#511.
+3. Treat all unknown-classified rows as map-confirmation work, not executable orders.
+
 ## 2026-05-31 Concrete attack and defense edges
 
 ## Context

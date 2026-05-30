@@ -1,0 +1,8 @@
+﻿enemy_from_node,enemy_from_coord,enemy_from_alliance,enemy_from_server,friendly_to_node,friendly_to_coord,friendly_to_alliance,friendly_to_server,edge_type,risk_reason,recommended_action,confidence,execution_class,recommended_owner,review_priority,human_check
+#534:d-4,d-4,nO9,476,#534:D-5,D-5,4tH,534,enemy_to_self_adjacent,city +30; enemy_flag +40; frontline_adjacent +15,隣接確認,medium,self_action,#534,high,防衛ライン確認
+#534:e-14,e-14,SHA,503,#534:F-15,F-15,JDX,534,enemy_to_self_adjacent,city +30; enemy_flag +40; frontline_adjacent +15,隣接確認,medium,self_action,#534,high,防衛ライン確認
+#534:e-6,e-6,SHA,503,#534:E-7,E-7,4tH,534,enemy_to_self_adjacent,city +30; enemy_flag +40; frontline_adjacent +15,隣接確認,medium,self_action,#534,high,防衛ライン確認
+#534:D-11,D-11,476C,476,#534:c-12,c-12,JDX,534,enemy_to_self_adjacent,fishery +10; enemy_flag +40; frontline_core +30,防衛確認,medium,self_action,#534,high,防衛ライン確認
+#534:D-13,D-13,476B,476,#534:C-13,C-13,JDX,534,enemy_to_self_adjacent,fishery +10; enemy_flag +40; frontline_core +30,防衛確認,medium,self_action,#534,high,防衛ライン確認
+#534:D-13,D-13,476B,476,#534:c-12,c-12,JDX,534,enemy_to_self_adjacent,fishery +10; enemy_flag +40; frontline_core +30,防衛確認,medium,self_action,#534,high,防衛ライン確認
+#534:D-13,D-13,476B,476,#534:c-14,c-14,JDX,534,enemy_to_self_adjacent,fishery +10; enemy_flag +40; frontline_core +30,防衛確認,medium,self_action,#534,high,防衛ライン確認

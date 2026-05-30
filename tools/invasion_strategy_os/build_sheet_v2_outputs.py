@@ -16,6 +16,7 @@ DEFAULT_STATE_JSON = "sample_output/state.json"
 DEFAULT_ALLIANCE_DIRECTORY = "sample_output/sheet_migration/alliance_directory.csv"
 DEFAULT_PACTS = "sample_output/sheet_migration/pacts.csv"
 DEFAULT_OUTPUT_DIR = "sample_output/sheet_migration"
+DEFAULT_COMMANDER_REVIEW = "analysis/commander_review_2026-05-31.md"
 JST = ZoneInfo("Asia/Tokyo")
 
 SELF_SERVER = "534"
@@ -197,7 +198,18 @@ ATTACK_EDGE_COLUMNS = [
     "confidence",
 ]
 
+EDGE_CLASSIFICATION_COLUMNS = [
+    "execution_class",
+    "recommended_owner",
+    "review_priority",
+    "human_check",
+]
+
+CLASSIFIED_ENEMY_INVASION_EDGE_COLUMNS = ENEMY_INVASION_EDGE_COLUMNS + EDGE_CLASSIFICATION_COLUMNS
+CLASSIFIED_ATTACK_EDGE_COLUMNS = ATTACK_EDGE_COLUMNS + EDGE_CLASSIFICATION_COLUMNS
+
 TOP_LIMIT = 30
+EDGE_REVIEW_LIMIT = 10
 CITY_DESTROY_WINDOWS = [
     {"label": "wednesday_server_day", "weekday": 2, "start": "11:00", "end": "10:59"},
     {"label": "saturday_server_day", "weekday": 5, "start": "11:00", "end": "10:59"},
@@ -217,6 +229,11 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--pacts", default=DEFAULT_PACTS, help="Input pacts.csv, read only.")
     parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR, help="Directory for V2 CSV outputs.")
+    parser.add_argument(
+        "--commander-review",
+        default=DEFAULT_COMMANDER_REVIEW,
+        help="Markdown review file to update with edge classification sections.",
+    )
     return parser.parse_args()
 
 
@@ -315,17 +332,44 @@ def normalize_server(value: Any) -> str:
     return match.group(1) if match else ""
 
 
+def compact_lookup_value(value: Any) -> str:
+    return re.sub(r"\s+", "", str(value or "").strip())
+
+
+def exact_lookup_key(value: Any) -> str:
+    return f"EXACT:{compact_lookup_value(value)}"
+
+
+def normalized_lookup_key(value: Any) -> str:
+    return f"NORM:{compact_lookup_value(value).upper()}"
+
+
 def read_alliance_directory(path: Path) -> dict[str, tuple[str, str]]:
     directory: dict[str, tuple[str, str]] = {}
+    normalized: dict[str, tuple[str, str, str]] = {}
+    ambiguous_normalized: set[str] = set()
+
+    def add_entry(value: str, server: str, source: str) -> None:
+        compact = compact_lookup_value(value)
+        if not server or not compact:
+            return
+        directory.setdefault(exact_lookup_key(compact), (server, source))
+        norm_key = normalized_lookup_key(compact)
+        existing = normalized.get(norm_key)
+        if existing and existing[2] != compact:
+            ambiguous_normalized.add(norm_key)
+        elif norm_key not in ambiguous_normalized:
+            normalized[norm_key] = (server, source, compact)
+
     for row in read_csv(path):
         server = normalize_server(row.get("server", ""))
         alliance = row.get("alliance", "").strip()
-        if server and alliance:
-            directory.setdefault(alliance.casefold(), (server, "alliance_directory"))
+        add_entry(alliance, server, "alliance_directory")
         for alias in re.split(r"[,;/\s]+", row.get("alliance_alias", "")):
-            alias = alias.strip()
-            if server and alias:
-                directory.setdefault(alias.casefold(), (server, "alliance_alias"))
+            add_entry(alias.strip(), server, "alliance_alias")
+    for key, (server, source, _value) in normalized.items():
+        if key not in ambiguous_normalized:
+            directory.setdefault(key, (server, source))
     return directory
 
 
@@ -373,7 +417,7 @@ def resolve_owner_server(
         match = re.match(r"^#?(\d{3})", owner_alliance)
         if match:
             return match.group(1), "numeric_prefix"
-        directory_match = directory.get(owner_alliance.casefold())
+        directory_match = directory.get(exact_lookup_key(owner_alliance)) or directory.get(normalized_lookup_key(owner_alliance))
         if directory_match:
             return directory_match
 
@@ -912,6 +956,202 @@ def build_attack_edges(
     return output
 
 
+def priority_from_reason(reason: str) -> str:
+    score = sum(int(value) for value in re.findall(r"\+(\d+)", reason or ""))
+    if score >= 90:
+        return "critical"
+    if score >= 60:
+        return "high"
+    if score >= 30:
+        return "mid"
+    return "low"
+
+
+def attack_human_check(row: dict[str, Any]) -> str:
+    action = str(row.get("recommended_action", "") or "")
+    if row.get("edge_type") == "edge_unknown":
+        return "発射元拠点確認; 地図確認"
+    checks = ["発射元拠点確認"]
+    if "都市破壊" in action:
+        checks.append("都市破壊時間確認")
+    if row.get("edge_type") == "ally_to_enemy_adjacent":
+        checks.append("味方連携確認")
+    checks.append("協定確認")
+    return "; ".join(checks)
+
+
+def invasion_human_check(row: dict[str, Any]) -> str:
+    if not row.get("friendly_to_node"):
+        return "防衛先確認; 地図確認"
+    if str(row.get("friendly_to_server", "")) == SELF_SERVER:
+        return "防衛ライン確認"
+    return "味方連携確認; 防衛ライン確認"
+
+
+def classify_attack_edges(
+    attack_edges: list[dict[str, Any]],
+) -> dict[str, list[dict[str, Any]]]:
+    output = {
+        "server_534_attack_edges_self_v2.csv": [],
+        "server_534_attack_edges_ally_v2.csv": [],
+        "server_534_attack_edges_unknown_v2.csv": [],
+    }
+    for row in attack_edges:
+        edge_type = str(row.get("edge_type", "") or "")
+        classified = {
+            **row,
+            "review_priority": priority_from_reason(str(row.get("attack_reason", "") or "")),
+            "human_check": attack_human_check(row),
+        }
+        if edge_type == "self_to_enemy_adjacent":
+            classified["execution_class"] = "self_action"
+            classified["recommended_owner"] = "#534"
+            output["server_534_attack_edges_self_v2.csv"].append(classified)
+        elif edge_type == "ally_to_enemy_adjacent":
+            classified["execution_class"] = "ally_coordination"
+            classified["recommended_owner"] = "#509/#440/#511"
+            output["server_534_attack_edges_ally_v2.csv"].append(classified)
+        else:
+            classified["execution_class"] = "map_check_required"
+            classified["recommended_owner"] = "R4/R5確認"
+            output["server_534_attack_edges_unknown_v2.csv"].append(classified)
+    return output
+
+
+def classify_enemy_invasion_edges(
+    enemy_invasion_edges: list[dict[str, Any]],
+) -> dict[str, list[dict[str, Any]]]:
+    output = {
+        "enemy_invasion_edges_self_defense_v2.csv": [],
+        "enemy_invasion_edges_ally_defense_v2.csv": [],
+        "enemy_invasion_edges_unknown_v2.csv": [],
+    }
+    for row in enemy_invasion_edges:
+        friendly_server = str(row.get("friendly_to_server", "") or "")
+        classified = {
+            **row,
+            "review_priority": priority_from_reason(str(row.get("risk_reason", "") or "")),
+            "human_check": invasion_human_check(row),
+        }
+        if friendly_server == SELF_SERVER:
+            classified["execution_class"] = "self_action"
+            classified["recommended_owner"] = "#534"
+            output["enemy_invasion_edges_self_defense_v2.csv"].append(classified)
+        elif friendly_server in ALLY_SERVERS:
+            classified["execution_class"] = "ally_coordination"
+            classified["recommended_owner"] = "#509/#440/#511"
+            output["enemy_invasion_edges_ally_defense_v2.csv"].append(classified)
+        else:
+            classified["execution_class"] = "map_check_required"
+            classified["recommended_owner"] = "R4/R5確認"
+            output["enemy_invasion_edges_unknown_v2.csv"].append(classified)
+    return output
+
+
+def markdown_escape(value: Any) -> str:
+    return str(value or "").replace("|", "\\|").replace("\n", " ")
+
+
+def markdown_table(rows: list[dict[str, Any]], columns: list[str]) -> str:
+    lines = [
+        "| " + " | ".join(columns) + " |",
+        "| " + " | ".join("---" for _ in columns) + " |",
+    ]
+    for row in rows[:EDGE_REVIEW_LIMIT]:
+        lines.append("| " + " | ".join(markdown_escape(row.get(column, "")) for column in columns) + " |")
+    if not rows:
+        lines.append("| " + " | ".join("" for _ in columns) + " |")
+    return "\n".join(lines)
+
+
+def update_commander_review_edges(
+    path: Path,
+    classified_attack_edges: dict[str, list[dict[str, Any]]],
+    classified_invasion_edges: dict[str, list[dict[str, Any]]],
+) -> None:
+    begin = "<!-- EDGE_CLASSIFICATION_BEGIN -->"
+    end = "<!-- EDGE_CLASSIFICATION_END -->"
+    attack_columns = [
+        "friendly_from_coord",
+        "friendly_from_alliance",
+        "friendly_from_server",
+        "enemy_to_coord",
+        "enemy_to_alliance",
+        "enemy_to_server",
+        "review_priority",
+        "recommended_action",
+        "human_check",
+        "confidence",
+    ]
+    invasion_columns = [
+        "enemy_from_coord",
+        "enemy_from_alliance",
+        "enemy_from_server",
+        "friendly_to_coord",
+        "friendly_to_alliance",
+        "friendly_to_server",
+        "review_priority",
+        "recommended_action",
+        "human_check",
+        "confidence",
+    ]
+    sections = [
+        (
+            "#534単独攻撃edge",
+            classified_attack_edges["server_534_attack_edges_self_v2.csv"],
+            attack_columns,
+        ),
+        (
+            "味方連携攻撃edge",
+            classified_attack_edges["server_534_attack_edges_ally_v2.csv"],
+            attack_columns,
+        ),
+        (
+            "地図確認が必要な攻撃候補",
+            classified_attack_edges["server_534_attack_edges_unknown_v2.csv"],
+            attack_columns,
+        ),
+        (
+            "#534防衛edge",
+            classified_invasion_edges["enemy_invasion_edges_self_defense_v2.csv"],
+            invasion_columns,
+        ),
+        (
+            "味方防衛edge",
+            classified_invasion_edges["enemy_invasion_edges_ally_defense_v2.csv"],
+            invasion_columns,
+        ),
+        (
+            "地図確認が必要な敵侵攻候補",
+            classified_invasion_edges["enemy_invasion_edges_unknown_v2.csv"],
+            invasion_columns,
+        ),
+    ]
+    block_lines = [
+        begin,
+        "",
+        "## Edge候補の実行可能性分類",
+        "",
+        "これは作戦命令ではなく，edge候補の分類である。各セクションは最大10件まで表示する。",
+    ]
+    for title, rows, columns in sections:
+        block_lines.extend(["", f"## {title}", "", markdown_table(rows, columns)])
+    block_lines.extend(["", end, ""])
+    block = "\n".join(block_lines)
+
+    if path.exists():
+        current = path.read_text(encoding="utf-8")
+        pattern = re.compile(rf"\n?{re.escape(begin)}.*?{re.escape(end)}\n?", re.DOTALL)
+        if pattern.search(current):
+            updated = pattern.sub("\n\n" + block, current).rstrip() + "\n"
+        else:
+            updated = current.rstrip() + "\n\n" + block
+    else:
+        updated = "# 司令官CSVレビュー 2026-05-31\n\n" + block
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(updated, encoding="utf-8")
+
+
 def build_decision_outputs(
     node_current_rows: list[dict[str, Any]],
     risk_rows: list[dict[str, Any]],
@@ -1106,6 +1346,8 @@ def print_summary(
     city_destroy_enabled: bool,
     enemy_invasion_edges: list[dict[str, Any]],
     attack_edges: list[dict[str, Any]],
+    classified_attack_edges: dict[str, list[dict[str, Any]]],
+    classified_invasion_edges: dict[str, list[dict[str, Any]]],
 ) -> None:
     level_counts = Counter(row["risk_level"] for row in risk_rows)
     print(f"node_current_v2 rows={len(node_current_rows)}")
@@ -1160,6 +1402,12 @@ def print_summary(
         "ally-source attack edges count="
         f"{sum(1 for row in attack_edges if str(row.get('edge_type', '')).startswith('ally_'))}"
     )
+    print(f"self attack edges count={len(classified_attack_edges['server_534_attack_edges_self_v2.csv'])}")
+    print(f"ally attack edges count={len(classified_attack_edges['server_534_attack_edges_ally_v2.csv'])}")
+    print(f"unknown attack edges count={len(classified_attack_edges['server_534_attack_edges_unknown_v2.csv'])}")
+    print(f"self defense edges count={len(classified_invasion_edges['enemy_invasion_edges_self_defense_v2.csv'])}")
+    print(f"ally defense edges count={len(classified_invasion_edges['enemy_invasion_edges_ally_defense_v2.csv'])}")
+    print(f"unknown defense edges count={len(classified_invasion_edges['enemy_invasion_edges_unknown_v2.csv'])}")
 
 
 def main() -> None:
@@ -1169,6 +1417,7 @@ def main() -> None:
     alliance_directory_path = Path(args.alliance_directory)
     pacts_path = Path(args.pacts)
     output_dir = Path(args.output_dir)
+    commander_review_path = Path(args.commander_review)
 
     payload = load_node_status(node_status_path)
     state = load_state(state_json_path)
@@ -1230,6 +1479,13 @@ def main() -> None:
     )
     write_csv(output_dir / "top_enemy_invasion_edges_v2.csv", ENEMY_INVASION_EDGE_COLUMNS, enemy_invasion_edges)
     write_csv(output_dir / "top_server_534_attack_edges_v2.csv", ATTACK_EDGE_COLUMNS, attack_edges)
+    classified_attack_edges = classify_attack_edges(attack_edges)
+    classified_invasion_edges = classify_enemy_invasion_edges(enemy_invasion_edges)
+    for filename, rows in classified_attack_edges.items():
+        write_csv(output_dir / filename, CLASSIFIED_ATTACK_EDGE_COLUMNS, rows)
+    for filename, rows in classified_invasion_edges.items():
+        write_csv(output_dir / filename, CLASSIFIED_ENEMY_INVASION_EDGE_COLUMNS, rows)
+    update_commander_review_edges(commander_review_path, classified_attack_edges, classified_invasion_edges)
     print_summary(
         node_current_rows,
         alert_rows,
@@ -1241,6 +1497,8 @@ def main() -> None:
         city_destroy_enabled,
         enemy_invasion_edges,
         attack_edges,
+        classified_attack_edges,
+        classified_invasion_edges,
     )
 
 

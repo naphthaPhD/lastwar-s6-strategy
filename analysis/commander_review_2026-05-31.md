@@ -182,3 +182,95 @@
 - ????????????????????
 - `from_node_id` ?????????????????????
 - `confidence=medium` ????????????????
+
+<!-- EDGE_CLASSIFICATION_BEGIN -->
+
+## Edge候補の実行可能性分類
+
+これは作戦命令ではなく，edge候補の分類である。各セクションは最大10件まで表示する。
+
+## #534単独攻撃edge
+
+| friendly_from_coord | friendly_from_alliance | friendly_from_server | enemy_to_coord | enemy_to_alliance | enemy_to_server | review_priority | recommended_action | human_check | confidence |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| D-5 | 4tH | 534 | d-4 | nO9 | 476 | high | 都市破壊候補 | 発射元拠点確認; 都市破壊時間確認; 協定確認 | medium |
+| F-15 | JDX | 534 | e-14 | SHA | 503 | high | 都市破壊候補 | 発射元拠点確認; 都市破壊時間確認; 協定確認 | medium |
+| E-7 | 4tH | 534 | e-6 | SHA | 503 | high | 都市破壊候補 | 発射元拠点確認; 都市破壊時間確認; 協定確認 | medium |
+| c-12 | JDX | 534 | D-11 | 476C | 476 | high | 攻撃候補 | 発射元拠点確認; 協定確認 | medium |
+| C-13 | JDX | 534 | D-13 | 476B | 476 | high | 攻撃候補 | 発射元拠点確認; 協定確認 | medium |
+| c-12 | JDX | 534 | D-13 | 476B | 476 | high | 攻撃候補 | 発射元拠点確認; 協定確認 | medium |
+| c-14 | JDX | 534 | D-13 | 476B | 476 | high | 攻撃候補 | 発射元拠点確認; 協定確認 | medium |
+
+## 味方連携攻撃edge
+
+| friendly_from_coord | friendly_from_alliance | friendly_from_server | enemy_to_coord | enemy_to_alliance | enemy_to_server | review_priority | recommended_action | human_check | confidence |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| D-15 | SsQ | 509 | d-14 | BgNa | 480 | critical | 都市破壊候補 | 発射元拠点確認; 都市破壊時間確認; 味方連携確認; 協定確認 | medium |
+| E-15 | SsQ | 509 | d-14 | BgNa | 480 | critical | 都市破壊候補 | 発射元拠点確認; 都市破壊時間確認; 味方連携確認; 協定確認 | medium |
+| E-7 | BAJ | 440 | e-8 | BgNa | 480 | high | 都市破壊候補 | 発射元拠点確認; 都市破壊時間確認; 味方連携確認; 協定確認 | medium |
+| F-7 | GoDs | 440 | e-8 | BgNa | 480 | high | 都市破壊候補 | 発射元拠点確認; 都市破壊時間確認; 味方連携確認; 協定確認 | medium |
+| F-9 | BAJ | 440 | e-8 | BgNa | 480 | high | 都市破壊候補 | 発射元拠点確認; 都市破壊時間確認; 味方連携確認; 協定確認 | medium |
+| E-11 | FHX | 509 | D-11 | 476A | 476 | high | 味方連携確認 | 発射元拠点確認; 味方連携確認; 協定確認 | medium |
+| c-12 | VEX | 509 | D-11 | 476A | 476 | high | 味方連携確認 | 発射元拠点確認; 味方連携確認; 協定確認 | medium |
+| E-13 | FHX | 509 | D-13 | 476A | 476 | high | 味方連携確認 | 発射元拠点確認; 味方連携確認; 協定確認 | medium |
+| c-12 | VEX | 509 | D-13 | 476A | 476 | high | 味方連携確認 | 発射元拠点確認; 味方連携確認; 協定確認 | medium |
+| c-14 | SsQ | 509 | D-13 | 476A | 476 | high | 味方連携確認 | 発射元拠点確認; 味方連携確認; 協定確認 | medium |
+
+## 地図確認が必要な攻撃候補
+
+| friendly_from_coord | friendly_from_alliance | friendly_from_server | enemy_to_coord | enemy_to_alliance | enemy_to_server | review_priority | recommended_action | human_check | confidence |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  | d-12 | 476B | 476 | critical | 地図確認 | 発射元拠点確認; 地図確認 | medium |
+|  |  |  | d-14 | 476B | 476 | critical | 地図確認 | 発射元拠点確認; 地図確認 | medium |
+|  |  |  | d-10 | 476B | 476 | high | 地図確認 | 発射元拠点確認; 地図確認 | medium |
+|  |  |  | d-2 | 476K | 476 | high | 地図確認 | 発射元拠点確認; 地図確認 | medium |
+|  |  |  | d-6 | 476M | 476 | high | 地図確認 | 発射元拠点確認; 地図確認 | medium |
+|  |  |  | e-14 | 476d | 476 | high | 地図確認 | 発射元拠点確認; 地図確認 | medium |
+|  |  |  | e-18 | 476Z | 476 | high | 地図確認 | 発射元拠点確認; 地図確認 | medium |
+|  |  |  | e-18 | AAOA | 480 | high | 地図確認 | 発射元拠点確認; 地図確認 | medium |
+|  |  |  | e-6 | TkTk | 480 | high | 地図確認 | 発射元拠点確認; 地図確認 | medium |
+|  |  |  | d-10 | Lghs | 503 | high | 地図確認 | 発射元拠点確認; 地図確認 | medium |
+
+## #534防衛edge
+
+| enemy_from_coord | enemy_from_alliance | enemy_from_server | friendly_to_coord | friendly_to_alliance | friendly_to_server | review_priority | recommended_action | human_check | confidence |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| d-4 | nO9 | 476 | D-5 | 4tH | 534 | high | 隣接確認 | 防衛ライン確認 | medium |
+| e-14 | SHA | 503 | F-15 | JDX | 534 | high | 隣接確認 | 防衛ライン確認 | medium |
+| e-6 | SHA | 503 | E-7 | 4tH | 534 | high | 隣接確認 | 防衛ライン確認 | medium |
+| D-11 | 476C | 476 | c-12 | JDX | 534 | high | 防衛確認 | 防衛ライン確認 | medium |
+| D-13 | 476B | 476 | C-13 | JDX | 534 | high | 防衛確認 | 防衛ライン確認 | medium |
+| D-13 | 476B | 476 | c-12 | JDX | 534 | high | 防衛確認 | 防衛ライン確認 | medium |
+| D-13 | 476B | 476 | c-14 | JDX | 534 | high | 防衛確認 | 防衛ライン確認 | medium |
+
+## 味方防衛edge
+
+| enemy_from_coord | enemy_from_alliance | enemy_from_server | friendly_to_coord | friendly_to_alliance | friendly_to_server | review_priority | recommended_action | human_check | confidence |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| d-14 | BgNa | 480 | D-15 | SsQ | 509 | critical | 防衛確認 | 味方連携確認; 防衛ライン確認 | medium |
+| d-14 | BgNa | 480 | E-15 | SsQ | 509 | critical | 防衛確認 | 味方連携確認; 防衛ライン確認 | medium |
+| e-8 | BgNa | 480 | E-7 | BAJ | 440 | high | 隣接確認 | 味方連携確認; 防衛ライン確認 | medium |
+| e-8 | BgNa | 480 | F-7 | GoDs | 440 | high | 隣接確認 | 味方連携確認; 防衛ライン確認 | medium |
+| e-8 | BgNa | 480 | F-9 | BAJ | 440 | high | 隣接確認 | 味方連携確認; 防衛ライン確認 | medium |
+| D-11 | 476A | 476 | E-11 | FHX | 509 | high | 防衛確認 | 味方連携確認; 防衛ライン確認 | medium |
+| D-11 | 476A | 476 | c-12 | VEX | 509 | high | 防衛確認 | 味方連携確認; 防衛ライン確認 | medium |
+| D-13 | 476A | 476 | E-13 | FHX | 509 | high | 防衛確認 | 味方連携確認; 防衛ライン確認 | medium |
+| D-13 | 476A | 476 | c-12 | VEX | 509 | high | 防衛確認 | 味方連携確認; 防衛ライン確認 | medium |
+| D-13 | 476A | 476 | c-14 | SsQ | 509 | high | 防衛確認 | 味方連携確認; 防衛ライン確認 | medium |
+
+## 地図確認が必要な敵侵攻候補
+
+| enemy_from_coord | enemy_from_alliance | enemy_from_server | friendly_to_coord | friendly_to_alliance | friendly_to_server | review_priority | recommended_action | human_check | confidence |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| d-12 | 476B | 476 |  |  |  | critical | 地図確認 | 防衛先確認; 地図確認 | medium |
+| d-14 | 476B | 476 |  |  |  | critical | 地図確認 | 防衛先確認; 地図確認 | medium |
+| d-10 | 476B | 476 |  |  |  | high | 地図確認 | 防衛先確認; 地図確認 | medium |
+| d-2 | 476K | 476 |  |  |  | high | 地図確認 | 防衛先確認; 地図確認 | medium |
+| d-6 | 476M | 476 |  |  |  | high | 地図確認 | 防衛先確認; 地図確認 | medium |
+| e-14 | 476d | 476 |  |  |  | high | 地図確認 | 防衛先確認; 地図確認 | medium |
+| e-18 | 476Z | 476 |  |  |  | high | 地図確認 | 防衛先確認; 地図確認 | medium |
+| e-18 | AAOA | 480 |  |  |  | high | 地図確認 | 防衛先確認; 地図確認 | medium |
+| e-6 | TkTk | 480 |  |  |  | high | 地図確認 | 防衛先確認; 地図確認 | medium |
+| d-10 | Lghs | 503 |  |  |  | high | 地図確認 | 防衛先確認; 地図確認 | medium |
+
+<!-- EDGE_CLASSIFICATION_END -->
