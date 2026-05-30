@@ -1919,9 +1919,9 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
 <button id="map-highlight-boundary-depth-2" type="button">&#22659;&#30028;+&#20869;&#20596;+&#20869;&#20596;</button>
 <button id="map-highlight-boundary-depth-3" type="button">&#22659;&#30028;+&#20869;&#20596;+&#20869;&#20596;+&#20869;&#20596;</button>
 <button id="map-highlight-enemy-threat" type="button">&#25973;&#20405;&#25915;&#20104;&#28204;</button>
-<button id="map-phase3-self-risk" type="button">#534侵攻リスク</button>
+<button id="map-phase3-self-risk" type="button">#534連盟侵攻リスク</button>
 <button id="map-highlight-pact-threat" type="button">&#21332;&#23450;&#36796;&#12415;&#25973;&#20405;&#25915;&#20104;&#28204;</button>
-<button id="map-phase3-self-pact-threat" type="button">#534協定込みリスク</button>
+<button id="map-phase3-self-pact-threat" type="button">#534連盟協定込みリスク</button>
 <button id="map-highlight-friendly-pressure" type="button">&#21619;&#26041;&#20405;&#25915;&#20505;&#35036;</button>
 <button id="map-highlight-interdiction" type="button">&#36974;&#26029;&#20505;&#35036;</button>
 <button id="map-highlight-risk-avoidance" type="button">&#21361;&#38522;&#22238;&#36991;</button>
@@ -2517,9 +2517,9 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
                           width: 8
                         }},
                         selfRisk: {{
-                          title: "#534 侵攻リスク TOP",
-                          subtitle: "#534/JDX 保有拠点だけに絞った敵隣接・協定込み接近・保護/時間リスク",
-                          key: "self_risk_watchlist",
+                          title: "#534連盟 侵攻リスク TOP",
+                          subtitle: "#534所属連盟の保有拠点に絞った敵隣接・協定込み接近・保護/時間リスク",
+                          key: "server_534_risk_watchlist",
                           color: "#dc2626",
                           width: 8
                         }},
@@ -2531,9 +2531,9 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
                           width: 8
                         }},
                         selfPactThreat: {{
-                          title: "#534 協定込み侵攻リスク TOP",
-                          subtitle: "協定経由で #534/JDX 保有拠点へ届き得る敵アクセスを抽出",
-                          key: "self_pact_threat_options",
+                          title: "#534連盟 協定込み侵攻リスク TOP",
+                          subtitle: "協定経由で #534所属連盟の保有拠点へ届き得る敵アクセスを抽出",
+                          key: "server_534_pact_threat_options",
                           color: "#9f1239",
                           width: 8
                         }},
