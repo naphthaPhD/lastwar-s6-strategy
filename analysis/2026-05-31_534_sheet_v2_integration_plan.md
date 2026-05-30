@@ -408,6 +408,54 @@ enemy_invasion_candidates_v2.csv rows=49
 server_534_attack_candidates_v2.csv rows=388
 ```
 
+## 11.3 Operation-layer split
+
+V2 outputs are split into three operation layers.
+
+### Commander layer
+
+R4/R5 should start with these files:
+
+- `sample_output/sheet_migration/commander_dashboard_v2.csv`
+- `sample_output/sheet_migration/top_critical_risks_v2.csv`
+- `sample_output/sheet_migration/top_enemy_invasion_candidates_v2.csv`
+- `sample_output/sheet_migration/top_server_534_attack_candidates_v2.csv`
+
+Top files are capped at 30 rows so they can be read directly by commanders.
+
+### Staff layer
+
+Detailed operation-planning CSVs remain available:
+
+- `sample_output/sheet_migration/current_enemy_nodes_v2.csv`
+- `sample_output/sheet_migration/current_friendly_nodes_v2.csv`
+- `sample_output/sheet_migration/server_534_frontline_risk_v2.csv`
+- `sample_output/sheet_migration/enemy_invasion_candidates_v2.csv`
+- `sample_output/sheet_migration/server_534_attack_candidates_v2.csv`
+- `sample_output/sheet_migration/risk_map_v2.csv`
+
+### Data-maintenance layer
+
+Large review queues are separated from commander output:
+
+- `sample_output/sheet_migration/unknown_owner_review_v2.csv`
+- `sample_output/sheet_migration/type_uncertain_review_v2.csv`
+- `sample_output/sheet_migration/safe_time_reference_review_v2.csv`
+
+`alerts_v2.csv` is also a back-office review queue. It should not be shared directly as commander output.
+
+Current operation-layer output counts:
+
+```text
+commander_dashboard_v2 rows=10
+top_critical_risks_v2.csv rows=30
+top_enemy_invasion_candidates_v2.csv rows=30
+top_server_534_attack_candidates_v2.csv rows=30
+unknown_owner_review_v2.csv rows=646
+type_uncertain_review_v2.csv rows=132
+safe_time_reference_review_v2.csv rows=1349
+```
+
 ## 12. Unknowns
 
 - Whether `node_current_v2` should be fully generated or allow manual override columns.

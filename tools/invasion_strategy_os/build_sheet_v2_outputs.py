@@ -109,6 +109,14 @@ DECISION_COLUMNS = [
     "memo",
 ]
 
+COMMANDER_DASHBOARD_COLUMNS = [
+    "metric",
+    "value",
+    "note",
+]
+
+TOP_LIMIT = 30
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -527,11 +535,107 @@ def build_decision_outputs(
     }
 
 
+def build_commander_outputs(
+    node_current_rows: list[dict[str, Any]],
+    risk_rows: list[dict[str, Any]],
+    decision_outputs: dict[str, list[dict[str, Any]]],
+) -> tuple[list[dict[str, Any]], dict[str, list[dict[str, Any]]]]:
+    risk_by_id = {row["node_id"]: row for row in risk_rows}
+    level_counts = Counter(row["risk_level"] for row in risk_rows)
+    unknown_owner_rows = [
+        row
+        for row in node_current_rows
+        if row["owner_server"] == "" and row["current_alliance"] and row["status_norm"] in {"owned", "owned_uncertain"}
+    ]
+    destroyed_city_rows = [
+        row
+        for row in node_current_rows
+        if row["node_type_norm"] == "city" and row["destroyed_flag"] == "TRUE"
+    ]
+
+    dashboard_rows = [
+        {"metric": "node_current_v2 rows", "value": len(node_current_rows), "note": "source rows"},
+        {
+            "metric": "current_enemy_nodes count",
+            "value": len(decision_outputs["current_enemy_nodes_v2.csv"]),
+            "note": "current enemy-owned nodes",
+        },
+        {
+            "metric": "current_friendly_nodes count",
+            "value": len(decision_outputs["current_friendly_nodes_v2.csv"]),
+            "note": "current self/ally-owned nodes",
+        },
+        {
+            "metric": "server_534_frontline_risk count",
+            "value": len(decision_outputs["server_534_frontline_risk_v2.csv"]),
+            "note": "owned frontline rows for review",
+        },
+        {
+            "metric": "enemy_invasion_candidates count",
+            "value": len(decision_outputs["enemy_invasion_candidates_v2.csv"]),
+            "note": "enemy-owned frontline candidates",
+        },
+        {
+            "metric": "server_534_attack_candidates count",
+            "value": len(decision_outputs["server_534_attack_candidates_v2.csv"]),
+            "note": "enemy-owned attack-review candidates",
+        },
+        {"metric": "critical count", "value": level_counts.get("critical", 0), "note": "risk_map_v2"},
+        {"metric": "high count", "value": level_counts.get("high", 0), "note": "risk_map_v2"},
+        {
+            "metric": "unknown owner count",
+            "value": len(unknown_owner_rows),
+            "note": "owned rows with current_alliance but unresolved owner_server",
+        },
+        {"metric": "destroyed city count", "value": len(destroyed_city_rows), "note": "city rows only"},
+    ]
+
+    critical_rows = [
+        row
+        for row in merge_decision_rows(node_current_rows, risk_rows)
+        if risk_by_id[row["node_id"]]["risk_level"] == "critical"
+    ]
+    commander_outputs = {
+        "top_critical_risks_v2.csv": sort_decision_rows(critical_rows)[:TOP_LIMIT],
+        "top_enemy_invasion_candidates_v2.csv": decision_outputs["enemy_invasion_candidates_v2.csv"][:TOP_LIMIT],
+        "top_server_534_attack_candidates_v2.csv": decision_outputs["server_534_attack_candidates_v2.csv"][:TOP_LIMIT],
+    }
+    return dashboard_rows, commander_outputs
+
+
+def build_review_outputs(
+    node_current_rows: list[dict[str, Any]],
+) -> dict[str, list[dict[str, Any]]]:
+    unknown_owner_rows = [
+        row
+        for row in node_current_rows
+        if row["owner_server"] == "" and row["current_alliance"] and row["status_norm"] in {"owned", "owned_uncertain"}
+    ]
+    type_uncertain_rows = [
+        row
+        for row in node_current_rows
+        if row["node_type_norm"] == "unknown"
+    ]
+    safe_time_rows = [
+        row
+        for row in node_current_rows
+        if row["status_norm"] in {"owned", "owned_uncertain"} and row["protection_status"] in {"safe_time_known", "safe_time_missing"}
+    ]
+    return {
+        "unknown_owner_review_v2.csv": unknown_owner_rows,
+        "type_uncertain_review_v2.csv": type_uncertain_rows,
+        "safe_time_reference_review_v2.csv": safe_time_rows,
+    }
+
+
 def print_summary(
     node_current_rows: list[dict[str, Any]],
     alert_rows: list[dict[str, Any]],
     risk_rows: list[dict[str, Any]],
     decision_outputs: dict[str, list[dict[str, Any]]],
+    dashboard_rows: list[dict[str, Any]],
+    commander_outputs: dict[str, list[dict[str, Any]]],
+    review_outputs: dict[str, list[dict[str, Any]]],
 ) -> None:
     level_counts = Counter(row["risk_level"] for row in risk_rows)
     print(f"node_current_v2 rows={len(node_current_rows)}")
@@ -542,6 +646,11 @@ def print_summary(
     print(f"mid count={level_counts.get('mid', 0)}")
     print(f"low count={level_counts.get('low', 0)}")
     for name, rows in decision_outputs.items():
+        print(f"{name} rows={len(rows)}")
+    print(f"commander_dashboard_v2 rows={len(dashboard_rows)}")
+    for name, rows in commander_outputs.items():
+        print(f"{name} rows={len(rows)}")
+    for name, rows in review_outputs.items():
         print(f"{name} rows={len(rows)}")
 
 
@@ -557,18 +666,37 @@ def main() -> None:
     directory = read_alliance_directory(alliance_directory_path)
     read_csv(pacts_path)
 
-    updated_at_jst = datetime.now(JST).isoformat(timespec="seconds")
+    updated_at_jst = str(payload.get("generated_at_jst") or datetime.now(JST).isoformat(timespec="seconds"))
     node_current_rows = build_node_current_rows(nodes, directory, updated_at_jst)
     alert_rows = build_alert_rows(node_current_rows)
     risk_rows = build_risk_rows(node_current_rows)
     decision_outputs = build_decision_outputs(node_current_rows, risk_rows)
+    dashboard_rows, commander_outputs = build_commander_outputs(
+        node_current_rows,
+        risk_rows,
+        decision_outputs,
+    )
+    review_outputs = build_review_outputs(node_current_rows)
 
     write_csv(output_dir / "node_current_v2.csv", NODE_CURRENT_COLUMNS, node_current_rows)
     write_csv(output_dir / "alerts_v2.csv", ALERT_COLUMNS, alert_rows)
     write_csv(output_dir / "risk_map_v2.csv", RISK_COLUMNS, risk_rows)
     for filename, rows in decision_outputs.items():
         write_csv(output_dir / filename, DECISION_COLUMNS, rows)
-    print_summary(node_current_rows, alert_rows, risk_rows, decision_outputs)
+    write_csv(output_dir / "commander_dashboard_v2.csv", COMMANDER_DASHBOARD_COLUMNS, dashboard_rows)
+    for filename, rows in commander_outputs.items():
+        write_csv(output_dir / filename, DECISION_COLUMNS, rows)
+    for filename, rows in review_outputs.items():
+        write_csv(output_dir / filename, NODE_CURRENT_COLUMNS, rows)
+    print_summary(
+        node_current_rows,
+        alert_rows,
+        risk_rows,
+        decision_outputs,
+        dashboard_rows,
+        commander_outputs,
+        review_outputs,
+    )
 
 
 if __name__ == "__main__":

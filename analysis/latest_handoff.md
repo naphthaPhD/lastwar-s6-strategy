@@ -1,5 +1,43 @@
 # Handoff summary
 
+## 2026-05-31 V2 operation-layer split
+
+## Context
+
+`alerts_v2.csv` has 1931 rows and is too large for commanders. V2 outputs are now split into commander, staff, and data-maintenance layers. Google Sheets write-back was not performed.
+
+## Updated files
+
+- `tools/invasion_strategy_os/build_sheet_v2_outputs.py`
+- `sample_output/sheet_migration/commander_dashboard_v2.csv`
+- `sample_output/sheet_migration/top_critical_risks_v2.csv`
+- `sample_output/sheet_migration/top_enemy_invasion_candidates_v2.csv`
+- `sample_output/sheet_migration/top_server_534_attack_candidates_v2.csv`
+- `sample_output/sheet_migration/unknown_owner_review_v2.csv`
+- `sample_output/sheet_migration/type_uncertain_review_v2.csv`
+- `sample_output/sheet_migration/safe_time_reference_review_v2.csv`
+- `analysis/2026-05-31_534_sheet_v2_integration_plan.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. R4/R5 should start with `commander_dashboard_v2.csv`, `top_critical_risks_v2.csv`, `top_enemy_invasion_candidates_v2.csv`, and `top_server_534_attack_candidates_v2.csv`.
+2. Staff-level detailed files remain: enemy/friendly nodes, frontline risk, invasion candidates, attack candidates, and `risk_map_v2.csv`.
+3. Data-maintenance review files are separated: unknown owner, type uncertain, and safe-time reference review.
+4. `alerts_v2.csv` is explicitly a back-office review queue, not commander-facing output.
+5. Current new-layer counts are `commander_dashboard_v2 rows=10`, top critical/enemy invasion/#534 attack rows are all 30, unknown owner review is 646, type uncertain review is 132, and safe-time reference review is 1349.
+
+## Current risks
+
+1. `unknown_owner_review_v2.csv` remains the highest-value cleanup queue because server-side accuracy depends on owner-server resolution.
+2. Top candidate files are triage lists and still need human map/context review before orders.
+
+## Recommended next actions
+
+1. Use the four commander files as the first R4/R5 review package.
+2. Work through `unknown_owner_review_v2.csv` to improve `alliance_directory.csv`.
+3. Keep `alerts_v2.csv` out of commander sharing unless filtered.
+
 ## 2026-05-31 Sheet V2 policy change
 
 ## Context
