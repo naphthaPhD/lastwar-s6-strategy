@@ -1,5 +1,31 @@
 # Handoff summary
 
+## 2026-05-31 R4/R5 Google Sheets review export
+
+## Context
+
+Wrote the R4/R5 review material to a separate Google Spreadsheet, not the production `#534` spreadsheet. The target spreadsheet is `#534_R4R5レビュー_2026-05-31`.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Google Sheets: `https://docs.google.com/spreadsheets/d/1PEU2O5DWGpC_vuaSkTCl1y6AzQ1QXLdQlKOgAD2ifb4/edit`
+
+## Key findings
+
+1. Created/updated tabs: `README`, `briefing`, `self_defense_edges`, `self_attack_edges`, `ally_coordination`, `map_check_queue`, `critical_534`, `dashboard`.
+2. The sheet includes only commander-review material: no `node_current_v2`, no `risk_map_v2`, no `alerts_v2`, and no `safe_time_reference_review_v2`.
+3. Production `#534` was not written to.
+
+## Recommended next actions
+
+1. Use the Google Sheet as the first R4/R5 meeting view.
+2. Keep detailed review in `analysis/commander_review_2026-05-31.md` and the classified CSVs.
+3. Treat `map_check_queue` rows as confirmation work, not orders.
+
 ## 2026-05-31 R4/R5 one-page briefing
 
 ## Context
