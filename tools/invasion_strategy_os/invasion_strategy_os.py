@@ -2532,8 +2532,8 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
                         }},
                         selfPactThreat: {{
                           title: "#534連盟 協定込み侵攻リスク TOP",
-                          subtitle: "協定経由で #534所属連盟の保有拠点へ届き得る敵アクセスを抽出",
-                          key: "server_534_pact_threat_options",
+                          subtitle: "#534所属連盟の侵攻リスクに、協定経由で届き得る敵アクセスを加味",
+                          key: "server_534_pact_aware_risk_watchlist",
                           color: "#9f1239",
                           width: 8
                         }},
