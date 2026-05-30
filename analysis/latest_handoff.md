@@ -1,5 +1,42 @@
 # Handoff summary
 
+## 2026-05-31 #534 Sheet V2 integration plan
+
+## Context
+
+Google Spreadsheet `#534` already has `node_current_v2`, `alerts_v2`, `risk_map_v2`, and `dashboard_v2` tabs. The new direction is to integrate these tabs into the existing lightweight migration flow instead of creating a separate system.
+
+## Updated files
+
+- `analysis/2026-05-31_534_sheet_v2_integration_plan.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. Keep legacy tabs such as `管理表たたき`, history tabs, OCR logs, pact tabs, and safe-time tabs read-only during migration.
+2. Treat `node_current_v2` as the sheet-facing normalized form of `node_status.json`.
+3. Generate `alerts_v2` and `risk_map_v2` from `node_current_v2` / `node_status.json`; do not hand-maintain them as independent sources.
+4. Keep `dashboard_v2` as a view layer only, so it does not become another source of truth.
+5. For V2 risk scoring, use `server_side`: `534=self`, `509/440/511=ally`, any other resolved server as `enemy`, unresolved owner server as `unknown`.
+
+## Current risks
+
+1. Applying `enemy = all non-ally` before resolving `owner_server` can overclassify unknown owners.
+2. Heavy spreadsheet formulas, especially volatile time formulas or full-column array formulas, may recreate the current performance issue.
+3. Manual edits in `node_current_v2` can diverge from `管理表たたき` unless a clear override policy is added.
+
+## Recommended next actions
+
+1. Add a local generator that writes `node_current_v2.csv`, `alerts_v2.csv`, and `risk_map_v2.csv` from `node_status.json`.
+2. Validate row counts and alert/risk counts locally before any Google Sheets write-back.
+3. Only after human approval, paste or write the generated V2 CSVs into Google Sheets.
+
+## Questions for ChatGPT
+
+1. Is the `server_side` rule sufficient for the first commander dashboard?
+2. Should `node_current_v2` allow manual override columns, or should all overrides stay in the old source tabs for now?
+3. Which dashboard block should be shown first to R4/R5: critical risks, destroyed cities, or safe-time missing nodes?
+
 ## 2026-05-30 Sheet refresh timeout hardening
 
 ## Context
