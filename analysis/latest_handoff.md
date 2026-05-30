@@ -1,5 +1,29 @@
 # Handoff summary
 
+## 2026-05-30 Server-based color assignment update
+
+## Context
+
+ノード色を現在位置のエリアではなく、所有連盟の所属サーバー推定で固定する方針に寄せた。#534 は青、#509/#440/#511 は緑、#503/#480/#523/#476 は赤。
+
+## Updated files
+
+- `tools/invasion_strategy_os/invasion_strategy_os.py`
+- `sample_output/state.json`
+- `sample_output/briefing_input.json`
+- `sample_output/map.html`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. 所有連盟ごとに、最も多く確認されるサーバーエリアを所属サーバーとして推定するようにした。
+2. 同数の場合は `#534 > #503/#480/#523/#476 > #509/#440/#511` の優先順にした。
+3. 例: `nO9` は敵エリアにいても #534所属推定なので青、`BAJ`/`TaW` は #440所属推定なので緑、`fzn`/`Stj` は #503所属推定なので赤。
+
+## Notes
+
+- Google Sheets再取得ではなく、既存ローカル `state.json` を元に再生成した。シート最新値は次回の `マップ最新化` で反映する。
+
 ## 2026-05-30 Enemy color inference update
 
 ## Context

@@ -955,17 +955,18 @@ def build_owner_affiliations(graph: nx.Graph, config: dict[str, Any]) -> dict[st
         if server:
             affiliations[owner] = server_affiliation(server)
             continue
-        affiliation = area_affiliation(str(node_data.get("area", "")))
-        if affiliation == "neutral":
+        area = str(node_data.get("area", "")).strip()
+        if area_affiliation(area) == "neutral":
             continue
-        counts = owner_area_counts.setdefault(owner, {"self": 0, "ally": 0, "enemy": 0})
-        counts[affiliation] += 1
+        counts = owner_area_counts.setdefault(owner, {})
+        counts[area] = counts.get(area, 0) + 1
 
     for owner, counts in owner_area_counts.items():
-        affiliations[owner] = sorted(
+        home_area = sorted(
             counts.items(),
-            key=lambda item: (-item[1], {"self": 0, "enemy": 1, "ally": 2}[item[0]]),
+            key=lambda item: (-item[1], {"self": 0, "enemy": 1, "ally": 2}.get(area_affiliation(item[0]), 3), item[0]),
         )[0][0]
+        affiliations[owner] = area_affiliation(home_area)
     return affiliations
 
 
