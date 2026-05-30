@@ -915,11 +915,12 @@ def area_affiliation(area: str) -> str:
 
 
 def server_affiliation(server: str) -> str:
-    if server in SELF_SERVERS:
+    server_code = str(server).strip().lstrip("#")
+    if server_code in SELF_SERVERS:
         return "self"
-    if server in ALLY_SERVERS:
+    if server_code in ALLY_SERVERS:
         return "ally"
-    if server in ENEMY_SERVERS:
+    if server_code in ENEMY_SERVERS:
         return "enemy"
     return "enemy"
 
@@ -929,7 +930,11 @@ def owner_server_prefix(owner: str) -> str | None:
     return match.group(1) if match else None
 
 
-def build_owner_affiliations(graph: nx.Graph, config: dict[str, Any]) -> dict[str, str]:
+def build_owner_affiliations(
+    graph: nx.Graph,
+    config: dict[str, Any],
+    alliance_powers: dict[str, AlliancePower] | None = None,
+) -> dict[str, str]:
     self_owners = DEFAULT_SELF_OWNERS | {str(value).strip() for value in config.get("self_owners", [])}
     ally_owners = {str(value).strip() for value in config.get("ally_owners", [])}
     enemy_owners = {str(value).strip() for value in config.get("enemy_owners", [])}
@@ -954,6 +959,10 @@ def build_owner_affiliations(graph: nx.Graph, config: dict[str, Any]) -> dict[st
         server = owner_server_prefix(owner)
         if server:
             affiliations[owner] = server_affiliation(server)
+            continue
+        power = alliance_power_for_owner(owner, alliance_powers or {})
+        if power and power.server:
+            affiliations[owner] = server_affiliation(power.server)
             continue
         area = str(node_data.get("area", "")).strip()
         if area_affiliation(area) == "neutral":
@@ -1224,7 +1233,7 @@ def write_html(
     warning_hours = float(config.get("protect_warning_hours", 6))
     visual_scale = float(config.get("visual_scale", 1.0))
     font_size = int(config.get("font_size", 18))
-    owner_affiliations = build_owner_affiliations(graph, config)
+    owner_affiliations = build_owner_affiliations(graph, config, alliance_powers)
 
     network = Network(height="100vh", width="100%", bgcolor="#111827", font_color="#f9fafb", cdn_resources="local")
     network.toggle_physics(False)
@@ -2921,7 +2930,7 @@ def build_state_payload(
     pacts: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     warning_hours = float(config.get("protect_warning_hours", 6))
-    owner_affiliations = build_owner_affiliations(graph, config)
+    owner_affiliations = build_owner_affiliations(graph, config, alliance_powers)
     nodes = []
     for _, node_data in graph.nodes(data=True):
         node = Node(**{field: node_data[field] for field in Node.__dataclass_fields__})
