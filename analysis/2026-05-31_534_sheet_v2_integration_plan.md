@@ -337,6 +337,40 @@ other
 4. Adopt the simplified `server_side` rule for V2 risk scoring.
 5. Keep the existing map output files untouched until the V2 CSV pipeline is verified.
 
+## 11.1 Implementation result
+
+Implemented the first local CSV generator:
+
+- `tools/invasion_strategy_os/build_sheet_v2_outputs.py`
+
+The script reads:
+
+- `sample_output/sheet_migration/node_status.json`
+- `sample_output/sheet_migration/alliance_directory.csv`
+- `sample_output/sheet_migration/pacts.csv`
+
+It writes:
+
+- `sample_output/sheet_migration/node_current_v2.csv`
+- `sample_output/sheet_migration/alerts_v2.csv`
+- `sample_output/sheet_migration/risk_map_v2.csv`
+
+Current local output counts:
+
+```text
+node_current_v2 rows=2168
+alerts_v2 rows=2168
+risk_map_v2 rows=2168
+critical count=81
+high count=429
+mid count=680
+low count=978
+```
+
+No Google Sheets write-back was performed. These CSVs are the review artifacts for the next human approval step.
+
+Important interpretation: the current `node_status.json` snapshot does not contain `safe_until_jst`, so many owned nodes are intentionally flagged as `safe_time_missing`. This is a data-completeness alert, not proof that every protection window is actually unknown in-game.
+
 ## 12. Unknowns
 
 - Whether `node_current_v2` should be fully generated or allow manual override columns.

@@ -1,5 +1,40 @@
 # Handoff summary
 
+## 2026-05-31 Sheet V2 CSV generator
+
+## Context
+
+`node_current_v2`, `alerts_v2`, and `risk_map_v2` are now generated locally from `sample_output/sheet_migration/node_status.json`. Google Sheets remains a review/display surface; no automatic write-back was performed.
+
+## Updated files
+
+- `tools/invasion_strategy_os/build_sheet_v2_outputs.py`
+- `sample_output/sheet_migration/node_current_v2.csv`
+- `sample_output/sheet_migration/alerts_v2.csv`
+- `sample_output/sheet_migration/risk_map_v2.csv`
+- `analysis/2026-05-31_534_sheet_v2_integration_plan.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. `server_side` is fixed as `534=self`, `509/440/511=ally`, all other resolved owner servers as `enemy`, and missing owner server as `unknown`.
+2. `alerts_v2` is generated from `node_current_v2`; it is not a manual input table.
+3. `risk_map_v2` is generated from `node_current_v2` using the risk rules in `analysis/2026-05-31_534_sheet_v2_integration_plan.md`.
+4. Current output counts are `node_current_v2 rows=2168`, `alerts_v2 rows=2168`, `risk_map_v2 rows=2168`, `critical count=81`, `high count=429`, `mid count=680`, `low count=978`.
+5. The current `node_status.json` snapshot does not include `safe_until_jst`, so many owned nodes are intentionally flagged as `safe_time_missing`.
+
+## Current risks
+
+1. `alerts_v2` currently contains all 2168 nodes because safe-time and unknown-owner data is incomplete in `node_status.json`.
+2. `safe_time_missing` should be treated as a data-completeness review queue, not direct in-game proof.
+3. The generated CSVs should be reviewed before any paste or API write into Google Sheets.
+
+## Recommended next actions
+
+1. Review the generated CSVs locally.
+2. Decide whether `node_status.json` should be extended with `safe_until_jst` before importing V2 sheets.
+3. After human approval, paste or write the CSVs into the corresponding Google Sheets tabs.
+
 ## 2026-05-31 #534 Sheet V2 integration plan
 
 ## Context
