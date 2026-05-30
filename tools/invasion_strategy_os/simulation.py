@@ -84,6 +84,13 @@ def build_invasion_simulation(state: dict[str, Any], config: dict[str, Any] | No
         sorted(node_evaluations, key=lambda item: (-float(item["invasion_score"]), -float(item["score"]))),
         max_items,
     )
+    self_risk_watchlist = top_items(
+        sorted(
+            [item for item in node_evaluations if affiliation(item.get("target", {})) in self_affiliations],
+            key=lambda item: (-float(item["invasion_score"]), -float(item["score"])),
+        ),
+        max_items,
+    )
     abandonable_nodes = top_items(
         [item for item in node_evaluations if item["classification"] == "abandonable"],
         max_items,
@@ -131,6 +138,7 @@ def build_invasion_simulation(state: dict[str, Any], config: dict[str, Any] | No
         "attack_priorities": attack_priorities,
         "interdiction_priorities": interdiction_priorities,
         "risk_watchlist": risk_watchlist,
+        "self_risk_watchlist": self_risk_watchlist,
         "abandonable_nodes": abandonable_nodes,
         "coalition_lines": coalition_lines,
         "protection_watchlist": protection_watchlist,
@@ -155,14 +163,18 @@ def build_invasion_simulation(state: dict[str, Any], config: dict[str, Any] | No
 def build_legacy_edge_candidates(state: dict[str, Any], context: dict[str, Any], max_items: int) -> dict[str, Any]:
     nodes = context["nodes"]
     friendly_affiliations = context["friendly_affiliations"]
+    self_affiliations = context["self_affiliations"]
     friendly_pressure: list[dict[str, Any]] = []
     enemy_threats: list[dict[str, Any]] = []
+    self_enemy_threats: list[dict[str, Any]] = []
     friendly_expansion: list[dict[str, Any]] = []
     enemy_expansion: list[dict[str, Any]] = []
     attack_score_options: list[dict[str, Any]] = []
     interdiction_score_options: list[dict[str, Any]] = []
     risk_avoidance_options: list[dict[str, Any]] = []
+    self_risk_avoidance_options: list[dict[str, Any]] = []
     pact_threat_options: list[dict[str, Any]] = []
+    self_pact_threat_options: list[dict[str, Any]] = []
 
     for edge in state.get("connections", []):
         source_id, target_id = edge_endpoints(edge)
@@ -178,19 +190,37 @@ def build_legacy_edge_candidates(state: dict[str, Any], context: dict[str, Any],
 
         if is_fishery(source) and is_fishery(target):
             if pact_projection_factor(context, source_id, target_id)["candidate"]:
-                pact_threat_options.append(candidate_record(context, source_id, target_id, "enemy_pact_projection", "pact_threat"))
+                record = candidate_record(context, source_id, target_id, "enemy_pact_projection", "pact_threat")
+                pact_threat_options.append(record)
+                if target_affiliation in self_affiliations:
+                    self_pact_threat_options.append(record)
             if pact_projection_factor(context, target_id, source_id)["candidate"]:
-                pact_threat_options.append(candidate_record(context, target_id, source_id, "enemy_pact_projection", "pact_threat"))
+                record = candidate_record(context, target_id, source_id, "enemy_pact_projection", "pact_threat")
+                pact_threat_options.append(record)
+                if source_affiliation in self_affiliations:
+                    self_pact_threat_options.append(record)
             if source_affiliation in friendly_affiliations and target_affiliation == "enemy":
                 friendly_pressure.append(candidate_record(context, source_id, target_id, "friendly_to_enemy_boundary", "simple"))
-                enemy_threats.append(candidate_record(context, target_id, source_id, "enemy_to_friendly_boundary", "risk"))
+                enemy_record = candidate_record(context, target_id, source_id, "enemy_to_friendly_boundary", "risk")
+                enemy_threats.append(enemy_record)
+                if source_affiliation in self_affiliations:
+                    self_enemy_threats.append(enemy_record)
                 attack_score_options.append(candidate_record(context, source_id, target_id, "attack_score", "attack"))
-                risk_avoidance_options.append(candidate_record(context, source_id, target_id, "risk_avoidance", "risk"))
+                risk_record = candidate_record(context, source_id, target_id, "risk_avoidance", "risk")
+                risk_avoidance_options.append(risk_record)
+                if source_affiliation in self_affiliations:
+                    self_risk_avoidance_options.append(risk_record)
             elif target_affiliation in friendly_affiliations and source_affiliation == "enemy":
                 friendly_pressure.append(candidate_record(context, target_id, source_id, "friendly_to_enemy_boundary", "simple"))
-                enemy_threats.append(candidate_record(context, source_id, target_id, "enemy_to_friendly_boundary", "risk"))
+                enemy_record = candidate_record(context, source_id, target_id, "enemy_to_friendly_boundary", "risk")
+                enemy_threats.append(enemy_record)
+                if target_affiliation in self_affiliations:
+                    self_enemy_threats.append(enemy_record)
                 attack_score_options.append(candidate_record(context, target_id, source_id, "attack_score", "attack"))
-                risk_avoidance_options.append(candidate_record(context, target_id, source_id, "risk_avoidance", "risk"))
+                risk_record = candidate_record(context, target_id, source_id, "risk_avoidance", "risk")
+                risk_avoidance_options.append(risk_record)
+                if target_affiliation in self_affiliations:
+                    self_risk_avoidance_options.append(risk_record)
             elif source_affiliation in friendly_affiliations and target_affiliation == "unowned":
                 friendly_expansion.append(candidate_record(context, source_id, target_id, "friendly_to_unowned", "expansion"))
             elif target_affiliation in friendly_affiliations and source_affiliation == "unowned":
@@ -207,12 +237,15 @@ def build_legacy_edge_candidates(state: dict[str, Any], context: dict[str, Any],
     return {
         "friendly_pressure_options": top_items(friendly_pressure, max_items),
         "enemy_threat_options": top_items(enemy_threats, max_items),
+        "self_enemy_threat_options": top_items(self_enemy_threats, max_items),
         "friendly_expansion_options": top_items(friendly_expansion, max_items),
         "enemy_expansion_options": top_items(enemy_expansion, max_items),
         "attack_score_options": top_items(attack_score_options, max_items),
         "interdiction_score_options": top_items(interdiction_score_options, max_items),
         "risk_avoidance_options": top_items(risk_avoidance_options, max_items),
+        "self_risk_avoidance_options": top_items(self_risk_avoidance_options, max_items),
         "pact_threat_options": top_items(pact_threat_options, max_items),
+        "self_pact_threat_options": top_items(self_pact_threat_options, max_items),
     }
 
 
@@ -577,7 +610,9 @@ def build_briefing_input(state: dict[str, Any], simulation: dict[str, Any] | Non
         "top_attack": briefing_records(simulation.get("attack_priorities", []), limit),
         "top_interdiction": briefing_records(simulation.get("interdiction_priorities", []), limit),
         "top_pact_threats": briefing_records(simulation.get("pact_threat_options", []), limit),
+        "top_self_pact_threats": briefing_records(simulation.get("self_pact_threat_options", []), limit),
         "risk_watchlist": briefing_records(simulation.get("risk_watchlist", []), limit),
+        "self_risk_watchlist": briefing_records(simulation.get("self_risk_watchlist", []), limit),
         "time_sensitive": briefing_records(simulation.get("time_sensitive_nodes", []), limit),
         "protection_watchlist": briefing_records(simulation.get("protection_watchlist", []), limit),
         "coalition_lines": briefing_records(simulation.get("coalition_lines", []), limit),

@@ -1919,7 +1919,9 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
 <button id="map-highlight-boundary-depth-2" type="button">&#22659;&#30028;+&#20869;&#20596;+&#20869;&#20596;</button>
 <button id="map-highlight-boundary-depth-3" type="button">&#22659;&#30028;+&#20869;&#20596;+&#20869;&#20596;+&#20869;&#20596;</button>
 <button id="map-highlight-enemy-threat" type="button">&#25973;&#20405;&#25915;&#20104;&#28204;</button>
+<button id="map-phase3-self-risk" type="button">#534侵攻リスク</button>
 <button id="map-highlight-pact-threat" type="button">&#21332;&#23450;&#36796;&#12415;&#25973;&#20405;&#25915;&#20104;&#28204;</button>
+<button id="map-phase3-self-pact-threat" type="button">#534協定込みリスク</button>
 <button id="map-highlight-friendly-pressure" type="button">&#21619;&#26041;&#20405;&#25915;&#20505;&#35036;</button>
 <button id="map-highlight-interdiction" type="button">&#36974;&#26029;&#20505;&#35036;</button>
 <button id="map-highlight-risk-avoidance" type="button">&#21361;&#38522;&#22238;&#36991;</button>
@@ -2514,11 +2516,25 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
                           color: "#be123c",
                           width: 8
                         }},
+                        selfRisk: {{
+                          title: "#534 侵攻リスク TOP",
+                          subtitle: "#534/JDX 保有拠点だけに絞った敵隣接・協定込み接近・保護/時間リスク",
+                          key: "self_risk_watchlist",
+                          color: "#dc2626",
+                          width: 8
+                        }},
                         pactThreat: {{
                           title: "協定込み敵侵攻予測 TOP",
                           subtitle: "連盟協定で敵が利用し得る一段先の隣接を重視",
                           key: "pact_threat_options",
                           color: "#e11d48",
+                          width: 8
+                        }},
+                        selfPactThreat: {{
+                          title: "#534 協定込み侵攻リスク TOP",
+                          subtitle: "協定経由で #534/JDX 保有拠点へ届き得る敵アクセスを抽出",
+                          key: "self_pact_threat_options",
+                          color: "#9f1239",
                           width: 8
                         }},
                         protection: {{
@@ -2663,10 +2679,22 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
                         highlightCandidateEdges("enemyThreat", "#ef4444", 7);
                       }});
                     }}
+                    var selfRiskButton = document.getElementById("map-phase3-self-risk");
+                    if (selfRiskButton) {{
+                      selfRiskButton.addEventListener("click", function () {{
+                        renderPhase3Candidates("selfRisk");
+                      }});
+                    }}
                     var pactThreatButton = document.getElementById("map-highlight-pact-threat");
                     if (pactThreatButton) {{
                       pactThreatButton.addEventListener("click", function () {{
                         renderPhase3Candidates("pactThreat");
+                      }});
+                    }}
+                    var selfPactThreatButton = document.getElementById("map-phase3-self-pact-threat");
+                    if (selfPactThreatButton) {{
+                      selfPactThreatButton.addEventListener("click", function () {{
+                        renderPhase3Candidates("selfPactThreat");
                       }});
                     }}
                     var friendlyPressureButton = document.getElementById("map-highlight-friendly-pressure");
