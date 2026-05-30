@@ -1102,22 +1102,32 @@ def format_power(power: int | None) -> str:
     return f"{power:,}"
 
 
+def compact_lookup_value(value: str | None) -> str:
+    return re.sub(r"\s+", "", str(value or "").strip())
+
+
+def exact_lookup_key(value: str | None) -> str:
+    return f"EXACT:{compact_lookup_value(value)}"
+
+
 def normalize_lookup_key(value: str | None) -> str:
-    return re.sub(r"\s+", "", str(value or "").strip()).upper()
+    return f"NORM:{compact_lookup_value(value).upper()}"
 
 
 def owner_lookup_keys(owner: str | None) -> list[str]:
     raw = str(owner or "").strip()
-    keys: list[str] = []
+    values: list[str] = []
     if raw:
-        keys.append(normalize_lookup_key(raw))
+        values.append(raw)
     bracket_match = re.search(r"\[([^\]]+)\]", raw)
     if bracket_match:
-        keys.append(normalize_lookup_key(bracket_match.group(1)))
+        values.append(bracket_match.group(1))
     parts = raw.split(maxsplit=1)
     if raw.startswith("#") and len(parts) > 1:
-        keys.append(normalize_lookup_key(parts[1]))
-    return list(dict.fromkeys(key for key in keys if key))
+        values.append(parts[1])
+    exact_keys = [exact_lookup_key(value) for value in values if compact_lookup_value(value)]
+    normalized_keys = [normalize_lookup_key(value) for value in values if compact_lookup_value(value)]
+    return list(dict.fromkeys(exact_keys + normalized_keys))
 
 
 def alliance_power_to_record(item: AlliancePower) -> dict[str, Any]:
@@ -1128,8 +1138,19 @@ def alliance_power_to_record(item: AlliancePower) -> dict[str, Any]:
 
 def index_alliance_powers(records: list[AlliancePower]) -> dict[str, AlliancePower]:
     indexed: dict[str, AlliancePower] = {}
+    normalized: dict[str, AlliancePower] = {}
+    ambiguous_normalized: set[str] = set()
     for item in records:
-        for key in owner_lookup_keys(item.alliance):
+        exact_key = exact_lookup_key(item.alliance)
+        normalized_key = normalize_lookup_key(item.alliance)
+        indexed[exact_key] = item
+        existing = normalized.get(normalized_key)
+        if existing and existing.alliance != item.alliance:
+            ambiguous_normalized.add(normalized_key)
+        elif normalized_key not in ambiguous_normalized:
+            normalized[normalized_key] = item
+    for key, item in normalized.items():
+        if key not in ambiguous_normalized:
             indexed[key] = item
     return indexed
 
