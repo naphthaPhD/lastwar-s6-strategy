@@ -370,7 +370,7 @@ enemy_owned,high,#476:G-1,G-1,fishery,476K,enemy,owned,safe_time_missing,,resolv
 uncertain,mid,#476:G-13,G-13,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 enemy_owned,high,#476:g-16,g-16,city,476d,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 enemy_owned,high,#476:G-19,G-19,fishery,476Z,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
-destroyed_city,critical,#476:g-2,g-2,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 13:24:45 / #476 X:49 Y:649 Lv.1都市 / 攻撃側 #534[89M] / 防衛側 #476 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#476:g-2,g-2,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 13:24:45 / #476 X:49 Y:649 Lv.1都市 / 攻撃側 #534[89M] / 防衛側 #476 / 宝箱×2 / 破壊済み・復活なし
 uncertain,mid,#476:g-20,g-20,city,ALj,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#476:G-21,G-21,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 enemy_owned,high,#476:g-6,g-6,city,476C,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
@@ -398,7 +398,7 @@ enemy_owned,high,#476:I-15,I-15,fishery,476H,enemy,owned,safe_time_missing,,reso
 enemy_owned,high,#476:i-16,i-16,city,476d,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 enemy_owned,high,#476:I-17,I-17,fishery,476H,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 enemy_owned,high,#476:i-18,i-18,city,476A,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
-destroyed_city,critical,#476:i-2,i-2,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:02:38 / #476 X:49 Y:849 Lv.1都市 / 攻撃側 #534[nO9] / 防衛側 #476[476H] / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#476:i-2,i-2,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:02:38 / #476 X:49 Y:849 Lv.1都市 / 攻撃側 #534[nO9] / 防衛側 #476[476H] / 宝箱×2 / 破壊済み・復活なし
 enemy_owned,high,#476:i-20,i-20,city,476d,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 uncertain,mid,#476:I-21,I-21,fishery,Kfk,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 enemy_owned,high,#476:I-3,I-3,fishery,476K,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
@@ -493,8 +493,8 @@ enemy_owned,high,#480:g-14,g-14,city,TkTk,enemy,owned,safe_time_missing,,resolve
 enemy_owned,high,#480:g-12,g-12,city,RCON,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 enemy_owned,high,#480:g-8,g-8,city,RCON,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 uncertain,mid,#480:d-8,d-8,city,WbW,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#480:d-10,d-10,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:12:18 / #480 X:449 Y:349 Lv.3都市 / 攻撃側 #440[GcC] / 防衛側 #480[BgNa] / 宝箱×10 / 破壊済み・復活なし
-destroyed_city,critical,#480:d-12,d-12,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:23:21 / #480 X:549 Y:349 Lv.3都市 / 攻撃側 #440[GcC] / 防衛側 #480[WbW] / 宝箱×10 / 破壊済み・復活なし
+destroyed_city,critical,#480:d-10,d-10,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:12:18 / #480 X:449 Y:349 Lv.3都市 / 攻撃側 #440[GcC] / 防衛側 #480[BgNa] / 宝箱×10 / 破壊済み・復活なし
+destroyed_city,critical,#480:d-12,d-12,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:23:21 / #480 X:549 Y:349 Lv.3都市 / 攻撃側 #440[GcC] / 防衛側 #480[WbW] / 宝箱×10 / 破壊済み・復活なし
 uncertain,mid,#480:I-1,I-1,fishery,MtG,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 enemy_owned,high,#480:C-1,C-1,fishery,BgNa,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 uncertain,mid,#480:J-13,J-13,fishery,hOe,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
@@ -530,21 +530,21 @@ enemy_owned,high,#480:B-21,B-21,fishery,AAOA,enemy,owned,safe_time_missing,,reso
 uncertain,mid,#480:B-3,B-3,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#480:b-4,b-4,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#480:B-5,B-5,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#480:b-6,b-6,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 04:37:22 / #480 X:249 Y:149 Lv.1都市 / 攻撃側 #440[GoDs] / 防衛側 #480[PmP] / 宝箱×2 / 破壊済み・復活なし
-destroyed_city,critical,#480:b-8,b-8,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:01:52 / #480 X:349 Y:149 Lv.1都市 / 攻撃側 #440[GoDs] / 防衛側 #480[BgNa] / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#480:b-6,b-6,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 04:37:22 / #480 X:249 Y:149 Lv.1都市 / 攻撃側 #440[GoDs] / 防衛側 #480[PmP] / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#480:b-8,b-8,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:01:52 / #480 X:349 Y:149 Lv.1都市 / 攻撃側 #440[GoDs] / 防衛側 #480[BgNa] / 宝箱×2 / 破壊済み・復活なし
 uncertain,mid,#480:B-9,B-9,fishery,IMP,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#480:c-10,c-10,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#480:c-12,c-12,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#480:C-13,C-13,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#480:c-14,c-14,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:20:01 / #480 X:649 Y:249 Lv.2都市 / 攻撃側 #509[SsQ] / 防衛側 #480[CDF8] / 宝箱×5 / 破壊済み・復活なし
-destroyed_city,critical,#480:c-16,c-16,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:17:50 / #480 X:749 Y:249 Lv.2都市 / 攻撃側 #509[SsQ] / 防衛側 #480[CDF8] / 宝箱×5 / 破壊済み・復活なし
+destroyed_city,critical,#480:c-14,c-14,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:20:01 / #480 X:649 Y:249 Lv.2都市 / 攻撃側 #509[SsQ] / 防衛側 #480[CDF8] / 宝箱×5 / 破壊済み・復活なし
+destroyed_city,critical,#480:c-16,c-16,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:17:50 / #480 X:749 Y:249 Lv.2都市 / 攻撃側 #509[SsQ] / 防衛側 #480[CDF8] / 宝箱×5 / 破壊済み・復活なし
 uncertain,mid,#480:C-19,C-19,fishery,TIKW,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#480:c-2,c-2,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#480:c-20,c-20,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#480:C-21,C-21,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#480:C-3,C-3,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#480:c-4,c-4,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#480:c-6,c-6,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:11:30 / #480 X:249 Y:249 Lv.2都市 / 攻撃側 #440[BAJ] / 防衛側 #480[BgNa] / 宝箱×5 / 破壊済み・復活なし
+destroyed_city,critical,#480:c-6,c-6,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:11:30 / #480 X:249 Y:249 Lv.2都市 / 攻撃側 #440[BAJ] / 防衛側 #480[BgNa] / 宝箱×5 / 破壊済み・復活なし
 uncertain,mid,#480:c-8,c-8,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#480:C-9,C-9,fishery,TaW,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#480:D-11,D-11,fishery,GcC,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
@@ -916,47 +916,47 @@ uncertain,mid,#509:G-15,G-15,fishery,OWM,unknown,owned,safe_time_missing,,"owner
 uncertain,mid,#509:G-17,G-17,fishery,OTT,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:j-18,j-18,city,OTT,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:h-8,h-8,city,BHE,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#509:d-10,d-10,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:17:55 / #509 X:449 Y:349 Lv.3都市 / 攻撃側 #476[476A] / 防衛側 #509[SsQ] / 宝箱×10 / 破壊済み・復活なし
+destroyed_city,critical,#509:d-10,d-10,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:17:55 / #509 X:449 Y:349 Lv.3都市 / 攻撃側 #476[476A] / 防衛側 #509[SsQ] / 宝箱×10 / 破壊済み・復活なし
 uncertain,mid,#509:i-18,i-18,city,OTT,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:H-19,H-19,fishery,UMN,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:I-13,I-13,fishery,MOn,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 enemy_owned,high,#509:G-19,G-19,fishery,GX99,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 uncertain,mid,#509:h-10,h-10,city,MOn,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:A-15,A-15,fishery,TIKW,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#509:a-10,a-10,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 00:52:11 / #509 X:449 Y:49 Lv.1都市 / 攻撃側 #476[ALj] / 防衛側 #509 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#509:a-10,a-10,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 00:52:11 / #509 X:449 Y:49 Lv.1都市 / 攻撃側 #476[ALj] / 防衛側 #509 / 宝箱×2 / 破壊済み・復活なし
 enemy_owned,high,#509:A-11,A-11,fishery,476A,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
-destroyed_city,critical,#509:a-12,a-12,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 03:09:40 / #509 X:549 Y:49 Lv.1都市 / 攻撃側 #476[476K] / 防衛側 #509 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#509:a-12,a-12,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 03:09:40 / #509 X:549 Y:49 Lv.1都市 / 攻撃側 #476[476K] / 防衛側 #509 / 宝箱×2 / 破壊済み・復活なし
 uncertain,mid,#509:A-13,A-13,fishery,MOn,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#509:a-14,a-14,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 03:04:40 / #509 X:649 Y:49 Lv.1都市 / 攻撃側 #476[476K] / 防衛側 #509 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#509:a-14,a-14,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 03:04:40 / #509 X:649 Y:49 Lv.1都市 / 攻撃側 #476[476K] / 防衛側 #509 / 宝箱×2 / 破壊済み・復活なし
 enemy_owned,high,#509:a-2,a-2,city,SHA,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
-destroyed_city,critical,#509:a-4,a-4,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 00:17:43 / #509 X:149 Y:49 Lv.1都市 / 攻撃側 #476[476Z] / 防衛側 #509 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#509:a-4,a-4,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 00:17:43 / #509 X:149 Y:49 Lv.1都市 / 攻撃側 #476[476Z] / 防衛側 #509 / 宝箱×2 / 破壊済み・復活なし
 enemy_owned,high,#509:A-5,A-5,fishery,476Z,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
-destroyed_city,critical,#509:a-6,a-6,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 00:11:44 / #509 X:249 Y:49 Lv.1都市 / 攻撃側 #476[476Z] / 防衛側 #509 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#509:a-6,a-6,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 00:11:44 / #509 X:249 Y:49 Lv.1都市 / 攻撃側 #476[476Z] / 防衛側 #509 / 宝箱×2 / 破壊済み・復活なし
 enemy_owned,high,#509:A-7,A-7,fishery,476B,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
-destroyed_city,critical,#509:a-8,a-8,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 00:35:38 / #509 X:349 Y:49 Lv.1都市 / 攻撃側 #476[ALj] / 防衛側 #509 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#509:a-8,a-8,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 00:35:38 / #509 X:349 Y:49 Lv.1都市 / 攻撃側 #476[ALj] / 防衛側 #509 / 宝箱×2 / 破壊済み・復活なし
 enemy_owned,high,#509:A-9,A-9,fishery,476Z,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 uncertain,mid,#509:b-18,b-18,city,AoW,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 enemy_owned,high,#509:b-2,b-2,city,SHA,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 uncertain,mid,#509:B-21,B-21,fishery,one,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:b-4,b-4,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:B-5,B-5,fishery,eXt,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#509:c-10,c-10,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:22:48 / #509 X:449 Y:249 Lv.2都市 / 攻撃側 #503[Lghs] / 防衛側 #509[VEX] / 宝箱×5 / 破壊済み・復活なし
-destroyed_city,critical,#509:c-18,c-18,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:19:52 / #509 X:849 Y:249 Lv.1都市 / 攻撃側 #480[RCON] / 防衛側 #509[SsQ] / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#509:c-10,c-10,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:22:48 / #509 X:449 Y:249 Lv.2都市 / 攻撃側 #503[Lghs] / 防衛側 #509[VEX] / 宝箱×5 / 破壊済み・復活なし
+destroyed_city,critical,#509:c-18,c-18,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:19:52 / #509 X:849 Y:249 Lv.1都市 / 攻撃側 #480[RCON] / 防衛側 #509[SsQ] / 宝箱×2 / 破壊済み・復活なし
 uncertain,mid,#509:C-21,C-21,fishery,one,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#509:d-12,d-12,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:04:04 / #509 X:549 Y:349 Lv.3都市 / 攻撃側 #476[476A] / 防衛側 #509[SsQ] / 宝箱×10 / 破壊済み・復活なし
+destroyed_city,critical,#509:d-12,d-12,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:04:04 / #509 X:549 Y:349 Lv.3都市 / 攻撃側 #476[476A] / 防衛側 #509[SsQ] / 宝箱×10 / 破壊済み・復活なし
 uncertain,mid,#509:d-2,d-2,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:E-1,E-1,fishery,eXt,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:e-10,e-10,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:e-12,e-12,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#509:e-16,e-16,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:20:43 / #509 X:749 Y:449 Lv.2都市 / 攻撃側 #503[Lghs] / 防衛側 #509[FHX] / 宝箱×5 / 破壊済み・復活なし
+destroyed_city,critical,#509:e-16,e-16,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:20:43 / #509 X:749 Y:449 Lv.2都市 / 攻撃側 #503[Lghs] / 防衛側 #509[FHX] / 宝箱×5 / 破壊済み・復活なし
 enemy_owned,high,#509:E-19,E-19,fishery,Lghs,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 enemy_owned,high,#509:E-21,E-21,fishery,Lghs,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 uncertain,mid,#509:F-1,F-1,fishery,eXt,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:f-10,f-10,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:F-11,F-11,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:f-12,f-12,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#509:f-16,f-16,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:01:56 / #509 X:749 Y:549 Lv.2都市 / 攻撃側 #503[GX99] / 防衛側 #509[FHX] / 宝箱×5 / 破壊済み・復活なし
-destroyed_city,critical,#509:f-18,f-18,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:02:34 / #509 X:849 Y:549 Lv.1都市 / 攻撃側 #503[Bye] / 防衛側 #509[FHX] / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#509:f-16,f-16,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:01:56 / #509 X:749 Y:549 Lv.2都市 / 攻撃側 #503[GX99] / 防衛側 #509[FHX] / 宝箱×5 / 破壊済み・復活なし
+destroyed_city,critical,#509:f-18,f-18,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:02:34 / #509 X:849 Y:549 Lv.1都市 / 攻撃側 #503[Bye] / 防衛側 #509[FHX] / 宝箱×2 / 破壊済み・復活なし
 uncertain,mid,#509:f-2,f-2,city,BHE,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 enemy_owned,high,#509:F-21,F-21,fishery,GX99,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 uncertain,mid,#509:f-4,f-4,city,eXt,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
@@ -964,8 +964,8 @@ uncertain,mid,#509:f-6,f-6,city,BHE,unknown,owned,safe_time_missing,,"owner serv
 uncertain,mid,#509:G-1,G-1,fishery,eXt,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:g-10,g-10,city,MOn,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:G-11,G-11,fishery,MOn,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#509:g-16,g-16,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:35:10 / #509 X:749 Y:649 Lv.2都市 / 攻撃側 #503[xjR] / 防衛側 #509[MOn] / 宝箱×5 / 破壊済み・復活なし
-destroyed_city,critical,#509:g-18,g-18,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:56:27 / #509 X:849 Y:649 Lv.1都市 / 攻撃側 #503[UMN] / 防衛側 #509[MOn] / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#509:g-16,g-16,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:35:10 / #509 X:749 Y:649 Lv.2都市 / 攻撃側 #503[xjR] / 防衛側 #509[MOn] / 宝箱×5 / 破壊済み・復活なし
+destroyed_city,critical,#509:g-18,g-18,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:56:27 / #509 X:849 Y:649 Lv.1都市 / 攻撃側 #503[UMN] / 防衛側 #509[MOn] / 宝箱×2 / 破壊済み・復活なし
 uncertain,mid,#509:g-2,g-2,city,eXt,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 enemy_owned,high,#509:G-21,G-21,fishery,GX99,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 uncertain,mid,#509:G-3,G-3,fishery,eXt,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
@@ -977,8 +977,8 @@ enemy_owned,high,#509:G-9,G-9,fishery,476A,enemy,owned,safe_time_missing,,resolv
 uncertain,mid,#509:H-1,H-1,fishery,Dao,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:H-11,H-11,fishery,MOn,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:H-13,H-13,fishery,MOn,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#509:h-16,h-16,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:21:12 / #509 X:749 Y:749 Lv.2都市 / 攻撃側 #503[Stj] / 防衛側 #509[MOn] / 宝箱×5 / 破壊済み・復活なし
-destroyed_city,critical,#509:h-18,h-18,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:17:15 / #509 X:849 Y:749 Lv.1都市 / 攻撃側 #503[Stj] / 防衛側 #509[MOn] / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#509:h-16,h-16,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:21:12 / #509 X:749 Y:749 Lv.2都市 / 攻撃側 #503[Stj] / 防衛側 #509[MOn] / 宝箱×5 / 破壊済み・復活なし
+destroyed_city,critical,#509:h-18,h-18,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:17:15 / #509 X:849 Y:749 Lv.1都市 / 攻撃側 #503[Stj] / 防衛側 #509[MOn] / 宝箱×2 / 破壊済み・復活なし
 uncertain,mid,#509:h-2,h-2,city,KOCH,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:H-21,H-21,fishery,xjR,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:H-3,H-3,fishery,KOCH,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
@@ -988,8 +988,8 @@ uncertain,mid,#509:H-9,H-9,fishery,BHE,unknown,owned,safe_time_missing,,"owner s
 uncertain,mid,#509:I-1,I-1,fishery,noI,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:i-10,i-10,city,AoW,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:i-12,i-12,city,AoW,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#509:i-14,i-14,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:30:02 / #509 X:649 Y:849 Lv.1都市 / 攻撃側 #503[xjR] / 防衛側 #509[OTT] / 宝箱×2 / 破壊済み・復活なし
-destroyed_city,critical,#509:i-16,i-16,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:23:18 / #509 X:749 Y:849 Lv.1都市 / 攻撃側 #503[UMN] / 防衛側 #509[OTT] / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#509:i-14,i-14,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:30:02 / #509 X:649 Y:849 Lv.1都市 / 攻撃側 #503[xjR] / 防衛側 #509[OTT] / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#509:i-16,i-16,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:23:18 / #509 X:749 Y:849 Lv.1都市 / 攻撃側 #503[UMN] / 防衛側 #509[OTT] / 宝箱×2 / 破壊済み・復活なし
 uncertain,mid,#509:I-19,I-19,fishery,UMN,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:i-2,i-2,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#509:I-21,I-21,fishery,Stj,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
@@ -1079,17 +1079,17 @@ enemy_owned,high,#511:J-3,J-3,fishery,476B,enemy,owned,safe_time_missing,,resolv
 enemy_owned,high,#511:J-1,J-1,fishery,476Z,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 uncertain,mid,#511:G-19,G-19,fishery,sbM,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:d-16,d-16,city,sbM,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#511:e-14,e-14,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:25:14 / #511 X:649 Y:449 Lv.3都市 / 攻撃側 #480[BgNa] / 防衛側 #511[SVa] / 宝箱×10 / 破壊済み・復活なし
-destroyed_city,critical,#511:d-14,d-14,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:35:01 / #511 X:649 Y:349 Lv.3都市 / 攻撃側 #480[WbW] / 防衛側 #511[SVa] / 宝箱×10 / 破壊済み・復活なし
+destroyed_city,critical,#511:e-14,e-14,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:25:14 / #511 X:649 Y:449 Lv.3都市 / 攻撃側 #480[BgNa] / 防衛側 #511[SVa] / 宝箱×10 / 破壊済み・復活なし
+destroyed_city,critical,#511:d-14,d-14,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:35:01 / #511 X:649 Y:349 Lv.3都市 / 攻撃側 #480[WbW] / 防衛側 #511[SVa] / 宝箱×10 / 破壊済み・復活なし
 uncertain,mid,#511:H-9,H-9,fishery,JLO,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:I-9,I-9,fishery,NBNH,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#511:g-10,g-10,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:20:19 / #511 X:449 Y:649 Lv.3都市 / 攻撃側 #480[WbW] / 防衛側 #511[DaNG] / 宝箱×10 / 破壊済み・復活なし
-destroyed_city,critical,#511:j-20,j-20,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 00:02:18 / #511 X:949 Y:949 Lv.1都市 / 攻撃側 #480[CDF8] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
-destroyed_city,critical,#511:h-14,h-14,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:06:12 / #511 X:649 Y:749 Lv.2都市 / 攻撃側 #476[476X] / 防衛側 #511[DaNG] / 宝箱×5 / 破壊済み・復活なし
+destroyed_city,critical,#511:g-10,g-10,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:20:19 / #511 X:449 Y:649 Lv.3都市 / 攻撃側 #480[WbW] / 防衛側 #511[DaNG] / 宝箱×10 / 破壊済み・復活なし
+destroyed_city,critical,#511:j-20,j-20,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 00:02:18 / #511 X:949 Y:949 Lv.1都市 / 攻撃側 #480[CDF8] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#511:h-14,h-14,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:06:12 / #511 X:649 Y:749 Lv.2都市 / 攻撃側 #476[476X] / 防衛側 #511[DaNG] / 宝箱×5 / 破壊済み・復活なし
 uncertain,mid,#511:j-6,j-6,city,JL2,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:h-4,h-4,city,JL2,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:D-19,D-19,fishery,sbM,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#511:e-8,e-8,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:23:12 / #511 X:349 Y:449 Lv.3都市 / 攻撃側 #523[WUG] / 防衛側 #511[JLO] / 宝箱×10 / 破壊済み・復活なし
+destroyed_city,critical,#511:e-8,e-8,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:23:12 / #511 X:349 Y:449 Lv.3都市 / 攻撃側 #523[WUG] / 防衛側 #511[JLO] / 宝箱×10 / 破壊済み・復活なし
 uncertain,mid,#511:g-8,g-8,city,JLO,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 enemy_owned,high,#511:H-19,H-19,fishery,BgNa,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 uncertain,mid,#511:G-3,G-3,fishery,EDFS,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
@@ -1126,9 +1126,9 @@ uncertain,mid,#511:B-17,B-17,fishery,,unknown,neutral_or_unknown,neutral_or_unkn
 uncertain,mid,#511:b-18,b-18,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:B-19,B-19,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:b-20,b-20,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#511:b-4,b-4,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:07:41 / #511 X:149 Y:149 Lv.1都市 / 攻撃側 #523[K4TR] / 防衛側 #511[2N7] / 宝箱×2 / 破壊済み・復活なし
-destroyed_city,critical,#511:b-6,b-6,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:14:39 / #511 X:249 Y:149 Lv.1都市 / 攻撃側 #523[u3o] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし / 同座標追加ログ 2026/05/28 12:23:26 #523[u3o]
-destroyed_city,critical,#511:b-8,b-8,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:19:24 / #511 X:349 Y:149 Lv.1都市 / 攻撃側 #523[K4TR] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#511:b-4,b-4,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:07:41 / #511 X:149 Y:149 Lv.1都市 / 攻撃側 #523[K4TR] / 防衛側 #511[2N7] / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#511:b-6,b-6,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:14:39 / #511 X:249 Y:149 Lv.1都市 / 攻撃側 #523[u3o] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし / 同座標追加ログ 2026/05/28 12:23:26 #523[u3o]
+destroyed_city,critical,#511:b-8,b-8,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:19:24 / #511 X:349 Y:149 Lv.1都市 / 攻撃側 #523[K4TR] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
 uncertain,mid,#511:C-1,C-1,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:c-14,c-14,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:C-15,C-15,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
@@ -1138,7 +1138,7 @@ uncertain,mid,#511:c-18,c-18,city,,unknown,neutral_or_unknown,neutral_or_unknown
 uncertain,mid,#511:C-19,C-19,fishery,TrX,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:c-20,c-20,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:C-21,C-21,fishery,TrX,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#511:c-4,c-4,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 10:36:13 / #511 X:149 Y:249 Lv.1都市 / 攻撃側 #523[5DU] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#511:c-4,c-4,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 10:36:13 / #511 X:149 Y:249 Lv.1都市 / 攻撃側 #523[5DU] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
 uncertain,mid,#511:c-6,c-6,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:c-8,c-8,city,JLO,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:D-1,D-1,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
@@ -1155,7 +1155,7 @@ uncertain,mid,#511:E-11,E-11,fishery,,unknown,neutral_or_unknown,neutral_or_unkn
 uncertain,mid,#511:e-12,e-12,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:E-13,E-13,fishery,WbW,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:E-21,E-21,fishery,TRh,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#511:e-4,e-4,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:19:34 / #511 X:149 Y:449 Lv.1都市 / 攻撃側 #523[EDFS] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#511:e-4,e-4,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:19:34 / #511 X:149 Y:449 Lv.1都市 / 攻撃側 #523[EDFS] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
 uncertain,mid,#511:e-6,e-6,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:E-9,E-9,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:F-1,F-1,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
@@ -1172,20 +1172,20 @@ uncertain,mid,#511:G-1,G-1,fishery,,unknown,neutral_or_unknown,neutral_or_unknow
 enemy_owned,high,#511:G-11,G-11,fishery,BgNa,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 enemy_owned,high,#511:G-13,G-13,fishery,BgNa,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 uncertain,mid,#511:g-16,g-16,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#511:g-18,g-18,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:07:38 / #511 X:849 Y:649 Lv.1都市 / 攻撃側 #480[BgNa] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#511:g-18,g-18,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:07:38 / #511 X:849 Y:649 Lv.1都市 / 攻撃側 #480[BgNa] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
 uncertain,mid,#511:g-20,g-20,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:G-21,G-21,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:g-4,g-4,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#511:g-6,g-6,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:25:53 / #511 X:249 Y:649 Lv.2都市 / 攻撃側 #523[WUG] / 防衛側 #511[JLO] / 宝箱×5 / 破壊済み・復活なし
+destroyed_city,critical,#511:g-6,g-6,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:25:53 / #511 X:249 Y:649 Lv.2都市 / 攻撃側 #523[WUG] / 防衛側 #511[JLO] / 宝箱×5 / 破壊済み・復活なし
 uncertain,mid,#511:G-9,G-9,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#511:h-10,h-10,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:33:26 / #511 X:449 Y:749 Lv.2都市 / 攻撃側 #523[NBNH] / 防衛側 #511[DaNG] / 宝箱×5 / 破壊済み・復活なし
-destroyed_city,critical,#511:h-12,h-12,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:03:31 / #511 X:549 Y:749 Lv.2都市 / 攻撃側 #476[476X] / 防衛側 #511[DaNG] / 宝箱×5 / 破壊済み・復活なし
+destroyed_city,critical,#511:h-10,h-10,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:33:26 / #511 X:449 Y:749 Lv.2都市 / 攻撃側 #523[NBNH] / 防衛側 #511[DaNG] / 宝箱×5 / 破壊済み・復活なし
+destroyed_city,critical,#511:h-12,h-12,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:03:31 / #511 X:549 Y:749 Lv.2都市 / 攻撃側 #476[476X] / 防衛側 #511[DaNG] / 宝箱×5 / 破壊済み・復活なし
 uncertain,mid,#511:H-13,H-13,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:h-18,h-18,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#511:h-20,h-20,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:38:18 / #511 X:949 Y:749 Lv.1都市 / 攻撃側 #476[476M] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#511:h-20,h-20,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:38:18 / #511 X:949 Y:749 Lv.1都市 / 攻撃側 #476[476M] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
 uncertain,mid,#511:H-21,H-21,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:H-5,H-5,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#511:h-6,h-6,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:29:10 / #511 X:249 Y:749 Lv.2都市 / 攻撃側 #523[fIrE] / 防衛側 #511 / 宝箱×5 / 破壊済み・復活なし
+destroyed_city,critical,#511:h-6,h-6,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:29:10 / #511 X:249 Y:749 Lv.2都市 / 攻撃側 #523[fIrE] / 防衛側 #511 / 宝箱×5 / 破壊済み・復活なし
 uncertain,mid,#511:h-8,h-8,city,JLO,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:i-10,i-10,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:i-12,i-12,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
@@ -1193,7 +1193,7 @@ uncertain,mid,#511:I-13,I-13,fishery,,unknown,neutral_or_unknown,neutral_or_unkn
 uncertain,mid,#511:i-14,i-14,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:i-16,i-16,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:i-18,i-18,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#511:i-20,i-20,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 00:04:30 / #511 X:949 Y:849 Lv.1都市 / 攻撃側 #480[CDF8] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#511:i-20,i-20,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 00:04:30 / #511 X:949 Y:849 Lv.1都市 / 攻撃側 #480[CDF8] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
 enemy_owned,high,#511:I-21,I-21,fishery,476M,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 uncertain,mid,#511:i-4,i-4,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:i-6,i-6,city,JL2,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
@@ -1202,8 +1202,8 @@ uncertain,mid,#511:i-8,i-8,city,JL2,unknown,owned,safe_time_missing,,"owner serv
 uncertain,mid,#511:j-10,j-10,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:j-12,j-12,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:j-14,j-14,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#511:j-16,j-16,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 13:05:47 / #511 X:749 Y:949 Lv.1都市 / 攻撃側 #480[AAOA] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
-destroyed_city,critical,#511:j-18,j-18,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:28:41 / #511 X:849 Y:949 Lv.1都市 / 攻撃側 #480[AAOA] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#511:j-16,j-16,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 13:05:47 / #511 X:749 Y:949 Lv.1都市 / 攻撃側 #480[AAOA] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
+destroyed_city,critical,#511:j-18,j-18,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:28:41 / #511 X:849 Y:949 Lv.1都市 / 攻撃側 #480[AAOA] / 防衛側 #511 / 宝箱×2 / 破壊済み・復活なし
 uncertain,mid,#511:J-21,J-21,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:j-4,j-4,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#511:J-5,J-5,fishery,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
@@ -1465,7 +1465,7 @@ uncertain,mid,#534:e-8,e-8,city,RGWC,unknown,owned,safe_time_missing,,"owner ser
 uncertain,mid,#534:f-2,f-2,city,kOi,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#534:E-5,E-5,fishery,kOi,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 enemy_owned,high,#534:g-8,g-8,city,nO9,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
-destroyed_city,critical,#534:d-14,d-14,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:04:34 / #534 X:649 Y:349 Lv.3都市 / 攻撃側 #476[476B] / 防衛側 #534[JDX] / 宝箱×10 / 破壊済み・復活なし
+destroyed_city,critical,#534:d-14,d-14,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:04:34 / #534 X:649 Y:349 Lv.3都市 / 攻撃側 #476[476B] / 防衛側 #534[JDX] / 宝箱×10 / 破壊済み・復活なし
 enemy_owned,high,#534:B-7,B-7,fishery,476C,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 enemy_owned,high,#534:A-7,A-7,fishery,476C,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 uncertain,mid,#534:i-6,i-6,city,Dao,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
@@ -1485,17 +1485,17 @@ enemy_owned,high,#534:b-12,b-12,city,SHA,enemy,owned,safe_time_missing,,resolved
 uncertain,mid,#534:b-16,b-16,city,MOE,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#534:B-17,B-17,fishery,w6F,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#534:b-8,b-8,city,SHA0,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
-destroyed_city,critical,#534:c-10,c-10,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:11:39 / #534 X:449 Y:249 Lv.2都市 / 攻撃側 #476[476C] / 防衛側 #534[SHA] / 宝箱×5 / 破壊済み・復活なし
+destroyed_city,critical,#534:c-10,c-10,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:11:39 / #534 X:449 Y:249 Lv.2都市 / 攻撃側 #476[476C] / 防衛側 #534[SHA] / 宝箱×5 / 破壊済み・復活なし
 uncertain,mid,#534:c-16,c-16,city,,unknown,neutral_or_unknown,neutral_or_unknown,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#534:C-17,C-17,fishery,MOE,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#534:c-18,c-18,city,sg3,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 enemy_owned,high,#534:c-2,c-2,city,nO9,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 enemy_owned,high,#534:C-21,C-21,fishery,SHA,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
-destroyed_city,critical,#534:c-8,c-8,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:13:53 / #534 X:349 Y:249 Lv.2都市 / 攻撃側 #476[476C] / 防衛側 #534[SHA] / 宝箱×5 / 破壊済み・復活なし
+destroyed_city,critical,#534:c-8,c-8,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/28 12:13:53 / #534 X:349 Y:249 Lv.2都市 / 攻撃側 #476[476C] / 防衛側 #534[SHA] / 宝箱×5 / 破壊済み・復活なし
 uncertain,mid,#534:D-1,D-1,fishery,Skh,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 enemy_owned,high,#534:d-10,d-10,city,SHA,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 enemy_owned,high,#534:D-11,D-11,fishery,476C,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
-destroyed_city,critical,#534:d-12,d-12,city,,unknown,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:02:15 / #534 X:549 Y:349 Lv.3都市 / 攻撃側 #476[476B] / 防衛側 #534[JDX] / 宝箱×10 / 破壊済み・復活なし
+destroyed_city,critical,#534:d-12,d-12,city,,destroyed,destroyed,destroyed,,city is destroyed,open,都市破壊ログ 2026/05/27 20:02:15 / #534 X:549 Y:349 Lv.3都市 / 攻撃側 #476[476B] / 防衛側 #534[JDX] / 宝箱×10 / 破壊済み・復活なし
 enemy_owned,high,#534:D-13,D-13,fishery,476B,enemy,owned,safe_time_missing,,resolved owner server is enemy,open,
 uncertain,mid,#534:D-15,D-15,fishery,Trh,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,
 uncertain,mid,#534:D-17,D-17,fishery,MOE,unknown,owned,safe_time_missing,,"owner server, current alliance, or side judgment needs review",open,

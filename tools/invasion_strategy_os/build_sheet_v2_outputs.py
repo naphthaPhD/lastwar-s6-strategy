@@ -5,7 +5,7 @@ import csv
 import json
 import re
 from collections import Counter
-from datetime import datetime
+from datetime import datetime, time, timedelta
 from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
@@ -162,10 +162,15 @@ TOP_ATTACK_COLUMNS = [
     "attack_reason",
     "priority",
     "recommended_action",
+    "city_destroy_window",
     "confidence",
 ]
 
 TOP_LIMIT = 30
+CITY_DESTROY_WINDOWS = [
+    {"label": "wednesday_server_day", "weekday": 2, "start": "11:00", "end": "10:59"},
+    {"label": "saturday_server_day", "weekday": 5, "start": "11:00", "end": "10:59"},
+]
 
 
 def parse_args() -> argparse.Namespace:
@@ -205,6 +210,48 @@ def load_node_status(path: Path) -> dict[str, Any]:
     if not isinstance(nodes, dict):
         raise ValueError(f"{path} does not contain a nodes object")
     return payload
+
+
+def parse_datetime(value: Any) -> datetime:
+    text = str(value or "").strip()
+    if not text:
+        return datetime.now(JST)
+    try:
+        parsed = datetime.fromisoformat(text)
+    except ValueError:
+        return datetime.now(JST)
+    if parsed.tzinfo is None:
+        return parsed.replace(tzinfo=JST)
+    return parsed.astimezone(JST)
+
+
+def parse_hhmm(value: str) -> time:
+    hour, minute = value.split(":", 1)
+    return time(int(hour), int(minute), tzinfo=JST)
+
+
+def active_city_destroy_window(now_jst: datetime) -> tuple[bool, dict[str, str]]:
+    for window in CITY_DESTROY_WINDOWS:
+        base_date = now_jst.date()
+        days_since = (now_jst.weekday() - int(window["weekday"])) % 7
+        start_date = base_date - timedelta(days=days_since)
+        start_at = datetime.combine(start_date, parse_hhmm(window["start"]))
+        end_at = datetime.combine(start_date, parse_hhmm(window["end"]))
+        if end_at <= start_at:
+            end_at += timedelta(days=1)
+        if start_at <= now_jst <= end_at:
+            return True, {
+                "label": window["label"],
+                "server_day": str(window["label"]).replace("_server_day", ""),
+                "start_at_jst": start_at.isoformat(timespec="minutes"),
+                "end_at_jst": end_at.isoformat(timespec="minutes"),
+            }
+    return False, {
+        "label": "outside_city_destroy_window",
+        "server_day": "none",
+        "start_at_jst": "",
+        "end_at_jst": "",
+    }
 
 
 def normalize_server(value: Any) -> str:
@@ -321,6 +368,11 @@ def build_node_current_rows(
         owner_server, owner_server_source = resolve_owner_server(node, directory)
         raw_status = str(node.get("status", "") or "")
         normalized_status = status_norm(raw_status, current_alliance)
+        side = server_side(owner_server, current_alliance)
+        if normalized_status == "destroyed":
+            owner_server = "none"
+            owner_server_source = "destroyed"
+            side = "destroyed"
         warnings = node.get("warnings", [])
         if not isinstance(warnings, list):
             warnings = []
@@ -336,7 +388,7 @@ def build_node_current_rows(
             "current_alliance": current_alliance,
             "owner_server": owner_server,
             "owner_server_source": owner_server_source,
-            "server_side": server_side(owner_server, current_alliance),
+            "server_side": side,
             "pact_status": node.get("pact_status", "") or "unknown",
             "pact_source": node.get("pact_source", ""),
             "status_raw": raw_status,
@@ -557,17 +609,29 @@ def critical_action(row: dict[str, Any]) -> str:
     return "監視継続"
 
 
+def pact_related(row: dict[str, Any]) -> bool:
+    return str(row.get("pact_status", "") or "") not in {"", "unknown", "attack_allowed"}
+
+
 def enemy_invasion_action(row: dict[str, Any]) -> str:
-    if row["pact_status"] and row["pact_status"] != "unknown":
+    if pact_related(row):
         return "協定影響確認"
-    if row["frontline_group"] != "other":
-        return "防衛ライン確認"
+    if row["frontline_group"] == "frontline_core":
+        return "防衛確認"
+    if row["frontline_group"] == "frontline_adjacent":
+        return "隣接確認"
+    if row.get("to_server_side") == "self":
+        return "防衛優先"
+    if row.get("to_server_side") == "ally":
+        return "味方連携確認"
+    if not row.get("from_node_id") or not row.get("to_node_id"):
+        return "地図確認"
     return "次回攻撃候補として監視"
 
 
-def attack_action(row: dict[str, Any]) -> str:
+def attack_action(row: dict[str, Any], city_destroy_enabled: bool) -> str:
     if row["node_type_norm"] == "city":
-        return "都市破壊候補"
+        return "都市破壊候補" if city_destroy_enabled else "都市破壊候補（時間外）"
     if row["frontline_group"] != "other":
         return "攻撃候補"
     if row["confidence"] in {"low", "unknown", ""}:
@@ -612,6 +676,7 @@ def format_top_critical(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
 def format_top_enemy_invasion(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     formatted: list[dict[str, Any]] = []
     for rank, row in enumerate(rows[:TOP_LIMIT], start=1):
+        action_input = {**row, "from_node_id": row["node_id"], "to_node_id": "", "to_server_side": "ally"}
         formatted.append(
             {
                 "rank": rank,
@@ -626,14 +691,18 @@ def format_top_enemy_invasion(rows: list[dict[str, Any]]) -> list[dict[str, Any]
                 "target_type": row["node_type_norm"],
                 "candidate_reason": row["risk_note"],
                 "priority": priority(row),
-                "recommended_action": enemy_invasion_action(row),
+                "recommended_action": enemy_invasion_action(action_input),
                 "confidence": row["confidence"],
             }
         )
     return formatted
 
 
-def format_top_attack(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def format_top_attack(
+    rows: list[dict[str, Any]],
+    city_destroy_enabled: bool,
+    city_destroy_window: str,
+) -> list[dict[str, Any]]:
     formatted: list[dict[str, Any]] = []
     for rank, row in enumerate(rows[:TOP_LIMIT], start=1):
         formatted.append(
@@ -649,7 +718,8 @@ def format_top_attack(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 "target_type": row["node_type_norm"],
                 "attack_reason": row["risk_note"],
                 "priority": priority(row),
-                "recommended_action": attack_action(row),
+                "recommended_action": attack_action(row, city_destroy_enabled),
+                "city_destroy_window": city_destroy_window if row["node_type_norm"] == "city" else "",
                 "confidence": row["confidence"],
             }
         )
@@ -710,6 +780,8 @@ def build_commander_outputs(
     risk_rows: list[dict[str, Any]],
     decision_outputs: dict[str, list[dict[str, Any]]],
     review_outputs: dict[str, list[dict[str, Any]]],
+    city_destroy_enabled: bool,
+    city_destroy_window: dict[str, str],
 ) -> tuple[list[dict[str, Any]], dict[str, list[dict[str, Any]]]]:
     risk_by_id = {row["node_id"]: row for row in risk_rows}
     level_counts = Counter(row["risk_level"] for row in risk_rows)
@@ -725,6 +797,17 @@ def build_commander_outputs(
     ]
 
     dashboard_rows = [
+        {
+            "metric": "battle_window_status",
+            "value": city_destroy_window["label"],
+            "note": f"{city_destroy_window['start_at_jst']} - {city_destroy_window['end_at_jst']}".strip(" -"),
+        },
+        {"metric": "server_day", "value": city_destroy_window["server_day"], "note": "JST based server day"},
+        {
+            "metric": "city_destroy_enabled",
+            "value": str(city_destroy_enabled).upper(),
+            "note": "city destroy candidates are time-sensitive",
+        },
         {"metric": "critical risk count", "value": level_counts.get("critical", 0), "note": "risk_map_v2"},
         {"metric": "high risk count", "value": level_counts.get("high", 0), "note": "risk_map_v2"},
         {
@@ -775,13 +858,27 @@ def build_commander_outputs(
         for row in merge_decision_rows(node_current_rows, risk_rows)
         if risk_by_id[row["node_id"]]["risk_level"] == "critical"
     ]
+    critical_global_rows = sort_decision_rows(critical_rows)
+    critical_534_rows = [
+        row
+        for row in critical_global_rows
+        if row["area"] == "#534" or row["owner_server"] == SELF_SERVER or row["server_side"] == "self"
+    ]
+    city_destroy_window_label = (
+        f"{city_destroy_window['label']} {city_destroy_window['start_at_jst']} - {city_destroy_window['end_at_jst']}"
+        if city_destroy_enabled
+        else "outside_city_destroy_window"
+    )
     commander_outputs = {
-        "top_critical_risks_v2.csv": format_top_critical(sort_decision_rows(critical_rows)),
+        "top_critical_risks_global_v2.csv": format_top_critical(critical_global_rows),
+        "top_critical_risks_534_v2.csv": format_top_critical(critical_534_rows),
         "top_enemy_invasion_candidates_v2.csv": format_top_enemy_invasion(
             decision_outputs["enemy_invasion_candidates_v2.csv"]
         ),
-        "top_server_534_attack_candidates_v2.csv": format_top_attack(
-            decision_outputs["server_534_attack_candidates_v2.csv"]
+        "top_server_534_attack_targets_v2.csv": format_top_attack(
+            decision_outputs["server_534_attack_candidates_v2.csv"],
+            city_destroy_enabled,
+            city_destroy_window_label,
         ),
     }
     return dashboard_rows, commander_outputs
@@ -820,6 +917,7 @@ def print_summary(
     dashboard_rows: list[dict[str, Any]],
     commander_outputs: dict[str, list[dict[str, Any]]],
     review_outputs: dict[str, list[dict[str, Any]]],
+    city_destroy_enabled: bool,
 ) -> None:
     level_counts = Counter(row["risk_level"] for row in risk_rows)
     print(f"node_current_v2 rows={len(node_current_rows)}")
@@ -855,6 +953,7 @@ def print_summary(
     for confidence, count in sorted(confidences.items()):
         print(f"{confidence}={count}")
     print(f"unknown owner count={len(review_outputs['unknown_owner_review_v2.csv'])}")
+    print(f"city_destroy_enabled={str(city_destroy_enabled).upper()}")
 
 
 def main() -> None:
@@ -870,6 +969,8 @@ def main() -> None:
     read_csv(pacts_path)
 
     updated_at_jst = str(payload.get("generated_at_jst") or datetime.now(JST).isoformat(timespec="seconds"))
+    generated_at_jst = parse_datetime(updated_at_jst)
+    city_destroy_enabled, city_destroy_window = active_city_destroy_window(generated_at_jst)
     node_current_rows = build_node_current_rows(nodes, directory, updated_at_jst)
     alert_rows = build_alert_rows(node_current_rows)
     risk_rows = build_risk_rows(node_current_rows)
@@ -880,6 +981,8 @@ def main() -> None:
         risk_rows,
         decision_outputs,
         review_outputs,
+        city_destroy_enabled,
+        city_destroy_window,
     )
 
     write_csv(output_dir / "node_current_v2.csv", NODE_CURRENT_COLUMNS, node_current_rows)
@@ -889,12 +992,19 @@ def main() -> None:
         write_csv(output_dir / filename, DECISION_COLUMNS, rows)
     write_csv(output_dir / "commander_dashboard_v2.csv", COMMANDER_DASHBOARD_COLUMNS, dashboard_rows)
     commander_columns = {
-        "top_critical_risks_v2.csv": TOP_CRITICAL_COLUMNS,
+        "top_critical_risks_global_v2.csv": TOP_CRITICAL_COLUMNS,
+        "top_critical_risks_534_v2.csv": TOP_CRITICAL_COLUMNS,
         "top_enemy_invasion_candidates_v2.csv": TOP_ENEMY_INVASION_COLUMNS,
-        "top_server_534_attack_candidates_v2.csv": TOP_ATTACK_COLUMNS,
+        "top_server_534_attack_targets_v2.csv": TOP_ATTACK_COLUMNS,
     }
     for filename, rows in commander_outputs.items():
         write_csv(output_dir / filename, commander_columns[filename], rows)
+    write_csv(output_dir / "top_critical_risks_v2.csv", TOP_CRITICAL_COLUMNS, commander_outputs["top_critical_risks_534_v2.csv"])
+    write_csv(
+        output_dir / "top_server_534_attack_candidates_v2.csv",
+        TOP_ATTACK_COLUMNS,
+        commander_outputs["top_server_534_attack_targets_v2.csv"],
+    )
     for filename, rows in review_outputs.items():
         write_csv(output_dir / filename, NODE_CURRENT_COLUMNS, rows)
     print_summary(
@@ -905,6 +1015,7 @@ def main() -> None:
         dashboard_rows,
         commander_outputs,
         review_outputs,
+        city_destroy_enabled,
     )
 
 

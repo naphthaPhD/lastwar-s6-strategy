@@ -500,6 +500,40 @@ high=30
 medium=60
 ```
 
+## 11.5 Commander review practical cleanup
+
+Critical risk is now split:
+
+- `sample_output/sheet_migration/top_critical_risks_global_v2.csv`
+- `sample_output/sheet_migration/top_critical_risks_534_v2.csv`
+
+Destroyed rows are not treated as unknown owners:
+
+```text
+owner_server=none
+server_side=destroyed
+```
+
+The #534 commander review should use `top_critical_risks_534_v2.csv` first. `top_critical_risks_global_v2.csv` remains useful for theater awareness, but it should not drown the #534-specific review.
+
+`top_server_534_attack_targets_v2.csv` is the commander-facing file for #534 attack review. It is an attack-target list, not a route list. Blank `from_node_id` means the launch/source node is not assigned and must be checked on the map.
+
+Battle-window fields are now included:
+
+- `commander_dashboard_v2.csv`: `battle_window_status`, `server_day`, `city_destroy_enabled`
+- `top_server_534_attack_targets_v2.csv`: `city_destroy_window`
+
+Current practical-cleanup output check:
+
+```text
+top_critical_risks_534_v2 rows=4
+top_critical_risks_global_v2 rows=30
+top_enemy_invasion_candidates_v2 rows=30
+top_server_534_attack_targets_v2 rows=30
+unknown_owner_review_v2 rows excluding destroyed=646
+city_destroy_enabled=TRUE
+```
+
 ## 12. Unknowns
 
 - Whether `node_current_v2` should be fully generated or allow manual override columns.

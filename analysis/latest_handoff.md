@@ -1,5 +1,47 @@
 # Handoff summary
 
+## 2026-05-31 Commander review practical cleanup
+
+## Context
+
+Refined commander-facing outputs so R4/R5 starts with #534-relevant risk instead of global destroyed-city noise. Destroyed nodes are no longer shown as `server_side=unknown`; they are separated as destroyed. Google Sheets write-back was not performed.
+
+## Updated files
+
+- `tools/invasion_strategy_os/build_sheet_v2_outputs.py`
+- `sample_output/sheet_migration/top_critical_risks_global_v2.csv`
+- `sample_output/sheet_migration/top_critical_risks_534_v2.csv`
+- `sample_output/sheet_migration/top_server_534_attack_targets_v2.csv`
+- `sample_output/sheet_migration/commander_dashboard_v2.csv`
+- `analysis/commander_review_2026-05-31.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. Critical risk is now split into global and #534-specific files. The review report shows #534 Critical Risk first, then global Critical Risk later.
+2. Destroyed rows use `owner_server=none` and `server_side=destroyed`, so they are not treated as unknown owners.
+3. Enemy invasion `recommended_action` now separates `防衛確認`, `隣接確認`, and other review actions instead of making every row `協定影響確認`.
+4. #534 attack output is now treated as attack targets via `top_server_534_attack_targets_v2.csv`; blank `from_node_id` means launch source is not assigned.
+5. Battle-window summary is included in `commander_dashboard_v2.csv`; current generated snapshot has `city_destroy_enabled=TRUE`.
+
+## Output check
+
+```text
+top_critical_risks_534_v2 rows=4
+top_critical_risks_global_v2 rows=30
+top_enemy_invasion_candidates_v2 rows=30
+top_server_534_attack_targets_v2 rows=30
+unknown_owner_review_v2 rows excluding destroyed=646
+recommended_action: 攻撃候補=11, 破壊済み確認=34, 都市破壊候補=19, 防衛確認=9, 隣接確認=21
+city_destroy_enabled=TRUE
+```
+
+## Recommended next actions
+
+1. Review `top_critical_risks_534_v2.csv` and `analysis/commander_review_2026-05-31.md` before sharing with R4/R5.
+2. Treat `top_server_534_attack_targets_v2.csv` as target selection only; launch/source nodes still require map confirmation.
+3. Improve `unknown_owner_review_v2.csv` next to raise confidence in side judgment.
+
 ## 2026-05-31 Commander CSV review report
 
 ## Context

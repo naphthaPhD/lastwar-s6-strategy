@@ -391,7 +391,7 @@
 #476:G-13,G-13,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #476:g-16,g-16,city,476d,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
 #476:G-19,G-19,fishery,476Z,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
-#476:g-2,g-2,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#476:g-2,g-2,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #476:g-20,g-20,city,ALj,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #476:G-21,G-21,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #476:g-6,g-6,city,476C,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
@@ -420,7 +420,7 @@
 #476:i-16,i-16,city,476d,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
 #476:I-17,I-17,fishery,476H,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #476:i-18,i-18,city,476A,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
-#476:i-2,i-2,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#476:i-2,i-2,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #476:i-20,i-20,city,476d,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
 #476:I-21,I-21,fishery,Kfk,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #476:I-3,I-3,fishery,476K,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
@@ -525,8 +525,8 @@
 #480:g-12,g-12,city,RCON,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
 #480:g-8,g-8,city,RCON,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
 #480:d-8,d-8,city,WbW,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
-#480:d-10,d-10,city,,destroyed,destroyed,,frontline_adjacent,unknown,FALSE,TRUE,30,145,critical,city +30; destroyed_flag +100; frontline_adjacent +15
-#480:d-12,d-12,city,,destroyed,destroyed,,frontline_core,unknown,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
+#480:d-10,d-10,city,,destroyed,destroyed,,frontline_adjacent,destroyed,FALSE,TRUE,30,145,critical,city +30; destroyed_flag +100; frontline_adjacent +15
+#480:d-12,d-12,city,,destroyed,destroyed,,frontline_core,destroyed,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
 #480:I-1,I-1,fishery,MtG,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #480:C-1,C-1,fishery,BgNa,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #480:J-13,J-13,fishery,hOe,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
@@ -562,21 +562,21 @@
 #480:B-3,B-3,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #480:b-4,b-4,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #480:B-5,B-5,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
-#480:b-6,b-6,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
-#480:b-8,b-8,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#480:b-6,b-6,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#480:b-8,b-8,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #480:B-9,B-9,fishery,IMP,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #480:c-10,c-10,city,,neutral_or_unknown,neutral_or_unknown,,frontline_core,unknown,FALSE,FALSE,30,60,high,city +30; frontline_core +30
 #480:c-12,c-12,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #480:C-13,C-13,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
-#480:c-14,c-14,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
-#480:c-16,c-16,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#480:c-14,c-14,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#480:c-16,c-16,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #480:C-19,C-19,fishery,TIKW,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #480:c-2,c-2,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #480:c-20,c-20,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #480:C-21,C-21,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #480:C-3,C-3,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #480:c-4,c-4,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#480:c-6,c-6,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#480:c-6,c-6,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #480:c-8,c-8,city,,neutral_or_unknown,neutral_or_unknown,,frontline_core,unknown,FALSE,FALSE,30,60,high,city +30; frontline_core +30
 #480:C-9,C-9,fishery,TaW,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #480:D-11,D-11,fishery,GcC,owned,safe_time_missing,,frontline_core,unknown,FALSE,FALSE,10,40,mid,fishery +10; frontline_core +30
@@ -971,7 +971,7 @@
 #509:h-8,h-8,city,BHE,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #509:D-19,D-19,fishery,SsQ,owned,safe_time_missing,,frontline_adjacent,ally,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
 #509:E-17,E-17,fishery,SsQ,owned,safe_time_missing,,frontline_adjacent,ally,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
-#509:d-10,d-10,city,,destroyed,destroyed,,frontline_adjacent,unknown,FALSE,TRUE,30,145,critical,city +30; destroyed_flag +100; frontline_adjacent +15
+#509:d-10,d-10,city,,destroyed,destroyed,,frontline_adjacent,destroyed,FALSE,TRUE,30,145,critical,city +30; destroyed_flag +100; frontline_adjacent +15
 #509:g-14,g-14,city,FHX,owned,safe_time_missing,,other,ally,FALSE,FALSE,30,30,mid,city +30
 #509:i-18,i-18,city,OTT,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #509:H-19,H-19,fishery,UMN,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
@@ -985,18 +985,18 @@
 #509:B-9,B-9,fishery,KTVS,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #509:A-15,A-15,fishery,TIKW,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:B-3,B-3,fishery,tWD,owned,safe_time_missing,,other,ally,FALSE,FALSE,10,10,low,fishery +10
-#509:a-10,a-10,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#509:a-10,a-10,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #509:A-11,A-11,fishery,476A,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
-#509:a-12,a-12,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#509:a-12,a-12,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #509:A-13,A-13,fishery,MOn,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
-#509:a-14,a-14,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#509:a-14,a-14,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #509:a-2,a-2,city,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
 #509:A-3,A-3,fishery,VEX,owned,safe_time_missing,,other,ally,FALSE,FALSE,10,10,low,fishery +10
-#509:a-4,a-4,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#509:a-4,a-4,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #509:A-5,A-5,fishery,476Z,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
-#509:a-6,a-6,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#509:a-6,a-6,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #509:A-7,A-7,fishery,476B,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
-#509:a-8,a-8,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#509:a-8,a-8,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #509:A-9,A-9,fishery,476Z,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #509:B-1,B-1,fishery,tWD,owned,safe_time_missing,,other,ally,FALSE,FALSE,10,10,low,fishery +10
 #509:b-12,b-12,city,VEX,owned,safe_time_missing,,other,ally,FALSE,FALSE,30,30,mid,city +30
@@ -1007,14 +1007,14 @@
 #509:B-5,B-5,fishery,eXt,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:b-6,b-6,city,VEX,owned,safe_time_missing,,other,ally,FALSE,FALSE,30,30,mid,city +30
 #509:b-8,b-8,city,VEX,owned,safe_time_missing,,other,ally,FALSE,FALSE,30,30,mid,city +30
-#509:c-10,c-10,city,,destroyed,destroyed,,frontline_core,unknown,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
+#509:c-10,c-10,city,,destroyed,destroyed,,frontline_core,destroyed,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
 #509:c-16,c-16,city,SsQ,owned,safe_time_missing,,other,ally,FALSE,FALSE,30,30,mid,city +30
-#509:c-18,c-18,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#509:c-18,c-18,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #509:c-2,c-2,city,tWD,owned,safe_time_missing,,other,ally,FALSE,FALSE,30,30,mid,city +30
 #509:C-21,C-21,fishery,one,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:c-6,c-6,city,tWD,owned,safe_time_missing,,other,ally,FALSE,FALSE,30,30,mid,city +30
 #509:c-8,c-8,city,VEX,owned,safe_time_missing,,frontline_core,ally,FALSE,FALSE,30,60,high,city +30; frontline_core +30
-#509:d-12,d-12,city,,destroyed,destroyed,,frontline_core,unknown,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
+#509:d-12,d-12,city,,destroyed,destroyed,,frontline_core,destroyed,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
 #509:d-16,d-16,city,SsQ,owned,safe_time_missing,,frontline_adjacent,ally,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #509:d-18,d-18,city,SsQ,owned,safe_time_missing,,frontline_adjacent,ally,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #509:d-2,d-2,city,,neutral_or_unknown,neutral_or_unknown,,frontline_adjacent,unknown,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
@@ -1023,7 +1023,7 @@
 #509:E-1,E-1,fishery,eXt,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
 #509:e-10,e-10,city,,neutral_or_unknown,neutral_or_unknown,,frontline_adjacent,unknown,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #509:e-12,e-12,city,,neutral_or_unknown,neutral_or_unknown,,frontline_adjacent,unknown,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
-#509:e-16,e-16,city,,destroyed,destroyed,,frontline_adjacent,unknown,FALSE,TRUE,30,145,critical,city +30; destroyed_flag +100; frontline_adjacent +15
+#509:e-16,e-16,city,,destroyed,destroyed,,frontline_adjacent,destroyed,FALSE,TRUE,30,145,critical,city +30; destroyed_flag +100; frontline_adjacent +15
 #509:e-18,e-18,city,FHX,owned,safe_time_missing,,frontline_adjacent,ally,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #509:E-19,E-19,fishery,Lghs,owned,safe_time_missing,,frontline_adjacent,enemy,TRUE,FALSE,10,65,high,fishery +10; enemy_flag +40; frontline_adjacent +15
 #509:e-2,e-2,city,tWD,owned,safe_time_missing,,frontline_adjacent,ally,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
@@ -1035,8 +1035,8 @@
 #509:f-10,f-10,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #509:F-11,F-11,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:f-12,f-12,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#509:f-16,f-16,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
-#509:f-18,f-18,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#509:f-16,f-16,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#509:f-18,f-18,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #509:f-2,f-2,city,BHE,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #509:F-21,F-21,fishery,GX99,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #509:f-4,f-4,city,eXt,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
@@ -1047,8 +1047,8 @@
 #509:G-11,G-11,fishery,MOn,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:g-12,g-12,city,FHX,owned,safe_time_missing,,other,ally,FALSE,FALSE,30,30,mid,city +30
 #509:G-13,G-13,fishery,FHX,owned,safe_time_missing,,other,ally,FALSE,FALSE,10,10,low,fishery +10
-#509:g-16,g-16,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
-#509:g-18,g-18,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#509:g-16,g-16,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#509:g-18,g-18,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #509:g-2,g-2,city,eXt,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #509:G-21,G-21,fishery,GX99,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #509:G-3,G-3,fishery,eXt,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
@@ -1061,8 +1061,8 @@
 #509:H-1,H-1,fishery,Dao,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:H-11,H-11,fishery,MOn,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:H-13,H-13,fishery,MOn,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
-#509:h-16,h-16,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
-#509:h-18,h-18,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#509:h-16,h-16,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#509:h-18,h-18,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #509:h-2,h-2,city,KOCH,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #509:H-21,H-21,fishery,xjR,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:H-3,H-3,fishery,KOCH,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
@@ -1072,8 +1072,8 @@
 #509:I-1,I-1,fishery,noI,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:i-10,i-10,city,AoW,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #509:i-12,i-12,city,AoW,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#509:i-14,i-14,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
-#509:i-16,i-16,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#509:i-14,i-14,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#509:i-16,i-16,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #509:I-19,I-19,fishery,UMN,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #509:i-2,i-2,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #509:I-21,I-21,fishery,Stj,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
@@ -1181,19 +1181,19 @@
 #511:G-19,G-19,fishery,sbM,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #511:F-19,F-19,fishery,SVa,owned,safe_time_missing,,other,ally,FALSE,FALSE,10,10,low,fishery +10
 #511:d-16,d-16,city,sbM,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
-#511:e-14,e-14,city,,destroyed,destroyed,,frontline_adjacent,unknown,FALSE,TRUE,30,145,critical,city +30; destroyed_flag +100; frontline_adjacent +15
-#511:d-14,d-14,city,,destroyed,destroyed,,frontline_core,unknown,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
+#511:e-14,e-14,city,,destroyed,destroyed,,frontline_adjacent,destroyed,FALSE,TRUE,30,145,critical,city +30; destroyed_flag +100; frontline_adjacent +15
+#511:d-14,d-14,city,,destroyed,destroyed,,frontline_core,destroyed,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
 #511:H-9,H-9,fishery,JLO,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #511:I-9,I-9,fishery,NBNH,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
-#511:g-10,g-10,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
-#511:j-20,j-20,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
-#511:h-14,h-14,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:g-10,g-10,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:j-20,j-20,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:h-14,h-14,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #511:j-6,j-6,city,JL2,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #511:h-4,h-4,city,JL2,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #511:E-19,E-19,fishery,DaNG,owned,safe_time_missing,,frontline_adjacent,ally,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
 #511:D-19,D-19,fishery,sbM,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
 #511:E-3,E-3,fishery,2N7,owned,safe_time_missing,,frontline_adjacent,ally,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
-#511:e-8,e-8,city,,destroyed,destroyed,,frontline_adjacent,unknown,FALSE,TRUE,30,145,critical,city +30; destroyed_flag +100; frontline_adjacent +15
+#511:e-8,e-8,city,,destroyed,destroyed,,frontline_adjacent,destroyed,FALSE,TRUE,30,145,critical,city +30; destroyed_flag +100; frontline_adjacent +15
 #511:g-8,g-8,city,JLO,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #511:H-19,H-19,fishery,BgNa,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #511:G-3,G-3,fishery,EDFS,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
@@ -1233,9 +1233,9 @@
 #511:b-18,b-18,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #511:B-19,B-19,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #511:b-20,b-20,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#511:b-4,b-4,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
-#511:b-6,b-6,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
-#511:b-8,b-8,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:b-4,b-4,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:b-6,b-6,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:b-8,b-8,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #511:B-9,B-9,fishery,2N7,owned,safe_time_missing,,other,ally,FALSE,FALSE,10,10,low,fishery +10
 #511:C-1,C-1,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #511:c-14,c-14,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
@@ -1246,7 +1246,7 @@
 #511:C-19,C-19,fishery,TrX,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #511:c-20,c-20,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #511:C-21,C-21,fishery,TrX,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
-#511:c-4,c-4,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:c-4,c-4,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #511:c-6,c-6,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #511:c-8,c-8,city,JLO,owned,safe_time_missing,,frontline_core,unknown,FALSE,FALSE,30,60,high,city +30; frontline_core +30
 #511:D-1,D-1,fishery,,neutral_or_unknown,neutral_or_unknown,,frontline_adjacent,unknown,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
@@ -1267,7 +1267,7 @@
 #511:e-18,e-18,city,SVa,owned,safe_time_missing,,frontline_adjacent,ally,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #511:e-20,e-20,city,DaNG,owned,safe_time_missing,,frontline_adjacent,ally,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #511:E-21,E-21,fishery,TRh,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
-#511:e-4,e-4,city,,destroyed,destroyed,,frontline_adjacent,unknown,FALSE,TRUE,30,145,critical,city +30; destroyed_flag +100; frontline_adjacent +15
+#511:e-4,e-4,city,,destroyed,destroyed,,frontline_adjacent,destroyed,FALSE,TRUE,30,145,critical,city +30; destroyed_flag +100; frontline_adjacent +15
 #511:e-6,e-6,city,,neutral_or_unknown,neutral_or_unknown,,frontline_adjacent,unknown,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
 #511:E-9,E-9,fishery,,neutral_or_unknown,neutral_or_unknown,,frontline_adjacent,unknown,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
 #511:F-1,F-1,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
@@ -1285,20 +1285,20 @@
 #511:G-11,G-11,fishery,BgNa,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #511:G-13,G-13,fishery,BgNa,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #511:g-16,g-16,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#511:g-18,g-18,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:g-18,g-18,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #511:g-20,g-20,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #511:G-21,G-21,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #511:g-4,g-4,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#511:g-6,g-6,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:g-6,g-6,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #511:G-9,G-9,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
-#511:h-10,h-10,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
-#511:h-12,h-12,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:h-10,h-10,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:h-12,h-12,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #511:H-13,H-13,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #511:h-18,h-18,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#511:h-20,h-20,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:h-20,h-20,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #511:H-21,H-21,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #511:H-5,H-5,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
-#511:h-6,h-6,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:h-6,h-6,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #511:h-8,h-8,city,JLO,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #511:i-10,i-10,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #511:i-12,i-12,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
@@ -1306,7 +1306,7 @@
 #511:i-14,i-14,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #511:i-16,i-16,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #511:i-18,i-18,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#511:i-20,i-20,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:i-20,i-20,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #511:I-21,I-21,fishery,476M,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #511:i-4,i-4,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #511:i-6,i-6,city,JL2,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
@@ -1315,8 +1315,8 @@
 #511:j-10,j-10,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #511:j-12,j-12,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #511:j-14,j-14,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#511:j-16,j-16,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
-#511:j-18,j-18,city,,destroyed,destroyed,,other,unknown,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:j-16,j-16,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
+#511:j-18,j-18,city,,destroyed,destroyed,,other,destroyed,FALSE,TRUE,30,130,critical,city +30; destroyed_flag +100
 #511:J-21,J-21,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
 #511:j-4,j-4,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #511:J-5,J-5,fishery,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
@@ -1600,7 +1600,7 @@
 #534:G-9,G-9,fishery,4tH,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #534:g-8,g-8,city,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
 #534:g-6,g-6,city,4tH,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
-#534:d-14,d-14,city,,destroyed,destroyed,,frontline_core,unknown,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
+#534:d-14,d-14,city,,destroyed,destroyed,,frontline_core,destroyed,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
 #534:B-5,B-5,fishery,4tH,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #534:B-7,B-7,fishery,476C,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
 #534:A-7,A-7,fishery,476C,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
@@ -1634,7 +1634,7 @@
 #534:b-4,b-4,city,4tH,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #534:b-6,b-6,city,4tH,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #534:b-8,b-8,city,SHA0,owned,safe_time_missing,,other,unknown,FALSE,FALSE,30,30,mid,city +30
-#534:c-10,c-10,city,,destroyed,destroyed,,frontline_core,unknown,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
+#534:c-10,c-10,city,,destroyed,destroyed,,frontline_core,destroyed,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
 #534:C-13,C-13,fishery,JDX,owned,safe_time_missing,,other,self,FALSE,FALSE,10,10,low,fishery +10
 #534:c-16,c-16,city,,neutral_or_unknown,neutral_or_unknown,,other,unknown,FALSE,FALSE,30,30,mid,city +30
 #534:C-17,C-17,fishery,MOE,owned,safe_time_missing,,other,unknown,FALSE,FALSE,10,10,low,fishery +10
@@ -1643,11 +1643,11 @@
 #534:c-2,c-2,city,nO9,owned,safe_time_missing,,other,enemy,TRUE,FALSE,30,70,high,city +30; enemy_flag +40
 #534:c-20,c-20,city,KTVS,owned,safe_time_missing,,other,self,FALSE,FALSE,30,30,mid,city +30
 #534:C-21,C-21,fishery,SHA,owned,safe_time_missing,,other,enemy,TRUE,FALSE,10,50,mid,fishery +10; enemy_flag +40
-#534:c-8,c-8,city,,destroyed,destroyed,,frontline_core,unknown,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
+#534:c-8,c-8,city,,destroyed,destroyed,,frontline_core,destroyed,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
 #534:D-1,D-1,fishery,Skh,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
 #534:d-10,d-10,city,SHA,owned,safe_time_missing,,frontline_adjacent,enemy,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15
 #534:D-11,D-11,fishery,476C,owned,safe_time_missing,,frontline_core,enemy,TRUE,FALSE,10,80,high,fishery +10; enemy_flag +40; frontline_core +30
-#534:d-12,d-12,city,,destroyed,destroyed,,frontline_core,unknown,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
+#534:d-12,d-12,city,,destroyed,destroyed,,frontline_core,destroyed,FALSE,TRUE,30,160,critical,city +30; destroyed_flag +100; frontline_core +30
 #534:D-13,D-13,fishery,476B,owned,safe_time_missing,,frontline_core,enemy,TRUE,FALSE,10,80,high,fishery +10; enemy_flag +40; frontline_core +30
 #534:D-15,D-15,fishery,Trh,owned,safe_time_missing,,frontline_adjacent,unknown,FALSE,FALSE,10,25,low,fishery +10; frontline_adjacent +15
 #534:d-16,d-16,city,KTVS,owned,safe_time_missing,,frontline_adjacent,self,FALSE,FALSE,30,45,mid,city +30; frontline_adjacent +15
