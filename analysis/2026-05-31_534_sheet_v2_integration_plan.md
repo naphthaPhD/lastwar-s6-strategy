@@ -534,6 +534,28 @@ unknown_owner_review_v2 rows excluding destroyed=646
 city_destroy_enabled=TRUE
 ```
 
+## 11.6 Concrete attack and defense edges
+
+Added graph-adjacent edge outputs based on `sample_output/state.json` connections and `node_current_v2.csv` side classification:
+
+- `sample_output/sheet_migration/top_enemy_invasion_edges_v2.csv`
+- `sample_output/sheet_migration/top_server_534_attack_edges_v2.csv`
+
+`top_enemy_invasion_edges_v2.csv` answers which self/ally node is adjacent to an enemy invasion candidate. `top_server_534_attack_edges_v2.csv` answers which self/ally node is adjacent to a #534 attack target. These are still review candidates, not attack orders.
+
+Current edge output check:
+
+```text
+enemy_invasion_edges rows=39
+server_534_attack_edges rows=39
+enemy_invasion_edges with friendly_to_node blank=21
+server_534_attack_edges with friendly_from_node blank=21
+self-source attack edges count=7
+ally-source attack edges count=11
+```
+
+Rows with blank friendly/source nodes are intentionally kept with `edge_type=edge_unknown` and `recommended_action=地図確認`.
+
 ## 12. Unknowns
 
 - Whether `node_current_v2` should be fully generated or allow manual override columns.

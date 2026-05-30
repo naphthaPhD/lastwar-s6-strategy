@@ -1,5 +1,32 @@
 # Handoff summary
 
+## 2026-05-31 Concrete attack and defense edges
+
+## Context
+
+Added concrete adjacent-edge CSVs using `sample_output/state.json` connections plus `node_current_v2.csv` side classification. These are map-confirmation candidate lists, not orders. Google Sheets write-back was not performed.
+
+## Updated files
+
+- `tools/invasion_strategy_os/build_sheet_v2_outputs.py`
+- `sample_output/sheet_migration/top_enemy_invasion_edges_v2.csv`
+- `sample_output/sheet_migration/top_server_534_attack_edges_v2.csv`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. `top_enemy_invasion_edges_v2.csv` maps enemy candidate nodes to adjacent self/ally defense nodes where the state graph has a connection.
+2. `top_server_534_attack_edges_v2.csv` maps #534 attack targets to adjacent self/ally source nodes, preferring self sources over ally sources.
+3. If no adjacent self/ally source is found in `state.json`, the row is emitted with blank source/target fields and `recommended_action=地図確認`.
+4. Current output check: `enemy_invasion_edges rows=39`, `server_534_attack_edges rows=39`, enemy defense blanks `21`, attack source blanks `21`, self-source attack edges `7`, ally-source attack edges `11`.
+5. Current generated snapshot has `city_destroy_enabled=TRUE`, so city target rows remain `都市破壊候補`.
+
+## Recommended next actions
+
+1. Review `edge_unknown` rows on the map before using them in commander discussion.
+2. For attack edges, prioritize `self_to_enemy_adjacent` rows before `ally_to_enemy_adjacent` rows.
+3. If too many #476 rows remain `edge_unknown`, inspect whether cross-area adjacency is missing from `state.json` or excluded by current map rules.
+
 ## 2026-05-31 Commander review practical cleanup
 
 ## Context

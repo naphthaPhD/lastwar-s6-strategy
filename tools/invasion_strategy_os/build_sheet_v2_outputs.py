@@ -12,6 +12,7 @@ from zoneinfo import ZoneInfo
 
 
 DEFAULT_NODE_STATUS = "sample_output/sheet_migration/node_status.json"
+DEFAULT_STATE_JSON = "sample_output/state.json"
 DEFAULT_ALLIANCE_DIRECTORY = "sample_output/sheet_migration/alliance_directory.csv"
 DEFAULT_PACTS = "sample_output/sheet_migration/pacts.csv"
 DEFAULT_OUTPUT_DIR = "sample_output/sheet_migration"
@@ -166,6 +167,36 @@ TOP_ATTACK_COLUMNS = [
     "confidence",
 ]
 
+ENEMY_INVASION_EDGE_COLUMNS = [
+    "enemy_from_node",
+    "enemy_from_coord",
+    "enemy_from_alliance",
+    "enemy_from_server",
+    "friendly_to_node",
+    "friendly_to_coord",
+    "friendly_to_alliance",
+    "friendly_to_server",
+    "edge_type",
+    "risk_reason",
+    "recommended_action",
+    "confidence",
+]
+
+ATTACK_EDGE_COLUMNS = [
+    "friendly_from_node",
+    "friendly_from_coord",
+    "friendly_from_alliance",
+    "friendly_from_server",
+    "enemy_to_node",
+    "enemy_to_coord",
+    "enemy_to_alliance",
+    "enemy_to_server",
+    "edge_type",
+    "attack_reason",
+    "recommended_action",
+    "confidence",
+]
+
 TOP_LIMIT = 30
 CITY_DESTROY_WINDOWS = [
     {"label": "wednesday_server_day", "weekday": 2, "start": "11:00", "end": "10:59"},
@@ -178,6 +209,7 @@ def parse_args() -> argparse.Namespace:
         description="Generate #534 Sheet V2 CSVs from node_status.json."
     )
     parser.add_argument("--node-status", default=DEFAULT_NODE_STATUS, help="Input node_status.json.")
+    parser.add_argument("--state-json", default=DEFAULT_STATE_JSON, help="Input state.json for graph adjacency.")
     parser.add_argument(
         "--alliance-directory",
         default=DEFAULT_ALLIANCE_DIRECTORY,
@@ -210,6 +242,27 @@ def load_node_status(path: Path) -> dict[str, Any]:
     if not isinstance(nodes, dict):
         raise ValueError(f"{path} does not contain a nodes object")
     return payload
+
+
+def load_state(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {}
+    with path.open("r", encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def build_adjacency(state: dict[str, Any]) -> dict[str, set[str]]:
+    adjacency: dict[str, set[str]] = {}
+    for edge in state.get("connections", []) or []:
+        if not isinstance(edge, dict):
+            continue
+        source = str(edge.get("source", "") or "")
+        target = str(edge.get("target", "") or "")
+        if not source or not target:
+            continue
+        adjacency.setdefault(source, set()).add(target)
+        adjacency.setdefault(target, set()).add(source)
+    return adjacency
 
 
 def parse_datetime(value: Any) -> datetime:
@@ -726,6 +779,139 @@ def format_top_attack(
     return formatted
 
 
+def edge_action_for_invasion(enemy_row: dict[str, Any], friendly_row: dict[str, Any] | None) -> str:
+    if friendly_row is None:
+        return "地図確認"
+    group = frontline_group(str(enemy_row.get("from_coord", "") or ""))
+    if group == "frontline_core":
+        return "防衛確認"
+    if group == "frontline_adjacent":
+        return "隣接確認"
+    if friendly_row.get("server_side") == "self":
+        return "#534防衛優先"
+    if friendly_row.get("server_side") == "ally":
+        return "味方連携確認"
+    return "監視継続"
+
+
+def build_enemy_invasion_edges(
+    top_enemy_rows: list[dict[str, Any]],
+    node_current_by_id: dict[str, dict[str, Any]],
+    adjacency: dict[str, set[str]],
+) -> list[dict[str, Any]]:
+    output: list[dict[str, Any]] = []
+    for enemy_row in top_enemy_rows:
+        enemy_node_id = enemy_row.get("from_node_id", "")
+        neighbors = [
+            node_current_by_id[node_id]
+            for node_id in sorted(adjacency.get(enemy_node_id, set()))
+            if node_id in node_current_by_id and node_current_by_id[node_id].get("server_side") in {"self", "ally"}
+        ]
+        if not neighbors:
+            output.append(
+                {
+                    "enemy_from_node": enemy_node_id,
+                    "enemy_from_coord": enemy_row.get("from_coord", ""),
+                    "enemy_from_alliance": enemy_row.get("from_alliance", ""),
+                    "enemy_from_server": enemy_row.get("from_server", ""),
+                    "friendly_to_node": "",
+                    "friendly_to_coord": "",
+                    "friendly_to_alliance": "",
+                    "friendly_to_server": "",
+                    "edge_type": "edge_unknown",
+                    "risk_reason": enemy_row.get("candidate_reason", ""),
+                    "recommended_action": "地図確認",
+                    "confidence": enemy_row.get("confidence", ""),
+                }
+            )
+            continue
+        for friendly in sorted(neighbors, key=lambda row: (0 if row["server_side"] == "self" else 1, row["node_id"])):
+            output.append(
+                {
+                    "enemy_from_node": enemy_node_id,
+                    "enemy_from_coord": enemy_row.get("from_coord", ""),
+                    "enemy_from_alliance": enemy_row.get("from_alliance", ""),
+                    "enemy_from_server": enemy_row.get("from_server", ""),
+                    "friendly_to_node": friendly.get("node_id", ""),
+                    "friendly_to_coord": friendly.get("coord", ""),
+                    "friendly_to_alliance": friendly.get("current_alliance", ""),
+                    "friendly_to_server": friendly.get("owner_server", ""),
+                    "edge_type": f"enemy_to_{friendly.get('server_side', 'unknown')}_adjacent",
+                    "risk_reason": enemy_row.get("candidate_reason", ""),
+                    "recommended_action": edge_action_for_invasion(enemy_row, friendly),
+                    "confidence": enemy_row.get("confidence", ""),
+                }
+            )
+    return output
+
+
+def attack_edge_action(target_row: dict[str, Any], source_row: dict[str, Any] | None, city_destroy_enabled: bool) -> str:
+    if source_row is None:
+        return "地図確認"
+    if target_row.get("target_type") == "city":
+        return "都市破壊候補" if city_destroy_enabled else "都市破壊候補（時間外）"
+    if source_row.get("server_side") == "self":
+        return "攻撃候補"
+    if source_row.get("server_side") == "ally":
+        return "味方連携確認"
+    return "監視継続"
+
+
+def build_attack_edges(
+    top_attack_rows: list[dict[str, Any]],
+    node_current_by_id: dict[str, dict[str, Any]],
+    adjacency: dict[str, set[str]],
+    city_destroy_enabled: bool,
+) -> list[dict[str, Any]]:
+    output: list[dict[str, Any]] = []
+    for target_row in top_attack_rows:
+        target_node_id = target_row.get("to_node_id", "")
+        adjacent_sources = [
+            node_current_by_id[node_id]
+            for node_id in sorted(adjacency.get(target_node_id, set()))
+            if node_id in node_current_by_id and node_current_by_id[node_id].get("server_side") in {"self", "ally"}
+        ]
+        self_sources = [row for row in adjacent_sources if row["server_side"] == "self"]
+        ally_sources = [row for row in adjacent_sources if row["server_side"] == "ally"]
+        selected_sources = self_sources or ally_sources
+        if not selected_sources:
+            output.append(
+                {
+                    "friendly_from_node": "",
+                    "friendly_from_coord": "",
+                    "friendly_from_alliance": "",
+                    "friendly_from_server": "",
+                    "enemy_to_node": target_node_id,
+                    "enemy_to_coord": target_row.get("to_coord", ""),
+                    "enemy_to_alliance": target_row.get("to_alliance", ""),
+                    "enemy_to_server": target_row.get("to_server", ""),
+                    "edge_type": "edge_unknown",
+                    "attack_reason": target_row.get("attack_reason", ""),
+                    "recommended_action": "地図確認",
+                    "confidence": target_row.get("confidence", ""),
+                }
+            )
+            continue
+        for source in sorted(selected_sources, key=lambda row: (0 if row["server_side"] == "self" else 1, row["node_id"])):
+            output.append(
+                {
+                    "friendly_from_node": source.get("node_id", ""),
+                    "friendly_from_coord": source.get("coord", ""),
+                    "friendly_from_alliance": source.get("current_alliance", ""),
+                    "friendly_from_server": source.get("owner_server", ""),
+                    "enemy_to_node": target_node_id,
+                    "enemy_to_coord": target_row.get("to_coord", ""),
+                    "enemy_to_alliance": target_row.get("to_alliance", ""),
+                    "enemy_to_server": target_row.get("to_server", ""),
+                    "edge_type": f"{source.get('server_side', 'unknown')}_to_enemy_adjacent",
+                    "attack_reason": target_row.get("attack_reason", ""),
+                    "recommended_action": attack_edge_action(target_row, source, city_destroy_enabled),
+                    "confidence": target_row.get("confidence", ""),
+                }
+            )
+    return output
+
+
 def build_decision_outputs(
     node_current_rows: list[dict[str, Any]],
     risk_rows: list[dict[str, Any]],
@@ -918,6 +1104,8 @@ def print_summary(
     commander_outputs: dict[str, list[dict[str, Any]]],
     review_outputs: dict[str, list[dict[str, Any]]],
     city_destroy_enabled: bool,
+    enemy_invasion_edges: list[dict[str, Any]],
+    attack_edges: list[dict[str, Any]],
 ) -> None:
     level_counts = Counter(row["risk_level"] for row in risk_rows)
     print(f"node_current_v2 rows={len(node_current_rows)}")
@@ -954,16 +1142,36 @@ def print_summary(
         print(f"{confidence}={count}")
     print(f"unknown owner count={len(review_outputs['unknown_owner_review_v2.csv'])}")
     print(f"city_destroy_enabled={str(city_destroy_enabled).upper()}")
+    print(f"enemy_invasion_edges rows={len(enemy_invasion_edges)}")
+    print(f"server_534_attack_edges rows={len(attack_edges)}")
+    print(
+        "enemy_invasion_edges with friendly_to_node blank="
+        f"{sum(1 for row in enemy_invasion_edges if not row.get('friendly_to_node'))}"
+    )
+    print(
+        "server_534_attack_edges with friendly_from_node blank="
+        f"{sum(1 for row in attack_edges if not row.get('friendly_from_node'))}"
+    )
+    print(
+        "self-source attack edges count="
+        f"{sum(1 for row in attack_edges if str(row.get('edge_type', '')).startswith('self_'))}"
+    )
+    print(
+        "ally-source attack edges count="
+        f"{sum(1 for row in attack_edges if str(row.get('edge_type', '')).startswith('ally_'))}"
+    )
 
 
 def main() -> None:
     args = parse_args()
     node_status_path = Path(args.node_status)
+    state_json_path = Path(args.state_json)
     alliance_directory_path = Path(args.alliance_directory)
     pacts_path = Path(args.pacts)
     output_dir = Path(args.output_dir)
 
     payload = load_node_status(node_status_path)
+    state = load_state(state_json_path)
     nodes = payload["nodes"]
     directory = read_alliance_directory(alliance_directory_path)
     read_csv(pacts_path)
@@ -972,6 +1180,8 @@ def main() -> None:
     generated_at_jst = parse_datetime(updated_at_jst)
     city_destroy_enabled, city_destroy_window = active_city_destroy_window(generated_at_jst)
     node_current_rows = build_node_current_rows(nodes, directory, updated_at_jst)
+    node_current_by_id = {row["node_id"]: row for row in node_current_rows}
+    adjacency = build_adjacency(state)
     alert_rows = build_alert_rows(node_current_rows)
     risk_rows = build_risk_rows(node_current_rows)
     decision_outputs = build_decision_outputs(node_current_rows, risk_rows)
@@ -1007,6 +1217,19 @@ def main() -> None:
     )
     for filename, rows in review_outputs.items():
         write_csv(output_dir / filename, NODE_CURRENT_COLUMNS, rows)
+    enemy_invasion_edges = build_enemy_invasion_edges(
+        commander_outputs["top_enemy_invasion_candidates_v2.csv"],
+        node_current_by_id,
+        adjacency,
+    )
+    attack_edges = build_attack_edges(
+        commander_outputs["top_server_534_attack_targets_v2.csv"],
+        node_current_by_id,
+        adjacency,
+        city_destroy_enabled,
+    )
+    write_csv(output_dir / "top_enemy_invasion_edges_v2.csv", ENEMY_INVASION_EDGE_COLUMNS, enemy_invasion_edges)
+    write_csv(output_dir / "top_server_534_attack_edges_v2.csv", ATTACK_EDGE_COLUMNS, attack_edges)
     print_summary(
         node_current_rows,
         alert_rows,
@@ -1016,6 +1239,8 @@ def main() -> None:
         commander_outputs,
         review_outputs,
         city_destroy_enabled,
+        enemy_invasion_edges,
+        attack_edges,
     )
 
 
