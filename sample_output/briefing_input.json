@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T01:39:18.717710+09:00",
+  "generated_at": "2026-05-30T14:53:06.636837+09:00",
   "engine": "strategic_rule_engine_v2",
   "scenario": {
     "friendly_affiliations": [
@@ -25,6 +25,7 @@
       "node_id": "#480:E-7",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -41,6 +42,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:E-7",
+        "area": "#480",
+        "name": "E-7",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
+        }
       }
     },
     {
@@ -48,6 +68,7 @@
       "node_id": "#480:F-7",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -64,6 +85,25 @@
         "invasion": 100.0,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:F-7",
+        "area": "#480",
+        "name": "F-7",
+        "type": "漁場",
+        "owner": "GoDs",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "GoDs",
+          "alliance_name": "Gods of Sparta",
+          "power": 22679918576,
+          "side": "Ally",
+          "overall_rank": 24,
+          "server_rank": 3,
+          "power_label": "22.68B"
+        }
       }
     },
     {
@@ -71,6 +111,7 @@
       "node_id": "中央:中央-13-19",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -87,6 +128,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-13-19",
+        "area": "中央",
+        "name": "中央-13-19",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
+        }
       }
     },
     {
@@ -94,6 +154,7 @@
       "node_id": "中央:中央-7-19",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -110,6 +171,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-7-19",
+        "area": "中央",
+        "name": "中央-7-19",
+        "type": "漁場",
+        "owner": "SsQ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "SsQ",
+          "alliance_name": "Gummibärenbande V",
+          "power": 25186952492,
+          "side": "Ally",
+          "overall_rank": 14,
+          "server_rank": 3,
+          "power_label": "25.19B"
+        }
       }
     },
     {
@@ -117,6 +197,7 @@
       "node_id": "#511:K-1",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -133,6 +214,25 @@
         "invasion": 97,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#511:K-1",
+        "area": "#511",
+        "name": "K-1",
+        "type": "漁場",
+        "owner": "JL2",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#511",
+          "alliance": "JL2",
+          "alliance_name": "jackalope app 2",
+          "power": 4648607164,
+          "side": "Ally",
+          "overall_rank": 74,
+          "server_rank": 5,
+          "power_label": "4.65B"
+        }
       }
     },
     {
@@ -140,6 +240,7 @@
       "node_id": "中央:中央-1-5",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -156,6 +257,25 @@
         "invasion": 97,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-1-5",
+        "area": "中央",
+        "name": "中央-1-5",
+        "type": "漁場",
+        "owner": "VEX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
+          "side": "Ally",
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
+        }
       }
     },
     {
@@ -163,6 +283,7 @@
       "node_id": "中央:中央-14-20",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -179,6 +300,25 @@
         "invasion": 97,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-14-20",
+        "area": "中央",
+        "name": "中央-14-20",
+        "type": "漁場",
+        "owner": "SsQ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "SsQ",
+          "alliance_name": "Gummibärenbande V",
+          "power": 25186952492,
+          "side": "Ally",
+          "overall_rank": 14,
+          "server_rank": 3,
+          "power_label": "25.19B"
+        }
       }
     },
     {
@@ -186,6 +326,7 @@
       "node_id": "中央:中央-2-8",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -200,8 +341,27 @@
         "choke": 23.0,
         "isolation": 0.0,
         "invasion": 97,
-        "protection": 8.0,
+        "protection": 15.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-2-8",
+        "area": "中央",
+        "name": "中央-2-8",
+        "type": "漁場",
+        "owner": "VEX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
+          "side": "Ally",
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
+        }
       }
     },
     {
@@ -209,6 +369,7 @@
       "node_id": "中央:中央-9-19",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -225,6 +386,25 @@
         "invasion": 97,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-9-19",
+        "area": "中央",
+        "name": "中央-9-19",
+        "type": "漁場",
+        "owner": "TaW",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "TaW",
+          "alliance_name": "Tactical Warzone",
+          "power": 17140808037,
+          "side": "Ally",
+          "overall_rank": 42,
+          "server_rank": 4,
+          "power_label": "17.14B"
+        }
       }
     },
     {
@@ -232,6 +412,7 @@
       "node_id": "#480:E-15",
       "score": 93.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -246,8 +427,27 @@
         "choke": 6.48,
         "isolation": 0.0,
         "invasion": 93,
-        "protection": 8.0,
+        "protection": 15.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:E-15",
+        "area": "#480",
+        "name": "E-15",
+        "type": "漁場",
+        "owner": "SsQ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "SsQ",
+          "alliance_name": "Gummibärenbande V",
+          "power": 25186952492,
+          "side": "Ally",
+          "overall_rank": 14,
+          "server_rank": 3,
+          "power_label": "25.19B"
+        }
       }
     }
   ],
@@ -257,6 +457,7 @@
       "node_id": "中央:中央-20-1",
       "score": 48.1928,
       "classification": "attack",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -273,6 +474,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-20-1",
+        "area": "中央",
+        "name": "中央-20-1",
+        "type": "漁場",
+        "owner": "476X",
+        "affiliation": "enemy",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#476",
+          "alliance": "476X",
+          "alliance_name": "476 CHI",
+          "power": 27928167625,
+          "side": "Enemy",
+          "overall_rank": 6,
+          "server_rank": 3,
+          "power_label": "27.93B"
+        }
       }
     },
     {
@@ -280,6 +500,7 @@
       "node_id": "中央:中央-17-18",
       "score": 48.02,
       "classification": "attack",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -296,6 +517,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-17-18",
+        "area": "中央",
+        "name": "中央-17-18",
+        "type": "漁場",
+        "owner": "BgNa",
+        "affiliation": "enemy",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#480",
+          "alliance": "BgNa",
+          "alliance_name": "We have the meats",
+          "power": 27591259047,
+          "side": "Enemy",
+          "overall_rank": 7,
+          "server_rank": 1,
+          "power_label": "27.59B"
+        }
       }
     },
     {
@@ -303,6 +543,7 @@
       "node_id": "中央:中央-18-4",
       "score": 48.02,
       "classification": "attack",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -319,6 +560,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-18-4",
+        "area": "中央",
+        "name": "中央-18-4",
+        "type": "漁場",
+        "owner": "476X",
+        "affiliation": "enemy",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#476",
+          "alliance": "476X",
+          "alliance_name": "476 CHI",
+          "power": 27928167625,
+          "side": "Enemy",
+          "overall_rank": 6,
+          "server_rank": 3,
+          "power_label": "27.93B"
+        }
       }
     },
     {
@@ -326,6 +586,7 @@
       "node_id": "中央:中央-1-4",
       "score": 47.38,
       "classification": "attack",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -342,6 +603,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-1-4",
+        "area": "中央",
+        "name": "中央-1-4",
+        "type": "漁場",
+        "owner": "476C",
+        "affiliation": "enemy",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#476",
+          "alliance": "476C",
+          "alliance_name": "476 Gamma",
+          "power": 28120774784,
+          "side": "Enemy",
+          "overall_rank": 5,
+          "server_rank": 2,
+          "power_label": "28.12B"
+        }
       }
     },
     {
@@ -349,6 +629,7 @@
       "node_id": "中央:中央-17-3",
       "score": 47.38,
       "classification": "attack",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -365,6 +646,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-17-3",
+        "area": "中央",
+        "name": "中央-17-3",
+        "type": "漁場",
+        "owner": "476X",
+        "affiliation": "enemy",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#476",
+          "alliance": "476X",
+          "alliance_name": "476 CHI",
+          "power": 27928167625,
+          "side": "Enemy",
+          "overall_rank": 6,
+          "server_rank": 3,
+          "power_label": "27.93B"
+        }
       }
     },
     {
@@ -372,6 +672,7 @@
       "node_id": "中央:中央-2-4",
       "score": 47.38,
       "classification": "attack",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -388,6 +689,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-2-4",
+        "area": "中央",
+        "name": "中央-2-4",
+        "type": "漁場",
+        "owner": "476B",
+        "affiliation": "enemy",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#476",
+          "alliance": "476B",
+          "alliance_name": "476 Beta",
+          "power": 27547634141,
+          "side": "Enemy",
+          "overall_rank": 8,
+          "server_rank": 4,
+          "power_label": "27.55B"
+        }
       }
     },
     {
@@ -395,6 +715,7 @@
       "node_id": "中央:中央-2-2",
       "score": 46.8616,
       "classification": "attack",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -411,6 +732,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-2-2",
+        "area": "中央",
+        "name": "中央-2-2",
+        "type": "漁場",
+        "owner": "476C",
+        "affiliation": "enemy",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#476",
+          "alliance": "476C",
+          "alliance_name": "476 Gamma",
+          "power": 28120774784,
+          "side": "Enemy",
+          "overall_rank": 5,
+          "server_rank": 2,
+          "power_label": "28.12B"
+        }
       }
     },
     {
@@ -418,6 +758,7 @@
       "node_id": "中央:中央-1-3",
       "score": 46.58,
       "classification": "attack",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -434,6 +775,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-1-3",
+        "area": "中央",
+        "name": "中央-1-3",
+        "type": "漁場",
+        "owner": "476d",
+        "affiliation": "enemy",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#476",
+          "alliance": "476D",
+          "alliance_name": "476 Delta",
+          "power": 26547392176,
+          "side": "Enemy",
+          "overall_rank": 11,
+          "server_rank": 5,
+          "power_label": "26.55B"
+        }
       }
     },
     {
@@ -441,6 +801,7 @@
       "node_id": "中央:中央-20-2",
       "score": 46.58,
       "classification": "attack",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -457,6 +818,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-20-2",
+        "area": "中央",
+        "name": "中央-20-2",
+        "type": "漁場",
+        "owner": "WUG",
+        "affiliation": "enemy",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#523",
+          "alliance": "WUG",
+          "alliance_name": "x Wolf Pack x",
+          "power": 24480397281,
+          "side": "Enemy",
+          "overall_rank": 16,
+          "server_rank": 1,
+          "power_label": "24.48B"
+        }
       }
     },
     {
@@ -464,6 +844,7 @@
       "node_id": "中央:中央-1-17",
       "score": 46.5,
       "classification": "attack",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -480,6 +861,25 @@
         "invasion": 80,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-1-17",
+        "area": "中央",
+        "name": "中央-1-17",
+        "type": "漁場",
+        "owner": "Lghs",
+        "affiliation": "enemy",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Lghs",
+          "alliance_name": "弐共會",
+          "power": 26823676857,
+          "side": "Enemy",
+          "overall_rank": 10,
+          "server_rank": 2,
+          "power_label": "26.82B"
+        }
       }
     }
   ],
@@ -487,24 +887,87 @@
     {
       "node": "f-6",
       "node_id": "#480:f-6",
-      "score": 19.82,
+      "score": 22.58,
       "classification": "interdict",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
         "敵到達距離0",
+        "保護終了6h以内",
         "戦闘可能時間",
-        "土曜戦闘日",
-        "味方隣接"
+        "土曜戦闘日"
       ],
       "scores": {
         "alliance": 27.0,
         "coalition": 16.0,
         "choke": 8.0,
         "isolation": 0.0,
-        "invasion": 70,
-        "protection": 8.0,
+        "invasion": 80,
+        "protection": 25.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:f-6",
+        "area": "#480",
+        "name": "f-6",
+        "type": "都市",
+        "owner": "TkTk",
+        "affiliation": "enemy",
+        "importance": 8.0,
+        "alliance_power": {
+          "server": "#480",
+          "alliance": "TkTk",
+          "alliance_name": "Tiki Taka",
+          "power": 23603227317,
+          "side": "Enemy",
+          "overall_rank": 18,
+          "server_rank": 3,
+          "power_label": "23.60B"
+        }
+      }
+    },
+    {
+      "node": "e-6",
+      "node_id": "#480:e-6",
+      "score": 20.96,
+      "classification": "interdict",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "保護終了6h以内",
+        "戦闘可能時間",
+        "土曜戦闘日"
+      ],
+      "scores": {
+        "alliance": 26.0,
+        "coalition": 15.0,
+        "choke": 8.0,
+        "isolation": 0.0,
+        "invasion": 70,
+        "protection": 25.0,
+        "time": 45.0
+      },
+      "target": {
+        "id": "#480:e-6",
+        "area": "#480",
+        "name": "e-6",
+        "type": "都市",
+        "owner": "TkTk",
+        "affiliation": "enemy",
+        "importance": 8.0,
+        "alliance_power": {
+          "server": "#480",
+          "alliance": "TkTk",
+          "alliance_name": "Tiki Taka",
+          "power": 23603227317,
+          "side": "Enemy",
+          "overall_rank": 18,
+          "server_rank": 3,
+          "power_label": "23.60B"
+        }
       }
     },
     {
@@ -512,6 +975,7 @@
       "node_id": "#480:d-6",
       "score": 19.18,
       "classification": "interdict",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -528,29 +992,25 @@
         "invasion": 70,
         "protection": 0.0,
         "time": 45.0
-      }
-    },
-    {
-      "node": "e-6",
-      "node_id": "#480:e-6",
-      "score": 18.2,
-      "classification": "interdict",
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離0",
-        "戦闘可能時間",
-        "土曜戦闘日",
-        "味方隣接"
-      ],
-      "scores": {
-        "alliance": 26.0,
-        "coalition": 15.0,
-        "choke": 8.0,
-        "isolation": 0.0,
-        "invasion": 60,
-        "protection": 8.0,
-        "time": 45.0
+      },
+      "target": {
+        "id": "#480:d-6",
+        "area": "#480",
+        "name": "d-6",
+        "type": "都市",
+        "owner": "WbW",
+        "affiliation": "enemy",
+        "importance": 8.0,
+        "alliance_power": {
+          "server": "#480",
+          "alliance": "WbW",
+          "alliance_name": "WreckinbishsWeekly",
+          "power": 24542849657,
+          "side": "Enemy",
+          "overall_rank": 15,
+          "server_rank": 2,
+          "power_label": "24.54B"
+        }
       }
     },
     {
@@ -558,6 +1018,7 @@
       "node_id": "#476:h-2",
       "score": 17.8,
       "classification": "interdict",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -574,6 +1035,25 @@
         "invasion": 60,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#476:h-2",
+        "area": "#476",
+        "name": "h-2",
+        "type": "都市",
+        "owner": "476K",
+        "affiliation": "enemy",
+        "importance": 8.0,
+        "alliance_power": {
+          "server": "#476",
+          "alliance": "476K",
+          "alliance_name": "476 Kappa",
+          "power": 21771127948,
+          "side": "Enemy",
+          "overall_rank": 29,
+          "server_rank": 9,
+          "power_label": "21.77B"
+        }
       }
     },
     {
@@ -581,6 +1061,7 @@
       "node_id": "#480:e-16",
       "score": 17.78,
       "classification": "interdict",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -597,13 +1078,33 @@
         "invasion": 60,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:e-16",
+        "area": "#480",
+        "name": "e-16",
+        "type": "都市",
+        "owner": "CDf8",
+        "affiliation": "enemy",
+        "importance": 8.0,
+        "alliance_power": {
+          "server": "#480",
+          "alliance": "CDf8",
+          "alliance_name": "Obsidian fire vow",
+          "power": 20299096515,
+          "side": "Enemy",
+          "overall_rank": 32,
+          "server_rank": 5,
+          "power_label": "20.30B"
+        }
       }
     },
     {
       "node": "h-18",
       "node_id": "#523:h-18",
-      "score": 16.36,
+      "score": 16.92,
       "classification": "interdict",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -618,8 +1119,70 @@
         "choke": 8.0,
         "isolation": 0.0,
         "invasion": 50,
-        "protection": 8.0,
+        "protection": 15.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#523:h-18",
+        "area": "#523",
+        "name": "h-18",
+        "type": "都市",
+        "owner": "WUG",
+        "affiliation": "enemy",
+        "importance": 8.0,
+        "alliance_power": {
+          "server": "#523",
+          "alliance": "WUG",
+          "alliance_name": "x Wolf Pack x",
+          "power": 24480397281,
+          "side": "Enemy",
+          "overall_rank": 16,
+          "server_rank": 1,
+          "power_label": "24.48B"
+        }
+      }
+    },
+    {
+      "node": "f-8",
+      "node_id": "#480:f-8",
+      "score": 15.3,
+      "classification": "interdict",
+      "label": null,
+      "reasons": [
+        "戦闘可能時間",
+        "土曜戦闘日",
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "味方隣接"
+      ],
+      "scores": {
+        "alliance": 23.0,
+        "coalition": 12.0,
+        "choke": 8.0,
+        "isolation": 0.0,
+        "invasion": 40,
+        "protection": 15.0,
+        "time": 45.0
+      },
+      "target": {
+        "id": "#480:f-8",
+        "area": "#480",
+        "name": "f-8",
+        "type": "都市",
+        "owner": "BgNa",
+        "affiliation": "enemy",
+        "importance": 8.0,
+        "alliance_power": {
+          "server": "#480",
+          "alliance": "BgNa",
+          "alliance_name": "We have the meats",
+          "power": 27591259047,
+          "side": "Enemy",
+          "overall_rank": 7,
+          "server_rank": 1,
+          "power_label": "27.59B"
+        }
       }
     },
     {
@@ -627,6 +1190,7 @@
       "node_id": "#480:d-16",
       "score": 14.76,
       "classification": "interdict",
+      "label": null,
       "reasons": [
         "戦闘可能時間",
         "土曜戦闘日",
@@ -643,29 +1207,25 @@
         "invasion": 40,
         "protection": 0.0,
         "time": 45.0
-      }
-    },
-    {
-      "node": "f-8",
-      "node_id": "#480:f-8",
-      "score": 14.74,
-      "classification": "interdict",
-      "reasons": [
-        "戦闘可能時間",
-        "土曜戦闘日",
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離0",
-        "味方隣接"
-      ],
-      "scores": {
-        "alliance": 23.0,
-        "coalition": 12.0,
-        "choke": 8.0,
-        "isolation": 0.0,
-        "invasion": 40,
-        "protection": 8.0,
-        "time": 45.0
+      },
+      "target": {
+        "id": "#480:d-16",
+        "area": "#480",
+        "name": "d-16",
+        "type": "都市",
+        "owner": "CDf8",
+        "affiliation": "enemy",
+        "importance": 8.0,
+        "alliance_power": {
+          "server": "#480",
+          "alliance": "CDf8",
+          "alliance_name": "Obsidian fire vow",
+          "power": 20299096515,
+          "side": "Enemy",
+          "overall_rank": 32,
+          "server_rank": 5,
+          "power_label": "20.30B"
+        }
       }
     },
     {
@@ -673,6 +1233,7 @@
       "node_id": "#480:d-14",
       "score": 14.1,
       "classification": "interdict",
+      "label": null,
       "reasons": [
         "戦闘可能時間",
         "土曜戦闘日",
@@ -689,6 +1250,25 @@
         "invasion": 40,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:d-14",
+        "area": "#480",
+        "name": "d-14",
+        "type": "都市",
+        "owner": "BgNa",
+        "affiliation": "enemy",
+        "importance": 8.0,
+        "alliance_power": {
+          "server": "#480",
+          "alliance": "BgNa",
+          "alliance_name": "We have the meats",
+          "power": 27591259047,
+          "side": "Enemy",
+          "overall_rank": 7,
+          "server_rank": 1,
+          "power_label": "27.59B"
+        }
       }
     },
     {
@@ -696,6 +1276,7 @@
       "node_id": "#480:b-14",
       "score": 13.66,
       "classification": "interdict",
+      "label": null,
       "reasons": [
         "戦闘可能時間",
         "土曜戦闘日",
@@ -712,6 +1293,647 @@
         "invasion": 40,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:b-14",
+        "area": "#480",
+        "name": "b-14",
+        "type": "都市",
+        "owner": "WbW",
+        "affiliation": "enemy",
+        "importance": 8.0,
+        "alliance_power": {
+          "server": "#480",
+          "alliance": "WbW",
+          "alliance_name": "WreckinbishsWeekly",
+          "power": 24542849657,
+          "side": "Enemy",
+          "overall_rank": 15,
+          "server_rank": 2,
+          "power_label": "24.54B"
+        }
+      }
+    }
+  ],
+  "top_pact_threats": [
+    {
+      "node": "H-17",
+      "node_id": "#509:H-17",
+      "score": 71.05,
+      "classification": null,
+      "label": "enemy_pact_projection",
+      "reasons": [
+        "保護終了12h",
+        "戦闘可能時間",
+        "占領上限到達",
+        "敵隣接",
+        "反撃リスク",
+        "協定込み敵侵攻経路"
+      ],
+      "scores": {
+        "alliance": null,
+        "coalition": null,
+        "choke": null,
+        "isolation": null,
+        "invasion": null,
+        "protection": null,
+        "time": null
+      },
+      "source": {
+        "id": "#509:I-17",
+        "area": "#509",
+        "name": "I-17",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      },
+      "target": {
+        "id": "#509:H-17",
+        "area": "#509",
+        "name": "H-17",
+        "type": "漁場",
+        "owner": "FHX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "FHX",
+          "alliance_name": "Easy To Kill u",
+          "power": 31948668157,
+          "side": "Ally",
+          "overall_rank": 2,
+          "server_rank": 1,
+          "power_label": "31.95B"
+        }
+      }
+    },
+    {
+      "node": "H-15",
+      "node_id": "#509:H-15",
+      "score": 68.55,
+      "classification": null,
+      "label": "enemy_pact_projection",
+      "reasons": [
+        "保護終了24h",
+        "戦闘可能時間",
+        "占領上限到達",
+        "協定込み敵侵攻経路",
+        "協定敵: TkTk",
+        "味方側へ協定経由で隣接"
+      ],
+      "scores": {
+        "alliance": null,
+        "coalition": null,
+        "choke": null,
+        "isolation": null,
+        "invasion": null,
+        "protection": null,
+        "time": null
+      },
+      "source": {
+        "id": "#509:I-15",
+        "area": "#509",
+        "name": "I-15",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      },
+      "target": {
+        "id": "#509:H-15",
+        "area": "#509",
+        "name": "H-15",
+        "type": "漁場",
+        "owner": "FHX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "FHX",
+          "alliance_name": "Easy To Kill u",
+          "power": 31948668157,
+          "side": "Ally",
+          "overall_rank": 2,
+          "server_rank": 1,
+          "power_label": "31.95B"
+        }
+      }
+    },
+    {
+      "node": "I-21",
+      "node_id": "#509:I-21",
+      "score": 68.35,
+      "classification": null,
+      "label": "enemy_pact_projection",
+      "reasons": [
+        "保護不明",
+        "戦闘可能時間",
+        "占領上限到達",
+        "敵隣接",
+        "敵密集",
+        "反撃リスク"
+      ],
+      "scores": {
+        "alliance": null,
+        "coalition": null,
+        "choke": null,
+        "isolation": null,
+        "invasion": null,
+        "protection": null,
+        "time": null
+      },
+      "source": {
+        "id": "#503:I-1",
+        "area": "#503",
+        "name": "I-1",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      },
+      "target": {
+        "id": "#509:I-21",
+        "area": "#509",
+        "name": "I-21",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      }
+    },
+    {
+      "node": "I-1",
+      "node_id": "#503:I-1",
+      "score": 68.05,
+      "classification": null,
+      "label": "enemy_pact_projection",
+      "reasons": [
+        "保護不明",
+        "戦闘可能時間",
+        "占領上限到達",
+        "敵隣接",
+        "反撃リスク",
+        "協定込み敵侵攻経路"
+      ],
+      "scores": {
+        "alliance": null,
+        "coalition": null,
+        "choke": null,
+        "isolation": null,
+        "invasion": null,
+        "protection": null,
+        "time": null
+      },
+      "source": {
+        "id": "#509:I-21",
+        "area": "#509",
+        "name": "I-21",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      },
+      "target": {
+        "id": "#503:I-1",
+        "area": "#503",
+        "name": "I-1",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      }
+    },
+    {
+      "node": "I-17",
+      "node_id": "#509:I-17",
+      "score": 68.05,
+      "classification": null,
+      "label": "enemy_pact_projection",
+      "reasons": [
+        "保護不明",
+        "戦闘可能時間",
+        "占領上限到達",
+        "敵隣接",
+        "反撃リスク",
+        "協定込み敵侵攻経路"
+      ],
+      "scores": {
+        "alliance": null,
+        "coalition": null,
+        "choke": null,
+        "isolation": null,
+        "invasion": null,
+        "protection": null,
+        "time": null
+      },
+      "source": {
+        "id": "#509:I-15",
+        "area": "#509",
+        "name": "I-15",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      },
+      "target": {
+        "id": "#509:I-17",
+        "area": "#509",
+        "name": "I-17",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      }
+    },
+    {
+      "node": "I-11",
+      "node_id": "#509:I-11",
+      "score": 67.75,
+      "classification": null,
+      "label": "enemy_pact_projection",
+      "reasons": [
+        "保護不明",
+        "戦闘可能時間",
+        "占領上限到達",
+        "敵隣接",
+        "反撃リスク",
+        "協定込み敵侵攻経路"
+      ],
+      "scores": {
+        "alliance": null,
+        "coalition": null,
+        "choke": null,
+        "isolation": null,
+        "invasion": null,
+        "protection": null,
+        "time": null
+      },
+      "source": {
+        "id": "#509:I-13",
+        "area": "#509",
+        "name": "I-13",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      },
+      "target": {
+        "id": "#509:I-11",
+        "area": "#509",
+        "name": "I-11",
+        "type": "漁場",
+        "owner": "BHE",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "BHE",
+          "alliance_name": "BLACK HEARTS",
+          "power": 23393263477,
+          "side": "Ally",
+          "overall_rank": 21,
+          "server_rank": 5,
+          "power_label": "23.39B"
+        }
+      }
+    },
+    {
+      "node": "I-13",
+      "node_id": "#509:I-13",
+      "score": 67.75,
+      "classification": null,
+      "label": "enemy_pact_projection",
+      "reasons": [
+        "保護不明",
+        "戦闘可能時間",
+        "占領上限到達",
+        "敵隣接",
+        "反撃リスク",
+        "協定込み敵侵攻経路"
+      ],
+      "scores": {
+        "alliance": null,
+        "coalition": null,
+        "choke": null,
+        "isolation": null,
+        "invasion": null,
+        "protection": null,
+        "time": null
+      },
+      "source": {
+        "id": "#509:I-15",
+        "area": "#509",
+        "name": "I-15",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      },
+      "target": {
+        "id": "#509:I-13",
+        "area": "#509",
+        "name": "I-13",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      }
+    },
+    {
+      "node": "I-15",
+      "node_id": "#509:I-15",
+      "score": 67.75,
+      "classification": null,
+      "label": "enemy_pact_projection",
+      "reasons": [
+        "保護不明",
+        "戦闘可能時間",
+        "占領上限到達",
+        "敵隣接",
+        "反撃リスク",
+        "協定込み敵侵攻経路"
+      ],
+      "scores": {
+        "alliance": null,
+        "coalition": null,
+        "choke": null,
+        "isolation": null,
+        "invasion": null,
+        "protection": null,
+        "time": null
+      },
+      "source": {
+        "id": "#509:I-13",
+        "area": "#509",
+        "name": "I-13",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      },
+      "target": {
+        "id": "#509:I-15",
+        "area": "#509",
+        "name": "I-15",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      }
+    },
+    {
+      "node": "I-15",
+      "node_id": "#509:I-15",
+      "score": 67.75,
+      "classification": null,
+      "label": "enemy_pact_projection",
+      "reasons": [
+        "保護不明",
+        "戦闘可能時間",
+        "占領上限到達",
+        "敵隣接",
+        "反撃リスク",
+        "協定込み敵侵攻経路"
+      ],
+      "scores": {
+        "alliance": null,
+        "coalition": null,
+        "choke": null,
+        "isolation": null,
+        "invasion": null,
+        "protection": null,
+        "time": null
+      },
+      "source": {
+        "id": "#509:I-17",
+        "area": "#509",
+        "name": "I-17",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      },
+      "target": {
+        "id": "#509:I-15",
+        "area": "#509",
+        "name": "I-15",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      }
+    },
+    {
+      "node": "H-13",
+      "node_id": "#509:H-13",
+      "score": 67.45,
+      "classification": null,
+      "label": "enemy_pact_projection",
+      "reasons": [
+        "保護不明",
+        "戦闘可能時間",
+        "占領上限到達",
+        "協定込み敵侵攻経路",
+        "協定敵: TkTk",
+        "味方側へ協定経由で隣接"
+      ],
+      "scores": {
+        "alliance": null,
+        "coalition": null,
+        "choke": null,
+        "isolation": null,
+        "invasion": null,
+        "protection": null,
+        "time": null
+      },
+      "source": {
+        "id": "#509:I-13",
+        "area": "#509",
+        "name": "I-13",
+        "type": "漁場",
+        "owner": "Stj",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#503",
+          "alliance": "Stj",
+          "alliance_name": "ray of hope",
+          "power": 19610538332,
+          "side": "Enemy",
+          "overall_rank": 33,
+          "server_rank": 4,
+          "power_label": "19.61B"
+        }
+      },
+      "target": {
+        "id": "#509:H-13",
+        "area": "#509",
+        "name": "H-13",
+        "type": "漁場",
+        "owner": "MOn",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "MOn",
+          "alliance_name": "A0W MEDITERRANEAN",
+          "power": 26485159498,
+          "side": "Ally",
+          "overall_rank": 12,
+          "server_rank": 2,
+          "power_label": "26.49B"
+        }
       }
     }
   ],
@@ -721,6 +1943,7 @@
       "node_id": "#480:E-7",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -737,6 +1960,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:E-7",
+        "area": "#480",
+        "name": "E-7",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
+        }
       }
     },
     {
@@ -744,6 +1986,7 @@
       "node_id": "#480:F-7",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -760,6 +2003,25 @@
         "invasion": 100.0,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:F-7",
+        "area": "#480",
+        "name": "F-7",
+        "type": "漁場",
+        "owner": "GoDs",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "GoDs",
+          "alliance_name": "Gods of Sparta",
+          "power": 22679918576,
+          "side": "Ally",
+          "overall_rank": 24,
+          "server_rank": 3,
+          "power_label": "22.68B"
+        }
       }
     },
     {
@@ -767,6 +2029,7 @@
       "node_id": "中央:中央-13-19",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -783,6 +2046,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-13-19",
+        "area": "中央",
+        "name": "中央-13-19",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
+        }
       }
     },
     {
@@ -790,6 +2072,7 @@
       "node_id": "中央:中央-7-19",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -806,6 +2089,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-7-19",
+        "area": "中央",
+        "name": "中央-7-19",
+        "type": "漁場",
+        "owner": "SsQ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "SsQ",
+          "alliance_name": "Gummibärenbande V",
+          "power": 25186952492,
+          "side": "Ally",
+          "overall_rank": 14,
+          "server_rank": 3,
+          "power_label": "25.19B"
+        }
       }
     },
     {
@@ -813,6 +2115,7 @@
       "node_id": "#511:K-1",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -829,6 +2132,25 @@
         "invasion": 97,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#511:K-1",
+        "area": "#511",
+        "name": "K-1",
+        "type": "漁場",
+        "owner": "JL2",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#511",
+          "alliance": "JL2",
+          "alliance_name": "jackalope app 2",
+          "power": 4648607164,
+          "side": "Ally",
+          "overall_rank": 74,
+          "server_rank": 5,
+          "power_label": "4.65B"
+        }
       }
     },
     {
@@ -836,6 +2158,7 @@
       "node_id": "中央:中央-1-5",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -852,6 +2175,25 @@
         "invasion": 97,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-1-5",
+        "area": "中央",
+        "name": "中央-1-5",
+        "type": "漁場",
+        "owner": "VEX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
+          "side": "Ally",
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
+        }
       }
     },
     {
@@ -859,6 +2201,7 @@
       "node_id": "中央:中央-14-20",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -875,6 +2218,25 @@
         "invasion": 97,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-14-20",
+        "area": "中央",
+        "name": "中央-14-20",
+        "type": "漁場",
+        "owner": "SsQ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "SsQ",
+          "alliance_name": "Gummibärenbande V",
+          "power": 25186952492,
+          "side": "Ally",
+          "overall_rank": 14,
+          "server_rank": 3,
+          "power_label": "25.19B"
+        }
       }
     },
     {
@@ -882,6 +2244,7 @@
       "node_id": "中央:中央-2-8",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -896,8 +2259,27 @@
         "choke": 23.0,
         "isolation": 0.0,
         "invasion": 97,
-        "protection": 8.0,
+        "protection": 15.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-2-8",
+        "area": "中央",
+        "name": "中央-2-8",
+        "type": "漁場",
+        "owner": "VEX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
+          "side": "Ally",
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
+        }
       }
     },
     {
@@ -905,6 +2287,7 @@
       "node_id": "中央:中央-9-19",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -921,6 +2304,25 @@
         "invasion": 97,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-9-19",
+        "area": "中央",
+        "name": "中央-9-19",
+        "type": "漁場",
+        "owner": "TaW",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "TaW",
+          "alliance_name": "Tactical Warzone",
+          "power": 17140808037,
+          "side": "Ally",
+          "overall_rank": 42,
+          "server_rank": 4,
+          "power_label": "17.14B"
+        }
       }
     },
     {
@@ -928,6 +2330,7 @@
       "node_id": "#480:E-15",
       "score": 93.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -942,8 +2345,27 @@
         "choke": 6.48,
         "isolation": 0.0,
         "invasion": 93,
-        "protection": 8.0,
+        "protection": 15.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:E-15",
+        "area": "#480",
+        "name": "E-15",
+        "type": "漁場",
+        "owner": "SsQ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "SsQ",
+          "alliance_name": "Gummibärenbande V",
+          "power": 25186952492,
+          "side": "Ally",
+          "overall_rank": 14,
+          "server_rank": 3,
+          "power_label": "25.19B"
+        }
       }
     }
   ],
@@ -953,6 +2375,7 @@
       "node_id": "#480:E-7",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -969,6 +2392,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:E-7",
+        "area": "#480",
+        "name": "E-7",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
+        }
       }
     },
     {
@@ -976,6 +2418,7 @@
       "node_id": "#480:F-7",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -992,6 +2435,25 @@
         "invasion": 100.0,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:F-7",
+        "area": "#480",
+        "name": "F-7",
+        "type": "漁場",
+        "owner": "GoDs",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "GoDs",
+          "alliance_name": "Gods of Sparta",
+          "power": 22679918576,
+          "side": "Ally",
+          "overall_rank": 24,
+          "server_rank": 3,
+          "power_label": "22.68B"
+        }
       }
     },
     {
@@ -999,6 +2461,7 @@
       "node_id": "中央:中央-13-19",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1015,6 +2478,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-13-19",
+        "area": "中央",
+        "name": "中央-13-19",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
+        }
       }
     },
     {
@@ -1022,6 +2504,7 @@
       "node_id": "中央:中央-7-19",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1038,6 +2521,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-7-19",
+        "area": "中央",
+        "name": "中央-7-19",
+        "type": "漁場",
+        "owner": "SsQ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "SsQ",
+          "alliance_name": "Gummibärenbande V",
+          "power": 25186952492,
+          "side": "Ally",
+          "overall_rank": 14,
+          "server_rank": 3,
+          "power_label": "25.19B"
+        }
       }
     },
     {
@@ -1045,6 +2547,7 @@
       "node_id": "#511:K-1",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1061,6 +2564,25 @@
         "invasion": 97,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#511:K-1",
+        "area": "#511",
+        "name": "K-1",
+        "type": "漁場",
+        "owner": "JL2",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#511",
+          "alliance": "JL2",
+          "alliance_name": "jackalope app 2",
+          "power": 4648607164,
+          "side": "Ally",
+          "overall_rank": 74,
+          "server_rank": 5,
+          "power_label": "4.65B"
+        }
       }
     },
     {
@@ -1068,6 +2590,7 @@
       "node_id": "中央:中央-1-5",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1084,6 +2607,25 @@
         "invasion": 97,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-1-5",
+        "area": "中央",
+        "name": "中央-1-5",
+        "type": "漁場",
+        "owner": "VEX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
+          "side": "Ally",
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
+        }
       }
     },
     {
@@ -1091,6 +2633,7 @@
       "node_id": "中央:中央-14-20",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1107,6 +2650,25 @@
         "invasion": 97,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-14-20",
+        "area": "中央",
+        "name": "中央-14-20",
+        "type": "漁場",
+        "owner": "SsQ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "SsQ",
+          "alliance_name": "Gummibärenbande V",
+          "power": 25186952492,
+          "side": "Ally",
+          "overall_rank": 14,
+          "server_rank": 3,
+          "power_label": "25.19B"
+        }
       }
     },
     {
@@ -1114,6 +2676,7 @@
       "node_id": "中央:中央-2-8",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1128,8 +2691,27 @@
         "choke": 23.0,
         "isolation": 0.0,
         "invasion": 97,
-        "protection": 8.0,
+        "protection": 15.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-2-8",
+        "area": "中央",
+        "name": "中央-2-8",
+        "type": "漁場",
+        "owner": "VEX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
+          "side": "Ally",
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
+        }
       }
     },
     {
@@ -1137,6 +2719,7 @@
       "node_id": "中央:中央-9-19",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1153,6 +2736,25 @@
         "invasion": 97,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-9-19",
+        "area": "中央",
+        "name": "中央-9-19",
+        "type": "漁場",
+        "owner": "TaW",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "TaW",
+          "alliance_name": "Tactical Warzone",
+          "power": 17140808037,
+          "side": "Ally",
+          "overall_rank": 42,
+          "server_rank": 4,
+          "power_label": "17.14B"
+        }
       }
     },
     {
@@ -1160,6 +2762,7 @@
       "node_id": "#480:E-15",
       "score": 93.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1174,8 +2777,27 @@
         "choke": 6.48,
         "isolation": 0.0,
         "invasion": 93,
-        "protection": 8.0,
+        "protection": 15.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:E-15",
+        "area": "#480",
+        "name": "E-15",
+        "type": "漁場",
+        "owner": "SsQ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "SsQ",
+          "alliance_name": "Gummibärenbande V",
+          "power": 25186952492,
+          "side": "Ally",
+          "overall_rank": 14,
+          "server_rank": 3,
+          "power_label": "25.19B"
+        }
       }
     }
   ],
@@ -1185,6 +2807,7 @@
       "node_id": "#480:E-7",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1201,6 +2824,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:E-7",
+        "area": "#480",
+        "name": "E-7",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
+        }
       }
     },
     {
@@ -1208,6 +2850,7 @@
       "node_id": "中央:中央-13-19",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1224,6 +2867,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-13-19",
+        "area": "中央",
+        "name": "中央-13-19",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
+        }
       }
     },
     {
@@ -1231,6 +2893,7 @@
       "node_id": "中央:中央-7-19",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1247,6 +2910,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-7-19",
+        "area": "中央",
+        "name": "中央-7-19",
+        "type": "漁場",
+        "owner": "SsQ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "SsQ",
+          "alliance_name": "Gummibärenbande V",
+          "power": 25186952492,
+          "side": "Ally",
+          "overall_rank": 14,
+          "server_rank": 3,
+          "power_label": "25.19B"
+        }
       }
     },
     {
@@ -1254,6 +2936,7 @@
       "node_id": "中央:中央-1-5",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1270,6 +2953,25 @@
         "invasion": 97,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-1-5",
+        "area": "中央",
+        "name": "中央-1-5",
+        "type": "漁場",
+        "owner": "VEX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
+          "side": "Ally",
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
+        }
       }
     },
     {
@@ -1277,6 +2979,7 @@
       "node_id": "中央:中央-14-20",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1293,6 +2996,25 @@
         "invasion": 97,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-14-20",
+        "area": "中央",
+        "name": "中央-14-20",
+        "type": "漁場",
+        "owner": "SsQ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "SsQ",
+          "alliance_name": "Gummibärenbande V",
+          "power": 25186952492,
+          "side": "Ally",
+          "overall_rank": 14,
+          "server_rank": 3,
+          "power_label": "25.19B"
+        }
       }
     },
     {
@@ -1300,6 +3022,7 @@
       "node_id": "#534:A-5",
       "score": 87.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1316,6 +3039,25 @@
         "invasion": 87,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#534:A-5",
+        "area": "#534",
+        "name": "A-5",
+        "type": "漁場",
+        "owner": "4tH",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "4TH",
+          "alliance_name": "QUINTET",
+          "power": 16517834871,
+          "side": "Ally",
+          "overall_rank": 45,
+          "server_rank": 6,
+          "power_label": "16.52B"
+        }
       }
     },
     {
@@ -1323,6 +3065,7 @@
       "node_id": "#534:A-9",
       "score": 87.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1339,6 +3082,68 @@
         "invasion": 87,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#534:A-9",
+        "area": "#534",
+        "name": "A-9",
+        "type": "漁場",
+        "owner": "SHA0",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "SHA0",
+          "alliance_name": "社畜楽園",
+          "power": 3433631937,
+          "side": "Ally",
+          "overall_rank": 82,
+          "server_rank": 17,
+          "power_label": "3.43B"
+        }
+      }
+    },
+    {
+      "node": "中央-1-18",
+      "node_id": "中央:中央-1-18",
+      "score": 87.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護終了6h以内",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 49.0,
+        "coalition": 56.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 25.0,
+        "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-1-18",
+        "area": "中央",
+        "name": "中央-1-18",
+        "type": "漁場",
+        "owner": "JDX",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "JDX",
+          "alliance_name": "Revo",
+          "power": 26388296429,
+          "side": "Ally",
+          "overall_rank": 13,
+          "server_rank": 1,
+          "power_label": "26.39B"
+        }
       }
     },
     {
@@ -1346,6 +3151,7 @@
       "node_id": "中央:中央-1-6",
       "score": 87.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1362,6 +3168,25 @@
         "invasion": 87,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-1-6",
+        "area": "中央",
+        "name": "中央-1-6",
+        "type": "漁場",
+        "owner": "VEX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
+          "side": "Ally",
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
+        }
       }
     },
     {
@@ -1369,6 +3194,7 @@
       "node_id": "中央:中央-1-7",
       "score": 87.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1385,29 +3211,25 @@
         "invasion": 87,
         "protection": 35.0,
         "time": 45.0
-      }
-    },
-    {
-      "node": "中央-11-18",
-      "node_id": "中央:中央-11-18",
-      "score": 87.0,
-      "classification": "risk",
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "味方グループ保有",
-        "中央接続"
-      ],
-      "scores": {
-        "alliance": 20.0,
-        "coalition": 54.0,
-        "choke": 23.0,
-        "isolation": 0.0,
-        "invasion": 87,
-        "protection": 35.0,
-        "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-1-7",
+        "area": "中央",
+        "name": "中央-1-7",
+        "type": "漁場",
+        "owner": "VEX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
+          "side": "Ally",
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
+        }
       }
     }
   ],
@@ -1417,6 +3239,7 @@
       "node_id": "#480:E-7",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1433,6 +3256,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:E-7",
+        "area": "#480",
+        "name": "E-7",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
+        }
       }
     },
     {
@@ -1440,6 +3282,7 @@
       "node_id": "#480:F-7",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1456,6 +3299,25 @@
         "invasion": 100.0,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:F-7",
+        "area": "#480",
+        "name": "F-7",
+        "type": "漁場",
+        "owner": "GoDs",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "GoDs",
+          "alliance_name": "Gods of Sparta",
+          "power": 22679918576,
+          "side": "Ally",
+          "overall_rank": 24,
+          "server_rank": 3,
+          "power_label": "22.68B"
+        }
       }
     },
     {
@@ -1463,6 +3325,7 @@
       "node_id": "中央:中央-13-19",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1479,6 +3342,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-13-19",
+        "area": "中央",
+        "name": "中央-13-19",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
+        }
       }
     },
     {
@@ -1486,6 +3368,7 @@
       "node_id": "中央:中央-7-19",
       "score": 100.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1502,6 +3385,25 @@
         "invasion": 100.0,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-7-19",
+        "area": "中央",
+        "name": "中央-7-19",
+        "type": "漁場",
+        "owner": "SsQ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "SsQ",
+          "alliance_name": "Gummibärenbande V",
+          "power": 25186952492,
+          "side": "Ally",
+          "overall_rank": 14,
+          "server_rank": 3,
+          "power_label": "25.19B"
+        }
       }
     },
     {
@@ -1509,6 +3411,7 @@
       "node_id": "#511:K-1",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1525,6 +3428,25 @@
         "invasion": 97,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#511:K-1",
+        "area": "#511",
+        "name": "K-1",
+        "type": "漁場",
+        "owner": "JL2",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#511",
+          "alliance": "JL2",
+          "alliance_name": "jackalope app 2",
+          "power": 4648607164,
+          "side": "Ally",
+          "overall_rank": 74,
+          "server_rank": 5,
+          "power_label": "4.65B"
+        }
       }
     },
     {
@@ -1532,6 +3454,7 @@
       "node_id": "中央:中央-1-5",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1548,6 +3471,25 @@
         "invasion": 97,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-1-5",
+        "area": "中央",
+        "name": "中央-1-5",
+        "type": "漁場",
+        "owner": "VEX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
+          "side": "Ally",
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
+        }
       }
     },
     {
@@ -1555,6 +3497,7 @@
       "node_id": "中央:中央-14-20",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1571,6 +3514,25 @@
         "invasion": 97,
         "protection": 35.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-14-20",
+        "area": "中央",
+        "name": "中央-14-20",
+        "type": "漁場",
+        "owner": "SsQ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "SsQ",
+          "alliance_name": "Gummibärenbande V",
+          "power": 25186952492,
+          "side": "Ally",
+          "overall_rank": 14,
+          "server_rank": 3,
+          "power_label": "25.19B"
+        }
       }
     },
     {
@@ -1578,6 +3540,7 @@
       "node_id": "中央:中央-2-8",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1592,8 +3555,27 @@
         "choke": 23.0,
         "isolation": 0.0,
         "invasion": 97,
-        "protection": 8.0,
+        "protection": 15.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-2-8",
+        "area": "中央",
+        "name": "中央-2-8",
+        "type": "漁場",
+        "owner": "VEX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
+          "side": "Ally",
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
+        }
       }
     },
     {
@@ -1601,6 +3583,7 @@
       "node_id": "中央:中央-9-19",
       "score": 97.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1617,6 +3600,25 @@
         "invasion": 97,
         "protection": 0.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "中央:中央-9-19",
+        "area": "中央",
+        "name": "中央-9-19",
+        "type": "漁場",
+        "owner": "TaW",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "TaW",
+          "alliance_name": "Tactical Warzone",
+          "power": 17140808037,
+          "side": "Ally",
+          "overall_rank": 42,
+          "server_rank": 4,
+          "power_label": "17.14B"
+        }
       }
     },
     {
@@ -1624,6 +3626,7 @@
       "node_id": "#480:E-15",
       "score": 93.0,
       "classification": "risk",
+      "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
@@ -1638,8 +3641,27 @@
         "choke": 6.48,
         "isolation": 0.0,
         "invasion": 93,
-        "protection": 8.0,
+        "protection": 15.0,
         "time": 45.0
+      },
+      "target": {
+        "id": "#480:E-15",
+        "area": "#480",
+        "name": "E-15",
+        "type": "漁場",
+        "owner": "SsQ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "SsQ",
+          "alliance_name": "Gummibärenbande V",
+          "power": 25186952492,
+          "side": "Ally",
+          "overall_rank": 14,
+          "server_rank": 3,
+          "power_label": "25.19B"
+        }
       }
     }
   ],
@@ -1648,6 +3670,7 @@
     "Node-level strategy scoring is split into choke, isolation, coalition, alliance, invasion, protection, and time functions.",
     "Protection timing uses node.protection.hours_remaining when available.",
     "Battle windows and capture limits are configurable under config.simulation.",
+    "Active pact records from state.pacts are used as one-hop enemy access projections.",
     "Trade posts, altars, and the ancestral temple are expected to be isolated before simulation.",
     "Destroyed cities are treated as unavailable connection sources.",
     "GPT is not used by this engine."

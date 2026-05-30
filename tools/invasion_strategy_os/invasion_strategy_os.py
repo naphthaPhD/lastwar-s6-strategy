@@ -8,7 +8,7 @@ import re
 import shutil
 import sys
 from dataclasses import asdict, dataclass
-from datetime import datetime
+from datetime import datetime, time
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote
@@ -61,6 +61,17 @@ EDGE_ALIASES = {
     "from": ["from", "source", "from_id", "起点"],
     "to": ["to", "target", "to_id", "終点"],
     "weight": ["weight", "重み"],
+}
+
+PACT_ALIASES = {
+    "alliance_a": ["連盟A", "alliance_a", "Alliance A", "A"],
+    "alliance_b": ["連盟B", "alliance_b", "Alliance B", "B"],
+    "starts_at": ["開始日", "start", "starts_at"],
+    "ends_at": ["終了日", "end", "ends_at", "valid_until"],
+    "status": ["状態", "status"],
+    "safety_window": ["安全期間（現地時間）", "安全期間", "safety_window"],
+    "confirmed_at": ["確認日", "confirmed_at", "confirmed"],
+    "memo": ["メモ", "memo", "note"],
 }
 
 
@@ -154,6 +165,121 @@ def parse_management_table_rows(text: str) -> list[dict[str, str]]:
             }
         )
     return rows
+
+
+def normalize_alliance_tag(value: str | None) -> str:
+    return re.sub(r"\s+", "", str(value or "").strip())
+
+
+def parse_pact_datetime(value: str | None, tz: ZoneInfo, end_of_day: bool = False) -> datetime | None:
+    text = str(value or "").strip()
+    if not text:
+        return None
+    for fmt in ("%Y/%m/%d %H:%M", "%Y/%m/%d %H:%M:%S", "%Y-%m-%d %H:%M", "%Y-%m-%dT%H:%M:%S%z"):
+        try:
+            parsed = datetime.strptime(text, fmt)
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=tz)
+            return parsed
+        except ValueError:
+            continue
+    for fmt in ("%Y/%m/%d", "%Y-%m-%d"):
+        try:
+            parsed_date = datetime.strptime(text, fmt).date()
+            day_time = time(23, 59, 59) if end_of_day else time(0, 0, 0)
+            return datetime.combine(parsed_date, day_time, tzinfo=tz)
+        except ValueError:
+            continue
+    try:
+        parsed = datetime.fromisoformat(text)
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=tz)
+        return parsed
+    except ValueError:
+        return None
+
+
+def pact_confidence(confirmed_at: datetime | None, now: datetime) -> str:
+    if confirmed_at is None:
+        return "unknown"
+    days = (now - confirmed_at).total_seconds() / 86400
+    if days <= 2:
+        return "high"
+    if days <= 7:
+        return "medium"
+    return "low"
+
+
+def load_pacts(rows: list[dict[str, str]], now: datetime, tz: ZoneInfo, source: dict[str, Any]) -> dict[str, Any]:
+    active_records: dict[tuple[str, str], dict[str, Any]] = {}
+    inactive_markers = ("期限切れ", "無効", "未締結", "解除", "expired", "inactive")
+
+    for row_number, row in enumerate(rows, start=2):
+        alliance_a = normalize_alliance_tag(pick(row, PACT_ALIASES, "alliance_a"))
+        alliance_b = normalize_alliance_tag(pick(row, PACT_ALIASES, "alliance_b"))
+        if not alliance_a or not alliance_b or alliance_a == alliance_b:
+            continue
+
+        status = pick(row, PACT_ALIASES, "status", "有効") or "有効"
+        status_key = status.strip().lower()
+        if any(marker in status_key for marker in inactive_markers):
+            continue
+        if status and "有効" not in status and status_key not in {"active", "valid"}:
+            continue
+
+        starts_at = parse_pact_datetime(pick(row, PACT_ALIASES, "starts_at"), tz)
+        ends_at = parse_pact_datetime(pick(row, PACT_ALIASES, "ends_at"), tz, end_of_day=True)
+        confirmed_at = parse_pact_datetime(pick(row, PACT_ALIASES, "confirmed_at"), tz)
+        if starts_at and starts_at > now:
+            continue
+        if ends_at and ends_at < now:
+            continue
+
+        pair_key = tuple(sorted((alliance_a, alliance_b), key=lambda value: value.lower()))
+        record = {
+            "alliance_a": alliance_a,
+            "alliance_b": alliance_b,
+            "pair": list(pair_key),
+            "status": status,
+            "starts_at": starts_at.isoformat() if starts_at else None,
+            "ends_at": ends_at.isoformat() if ends_at else None,
+            "confirmed_at": confirmed_at.isoformat() if confirmed_at else None,
+            "confidence": pact_confidence(confirmed_at, now),
+            "safety_window": pick(row, PACT_ALIASES, "safety_window"),
+            "memo": pick(row, PACT_ALIASES, "memo"),
+            "source_row": row_number,
+        }
+        previous = active_records.get(pair_key)
+        previous_confirmed = parse_pact_datetime(previous.get("confirmed_at") if previous else None, tz) if previous else None
+        if previous is None or (confirmed_at or datetime.min.replace(tzinfo=tz)) >= (previous_confirmed or datetime.min.replace(tzinfo=tz)):
+            active_records[pair_key] = record
+
+    records = sorted(active_records.values(), key=lambda item: (item["pair"][0], item["pair"][1]))
+    partners: dict[str, set[str]] = {}
+    for record in records:
+        a = str(record["alliance_a"])
+        b = str(record["alliance_b"])
+        partners.setdefault(a, set()).add(b)
+        partners.setdefault(b, set()).add(a)
+
+    confidence_summary: dict[str, int] = {}
+    for record in records:
+        confidence = str(record.get("confidence") or "unknown")
+        confidence_summary[confidence] = confidence_summary.get(confidence, 0) + 1
+
+    return {
+        "generated_at": now.isoformat(),
+        "source": {
+            "type": source.get("type"),
+            "spreadsheet_id": source.get("spreadsheet_id"),
+            "gid": source.get("gid"),
+            "sheet_name": source.get("sheet_name"),
+        },
+        "active": records,
+        "partners_by_alliance": {owner: sorted(values) for owner, values in sorted(partners.items())},
+        "active_count": len(records),
+        "confidence_summary": confidence_summary,
+    }
 
 
 def local_coord_xy(coord: str) -> tuple[float, float]:
@@ -1793,6 +1919,7 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
 <button id="map-highlight-boundary-depth-2" type="button">&#22659;&#30028;+&#20869;&#20596;+&#20869;&#20596;</button>
 <button id="map-highlight-boundary-depth-3" type="button">&#22659;&#30028;+&#20869;&#20596;+&#20869;&#20596;+&#20869;&#20596;</button>
 <button id="map-highlight-enemy-threat" type="button">&#25973;&#20405;&#25915;&#20104;&#28204;</button>
+<button id="map-highlight-pact-threat" type="button">&#21332;&#23450;&#36796;&#12415;&#25973;&#20405;&#25915;&#20104;&#28204;</button>
 <button id="map-highlight-friendly-pressure" type="button">&#21619;&#26041;&#20405;&#25915;&#20505;&#35036;</button>
 <button id="map-highlight-interdiction" type="button">&#36974;&#26029;&#20505;&#35036;</button>
 <button id="map-highlight-risk-avoidance" type="button">&#21361;&#38522;&#22238;&#36991;</button>
@@ -2387,6 +2514,13 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
                           color: "#be123c",
                           width: 8
                         }},
+                        pactThreat: {{
+                          title: "協定込み敵侵攻予測 TOP",
+                          subtitle: "連盟協定で敵が利用し得る一段先の隣接を重視",
+                          key: "pact_threat_options",
+                          color: "#e11d48",
+                          width: 8
+                        }},
                         protection: {{
                           title: "Phase3 保護終了 TOP",
                           subtitle: "保護切れ・保護終了間近・保護更新可能性を重視",
@@ -2527,6 +2661,12 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
                     if (enemyThreatButton) {{
                       enemyThreatButton.addEventListener("click", function () {{
                         highlightCandidateEdges("enemyThreat", "#ef4444", 7);
+                      }});
+                    }}
+                    var pactThreatButton = document.getElementById("map-highlight-pact-threat");
+                    if (pactThreatButton) {{
+                      pactThreatButton.addEventListener("click", function () {{
+                        renderPhase3Candidates("pactThreat");
                       }});
                     }}
                     var friendlyPressureButton = document.getElementById("map-highlight-friendly-pressure");
@@ -2742,6 +2882,7 @@ def build_state_payload(
     tz: ZoneInfo,
     alliance_powers: dict[str, AlliancePower],
     simulation_config: dict[str, Any] | None = None,
+    pacts: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     warning_hours = float(config.get("protect_warning_hours", 6))
     owner_affiliations = build_owner_affiliations(graph, config)
@@ -2770,6 +2911,7 @@ def build_state_payload(
         "connections": [asdict(edge) for edge in edges],
         "alliance_power_rankings": [alliance_power_to_record(item) for item in alliance_rankings],
         "owner_affiliations": owner_affiliations,
+        "pacts": pacts or {"active": [], "partners_by_alliance": {}, "active_count": 0},
         **analysis,
     }
     payload["invasion_simulation"] = build_state_invasion_simulation(payload, simulation_config or {})
@@ -2791,8 +2933,9 @@ def write_json(
     tz: ZoneInfo,
     alliance_powers: dict[str, AlliancePower],
     simulation_config: dict[str, Any] | None = None,
+    pacts: dict[str, Any] | None = None,
 ) -> None:
-    payload = build_state_payload(graph, edges, analysis, now, config, tz, alliance_powers, simulation_config)
+    payload = build_state_payload(graph, edges, analysis, now, config, tz, alliance_powers, simulation_config, pacts)
     write_json_payload(payload, output_path)
 
 
@@ -2844,12 +2987,15 @@ def main() -> int:
 
     now = parse_optional_time(args.now, tz) if args.now else datetime.now(tz)
     assert now is not None
+    pact_payload = {"active": [], "partners_by_alliance": {}, "active_count": 0}
+    if sources.get("pacts"):
+        pact_payload = load_pacts(read_csv_rows(sources["pacts"], repo_root), now, tz, sources["pacts"])
 
     output_config = config.get("output", {})
     html_path = Path(args.html or output_config.get("html", "sample_output/map.html"))
     json_path = Path(args.json_output or output_config.get("json", "sample_output/state.json"))
     briefing_path = Path(output_config.get("briefing", "sample_output/briefing_input.json"))
-    state_payload = build_state_payload(graph, edges, analysis, now, analysis_config, tz, alliance_powers, config.get("simulation", {}))
+    state_payload = build_state_payload(graph, edges, analysis, now, analysis_config, tz, alliance_powers, config.get("simulation", {}), pact_payload)
     write_html(graph, analysis, repo_root / html_path, now, analysis_config, tz, alliance_powers, state_payload.get("invasion_simulation"))
     write_json_payload(state_payload, repo_root / json_path)
     write_json_payload(build_briefing_input(state_payload, state_payload.get("invasion_simulation"), config.get("simulation", {})), repo_root / briefing_path)

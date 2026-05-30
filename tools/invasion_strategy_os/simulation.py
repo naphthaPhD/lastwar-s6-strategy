@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from collections import deque
 from datetime import datetime, time, timedelta
@@ -27,6 +28,7 @@ def build_invasion_simulation(state: dict[str, Any], config: dict[str, Any] | No
     interior_affiliations = {str(value) for value in config.get("interior_affiliations", DEFAULT_INTERIOR_AFFILIATIONS)}
     self_affiliations = {str(value) for value in config.get("self_affiliations", DEFAULT_SELF_AFFILIATIONS)}
     depths = [int(value) for value in config.get("interior_depths", [1, 2, 3])]
+    pacts = build_pact_context(state, nodes, generated_at)
 
     context = {
         "state": state,
@@ -38,6 +40,8 @@ def build_invasion_simulation(state: dict[str, Any], config: dict[str, Any] | No
         "friendly_affiliations": friendly_affiliations,
         "interior_affiliations": interior_affiliations,
         "self_affiliations": self_affiliations,
+        "pacts": pacts,
+        "owner_power_by_key": build_owner_power_by_key(nodes),
         "articulation_points": set(str(node_id) for node_id in state.get("articulation_points", [])),
         "critical_node_ids": extract_node_ids(state.get("critical_nodes", [])),
         "degree_centrality": state.get("degree_centrality", {}) or {},
@@ -110,6 +114,7 @@ def build_invasion_simulation(state: dict[str, Any], config: dict[str, Any] | No
             "Node-level strategy scoring is split into choke, isolation, coalition, alliance, invasion, protection, and time functions.",
             "Protection timing uses node.protection.hours_remaining when available.",
             "Battle windows and capture limits are configurable under config.simulation.",
+            "Active pact records from state.pacts are used as one-hop enemy access projections.",
             "Trade posts, altars, and the ancestral temple are expected to be isolated before simulation.",
             "Destroyed cities are treated as unavailable connection sources.",
             "GPT is not used by this engine.",
@@ -119,6 +124,7 @@ def build_invasion_simulation(state: dict[str, Any], config: dict[str, Any] | No
             "Attack priorities favor reachable enemy or unowned targets with enemy adjacency, central value, and timing feasibility.",
             "Interdiction priorities favor enemy cities or choke nodes whose removal reduces reach.",
             "Risk watchlist flags nodes exposed to enemy adjacency, high enemy power, or near-term battle windows.",
+            "Pact threat options flag enemy access that may be opened through active alliance agreements.",
         ],
         "node_evaluations": top_items(node_evaluations, max_items * 4),
         "defense_priorities": defense_priorities,
@@ -156,6 +162,7 @@ def build_legacy_edge_candidates(state: dict[str, Any], context: dict[str, Any],
     attack_score_options: list[dict[str, Any]] = []
     interdiction_score_options: list[dict[str, Any]] = []
     risk_avoidance_options: list[dict[str, Any]] = []
+    pact_threat_options: list[dict[str, Any]] = []
 
     for edge in state.get("connections", []):
         source_id, target_id = edge_endpoints(edge)
@@ -170,6 +177,10 @@ def build_legacy_edge_candidates(state: dict[str, Any], context: dict[str, Any],
         target_affiliation = affiliation(target)
 
         if is_fishery(source) and is_fishery(target):
+            if pact_projection_factor(context, source_id, target_id)["candidate"]:
+                pact_threat_options.append(candidate_record(context, source_id, target_id, "enemy_pact_projection", "pact_threat"))
+            if pact_projection_factor(context, target_id, source_id)["candidate"]:
+                pact_threat_options.append(candidate_record(context, target_id, source_id, "enemy_pact_projection", "pact_threat"))
             if source_affiliation in friendly_affiliations and target_affiliation == "enemy":
                 friendly_pressure.append(candidate_record(context, source_id, target_id, "friendly_to_enemy_boundary", "simple"))
                 enemy_threats.append(candidate_record(context, target_id, source_id, "enemy_to_friendly_boundary", "risk"))
@@ -201,6 +212,7 @@ def build_legacy_edge_candidates(state: dict[str, Any], context: dict[str, Any],
         "attack_score_options": top_items(attack_score_options, max_items),
         "interdiction_score_options": top_items(interdiction_score_options, max_items),
         "risk_avoidance_options": top_items(risk_avoidance_options, max_items),
+        "pact_threat_options": top_items(pact_threat_options, max_items),
     }
 
 
@@ -454,12 +466,17 @@ def invasion_score(node_id: str, context: dict[str, Any]) -> dict[str, Any]:
     if protection["status"] == "expired" or (is_number(protection.get("hours_remaining")) and float(protection["hours_remaining"]) <= 6):
         raw += 10
         reasons.extend(protection["reasons"][:1])
+    pact_threat = pact_threat_factor(node_id, context)
+    if pact_threat["candidate"]:
+        raw += pact_threat["score"]
+        reasons.extend(pact_threat["reasons"])
     return score_result(raw, reasons, {
         "enemy_neighbor_count": len(enemy_neighbors),
         "enemy_fishery_neighbors": len(enemy_fisheries),
         "enemy_city_neighbors": len(enemy_cities),
         "strong_enemy_neighbors": sorted(set(strong_enemy_neighbors)),
         "enemy_distance": enemy_distance,
+        "pact_threat": pact_threat,
     })
 
 
@@ -559,6 +576,7 @@ def build_briefing_input(state: dict[str, Any], simulation: dict[str, Any] | Non
         "top_defense": briefing_records(simulation.get("defense_priorities", []), limit),
         "top_attack": briefing_records(simulation.get("attack_priorities", []), limit),
         "top_interdiction": briefing_records(simulation.get("interdiction_priorities", []), limit),
+        "top_pact_threats": briefing_records(simulation.get("pact_threat_options", []), limit),
         "risk_watchlist": briefing_records(simulation.get("risk_watchlist", []), limit),
         "time_sensitive": briefing_records(simulation.get("time_sensitive_nodes", []), limit),
         "protection_watchlist": briefing_records(simulation.get("protection_watchlist", []), limit),
@@ -576,11 +594,12 @@ def build_briefing_input(state: dict[str, Any], simulation: dict[str, Any] | Non
 def briefing_records(items: list[dict[str, Any]], limit: int) -> list[dict[str, Any]]:
     records = []
     for item in items[:limit]:
-        records.append({
+        record = {
             "node": item.get("node"),
             "node_id": item.get("node_id"),
             "score": item.get("score"),
             "classification": item.get("classification"),
+            "label": item.get("label"),
             "reasons": item.get("reasons", [])[:6],
             "scores": {
                 "alliance": item.get("alliance_score"),
@@ -591,7 +610,12 @@ def briefing_records(items: list[dict[str, Any]], limit: int) -> list[dict[str, 
                 "protection": item.get("protection_score"),
                 "time": item.get("time_score"),
             },
-        })
+        }
+        if item.get("source"):
+            record["source"] = item.get("source")
+        if item.get("target"):
+            record["target"] = item.get("target")
+        records.append(record)
     return records
 
 
@@ -687,17 +711,20 @@ def tactical_score_breakdown(context: dict[str, Any], source_id: str, target_id:
     enemy_adjacent = enemy_adjacency_factor(target_id, nodes, adjacency)
     counterattack = counterattack_risk_factor(source, target_id, nodes, adjacency)
     interdiction = interdiction_factor(target_id, nodes, adjacency, friendly_affiliations)
+    pact_threat = pact_projection_factor(context, source_id, target_id)
     if model == "attack":
         score = target_importance * 1.3 + protection["score"] + battle["score"] + capture["score"] + central["score"] + enemy_adjacent["score"] * 0.7 + (power_ratio or source_power / 1_000_000_000) * 1.5 - counterattack["score"] * 0.75
     elif model == "interdiction":
         score = target_importance * 2.0 + protection["score"] + battle["score"] + interdiction["score"] + enemy_adjacent["score"] * 0.45 + central["score"] * 0.55 - counterattack["score"] * 0.35
     elif model == "risk":
         score = counterattack["score"] * 2.2 + enemy_adjacent["score"] * 0.9 + central["score"] * 0.4 + max(0.0, (enemy_power_ratio or 0) - 1.0) * 5 - protection["score"] * 0.25
+    elif model == "pact_threat":
+        score = target_importance * 1.15 + pact_threat["score"] * 2.0 + protection["score"] * 0.55 + battle["score"] + central["score"] * 0.65 + enemy_adjacent["score"] * 0.35 - counterattack["score"] * 0.2
     elif model == "expansion":
         score = target_importance + protection["score"] + battle["score"] + central["score"] + capture["score"] - counterattack["score"] * 0.4
     else:
         score = target_importance + (power_ratio or source_power / 1_000_000_000)
-    reasons = collect_reasons(protection, battle, capture, central, enemy_adjacent, counterattack, interdiction)
+    reasons = collect_reasons(protection, battle, capture, central, enemy_adjacent, counterattack, interdiction, pact_threat)
     return {
         "model": model,
         "score": round(max(0.0, score), 4),
@@ -708,6 +735,7 @@ def tactical_score_breakdown(context: dict[str, Any], source_id: str, target_id:
             "capture_limit": capture,
             "enemy_adjacency": enemy_adjacent,
             "city_destruction_reach": interdiction,
+            "pact_threat": pact_threat,
             "central_connection": central,
             "counterattack_risk": counterattack,
             "source_power": int(source_power) if source_power else None,
@@ -814,6 +842,209 @@ def enemy_adjacency_factor(node_id: str, nodes: dict[str, dict[str, Any]], adjac
     if len(enemy_neighbors) >= 3:
         reasons.append("敵密集")
     return {"enemy_neighbors": sorted(enemy_neighbors), "enemy_fisheries": sorted(enemy_fisheries), "enemy_cities": sorted(enemy_cities), "score": score, "reasons": reasons}
+
+
+def build_pact_context(state: dict[str, Any], nodes: dict[str, dict[str, Any]], now: datetime | None) -> dict[str, Any]:
+    pacts = state.get("pacts", {}) or {}
+    records = [record for record in pacts.get("active", []) if isinstance(record, dict)]
+    owner_names: dict[str, str] = {}
+    for node in nodes.values():
+        owner = node_owner(node)
+        key = owner_key(owner)
+        if key:
+            owner_names.setdefault(key, owner)
+    for record in records:
+        for field in ("alliance_a", "alliance_b"):
+            owner = str(record.get(field) or "").strip()
+            key = owner_key(owner)
+            if key:
+                owner_names.setdefault(key, owner)
+
+    partners_by_owner: dict[str, list[dict[str, Any]]] = {}
+    for record in records:
+        a = str(record.get("alliance_a") or "").strip()
+        b = str(record.get("alliance_b") or "").strip()
+        a_key = owner_key(a)
+        b_key = owner_key(b)
+        if not a_key or not b_key:
+            continue
+        normalized_record = dict(record)
+        normalized_record["alliance_a_key"] = a_key
+        normalized_record["alliance_b_key"] = b_key
+        partners_by_owner.setdefault(a_key, []).append({"partner_key": b_key, "partner": b, "record": normalized_record})
+        partners_by_owner.setdefault(b_key, []).append({"partner_key": a_key, "partner": a, "record": normalized_record})
+
+    enemy_owner_keys = sorted({
+        owner_key(node_owner(node))
+        for node in nodes.values()
+        if affiliation(node) == "enemy" and owner_key(node_owner(node))
+    })
+    enemy_partner_links: dict[str, list[dict[str, Any]]] = {}
+    for enemy_key in enemy_owner_keys:
+        for partner in partners_by_owner.get(enemy_key, []):
+            partner_key = str(partner.get("partner_key") or "")
+            if not partner_key:
+                continue
+            enemy_partner_links.setdefault(partner_key, []).append({
+                "enemy_owner_key": enemy_key,
+                "enemy_owner": owner_names.get(enemy_key, enemy_key),
+                "partner_owner_key": partner_key,
+                "partner_owner": owner_names.get(partner_key, str(partner.get("partner") or partner_key)),
+                "record": partner.get("record") or {},
+            })
+
+    return {
+        "active": records,
+        "active_count": int(pacts.get("active_count") or len(records)),
+        "partners_by_owner": partners_by_owner,
+        "enemy_owner_keys": enemy_owner_keys,
+        "enemy_partner_links": enemy_partner_links,
+        "source": pacts.get("source") or {},
+        "generated_at": pacts.get("generated_at"),
+        "now": now,
+    }
+
+
+def build_owner_power_by_key(nodes: dict[str, dict[str, Any]]) -> dict[str, float]:
+    powers: dict[str, float] = {}
+    for node in nodes.values():
+        key = owner_key(node_owner(node))
+        if not key:
+            continue
+        powers[key] = max(powers.get(key, 0.0), power_value(node))
+    return powers
+
+
+def pact_projection_factor(context: dict[str, Any], source_id: str, target_id: str) -> dict[str, Any]:
+    config = context.get("config", {})
+    if (config.get("pact_threat") or {}).get("enabled", True) is False:
+        return {"candidate": False, "score": 0.0, "reasons": []}
+    nodes = context["nodes"]
+    source = nodes.get(source_id)
+    target = nodes.get(target_id)
+    if not source or not target or source.get("destroyed") or target.get("destroyed"):
+        return {"candidate": False, "score": 0.0, "reasons": []}
+    if not is_fishery(source) or not is_capturable(target):
+        return {"candidate": False, "score": 0.0, "reasons": []}
+
+    target_affiliation = affiliation(target)
+    if target_affiliation == "enemy" or (target_affiliation not in context["friendly_affiliations"] and target_affiliation != "unowned"):
+        return {"candidate": False, "score": 0.0, "reasons": []}
+
+    source_key = owner_key(node_owner(source))
+    if not source_key or affiliation(source) == "enemy":
+        return {"candidate": False, "score": 0.0, "reasons": []}
+    links = context["pacts"].get("enemy_partner_links", {}).get(source_key, [])
+    if not links:
+        return {"candidate": False, "score": 0.0, "reasons": []}
+
+    unique_enemies = sorted({str(link.get("enemy_owner") or "") for link in links if link.get("enemy_owner")})
+    enemy_power_values = [
+        context["owner_power_by_key"].get(owner_key(str(link.get("enemy_owner") or "")), 0.0)
+        for link in links
+    ]
+    max_enemy_power = max(enemy_power_values) if enemy_power_values else 0.0
+    confidence_score = sum(pact_confidence_weight((link.get("record") or {}).get("confidence")) for link in links)
+    safety = pact_safety_window_effect([link.get("record") or {} for link in links], context.get("generated_at"))
+
+    score = min(28.0, len(unique_enemies) * 8.0 + confidence_score * 4.0)
+    if target_affiliation in context["friendly_affiliations"]:
+        score += 9.0
+    elif target_affiliation == "unowned":
+        score += 5.0
+    if max_enemy_power >= float(config.get("strong_enemy_power", 20_000_000_000)):
+        score += 8.0
+    score += safety["score"]
+
+    reasons = ["協定込み敵侵攻経路"]
+    if unique_enemies:
+        reasons.append("協定敵: " + ", ".join(unique_enemies[:3]))
+    if target_affiliation in context["friendly_affiliations"]:
+        reasons.append("味方側へ協定経由で隣接")
+    if max_enemy_power >= float(config.get("strong_enemy_power", 20_000_000_000)):
+        reasons.append("高戦力敵が協定先に存在")
+    reasons.extend(safety["reasons"])
+
+    return {
+        "candidate": True,
+        "score": round(max(0.0, score), 4),
+        "reasons": list(dict.fromkeys(reasons)),
+        "source_id": source_id,
+        "target_id": target_id,
+        "source_owner": node_owner(source),
+        "target_owner": node_owner(target),
+        "enemy_owners": unique_enemies,
+        "max_enemy_power": int(max_enemy_power) if max_enemy_power else None,
+        "pact_count": len(links),
+        "pacts": [link.get("record") or {} for link in links],
+        "safety_window": safety,
+    }
+
+
+def pact_threat_factor(node_id: str, context: dict[str, Any]) -> dict[str, Any]:
+    adjacency = context["adjacency"]
+    sources = []
+    total_score = 0.0
+    for source_id in sorted(adjacency.get(node_id, set())):
+        projection = pact_projection_factor(context, source_id, node_id)
+        if not projection["candidate"]:
+            continue
+        sources.append(projection)
+        total_score += float(projection["score"])
+    if not sources:
+        return {"candidate": False, "score": 0.0, "reasons": []}
+    enemy_owners = sorted({enemy for source in sources for enemy in source.get("enemy_owners", [])})
+    reasons = ["協定込み敵侵攻リスク"]
+    if enemy_owners:
+        reasons.append("協定敵: " + ", ".join(enemy_owners[:4]))
+    return {
+        "candidate": True,
+        "score": round(min(42.0, total_score), 4),
+        "reasons": reasons,
+        "source_count": len(sources),
+        "enemy_owners": enemy_owners,
+        "sources": sources[:8],
+    }
+
+
+def pact_confidence_weight(confidence: Any) -> float:
+    value = str(confidence or "").lower()
+    if value == "high":
+        return 1.0
+    if value == "medium":
+        return 0.75
+    if value == "low":
+        return 0.45
+    return 0.6
+
+
+def pact_safety_window_effect(records: list[dict[str, Any]], now: datetime | None) -> dict[str, Any]:
+    if now is None:
+        return {"active": False, "score": 0.0, "reasons": []}
+    for record in records:
+        status = safety_window_status(str(record.get("safety_window") or ""), now)
+        if status["active"]:
+            return {"active": True, "score": -6.0, "reasons": ["協定安全期間中"], "window": status.get("window")}
+    return {"active": False, "score": 0.0, "reasons": []}
+
+
+def safety_window_status(text: str, now: datetime) -> dict[str, Any]:
+    for match in re.finditer(r"(\d{1,2}):(\d{2})\s*[-~－〜]\s*(\d{1,2}):(\d{2})", text):
+        start = time(int(match.group(1)), int(match.group(2)))
+        end = time(int(match.group(3)), int(match.group(4)))
+        current = now.time()
+        active = start <= current <= end if start <= end else current >= start or current <= end
+        if active:
+            return {"active": True, "window": match.group(0)}
+    return {"active": False}
+
+
+def node_owner(node: dict[str, Any]) -> str:
+    return str(node.get("owner") or node.get("display_owner") or "").strip()
+
+
+def owner_key(owner: Any) -> str:
+    return re.sub(r"\s+", "", str(owner or "").strip()).lower()
 
 
 def interdiction_factor(node_id: str, nodes: dict[str, dict[str, Any]], adjacency: dict[str, set[str]], friendly_affiliations: set[str]) -> dict[str, Any]:
@@ -968,6 +1199,7 @@ def normalized_rule_config(config: dict[str, Any]) -> dict[str, Any]:
         "interior_affiliations": list(config.get("interior_affiliations", sorted(DEFAULT_INTERIOR_AFFILIATIONS))),
         "battle_windows": config.get("battle_windows") or default_battle_windows(),
         "capture_limit": config.get("capture_limit") or {"enabled": True, "default_limit": 6, "usage_source": "owned_nodes"},
+        "pact_threat": config.get("pact_threat") or {"enabled": True, "mode": "one_hop_enemy_partner_projection"},
     }
 
 

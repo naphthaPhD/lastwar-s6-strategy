@@ -1,5 +1,34 @@
 # Handoff summary
 
+## 2026-05-30 Pact-aware invasion prediction update
+
+## Context
+
+LastWar S6 strategy OS に `連盟協定` シートを読み込む協定込み侵攻予測を追加した。通常の地図エッジは変更せず、協定は Phase3 ルールエンジン上の「敵が一段先に使える可能性があるアクセス」として評価する。
+
+## Updated files
+
+- `tools/invasion_strategy_os/config.google_full_map.json`
+- `tools/invasion_strategy_os/invasion_strategy_os.py`
+- `tools/invasion_strategy_os/simulation.py`
+- `sample_output/state.json`
+- `sample_output/briefing_input.json`
+- `sample_output/map.html`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. `連盟協定` の有効協定を `state.json.pacts` に圧縮して出力するようにした。
+2. Phase3 に `pact_threat_options` を追加し、敵連盟が協定先の漁場から味方/未取得側へ接続し得る候補を抽出するようにした。
+3. UI に `協定込み敵侵攻予測` ボタンを追加し、候補エッジを赤系で強調できるようにした。
+4. `briefing_input.json` に `top_pact_threats` を追加し、将来の GPT ブリーフィングで協定込みリスクだけを渡せるようにした。
+
+## Notes
+
+- 2026-05-30 の再生成では有効協定18件、協定込み敵侵攻候補19件、ブリーフィング上位10件を確認。
+- 協定は一段先の投影のみ。協定の連鎖はまだ評価していない。
+- 安全期間は協定行の `安全期間（現地時間）` に `15:00-16:00` のような時刻範囲がある場合だけ、スコアを弱める。
+
 ## Date
 
 2026-05-30

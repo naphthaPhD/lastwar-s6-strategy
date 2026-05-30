@@ -6,6 +6,11 @@
       "spreadsheet_id": "12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g",
       "gid": "1973254316",
       "format": "management_table"
+    },
+    "pacts": {
+      "type": "google_sheet_csv",
+      "spreadsheet_id": "12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g",
+      "sheet_name": "連盟協定"
     }
   },
   "source_options": {
@@ -107,6 +112,10 @@
       "enabled": true,
       "default_limit": 6,
       "usage_source": "owned_nodes"
+    },
+    "pact_threat": {
+      "enabled": true,
+      "mode": "one_hop_enemy_partner_projection"
     }
   },
   "output": {
