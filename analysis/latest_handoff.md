@@ -1,5 +1,36 @@
 # Handoff summary
 
+## 2026-05-31 GitHub account transition summary
+
+## Context
+
+Summarized the GitHub account transition work for this repository. The account switch is intended to be repo-local to `C:\Users\kitazaki\Documents\S6` and should not affect other local projects.
+
+## Updated files
+
+- `analysis/2026-05-31_github_account_transition_summary.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. The repository now points to `https://naphthaPhD@github.com/naphthaPhD/lastwar-s6-strategy.git`.
+2. Repo-local Git identity is `naphthaPhD <naphthaPhD@users.noreply.github.com>`.
+3. `credential.useHttpPath=true` is set locally so credentials can be separated by repository path.
+4. The public repository remains read-only for other users unless collaborators are explicitly added.
+5. Raw personal login email should not be used as public commit metadata.
+
+## Current risks
+
+1. HTTPS push still depends on Git Credential Manager selecting or prompting for the `naphthaPhD` account.
+2. If the wrong GitHub account appears during authentication, the push should be cancelled.
+3. Existing unrelated local changes under `sample_output/` and `tools/invasion_strategy_os/` were not included in this summary commit.
+
+## Recommended next actions
+
+1. Push `main` only after confirming authentication uses `naphthaPhD`.
+2. Keep GitHub collaborators empty unless write access is intentionally granted.
+3. Consider branch protection for `main` after the initial push.
+
 ## 2026-05-31 R4/R5 review map tab
 
 ## Context
