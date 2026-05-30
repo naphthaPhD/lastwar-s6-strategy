@@ -456,6 +456,50 @@ type_uncertain_review_v2.csv rows=132
 safe_time_reference_review_v2.csv rows=1349
 ```
 
+## 11.4 Commander CSV readability
+
+Commander-facing top CSVs now use dedicated readable schemas instead of the staff-level decision schema.
+
+`top_critical_risks_v2.csv` shows:
+
+- rank
+- node identity and coordinate
+- current owner and server side
+- risk reason
+- recommended action
+- confidence
+- shortened memo
+
+`top_enemy_invasion_candidates_v2.csv` shows the enemy-held candidate as `from_*` and the #534/allied defensive line as the `to_*` review target. These are triage rows, not confirmed route edges.
+
+`top_server_534_attack_candidates_v2.csv` shows the #534/allied attack group as `from_*` and the enemy-held target as `to_*`. These are attack-review targets, not automatic orders.
+
+Current commander-readable output counts:
+
+```text
+commander_dashboard_v2 rows=11
+top_critical_risks_v2 rows=30
+top_enemy_invasion_candidates_v2 rows=30
+top_server_534_attack_candidates_v2 rows=30
+unknown owner count=646
+```
+
+Current commander-readable `recommended_action` breakdown:
+
+```text
+協定影響確認=30
+攻撃候補=11
+破壊済み確認=30
+都市破壊候補=19
+```
+
+Current commander-readable `confidence` breakdown:
+
+```text
+high=30
+medium=60
+```
+
 ## 12. Unknowns
 
 - Whether `node_current_v2` should be fully generated or allow manual override columns.

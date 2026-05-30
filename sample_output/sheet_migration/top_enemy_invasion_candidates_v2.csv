@@ -1,31 +1,31 @@
-﻿node_id,area,coord,node_type_norm,current_alliance,owner_server,owner_server_source,server_side,pact_status,status_norm,frontline_group,enemy_flag,destroyed_flag,strategic_value,risk_score,risk_level,risk_note,confidence,memo
-#476:d-12,#476,d-12,city,476B,476,ownership_current,enemy,attack_allowed,owned,frontline_core,TRUE,FALSE,30,100,critical,city +30; enemy_flag +40; frontline_core +30,medium,
-#476:d-14,#476,d-14,city,476B,476,ownership_current,enemy,attack_allowed,owned,frontline_core,TRUE,FALSE,30,100,critical,city +30; enemy_flag +40; frontline_core +30,medium,
-#480:d-14,#480,d-14,city,BgNa,480,alliance_directory,enemy,attack_allowed,owned,frontline_core,TRUE,FALSE,30,100,critical,city +30; enemy_flag +40; frontline_core +30,medium,
-#476:d-10,#476,d-10,city,476B,476,ownership_current,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15,medium,
-#476:d-2,#476,d-2,city,476K,476,ownership_current,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15,medium,
-#476:d-6,#476,d-6,city,476M,476,ownership_current,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15,medium,
-#476:e-14,#476,e-14,city,476d,476,ownership_current,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15,medium,
-#476:e-18,#476,e-18,city,476Z,476,ownership_current,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15,medium,
-#480:e-18,#480,e-18,city,AAOA,480,alliance_directory,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15,medium,
-#480:e-6,#480,e-6,city,TkTk,480,alliance_directory,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15,medium,
-#480:e-8,#480,e-8,city,BgNa,480,alliance_directory,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15,medium,
-#503:d-10,#503,d-10,city,Lghs,503,alliance_directory,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15,medium,
-#503:e-8,#503,e-8,city,Lghs,503,alliance_directory,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15,medium,
-#534:d-10,#534,d-10,city,SHA,503,alliance_directory,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15,medium,
-#534:d-4,#534,d-4,city,nO9,476,alliance_directory,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15,medium,
-#534:e-14,#534,e-14,city,SHA,503,alliance_directory,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15,medium,
-#534:e-4,#534,e-4,city,nO9,476,alliance_directory,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15,medium,
-#534:e-6,#534,e-6,city,SHA,503,alliance_directory,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,30,85,high,city +30; enemy_flag +40; frontline_adjacent +15,medium,
-#509:D-11,#509,D-11,fishery,476A,476,ownership_current,enemy,attack_allowed,owned,frontline_core,TRUE,FALSE,10,80,high,fishery +10; enemy_flag +40; frontline_core +30,medium,
-#509:D-13,#509,D-13,fishery,476A,476,ownership_current,enemy,attack_allowed,owned,frontline_core,TRUE,FALSE,10,80,high,fishery +10; enemy_flag +40; frontline_core +30,medium,
-#534:D-11,#534,D-11,fishery,476C,476,ownership_current,enemy,attack_allowed,owned,frontline_core,TRUE,FALSE,10,80,high,fishery +10; enemy_flag +40; frontline_core +30,medium,
-#534:D-13,#534,D-13,fishery,476B,476,ownership_current,enemy,attack_allowed,owned,frontline_core,TRUE,FALSE,10,80,high,fishery +10; enemy_flag +40; frontline_core +30,medium,
-#534:E-11,#534,E-11,fishery,SHA,503,alliance_directory,enemy,attack_allowed,owned,frontline_core,TRUE,FALSE,10,80,high,fishery +10; enemy_flag +40; frontline_core +30,medium,
-#534:E-13,#534,E-13,fishery,476C,476,ownership_current,enemy,attack_allowed,owned,frontline_core,TRUE,FALSE,10,80,high,fishery +10; enemy_flag +40; frontline_core +30,medium,
-#503:d-2,#503,d-2,trade,GX99,503,alliance_directory,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,20,75,high,trade +20; enemy_flag +40; frontline_adjacent +15,medium,
-#509:d-20,#509,d-20,trade,476A,476,ownership_current,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,20,75,high,trade +20; enemy_flag +40; frontline_adjacent +15,medium,
-#509:e-20,#509,e-20,trade,476B,476,ownership_current,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,20,75,high,trade +20; enemy_flag +40; frontline_adjacent +15,medium,
-#511:e-2,#511,e-2,trade,AAOA,480,alliance_directory,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,20,75,high,trade +20; enemy_flag +40; frontline_adjacent +15,medium,
-#523:d-20,#523,d-20,trade,476X,476,ownership_current,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,20,75,high,trade +20; enemy_flag +40; frontline_adjacent +15,medium,
-#476:D-3,#476,D-3,fishery,476K,476,ownership_current,enemy,attack_allowed,owned,frontline_adjacent,TRUE,FALSE,10,65,high,fishery +10; enemy_flag +40; frontline_adjacent +15,medium,
+﻿rank,from_node_id,from_coord,from_alliance,from_server,to_node_id,to_coord,to_alliance,to_server,target_type,candidate_reason,priority,recommended_action,confidence
+1,#476:d-12,d-12,476B,476,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_core +30,critical,協定影響確認,medium
+2,#476:d-14,d-14,476B,476,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_core +30,critical,協定影響確認,medium
+3,#480:d-14,d-14,BgNa,480,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_core +30,critical,協定影響確認,medium
+4,#476:d-10,d-10,476B,476,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+5,#476:d-2,d-2,476K,476,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+6,#476:d-6,d-6,476M,476,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+7,#476:e-14,e-14,476d,476,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+8,#476:e-18,e-18,476Z,476,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+9,#480:e-18,e-18,AAOA,480,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+10,#480:e-6,e-6,TkTk,480,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+11,#480:e-8,e-8,BgNa,480,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+12,#503:d-10,d-10,Lghs,503,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+13,#503:e-8,e-8,Lghs,503,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+14,#534:d-10,d-10,SHA,503,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+15,#534:d-4,d-4,nO9,476,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+16,#534:e-14,e-14,SHA,503,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+17,#534:e-4,e-4,nO9,476,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+18,#534:e-6,e-6,SHA,503,,,#534/ally line,534/509/440/511,city,city +30; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+19,#509:D-11,D-11,476A,476,,,#534/ally line,534/509/440/511,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,協定影響確認,medium
+20,#509:D-13,D-13,476A,476,,,#534/ally line,534/509/440/511,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,協定影響確認,medium
+21,#534:D-11,D-11,476C,476,,,#534/ally line,534/509/440/511,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,協定影響確認,medium
+22,#534:D-13,D-13,476B,476,,,#534/ally line,534/509/440/511,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,協定影響確認,medium
+23,#534:E-11,E-11,SHA,503,,,#534/ally line,534/509/440/511,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,協定影響確認,medium
+24,#534:E-13,E-13,476C,476,,,#534/ally line,534/509/440/511,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,協定影響確認,medium
+25,#503:d-2,d-2,GX99,503,,,#534/ally line,534/509/440/511,trade,trade +20; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+26,#509:d-20,d-20,476A,476,,,#534/ally line,534/509/440/511,trade,trade +20; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+27,#509:e-20,e-20,476B,476,,,#534/ally line,534/509/440/511,trade,trade +20; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+28,#511:e-2,e-2,AAOA,480,,,#534/ally line,534/509/440/511,trade,trade +20; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+29,#523:d-20,d-20,476X,476,,,#534/ally line,534/509/440/511,trade,trade +20; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium
+30,#476:D-3,D-3,476K,476,,,#534/ally line,534/509/440/511,fishery,fishery +10; enemy_flag +40; frontline_adjacent +15,high,協定影響確認,medium

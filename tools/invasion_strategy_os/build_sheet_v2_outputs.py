@@ -115,6 +115,56 @@ COMMANDER_DASHBOARD_COLUMNS = [
     "note",
 ]
 
+TOP_CRITICAL_COLUMNS = [
+    "rank",
+    "node_id",
+    "coord",
+    "node_type_norm",
+    "current_alliance",
+    "owner_server",
+    "server_side",
+    "frontline_group",
+    "risk_score",
+    "risk_level",
+    "risk_reason",
+    "recommended_action",
+    "confidence",
+    "memo_short",
+]
+
+TOP_ENEMY_INVASION_COLUMNS = [
+    "rank",
+    "from_node_id",
+    "from_coord",
+    "from_alliance",
+    "from_server",
+    "to_node_id",
+    "to_coord",
+    "to_alliance",
+    "to_server",
+    "target_type",
+    "candidate_reason",
+    "priority",
+    "recommended_action",
+    "confidence",
+]
+
+TOP_ATTACK_COLUMNS = [
+    "rank",
+    "from_node_id",
+    "from_coord",
+    "from_alliance",
+    "to_node_id",
+    "to_coord",
+    "to_alliance",
+    "to_server",
+    "target_type",
+    "attack_reason",
+    "priority",
+    "recommended_action",
+    "confidence",
+]
+
 TOP_LIMIT = 30
 
 
@@ -486,6 +536,126 @@ def sort_decision_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     )
 
 
+def memo_short(value: Any, limit: int = 80) -> str:
+    text = re.sub(r"\s+", " ", str(value or "")).strip()
+    if len(text) <= limit:
+        return text
+    return text[: limit - 1] + "…"
+
+
+def critical_action(row: dict[str, Any]) -> str:
+    if row["destroyed_flag"] == "TRUE":
+        return "破壊済み確認"
+    if row["server_side"] == "enemy" and row["frontline_group"] != "other":
+        return "奪還候補"
+    if row["server_side"] == "enemy":
+        return "敵支配確認"
+    if row["server_side"] in {"self", "ally"} and row["frontline_group"] != "other":
+        return "防衛候補"
+    if row["server_side"] == "unknown" and row["current_alliance"]:
+        return "所有者確認"
+    return "監視継続"
+
+
+def enemy_invasion_action(row: dict[str, Any]) -> str:
+    if row["pact_status"] and row["pact_status"] != "unknown":
+        return "協定影響確認"
+    if row["frontline_group"] != "other":
+        return "防衛ライン確認"
+    return "次回攻撃候補として監視"
+
+
+def attack_action(row: dict[str, Any]) -> str:
+    if row["node_type_norm"] == "city":
+        return "都市破壊候補"
+    if row["frontline_group"] != "other":
+        return "攻撃候補"
+    if row["confidence"] in {"low", "unknown", ""}:
+        return "偵察候補"
+    return "奪還候補"
+
+
+def priority(row: dict[str, Any]) -> str:
+    if row["risk_level"] == "critical":
+        return "critical"
+    if row["risk_level"] == "high":
+        return "high"
+    if row["risk_level"] == "mid":
+        return "mid"
+    return "low"
+
+
+def format_top_critical(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    formatted: list[dict[str, Any]] = []
+    for rank, row in enumerate(rows[:TOP_LIMIT], start=1):
+        formatted.append(
+            {
+                "rank": rank,
+                "node_id": row["node_id"],
+                "coord": row["coord"],
+                "node_type_norm": row["node_type_norm"],
+                "current_alliance": row["current_alliance"],
+                "owner_server": row["owner_server"],
+                "server_side": row["server_side"],
+                "frontline_group": row["frontline_group"],
+                "risk_score": row["risk_score"],
+                "risk_level": row["risk_level"],
+                "risk_reason": row["risk_note"],
+                "recommended_action": critical_action(row),
+                "confidence": row["confidence"],
+                "memo_short": memo_short(row["memo"]),
+            }
+        )
+    return formatted
+
+
+def format_top_enemy_invasion(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    formatted: list[dict[str, Any]] = []
+    for rank, row in enumerate(rows[:TOP_LIMIT], start=1):
+        formatted.append(
+            {
+                "rank": rank,
+                "from_node_id": row["node_id"],
+                "from_coord": row["coord"],
+                "from_alliance": row["current_alliance"],
+                "from_server": row["owner_server"],
+                "to_node_id": "",
+                "to_coord": "",
+                "to_alliance": "#534/ally line",
+                "to_server": "534/509/440/511",
+                "target_type": row["node_type_norm"],
+                "candidate_reason": row["risk_note"],
+                "priority": priority(row),
+                "recommended_action": enemy_invasion_action(row),
+                "confidence": row["confidence"],
+            }
+        )
+    return formatted
+
+
+def format_top_attack(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    formatted: list[dict[str, Any]] = []
+    for rank, row in enumerate(rows[:TOP_LIMIT], start=1):
+        formatted.append(
+            {
+                "rank": rank,
+                "from_node_id": "",
+                "from_coord": "",
+                "from_alliance": "#534/ally attack group",
+                "to_node_id": row["node_id"],
+                "to_coord": row["coord"],
+                "to_alliance": row["current_alliance"],
+                "to_server": row["owner_server"],
+                "target_type": row["node_type_norm"],
+                "attack_reason": row["risk_note"],
+                "priority": priority(row),
+                "recommended_action": attack_action(row),
+                "confidence": row["confidence"],
+            }
+        )
+    return formatted
+
+
 def build_decision_outputs(
     node_current_rows: list[dict[str, Any]],
     risk_rows: list[dict[str, Any]],
@@ -539,6 +709,7 @@ def build_commander_outputs(
     node_current_rows: list[dict[str, Any]],
     risk_rows: list[dict[str, Any]],
     decision_outputs: dict[str, list[dict[str, Any]]],
+    review_outputs: dict[str, list[dict[str, Any]]],
 ) -> tuple[list[dict[str, Any]], dict[str, list[dict[str, Any]]]]:
     risk_by_id = {row["node_id"]: row for row in risk_rows}
     level_counts = Counter(row["risk_level"] for row in risk_rows)
@@ -554,19 +725,20 @@ def build_commander_outputs(
     ]
 
     dashboard_rows = [
-        {"metric": "node_current_v2 rows", "value": len(node_current_rows), "note": "source rows"},
+        {"metric": "critical risk count", "value": level_counts.get("critical", 0), "note": "risk_map_v2"},
+        {"metric": "high risk count", "value": level_counts.get("high", 0), "note": "risk_map_v2"},
         {
-            "metric": "current_enemy_nodes count",
+            "metric": "current enemy nodes",
             "value": len(decision_outputs["current_enemy_nodes_v2.csv"]),
             "note": "current enemy-owned nodes",
         },
         {
-            "metric": "current_friendly_nodes count",
+            "metric": "current friendly nodes",
             "value": len(decision_outputs["current_friendly_nodes_v2.csv"]),
             "note": "current self/ally-owned nodes",
         },
         {
-            "metric": "server_534_frontline_risk count",
+            "metric": "server_534 frontline risk count",
             "value": len(decision_outputs["server_534_frontline_risk_v2.csv"]),
             "note": "owned frontline rows for review",
         },
@@ -580,12 +752,20 @@ def build_commander_outputs(
             "value": len(decision_outputs["server_534_attack_candidates_v2.csv"]),
             "note": "enemy-owned attack-review candidates",
         },
-        {"metric": "critical count", "value": level_counts.get("critical", 0), "note": "risk_map_v2"},
-        {"metric": "high count", "value": level_counts.get("high", 0), "note": "risk_map_v2"},
         {
             "metric": "unknown owner count",
             "value": len(unknown_owner_rows),
             "note": "owned rows with current_alliance but unresolved owner_server",
+        },
+        {
+            "metric": "type uncertain count",
+            "value": len(review_outputs["type_uncertain_review_v2.csv"]),
+            "note": "node type needs review",
+        },
+        {
+            "metric": "safe time reference count",
+            "value": len(review_outputs["safe_time_reference_review_v2.csv"]),
+            "note": "safe_until_jst is reference only",
         },
         {"metric": "destroyed city count", "value": len(destroyed_city_rows), "note": "city rows only"},
     ]
@@ -596,9 +776,13 @@ def build_commander_outputs(
         if risk_by_id[row["node_id"]]["risk_level"] == "critical"
     ]
     commander_outputs = {
-        "top_critical_risks_v2.csv": sort_decision_rows(critical_rows)[:TOP_LIMIT],
-        "top_enemy_invasion_candidates_v2.csv": decision_outputs["enemy_invasion_candidates_v2.csv"][:TOP_LIMIT],
-        "top_server_534_attack_candidates_v2.csv": decision_outputs["server_534_attack_candidates_v2.csv"][:TOP_LIMIT],
+        "top_critical_risks_v2.csv": format_top_critical(sort_decision_rows(critical_rows)),
+        "top_enemy_invasion_candidates_v2.csv": format_top_enemy_invasion(
+            decision_outputs["enemy_invasion_candidates_v2.csv"]
+        ),
+        "top_server_534_attack_candidates_v2.csv": format_top_attack(
+            decision_outputs["server_534_attack_candidates_v2.csv"]
+        ),
     }
     return dashboard_rows, commander_outputs
 
@@ -652,6 +836,25 @@ def print_summary(
         print(f"{name} rows={len(rows)}")
     for name, rows in review_outputs.items():
         print(f"{name} rows={len(rows)}")
+    recommended_actions = Counter(
+        str(row.get("recommended_action", ""))
+        for rows in commander_outputs.values()
+        for row in rows
+        if row.get("recommended_action")
+    )
+    confidences = Counter(
+        str(row.get("confidence", ""))
+        for rows in commander_outputs.values()
+        for row in rows
+        if row.get("confidence")
+    )
+    print("recommended_action breakdown")
+    for action, count in sorted(recommended_actions.items()):
+        print(f"{action}={count}")
+    print("confidence breakdown")
+    for confidence, count in sorted(confidences.items()):
+        print(f"{confidence}={count}")
+    print(f"unknown owner count={len(review_outputs['unknown_owner_review_v2.csv'])}")
 
 
 def main() -> None:
@@ -671,12 +874,13 @@ def main() -> None:
     alert_rows = build_alert_rows(node_current_rows)
     risk_rows = build_risk_rows(node_current_rows)
     decision_outputs = build_decision_outputs(node_current_rows, risk_rows)
+    review_outputs = build_review_outputs(node_current_rows)
     dashboard_rows, commander_outputs = build_commander_outputs(
         node_current_rows,
         risk_rows,
         decision_outputs,
+        review_outputs,
     )
-    review_outputs = build_review_outputs(node_current_rows)
 
     write_csv(output_dir / "node_current_v2.csv", NODE_CURRENT_COLUMNS, node_current_rows)
     write_csv(output_dir / "alerts_v2.csv", ALERT_COLUMNS, alert_rows)
@@ -684,8 +888,13 @@ def main() -> None:
     for filename, rows in decision_outputs.items():
         write_csv(output_dir / filename, DECISION_COLUMNS, rows)
     write_csv(output_dir / "commander_dashboard_v2.csv", COMMANDER_DASHBOARD_COLUMNS, dashboard_rows)
+    commander_columns = {
+        "top_critical_risks_v2.csv": TOP_CRITICAL_COLUMNS,
+        "top_enemy_invasion_candidates_v2.csv": TOP_ENEMY_INVASION_COLUMNS,
+        "top_server_534_attack_candidates_v2.csv": TOP_ATTACK_COLUMNS,
+    }
     for filename, rows in commander_outputs.items():
-        write_csv(output_dir / filename, DECISION_COLUMNS, rows)
+        write_csv(output_dir / filename, commander_columns[filename], rows)
     for filename, rows in review_outputs.items():
         write_csv(output_dir / filename, NODE_CURRENT_COLUMNS, rows)
     print_summary(

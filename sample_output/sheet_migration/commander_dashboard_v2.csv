@@ -1,11 +1,12 @@
 ﻿metric,value,note
-node_current_v2 rows,2168,source rows
-current_enemy_nodes count,441,current enemy-owned nodes
-current_friendly_nodes count,262,current self/ally-owned nodes
-server_534_frontline_risk count,190,owned frontline rows for review
+critical risk count,55,risk_map_v2
+high risk count,193,risk_map_v2
+current enemy nodes,441,current enemy-owned nodes
+current friendly nodes,262,current self/ally-owned nodes
+server_534 frontline risk count,190,owned frontline rows for review
 enemy_invasion_candidates count,49,enemy-owned frontline candidates
 server_534_attack_candidates count,388,enemy-owned attack-review candidates
-critical count,55,risk_map_v2
-high count,193,risk_map_v2
 unknown owner count,646,owned rows with current_alliance but unresolved owner_server
+type uncertain count,132,node type needs review
+safe time reference count,1349,safe_until_jst is reference only
 destroyed city count,52,city rows only

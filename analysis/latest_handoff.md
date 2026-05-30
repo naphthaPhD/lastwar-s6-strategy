@@ -1,5 +1,45 @@
 # Handoff summary
 
+## 2026-05-31 Commander CSV readability
+
+## Context
+
+Commander-facing V2 CSVs were reshaped so R4/R5 can read each row as: which node, who owns it, why it matters, and what to do next. This is a presentation/readability change, not a scoring-accuracy expansion. Google Sheets write-back was not performed.
+
+## Updated files
+
+- `tools/invasion_strategy_os/build_sheet_v2_outputs.py`
+- `sample_output/sheet_migration/commander_dashboard_v2.csv`
+- `sample_output/sheet_migration/top_critical_risks_v2.csv`
+- `sample_output/sheet_migration/top_enemy_invasion_candidates_v2.csv`
+- `sample_output/sheet_migration/top_server_534_attack_candidates_v2.csv`
+- `analysis/2026-05-31_534_sheet_v2_integration_plan.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. `top_critical_risks_v2.csv` now has rank, node identity, owner/server fields, `risk_reason`, `recommended_action`, `confidence`, and `memo_short`.
+2. `top_enemy_invasion_candidates_v2.csv` now uses `from_*` fields for the enemy-held candidate and `to_*` fields for the #534/allied defensive review target.
+3. `top_server_534_attack_candidates_v2.csv` now uses `to_*` fields for the enemy-held target and includes `attack_reason`, `priority`, and `recommended_action`.
+4. `commander_dashboard_v2.csv` now includes critical/high risk, current enemy/friendly counts, frontline risk, candidate counts, unknown owner, type uncertain, and safe-time reference counts.
+
+## Output check
+
+```text
+top_critical_risks_v2 rows=30
+top_enemy_invasion_candidates_v2 rows=30
+top_server_534_attack_candidates_v2 rows=30
+recommended_action: 協定影響確認=30, 攻撃候補=11, 破壊済み確認=30, 都市破壊候補=19
+confidence: high=30, medium=60
+unknown owner count=646
+```
+
+## Recommended next actions
+
+1. Have R4/R5 review the four commander files first.
+2. Treat blank `from_node_id` in #534 attack candidates as "specific launch point not assigned yet."
+3. Improve `unknown_owner_review_v2.csv` next to increase trust in server-side judgments.
+
 ## 2026-05-31 V2 operation-layer split
 
 ## Context
