@@ -1,5 +1,30 @@
 # Handoff summary
 
+## 2026-05-30 Sheet refresh timeout hardening
+
+## Context
+
+`マップ最新化` 押下時に `ERROR: The read operation timed out` が出た。更新API自体には到達していたが、Google Sheets CSV読み込みの30秒タイムアウトで失敗していた。
+
+## Updated files
+
+- `tools/invasion_strategy_os/invasion_strategy_os.py`
+- `tools/invasion_strategy_os/interactive_server.py`
+- `tools/invasion_strategy_os/config.google_full_map.json`
+- `sample_output/map.html`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. `interactive_server.py` が起動していれば、`マップ最新化` は `invasion_strategy_os.py --config config.google_full_map.json` を実行し、管理表たたきの安全期間も再取得・再計算する。
+2. Google Sheets CSV取得は `timeout_seconds=90`, `retries=3`, `retry_delay_seconds=3` に変更した。
+3. サーバー側の更新処理待ち時間を600秒に伸ばした。
+4. 静的HTML側のエラー文を、サーバー未起動だけでなくGoogle Sheets読み込み失敗も示す内容に変更した。
+
+## Notes
+
+- ボタン更新で反映される安全期間は、Google Sheetsから再取得できた場合の最新値。Google側がタイムアウトした場合は、更新前の `map.html/state.json` のままになる。
+
 ## 2026-05-30 Server-based color assignment update
 
 ## Context

@@ -163,6 +163,7 @@ Interactive behavior:
 
 - Reads `sample_output/state.json` in the browser.
 - `マップを最新に` regenerates `sample_output/map.html` and `sample_output/state.json` from `config.google_full_map.json`.
+- Google Sheets CSV reads use source-level `timeout_seconds` and `retries`; the full-map config currently waits up to 90 seconds per attempt and retries 3 times before reporting a timeout.
 - Node edits are saved locally to `data/invasion_strategy_overrides.json`.
 - Manual edits override browser display after every refresh, so spreadsheet updates and local commander corrections can coexist.
 

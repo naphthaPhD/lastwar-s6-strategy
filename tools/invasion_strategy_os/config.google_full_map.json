@@ -5,12 +5,18 @@
       "type": "google_sheet_csv",
       "spreadsheet_id": "12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g",
       "gid": "1973254316",
-      "format": "management_table"
+      "format": "management_table",
+      "timeout_seconds": 90,
+      "retries": 3,
+      "retry_delay_seconds": 3
     },
     "pacts": {
       "type": "google_sheet_csv",
       "spreadsheet_id": "12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g",
-      "sheet_name": "連盟協定"
+      "sheet_name": "連盟協定",
+      "timeout_seconds": 90,
+      "retries": 3,
+      "retry_delay_seconds": 3
     }
   },
   "source_options": {

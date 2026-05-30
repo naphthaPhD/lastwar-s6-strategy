@@ -10,7 +10,9 @@ import sys
 from dataclasses import asdict, dataclass
 from datetime import datetime, time
 from pathlib import Path
+from time import sleep
 from typing import Any
+from urllib.error import URLError
 from urllib.parse import quote
 from urllib.request import urlopen
 from zoneinfo import ZoneInfo
@@ -123,18 +125,36 @@ def read_csv_rows(source: dict[str, Any], base_dir: Path) -> list[dict[str, str]
         path = raw_path if raw_path.is_absolute() else base_dir / raw_path
         text = path.read_text(encoding="utf-8-sig")
     elif source_type == "google_sheet_csv":
-        url = google_sheet_csv_url(source)
-        with urlopen(url, timeout=30) as response:
-            text = response.read().decode("utf-8-sig")
+        text = read_url_text(google_sheet_csv_url(source), source)
     elif source_type == "url_csv":
-        with urlopen(source["url"], timeout=30) as response:
-            text = response.read().decode("utf-8-sig")
+        text = read_url_text(str(source["url"]), source)
     else:
         raise ValueError(f"Unsupported source type: {source_type}")
 
     if source.get("format") == "management_table":
         return parse_management_table_rows(text)
     return list(csv.DictReader(text.splitlines()))
+
+
+def read_url_text(url: str, source: dict[str, Any]) -> str:
+    timeout_seconds = float(source.get("timeout_seconds", 90))
+    retries = max(1, int(source.get("retries", 3)))
+    retry_delay_seconds = float(source.get("retry_delay_seconds", 3))
+    last_error: Exception | None = None
+    for attempt in range(1, retries + 1):
+        try:
+            with urlopen(url, timeout=timeout_seconds) as response:
+                return response.read().decode("utf-8-sig")
+        except (TimeoutError, URLError, OSError) as exc:
+            last_error = exc
+            if attempt < retries:
+                sleep(retry_delay_seconds)
+                continue
+    source_label = source.get("sheet_name") or source.get("gid") or source.get("url") or "source"
+    raise RuntimeError(
+        f"CSV source read failed after {retries} attempts "
+        f"({source_label}, timeout={timeout_seconds:.0f}s): {last_error}"
+    )
 
 
 def parse_management_table_rows(text: str) -> list[dict[str, str]]:
@@ -2850,7 +2870,7 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
                       refreshButton.textContent = originalText;
                       alert(
                         "\\u30de\\u30c3\\u30d7\\u3092\\u66f4\\u65b0\\u3067\\u304d\\u307e\\u305b\\u3093\\u3067\\u3057\\u305f\\u3002\\n" +
-                        "\\u5148\\u306b interactive_server.py \\u3092 --port 8010 \\u3067\\u8d77\\u52d5\\u3057\\u3066\\u304f\\u3060\\u3055\\u3044\\u3002\\n\\n" +
+                        "\\u66f4\\u65b0\\u30b5\\u30fc\\u30d0\\u30fc\\u304c\\u8d77\\u52d5\\u4e2d\\u304b\\u3001Google Sheets \\u306e\\u8aad\\u307f\\u8fbc\\u307f\\u304c\\u30bf\\u30a4\\u30e0\\u30a2\\u30a6\\u30c8\\u3057\\u3066\\u3044\\u306a\\u3044\\u304b\\u78ba\\u8a8d\\u3057\\u3066\\u304f\\u3060\\u3055\\u3044\\u3002\\n\\n" +
                         (lastError ? lastError.message : "")
                       );
                     }}

@@ -19,6 +19,7 @@ DEFAULT_STATE = REPO_ROOT / "sample_output" / "state.json"
 DEFAULT_OVERRIDES = REPO_ROOT / "data" / "invasion_strategy_overrides.json"
 APP_HTML = TOOL_DIR / "interactive_app.html"
 GENERATOR = TOOL_DIR / "invasion_strategy_os.py"
+REFRESH_TIMEOUT_SECONDS = 600
 
 EDITABLE_NODE_FIELDS = {
     "owner",
@@ -193,7 +194,7 @@ class InteractiveMapHandler(BaseHTTPRequestHandler):
                 check=False,
                 text=True,
                 encoding="utf-8",
-                timeout=120,
+                timeout=REFRESH_TIMEOUT_SECONDS,
             )
         except Exception as exc:
             self.send_error_json(f"Refresh failed to start: {exc}", HTTPStatus.INTERNAL_SERVER_ERROR)
