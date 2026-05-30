@@ -1,5 +1,29 @@
 # Handoff summary
 
+## 2026-05-30 Enemy color inference update
+
+## Context
+
+敵サーバーは #503/#480/#523/#476 であるため、敵エリア由来の所有連盟が同数判定で ally 側に寄って赤くならないケースを補正した。
+
+## Updated files
+
+- `tools/invasion_strategy_os/invasion_strategy_os.py`
+- `sample_output/state.json`
+- `sample_output/briefing_input.json`
+- `sample_output/map.html`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. 所有連盟の所属推定で、出現数が同数の場合は `self > enemy > ally` の優先順にした。
+2. #534側に明確に多く出る所有者は従来通り self、#509/#440/#511側に明確に多く出る所有者は ally のまま。
+3. 例として `fzn` は #503 と #509 が同数だったため、以前は ally 側へ寄っていたが、今回 enemy に補正された。
+
+## Notes
+
+- Google Sheets再取得ではなく、既存ローカル `state.json` を元に再生成した。シート最新値は次回の `マップ最新化` で反映する。
+
 ## 2026-05-30 #534 attack forecast and server-day battle window update
 
 ## Context

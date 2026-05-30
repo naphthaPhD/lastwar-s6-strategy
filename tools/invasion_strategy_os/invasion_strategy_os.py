@@ -964,7 +964,7 @@ def build_owner_affiliations(graph: nx.Graph, config: dict[str, Any]) -> dict[st
     for owner, counts in owner_area_counts.items():
         affiliations[owner] = sorted(
             counts.items(),
-            key=lambda item: (-item[1], {"self": 0, "ally": 1, "enemy": 2}[item[0]]),
+            key=lambda item: (-item[1], {"self": 0, "enemy": 1, "ally": 2}[item[0]]),
         )[0][0]
     return affiliations
 
