@@ -1,5 +1,33 @@
 # Handoff summary
 
+## 2026-05-31 SHA/nO9 refreshed R4/R5 review Google Sheet
+
+## Context
+
+Updated the separate R4/R5 review Google Spreadsheet after the `SHA` and `nO9` manual overrides. This update targeted only the review spreadsheet, not the production `#534` spreadsheet.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Google Sheets: `https://docs.google.com/spreadsheets/d/1PEU2O5DWGpC_vuaSkTCl1y6AzQ1QXLdQlKOgAD2ifb4/edit`
+
+## Key findings
+
+1. Updated tabs: `README`, `briefing`, `self_defense_edges`, `self_attack_edges`, `ally_coordination`, `map_check_queue`, `critical_534`, `dashboard`, `alliance_audit`.
+2. `briefing` now shows #534 self attack edges `5` and #534 self defense edges `5`.
+3. `alliance_audit` includes all `108` alliance audit rows with the requested review columns.
+4. `SHA`, `nO9`, `JDX`, and `4tH` all read back as `server=534`, `server_side=self`, `risk_flag` blank, `review_status=ok`.
+5. Production `#534` was not written to; full `node_current_v2`, full `risk_map_v2`, `alerts_v2`, and `safe_time_reference_review_v2` were not added to the review sheet.
+
+## Recommended next actions
+
+1. Use the refreshed Google Sheet for R4/R5 meeting review after SHA/nO9 correction.
+2. Treat `map_check_queue` as confirmation work and `confidence=medium` rows as human-review items.
+3. Keep `alliance_audit` as the next data-quality review surface before issuing action language.
+
 ## 2026-05-31 SHA/nO9 manual side override
 
 ## Context
