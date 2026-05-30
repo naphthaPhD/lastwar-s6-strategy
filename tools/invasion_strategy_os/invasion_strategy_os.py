@@ -1920,18 +1920,12 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
 <button id="map-highlight-boundary-depth-3" type="button">&#22659;&#30028;+&#20869;&#20596;+&#20869;&#20596;+&#20869;&#20596;</button>
 <button id="map-highlight-enemy-threat" type="button">&#25973;&#20405;&#25915;&#20104;&#28204;</button>
 <button id="map-phase3-self-risk" type="button">#534連盟侵攻リスク</button>
+<button id="map-phase3-self-attack" type="button">#534連盟攻撃予測</button>
 <button id="map-highlight-pact-threat" type="button">&#21332;&#23450;&#36796;&#12415;&#25973;&#20405;&#25915;&#20104;&#28204;</button>
 <button id="map-phase3-self-pact-threat" type="button">#534連盟協定込みリスク</button>
 <button id="map-highlight-friendly-pressure" type="button">&#21619;&#26041;&#20405;&#25915;&#20505;&#35036;</button>
 <button id="map-highlight-interdiction" type="button">&#36974;&#26029;&#20505;&#35036;</button>
 <button id="map-highlight-risk-avoidance" type="button">&#21361;&#38522;&#22238;&#36991;</button>
-<button id="map-phase3-defense" type="button">Phase3防衛TOP</button>
-<button id="map-phase3-attack" type="button">Phase3攻撃TOP</button>
-<button id="map-phase3-interdiction" type="button">Phase3遮断TOP</button>
-<button id="map-phase3-risk" type="button">Phase3危険TOP</button>
-<button id="map-phase3-protection" type="button">Phase3保護TOP</button>
-<button id="map-phase3-time" type="button">Phase3時間TOP</button>
-<button id="map-phase3-overall" type="button">Phase3総合TOP</button>
 <button id="map-highlight-enemy-expand" type="button">&#25973;&#26410;&#21462;&#24471;&#25313;&#24373;</button>
 <button id="map-highlight-friendly-expand" type="button">&#21619;&#26041;&#26410;&#21462;&#24471;&#25313;&#24373;</button>
 <button id="map-clear-edge-highlight" type="button">&#24375;&#35519;&#35299;&#38500;</button>
@@ -1954,8 +1948,8 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
   <div class="node-info-empty">{empty_text}</div>
 </div>
 <div id="phase3-score-panel">
-  <h2>Phase3スコア</h2>
-  <div class="phase3-empty">攻撃TOP・遮断TOP・危険TOPを押すと、state.jsonのスコア根拠を表示します。</div>
+  <h2>戦略候補</h2>
+  <div class="phase3-empty">#534連盟の侵攻リスク・攻撃予測・協定込みリスクをここに表示します。</div>
 </div>
 """
     attach_js = f"""
@@ -2523,6 +2517,13 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
                           color: "#dc2626",
                           width: 8
                         }},
+                        selfAttack: {{
+                          title: "#534連盟 攻撃予測 TOP",
+                          subtitle: "#534所属連盟の漁場から攻撃可能な敵/未取得拠点。水曜・土曜サーバー日は隣接都市破壊も含む",
+                          key: "server_534_attack_options",
+                          color: "#f97316",
+                          width: 8
+                        }},
                         pactThreat: {{
                           title: "協定込み敵侵攻予測 TOP",
                           subtitle: "連盟協定で敵が利用し得る一段先の隣接を重視",
@@ -2683,6 +2684,12 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
                     if (selfRiskButton) {{
                       selfRiskButton.addEventListener("click", function () {{
                         renderPhase3Candidates("selfRisk");
+                      }});
+                    }}
+                    var selfAttackButton = document.getElementById("map-phase3-self-attack");
+                    if (selfAttackButton) {{
+                      selfAttackButton.addEventListener("click", function () {{
+                        renderPhase3Candidates("selfAttack");
                       }});
                     }}
                     var pactThreatButton = document.getElementById("map-highlight-pact-threat");

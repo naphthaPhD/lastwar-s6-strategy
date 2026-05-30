@@ -172,11 +172,14 @@ def build_legacy_edge_candidates(state: dict[str, Any], context: dict[str, Any],
     friendly_expansion: list[dict[str, Any]] = []
     enemy_expansion: list[dict[str, Any]] = []
     attack_score_options: list[dict[str, Any]] = []
+    server_534_attack_options: list[dict[str, Any]] = []
     interdiction_score_options: list[dict[str, Any]] = []
     risk_avoidance_options: list[dict[str, Any]] = []
     self_risk_avoidance_options: list[dict[str, Any]] = []
     pact_threat_options: list[dict[str, Any]] = []
     self_pact_threat_options: list[dict[str, Any]] = []
+
+    city_destruction_active, city_destruction_window = battle_window_status(context["generated_at"], context["config"]) if context["generated_at"] else (False, None)
 
     for edge in state.get("connections", []):
         source_id, target_id = edge_endpoints(edge)
@@ -231,10 +234,19 @@ def build_legacy_edge_candidates(state: dict[str, Any], context: dict[str, Any],
                 enemy_expansion.append(candidate_record(context, source_id, target_id, "enemy_to_unowned", "expansion"))
             elif target_affiliation == "enemy" and source_affiliation == "unowned":
                 enemy_expansion.append(candidate_record(context, target_id, source_id, "enemy_to_unowned", "expansion"))
+
+            if source_affiliation in self_affiliations and target_affiliation in {"enemy", "unowned"}:
+                server_534_attack_options.append(candidate_record(context, source_id, target_id, "server_534_attack", "attack" if target_affiliation == "enemy" else "expansion"))
+            if target_affiliation in self_affiliations and source_affiliation in {"enemy", "unowned"}:
+                server_534_attack_options.append(candidate_record(context, target_id, source_id, "server_534_attack", "attack" if source_affiliation == "enemy" else "expansion"))
         elif is_fishery(source) and source_affiliation in friendly_affiliations and is_city(target) and target_affiliation == "enemy":
             interdiction_score_options.append(candidate_record(context, source_id, target_id, "interdiction_score", "interdiction"))
+            if source_affiliation in self_affiliations and city_destruction_active:
+                server_534_attack_options.append(candidate_record(context, source_id, target_id, "server_534_city_destroy", "interdiction"))
         elif is_fishery(target) and target_affiliation in friendly_affiliations and is_city(source) and source_affiliation == "enemy":
             interdiction_score_options.append(candidate_record(context, target_id, source_id, "interdiction_score", "interdiction"))
+            if target_affiliation in self_affiliations and city_destruction_active:
+                server_534_attack_options.append(candidate_record(context, target_id, source_id, "server_534_city_destroy", "interdiction"))
 
     return {
         "friendly_pressure_options": top_items(friendly_pressure, max_items),
@@ -244,6 +256,9 @@ def build_legacy_edge_candidates(state: dict[str, Any], context: dict[str, Any],
         "friendly_expansion_options": top_items(friendly_expansion, max_items),
         "enemy_expansion_options": top_items(enemy_expansion, max_items),
         "attack_score_options": top_items(attack_score_options, max_items),
+        "server_534_attack_options": top_items(server_534_attack_options, max_items),
+        "server_534_city_destruction_active": city_destruction_active,
+        "server_534_city_destruction_window": city_destruction_window,
         "interdiction_score_options": top_items(interdiction_score_options, max_items),
         "risk_avoidance_options": top_items(risk_avoidance_options, max_items),
         "self_risk_avoidance_options": top_items(self_risk_avoidance_options, max_items),
@@ -581,10 +596,11 @@ def time_score(node_id: str, context: dict[str, Any]) -> dict[str, Any]:
         elif hours_to_next > 24:
             raw -= 15
             reasons.append("戦闘日から24h超")
-    if now.weekday() == 5:
+    active_battle_day = battle_window_day(active_window)
+    if active_battle_day == "saturday":
         raw += 15
         reasons.append("土曜戦闘日")
-    elif now.weekday() == 2:
+    elif active_battle_day == "wednesday":
         raw += 10
         reasons.append("水曜戦闘日")
     response_window = response_window_factor(context["nodes"][node_id], now, context["config"])
@@ -595,7 +611,7 @@ def time_score(node_id: str, context: dict[str, Any]) -> dict[str, Any]:
         "active_battle_window": active_window,
         "next_battle_window_starts_at": next_window["starts_at"].isoformat() if next_window else None,
         "hours_to_next_battle_window": round(hours_to_next, 2) if hours_to_next is not None else None,
-        "battle_day": "saturday" if now.weekday() == 5 else ("wednesday" if now.weekday() == 2 else None),
+        "battle_day": active_battle_day,
         "response_window_active": bool(response_window["active"]),
     })
 
@@ -613,6 +629,7 @@ def build_briefing_input(state: dict[str, Any], simulation: dict[str, Any] | Non
         },
         "top_defense": briefing_records(simulation.get("defense_priorities", []), limit),
         "top_attack": briefing_records(simulation.get("attack_priorities", []), limit),
+        "top_server_534_attack": briefing_records(simulation.get("server_534_attack_options", []), limit),
         "top_interdiction": briefing_records(simulation.get("interdiction_priorities", []), limit),
         "top_pact_threats": briefing_records(simulation.get("pact_threat_options", []), limit),
         "top_self_pact_threats": briefing_records(simulation.get("self_pact_threat_options", []), limit),
@@ -1340,8 +1357,8 @@ def protection_renewal_probability(node: dict[str, Any]) -> str:
 
 def default_battle_windows() -> list[dict[str, Any]]:
     return [
-        {"label": "wednesday_battle", "weekday": 2, "start": "00:00", "end": "23:59"},
-        {"label": "saturday_battle", "weekday": 5, "start": "00:00", "end": "23:59"},
+        {"label": "wednesday_server_day", "weekday": 2, "start": "11:00", "end": "10:59"},
+        {"label": "saturday_server_day", "weekday": 5, "start": "11:00", "end": "10:59"},
     ]
 
 
@@ -1351,13 +1368,34 @@ def battle_windows(config: dict[str, Any]) -> list[dict[str, Any]]:
 
 def battle_window_status(now: datetime, config: dict[str, Any]) -> tuple[bool, dict[str, Any] | None]:
     for window in battle_windows(config):
-        if int(window.get("weekday", -1)) != now.weekday():
-            continue
+        weekday = int(window.get("weekday", -1))
         start = parse_time(str(window.get("start", "00:00")))
         end = parse_time(str(window.get("end", "23:59")))
-        if start <= now.time() <= end:
+        current = now.time()
+        if start <= end and weekday == now.weekday() and start <= current <= end:
             return True, window
+        if start > end:
+            if weekday == now.weekday() and current >= start:
+                return True, window
+            if (weekday + 1) % 7 == now.weekday() and current <= end:
+                return True, window
     return False, None
+
+
+def battle_window_day(window: dict[str, Any] | None) -> str | None:
+    if not window:
+        return None
+    label = str(window.get("label") or "").lower()
+    if "saturday" in label:
+        return "saturday"
+    if "wednesday" in label:
+        return "wednesday"
+    weekday = int(window.get("weekday", -1))
+    if weekday == 5:
+        return "saturday"
+    if weekday == 2:
+        return "wednesday"
+    return None
 
 
 def next_battle_window(now: datetime, config: dict[str, Any]) -> dict[str, Any] | None:

@@ -105,8 +105,8 @@
     "interior_affiliations": ["self", "ally", "unowned"],
     "interior_depths": [1, 2, 3],
     "battle_windows": [
-      {"weekday": 2, "start": "00:00", "end": "23:59"},
-      {"weekday": 5, "start": "00:00", "end": "23:59"}
+      {"label": "wednesday_server_day", "weekday": 2, "start": "11:00", "end": "10:59"},
+      {"label": "saturday_server_day", "weekday": 5, "start": "11:00", "end": "10:59"}
     ],
     "capture_limit": {
       "enabled": true,

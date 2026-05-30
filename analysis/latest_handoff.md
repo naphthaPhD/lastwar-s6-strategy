@@ -1,5 +1,33 @@
 # Handoff summary
 
+## 2026-05-30 #534 attack forecast and server-day battle window update
+
+## Context
+
+Phase3の汎用TOPボタンを前面から外し、#534連盟向けの実用ボタンを中心にした。あわせて、ゲームサーバー時間がJSTより11時間遅い前提に合わせ、水曜/土曜の戦闘日をJST 11:00から翌日10:59として扱うようにした。
+
+## Updated files
+
+- `tools/invasion_strategy_os/config.google_full_map.json`
+- `tools/invasion_strategy_os/simulation.py`
+- `tools/invasion_strategy_os/invasion_strategy_os.py`
+- `sample_output/state.json`
+- `sample_output/briefing_input.json`
+- `sample_output/map.html`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. UIから `Phase3防衛TOP` などの汎用TOPボタンを外し、`#534連盟侵攻リスク`、`#534連盟攻撃予測`、`#534連盟協定込みリスク` を中心にした。
+2. `server_534_attack_options` を追加し、#534所属連盟の漁場から攻撃可能な敵/未取得拠点を抽出するようにした。
+3. 水曜/土曜サーバー日中だけ、#534所属連盟の漁場に隣接する敵都市を都市破壊候補として `server_534_attack_options` に含める。
+4. 戦闘時間はJST基準で `水曜11:00-木曜10:59`、`土曜11:00-日曜10:59` として判定する。
+
+## Notes
+
+- 通常の接続グラフ自体は常時の都市通行エッジとしては扱わない。都市破壊可能時間だけ、攻撃候補として都市隣接を出す。
+- Google Sheets の再取得はタイムアウトしたため、この更新の `sample_output` は既存ローカル `state.json` を元に新しいシミュレーション/UIを再生成した。シート最新値の取り込みは次回 `マップ最新化` または再生成時に行う。
+
 ## 2026-05-30 Pact-aware invasion prediction update
 
 ## Context
