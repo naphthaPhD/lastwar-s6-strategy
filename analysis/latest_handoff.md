@@ -1,5 +1,45 @@
 # Handoff summary
 
+## 2026-05-31 Sheet V2 policy change
+
+## Context
+
+Protection update time, protection expiry time, and abandonment time are no longer complete-restoration targets. The V2 flow now prioritizes current decision support from `node_status.json`: owner-server resolution, current-alliance accuracy, server-side judgment, frontline judgment, and pact-aware invasion candidates.
+
+## Updated files
+
+- `tools/invasion_strategy_os/build_sheet_v2_outputs.py`
+- `sample_output/sheet_migration/node_current_v2.csv`
+- `sample_output/sheet_migration/alerts_v2.csv`
+- `sample_output/sheet_migration/risk_map_v2.csv`
+- `sample_output/sheet_migration/current_enemy_nodes_v2.csv`
+- `sample_output/sheet_migration/current_friendly_nodes_v2.csv`
+- `sample_output/sheet_migration/server_534_frontline_risk_v2.csv`
+- `sample_output/sheet_migration/enemy_invasion_candidates_v2.csv`
+- `sample_output/sheet_migration/server_534_attack_candidates_v2.csv`
+- `analysis/2026-05-31_534_sheet_v2_integration_plan.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. `safe_until_jst` remains in CSVs as reference information, but `safe_time_missing` and `protection_expired` are removed from the primary `risk_score`.
+2. `alerts_v2` is now focused on current review needs: destroyed cities, enemy-owned nodes, uncertain side/alliance judgment, and uncertain types.
+3. Added current-decision outputs for enemy-owned nodes, friendly-owned nodes, #534 frontline risk, enemy invasion candidates, and #534 attack candidates.
+4. Current counts are `node_current_v2 rows=2168`, `alerts_v2 rows=1931`, `risk_map_v2 rows=2168`, `critical count=55`, `high count=193`, `mid count=848`, `low count=1072`.
+5. Current decision-output counts are `current_enemy_nodes_v2=441`, `current_friendly_nodes_v2=262`, `server_534_frontline_risk_v2=190`, `enemy_invasion_candidates_v2=49`, and `server_534_attack_candidates_v2=388`.
+
+## Current risks
+
+1. Enemy and friendly outputs are only as reliable as `owner_server` and `current_alliance` resolution.
+2. Invasion and attack candidate CSVs are current triage lists, not full route/adjacency proofs.
+3. Google Sheets write-back is still intentionally not performed.
+
+## Recommended next actions
+
+1. Improve `alliance_directory.csv` to reduce `owner_server=unknown`.
+2. Use the enemy/friendly/current frontline CSVs as the first commander review queue.
+3. Add pact-aware adjacency or route logic only after current ownership accuracy improves.
+
 ## 2026-05-31 Sheet V2 CSV generator
 
 ## Context

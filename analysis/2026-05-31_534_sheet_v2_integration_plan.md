@@ -253,9 +253,9 @@ State score:
 ```text
 enemy_flag +40
 destroyed_flag +100
-protection_expired +20
-safe_time_missing +15
 ```
+
+`safe_until_jst` is reference data only. Protection update time, protection expiry time, and abandonment time are no longer treated as complete-restoration targets because the game log does not contain enough complete historical evidence. Do not use missing safe-time data as a primary risk-score factor.
 
 Frontline score:
 
@@ -370,6 +370,43 @@ low count=978
 No Google Sheets write-back was performed. These CSVs are the review artifacts for the next human approval step.
 
 Important interpretation: the current `node_status.json` snapshot does not contain `safe_until_jst`, so many owned nodes are intentionally flagged as `safe_time_missing`. This is a data-completeness alert, not proof that every protection window is actually unknown in-game.
+
+## 11.2 Policy change: current decision support first
+
+The goal is no longer complete historical reconstruction of protection update time, protection expiry time, or abandonment time. The goal is current decision support.
+
+New priority order:
+
+1. Improve `owner_server` resolution.
+2. Improve `current_alliance` accuracy.
+3. Improve `server_side` judgment accuracy.
+4. Improve frontline judgment.
+5. Add pact-aware invasion candidates.
+
+The generator now keeps `safe_until_jst` as reference information, but removes `safe_time_missing` and `protection_expired` from the primary risk score. It also writes the following current-decision CSVs:
+
+- `sample_output/sheet_migration/current_enemy_nodes_v2.csv`
+- `sample_output/sheet_migration/current_friendly_nodes_v2.csv`
+- `sample_output/sheet_migration/server_534_frontline_risk_v2.csv`
+- `sample_output/sheet_migration/enemy_invasion_candidates_v2.csv`
+- `sample_output/sheet_migration/server_534_attack_candidates_v2.csv`
+
+Current output counts after the policy change:
+
+```text
+node_current_v2 rows=2168
+alerts_v2 rows=1931
+risk_map_v2 rows=2168
+critical count=55
+high count=193
+mid count=848
+low count=1072
+current_enemy_nodes_v2.csv rows=441
+current_friendly_nodes_v2.csv rows=262
+server_534_frontline_risk_v2.csv rows=190
+enemy_invasion_candidates_v2.csv rows=49
+server_534_attack_candidates_v2.csv rows=388
+```
 
 ## 12. Unknowns
 

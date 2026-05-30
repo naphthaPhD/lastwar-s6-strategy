@@ -34,6 +34,8 @@ NODE_CURRENT_COLUMNS = [
     "owner_server",
     "owner_server_source",
     "server_side",
+    "pact_status",
+    "pact_source",
     "status_raw",
     "status_norm",
     "captured_at_jst",
@@ -83,6 +85,28 @@ RISK_COLUMNS = [
     "risk_score",
     "risk_level",
     "risk_note",
+]
+
+DECISION_COLUMNS = [
+    "node_id",
+    "area",
+    "coord",
+    "node_type_norm",
+    "current_alliance",
+    "owner_server",
+    "owner_server_source",
+    "server_side",
+    "pact_status",
+    "status_norm",
+    "frontline_group",
+    "enemy_flag",
+    "destroyed_flag",
+    "strategic_value",
+    "risk_score",
+    "risk_level",
+    "risk_note",
+    "confidence",
+    "memo",
 ]
 
 
@@ -255,6 +279,8 @@ def build_node_current_rows(
             "owner_server": owner_server,
             "owner_server_source": owner_server_source,
             "server_side": server_side(owner_server, current_alliance),
+            "pact_status": node.get("pact_status", "") or "unknown",
+            "pact_source": node.get("pact_source", ""),
             "status_raw": raw_status,
             "status_norm": normalized_status,
             "captured_at_jst": node.get("acquired_at_jst", ""),
@@ -293,10 +319,8 @@ def alert_for(row: dict[str, Any]) -> tuple[str, str, str] | None:
         return "destroyed_city", "critical", "city is destroyed"
     if row["server_side"] == "enemy" and row["status_norm"] in {"owned", "owned_uncertain"}:
         return "enemy_owned", "high", "resolved owner server is enemy"
-    if row["protection_status"] == "safe_time_missing":
-        return "safe_time_missing", "mid", "owned node has no safe_until_jst in node_status.json"
     if row["status_norm"] == "owned_uncertain" or "unknown_affiliation" in warning_flags:
-        return "uncertain", "mid", "status or affiliation needs review"
+        return "uncertain", "mid", "owner server, current alliance, or side judgment needs review"
     if row["node_type_norm"] == "unknown":
         return "type_uncertain", "low", "node type is not mapped"
     if row["status_norm"] == "neutral_or_unknown" and row["last_event_owner"]:
@@ -377,12 +401,6 @@ def build_risk_rows(node_current_rows: list[dict[str, Any]]) -> list[dict[str, A
         if row["destroyed_flag"] == "TRUE":
             score += 100
             notes.append("destroyed_flag +100")
-        if row["protection_status"] == "protection_expired":
-            score += 20
-            notes.append("protection_expired +20")
-        if row["protection_status"] == "safe_time_missing":
-            score += 15
-            notes.append("safe_time_missing +15")
 
         group = frontline_group(row["coord"])
         if group == "frontline_core":
@@ -414,10 +432,106 @@ def build_risk_rows(node_current_rows: list[dict[str, Any]]) -> list[dict[str, A
     return rows
 
 
+def merge_decision_rows(
+    node_current_rows: list[dict[str, Any]],
+    risk_rows: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    risk_by_id = {row["node_id"]: row for row in risk_rows}
+    rows: list[dict[str, Any]] = []
+    for node_row in node_current_rows:
+        risk_row = risk_by_id[node_row["node_id"]]
+        rows.append(
+            {
+                "node_id": node_row["node_id"],
+                "area": node_row["area"],
+                "coord": node_row["coord"],
+                "node_type_norm": node_row["node_type_norm"],
+                "current_alliance": node_row["current_alliance"],
+                "owner_server": node_row["owner_server"],
+                "owner_server_source": node_row["owner_server_source"],
+                "server_side": node_row["server_side"],
+                "pact_status": node_row["pact_status"],
+                "status_norm": node_row["status_norm"],
+                "frontline_group": risk_row["frontline_group"],
+                "enemy_flag": node_row["enemy_flag"],
+                "destroyed_flag": node_row["destroyed_flag"],
+                "strategic_value": risk_row["strategic_value"],
+                "risk_score": risk_row["risk_score"],
+                "risk_level": risk_row["risk_level"],
+                "risk_note": risk_row["risk_note"],
+                "confidence": node_row["confidence"],
+                "memo": node_row["memo"],
+            }
+        )
+    return rows
+
+
+def sort_decision_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return sorted(
+        rows,
+        key=lambda row: (
+            -int(row.get("risk_score") or 0),
+            str(row.get("area") or ""),
+            str(row.get("coord") or ""),
+            str(row.get("node_id") or ""),
+        ),
+    )
+
+
+def build_decision_outputs(
+    node_current_rows: list[dict[str, Any]],
+    risk_rows: list[dict[str, Any]],
+) -> dict[str, list[dict[str, Any]]]:
+    decision_rows = merge_decision_rows(node_current_rows, risk_rows)
+
+    active_owned = {
+        "owned",
+        "owned_uncertain",
+    }
+    enemy_rows = [
+        row
+        for row in decision_rows
+        if row["server_side"] == "enemy" and row["status_norm"] in active_owned
+    ]
+    friendly_rows = [
+        row
+        for row in decision_rows
+        if row["server_side"] in {"self", "ally"} and row["status_norm"] in active_owned
+    ]
+    frontline_rows = [
+        row
+        for row in decision_rows
+        if row["frontline_group"] != "other" and row["status_norm"] in active_owned
+    ]
+    enemy_invasion_rows = [
+        row
+        for row in decision_rows
+        if row["server_side"] == "enemy"
+        and row["status_norm"] in active_owned
+        and row["frontline_group"] != "other"
+    ]
+    attack_rows = [
+        row
+        for row in decision_rows
+        if row["server_side"] == "enemy"
+        and row["status_norm"] in active_owned
+        and row["node_type_norm"] in {"city", "fishery", "trade"}
+    ]
+
+    return {
+        "current_enemy_nodes_v2.csv": sort_decision_rows(enemy_rows),
+        "current_friendly_nodes_v2.csv": sort_decision_rows(friendly_rows),
+        "server_534_frontline_risk_v2.csv": sort_decision_rows(frontline_rows),
+        "enemy_invasion_candidates_v2.csv": sort_decision_rows(enemy_invasion_rows),
+        "server_534_attack_candidates_v2.csv": sort_decision_rows(attack_rows),
+    }
+
+
 def print_summary(
     node_current_rows: list[dict[str, Any]],
     alert_rows: list[dict[str, Any]],
     risk_rows: list[dict[str, Any]],
+    decision_outputs: dict[str, list[dict[str, Any]]],
 ) -> None:
     level_counts = Counter(row["risk_level"] for row in risk_rows)
     print(f"node_current_v2 rows={len(node_current_rows)}")
@@ -427,6 +541,8 @@ def print_summary(
     print(f"high count={level_counts.get('high', 0)}")
     print(f"mid count={level_counts.get('mid', 0)}")
     print(f"low count={level_counts.get('low', 0)}")
+    for name, rows in decision_outputs.items():
+        print(f"{name} rows={len(rows)}")
 
 
 def main() -> None:
@@ -445,11 +561,14 @@ def main() -> None:
     node_current_rows = build_node_current_rows(nodes, directory, updated_at_jst)
     alert_rows = build_alert_rows(node_current_rows)
     risk_rows = build_risk_rows(node_current_rows)
+    decision_outputs = build_decision_outputs(node_current_rows, risk_rows)
 
     write_csv(output_dir / "node_current_v2.csv", NODE_CURRENT_COLUMNS, node_current_rows)
     write_csv(output_dir / "alerts_v2.csv", ALERT_COLUMNS, alert_rows)
     write_csv(output_dir / "risk_map_v2.csv", RISK_COLUMNS, risk_rows)
-    print_summary(node_current_rows, alert_rows, risk_rows)
+    for filename, rows in decision_outputs.items():
+        write_csv(output_dir / filename, DECISION_COLUMNS, rows)
+    print_summary(node_current_rows, alert_rows, risk_rows, decision_outputs)
 
 
 if __name__ == "__main__":
