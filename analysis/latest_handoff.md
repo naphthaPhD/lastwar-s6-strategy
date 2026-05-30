@@ -1,5 +1,29 @@
 # Handoff summary
 
+## 2026-05-31 R4/R5 one-page briefing
+
+## Context
+
+Created a one-page R4/R5 briefing from the commander review, classified edge CSVs, and commander dashboard. This is a meeting-start summary, not an operation order. Google Sheets write-back was not performed.
+
+## Updated files
+
+- `analysis/r4_r5_briefing_2026-05-31.md`
+- `tools/invasion_strategy_os/build_r4_r5_briefing.py`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. The briefing summarizes #534 destroyed critical cities `4`, #534 self attack edges `7`, #534 defense edges `7`, ally attack edges `11`, ally defense edges `11`, and map-check queues `21/21`.
+2. The displayed tables are capped for meeting use: #534 defense max 7, #534 attack max 7, ally attack max 5, ally defense max 5.
+3. `city_destroy_enabled=TRUE` in the current commander dashboard snapshot.
+
+## Recommended next actions
+
+1. Use `analysis/r4_r5_briefing_2026-05-31.md` as the first R4/R5 view.
+2. Use `analysis/commander_review_2026-05-31.md` and classified CSVs only for drill-down review.
+3. Treat all `edge_unknown` rows as map-confirmation queues, not orders.
+
 ## 2026-05-31 Edge execution classification
 
 ## Context
