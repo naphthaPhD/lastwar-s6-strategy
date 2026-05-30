@@ -1,5 +1,33 @@
 # Handoff summary
 
+## 2026-05-31 R4/R5 review map tab
+
+## Context
+
+Added a map view to the separate R4/R5 review Google Spreadsheet. The tab reuses the production `#534` spreadsheet's `全体マップたたき` layout by read-only `IMPORTRANGE`; production `#534` was not written to.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Google Sheets: `https://docs.google.com/spreadsheets/d/1PEU2O5DWGpC_vuaSkTCl1y6AzQ1QXLdQlKOgAD2ifb4/edit`
+
+## Key findings
+
+1. Added review tab: `map_review_v2`.
+2. `map_review_v2` imports `全体マップたたき!A1:DU120` from production `#534` for display only.
+3. The imported map expanded successfully on readback.
+4. Added simple visual formatting: compact map cells, frozen note rows, and conditional colors for confirmed self/ally candidates, known enemy candidates, and destroyed cells.
+5. Updated `README` to note that `map_review_v2` is a read-only review map and does not write to production `#534`.
+
+## Recommended next actions
+
+1. Use `map_review_v2` as the meeting map surface alongside `briefing`.
+2. Keep actual correction work in CSV/alliance audit first; do not edit production map from the review sheet.
+3. If more precision is needed, replace the live `IMPORTRANGE` view with a generated overlay from `node_current_v2.csv` and `risk_map_v2.csv`.
+
 ## 2026-05-31 SHA/nO9 refreshed R4/R5 review Google Sheet
 
 ## Context
