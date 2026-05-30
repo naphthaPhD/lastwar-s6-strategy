@@ -1,5 +1,34 @@
 # Handoff summary
 
+## 2026-05-31 Alliance side audit
+
+## Context
+
+Prioritized alliance ownership and side-classification audit before generating or expanding any further R4/R5 attack candidates. This audit is needed because alliances such as `SHA` and `nO9` may be #534-side or allied, while current generated outputs classify them as enemy.
+
+## Updated files
+
+- `tools/invasion_strategy_os/build_alliance_side_audit.py`
+- `sample_output/sheet_migration/alliance_side_audit_v2.csv`
+- `analysis/alliance_side_audit_2026-05-31.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. `alliance_side_audit_v2.csv` has `108` alliance rows.
+2. `risk_flag` rows: `79`.
+3. `unknown resolved_server` rows: `70`.
+4. `appears_as_enemy but maybe self/ally` rows: `2`.
+5. `SHA` classification: `server=503`, `server_side=enemy`, risk `enemy_in_534_area; enemy_but_known_self_or_ally_candidate`.
+6. `nO9` classification: `server=476`, `server_side=enemy`, risk `enemy_in_534_area; enemy_but_known_self_or_ally_candidate`.
+7. `JDX` and `4tH` both resolve to `server=534`, `server_side=self`, with no risk flag.
+
+## Recommended next actions
+
+1. Treat R4/R5 attack candidates as unconfirmed until `SHA` and `nO9` are manually reviewed.
+2. Use `manual_server_override` and `manual_note` in `alliance_side_audit_v2.csv` for human correction notes only; do not auto-apply them yet.
+3. After review, update `alliance_directory.csv` by human-approved changes, then regenerate V2 outputs.
+
 ## 2026-05-31 R4/R5 Google Sheets review export
 
 ## Context
