@@ -1,5 +1,28 @@
 # Handoff summary
 
+## 2026-05-31 Commander CSV review report
+
+## Context
+
+Generated a human-review Markdown report from the commander-facing V2 CSVs. This is not an operation order. It is a review aid for checking auto-generated triage rows before any R4/R5 decision.
+
+## Updated files
+
+- `analysis/commander_review_2026-05-31.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. The report includes the commander dashboard summary, top 30 critical risks, top 30 enemy invasion candidates, and top 30 #534 attack candidates.
+2. It automatically extracts review warnings: `confidence=medium`, blank `from_node_id`, unresolved owner server, `recommended_action` breakdown, and duplicate coordinates.
+3. Current extracted counts are `confidence=medium: 60`, `from_node_id blank: 30`, unresolved owner server in critical top rows: 30, and duplicate coordinate groups: 20.
+
+## Recommended next actions
+
+1. Review `analysis/commander_review_2026-05-31.md` before sharing any order text.
+2. Treat blank `from_node_id` rows as requiring map confirmation of launch/source nodes.
+3. Use duplicate coordinate groups to identify places appearing in multiple commander lists.
+
 ## 2026-05-31 Commander CSV readability
 
 ## Context
