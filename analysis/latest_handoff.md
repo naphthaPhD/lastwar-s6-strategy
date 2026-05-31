@@ -952,3 +952,50 @@ Review spreadsheet tab names can remain English, but R4/R5-facing cell labels sh
 
 - This was applied only to the review spreadsheet.
 - Production `#534` was not written to.
+
+## 2026-05-31 V2 pipeline rerun after management table update
+
+## Context
+
+Ran the local Python V2 generation sequence against the current production `#534` `管理表たたき` CSV export. This was a local regeneration only; Google Sheets review tabs were not refreshed in this step.
+
+## Updated files
+
+- `sample_output/sheet_migration/map_nodes.csv`
+- `sample_output/sheet_migration/ownership_current.csv`
+- `sample_output/sheet_migration/node_status.json`
+- `sample_output/sheet_migration/unmatched_owners.csv`
+- `sample_output/sheet_migration/pacts_candidates.csv`
+- `sample_output/sheet_migration/*_v2.csv`
+- `analysis/commander_review_2026-05-31.md`
+- `analysis/alliance_side_audit_2026-05-31.md`
+- `analysis/r4_r5_briefing_2026-05-31.md`
+- `analysis/latest_handoff.md`
+
+## Commands run
+
+```powershell
+.\.venv\Scripts\python.exe tools\invasion_strategy_os\migrate_534_sheet_mvp.py --input "<#534 管理表たたき CSV export URL>"
+.\.venv\Scripts\python.exe tools\invasion_strategy_os\build_node_status_mvp.py
+.\.venv\Scripts\python.exe tools\invasion_strategy_os\report_unmatched_owners_mvp.py
+.\.venv\Scripts\python.exe tools\invasion_strategy_os\build_sheet_v2_outputs.py
+.\.venv\Scripts\python.exe tools\invasion_strategy_os\build_alliance_side_audit.py
+.\.venv\Scripts\python.exe tools\invasion_strategy_os\build_r4_r5_briefing.py
+```
+
+## Key findings
+
+1. `map_nodes_rows=2168`, `ownership_current_rows=2168`, duplicate node IDs `0`.
+2. `destroyed_count=109`, up from the earlier 52-row snapshot.
+3. `node_current_v2 rows=2168`, `alerts_v2 rows=1926`, `risk_map_v2 rows=2168`.
+4. Risk counts are `critical=111`, `high=167`, `mid=806`, `low=1084`.
+5. Commander outputs: `top_critical_risks_534_v2 rows=8`, `top_enemy_invasion_candidates_v2 rows=30`, `top_server_534_attack_targets_v2 rows=30`.
+6. Edge classification: self attack `5`, ally attack `3`, unknown attack `25`; self defense `5`, ally defense `5`, unknown defense `23`.
+7. `city_destroy_enabled=FALSE`, so city destruction candidates should be treated as outside the active window.
+8. Alliance audit still resolves `SHA`, `nO9`, `JDX`, and `4tH` as `server:534, side:self, risk:none`.
+
+## Notes
+
+- The first CSV export run required network access outside the sandbox.
+- Review Google Sheet refresh is still a separate step.
+- Production `#534` was read only and was not written to.
