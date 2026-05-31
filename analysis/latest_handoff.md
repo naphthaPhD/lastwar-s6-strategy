@@ -926,3 +926,29 @@ R4/R5 review spreadsheet `#534_R4R5レビュー_2026-05-31` を当面は本番 `
 1. 定期再生成時は `manual` の手順に従い、まずローカルCSV/Markdownを更新する。
 2. 本番 `#534` には自動書込せず、レビュー用シートだけを更新する。
 3. 将来、更新頻度が上がる場合はレビュー用Google Sheet更新処理だけをスクリプト化する。
+
+## 2026-05-31 R4/R5 review sheet Japanese cell labels
+
+## Context
+
+Review spreadsheet tab names can remain English, but R4/R5-facing cell labels should be readable in Japanese.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Google Sheets: `https://docs.google.com/spreadsheets/d/1PEU2O5DWGpC_vuaSkTCl1y6AzQ1QXLdQlKOgAD2ifb4/edit`
+
+## Key findings
+
+1. Kept tab names in English.
+2. Changed visible header cells in `manual`, `briefing`, `dashboard`, `self_defense_edges`, `self_attack_edges`, `ally_coordination`, `map_check_queue`, `critical_534`, and `alliance_audit` to Japanese labels.
+3. Left CSV filenames and some machine-oriented values as-is where they help trace the generated source files.
+4. Added README notes that visible cells are Japanese while sheet names remain English.
+
+## Notes
+
+- This was applied only to the review spreadsheet.
+- Production `#534` was not written to.
