@@ -1,5 +1,35 @@
 # Handoff summary
 
+## 2026-05-31 R4/R5 map colors from area color assignment
+
+## Context
+
+Expanded the R4/R5 review `map_review_v2` color rules using the production `#534` sheet `エリア色割当`. Production `#534` was read only and was not written to.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Google Sheets: `https://docs.google.com/spreadsheets/d/1PEU2O5DWGpC_vuaSkTCl1y6AzQ1QXLdQlKOgAD2ifb4/edit`
+
+## Key findings
+
+1. Read `エリア色割当` from production `#534`.
+2. Expanded #534 blue rules from the #534 column, including previously uncolored tags such as `MOE`, `SHA0`, `sg3`, `Trh`, `w6F`, `Skh`, `kOi`, `59U`, `noI`, `Dao`, `RGWC`, `f4j`, `moca`, `CROW`, and `Ryu1`.
+3. Expanded #509/#440/#511 green rules from the corresponding ally columns.
+4. Expanded #503/#480/#523/#476 red rules from the corresponding enemy columns.
+5. Kept `破壊` cells with gray background.
+6. Left the `中央` column out of automatic side coloring because it does not itself define a server side.
+7. Sample readback confirmed newly covered tags such as `MOE`, `JL0`, and `EDFS` exist on `map_review_v2`.
+
+## Recommended next actions
+
+1. If central-map tags need side colors, review them manually and add them to `alliance_directory.csv` or a separate central-side rule.
+2. Continue using `alliance_audit` to resolve uncolored or ambiguous tags.
+3. Treat the map colors as review aids, not final attack authorization.
+
 ## 2026-05-31 R4/R5 map alliance color rules
 
 ## Context
