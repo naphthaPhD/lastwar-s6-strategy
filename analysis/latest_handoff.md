@@ -1,5 +1,35 @@
 # Handoff summary
 
+## 2026-05-31 R4/R5 map alliance color rules
+
+## Context
+
+Updated the R4/R5 review `map_review_v2` color rules so alliance-name colors are based on resolved server affiliation, not the area where the cell appears. Production `#534` was not written to.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Google Sheets: `https://docs.google.com/spreadsheets/d/1PEU2O5DWGpC_vuaSkTCl1y6AzQ1QXLdQlKOgAD2ifb4/edit`
+
+## Key findings
+
+1. Added conditional formatting over `map_review_v2!A1:DU120`.
+2. Confirmed #534 alliance names are blue: `4tH`, `89M`, `JDX`, `KTVS`, `SHA`, `nO9`.
+3. Confirmed #509/#440/#511 alliance names are green: `2N7`, `BAJ`, `DaNG`, `FHX`, `GoDs`, `SsQ`, `SVa`, `VEX`, `tWD`.
+4. Confirmed #503/#480/#476 alliance names are red: `476A`, `476B`, `476C`, `476H`, `476K`, `476M`, `476T`, `476X`, `476Z`, `476d`, `AAOA`, `BgNa`, `Digg`, `GX99`, `Lghs`, `RCON`, `TkTk`, `fzn`.
+5. `破壊` cells have gray background.
+6. Unresolved alliances are intentionally left uncolored to avoid false self/ally/enemy classification.
+7. Sample readback found `SHA`, `FHX`, `476A`, and `破壊` cells in `map_review_v2`.
+
+## Recommended next actions
+
+1. Review unresolved alliance names in `alliance_audit` before adding more color rules.
+2. Add #523-specific alliance tags once their resolved server is confirmed.
+3. Keep `map_review_v2` as a review surface, not an operation-order surface.
+
 ## 2026-05-31 R4/R5 map refreshed from management table
 
 ## Context
