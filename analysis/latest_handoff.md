@@ -1,5 +1,33 @@
 # Handoff summary
 
+## 2026-05-31 R4/R5 map refreshed from management table
+
+## Context
+
+Refreshed the R4/R5 review `map_review_v2` using the latest production `#534` map values. Production `全体マップたたき` already references `管理表たたき`, so the review map was updated by refreshing hidden `map_review_raw_v2` and pasting its current values into the visible copied map tab.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Google Sheets: `https://docs.google.com/spreadsheets/d/1PEU2O5DWGpC_vuaSkTCl1y6AzQ1QXLdQlKOgAD2ifb4/edit`
+
+## Key findings
+
+1. Refreshed `map_review_raw_v2` with `IMPORTRANGE` from production `全体マップたたき!A1:DU120`.
+2. Pasted the current values from `map_review_raw_v2` into visible `map_review_v2`.
+3. Kept the copied production map formatting, merged cells, and column widths on `map_review_v2`.
+4. Readback confirmed sampled #534, #476, and #509 ranges have current values and no `#REF!`.
+5. Production `#534` was not modified.
+
+## Recommended next actions
+
+1. Use `map_review_v2` as the current visual map snapshot for R4/R5 review.
+2. Repeat the same refresh process after future `管理表たたき` updates.
+3. If live auto-refresh is required later, copy the dependency tabs or move map rendering to a script-generated view.
+
 ## 2026-05-31 R4/R5 full-copy map refresh
 
 ## Context
