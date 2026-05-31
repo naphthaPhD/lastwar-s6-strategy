@@ -248,11 +248,11 @@ OCR本文:
 1. `APACHE` は #440 `GcC` 側として、#523方面への移動計画を説明している。
 2. `GoDs` と `IMp` が #523へ移動するため、#534側にこの2同盟との pact を求めている。
 3. `4tH` は `GoDs` と pact して、次の土曜日に #523へ入る案が出ている。
-4. `GcC` は金曜日に `KTV` または `SHA` と pact する発言があり、どちらが正しいかは未確定。
+4. 追加スクショでは、`GcC` は `KTVS` と、`SHA` は `BAJ` と pact する整理が示された。
 5. `APACHE` は #476への侵入・攻撃を目標として示している。
 6. #476内の `SHA` 魚場 Lv.1 `(X:599, Y:978)` は重要土地として防衛要請されている。
 7. `RevoLove` は、`JDX` と `KTVS` が水曜日に #480内で進行する予定だと伝えた。
-8. `APACHE` は、その計画は水曜日ではなく土曜日だと訂正している。
+8. 追加スクショでは、`APACHE` は「水曜日の計画」と「土曜日の計画」を分けて説明し、水曜日は `BAJ` 向けの移動、土曜日は `GoDs` と `JDX` の #523進入として説明している。
 9. 土地放棄時のシールドが水曜日まで続く可能性があり、土地選択ミスが外交・移動計画上の問題になる。
 
 ## 5. Strategic interpretation
@@ -263,7 +263,7 @@ OCR本文:
 
 ### 5.2 #534 side implications
 
-#534側にとって重要なのは、`GoDs` / `IMp` / `KTVS` / `SHA` / `4tH` のどのpactがどの日に成立するかを確定すること。特に、#480進行を水曜日に進める予定と、APACHE側がいう土曜日計画がずれているため、ここを確認しないと作戦時刻が噛み合わない。
+#534側にとって重要なのは、`GoDs` / `IMp` / `KTVS` / `SHA` / `4tH` / `BAJ` のどのpactがどの日に成立するかを確定すること。追加スクショでは、`GcC-KTVS`、`SHA-BAJ`、`JDX-GoDs` という組み合わせが示され、水曜日は `BAJ` 向けの移動、土曜日は `GoDs` と `JDX` の #523進入として説明された。
 
 ### 5.3 Potential route logic
 
@@ -272,32 +272,142 @@ OCR本文:
 | Route candidate | Mentioned pact | Target |
 |---|---|---|
 | `4tH` -> `GoDs` | next Saturday | enter #523 |
+| `JDX` -> `GoDs` | Saturday plan | enter #523 |
 | #534 side -> `GoDs` / `IMp` | requested by APACHE | start move to #523 |
-| `GcC` -> `KTV/KTVS` | Friday | unclear, probably #480/#523 route support |
-| `GcC` -> `SHA` | Friday | unclear, possibly alternate pact line |
+| `GcC` -> `KTVS` | Friday | pact line clarified by APACHE |
+| `SHA` -> `BAJ` | Friday/context unclear | pact line clarified by APACHE |
 | `JDX` / `KTVS` -> #480 | Wednesday per RevoLove | advance inside #480 |
 
 ## 6. Risks
 
-1. `KTV/KTVS` と `SHA` のどちらと `GcC` が金曜に pact するのか曖昧。
-2. `水曜日` と `土曜日` の計画認識が食い違っている。
+1. `GcC-KTVS`、`SHA-BAJ`、`JDX-GoDs` の整理は追加スクショで示されたが、各pactの実行時刻はまだ要確認。
+2. `水曜日` と `土曜日` の役割分担は見えてきたが、#480進行、#440内移動、#523進入の順序はまだ詰める必要がある。
 3. #476内 `SHA` 土地 `(599,978)` は防衛要請されており、失うと後続のpactまたは侵攻経路に影響する可能性がある。
 4. `APACHE` の英語とゲーム内翻訳に曖昧さがあり、`BAJ/baj` の関係は追加確認が必要。
 5. 土地放棄後のシールドにより、意図したタイミングで通路やpact用土地を使えない可能性がある。
 
 ## 7. Recommended actions
 
-1. `APACHE` に、金曜日の pact 相手が `KTV/KTVS` なのか `SHA` なのか、または両方なのかを確認する。
-2. 「水曜日の#480進行」と「土曜日の#523突入」の関係を確認する。
-3. `4tH -> GoDs -> #523` の土曜日ルートを、4tH/GoDs双方に確認する。
-4. `GoDs` と `IMp` の #523移動開始予定時刻を確認する。
-5. #476 `SHA` 魚場 Lv.1 `(599,978)` の防衛担当と期限を決める。
-6. 土地放棄時のシールド終了時刻をゲーム内で再確認し、pact/移動予定表に反映する。
+1. `APACHE` に、こちらの日本語要約が正しいか確認する。
+2. `GcC-KTVS`、`SHA-BAJ`、`JDX-GoDs` のpact日程と実行順を確認する。
+3. 「水曜日の移動/準備」と「土曜日の#523突入」の関係を確認する。
+4. `4tH -> GoDs -> #523` の土曜日ルートを、4tH/GoDs双方に確認する。
+5. `GoDs` と `IMp` の #523移動開始予定時刻を確認する。
+6. #476 `SHA` 魚場 Lv.1 `(599,978)` の防衛担当と期限を決める。
+7. 土地放棄時のシールド終了時刻をゲーム内で再確認し、pact/移動予定表に反映する。
 
 ## 8. Unknowns
 
 - `KTV` と `KTVS` が同一同盟を指すのか、表記揺れなのか。
-- `BAJ/baj` と `SHA` の pact 関係。
+- `BAJ/baj` と `SHA` の pact 関係は追加スクショで示されたが、具体的な日時は未確認。
 - `G→ktvs・B→SHA` の `G` / `B` が何を指すか。
 - APACHE側の「土曜日」が具体的に何月何日、何時を指すか。
 - `GcC` の `#8061` 座標が通常サーバ表記なのか、特殊マップ/表示上の番号なのか。
+
+## 9. Additional chat clarification
+
+追加スクショでは、APACHE が pact の組み合わせと曜日の役割をさらに説明した。
+
+### 9.1 Pact pairs
+
+```text
+Ktvs with Gcc
+KTVSとGcCで
+
+SHA with baj
+SHA with BAJ
+
+JDX with Gods to enter 523
+JDXはGoDsと一緒に523へ入る
+```
+
+読み取り:
+
+- `GcC` は `KTVS` と pact。
+- `SHA` は `BAJ` と pact。
+- `JDX` は `GoDs` と pact して #523へ入る。
+
+### 9.2 Wednesday plan and Saturday plan
+
+```text
+This plan for Wednesday
+これは水曜日の計画
+
+This plan for Saturday
+これは土曜日の計画
+
+Gods and JDX
+GoDs と JDX
+
+This move for Wednesday
+これは水曜日の動き
+
+For Baj
+BAJのため
+```
+
+読み取り:
+
+- APACHE は、水曜日の移動/準備と土曜日の #523進入を分けて説明している。
+- 土曜日の計画は `GoDs + JDX` の #523進入。
+- 水曜日の動きは `BAJ` に関係する移動/準備と見られる。
+
+### 9.3 APACHE strategic intent
+
+```text
+Please we must do this plan to win the season
+440 need to enter 476 to stop them moving every place
+and other server like 534 511 509 attack 523 503 480
+```
+
+読み取り:
+
+- APACHE は「この作戦をしないとシーズンに勝てない」と強く主張している。
+- #440 は #476へ入り、#476側の移動を止める役割。
+- その間に #534 / #511 / #509 が #523 / #503 / #480 を攻撃する構想。
+
+### 9.4 RevoLove response and remaining disagreement
+
+RevoLove は、水曜日は進める日なので、水曜日に枠を使うのはもったいなく、#440内の移動はその前がよいのではないかと返している。
+
+```text
+水曜日に枠を使うのは勿体ないと思う
+
+水曜日に捨てるのかな？
+
+水曜日は進める日だから、440内の移動はその前の方がいいと思う
+```
+
+APACHE はその場では詳細説明を後回しにした。
+
+```text
+I will explain for you more later ok dear
+I am busy now with my family
+```
+
+## 10. Confirmation message to APACHE
+
+APACHE にこちらの日本語要約が正しいか確認するための英文案。
+
+```text
+Hi APACHE,
+
+I summarized my understanding in Japanese for our members.
+Could you please check if this is correct?
+
+1. GcC will pact with KTVS.
+2. SHA will pact with BAJ.
+3. JDX will pact with GoDs and enter #523.
+4. 4tH will also pact with GoDs and enter #523 next Saturday.
+5. #440 needs to enter #476 to stop them from moving everywhere.
+6. While #440 works on #476, #534 / #511 / #509 will attack #523 / #503 / #480.
+7. The Wednesday plan is for movement/preparation.
+8. The Saturday plan is for GoDs + JDX to enter #523.
+9. The SHA land in #476 at X:599 Y:978 is very important and should be protected.
+10. Dropping the wrong land may cause a shield problem until Wednesday.
+
+Is this understanding correct?
+If anything is wrong, please correct it.
+
+I want to avoid misunderstanding before sharing this with our members.
+```

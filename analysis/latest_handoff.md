@@ -1,5 +1,33 @@
 # Handoff summary
 
+## 2026-06-01 APACHE clarification and confirmation draft
+
+## Context
+
+Added the follow-up `(GcC)APACHE` chat clarification into the diplomacy OCR note and preserved a short English confirmation message for APACHE.
+
+## Updated files
+
+- `analysis/2026-06-01_gcc_apache_diplomacy_ocr.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. Additional screenshots clarify the pact pairs as `GcC-KTVS`, `SHA-BAJ`, and `JDX-GoDs`.
+2. APACHE separates a Wednesday movement/preparation plan from a Saturday plan.
+3. The Saturday plan is described as `GoDs + JDX` entering #523.
+4. The Wednesday movement appears to be related to `BAJ`.
+5. APACHE's strategic intent is for #440 to enter #476 to stop enemy movement while #534/#511/#509 attack #523/#503/#480.
+6. RevoLove's concern is that using a movement slot on Wednesday may be wasteful because Wednesday is an advance day; #440 internal movement may need to happen earlier.
+7. A concise English confirmation draft was added so APACHE can verify the Japanese summary before it is shared.
+
+## Recommended next actions
+
+1. Send the confirmation draft to APACHE and ask for corrections.
+2. Confirm exact date/time for the Wednesday and Saturday actions.
+3. Confirm whether `KTV` and `KTVS` are the same alliance label.
+4. Keep local file paths and personal-name-bearing paths out of shared Markdown/PDF outputs.
+
 ## 2026-06-01 GcC APACHE diplomacy OCR
 
 ## Context
