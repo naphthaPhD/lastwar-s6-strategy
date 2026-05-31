@@ -1035,3 +1035,45 @@ Added protection-operation tabs to the R4/R5 review spreadsheet. The intent is n
 
 - Production `#534` was not written to.
 - The next step is to populate `protection_targets_v2` from the current A/B uppercase fishery rows, then derive candidate punch sources.
+
+## 2026-05-31 protection plan calculated from current management table
+
+## Context
+
+Calculated A/B uppercase fishery protection-punch targets from the current `管理表たたき`-derived `node_current_v2.csv` and `state.json` adjacency. Updated the R4/R5 review spreadsheet, not production `#534`.
+
+## Updated files
+
+- `tools/invasion_strategy_os/build_protection_v2_outputs.py`
+- `sample_output/sheet_migration/protection_targets_v2.csv`
+- `sample_output/sheet_migration/protection_source_pool_v2.csv`
+- `sample_output/sheet_migration/protection_candidates_v2.csv`
+- `sample_output/sheet_migration/protection_notice_v2.csv`
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Google Sheets: `https://docs.google.com/spreadsheets/d/1PEU2O5DWGpC_vuaSkTCl1y6AzQ1QXLdQlKOgAD2ifb4/edit`
+
+## Key findings
+
+1. A/B uppercase fishery rows checked: `176`.
+2. Blue-owned protection targets: `23` total, split into A-line `12` and B-line `11`.
+3. Source pool: `39` adjacent blue-owned candidate source nodes.
+4. Candidate edges: `59` target/source adjacent combinations.
+5. `protection_notice_v2` was updated with 23 executor-facing rows.
+6. `protection_targets_v2` was updated with the 23 blue-owned A/B fishery targets.
+7. `protection_candidates_v2` and `protection_source_pool_v2` currently show summary rows; full detail is in the local CSVs.
+
+## Assumptions
+
+- Blue alliances are treated as #534 operation candidates based on the review map color assignment.
+- Green alliances are excluded as overseas/ally operation targets for this workflow.
+- Red alliances are excluded as enemy candidates.
+- Same-alliance punch sources are excluded.
+- Pact/盟約 and same-day acquisition limit remain human checks, not automatic approvals.
+
+## Notes
+
+- The generated notice is a candidate execution notice, not an order.
+- Production `#534` was not written to.
