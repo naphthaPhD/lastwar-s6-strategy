@@ -900,3 +900,29 @@ R4/R5 review spreadsheet `#534_R4R5レビュー_2026-05-31` の `map_review_v2` 
 - 本番 `#534` スプレッドシートには書き込んでいない。
 - 更新対象はレビュー用スプレッドシートのみ。
 - 下部サンプル `A121:H135`, `AP121:AW135`, `CE121:CL135` で `#REF!` が消えていることを確認済み。
+
+## 2026-05-31 R4/R5 review sheet manual tab
+
+## Context
+
+R4/R5 review spreadsheet `#534_R4R5レビュー_2026-05-31` を当面は本番 `#534` と分けて運用するため、レビュー用シート内に `manual` タブを追加した。
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Google Sheets: `https://docs.google.com/spreadsheets/d/1PEU2O5DWGpC_vuaSkTCl1y6AzQ1QXLdQlKOgAD2ifb4/edit`
+
+## Key findings
+
+1. `manual` タブを追加し、見る順番、注意事項、定期再生成手順、マップ更新、データ整備、禁止事項を記載した。
+2. 定期運用手順は、ローカルCSV/Markdown生成を先に行い、レビュー用Google Sheetだけを更新する流れにした。
+3. READMEにも `manual` 追加と、レビュー用シートには全量 `node_current_v2` / `risk_map_v2` / `alerts_v2` を入れない方針を追記した。
+
+## Recommended next actions
+
+1. 定期再生成時は `manual` の手順に従い、まずローカルCSV/Markdownを更新する。
+2. 本番 `#534` には自動書込せず、レビュー用シートだけを更新する。
+3. 将来、更新頻度が上がる場合はレビュー用Google Sheet更新処理だけをスクリプト化する。
