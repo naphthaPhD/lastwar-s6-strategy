@@ -999,3 +999,39 @@ Ran the local Python V2 generation sequence against the current production `#534
 - The first CSV export run required network access outside the sandbox.
 - Review Google Sheet refresh is still a separate step.
 - Production `#534` was read only and was not written to.
+
+## 2026-05-31 protection notice sheet scaffold
+
+## Context
+
+Added protection-operation tabs to the R4/R5 review spreadsheet. The intent is not GPT export, but a sheet structure Codex can use to reason about A/B line fishery protection punches and a concise notice table that can be shared with the actual executors.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Google Sheets: `https://docs.google.com/spreadsheets/d/1PEU2O5DWGpC_vuaSkTCl1y6AzQ1QXLdQlKOgAD2ifb4/edit`
+
+## Added tabs
+
+- `protection_rules_v2`
+- `protection_targets_v2`
+- `protection_source_pool_v2`
+- `protection_candidates_v2`
+- `protection_notice_v2`
+- `protection_result_log_v2`
+
+## Key findings
+
+1. Tab names remain English, but visible cells are Japanese.
+2. `protection_notice_v2` is the main executor-facing sheet. It includes A-line and B-line template rows plus a copyable notice text block.
+3. `protection_rules_v2` records the fixed assumptions: A-line aims for next battle-day 7:00 release, B-line aims for next battle-day 23:00 release, and 15:00-16:00 JST is a no-action safe time.
+4. `protection_targets_v2`, `protection_source_pool_v2`, and `protection_candidates_v2` are staff-side planning tables.
+5. `protection_result_log_v2` is for execution time, result, protection display, and screenshot/link logging.
+
+## Notes
+
+- Production `#534` was not written to.
+- The next step is to populate `protection_targets_v2` from the current A/B uppercase fishery rows, then derive candidate punch sources.
