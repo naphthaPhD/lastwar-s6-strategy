@@ -1,5 +1,33 @@
 # Handoff summary
 
+## 2026-05-31 R4/R5 merged map view refresh
+
+## Context
+
+Refined the R4/R5 review Google Spreadsheet map. The visible `map_review_v2` tab now uses a value snapshot from production `#534` `全体マップたたき`, with merged area headers and compact map formatting. Production `#534` was read only and was not written to.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Google Sheets: `https://docs.google.com/spreadsheets/d/1PEU2O5DWGpC_vuaSkTCl1y6AzQ1QXLdQlKOgAD2ifb4/edit`
+
+## Key findings
+
+1. Confirmed `全体マップたたき` formulas read from `管理表たたき`, so the refreshed review map reflects the user's latest management-table updates.
+2. Created hidden helper tab `map_review_raw_v2` to import the current production map.
+3. Rebuilt visible `map_review_v2` as a value-snapshot map and merged the main area headers for #534/#509/#503, #476/central/#480, and #523/#511/#440 layout.
+4. Updated compact row/column sizing, borders, header formatting, and README notes.
+5. Production `#534` was not modified.
+
+## Recommended next actions
+
+1. Use `map_review_v2` as the R4/R5 visual map surface.
+2. If the production `管理表たたき` changes again, refresh the value snapshot from `map_review_raw_v2`.
+3. Keep action decisions tied to `briefing`, `edge` tabs, and `alliance_audit`; use the map as visual confirmation.
+
 ## 2026-05-31 GitHub account transition summary
 
 ## Context
