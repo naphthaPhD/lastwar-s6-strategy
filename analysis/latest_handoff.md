@@ -1,5 +1,34 @@
 # Handoff summary
 
+## 2026-05-31 R4/R5 full-copy map refresh
+
+## Context
+
+Rebuilt the R4/R5 review `map_review_v2` by copying the production `#534` `全体マップたたき` tab first, then replacing broken formulas with current imported values. This preserves the original map layout, formatting, column widths, and merged-cell structure much better than the previous manual reconstruction.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Google Sheets: `https://docs.google.com/spreadsheets/d/1PEU2O5DWGpC_vuaSkTCl1y6AzQ1QXLdQlKOgAD2ifb4/edit`
+
+## Key findings
+
+1. Renamed the previous manual `map_review_v2` to `map_review_v2_old_manual` and hid it.
+2. Copied production `全体マップたたき` into the review spreadsheet as the new visible `map_review_v2`.
+3. The copied formulas initially showed `#REF!` because the review spreadsheet does not contain production-side dependency tabs such as `管理表たたき`.
+4. Fixed the visible map by pasting current values from hidden `map_review_raw_v2` into the copied tab, while keeping copied formatting and merged cells.
+5. Readback confirmed visible values for #534, #476, and #509 sections without `#REF!` in sampled ranges.
+6. Production `#534` was not modified.
+
+## Recommended next actions
+
+1. Use this full-copy `map_review_v2` as the visual map surface for R4/R5.
+2. Refresh by repeating the same pattern: import current values into hidden raw tab, then paste values onto the copied visible tab.
+3. Avoid adding live formulas from production dependency tabs into the review spreadsheet unless those dependency tabs are intentionally copied too.
+
 ## 2026-05-31 R4/R5 merged map view refresh
 
 ## Context
