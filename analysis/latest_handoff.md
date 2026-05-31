@@ -1,5 +1,41 @@
 # Handoff summary
 
+## 2026-06-01 GcC APACHE diplomacy OCR
+
+## Context
+
+OCR-read and summarized 10 screenshots from `(GcC)APACHE` chat about #440/#534 pact routing, #523 movement, #480/#476 operations, and critical fishery land.
+
+## Updated files
+
+- `analysis/2026-06-01_gcc_apache_diplomacy_ocr.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. #440 `GcC` / `APACHE` is proposing movement toward #523 through pact coordination.
+2. `APACHE` says `GoDs` and `IMp` will move toward #523, and asks #534-side alliances to pact with those two alliances to start moving to #523.
+3. `4tH` is described as making pact with `GoDs` and entering #523 next Saturday.
+4. `GcC` says it will pact with `KTV` on Friday, but also says `GcC` must pact with `SHA` Friday; this is unresolved and needs confirmation.
+5. `APACHE` says the goal may be to enter #476 and defeat them.
+6. #476 `SHA` fishery Lv.1 at `X:599 Y:978` is described as very important and should be defended.
+7. `RevoLove` says `JDX` and `KTVS` plan to advance inside #480 on Wednesday; `APACHE` corrects that the plan is Saturday, not Wednesday.
+8. `APACHE` warns that dropping land may leave it shielded until Wednesday, so wrong land selection can block the route.
+
+## Current risks
+
+1. Friday pact target is ambiguous: `KTV/KTVS`, `SHA`, or both.
+2. Wednesday vs Saturday timing is inconsistent between #534 and #440 understanding.
+3. `BAJ/baj` relationship to `SHA` pact is unclear from OCR.
+4. Losing #476 `SHA` land at `599,978` may disrupt a later route or pact condition.
+
+## Recommended next actions
+
+1. Ask `APACHE` to clarify Friday pact target: `KTV/KTVS`, `SHA`, or both.
+2. Confirm whether #480 movement is Wednesday while #523 entry is Saturday, or whether all movement should wait until Saturday.
+3. Confirm `4tH -> GoDs -> #523` route with both 4tH and GoDs.
+4. Assign defense responsibility for #476 `SHA` fishery `X:599 Y:978`.
+
 ## 2026-05-31 R4/R5 map colors from area color assignment
 
 ## Context
