@@ -1,5 +1,34 @@
 # Handoff summary
 
+## 2026-06-02 Fishery sheet organization index
+
+## Context
+
+The fishery workbook had grown to 16 tabs, making it harder to know which sheet to use. Added an organization tab rather than deleting or hiding existing tabs.
+
+## Updated files
+
+- `tools/fishery_protection_sheet/Code.gs`
+- `tools/fishery_protection_sheet/README.md`
+- `analysis/2026-06-01_fishery_protection_sheet_system.md`
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Working Google Sheet tab `00_目次`: added and moved to the first tab position.
+
+## Key findings
+
+1. `00_目次` groups sheets into `日常運用`, `入力マスタ`, `取込確認`, and `旧/自動生成`.
+2. Daily operators should primarily use `漁場一覧4枠`, `開放カレンダー4枠`, `侵攻ルート確認`, `連盟安全期間`, and `シミュレーター`.
+3. `イベント一覧` and `カレンダー` remain for compatibility but are marked as old/auto-generated views; the four-state views should be preferred.
+4. No existing sheet was deleted or hidden.
+
+## Recommended next actions
+
+1. Use `00_目次` as the entry point for the workbook.
+2. If the tab count continues to grow, hide only review/archive tabs after confirming with the operator.
+
 ## 2026-06-01 Fishery alliance judgment and pact/capacity constraints
 
 ## Context

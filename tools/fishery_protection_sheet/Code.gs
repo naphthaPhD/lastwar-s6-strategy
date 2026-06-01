@@ -1,4 +1,5 @@
 const SHEET_NAMES = {
+  INDEX: '00_目次',
   LIST: '漁場一覧',
   EVENTS: 'イベント一覧',
   SIMULATOR: 'シミュレーター',
@@ -45,6 +46,34 @@ const LIST_HEADERS = [
   '制約メモ',
   '敵侵攻前提',
   '総合判定',
+];
+
+const INDEX_HEADERS = [
+  '分類',
+  '優先',
+  'シート名',
+  '用途',
+  '見る頻度',
+  'メモ',
+];
+
+const INDEX_ROWS = [
+  ['日常運用', 1, '漁場一覧4枠', '漁場ごとの現在保護切れ、4状態、保護パン可否、敵味方/盟約/キャパ制約を見る', '毎回', 'まずここを見る'],
+  ['日常運用', 2, '開放カレンダー4枠', '水曜23時・木曜7時・土曜23時・日曜7時の4枠で対象漁場を一覧化', '毎回', '15時は最終枠にしない'],
+  ['日常運用', 3, '侵攻ルート確認', '同じ侵攻ルート上の連続開放、敵保有、同時突破リスクを見る', '毎回', '危険/分散の判断'],
+  ['日常運用', 4, '連盟安全期間', '連盟ごとの安全期間と放棄後の最短取得可能時刻を確認', '必要時', '放棄判断用'],
+  ['日常運用', 5, 'シミュレーター', '取得・保護パン・放棄時の次回保護切れを試算', '必要時', '個別ケース確認'],
+  ['入力マスタ', 1, '漁場一覧', '元データ。漁場ごとの所有連盟、座標、保護切れを保持', '更新時', '直接編集は慎重に'],
+  ['入力マスタ', 2, '連盟判定', '敵/味方/同サーバ/他サーバ味方などの判定マスタ', '更新時', 'xJR/476C/476Bは敵登録済み'],
+  ['入力マスタ', 3, '盟約管理', '盟約相手と有効状態を管理。盟約中は保護パン不可', '更新時', '外交変更時に更新'],
+  ['入力マスタ', 4, '連盟キャパ管理', '1日取得上限、所有都市、都市由来漁場上限、現所有数を管理', '更新時', '取得役の余力判断'],
+  ['入力マスタ', 5, 'ライン定義', 'エリア別の侵攻方向・ライン軸を管理', '変更時', '#509/#476追加時に使う'],
+  ['取込確認', 1, 'ABCスクショ取込確認', '#534 ABCスクショのファイル順・目視値・番号正規化確認', '取込時', 'A-1,A-3...順'],
+  ['取込確認', 2, '縦スクショ再分析', '縦スクショの指定順/OCR/目視/不一致確認', '取込時', '#503/#534混入を要判断'],
+  ['取込確認', 3, '縦スクショ取込確認', '縦スクショ初期取込データと並替ヘルパー', '必要時', '監査用'],
+  ['取込確認', 4, '縦スクショ逆順ビュー', '縦スクショをK→A、番号降順で見る補助ビュー', '必要時', '並替確認用'],
+  ['旧/自動生成', 1, 'イベント一覧', '旧時系列一覧。4枠運用では開放カレンダー4枠を優先', '通常見ない', 'Apps Script互換用'],
+  ['旧/自動生成', 2, 'カレンダー', '旧カレンダー。4枠運用では開放カレンダー4枠を優先', '通常見ない', 'Apps Script互換用'],
 ];
 
 const EVENT_HEADERS = [
@@ -200,6 +229,7 @@ function onOpen() {
 
 function setupFisheryProtectionWorkbook() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const indexSheet = ensureSheet_(ss, SHEET_NAMES.INDEX);
   const listSheet = ensureSheet_(ss, SHEET_NAMES.LIST);
   const eventsSheet = ensureSheet_(ss, SHEET_NAMES.EVENTS);
   const simulatorSheet = ensureSheet_(ss, SHEET_NAMES.SIMULATOR);
@@ -210,6 +240,7 @@ function setupFisheryProtectionWorkbook() {
   const pactSheet = ensureSheet_(ss, SHEET_NAMES.PACTS);
   const capacitySheet = ensureSheet_(ss, SHEET_NAMES.CAPACITY);
 
+  setupIndexSheet_(indexSheet);
   setupListSheet_(listSheet);
   setupEventsSheet_(eventsSheet);
   setupSimulatorSheet_(simulatorSheet);
@@ -380,6 +411,22 @@ function NEXT_AFTER_PROTECTION_PUNCH(protectUntil) {
   const normalized = normalizeOperationalSlot_(protectUntil);
   const state = getProtectionState_(normalized);
   return state ? nextProtectionAfterState_(state.label, normalized) : '';
+}
+
+function setupIndexSheet_(sheet) {
+  sheet.clear();
+  sheet.getRange('A1:F1').setValues([['Last War S6 漁場保護管理 目次', '', '', '', '', '']]);
+  sheet.getRange(2, 1, 1, INDEX_HEADERS.length).setValues([INDEX_HEADERS]);
+  sheet.getRange(3, 1, INDEX_ROWS.length, INDEX_HEADERS.length).setValues(INDEX_ROWS);
+  sheet.getRange(INDEX_ROWS.length + 4, 1, 2, INDEX_HEADERS.length).setValues([
+    ['整理方針', '', '', '削除はしない。日常運用は上段5タブ、編集は入力マスタ、OCR確認は取込確認へ分離。', '', ''],
+    ['注意', '', '', 'A列/B列だけで時刻を固定しない。必ず漁場単位の保護切れと4状態を見る。', '', ''],
+  ]);
+  sheet.setFrozenRows(2);
+  sheet.getRange('A1:F1').setFontWeight('bold').setFontSize(14).setBackground('#0d3b66').setFontColor('#ffffff');
+  sheet.getRange(2, 1, 1, INDEX_HEADERS.length).setFontWeight('bold').setBackground('#2f5f80').setFontColor('#ffffff');
+  sheet.autoResizeColumns(1, INDEX_HEADERS.length);
+  sheet.setColumnWidth(4, 430);
 }
 
 function setupListSheet_(sheet) {
