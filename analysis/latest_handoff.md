@@ -1,5 +1,45 @@
 # Handoff summary
 
+## 2026-06-01 Fishery 4-state protection-slot correction
+
+## Context
+
+Applied the user's additional correction that #534 live operations should manage only four final opening slots: `WED_23`, `THU_07`, `SAT_23`, and `SUN_07`. The working Google Sheet is `1Zzp53UbwcZdD80BXO7xXYfjPxkUvBYwdIN5_I9KnE80`.
+
+## Updated files
+
+- `tools/fishery_protection_sheet/Code.gs`
+- `tools/fishery_protection_sheet/README.md`
+- `data/fishery_protection_sheet_template.csv`
+- `analysis/2026-06-01_fishery_protection_sheet_system.md`
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Working Google Sheet tab `ABCスクショ取込確認`: added normalized columns converting odd numbers `1,3,5,...,21` into `1,2,3,...,11`.
+- Working Google Sheet tab `縦スクショ再分析`: added the same normalized-number, normalized-coordinate, and normalized-position-key columns.
+- Working Google Sheet tab `漁場一覧4枠`: added a fishery-level four-state view without overwriting the original `漁場一覧`.
+- Working Google Sheet tab `開放カレンダー4枠`: added a four-slot opening calendar grouped by `WED_23`, `THU_07`, `SAT_23`, `SUN_07`.
+- Working Google Sheet tab `侵攻ルート確認`: added route-level consecutive-opening checks.
+
+## Key findings
+
+1. `15:00-16:00` is now treated as a safe period and not as a final opening slot. If source data has a 15:00 protection end, the four-slot view shifts it to 23:00 on the same date.
+2. The protection-punch state transition is now explicit: `WED_23 -> SUN_07`, `THU_07 -> SAT_23`, `SAT_23 -> THU_07`, `SUN_07 -> WED_23`.
+3. The new views are fishery-level. Line labels remain only for route grouping and are not used as fixed timing assumptions.
+4. `侵攻ルート確認` marks a route as `危険` when the same opening slot appears consecutively on the same invasion route, and `分散` otherwise.
+
+## Current risks
+
+1. The working sheet still contains OCR-derived and review-derived rows; `漁場一覧4枠` is safer for timing-state review, but route decisions still depend on confirming questionable screenshot rows.
+2. The Apps Script source is updated locally, but it still needs to be pasted into the live spreadsheet Apps Script editor if the live script should be replaced.
+
+## Recommended next actions
+
+1. Review `侵攻ルート確認` first to identify routes with same-slot consecutive openings.
+2. Confirm whether the 15:00-safe rows that were shifted to `WED_23` should remain in the current master or be manually corrected from game screenshots.
+3. After confirmation, promote only trusted rows from the review tabs into `漁場一覧`.
+
 ## 2026-06-01 Fishery screenshot OCR recheck
 
 ## Context

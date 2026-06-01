@@ -4,6 +4,7 @@ const SHEET_NAMES = {
   SIMULATOR: 'シミュレーター',
   CALENDAR: 'カレンダー',
   LINE_DEFINITIONS: 'ライン定義',
+  ROUTE_CHECK: '侵攻ルート確認',
 };
 
 const LIST_HEADERS = [
@@ -28,6 +29,10 @@ const LIST_HEADERS = [
   '再取得不可終了',
   '更新時刻',
   '表示順',
+  '状態ラベル',
+  '状態表示',
+  '保護パン後の次回保護切れ',
+  '安全時間補正後',
 ];
 
 const EVENT_HEADERS = [
@@ -43,16 +48,26 @@ const EVENT_HEADERS = [
   'ワンパン必要',
   'ワンパン役',
   '備考',
+  '状態ラベル',
+  '状態表示',
 ];
 
 const CALENDAR_HEADERS = [
-  '日付',
-  '曜日',
-  '応戦時間帯',
-  '安全期間',
+  '状態ラベル',
+  '表示名',
   '対象数',
   '対象漁場',
   'ワンパン候補',
+  '保護パン後の状態',
+];
+
+const ROUTE_CHECK_HEADERS = [
+  'エリア',
+  '侵攻ルート',
+  '対象漁場',
+  '開放枠順',
+  '判定',
+  '警告',
 ];
 
 const LINE_DEFINITION_HEADERS = [
@@ -88,6 +103,14 @@ const BATTLE_DAYS = [3, 6]; // Sunday = 0, Wednesday = 3, Saturday = 6.
 const MS_PER_DAY = 24 * 60 * 60 * 1000;
 const ABANDON_LOCK_MINUTES = 60;
 const REACQUIRE_LOCK_HOURS = 24;
+const DISPLAY_ORDER_COLUMN = 21;
+
+const OPERATIONAL_STATES = [
+  { label: 'WED_23', display: '水曜23時', day: 3, hour: 23, next: 'SUN_07' },
+  { label: 'THU_07', display: '木曜7時', day: 4, hour: 7, next: 'SAT_23' },
+  { label: 'SAT_23', display: '土曜23時', day: 6, hour: 23, next: 'THU_07' },
+  { label: 'SUN_07', display: '日曜7時', day: 0, hour: 7, next: 'WED_23' },
+];
 
 function onOpen() {
   SpreadsheetApp.getUi()
@@ -105,12 +128,14 @@ function setupFisheryProtectionWorkbook() {
   const simulatorSheet = ensureSheet_(ss, SHEET_NAMES.SIMULATOR);
   const calendarSheet = ensureSheet_(ss, SHEET_NAMES.CALENDAR);
   const lineDefinitionSheet = ensureSheet_(ss, SHEET_NAMES.LINE_DEFINITIONS);
+  const routeCheckSheet = ensureSheet_(ss, SHEET_NAMES.ROUTE_CHECK);
 
   setupListSheet_(listSheet);
   setupEventsSheet_(eventsSheet);
   setupSimulatorSheet_(simulatorSheet);
   setupCalendarSheet_(calendarSheet);
   setupLineDefinitionSheet_(lineDefinitionSheet);
+  setupRouteCheckSheet_(routeCheckSheet);
   refreshFisheryProtectionSystem();
 }
 
@@ -123,6 +148,7 @@ function refreshFisheryProtectionSystem() {
   if (values.length < 2) {
     buildEventsSheet_(ss, []);
     buildCalendarSheet_(ss, []);
+    buildRouteCheckSheet_(ss, []);
     return;
   }
 
@@ -154,28 +180,36 @@ function refreshFisheryProtectionSystem() {
       row[18] = '';
     }
 
-    row[9] = nextProtectUntil ? formatResponseSlot_(nextProtectUntil) : '';
-    row[15] = nextProtectUntil || '';
-    row[16] = nextProtectUntil ? formatResponseSlot_(nextProtectUntil) : '';
+    const operationalProtectUntil = normalizeOperationalSlot_(nextProtectUntil);
+    const state = getProtectionState_(operationalProtectUntil);
+    const punchNext = state ? nextProtectionAfterState_(state.label, operationalProtectUntil) : null;
+
+    row[9] = operationalProtectUntil ? formatResponseSlot_(operationalProtectUntil) : '';
+    row[15] = operationalProtectUntil || '';
+    row[16] = operationalProtectUntil ? formatResponseSlot_(operationalProtectUntil) : '';
     row[17] = canAbandonAt_(now) ? '可' : '不可';
     row[19] = now;
     row[20] = buildDisplayOrder_(row[0], row[2], row[5]);
+    row[21] = state ? state.label : '';
+    row[22] = state ? state.display : '';
+    row[23] = punchNext || '';
+    row[24] = operationalProtectUntil || '';
 
     if (!row[1] && row[0] && row[2]) {
       row[1] = `${row[0]}:${row[2]}`;
     }
 
     if (shouldReplaceAutoCandidate_(row[10])) {
-      row[10] = buildOnePunchCandidate_(row[4], nextProtectUntil);
+      row[10] = buildOnePunchCandidate_(row[4], operationalProtectUntil);
     }
 
     outputRows.push(row);
-    if (nextProtectUntil) {
+    if (operationalProtectUntil) {
       eventRows.push({
         area: row[0],
         key: row[1],
-        protectUntil: nextProtectUntil,
-        slot: formatResponseSlot_(nextProtectUntil),
+        protectUntil: operationalProtectUntil,
+        slot: formatResponseSlot_(operationalProtectUntil),
         name: row[2],
         owner: row[3],
         line: row[4],
@@ -183,16 +217,20 @@ function refreshFisheryProtectionSystem() {
         onePunch: row[10],
         assignee: row[11],
         note: row[12],
+        stateLabel: row[21],
+        stateDisplay: row[22],
+        displayOrder: row[20],
       });
     }
   }
 
   if (outputRows.length > 0) {
     listSheet.getRange(2, 1, outputRows.length, LIST_HEADERS.length).setValues(outputRows);
-    listSheet.getRange(2, 1, outputRows.length, LIST_HEADERS.length).sort({ column: 21, ascending: true });
+    listSheet.getRange(2, 1, outputRows.length, LIST_HEADERS.length).sort({ column: DISPLAY_ORDER_COLUMN, ascending: true });
   }
   buildEventsSheet_(ss, eventRows);
   buildCalendarSheet_(ss, eventRows);
+  buildRouteCheckSheet_(ss, eventRows);
 }
 
 function runFisherySimulator() {
@@ -211,15 +249,17 @@ function runFisherySimulator() {
     operation === '放棄'
       ? calculateAbandonProtectionEnd_(operationAt)
       : calculateNextProtectionEnd_(operationAt);
+  const operationalProtectUntil = normalizeOperationalSlot_(nextProtectUntil);
+  const state = getProtectionState_(operationalProtectUntil);
 
-  sheet.getRange('B6').setValue(nextProtectUntil);
-  sheet.getRange('B7').setValue(formatResponseSlot_(nextProtectUntil));
+  sheet.getRange('B6').setValue(operationalProtectUntil);
+  sheet.getRange('B7').setValue(formatResponseSlot_(operationalProtectUntil));
   sheet.getRange('B8').setValue(operation === '放棄' ? addHours_(operationAt, REACQUIRE_LOCK_HOURS) : '');
   sheet.getRange('B9').setValue(canAbandonAt_(operationAt) ? '可' : '不可');
   sheet.getRange('B10').setValue(
     operation === '放棄'
-      ? '放棄時刻から次の応戦枠を基準に1枠後ろへ進め、15時枠は23時枠へ繰り下げ'
-      : '次の宣戦日の同時刻から1枠後ろへ進め、15時枠は23時枠へ繰り下げ'
+      ? `放棄時刻から次の応戦枠を基準に1枠後ろへ進め、15時枠は23時枠へ繰り下げ。状態=${state ? state.label : '要確認'}`
+      : `次の宣戦日の同時刻から1枠後ろへ進め、15時枠は23時枠へ繰り下げ。状態=${state ? state.label : '要確認'}`
   );
 }
 
@@ -238,6 +278,22 @@ function CAN_ABANDON(at) {
   return date ? canAbandonAt_(date) : '';
 }
 
+function PROTECTION_STATE(protectUntil) {
+  const state = getProtectionState_(normalizeOperationalSlot_(protectUntil));
+  return state ? state.label : '';
+}
+
+function PROTECTION_STATE_NAME(protectUntil) {
+  const state = getProtectionState_(normalizeOperationalSlot_(protectUntil));
+  return state ? state.display : '';
+}
+
+function NEXT_AFTER_PROTECTION_PUNCH(protectUntil) {
+  const normalized = normalizeOperationalSlot_(protectUntil);
+  const state = getProtectionState_(normalized);
+  return state ? nextProtectionAfterState_(state.label, normalized) : '';
+}
+
 function setupListSheet_(sheet) {
   ensureListHeaders_(sheet);
   sheet.setFrozenRows(1);
@@ -250,7 +306,8 @@ function setupListSheet_(sheet) {
   sheet.getRange('N:N').setNumberFormat('yyyy/mm/dd hh:mm');
   sheet.getRange('P:P').setNumberFormat('yyyy/mm/dd hh:mm');
   sheet.getRange('S:T').setNumberFormat('yyyy/mm/dd hh:mm');
-  sheet.hideColumns(21);
+  sheet.getRange('X:Y').setNumberFormat('yyyy/mm/dd hh:mm');
+  sheet.hideColumns(DISPLAY_ORDER_COLUMN);
   sheet.autoResizeColumns(1, LIST_HEADERS.length);
 }
 
@@ -267,6 +324,13 @@ function setupCalendarSheet_(sheet) {
   sheet.getRange(1, 1, 1, CALENDAR_HEADERS.length).setValues([CALENDAR_HEADERS]);
   sheet.setFrozenRows(1);
   sheet.getRange(1, 1, 1, CALENDAR_HEADERS.length).setFontWeight('bold').setBackground('#38761d').setFontColor('#ffffff');
+}
+
+function setupRouteCheckSheet_(sheet) {
+  sheet.clear();
+  sheet.getRange(1, 1, 1, ROUTE_CHECK_HEADERS.length).setValues([ROUTE_CHECK_HEADERS]);
+  sheet.setFrozenRows(1);
+  sheet.getRange(1, 1, 1, ROUTE_CHECK_HEADERS.length).setFontWeight('bold').setBackground('#a64d1f').setFontColor('#ffffff');
 }
 
 function setupLineDefinitionSheet_(sheet) {
@@ -322,6 +386,8 @@ function buildEventsSheet_(ss, events) {
     event.onePunch,
     event.assignee,
     event.note,
+    event.stateLabel,
+    event.stateDisplay,
   ]);
   if (rows.length > 0) {
     sheet.getRange(2, 1, rows.length, EVENT_HEADERS.length).setValues(rows);
@@ -334,32 +400,64 @@ function buildCalendarSheet_(ss, events) {
   setupCalendarSheet_(sheet);
   const eventMap = {};
   events.forEach((event) => {
-    const key = slotKey_(event.protectUntil);
+    const key = event.stateLabel;
     if (!eventMap[key]) eventMap[key] = [];
     eventMap[key].push(event);
   });
 
-  const slots = buildUpcomingResponseSlots_(new Date(), 21);
-  const rows = slots.map((slot) => {
-    const key = slotKey_(slot);
+  const rows = OPERATIONAL_STATES.map((state) => {
+    const key = state.label;
     const slotEvents = eventMap[key] || [];
+    const nextState = findState_(state.next);
     return [
-      stripTime_(slot),
-      weekdayLabel_(slot),
-      formatResponseSlot_(slot),
-      slot.getHours() === SAFE_RESPONSE_HOUR ? '安全期間' : '',
+      state.label,
+      state.display,
       slotEvents.length,
       slotEvents.map((event) => event.key || `${event.area || ''}:${event.name}`).join('\n'),
       slotEvents
         .filter((event) => String(event.onePunch || '').indexOf('候補') !== -1 || String(event.onePunch || '').indexOf('必要') !== -1)
         .map((event) => event.key || `${event.area || ''}:${event.name}`)
         .join('\n'),
+      nextState ? `${nextState.label}（${nextState.display}）` : '',
     ];
   });
   if (rows.length > 0) {
     sheet.getRange(2, 1, rows.length, CALENDAR_HEADERS.length).setValues(rows);
   }
   sheet.autoResizeColumns(1, CALENDAR_HEADERS.length);
+}
+
+function buildRouteCheckSheet_(ss, events) {
+  const sheet = ensureSheet_(ss, SHEET_NAMES.ROUTE_CHECK);
+  setupRouteCheckSheet_(sheet);
+  const routeMap = {};
+  events.forEach((event) => {
+    const area = String(event.area || '').trim();
+    const line = String(event.line || '').trim();
+    if (!area || !line || !event.stateLabel) return;
+    const routeKey = `${area}\t${line}`;
+    if (!routeMap[routeKey]) routeMap[routeKey] = [];
+    routeMap[routeKey].push(event);
+  });
+
+  const rows = Object.keys(routeMap).sort().map((routeKey) => {
+    const parts = routeKey.split('\t');
+    const routeEvents = routeMap[routeKey].sort((a, b) => Number(a.displayOrder || 0) - Number(b.displayOrder || 0));
+    const labels = routeEvents.map((event) => event.stateDisplay);
+    const hasConsecutiveSame = labels.some((label, index) => index > 0 && label === labels[index - 1]);
+    return [
+      parts[0],
+      parts[1],
+      routeEvents.map((event) => event.key).join('\n'),
+      labels.join(' → '),
+      hasConsecutiveSame ? '危険' : '分散',
+      hasConsecutiveSame ? '危険：同じ開放枠が連続。同時突破リスク高' : '分散：時間差あり',
+    ];
+  });
+  if (rows.length > 0) {
+    sheet.getRange(2, 1, rows.length, ROUTE_CHECK_HEADERS.length).setValues(rows);
+  }
+  sheet.autoResizeColumns(1, ROUTE_CHECK_HEADERS.length);
 }
 
 function calculateNextProtectionEnd_(acquiredAt) {
@@ -383,6 +481,44 @@ function advanceOneOperationalSlot_(slotDate) {
     next = advanceOneResponseSlot_(next);
   }
   return next;
+}
+
+function normalizeOperationalSlot_(date) {
+  const parsed = parseDate_(date);
+  if (!parsed) return null;
+  let normalized = new Date(parsed.getTime());
+  while (normalized.getHours() === SAFE_RESPONSE_HOUR) {
+    normalized = advanceOneResponseSlot_(normalized);
+  }
+  return normalized;
+}
+
+function getProtectionState_(date) {
+  if (!date) return null;
+  const normalized = normalizeOperationalSlot_(date);
+  return OPERATIONAL_STATES.find((state) => state.day === normalized.getDay() && state.hour === normalized.getHours()) || null;
+}
+
+function nextProtectionAfterState_(stateLabel, fromDate) {
+  const currentState = findState_(stateLabel);
+  const parsed = parseDate_(fromDate);
+  if (!currentState || !parsed) return null;
+  const nextState = findState_(currentState.next);
+  return nextState ? nextOccurrenceAfter_(parsed, nextState.day, nextState.hour) : null;
+}
+
+function nextOccurrenceAfter_(fromDate, day, hour) {
+  const base = stripTime_(fromDate);
+  for (let offset = 0; offset <= 10; offset++) {
+    const candidate = new Date(base.getTime() + offset * MS_PER_DAY);
+    candidate.setHours(hour, 0, 0, 0);
+    if (candidate.getDay() === day && candidate.getTime() > fromDate.getTime()) return candidate;
+  }
+  throw new Error('次の4状態枠を計算できませんでした');
+}
+
+function findState_(label) {
+  return OPERATIONAL_STATES.find((state) => state.label === label) || null;
 }
 
 function advanceOneResponseSlot_(slotDate) {
