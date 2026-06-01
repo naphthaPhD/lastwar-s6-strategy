@@ -1,5 +1,45 @@
 # Handoff summary
 
+## 2026-06-01 Fishery alliance judgment and pact/capacity constraints
+
+## Context
+
+Added the alliance-relationship layer requested by the user. Current enemy assumptions are `xJR/xjR`, `476C`, and `476B`; future enemies/allies can be added through a master sheet instead of hard-coding route logic.
+
+## Updated files
+
+- `tools/fishery_protection_sheet/Code.gs`
+- `tools/fishery_protection_sheet/README.md`
+- `data/fishery_protection_sheet_template.csv`
+- `analysis/2026-06-01_fishery_protection_sheet_system.md`
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Working Google Sheet tab `連盟判定`: new master for enemy/friendly/same-server/other-server-friendly status.
+- Working Google Sheet tab `盟約管理`: new pact table; active pacts make protection punch unavailable.
+- Working Google Sheet tab `連盟キャパ管理`: new table for daily acquisition limits, owned cities, city-derived fishery capacity, and current fishery count.
+- Working Google Sheet tab `漁場一覧4枠`: added owner relation, server, pact status, protection-punch availability, daily remaining acquisition count, city-derived remaining capacity, constraint memo, enemy-assumption flag, and overall judgment.
+- Working Google Sheet tab `侵攻ルート確認`: added enemy-alliance presence and enemy-route warning columns.
+
+## Key findings
+
+1. `xJR/xjR`, `476C`, and `476B` are now marked as `敵`. Route checks treat their owned fisheries as invasion-risk inputs.
+2. The current sheet already flags enemy-held routes such as `#509:I-3 xjR`, `#534:A-7 476C`, `#534:B-7 476C`, and `#534:C-11 476B / #534:C-7 476C`.
+3. Alliances not registered in `連盟判定` now show as `要確認:連盟未登録` in `漁場一覧4枠`, instead of being silently treated as neutral.
+4. Pact and capacity constraints are separate from enemy/friendly judgment: an active pact blocks protection punch; daily/city capacity shortages create constraint memos.
+
+## Current risks
+
+1. Many alliance tags remain unregistered, especially OCR-derived tags such as `Dao`, `noI`, `ext`, and `twD`. They should be classified before live operation.
+2. Pact and capacity values are placeholders until the operator enters current pact status, daily acquisition limits, owned cities, and city-derived fishery caps.
+
+## Recommended next actions
+
+1. Fill `連盟判定` for all alliances currently shown as `未登録`.
+2. Enter active pact pairs in `盟約管理` before assigning any protection-punch action.
+3. Enter daily acquisition and city-derived fishery caps in `連盟キャパ管理` for alliances that may be asked to punch or reacquire.
+
 ## 2026-06-01 Fishery 4-state protection-slot correction
 
 ## Context

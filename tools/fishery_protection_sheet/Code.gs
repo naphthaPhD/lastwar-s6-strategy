@@ -5,6 +5,9 @@ const SHEET_NAMES = {
   CALENDAR: 'カレンダー',
   LINE_DEFINITIONS: 'ライン定義',
   ROUTE_CHECK: '侵攻ルート確認',
+  ALLIANCE_JUDGMENT: '連盟判定',
+  PACTS: '盟約管理',
+  CAPACITY: '連盟キャパ管理',
 };
 
 const LIST_HEADERS = [
@@ -33,6 +36,15 @@ const LIST_HEADERS = [
   '状態表示',
   '保護パン後の次回保護切れ',
   '安全時間補正後',
+  '所有連盟関係',
+  '所有連盟サーバ',
+  '盟約状態',
+  '保護パン可否',
+  '1日残取得数',
+  '都市由来余力',
+  '制約メモ',
+  '敵侵攻前提',
+  '総合判定',
 ];
 
 const EVENT_HEADERS = [
@@ -68,6 +80,49 @@ const ROUTE_CHECK_HEADERS = [
   '開放枠順',
   '判定',
   '警告',
+  '敵連盟含有',
+  '敵侵攻警戒',
+  '制約メモ',
+];
+
+const ALLIANCE_JUDGMENT_HEADERS = [
+  '連盟タグ',
+  '正規タグ',
+  'サーバ',
+  '関係区分',
+  '所属分類',
+  '保護パン対象',
+  '優先度',
+  '備考',
+  '更新日',
+];
+
+const PACT_HEADERS = [
+  '自連盟',
+  '相手連盟',
+  '正規相手タグ',
+  '相手サーバ',
+  '盟約状態',
+  '保護パン可否',
+  '開始日',
+  '終了日',
+  '備考',
+  '更新日',
+];
+
+const CAPACITY_HEADERS = [
+  '連盟タグ',
+  '正規タグ',
+  'サーバ',
+  '関係区分',
+  '1日取得上限',
+  '本日取得数',
+  '残取得数',
+  '所有都市',
+  '都市数',
+  '都市由来漁場上限',
+  '現所有漁場数',
+  '推定余力',
 ];
 
 const LINE_DEFINITION_HEADERS = [
@@ -90,6 +145,28 @@ const LINE_DEFINITION_ROWS = [
   ['#503', '未定', '要確認', '', '', '', '#503:A-1', '漁場スクショ/503/', '必要になったら方向定義を追加'],
   ['#480', '未定', '要確認', '', '', '', '#480:A-1', '漁場スクショ/480/', '必要になったら方向定義を追加'],
   ['#523', '未定', '要確認', '', '', '', '#523:A-1', '漁場スクショ/523/', '必要になったら方向定義を追加'],
+];
+
+const ALLIANCE_JUDGMENT_ROWS = [
+  ['xJR', 'XJR', '#503', '敵', '他サーバ敵', '可', '高', '現状敵。画像ではxjR表記あり', '2026/06/01'],
+  ['xjR', 'XJR', '#503', '敵', '他サーバ敵', '可', '高', '表記揺れ吸収用。正規タグはXJR', '2026/06/01'],
+  ['476C', '476C', '#476', '敵', '他サーバ敵', '可', '高', '現状敵。侵攻前提で警戒', '2026/06/01'],
+  ['476B', '476B', '#476', '敵', '他サーバ敵', '可', '高', '現状敵。侵攻前提で警戒', '2026/06/01'],
+  ['JDX', 'JDX', '#534', '味方', '同サーバ味方', '不可', '基準', '自陣営。必要に応じて修正', '2026/06/01'],
+  ['KTVS', 'KTVS', '#534', '味方', '同サーバ味方', '不可', '高', '味方想定。必要に応じて修正', '2026/06/01'],
+];
+
+const PACT_ROWS = [
+  ['JDX', '', '', '', '未登録', '', '', '', '盟約相手を追加すると、保護パン可否の判定に使う', '2026/06/01'],
+  ['KTVS', '', '', '', '未登録', '', '', '', '盟約状態が有効なら保護パン不可', '2026/06/01'],
+];
+
+const CAPACITY_ROWS = [
+  ['xJR', 'XJR', '#503', '敵', '', '', '', '', '', '', '', ''],
+  ['476C', '476C', '#476', '敵', '', '', '', '', '', '', '', ''],
+  ['476B', '476B', '#476', '敵', '', '', '', '', '', '', '', ''],
+  ['JDX', 'JDX', '#534', '味方', '', '', '', '', '', '', '', ''],
+  ['KTVS', 'KTVS', '#534', '味方', '', '', '', '', '', '', '', ''],
 ];
 
 const AREA_VALUES = ['#534', '#509', '#476', '#440', '#503', '#480', '#523'];
@@ -129,6 +206,9 @@ function setupFisheryProtectionWorkbook() {
   const calendarSheet = ensureSheet_(ss, SHEET_NAMES.CALENDAR);
   const lineDefinitionSheet = ensureSheet_(ss, SHEET_NAMES.LINE_DEFINITIONS);
   const routeCheckSheet = ensureSheet_(ss, SHEET_NAMES.ROUTE_CHECK);
+  const allianceJudgmentSheet = ensureSheet_(ss, SHEET_NAMES.ALLIANCE_JUDGMENT);
+  const pactSheet = ensureSheet_(ss, SHEET_NAMES.PACTS);
+  const capacitySheet = ensureSheet_(ss, SHEET_NAMES.CAPACITY);
 
   setupListSheet_(listSheet);
   setupEventsSheet_(eventsSheet);
@@ -136,6 +216,9 @@ function setupFisheryProtectionWorkbook() {
   setupCalendarSheet_(calendarSheet);
   setupLineDefinitionSheet_(lineDefinitionSheet);
   setupRouteCheckSheet_(routeCheckSheet);
+  setupAllianceJudgmentSheet_(allianceJudgmentSheet);
+  setupPactSheet_(pactSheet);
+  setupCapacitySheet_(capacitySheet);
   refreshFisheryProtectionSystem();
 }
 
@@ -155,6 +238,10 @@ function refreshFisheryProtectionSystem() {
   const now = new Date();
   const outputRows = [];
   const eventRows = [];
+  const allianceMap = readAllianceJudgmentMap_(ss);
+  const pactMap = readPactMap_(ss);
+  const capacityMap = readCapacityMap_(ss);
+  const ownerCounts = buildOwnerCounts_(values);
   for (let rowIndex = 1; rowIndex < values.length; rowIndex++) {
     const row = normalizeRowLength_(values[rowIndex], LIST_HEADERS.length);
     if (!row.some((value) => value !== '' && value !== null)) {
@@ -194,6 +281,7 @@ function refreshFisheryProtectionSystem() {
     row[22] = state ? state.display : '';
     row[23] = punchNext || '';
     row[24] = operationalProtectUntil || '';
+    applyAllianceConstraints_(row, allianceMap, pactMap, capacityMap, ownerCounts);
 
     if (!row[1] && row[0] && row[2]) {
       row[1] = `${row[0]}:${row[2]}`;
@@ -230,7 +318,7 @@ function refreshFisheryProtectionSystem() {
   }
   buildEventsSheet_(ss, eventRows);
   buildCalendarSheet_(ss, eventRows);
-  buildRouteCheckSheet_(ss, eventRows);
+  buildRouteCheckSheet_(ss, eventRows, allianceMap);
 }
 
 function runFisherySimulator() {
@@ -333,6 +421,32 @@ function setupRouteCheckSheet_(sheet) {
   sheet.getRange(1, 1, 1, ROUTE_CHECK_HEADERS.length).setFontWeight('bold').setBackground('#a64d1f').setFontColor('#ffffff');
 }
 
+function setupAllianceJudgmentSheet_(sheet) {
+  setupStaticSheet_(sheet, ALLIANCE_JUDGMENT_HEADERS, ALLIANCE_JUDGMENT_ROWS, '#0b5394');
+}
+
+function setupPactSheet_(sheet) {
+  setupStaticSheet_(sheet, PACT_HEADERS, PACT_ROWS, '#674ea7');
+}
+
+function setupCapacitySheet_(sheet) {
+  setupStaticSheet_(sheet, CAPACITY_HEADERS, CAPACITY_ROWS, '#38761d');
+}
+
+function setupStaticSheet_(sheet, headers, rows, color) {
+  const existing = sheet.getDataRange().getValues();
+  if (existing.length <= 1 || existing[0].join('') === '') {
+    sheet.clear();
+    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+    if (rows.length > 0) sheet.getRange(2, 1, rows.length, headers.length).setValues(rows);
+  } else {
+    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+  }
+  sheet.setFrozenRows(1);
+  sheet.getRange(1, 1, 1, headers.length).setFontWeight('bold').setBackground(color).setFontColor('#ffffff');
+  sheet.autoResizeColumns(1, headers.length);
+}
+
 function setupLineDefinitionSheet_(sheet) {
   sheet.clear();
   sheet.getRange(1, 1, 1, LINE_DEFINITION_HEADERS.length).setValues([LINE_DEFINITION_HEADERS]);
@@ -427,7 +541,7 @@ function buildCalendarSheet_(ss, events) {
   sheet.autoResizeColumns(1, CALENDAR_HEADERS.length);
 }
 
-function buildRouteCheckSheet_(ss, events) {
+function buildRouteCheckSheet_(ss, events, allianceMap) {
   const sheet = ensureSheet_(ss, SHEET_NAMES.ROUTE_CHECK);
   setupRouteCheckSheet_(sheet);
   const routeMap = {};
@@ -445,6 +559,10 @@ function buildRouteCheckSheet_(ss, events) {
     const routeEvents = routeMap[routeKey].sort((a, b) => Number(a.displayOrder || 0) - Number(b.displayOrder || 0));
     const labels = routeEvents.map((event) => event.stateDisplay);
     const hasConsecutiveSame = labels.some((label, index) => index > 0 && label === labels[index - 1]);
+    const enemyEvents = routeEvents.filter((event) => {
+      const alliance = allianceMap[normalizeAllianceTag_(event.owner)];
+      return alliance && alliance.relation === '敵';
+    });
     return [
       parts[0],
       parts[1],
@@ -452,12 +570,65 @@ function buildRouteCheckSheet_(ss, events) {
       labels.join(' → '),
       hasConsecutiveSame ? '危険' : '分散',
       hasConsecutiveSame ? '危険：同じ開放枠が連続。同時突破リスク高' : '分散：時間差あり',
+      enemyEvents.map((event) => `${event.key} ${event.owner}`).join('\n'),
+      enemyEvents.length > 0 ? (hasConsecutiveSame ? '最優先:敵ルートかつ同枠連続' : '警戒:敵保有あり') : '',
+      enemyEvents.length > 0 ? '敵保有を前提に保護を検討' : '',
     ];
   });
   if (rows.length > 0) {
     sheet.getRange(2, 1, rows.length, ROUTE_CHECK_HEADERS.length).setValues(rows);
   }
   sheet.autoResizeColumns(1, ROUTE_CHECK_HEADERS.length);
+}
+
+function applyAllianceConstraints_(row, allianceMap, pactMap, capacityMap, ownerCounts) {
+  const ownerTag = normalizeAllianceTag_(row[3]);
+  const alliance = allianceMap[ownerTag] || {};
+  const pact = pactMap[ownerTag] || {};
+  const capacity = capacityMap[ownerTag] || {};
+  const relation = alliance.relation || '未登録';
+  const pactStatus = pact.status || '未登録';
+  const ownerCount = ownerCounts[ownerTag] || 0;
+  const dailyRemaining = capacity.dailyCap === '' ? '' : Math.max(0, Number(capacity.dailyCap || 0) - Number(capacity.todayCount || 0));
+  const cityRemaining = capacity.cityFisheryCap === '' ? '' : Number(capacity.cityFisheryCap || 0) - ownerCount;
+  const punchAvailability = buildProtectionPunchAvailability_(relation, pactStatus);
+  const constraintMemo = buildAllianceConstraintMemo_(relation, pactStatus, dailyRemaining, cityRemaining);
+
+  row[25] = relation;
+  row[26] = alliance.server || '';
+  row[27] = pactStatus;
+  row[28] = punchAvailability;
+  row[29] = dailyRemaining;
+  row[30] = cityRemaining;
+  row[31] = constraintMemo;
+  row[32] = relation === '敵' ? '敵侵攻前提' : relation === '未登録' ? '未判定' : '';
+  row[33] = buildOverallAllianceJudgment_(relation, punchAvailability, constraintMemo);
+}
+
+function buildProtectionPunchAvailability_(relation, pactStatus) {
+  if (pactStatus === '有効') return '不可:盟約';
+  if (relation === '敵') return '可:敵保有';
+  if (String(relation).indexOf('味方') !== -1) return '不可:味方';
+  if (relation === '同サーバ') return '要判断:同サーバ';
+  if (relation === '未登録') return '要確認:連盟未登録';
+  return '要判断';
+}
+
+function buildAllianceConstraintMemo_(relation, pactStatus, dailyRemaining, cityRemaining) {
+  if (pactStatus === '有効') return '盟約中:保護パン不可';
+  if (String(relation).indexOf('味方') !== -1) return '味方保有:保護パン不可';
+  if (relation === '未登録') return '連盟判定未登録';
+  if (dailyRemaining !== '' && dailyRemaining <= 0) return '1日取得上限到達';
+  if (cityRemaining !== '' && cityRemaining <= 0) return '都市由来の保有枠不足';
+  return '';
+}
+
+function buildOverallAllianceJudgment_(relation, punchAvailability, constraintMemo) {
+  if (punchAvailability === '不可:盟約') return '保護パン不可:盟約';
+  if (punchAvailability === '不可:味方') return '保護パン不可:味方';
+  if (relation === '敵') return constraintMemo ? `敵保有:${constraintMemo}` : '敵保有:保護検討';
+  if (relation === '未登録') return '要確認:連盟未登録';
+  return constraintMemo || '通常確認';
 }
 
 function calculateNextProtectionEnd_(acquiredAt) {
@@ -607,6 +778,70 @@ function buildOnePunchCandidate_(line, protectUntil) {
 function shouldReplaceAutoCandidate_(value) {
   const text = String(value || '').trim();
   return text === '' || text.indexOf('自動:') === 0;
+}
+
+function readAllianceJudgmentMap_(ss) {
+  const sheet = ensureSheet_(ss, SHEET_NAMES.ALLIANCE_JUDGMENT);
+  const rows = sheet.getDataRange().getValues().slice(1);
+  const result = {};
+  rows.forEach((row) => {
+    const key = normalizeAllianceTag_(row[1] || row[0]);
+    if (!key) return;
+    result[key] = {
+      tag: row[0],
+      normalizedTag: key,
+      server: row[2] || '',
+      relation: row[3] || '未登録',
+      group: row[4] || '',
+      protectionPunchTarget: row[5] || '',
+    };
+  });
+  return result;
+}
+
+function readPactMap_(ss) {
+  const sheet = ensureSheet_(ss, SHEET_NAMES.PACTS);
+  const rows = sheet.getDataRange().getValues().slice(1);
+  const result = {};
+  rows.forEach((row) => {
+    const key = normalizeAllianceTag_(row[2] || row[1]);
+    if (!key) return;
+    result[key] = {
+      status: row[4] || '',
+      protectionPunchAvailability: row[5] || '',
+    };
+  });
+  return result;
+}
+
+function readCapacityMap_(ss) {
+  const sheet = ensureSheet_(ss, SHEET_NAMES.CAPACITY);
+  const rows = sheet.getDataRange().getValues().slice(1);
+  const result = {};
+  rows.forEach((row) => {
+    const key = normalizeAllianceTag_(row[1] || row[0]);
+    if (!key) return;
+    result[key] = {
+      dailyCap: row[4] === '' ? '' : Number(row[4]),
+      todayCount: row[5] === '' ? 0 : Number(row[5]),
+      cityFisheryCap: row[9] === '' ? '' : Number(row[9]),
+    };
+  });
+  return result;
+}
+
+function buildOwnerCounts_(values) {
+  const counts = {};
+  values.slice(1).forEach((row) => {
+    const key = normalizeAllianceTag_(row[3]);
+    if (!key) return;
+    counts[key] = (counts[key] || 0) + 1;
+  });
+  return counts;
+}
+
+function normalizeAllianceTag_(value) {
+  return String(value || '').trim().toUpperCase();
 }
 
 function buildDisplayOrder_(area, name, lineOrder) {
