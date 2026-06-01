@@ -1,5 +1,39 @@
 # Handoff summary
 
+## 2026-06-01 Fishery screenshot OCR recheck
+
+## Context
+
+Rechecked the currently uploaded fishery screenshots because the OCR-derived sheet state was unreliable. The working Google Sheet is `1Zzp53UbwcZdD80BXO7xXYfjPxkUvBYwdIN5_I9KnE80`. This pass did not overwrite the production `#534` management spreadsheet and did not promote uncertain rows into the main fishery master.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Working Google Sheet tab `ABCスクショ取込確認`: rebuilt the 33-row intake mapping from file order.
+- Working Google Sheet tab `縦スクショ再分析`: added a new 44-row recheck table with specified position, image-title/OCR values, visual values, conflict flags, and recommended handling.
+
+## Key findings
+
+1. The ABC issue was not only OCR quality. The previous confirmation tab mapped file order as `A-1, B-1, C-1...`, but the uploaded file order is `A-1, A-3, ... A-21`, then `B-1...B-21`, then `C-1...C-21`.
+2. `ABCスクショ取込確認` now reflects `IMG_1494.PNG` through `IMG_1526.PNG` in that corrected order. All 33 rows are marked as candidates, except `#534:C-9`, where owner/timer remains unreadable or absent.
+3. The vertical screenshots have real route conflicts between the user-specified folder order and the image title shown in-game. The clearest examples are `IMG_1529.PNG`, which displays `#503 [xjR]`, and `IMG_1535.PNG`, which displays `#534 [SHA]`, while the specified order placed them under #509.
+4. `縦スクショ再分析` keeps those conflicts as `要判断` and recommends `本表上書き保留` instead of automatically rewriting `漁場一覧`.
+5. Repeated OCR corrections remain necessary: `nol` should usually be read as `noI`, `wG6f` as `w6f`, and `JDX/IDX` needs manual confirmation on the affected #534 rows.
+
+## Current risks
+
+1. `漁場一覧` still contains some values from the earlier OCR/folder-order promotion. Treat the new review tabs as the safer source until the conflicting rows are explicitly approved.
+2. The vertical #509 first-column Dao/noI rows may be operationally intended as #509, but the image title currently reads #534. This needs a human map-context decision, not blind OCR.
+
+## Recommended next actions
+
+1. Use `ABCスクショ取込確認` to repair the #534 A/B/C rows after confirming `#534:C-9`.
+2. Use `縦スクショ再分析` to decide whether to trust folder order or image title for each `要判断` row before updating `漁場一覧`.
+3. Keep production `管理表たたき` untouched until the review rows are confirmed.
+
 ## 2026-06-01 Fishery safety-period simulator and vertical reverse sort view
 
 ## Context
