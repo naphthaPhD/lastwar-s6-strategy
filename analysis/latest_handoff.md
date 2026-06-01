@@ -1,5 +1,41 @@
 # Handoff summary
 
+## 2026-06-01 Fishery sheet correction: vertical line and alliance safety view
+
+## Context
+
+Corrected the fishery spreadsheet work after the vertical screenshot route was found to have crossed visually into #534/#503 while the folder-order instruction still defined the intended #509 positions. The working fishery sheet is `1Zzp53UbwcZdD80BXO7xXYfjPxkUvBYwdIN5_I9KnE80`. The production `#534` spreadsheet is `12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g`.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Working Google Sheet: added/updated `ABCスクショ取込確認`, `縦スクショ取込確認`, `漁場一覧`, and `連盟安全期間`
+- Production Google Sheet: restored only `管理表たたき`; no other production tab was intentionally changed in this correction pass
+
+## Key findings
+
+1. The previous production `管理表たたき` vertical-screenshot write was rolled back from screenshot-derived values to the pre-existing management source where available. The remaining bad `#534:H-1` vertical value was cleared because `拠点履歴_座標` has no authoritative `#534:H-1` fishery row.
+2. The working `縦スクショ取込確認` now treats the user-specified folder order as authoritative for #509 rows even when the image-title OCR reads #534 or #503. Corrected rows include #509 `C-3/B-3/A-3`, `K-1/J-1/I-1/H-1`, `C-1`, and `I-3`.
+3. `漁場一覧` now reflects those rows under #509. The former duplicate `#503:I-3` entry was replaced by #509 `K-3`, and #509 `I-3/J-3/K-3` were restored in natural order.
+4. Alliance owner OCR `nol` on #509 `I-1/J-1` was corrected to `noI` based on the user's note; the raw OCR remains visible in `縦スクショ取込確認`.
+5. Added `ABCスクショ取込確認` for the 33-fishery horizontal screenshot intake review.
+6. Added `連盟安全期間`, a formula-driven alliance view summarizing each current owner, fishery count, earliest protection expiry, 23:00 count, 7:00 count, 15:00 safe-window count, and target fishery keys.
+
+## Current risks
+
+1. `#509:I-3` still has image-title OCR `#503`, so it is kept as #509 by folder order but should be visually confirmed if it becomes operationally important.
+2. The production audit tab from the earlier bad write remains as historical evidence only; it should not be treated as the current source of truth.
+3. `漁場一覧` still contains manually maintained rows. If the list grows across #476/#509/#534, a dedicated natural-sort helper or Apps Script refresh should be used rather than relying on Google Sheets text sort.
+
+## Recommended next actions
+
+1. Use `連盟安全期間` to identify alliances that currently have only 15:00 safe-window openings versus actionable 23:00/7:00 openings.
+2. Visually confirm #509 `I-3` and the `noI/nol` readings before using them in an executor notice.
+3. Keep future screenshot imports in review tabs first, then promote only confirmed rows into `漁場一覧` or production `管理表たたき`.
+
 ## 2026-06-01 Fishery sheet multi-area line schema
 
 ## Context
