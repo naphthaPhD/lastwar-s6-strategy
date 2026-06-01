@@ -3,12 +3,17 @@ const SHEET_NAMES = {
   EVENTS: 'イベント一覧',
   SIMULATOR: 'シミュレーター',
   CALENDAR: 'カレンダー',
+  LINE_DEFINITIONS: 'ライン定義',
 };
 
 const LIST_HEADERS = [
+  'エリア',
+  '位置キー',
   '漁場名',
   '所有連盟',
-  'A/B/C列',
+  '防衛ライン',
+  'ライン順序',
+  'ライン方向',
   '座標',
   '現在保護切れ日時',
   '応戦時間帯',
@@ -28,9 +33,11 @@ const EVENT_HEADERS = [
   '保護切れ日時',
   '応戦時間帯',
   '対象数',
+  'エリア',
   '漁場名',
+  '位置キー',
   '所有連盟',
-  'A/B/C列',
+  '防衛ライン',
   '座標',
   'ワンパン必要',
   'ワンパン役',
@@ -46,6 +53,33 @@ const CALENDAR_HEADERS = [
   '対象漁場',
   'ワンパン候補',
 ];
+
+const LINE_DEFINITION_HEADERS = [
+  'エリア',
+  'ライン軸',
+  '外側からの方向',
+  'ライン1',
+  'ライン2',
+  'ライン3',
+  '位置キー例',
+  'スクショフォルダ例',
+  '備考',
+];
+
+const LINE_DEFINITION_ROWS = [
+  ['#534', 'letter', 'A→B→C', 'A列', 'B列', 'C列', '#534:A-1', '漁場スクショ/534/ABC', '#534は従来どおりA/B/Cを防衛ラインにする'],
+  ['#509', 'number', 'A→B→C→D', '1列', '3列', '5列', '#509:A-1', '漁場スクショ/509/ABC', '#509はA-1,B-1,C-1,D-1のように同じ数字でラインを見る'],
+  ['#476', 'letter_reverse', 'K→J→I', 'K列', 'J列', 'I列', '#476:K-1', '漁場スクショ/476/KJI', '#476は逆向きにK,J,Iと下りるラインを見る'],
+  ['#440', '未定', '要確認', '', '', '', '#440:A-1', '漁場スクショ/440/', '必要になったら方向定義を追加'],
+  ['#503', '未定', '要確認', '', '', '', '#503:A-1', '漁場スクショ/503/', '必要になったら方向定義を追加'],
+  ['#480', '未定', '要確認', '', '', '', '#480:A-1', '漁場スクショ/480/', '必要になったら方向定義を追加'],
+  ['#523', '未定', '要確認', '', '', '', '#523:A-1', '漁場スクショ/523/', '必要になったら方向定義を追加'],
+];
+
+const AREA_VALUES = ['#534', '#509', '#476', '#440', '#503', '#480', '#523'];
+const LINE_VALUES = ['A列', 'B列', 'C列', 'D列', 'K列', 'J列', 'I列', '1列', '3列', '5列', '7列', '9列'];
+const ONE_PUNCH_VALUES = ['自動:候補', '自動:7時要判断', '自動:不要', '必要', '不要', '見送り', '要確認'];
+const OPERATION_VALUES = ['取得', '保護パン', '放棄'];
 
 const RESPONSE_HOURS = [7, 15, 23];
 const SAFE_RESPONSE_HOUR = 15;
@@ -69,11 +103,13 @@ function setupFisheryProtectionWorkbook() {
   const eventsSheet = ensureSheet_(ss, SHEET_NAMES.EVENTS);
   const simulatorSheet = ensureSheet_(ss, SHEET_NAMES.SIMULATOR);
   const calendarSheet = ensureSheet_(ss, SHEET_NAMES.CALENDAR);
+  const lineDefinitionSheet = ensureSheet_(ss, SHEET_NAMES.LINE_DEFINITIONS);
 
   setupListSheet_(listSheet);
   setupEventsSheet_(eventsSheet);
   setupSimulatorSheet_(simulatorSheet);
   setupCalendarSheet_(calendarSheet);
+  setupLineDefinitionSheet_(lineDefinitionSheet);
   refreshFisheryProtectionSystem();
 }
 
@@ -99,46 +135,52 @@ function refreshFisheryProtectionSystem() {
       continue;
     }
 
-    const currentProtectUntil = parseDate_(row[4]);
-    const operationAt = parseDate_(row[9]);
-    const operation = String(row[10] || '').trim();
+    const currentProtectUntil = parseDate_(row[8]);
+    const operationAt = parseDate_(row[13]);
+    const operation = String(row[14] || '').trim();
     let nextProtectUntil = null;
 
     if (operationAt) {
       if (operation === '放棄') {
         nextProtectUntil = calculateAbandonProtectionEnd_(operationAt);
-        row[14] = addHours_(operationAt, REACQUIRE_LOCK_HOURS);
+        row[18] = addHours_(operationAt, REACQUIRE_LOCK_HOURS);
       } else {
         nextProtectUntil = calculateNextProtectionEnd_(operationAt);
-        row[14] = '';
+        row[18] = '';
       }
     } else if (currentProtectUntil) {
       nextProtectUntil = currentProtectUntil;
-      row[14] = '';
+      row[18] = '';
     }
 
-    row[5] = nextProtectUntil ? formatResponseSlot_(nextProtectUntil) : '';
-    row[11] = nextProtectUntil || '';
-    row[12] = nextProtectUntil ? formatResponseSlot_(nextProtectUntil) : '';
-    row[13] = canAbandonAt_(now) ? '可' : '不可';
-    row[15] = now;
+    row[9] = nextProtectUntil ? formatResponseSlot_(nextProtectUntil) : '';
+    row[15] = nextProtectUntil || '';
+    row[16] = nextProtectUntil ? formatResponseSlot_(nextProtectUntil) : '';
+    row[17] = canAbandonAt_(now) ? '可' : '不可';
+    row[19] = now;
 
-    if (shouldReplaceAutoCandidate_(row[6])) {
-      row[6] = buildOnePunchCandidate_(row[2], nextProtectUntil);
+    if (!row[1] && row[0] && row[2]) {
+      row[1] = `${row[0]}:${row[2]}`;
+    }
+
+    if (shouldReplaceAutoCandidate_(row[10])) {
+      row[10] = buildOnePunchCandidate_(row[4], nextProtectUntil);
     }
 
     outputRows.push(row);
     if (nextProtectUntil) {
       eventRows.push({
+        area: row[0],
+        key: row[1],
         protectUntil: nextProtectUntil,
         slot: formatResponseSlot_(nextProtectUntil),
-        name: row[0],
-        owner: row[1],
-        line: row[2],
-        coord: row[3],
-        onePunch: row[6],
-        assignee: row[7],
-        note: row[8],
+        name: row[2],
+        owner: row[3],
+        line: row[4],
+        coord: row[7],
+        onePunch: row[10],
+        assignee: row[11],
+        note: row[12],
       });
     }
   }
@@ -197,13 +239,14 @@ function setupListSheet_(sheet) {
   ensureListHeaders_(sheet);
   sheet.setFrozenRows(1);
   sheet.getRange(1, 1, 1, LIST_HEADERS.length).setFontWeight('bold').setBackground('#1f4e79').setFontColor('#ffffff');
-  sheet.getRange('C2:C').setDataValidation(listValidation_(['A', 'B', 'C']));
-  sheet.getRange('G2:G').setDataValidation(listValidation_(['自動:候補', '自動:7時要判断', '自動:不要', '必要', '不要', '見送り', '要確認']));
-  sheet.getRange('K2:K').setDataValidation(listValidation_(['取得', '保護パン', '放棄']));
-  sheet.getRange('E:E').setNumberFormat('yyyy/mm/dd hh:mm');
-  sheet.getRange('J:J').setNumberFormat('yyyy/mm/dd hh:mm');
-  sheet.getRange('L:L').setNumberFormat('yyyy/mm/dd hh:mm');
-  sheet.getRange('O:P').setNumberFormat('yyyy/mm/dd hh:mm');
+  sheet.getRange('A2:A').setDataValidation(listValidation_(AREA_VALUES));
+  sheet.getRange('E2:E').setDataValidation(listValidation_(LINE_VALUES));
+  sheet.getRange('K2:K').setDataValidation(listValidation_(ONE_PUNCH_VALUES));
+  sheet.getRange('O2:O').setDataValidation(listValidation_(OPERATION_VALUES));
+  sheet.getRange('I:I').setNumberFormat('yyyy/mm/dd hh:mm');
+  sheet.getRange('N:N').setNumberFormat('yyyy/mm/dd hh:mm');
+  sheet.getRange('P:P').setNumberFormat('yyyy/mm/dd hh:mm');
+  sheet.getRange('S:T').setNumberFormat('yyyy/mm/dd hh:mm');
   sheet.autoResizeColumns(1, LIST_HEADERS.length);
 }
 
@@ -222,6 +265,15 @@ function setupCalendarSheet_(sheet) {
   sheet.getRange(1, 1, 1, CALENDAR_HEADERS.length).setFontWeight('bold').setBackground('#38761d').setFontColor('#ffffff');
 }
 
+function setupLineDefinitionSheet_(sheet) {
+  sheet.clear();
+  sheet.getRange(1, 1, 1, LINE_DEFINITION_HEADERS.length).setValues([LINE_DEFINITION_HEADERS]);
+  sheet.getRange(2, 1, LINE_DEFINITION_ROWS.length, LINE_DEFINITION_HEADERS.length).setValues(LINE_DEFINITION_ROWS);
+  sheet.setFrozenRows(1);
+  sheet.getRange(1, 1, 1, LINE_DEFINITION_HEADERS.length).setFontWeight('bold').setBackground('#555555').setFontColor('#ffffff');
+  sheet.autoResizeColumns(1, LINE_DEFINITION_HEADERS.length);
+}
+
 function setupSimulatorSheet_(sheet) {
   sheet.clear();
   sheet.getRange('A1:D1').setValues([['項目', '入力/出力', '補足', '例']]);
@@ -236,7 +288,7 @@ function setupSimulatorSheet_(sheet) {
     ['その時刻に放棄可能か', '', '応戦1時間前から不可', ''],
     ['計算メモ', '', '', ''],
   ]);
-  sheet.getRange('B2').setDataValidation(listValidation_(['取得', '保護パン', '放棄']));
+  sheet.getRange('B2').setDataValidation(listValidation_(OPERATION_VALUES));
   sheet.getRange('B3').setNumberFormat('yyyy/mm/dd hh:mm');
   sheet.getRange('B6').setNumberFormat('yyyy/mm/dd hh:mm');
   sheet.getRange('B8').setNumberFormat('yyyy/mm/dd hh:mm');
@@ -257,7 +309,9 @@ function buildEventsSheet_(ss, events) {
     event.protectUntil,
     event.slot,
     counts[event.protectUntil.getTime()],
+    event.area,
     event.name,
+    event.key,
     event.owner,
     event.line,
     event.coord,
@@ -291,10 +345,10 @@ function buildCalendarSheet_(ss, events) {
       formatResponseSlot_(slot),
       slot.getHours() === SAFE_RESPONSE_HOUR ? '安全期間' : '',
       slotEvents.length,
-      slotEvents.map((event) => event.name).join('\n'),
+      slotEvents.map((event) => event.key || `${event.area || ''}:${event.name}`).join('\n'),
       slotEvents
         .filter((event) => String(event.onePunch || '').indexOf('候補') !== -1 || String(event.onePunch || '').indexOf('必要') !== -1)
-        .map((event) => event.name)
+        .map((event) => event.key || `${event.area || ''}:${event.name}`)
         .join('\n'),
     ];
   });

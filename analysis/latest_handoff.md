@@ -1,5 +1,32 @@
 # Handoff summary
 
+## 2026-06-01 Fishery sheet multi-area line schema
+
+## Context
+
+Updated the fishery protection management sheet target `1Zzp53UbwcZdD80BXO7xXYfjPxkUvBYwdIN5_I9KnE80` so it can keep #534 now and accept #509/#476 later without key collisions. The live sheet now uses `エリア` + `位置キー` (example `#534:A-1`) and a `ライン定義` tab.
+
+## Updated files
+
+- `tools/fishery_protection_sheet/Code.gs`
+- `tools/fishery_protection_sheet/README.md`
+- `data/fishery_protection_sheet_template.csv`
+- `analysis/2026-06-01_fishery_protection_sheet_system.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. #534 remains the current data source and uses `A列/B列/C列`.
+2. #509 should be entered by number-axis lines, because `A-1, B-1, C-1, D-1` form one direction line.
+3. #476 should be entered by reverse letter-axis lines, because the useful direction descends `K -> J -> I`.
+4. `イベント一覧` and `カレンダー` now show area-aware keys, avoiding future ambiguity when multiple areas have `A-1`.
+
+## Recommended next actions
+
+1. Paste the updated `Code.gs` into the target spreadsheet Apps Script when ready.
+2. For #509 screenshots, map same-number positions to `1列/3列/5列` style lines.
+3. For #476 screenshots, map reverse letters to `K列/J列/I列`.
+
 ## 2026-06-01 Fishery protection timer Apps Script
 
 ## Context
