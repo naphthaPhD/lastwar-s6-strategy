@@ -42,18 +42,21 @@ Read the temporary Dropbox folder `漁場スクショ/縦` containing 44 files `
 ## External output
 
 - Google Sheet `1Zzp53UbwcZdD80BXO7xXYfjPxkUvBYwdIN5_I9KnE80`, tab `縦スクショ取込確認`
+- Google Sheet `1Zzp53UbwcZdD80BXO7xXYfjPxkUvBYwdIN5_I9KnE80`, tabs `漁場一覧`, `イベント一覧`, `カレンダー`
 
 ## Key findings
 
 1. The folder count is 44, matching the expected count.
 2. OCR extracted capture times from XMP `DateCreated`, owner tags where readable, remaining timers, estimated open times, and response slots.
 3. The review tab now keeps both the original specified area and the image-title OCR area. When the image title shows that the route has entered #534 or #503, `反映エリア` / `反映位置キー` use the image-title area instead of treating it as an error.
-4. Rows still marked review are limited to OCR gaps such as unread owner tags or unread timers, not area transitions.
+4. Visual review corrected five OCR gaps: #534 H-1 = Dao, #534 G-21/F-21 = nol, #534 I-19 = nol, and #534 F-19 = 89M.
+5. Rows with newer 12:53-12:58 screenshots were applied to `漁場一覧`: existing #534 rows were updated, new #509/#503/#534 position keys were appended, and unread #534 D-21/E-21 were left out because owner and timer were both missing.
+6. `イベント一覧` and `カレンダー` were converted from fixed pasted values to formulas driven by `漁場一覧`, so future main-table edits propagate into the time views.
 
 ## Recommended next actions
 
-1. Review only the rows still marked `要確認` in `縦スクショ取込確認`, mainly owner/timer OCR gaps.
-2. After confirmation, apply `反映エリア` / `反映位置キー` rows into `漁場一覧` and refresh `イベント一覧` / `カレンダー`.
+1. Review only `縦スクショ取込確認` rows 29-30 (`#534:E-21`, `#534:D-21`), where owner and timer were not visible/readable.
+2. Confirm whether the observed `#503:I-3` row should remain in the fishery master or be treated as a route-crossing note rather than an operated target.
 
 ## 2026-06-01 Fishery protection timer Apps Script
 
