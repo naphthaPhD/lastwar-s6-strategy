@@ -1236,3 +1236,42 @@ Calculated A/B uppercase fishery protection-punch targets from the current `管�
 
 - The generated notice is a candidate execution notice, not an order.
 - Production `#534` was not written to.
+
+## 2026-06-01 fishery vertical screenshot production update
+
+## Context
+
+Applied the newer vertical fishery screenshots from Dropbox folder `漁場スクショ/縦` to the production `#534` spreadsheet, sheet `管理表たたき`.
+This is the first pass where production `#534` was written for the fishery timer workflow, because the user explicitly broadened the scope from the review sheet to the real management table.
+
+## Updated files
+
+- `data/2026-06-01_fishery_production_update_log.csv`
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Production Google Sheets: `https://docs.google.com/spreadsheets/d/12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g/edit`
+- Updated tab: `管理表たたき`
+- Audit tab left in the production spreadsheet: `漁場スクショ反映ログ_20260601`
+
+## Key findings
+
+1. Updated 42 fishery rows from screenshots `IMG_1527.PNG` through `IMG_1570.PNG`.
+2. Reflected areas include `#509`, `#534`, and one corrected `#503:I-3` row from image-area OCR.
+3. Updated `管理表たたき` columns `D:I` and `L`: owner, safe-until time, remaining timer snapshot, state, response slot, and source memo.
+4. Column `E` acquisition time was preserved by copying the current management-table value back through the audit helper.
+5. `#534:D-21` and `#534:E-21` were intentionally not updated because the screenshot owner/timer read was insufficient.
+
+## Verification
+
+- Readback confirmed representative rows:
+  - `#503:I-3`: row 866, owner `xjR`, safe until `2026/06/03 23:00`.
+  - `#509:K-3`: row 1105, owner `OWM`, safe until `2026/06/03 15:00`.
+  - `#534:H-19`: row 1557, owner `S9U`, safe until `2026/06/03 23:00`.
+  - `#534:K-21`: row 1766, owner `f4j`, safe until `2026/06/04 07:00` display-formatted as `2026/06/04 7:00`.
+
+## Notes
+
+- The audit tab was used to MATCH each `位置キー` against `管理表たたき!T:T`; the older `拠点履歴_座標` management row numbers were not trusted because the production table is sorted and some row-number references pointed to other areas.
+- `data/2026-06-01_fishery_production_update_log.csv` records the applied row numbers, screenshot file names, captured times, and columns touched.
