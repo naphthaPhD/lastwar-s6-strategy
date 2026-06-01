@@ -27,6 +27,7 @@ const LIST_HEADERS = [
   '放棄可否',
   '再取得不可終了',
   '更新時刻',
+  '表示順',
 ];
 
 const EVENT_HEADERS = [
@@ -158,6 +159,7 @@ function refreshFisheryProtectionSystem() {
     row[16] = nextProtectUntil ? formatResponseSlot_(nextProtectUntil) : '';
     row[17] = canAbandonAt_(now) ? '可' : '不可';
     row[19] = now;
+    row[20] = buildDisplayOrder_(row[0], row[2], row[5]);
 
     if (!row[1] && row[0] && row[2]) {
       row[1] = `${row[0]}:${row[2]}`;
@@ -187,6 +189,7 @@ function refreshFisheryProtectionSystem() {
 
   if (outputRows.length > 0) {
     listSheet.getRange(2, 1, outputRows.length, LIST_HEADERS.length).setValues(outputRows);
+    listSheet.getRange(2, 1, outputRows.length, LIST_HEADERS.length).sort({ column: 21, ascending: true });
   }
   buildEventsSheet_(ss, eventRows);
   buildCalendarSheet_(ss, eventRows);
@@ -247,6 +250,7 @@ function setupListSheet_(sheet) {
   sheet.getRange('N:N').setNumberFormat('yyyy/mm/dd hh:mm');
   sheet.getRange('P:P').setNumberFormat('yyyy/mm/dd hh:mm');
   sheet.getRange('S:T').setNumberFormat('yyyy/mm/dd hh:mm');
+  sheet.hideColumns(21);
   sheet.autoResizeColumns(1, LIST_HEADERS.length);
 }
 
@@ -467,6 +471,14 @@ function buildOnePunchCandidate_(line, protectUntil) {
 function shouldReplaceAutoCandidate_(value) {
   const text = String(value || '').trim();
   return text === '' || text.indexOf('自動:') === 0;
+}
+
+function buildDisplayOrder_(area, name, lineOrder) {
+  const areaOrder = AREA_VALUES.indexOf(String(area || '').trim()) + 1 || 99;
+  const match = String(name || '').match(/-(\d+)$/);
+  const numberPart = match ? Number(match[1]) : 999;
+  const linePart = Number(lineOrder) || 9;
+  return areaOrder * 100000 + numberPart * 10 + linePart;
 }
 
 function buildUpcomingResponseSlots_(fromDate, days) {

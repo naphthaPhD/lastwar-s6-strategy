@@ -20,6 +20,7 @@ Updated the fishery protection management sheet target `1Zzp53UbwcZdD80BXO7xXYfj
 2. #509 should be entered by number-axis lines, because `A-1, B-1, C-1, D-1` form one direction line.
 3. #476 should be entered by reverse letter-axis lines, because the useful direction descends `K -> J -> I`.
 4. `イベント一覧` and `カレンダー` now show area-aware keys, avoiding future ambiguity when multiple areas have `A-1`.
+5. `漁場一覧` now uses a hidden `表示順` sort key so Google Sheets does not sort `A-11` immediately after `A-1`; the intended #534 order is `A-1, B-1, C-1, A-3, B-3, C-3...`.
 
 ## Recommended next actions
 
