@@ -1,5 +1,39 @@
 # Handoff summary
 
+## 2026-06-01 Fishery safety-period simulator and vertical reverse sort view
+
+## Context
+
+Extended the working fishery spreadsheet `1Zzp53UbwcZdD80BXO7xXYfjPxkUvBYwdIN5_I9KnE80` after the user requested two operator-facing improvements: a JST safety-period abandonment/acquisition simulator, and a vertical screenshot view that can be sorted by reverse alphabet order.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Google Sheet tab `連盟安全期間`: added `K:M` simulator block
+- Google Sheet tab `縦スクショ取込確認`: added helper columns `P:T`
+- Google Sheet tab `縦スクショ逆順ビュー`: new formula-driven sorted view
+
+## Key findings
+
+1. `連盟安全期間!K:M` now has a dropdown-driven simulator. The operator can select `15:00-16:00（安全）`, `23:00-24:00`, `07:00-08:00`, or `手入力時刻`.
+2. The simulator outputs the judged abandon time, abandonment protection end, same-alliance 24h reacquisition time, other-alliance earliest acquisition time, abandoning-alliance earliest acquisition time, and whether the selected time is inside a one-hour abandon-prohibited window.
+3. The simulator skips a calculated 15:00 protection end to 23:00, matching the supplied safe-window rule.
+4. `縦スクショ取込確認!P:T` provides sort helper columns: custom area order, reverse alphabet order `K -> A`, descending number order, combined sort key, and display label.
+5. `縦スクショ逆順ビュー` shows the same screenshot rows without changing the original intake order, sorted by area order `#503 -> #534 -> #509 -> #476`, then `K -> A`, then larger line numbers first.
+
+## Current risks
+
+1. The area sort order is operationally chosen from the user's example, not a game rule. If the map traversal should place #509 before #534 in a specific workflow, only the helper-area order needs changing.
+2. The abandonment simulator uses the rule as supplied in this thread: next response slot after the selected abandon time, with 15:00 safe-window skipped to 23:00, plus the 24h same-alliance reacquisition limit.
+
+## Recommended next actions
+
+1. Use `連盟安全期間!L3` for quick scenario checks before deciding an abandonment timing.
+2. Use `縦スクショ逆順ビュー` for review, and keep `縦スクショ取込確認` as the raw intake/audit order.
+
 ## 2026-06-01 Fishery sheet correction: vertical line and alliance safety view
 
 ## Context
