@@ -47,12 +47,13 @@ Read the temporary Dropbox folder `漁場スクショ/縦` containing 44 files `
 
 1. The folder count is 44, matching the expected count.
 2. OCR extracted capture times from XMP `DateCreated`, owner tags where readable, remaining timers, estimated open times, and response slots.
-3. Several rows need review before writing into the main `漁場一覧`: some image-title area OCR differs from the user-specified #509 area, and some owner tags were not readable with local OCR.
+3. The review tab now keeps both the original specified area and the image-title OCR area. When the image title shows that the route has entered #534 or #503, `反映エリア` / `反映位置キー` use the image-title area instead of treating it as an error.
+4. Rows still marked review are limited to OCR gaps such as unread owner tags or unread timers, not area transitions.
 
 ## Recommended next actions
 
-1. Review the `縦スクショ取込確認` tab and decide whether the specified area or the image-title area should be treated as authoritative for mismatched rows.
-2. After confirmation, apply reviewed rows into `漁場一覧` and refresh `イベント一覧` / `カレンダー`.
+1. Review only the rows still marked `要確認` in `縦スクショ取込確認`, mainly owner/timer OCR gaps.
+2. After confirmation, apply `反映エリア` / `反映位置キー` rows into `漁場一覧` and refresh `イベント一覧` / `カレンダー`.
 
 ## 2026-06-01 Fishery protection timer Apps Script
 
