@@ -28,6 +28,32 @@ Updated the fishery protection management sheet target `1Zzp53UbwcZdD80BXO7xXYfj
 2. For #509 screenshots, map same-number positions to `1列/3列/5列` style lines.
 3. For #476 screenshots, map reverse letters to `K列/J列/I列`.
 
+## 2026-06-01 Vertical fishery screenshot import review
+
+## Context
+
+Read the temporary Dropbox folder `漁場スクショ/縦` containing 44 files `IMG_1527.PNG` through `IMG_1570.PNG`. File-name order was mapped to the user-specified sequence: #509 `K-3` through `A-3`, #509 `K-1` through `A-1`, then #534 `K-21` through `A-21`, and #534 `K-19` through `A-19`.
+
+## Updated files
+
+- `data/2026-06-01_fishery_vertical_screenshot_import.csv`
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Google Sheet `1Zzp53UbwcZdD80BXO7xXYfjPxkUvBYwdIN5_I9KnE80`, tab `縦スクショ取込確認`
+
+## Key findings
+
+1. The folder count is 44, matching the expected count.
+2. OCR extracted capture times from XMP `DateCreated`, owner tags where readable, remaining timers, estimated open times, and response slots.
+3. Several rows need review before writing into the main `漁場一覧`: some image-title area OCR differs from the user-specified #509 area, and some owner tags were not readable with local OCR.
+
+## Recommended next actions
+
+1. Review the `縦スクショ取込確認` tab and decide whether the specified area or the image-title area should be treated as authoritative for mismatched rows.
+2. After confirmation, apply reviewed rows into `漁場一覧` and refresh `イベント一覧` / `カレンダー`.
+
 ## 2026-06-01 Fishery protection timer Apps Script
 
 ## Context
