@@ -1,5 +1,42 @@
 # Handoff summary
 
+## 2026-06-01 Fishery protection timer Apps Script
+
+## Context
+
+Built a local Google Sheets + Apps Script package for Last War S6 fishery protection timer management. The system tracks next protection expiry, response window, one-punch candidates, abandonment protection, 24-hour reacquisition lock, and a calendar/event view. A new Google Spreadsheet creation attempt failed because Google Drive returned `storageQuotaExceeded`, so no live spreadsheet was created in this pass.
+
+## Updated files
+
+- `tools/fishery_protection_sheet/Code.gs`
+- `tools/fishery_protection_sheet/README.md`
+- `rules/fishery_protection_timer_rules.md`
+- `data/fishery_protection_sheet_template.csv`
+- `analysis/2026-06-01_fishery_protection_sheet_system.md`
+- `.gitignore`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. The Apps Script creates `漁場一覧`, `イベント一覧`, `シミュレーター`, and `カレンダー`.
+2. Normal capture and protection-punch use the same rule: next battle day at the same response hour, then one response slot later.
+3. If the calculated expiry is the 15:00 safe window, it is shifted to 23:00.
+4. Abandonment uses the next response slot after the abandon time, then one response slot later, with the same 15:00 safe-window skip.
+5. `ワンパン必要` is not fully automated: 23:00 expiry becomes `自動:候補`, 07:00 expiry becomes `自動:7時要判断`, and manual values are preserved.
+6. Verification passed the three supplied examples: Wednesday 23:00 -> Sunday 07:00, Sunday 07:00 -> Wednesday 23:00, and Thursday 07:00 -> Saturday 23:00. Abandonment lock also matched 05:58 allowed / 06:00 disallowed before a 07:00 response window.
+
+## Current risks
+
+1. Drive storage quota currently prevents creating a new live Google Spreadsheet from Codex.
+2. Abandonment protection behavior is implemented from the supplied rule but still needs one live in-game confirmation.
+3. Apps Script timezone must be set to `Asia/Tokyo`; otherwise displayed expiry times may drift.
+
+## Recommended next actions
+
+1. Free Drive storage or choose an existing review spreadsheet, then paste `tools/fishery_protection_sheet/Code.gs` into Apps Script.
+2. Run `setupFisheryProtectionWorkbook()` and import or copy the columns from `data/fishery_protection_sheet_template.csv`.
+3. Compare several calculated expiry times against the in-game protection display before using it for live defense calls.
+
 ## 2026-06-01 APACHE clarification and confirmation draft
 
 ## Context

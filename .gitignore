@@ -35,6 +35,8 @@ tools/*
 !tools/chat_event_preprocessor/**
 !tools/invasion_strategy_os/
 !tools/invasion_strategy_os/**
+!tools/fishery_protection_sheet/
+!tools/fishery_protection_sheet/**
 tools/chat_event_preprocessor/_tmp_test/
 tools/chat_event_preprocessor/__pycache__/
 tools/chat_event_preprocessor/*.pyc
