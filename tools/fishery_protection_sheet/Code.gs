@@ -1,14 +1,17 @@
 const SHEET_NAMES = {
   INDEX: '00_目次',
   LIST: '漁場一覧',
+  OPERATIONAL_LIST: '漁場一覧4枠',
   EVENTS: 'イベント一覧',
   SIMULATOR: 'シミュレーター',
   CALENDAR: 'カレンダー',
+  OPERATIONAL_CALENDAR: '開放カレンダー4枠',
   LINE_DEFINITIONS: 'ライン定義',
   ROUTE_CHECK: '侵攻ルート確認',
   ALLIANCE_JUDGMENT: '連盟判定',
   PACTS: '盟約管理',
   CAPACITY: '連盟キャパ管理',
+  SELECTED_VIEW: '選択漁場ビュー',
 };
 
 const LIST_HEADERS = [
@@ -61,8 +64,9 @@ const INDEX_ROWS = [
   ['日常運用', 1, '漁場一覧4枠', '漁場ごとの現在保護切れ、4状態、保護パン可否、敵味方/盟約/キャパ制約を見る', '毎回', 'まずここを見る'],
   ['日常運用', 2, '開放カレンダー4枠', '水曜23時・木曜7時・土曜23時・日曜7時の4枠で対象漁場を一覧化', '毎回', '15時は最終枠にしない'],
   ['日常運用', 3, '侵攻ルート確認', '同じ侵攻ルート上の連続開放、敵保有、同時突破リスクを見る', '毎回', '危険/分散の判断'],
-  ['日常運用', 4, '連盟安全期間', '連盟ごとの安全期間と放棄後の最短取得可能時刻を確認', '必要時', '放棄判断用'],
-  ['日常運用', 5, 'シミュレーター', '取得・保護パン・放棄時の次回保護切れを試算', '必要時', '個別ケース確認'],
+  ['日常運用', 4, '選択漁場ビュー', '漁場行、開放枠、侵攻ルートを選択した時に、対象漁場と保護パン候補連盟を見る', '毎回', '選択変更で自動更新'],
+  ['日常運用', 5, '連盟安全期間', '連盟ごとの安全期間と放棄後の最短取得可能時刻を確認', '必要時', '放棄判断用'],
+  ['日常運用', 6, 'シミュレーター', '取得・保護パン・放棄時の次回保護切れを試算', '必要時', '個別ケース確認'],
   ['入力マスタ', 1, '漁場一覧', '元データ。漁場ごとの所有連盟、座標、保護切れを保持', '更新時', '直接編集は慎重に'],
   ['入力マスタ', 2, '連盟判定', '敵/味方/同サーバ/他サーバ味方などの判定マスタ', '更新時', 'xJR/476C/476Bは敵登録済み'],
   ['入力マスタ', 3, '盟約管理', '盟約相手と有効状態を管理。盟約中は保護パン不可', '更新時', '外交変更時に更新'],
@@ -154,6 +158,22 @@ const CAPACITY_HEADERS = [
   '推定余力',
 ];
 
+const SELECTED_VIEW_HEADERS = [
+  'エリア',
+  '位置キー',
+  '漁場名',
+  '所有連盟',
+  '所有連盟関係',
+  '現在保護切れ',
+  '開放枠',
+  '保護パン後',
+  '保護パン可否',
+  '保護パン候補連盟',
+  'ワンパン要否',
+  '担当候補',
+  '制約メモ',
+];
+
 const LINE_DEFINITION_HEADERS = [
   'エリア',
   'ライン軸',
@@ -210,6 +230,7 @@ const MS_PER_DAY = 24 * 60 * 60 * 1000;
 const ABANDON_LOCK_MINUTES = 60;
 const REACQUIRE_LOCK_HOURS = 24;
 const DISPLAY_ORDER_COLUMN = 21;
+const MAX_SELECTED_VIEW_ROWS = 50;
 
 const OPERATIONAL_STATES = [
   { label: 'WED_23', display: '水曜23時', day: 3, hour: 23, next: 'SUN_07' },
@@ -223,8 +244,17 @@ function onOpen() {
     .createMenu('漁場保護')
     .addItem('初期セットアップ', 'setupFisheryProtectionWorkbook')
     .addItem('一覧を再計算', 'refreshFisheryProtectionSystem')
+    .addItem('選択ビュー更新', 'refreshSelectedFisheryView')
     .addItem('シミュレーター計算', 'runFisherySimulator')
     .addToUi();
+}
+
+function onSelectionChange(e) {
+  try {
+    updateSelectedFisheryView_(e);
+  } catch (error) {
+    // Simple triggers should never block normal sheet selection.
+  }
 }
 
 function setupFisheryProtectionWorkbook() {
@@ -239,6 +269,7 @@ function setupFisheryProtectionWorkbook() {
   const allianceJudgmentSheet = ensureSheet_(ss, SHEET_NAMES.ALLIANCE_JUDGMENT);
   const pactSheet = ensureSheet_(ss, SHEET_NAMES.PACTS);
   const capacitySheet = ensureSheet_(ss, SHEET_NAMES.CAPACITY);
+  const selectedViewSheet = ensureSheet_(ss, SHEET_NAMES.SELECTED_VIEW);
 
   setupIndexSheet_(indexSheet);
   setupListSheet_(listSheet);
@@ -250,6 +281,7 @@ function setupFisheryProtectionWorkbook() {
   setupAllianceJudgmentSheet_(allianceJudgmentSheet);
   setupPactSheet_(pactSheet);
   setupCapacitySheet_(capacitySheet);
+  setupSelectedViewSheet_(selectedViewSheet);
   refreshFisheryProtectionSystem();
 }
 
@@ -413,6 +445,10 @@ function NEXT_AFTER_PROTECTION_PUNCH(protectUntil) {
   return state ? nextProtectionAfterState_(state.label, normalized) : '';
 }
 
+function refreshSelectedFisheryView() {
+  updateSelectedFisheryView_({ source: SpreadsheetApp.getActiveSpreadsheet(), range: SpreadsheetApp.getActiveRange() });
+}
+
 function setupIndexSheet_(sheet) {
   sheet.clear();
   sheet.getRange('A1:F1').setValues([['Last War S6 漁場保護管理 目次', '', '', '', '', '']]);
@@ -478,6 +514,31 @@ function setupPactSheet_(sheet) {
 
 function setupCapacitySheet_(sheet) {
   setupStaticSheet_(sheet, CAPACITY_HEADERS, CAPACITY_ROWS, '#38761d');
+}
+
+function setupSelectedViewSheet_(sheet) {
+  sheet.clear();
+  sheet.getRange('A1:M1').setValues([['選択漁場ビュー', '', '', '', '', '', '', '', '', '', '', '', '']]);
+  sheet.getRange('A2:B6').setValues([
+    ['選択元', ''],
+    ['絞り込み', '漁場一覧4枠の行、開放カレンダー4枠の枠、侵攻ルート確認の行を選択すると更新'],
+    ['対象件数', ''],
+    ['更新時刻', ''],
+    ['候補連盟の見方', '連盟判定で味方/同サーバ味方、かつ連盟キャパ管理で残数不足がない連盟を表示'],
+  ]);
+  sheet.getRange(8, 1, 1, SELECTED_VIEW_HEADERS.length).setValues([SELECTED_VIEW_HEADERS]);
+  sheet.setFrozenRows(8);
+  sheet.getRange('A1:M1').setFontWeight('bold').setFontSize(14).setBackground('#274e13').setFontColor('#ffffff');
+  sheet.getRange(8, 1, 1, SELECTED_VIEW_HEADERS.length).setFontWeight('bold').setBackground('#6aa84f').setFontColor('#ffffff');
+  sheet.getRange('F:H').setNumberFormat('yyyy/mm/dd hh:mm');
+  sheet.autoResizeColumns(1, SELECTED_VIEW_HEADERS.length);
+}
+
+function ensureSelectedViewLayout_(sheet) {
+  const title = String(sheet.getRange('A1').getValue() || '');
+  const headers = sheet.getRange(8, 1, 1, SELECTED_VIEW_HEADERS.length).getValues()[0];
+  const headerOk = headers.every((value, index) => value === SELECTED_VIEW_HEADERS[index]);
+  if (title !== '選択漁場ビュー' || !headerOk) setupSelectedViewSheet_(sheet);
 }
 
 function setupStaticSheet_(sheet, headers, rows, color) {
@@ -626,6 +687,316 @@ function buildRouteCheckSheet_(ss, events, allianceMap) {
     sheet.getRange(2, 1, rows.length, ROUTE_CHECK_HEADERS.length).setValues(rows);
   }
   sheet.autoResizeColumns(1, ROUTE_CHECK_HEADERS.length);
+}
+
+function updateSelectedFisheryView_(event) {
+  const ss = event && event.source ? event.source : SpreadsheetApp.getActiveSpreadsheet();
+  const range = event && event.range ? event.range : ss.getActiveRange();
+  if (!range) return;
+  const selectedSheet = range.getSheet();
+  const selectedSheetName = selectedSheet.getName();
+  if (selectedSheetName === SHEET_NAMES.SELECTED_VIEW) return;
+  if (!isFisherySelectionSource_(selectedSheetName)) return;
+
+  const viewSheet = ensureSheet_(ss, SHEET_NAMES.SELECTED_VIEW);
+  const listSheet = ss.getSheetByName(SHEET_NAMES.OPERATIONAL_LIST) || ss.getSheetByName(SHEET_NAMES.LIST);
+  if (!listSheet) return;
+
+  const fisheryData = readFisheryRowsFromSheet_(listSheet);
+  const selectedRows = inferSelectedFisheryRows_(ss, range, fisheryData);
+  const uniqueRows = uniqueFisheryRows_(selectedRows).slice(0, MAX_SELECTED_VIEW_ROWS);
+  const candidateRows = readProtectionPunchCandidateAlliances_(ss);
+
+  ensureSelectedViewLayout_(viewSheet);
+  viewSheet.getRange(9, 1, Math.max(1, viewSheet.getMaxRows() - 8), SELECTED_VIEW_HEADERS.length).clearContent();
+  const filterLabel = buildSelectionFilterLabel_(range, uniqueRows.length, selectedRows.length);
+  viewSheet.getRange('B2:B5').setValues([
+    [`${selectedSheetName}!${range.getA1Notation()}`],
+    [filterLabel],
+    [`${uniqueRows.length}${selectedRows.length > uniqueRows.length ? ` / ${selectedRows.length}件中` : ''}`],
+    [new Date()],
+  ]);
+
+  if (uniqueRows.length === 0) {
+    viewSheet.getRange(9, 1, 1, SELECTED_VIEW_HEADERS.length).setValues([
+      ['', '', '', '', '', '', '', '', '', '対象漁場を特定できません。漁場一覧4枠の行、開放カレンダー4枠の枠、侵攻ルート確認の行を選択してください。', '', '', ''],
+    ]);
+    viewSheet.autoResizeColumns(1, SELECTED_VIEW_HEADERS.length);
+    return;
+  }
+
+  const outputRows = uniqueRows.map((row) => {
+    const candidates = buildCandidateAllianceTextForFishery_(row, candidateRows);
+    return [
+      row.area,
+      row.key,
+      row.name,
+      row.owner,
+      row.ownerRelation,
+      row.protectUntil,
+      row.stateDisplay || row.stateLabel,
+      row.nextAfterPunch,
+      row.punchAvailability,
+      candidates,
+      row.onePunch,
+      row.assignee,
+      row.constraintMemo,
+    ];
+  });
+  viewSheet.getRange(9, 1, outputRows.length, SELECTED_VIEW_HEADERS.length).setValues(outputRows);
+  viewSheet.autoResizeColumns(1, SELECTED_VIEW_HEADERS.length);
+}
+
+function isFisherySelectionSource_(sheetName) {
+  return [
+    SHEET_NAMES.OPERATIONAL_LIST,
+    SHEET_NAMES.LIST,
+    SHEET_NAMES.OPERATIONAL_CALENDAR,
+    SHEET_NAMES.CALENDAR,
+    SHEET_NAMES.ROUTE_CHECK,
+  ].indexOf(sheetName) !== -1;
+}
+
+function inferSelectedFisheryRows_(ss, range, fisheryData) {
+  const sheet = range.getSheet();
+  const sheetName = sheet.getName();
+  if (sheetName === SHEET_NAMES.OPERATIONAL_LIST || sheetName === SHEET_NAMES.LIST) {
+    const selectedByRow = rowsFromSelectedListRows_(range, fisheryData);
+    if (selectedByRow.length > 0) return selectedByRow;
+  }
+
+  const selectedValues = getSelectedValues_(range);
+  const tokenFilter = buildTokenFilterFromSelection_(selectedValues);
+  if (sheetName === SHEET_NAMES.ROUTE_CHECK) {
+    const routeRows = rowsFromRouteSelection_(range, fisheryData);
+    if (routeRows.length > 0) return routeRows;
+  }
+  if (sheetName === SHEET_NAMES.OPERATIONAL_CALENDAR || sheetName === SHEET_NAMES.CALENDAR) {
+    const calendarRows = rowsFromCalendarSelection_(range, fisheryData);
+    if (calendarRows.length > 0) return calendarRows;
+  }
+  return filterFisheryRowsByTokens_(fisheryData.rows, tokenFilter);
+}
+
+function rowsFromSelectedListRows_(range, fisheryData) {
+  const startRow = Math.max(2, range.getRow());
+  const endRow = Math.min(fisheryData.rows.length + 1, range.getLastRow());
+  const rows = [];
+  for (let rowNumber = startRow; rowNumber <= endRow; rowNumber++) {
+    const row = fisheryData.rowBySheetRow[rowNumber];
+    if (row) rows.push(row);
+  }
+  return rows;
+}
+
+function rowsFromRouteSelection_(range, fisheryData) {
+  const sheet = range.getSheet();
+  const data = sheet.getDataRange().getValues();
+  if (data.length < 2) return [];
+  const headers = data[0].map((value) => String(value || '').trim());
+  const areaIndex = headerIndex_(headers, ['エリア']);
+  const routeIndex = headerIndex_(headers, ['侵攻ルート', '防衛ライン', 'ライン分類']);
+  const rows = [];
+  for (let rowNumber = Math.max(2, range.getRow()); rowNumber <= Math.min(data.length, range.getLastRow()); rowNumber++) {
+    const values = data[rowNumber - 1];
+    const area = areaIndex >= 0 ? String(values[areaIndex] || '').trim() : '';
+    const route = routeIndex >= 0 ? String(values[routeIndex] || '').trim() : '';
+    if (!area && !route) continue;
+    rows.push.apply(rows, fisheryData.rows.filter((row) => (!area || row.area === area) && (!route || row.line === route)));
+  }
+  return rows;
+}
+
+function rowsFromCalendarSelection_(range, fisheryData) {
+  const sheet = range.getSheet();
+  const data = sheet.getDataRange().getValues();
+  if (data.length < 2) return [];
+  const headers = data[0].map((value) => String(value || '').trim());
+  const labelIndex = headerIndex_(headers, ['状態ラベル']);
+  const displayIndex = headerIndex_(headers, ['表示名', '状態表示']);
+  const rows = [];
+  for (let rowNumber = Math.max(2, range.getRow()); rowNumber <= Math.min(data.length, range.getLastRow()); rowNumber++) {
+    const values = data[rowNumber - 1];
+    const label = labelIndex >= 0 ? String(values[labelIndex] || '').trim() : '';
+    const display = displayIndex >= 0 ? String(values[displayIndex] || '').trim() : '';
+    rows.push.apply(rows, fisheryData.rows.filter((row) => (label && row.stateLabel === label) || (display && row.stateDisplay === display)));
+  }
+  return rows;
+}
+
+function getSelectedValues_(range) {
+  const sheet = range.getSheet();
+  const rowLimit = Math.min(range.getNumRows(), 100, sheet.getMaxRows() - range.getRow() + 1);
+  const columnLimit = Math.min(range.getNumColumns(), 20, sheet.getMaxColumns() - range.getColumn() + 1);
+  return range.offset(0, 0, rowLimit, columnLimit).getDisplayValues();
+}
+
+function buildTokenFilterFromSelection_(values) {
+  const result = { keys: {}, areas: {}, lines: {}, states: {}, owners: {} };
+  values.forEach((row) => {
+    row.forEach((cell) => {
+      const text = String(cell || '').trim();
+      if (!text) return;
+      const keyMatches = text.match(/#\d+:[A-K]-\d+/gi) || [];
+      keyMatches.forEach((key) => (result.keys[key.toUpperCase()] = true));
+      const areaMatches = text.match(/#\d+/g) || [];
+      areaMatches.forEach((area) => (result.areas[area] = true));
+      const lineMatches = text.match(/(?:[A-K]列|(?:1|3|5|7|9|11|13|15|17|19|21)列)/g) || [];
+      lineMatches.forEach((line) => (result.lines[line] = true));
+      OPERATIONAL_STATES.forEach((state) => {
+        if (text.indexOf(state.label) !== -1 || text.indexOf(state.display) !== -1) result.states[state.label] = true;
+      });
+      if (/^[A-Za-z0-9]{2,6}$/.test(text)) result.owners[normalizeAllianceTag_(text)] = true;
+    });
+  });
+  return result;
+}
+
+function filterFisheryRowsByTokens_(rows, tokenFilter) {
+  const hasKey = Object.keys(tokenFilter.keys).length > 0;
+  const hasArea = Object.keys(tokenFilter.areas).length > 0;
+  const hasLine = Object.keys(tokenFilter.lines).length > 0;
+  const hasState = Object.keys(tokenFilter.states).length > 0;
+  const hasOwner = Object.keys(tokenFilter.owners).length > 0;
+  if (!hasKey && !hasArea && !hasLine && !hasState && !hasOwner) return [];
+  return rows.filter((row) => {
+    if (hasKey && !tokenFilter.keys[String(row.key || '').toUpperCase()]) return false;
+    if (hasArea && !tokenFilter.areas[row.area]) return false;
+    if (hasLine && !tokenFilter.lines[row.line]) return false;
+    if (hasState && !tokenFilter.states[row.stateLabel]) return false;
+    if (hasOwner && !tokenFilter.owners[normalizeAllianceTag_(row.owner)]) return false;
+    return true;
+  });
+}
+
+function readFisheryRowsFromSheet_(sheet) {
+  const values = sheet.getDataRange().getValues();
+  const headers = values.length > 0 ? values[0].map((value) => String(value || '').trim()) : [];
+  const index = {
+    area: headerIndex_(headers, ['エリア']),
+    key: headerIndex_(headers, ['位置キー']),
+    name: headerIndex_(headers, ['漁場名']),
+    coord: headerIndex_(headers, ['座標']),
+    owner: headerIndex_(headers, ['所有連盟']),
+    line: headerIndex_(headers, ['ライン分類', '防衛ライン']),
+    protectUntil: headerIndex_(headers, ['現在保護切れ', '現在保護切れ日時', '次回保護切れ日時']),
+    stateLabel: headerIndex_(headers, ['状態ラベル']),
+    stateDisplay: headerIndex_(headers, ['表示名', '状態表示']),
+    nextAfterPunch: headerIndex_(headers, ['保護パン後の次回保護切れ']),
+    onePunch: headerIndex_(headers, ['ワンパン要否', 'ワンパン必要']),
+    assignee: headerIndex_(headers, ['担当候補', 'ワンパン役']),
+    ownerRelation: headerIndex_(headers, ['所有連盟関係']),
+    pactStatus: headerIndex_(headers, ['盟約状態']),
+    punchAvailability: headerIndex_(headers, ['保護パン可否']),
+    constraintMemo: headerIndex_(headers, ['制約メモ']),
+  };
+  const rows = [];
+  const rowBySheetRow = {};
+  for (let rowIndex = 1; rowIndex < values.length; rowIndex++) {
+    const source = values[rowIndex];
+    const row = {
+      sheetRow: rowIndex + 1,
+      area: valueAt_(source, index.area),
+      key: valueAt_(source, index.key),
+      name: valueAt_(source, index.name),
+      coord: valueAt_(source, index.coord),
+      owner: valueAt_(source, index.owner),
+      line: valueAt_(source, index.line),
+      protectUntil: valueAt_(source, index.protectUntil),
+      stateLabel: valueAt_(source, index.stateLabel),
+      stateDisplay: valueAt_(source, index.stateDisplay),
+      nextAfterPunch: valueAt_(source, index.nextAfterPunch),
+      onePunch: valueAt_(source, index.onePunch),
+      assignee: valueAt_(source, index.assignee),
+      ownerRelation: valueAt_(source, index.ownerRelation),
+      pactStatus: valueAt_(source, index.pactStatus),
+      punchAvailability: valueAt_(source, index.punchAvailability),
+      constraintMemo: valueAt_(source, index.constraintMemo),
+    };
+    if (!row.key && row.area && row.name) row.key = `${row.area}:${row.name}`;
+    if (!row.key && !row.name && !row.owner) continue;
+    rows.push(row);
+    rowBySheetRow[row.sheetRow] = row;
+  }
+  return { rows, rowBySheetRow };
+}
+
+function readProtectionPunchCandidateAlliances_(ss) {
+  const allianceRows = ensureSheet_(ss, SHEET_NAMES.ALLIANCE_JUDGMENT).getDataRange().getValues().slice(1);
+  const capacityMap = readCapacityMap_(ss);
+  const ownerCountSheet = ss.getSheetByName(SHEET_NAMES.OPERATIONAL_LIST) || ss.getSheetByName(SHEET_NAMES.LIST);
+  const ownerCounts = ownerCountSheet ? buildOwnerCounts_(ownerCountSheet.getDataRange().getValues()) : {};
+  return allianceRows.map((row) => {
+    const normalizedTag = normalizeAllianceTag_(row[1] || row[0]);
+    const relation = String(row[3] || '').trim();
+    const capacity = capacityMap[normalizedTag] || {};
+    const dailyRemaining = capacity.dailyCap === '' || capacity.dailyCap === undefined ? '' : Math.max(0, Number(capacity.dailyCap || 0) - Number(capacity.todayCount || 0));
+    const cityRemaining = capacity.cityFisheryCap === '' || capacity.cityFisheryCap === undefined ? '' : Number(capacity.cityFisheryCap || 0) - Number(ownerCounts[normalizedTag] || 0);
+    return {
+      tag: row[0],
+      normalizedTag,
+      relation,
+      dailyRemaining,
+      cityRemaining,
+    };
+  }).filter((candidate) => {
+    if (!candidate.normalizedTag) return false;
+    const relation = candidate.relation;
+    const isFriendlyCandidate = relation.indexOf('味方') !== -1 || relation === '同サーバ';
+    if (!isFriendlyCandidate) return false;
+    if (candidate.dailyRemaining !== '' && candidate.dailyRemaining <= 0) return false;
+    if (candidate.cityRemaining !== '' && candidate.cityRemaining <= 0) return false;
+    return true;
+  });
+}
+
+function buildCandidateAllianceTextForFishery_(fisheryRow, candidateRows) {
+  const relation = String(fisheryRow.ownerRelation || '').trim();
+  const pactStatus = String(fisheryRow.pactStatus || '').trim();
+  const owner = normalizeAllianceTag_(fisheryRow.owner);
+  if (pactStatus === '有効') return '不可:対象が盟約中';
+  if (relation.indexOf('味方') !== -1) return '不可:味方保有';
+  if (relation === '未登録' || String(fisheryRow.punchAvailability || '').indexOf('未登録') !== -1) return '要確認:所有連盟未登録';
+  if (String(fisheryRow.punchAvailability || '').indexOf('不可') === 0) return String(fisheryRow.punchAvailability);
+  const candidates = candidateRows.filter((candidate) => candidate.normalizedTag !== owner).map((candidate) => {
+    const daily = candidate.dailyRemaining === '' ? '日上限未入力' : `残${candidate.dailyRemaining}`;
+    const city = candidate.cityRemaining === '' ? '保有枠未入力' : `枠${candidate.cityRemaining}`;
+    return `${candidate.tag}(${daily}/${city})`;
+  });
+  return candidates.length > 0 ? candidates.join(', ') : '候補未登録';
+}
+
+function uniqueFisheryRows_(rows) {
+  const seen = {};
+  const result = [];
+  rows.forEach((row) => {
+    const key = String(row.key || `${row.area}:${row.name}:${row.sheetRow}`).toUpperCase();
+    if (seen[key]) return;
+    seen[key] = true;
+    result.push(row);
+  });
+  return result;
+}
+
+function buildSelectionFilterLabel_(range, visibleCount, rawCount) {
+  const sheetName = range.getSheet().getName();
+  const limited = rawCount > visibleCount ? `（最大${MAX_SELECTED_VIEW_ROWS}件表示）` : '';
+  if (sheetName === SHEET_NAMES.ROUTE_CHECK) return `侵攻ルートから抽出 ${visibleCount}件${limited}`;
+  if (sheetName === SHEET_NAMES.OPERATIONAL_CALENDAR || sheetName === SHEET_NAMES.CALENDAR) return `開放枠から抽出 ${visibleCount}件${limited}`;
+  if (sheetName === SHEET_NAMES.OPERATIONAL_LIST || sheetName === SHEET_NAMES.LIST) return `選択行/選択値から抽出 ${visibleCount}件${limited}`;
+  return `選択値から抽出 ${visibleCount}件${limited}`;
+}
+
+function headerIndex_(headers, aliases) {
+  for (let index = 0; index < aliases.length; index++) {
+    const found = headers.indexOf(aliases[index]);
+    if (found >= 0) return found;
+  }
+  return -1;
+}
+
+function valueAt_(row, index) {
+  return index >= 0 ? row[index] || '' : '';
 }
 
 function applyAllianceConstraints_(row, allianceMap, pactMap, capacityMap, ownerCounts) {

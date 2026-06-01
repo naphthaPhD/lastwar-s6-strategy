@@ -1,5 +1,41 @@
 # Handoff summary
 
+## 2026-06-02 Fishery selected-view interaction
+
+## Context
+
+Added an operator-facing selection view for the fishery protection workbook. The requested behavior is to select a fishery row, opening-slot row, or invasion-route row and see the relevant fisheries, current owner alliances, protection expiry/opening slot, and provisional protection-punch candidate alliances.
+
+## Updated files
+
+- `tools/fishery_protection_sheet/Code.gs`
+- `tools/fishery_protection_sheet/README.md`
+- `analysis/2026-06-01_fishery_protection_sheet_system.md`
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Working Google Sheet tab `選択漁場ビュー`: added and moved immediately after `侵攻ルート確認`.
+- Working Google Sheet tab `00_目次`: updated daily-operation order to include `選択漁場ビュー`.
+
+## Key findings
+
+1. `onSelectionChange(e)` now updates `選択漁場ビュー` only when the selected source tab is `漁場一覧4枠`, `漁場一覧`, `開放カレンダー4枠`, `カレンダー`, or `侵攻ルート確認`.
+2. Selecting a row in `漁場一覧4枠` shows that fishery; selecting a row in `開放カレンダー4枠` shows fisheries in that opening slot; selecting a row in `侵攻ルート確認` shows fisheries on that route.
+3. The output columns include owner alliance, owner relation, protection expiry, opening slot, next protection-punch expiry, punch availability, provisional candidate alliances, one-punch need, assignee, and constraint memo.
+4. Provisional candidate alliances are taken from `連盟判定` plus `連盟キャパ管理`: friendly/same-server-friendly candidates with no known daily/city-cap shortage are shown. If the target owner is friendly, pact-protected, or unregistered, the view displays不可/要確認 instead of a candidate list.
+
+## Current risks
+
+1. The live tab `選択漁場ビュー` exists, but automatic selection updates require pasting the updated `tools/fishery_protection_sheet/Code.gs` into the spreadsheet's bound Apps Script project.
+2. The selection trigger is intentionally limited to fishery operation tabs because previous selection-triggered sheet logic caused slowdown in another workbook.
+
+## Recommended next actions
+
+1. Paste the updated `Code.gs` into the target spreadsheet Apps Script editor, set timezone to `Asia/Tokyo`, then reload the spreadsheet.
+2. Test by selecting one row in `漁場一覧4枠`, one slot in `開放カレンダー4枠`, and one route in `侵攻ルート確認`.
+3. Fill `連盟判定` and `連盟キャパ管理` for alliances that should appear as protection-punch candidates.
+
 ## 2026-06-02 Fishery sheet organization index
 
 ## Context
