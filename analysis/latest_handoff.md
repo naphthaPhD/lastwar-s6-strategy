@@ -1,5 +1,31 @@
 # Handoff summary
 
+## 2026-06-03 Fishery validation fix
+
+## Context
+
+The live Google Sheet showed an Apps Script exception while recalculating: `セル K6 に入力したデータは、このセルで設定しているデータの入力規則に違反しています`. The rejected value was `安全期間` in `漁場一覧!K6`, while the `ワンパン必要` dropdown allowed only auto/必要/不要 style values.
+
+## Updated files
+
+- `tools/fishery_protection_sheet/Code.gs`
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Working Google Sheet `漁場一覧!K2:K1000`: updated the data validation list to include `安全期間`.
+
+## Key findings
+
+1. The problem was not the simulator itself. It was the `漁場一覧` K-column validation rejecting existing `安全期間` values during script-driven recalculation.
+2. `ONE_PUNCH_VALUES` in `Code.gs` now includes `安全期間`, so future setup/refresh logic will apply the same allowed value list.
+3. `漁場一覧!K6:K8` now retains `安全期間` with a matching validation rule.
+
+## Recommended next actions
+
+1. Close the visible error dialog in the browser and run the calculation again.
+2. If the Apps Script editor is still open with an older `Code.gs`, paste the latest repository version before rerunning setup.
+
 ## 2026-06-02 Fishery selected-view interaction
 
 ## Context

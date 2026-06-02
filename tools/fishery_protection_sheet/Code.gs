@@ -220,7 +220,7 @@ const CAPACITY_ROWS = [
 
 const AREA_VALUES = ['#534', '#509', '#476', '#440', '#503', '#480', '#523'];
 const LINE_VALUES = ['A列', 'B列', 'C列', 'D列', 'K列', 'J列', 'I列', '1列', '3列', '5列', '7列', '9列'];
-const ONE_PUNCH_VALUES = ['自動:候補', '自動:7時要判断', '自動:不要', '必要', '不要', '見送り', '要確認'];
+const ONE_PUNCH_VALUES = ['自動:候補', '自動:7時要判断', '自動:不要', '安全期間', '必要', '不要', '見送り', '要確認'];
 const OPERATION_VALUES = ['取得', '保護パン', '放棄'];
 
 const RESPONSE_HOURS = [7, 15, 23];
