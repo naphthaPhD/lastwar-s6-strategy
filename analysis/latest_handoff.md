@@ -1,5 +1,31 @@
 # Handoff summary
 
+## 2026-06-03 Fishery line validation fix
+
+## Context
+
+The live Google Sheet showed another Apps Script validation exception: `セル E54 に入力したデータは、このセルで設定しているデータの入力規則に違反しています`. The rejected value was an alphabetic line such as `G列`, while `漁場一覧` E-column validation only allowed `A列`, `B列`, `C列`, `D列`, `K列`, `J列`, `I列`, and odd-number lines through `9列`.
+
+## Updated files
+
+- `tools/fishery_protection_sheet/Code.gs`
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Working Google Sheet `漁場一覧!E2:E1000`: expanded the data validation list to allow `A列` through `K列`, plus odd-number lines `1列` through `21列`.
+
+## Key findings
+
+1. The problem came from expanded multi-area line data using intermediate alphabetic lines such as `E列`, `F列`, and `G列`.
+2. `LINE_VALUES` in `Code.gs` now matches the expanded live validation list.
+3. `漁場一覧!E52:E55` was verified after the fix; `E列` and `F列` now satisfy the validation rule.
+
+## Recommended next actions
+
+1. Close the visible error dialog and rerun the Apps Script calculation.
+2. If another validation exception appears, treat it as another allowed-value mismatch between existing sheet data and the strict validation lists.
+
 ## 2026-06-03 Fishery validation fix
 
 ## Context
