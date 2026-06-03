@@ -1,5 +1,32 @@
 # Handoff summary
 
+## 2026-06-03 Fishery manual correction map refresh fix
+
+## Context
+
+The user tested abandonment through `手動修正`, but the map did not update. Live inspection showed two problems: the live `手動修正` tab had reverted to the old 9-column header shape, and the map tab `侵攻予測_保護切れ色分け` no longer had the helper formulas/conditional formatting in `CF:FT`.
+
+## Updated files
+
+- `tools/fishery_protection_sheet/Code.gs`
+- `tools/fishery_protection_sheet/README.md`
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Working Google Sheet tab `手動修正`: restored the 11-column structure with `操作` and `操作日時（放棄時刻）`.
+- Working Google Sheet tab `侵攻予測_保護切れ色分け`: restored the protection-color legend, helper formulas, template import, and conditional formatting.
+
+## Key findings
+
+1. The live bound Apps Script project appears to still be older than the local `Code.gs`; running old setup/menu logic can revert `手動修正` to the old columns.
+2. `#534:A-1` now resolves to `THU_07` and displays blue again on the map; `#534:A-5` resolves to `WED_23` and displays orange.
+3. Local `applyManualFisheryCorrections()` now calls `refreshProtectionColorMapOverlay_()` after refreshing the list, so the latest script re-applies map helper formulas and conditional formatting without copying over the pasted map.
+
+## Notes
+
+- The live sheet structure is repaired, but the bound Apps Script must still be updated from the latest local `tools/fishery_protection_sheet/Code.gs`; otherwise future menu runs can bring back the old behavior.
+
 ## 2026-06-03 Fishery manual abandonment input
 
 ## Context

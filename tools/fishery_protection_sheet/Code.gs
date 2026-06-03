@@ -627,6 +627,7 @@ function applyManualFisheryCorrections() {
     manualSheet.getRange(2, 11, resultValues.length, 1).setNumberFormat('yyyy/mm/dd hh:mm');
   }
   refreshFisheryProtectionSystem();
+  refreshProtectionColorMapOverlay_();
 }
 
 function copyInvasionMapWithProtectionColors() {
@@ -678,12 +679,54 @@ function copyInvasionMapWithProtectionColors() {
   }
 
   writeProtectionColorMapLegend_(targetSheet, columnCount + 3, counts, coloredCount);
+  refreshProtectionColorMapOverlay_(targetSheet);
   targetSheet.getRange('A1').setNote(
     `コピー元: ${SOURCE_INVASION_MAP_SHEET_NAME} / ${SOURCE_MANAGEMENT_SPREADSHEET_ID}\n` +
     `座標テンプレート: ${SOURCE_MAP_TEMPLATE_SHEET_NAME}\n` +
     `色分け元: ${SHEET_NAMES.OPERATIONAL_LIST}\n` +
     `更新: ${Utilities.formatDate(new Date(), getTimeZone_(), 'yyyy/MM/dd HH:mm:ss')}`
   );
+}
+
+function refreshProtectionColorMapOverlay_(targetSheet) {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = targetSheet || ss.getSheetByName(SHEET_NAMES.PROTECTION_COLOR_MAP);
+  if (!sheet || sheet.getLastRow() < 2) return;
+
+  ensureGridSize_(sheet, 88, 176);
+  sheet.getRange(1, 82, Math.max(100, sheet.getMaxRows()), 95).breakApart();
+  sheet.getRange('CF1:CH8').setValues([
+    ['保護切れ色', '状態', '件数'],
+    ['水曜23時', 'WED_23', '=COUNTIF(CK:CK,"WED_23")'],
+    ['木曜7時', 'THU_07', '=COUNTIF(CK:CK,"THU_07")'],
+    ['土曜23時', 'SAT_23', '=COUNTIF(CK:CK,"SAT_23")'],
+    ['日曜7時', 'SUN_07', '=COUNTIF(CK:CK,"SUN_07")'],
+    ['未色分け', '', ''],
+    ['色分け対象合計', '', '=SUM(CH2:CH5)'],
+    ['更新', '=NOW()', ''],
+  ]);
+  sheet.getRange('CJ1').setFormula('={"位置キー","状態ラベル";FILTER({\'漁場一覧4枠\'!B2:B,\'漁場一覧4枠\'!H2:H},\'漁場一覧4枠\'!B2:B<>"")}');
+  sheet.getRange('CL1').setFormula(`=IMPORTRANGE("${SOURCE_MANAGEMENT_SPREADSHEET_ID}","${SOURCE_MAP_TEMPLATE_SHEET_NAME}!${INVASION_MAP_RANGE_A1}")`);
+  sheet.getRange('CF1:CH1').setFontWeight('bold').setBackground('#5b2c6f').setFontColor('#ffffff');
+  sheet.hideColumns(88, 89);
+
+  const mapRange = sheet.getRange(INVASION_MAP_RANGE_A1);
+  const formulasByState = {
+    WED_23: '#f8cb9c',
+    THU_07: '#9fc5e8',
+    SAT_23: '#b6d7a8',
+    SUN_07: '#d9d2e9',
+  };
+  const rules = Object.keys(formulasByState).map((stateLabel) => {
+    const formula = `=IFERROR(VLOOKUP(IF(ROW()>=49,"#476",IF(COLUMN()>=42,"#509","#534"))&":"&INDEX($CL$1:$FT$88,ROW(),COLUMN()),$CJ$2:$CK$500,2,FALSE)="${stateLabel}",FALSE)`;
+    return SpreadsheetApp.newConditionalFormatRule()
+      .whenFormulaSatisfied(formula)
+      .setBackground(formulasByState[stateLabel])
+      .setBold(true)
+      .setRanges([mapRange])
+      .build();
+  });
+  sheet.setConditionalFormatRules(rules);
 }
 
 function setupProtectionColorMapSheet_(sheet) {
