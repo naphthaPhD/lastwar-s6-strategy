@@ -1,31 +1,31 @@
 ﻿rank,from_node_id,from_coord,from_alliance,to_node_id,to_coord,to_alliance,to_server,target_type,attack_reason,priority,recommended_action,city_destroy_window,confidence
-1,,,#534/ally attack group,#476:d-12,d-12,476B,476,city,city +30; enemy_flag +40; frontline_core +30,critical,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-2,,,#534/ally attack group,#476:d-14,d-14,476B,476,city,city +30; enemy_flag +40; frontline_core +30,critical,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-3,,,#534/ally attack group,#480:d-14,d-14,BgNa,480,city,city +30; enemy_flag +40; frontline_core +30,critical,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-4,,,#534/ally attack group,#476:d-10,d-10,476B,476,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-5,,,#534/ally attack group,#476:d-2,d-2,476K,476,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-6,,,#534/ally attack group,#476:d-6,d-6,476M,476,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-7,,,#534/ally attack group,#476:e-14,e-14,476d,476,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-8,,,#534/ally attack group,#476:e-18,e-18,476Z,476,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-9,,,#534/ally attack group,#480:e-18,e-18,AAOA,480,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-10,,,#534/ally attack group,#480:e-6,e-6,TkTk,480,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-11,,,#534/ally attack group,#480:e-8,e-8,BgNa,480,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-12,,,#534/ally attack group,#503:d-10,d-10,Lghs,503,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-13,,,#534/ally attack group,#503:e-8,e-8,Lghs,503,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-14,,,#534/ally attack group,#509:D-11,D-11,476A,476,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,攻撃候補,,medium
-15,,,#534/ally attack group,#509:D-13,D-13,476A,476,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,攻撃候補,,medium
-16,,,#534/ally attack group,#534:D-11,D-11,476C,476,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,攻撃候補,,medium
-17,,,#534/ally attack group,#534:D-13,D-13,476B,476,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,攻撃候補,,medium
-18,,,#534/ally attack group,#534:E-13,E-13,476C,476,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,攻撃候補,,medium
-19,,,#534/ally attack group,#503:d-2,d-2,GX99,503,trade,trade +20; enemy_flag +40; frontline_adjacent +15,high,攻撃候補,,medium
-20,,,#534/ally attack group,#509:d-20,d-20,476A,476,trade,trade +20; enemy_flag +40; frontline_adjacent +15,high,攻撃候補,,medium
-21,,,#534/ally attack group,#509:e-20,e-20,476B,476,trade,trade +20; enemy_flag +40; frontline_adjacent +15,high,攻撃候補,,medium
-22,,,#534/ally attack group,#511:e-2,e-2,AAOA,480,trade,trade +20; enemy_flag +40; frontline_adjacent +15,high,攻撃候補,,medium
-23,,,#534/ally attack group,#523:d-20,d-20,476X,476,trade,trade +20; enemy_flag +40; frontline_adjacent +15,high,攻撃候補,,medium
-24,,,#534/ally attack group,#476:a-10,a-10,476M,476,city,city +30; enemy_flag +40,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-25,,,#534/ally attack group,#476:a-12,a-12,476M,476,city,city +30; enemy_flag +40,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-26,,,#534/ally attack group,#476:a-18,a-18,476X,476,city,city +30; enemy_flag +40,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-27,,,#534/ally attack group,#476:b-20,b-20,476Z,476,city,city +30; enemy_flag +40,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-28,,,#534/ally attack group,#476:b-6,b-6,476T,476,city,city +30; enemy_flag +40,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-29,,,#534/ally attack group,#476:b-8,b-8,476T,476,city,city +30; enemy_flag +40,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
-30,,,#534/ally attack group,#476:c-2,c-2,476K,476,city,city +30; enemy_flag +40,high,都市破壊候補,saturday_server_day 2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00,medium
+1,,,#534/ally attack group,#476:d-12,d-12,476B,476,city,city +30; enemy_flag +40; frontline_core +30,critical,都市破壊候補（時間外）,outside_city_destroy_window,medium
+2,,,#534/ally attack group,#476:d-14,d-14,476B,476,city,city +30; enemy_flag +40; frontline_core +30,critical,都市破壊候補（時間外）,outside_city_destroy_window,medium
+3,,,#534/ally attack group,#476:d-10,d-10,476B,476,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+4,,,#534/ally attack group,#476:d-2,d-2,476K,476,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+5,,,#534/ally attack group,#476:d-6,d-6,476M,476,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+6,,,#534/ally attack group,#476:e-14,e-14,476d,476,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+7,,,#534/ally attack group,#476:e-18,e-18,476Z,476,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+8,,,#534/ally attack group,#480:e-18,e-18,AAOA,480,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+9,,,#534/ally attack group,#503:d-10,d-10,Lghs,503,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+10,,,#534/ally attack group,#503:e-8,e-8,Lghs,503,city,city +30; enemy_flag +40; frontline_adjacent +15,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+11,,,#534/ally attack group,#509:D-11,D-11,476A,476,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,攻撃候補,,medium
+12,,,#534/ally attack group,#509:D-13,D-13,476A,476,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,攻撃候補,,medium
+13,,,#534/ally attack group,#534:D-11,D-11,476C,476,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,攻撃候補,,medium
+14,,,#534/ally attack group,#534:D-13,D-13,476B,476,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,攻撃候補,,medium
+15,,,#534/ally attack group,#534:E-13,E-13,476C,476,fishery,fishery +10; enemy_flag +40; frontline_core +30,high,攻撃候補,,medium
+16,,,#534/ally attack group,#503:d-2,d-2,GX99,503,trade,trade +20; enemy_flag +40; frontline_adjacent +15,high,攻撃候補,,medium
+17,,,#534/ally attack group,#509:d-20,d-20,476A,476,trade,trade +20; enemy_flag +40; frontline_adjacent +15,high,攻撃候補,,medium
+18,,,#534/ally attack group,#509:e-20,e-20,476B,476,trade,trade +20; enemy_flag +40; frontline_adjacent +15,high,攻撃候補,,medium
+19,,,#534/ally attack group,#511:e-2,e-2,AAOA,480,trade,trade +20; enemy_flag +40; frontline_adjacent +15,high,攻撃候補,,medium
+20,,,#534/ally attack group,#523:d-20,d-20,476X,476,trade,trade +20; enemy_flag +40; frontline_adjacent +15,high,攻撃候補,,medium
+21,,,#534/ally attack group,#476:a-10,a-10,476M,476,city,city +30; enemy_flag +40,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+22,,,#534/ally attack group,#476:a-12,a-12,476M,476,city,city +30; enemy_flag +40,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+23,,,#534/ally attack group,#476:a-18,a-18,476X,476,city,city +30; enemy_flag +40,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+24,,,#534/ally attack group,#476:b-20,b-20,476Z,476,city,city +30; enemy_flag +40,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+25,,,#534/ally attack group,#476:b-6,b-6,476T,476,city,city +30; enemy_flag +40,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+26,,,#534/ally attack group,#476:b-8,b-8,476T,476,city,city +30; enemy_flag +40,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+27,,,#534/ally attack group,#476:c-2,c-2,476K,476,city,city +30; enemy_flag +40,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+28,,,#534/ally attack group,#476:c-6,c-6,476M,476,city,city +30; enemy_flag +40,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+29,,,#534/ally attack group,#476:f-14,f-14,476d,476,city,city +30; enemy_flag +40,high,都市破壊候補（時間外）,outside_city_destroy_window,medium
+30,,,#534/ally attack group,#476:f-16,f-16,476d,476,city,city +30; enemy_flag +40,high,都市破壊候補（時間外）,outside_city_destroy_window,medium

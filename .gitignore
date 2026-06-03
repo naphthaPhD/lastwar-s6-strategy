@@ -40,6 +40,9 @@ tools/*
 tools/chat_event_preprocessor/_tmp_test/
 tools/chat_event_preprocessor/__pycache__/
 tools/chat_event_preprocessor/*.pyc
+tools/chat_event_preprocessor/config_*.json
+tools/invasion_strategy_os/__pycache__/
+tools/invasion_strategy_os/*.pyc
 
 # Logs and temporary files
 *.log

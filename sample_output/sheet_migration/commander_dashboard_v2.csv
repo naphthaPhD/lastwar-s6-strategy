@@ -1,15 +1,15 @@
 ﻿metric,value,note
-battle_window_status,saturday_server_day,2026-05-30T11:00+09:00 - 2026-05-31T10:59+09:00
-server_day,saturday,JST based server day
-city_destroy_enabled,TRUE,city destroy candidates are time-sensitive
-critical risk count,55,risk_map_v2
-high risk count,172,risk_map_v2
-current enemy nodes,401,current enemy-owned nodes
-current friendly nodes,302,current self/ally-owned nodes
-server_534 frontline risk count,190,owned frontline rows for review
+battle_window_status,outside_city_destroy_window,
+server_day,none,JST based server day
+city_destroy_enabled,FALSE,city destroy candidates are time-sensitive
+critical risk count,111,risk_map_v2
+high risk count,167,risk_map_v2
+current enemy nodes,407,current enemy-owned nodes
+current friendly nodes,272,current self/ally-owned nodes
+server_534 frontline risk count,180,owned frontline rows for review
 enemy_invasion_candidates count,41,enemy-owned frontline candidates
-server_534_attack_candidates count,353,enemy-owned attack-review candidates
-unknown owner count,646,owned rows with current_alliance but unresolved owner_server
+server_534_attack_candidates count,359,enemy-owned attack-review candidates
+unknown owner count,655,owned rows with current_alliance but unresolved owner_server
 type uncertain count,132,node type needs review
-safe time reference count,1349,safe_until_jst is reference only
-destroyed city count,52,city rows only
+safe time reference count,1334,safe_until_jst is reference only
+destroyed city count,109,city rows only

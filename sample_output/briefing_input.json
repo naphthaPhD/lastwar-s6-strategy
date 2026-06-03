@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T21:26:13.333483+09:00",
+  "generated_at": "2026-06-02T00:30:58.972810+09:00",
   "engine": "strategic_rule_engine_v2",
   "scenario": {
     "friendly_affiliations": [
@@ -23,52 +23,9 @@
   },
   "top_defense": [
     {
-      "node": "E-15",
-      "node_id": "#480:E-15",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護終了6h以内",
-        "戦闘可能時間",
-        "土曜戦闘日"
-      ],
-      "scores": {
-        "alliance": 23.0,
-        "coalition": 37.0,
-        "choke": 6.48,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 25.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:E-15",
-        "area": "#480",
-        "name": "E-15",
-        "type": "漁場",
-        "owner": "SsQ",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#509",
-          "alliance": "SsQ",
-          "alliance_name": "Gummibärenbande V",
-          "power": 25186952492,
-          "side": "Ally",
-          "overall_rank": 14,
-          "server_rank": 3,
-          "power_label": "25.19B"
-        }
-      }
-    },
-    {
-      "node": "E-7",
-      "node_id": "#480:E-7",
-      "score": 100.0,
+      "node": "A-17",
+      "node_id": "#509:A-17",
+      "score": 97.0,
       "classification": "risk",
       "label": null,
       "reasons": [
@@ -76,164 +33,35 @@
         "高戦力敵連盟隣接",
         "敵到達距離1",
         "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "自連盟保有",
+        "自連盟隣接"
       ],
       "scores": {
-        "alliance": 23.0,
-        "coalition": 37.0,
-        "choke": 10.92,
+        "alliance": 52.0,
+        "coalition": 47.0,
+        "choke": 20.78,
         "isolation": 0.0,
-        "invasion": 100.0,
+        "invasion": 97,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
-        "id": "#480:E-7",
-        "area": "#480",
-        "name": "E-7",
+        "id": "#509:A-17",
+        "area": "#509",
+        "name": "A-17",
         "type": "漁場",
-        "owner": "BAJ",
-        "affiliation": "ally",
+        "owner": "KTVS",
+        "affiliation": "self",
         "importance": 3.0,
         "alliance_power": {
-          "server": "#440",
-          "alliance": "BAJ",
-          "alliance_name": "Blood and Judgement",
-          "power": 30092173317,
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
           "side": "Ally",
-          "overall_rank": 3,
-          "server_rank": 1,
-          "power_label": "30.09B"
-        }
-      }
-    },
-    {
-      "node": "F-7",
-      "node_id": "#480:F-7",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "戦闘可能時間",
-        "土曜戦闘日",
-        "味方グループ保有"
-      ],
-      "scores": {
-        "alliance": 25.0,
-        "coalition": 39.0,
-        "choke": 11.04,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 0.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:F-7",
-        "area": "#480",
-        "name": "F-7",
-        "type": "漁場",
-        "owner": "GoDs",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#440",
-          "alliance": "GoDs",
-          "alliance_name": "Gods of Sparta",
-          "power": 22679918576,
-          "side": "Ally",
-          "overall_rank": 24,
-          "server_rank": 3,
-          "power_label": "22.68B"
-        }
-      }
-    },
-    {
-      "node": "中央-2-8",
-      "node_id": "中央:中央-2-8",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護終了6h以内",
-        "味方グループ保有",
-        "中央接続"
-      ],
-      "scores": {
-        "alliance": 25.0,
-        "coalition": 59.0,
-        "choke": 23.0,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 25.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "中央:中央-2-8",
-        "area": "中央",
-        "name": "中央-2-8",
-        "type": "漁場",
-        "owner": "VEX",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#509",
-          "alliance": "VEX",
-          "alliance_name": "Vanguard Elite X",
-          "power": 21769694627,
-          "side": "Ally",
-          "overall_rank": 30,
-          "server_rank": 6,
-          "power_label": "21.77B"
-        }
-      }
-    },
-    {
-      "node": "中央-7-19",
-      "node_id": "中央:中央-7-19",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "味方グループ保有",
-        "中央接続"
-      ],
-      "scores": {
-        "alliance": 25.0,
-        "coalition": 59.0,
-        "choke": 23.0,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "中央:中央-7-19",
-        "area": "中央",
-        "name": "中央-7-19",
-        "type": "漁場",
-        "owner": "SsQ",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#509",
-          "alliance": "SsQ",
-          "alliance_name": "Gummibärenbande V",
-          "power": 25186952492,
-          "side": "Ally",
-          "overall_rank": 14,
-          "server_rank": 3,
-          "power_label": "25.19B"
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
         }
       }
     },
@@ -247,18 +75,18 @@
         "敵隣接",
         "高戦力敵連盟隣接",
         "敵到達距離1",
-        "戦闘可能時間",
-        "土曜戦闘日",
-        "味方グループ保有"
+        "味方グループ保有",
+        "中央隣接",
+        "グループ防衛ライン"
       ],
       "scores": {
         "alliance": 21.0,
         "coalition": 38.0,
-        "choke": 26.15,
+        "choke": 25.4,
         "isolation": 0.0,
         "invasion": 97,
         "protection": 0.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#511:K-1",
@@ -301,7 +129,7 @@
         "isolation": 0.0,
         "invasion": 97,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-1-5",
@@ -324,9 +152,9 @@
       }
     },
     {
-      "node": "E-17",
-      "node_id": "#509:E-17",
-      "score": 87.0,
+      "node": "中央-2-8",
+      "node_id": "中央:中央-2-8",
+      "score": 97.0,
       "classification": "risk",
       "label": null,
       "reasons": [
@@ -334,22 +162,108 @@
         "高戦力敵連盟隣接",
         "敵到達距離1",
         "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "味方グループ保有",
+        "中央接続"
       ],
       "scores": {
-        "alliance": 24.0,
-        "coalition": 38.0,
-        "choke": 9.03,
+        "alliance": 27.0,
+        "coalition": 61.0,
+        "choke": 23.0,
         "isolation": 0.0,
-        "invasion": 87,
+        "invasion": 97,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
-        "id": "#509:E-17",
-        "area": "#509",
-        "name": "E-17",
+        "id": "中央:中央-2-8",
+        "area": "中央",
+        "name": "中央-2-8",
+        "type": "漁場",
+        "owner": "VEX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
+          "side": "Ally",
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
+        }
+      }
+    },
+    {
+      "node": "中央-7-19",
+      "node_id": "中央:中央-7-19",
+      "score": 97.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "味方グループ保有",
+        "中央接続",
+        "中央隣接"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 0.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "中央:中央-7-19",
+        "area": "中央",
+        "name": "中央-7-19",
+        "type": "漁場",
+        "owner": "GcC",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "GcC",
+          "alliance_name": "GcC",
+          "power": 29973947565,
+          "side": "Ally",
+          "overall_rank": 4,
+          "server_rank": 2,
+          "power_label": "29.97B"
+        }
+      }
+    },
+    {
+      "node": "D-15",
+      "node_id": "#480:D-15",
+      "score": 89.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "グループ防衛ライン"
+      ],
+      "scores": {
+        "alliance": 20.0,
+        "coalition": 34.0,
+        "choke": 6.18,
+        "isolation": 0.0,
+        "invasion": 89,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#480:D-15",
+        "area": "#480",
+        "name": "D-15",
         "type": "漁場",
         "owner": "SsQ",
         "affiliation": "ally",
@@ -363,6 +277,49 @@
           "overall_rank": 14,
           "server_rank": 3,
           "power_label": "25.19B"
+        }
+      }
+    },
+    {
+      "node": "E-7",
+      "node_id": "#480:E-7",
+      "score": 89.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "グループ防衛ライン"
+      ],
+      "scores": {
+        "alliance": 18.0,
+        "coalition": 27.0,
+        "choke": 9.6,
+        "isolation": 0.0,
+        "invasion": 89,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#480:E-7",
+        "area": "#480",
+        "name": "E-7",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
         }
       }
     },
@@ -387,7 +344,7 @@
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-5",
@@ -426,11 +383,11 @@
       "scores": {
         "alliance": 59.0,
         "coalition": 36.0,
-        "choke": 6.93,
+        "choke": 6.81,
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-9",
@@ -451,13 +408,56 @@
           "power_label": "3.43B"
         }
       }
+    },
+    {
+      "node": "中央-1-18",
+      "node_id": "中央:中央-1-18",
+      "score": 87.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 49.0,
+        "coalition": 56.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "中央:中央-1-18",
+        "area": "中央",
+        "name": "中央-1-18",
+        "type": "漁場",
+        "owner": "JDX",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "JDX",
+          "alliance_name": "Revo",
+          "power": 26388296429,
+          "side": "Ally",
+          "overall_rank": 13,
+          "server_rank": 1,
+          "power_label": "26.39B"
+        }
+      }
     }
   ],
   "top_attack": [
     {
       "node": "中央-20-1",
       "node_id": "中央:中央-20-1",
-      "score": 48.1928,
+      "score": 43.6448,
       "classification": "attack",
       "label": null,
       "reasons": [
@@ -465,17 +465,17 @@
         "高戦力敵連盟隣接",
         "敵到達距離0",
         "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "中央接続",
+        "中央隣接"
       ],
       "scores": {
         "alliance": 23.0,
         "coalition": 37.0,
-        "choke": 33.08,
+        "choke": 32.78,
         "isolation": 0.0,
         "invasion": 100.0,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-20-1",
@@ -500,7 +500,7 @@
     {
       "node": "中央-17-18",
       "node_id": "中央:中央-17-18",
-      "score": 48.02,
+      "score": 43.52,
       "classification": "attack",
       "label": null,
       "reasons": [
@@ -508,8 +508,8 @@
         "高戦力敵連盟隣接",
         "敵到達距離0",
         "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "中央接続",
+        "中央隣接"
       ],
       "scores": {
         "alliance": 25.0,
@@ -518,7 +518,7 @@
         "isolation": 0.0,
         "invasion": 100.0,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-17-18",
@@ -543,7 +543,7 @@
     {
       "node": "中央-18-4",
       "node_id": "中央:中央-18-4",
-      "score": 48.02,
+      "score": 43.52,
       "classification": "attack",
       "label": null,
       "reasons": [
@@ -551,8 +551,8 @@
         "高戦力敵連盟隣接",
         "敵到達距離0",
         "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "中央接続",
+        "中央隣接"
       ],
       "scores": {
         "alliance": 25.0,
@@ -561,7 +561,7 @@
         "isolation": 0.0,
         "invasion": 100.0,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-18-4",
@@ -586,7 +586,7 @@
     {
       "node": "中央-2-4",
       "node_id": "中央:中央-2-4",
-      "score": 48.02,
+      "score": 43.52,
       "classification": "attack",
       "label": null,
       "reasons": [
@@ -594,8 +594,8 @@
         "高戦力敵連盟隣接",
         "敵到達距離0",
         "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "中央接続",
+        "中央隣接"
       ],
       "scores": {
         "alliance": 25.0,
@@ -604,7 +604,7 @@
         "isolation": 0.0,
         "invasion": 100.0,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-2-4",
@@ -629,7 +629,7 @@
     {
       "node": "中央-1-4",
       "node_id": "中央:中央-1-4",
-      "score": 47.38,
+      "score": 42.88,
       "classification": "attack",
       "label": null,
       "reasons": [
@@ -637,8 +637,8 @@
         "高戦力敵連盟隣接",
         "敵到達距離0",
         "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "中央接続",
+        "中央隣接"
       ],
       "scores": {
         "alliance": 23.0,
@@ -647,7 +647,7 @@
         "isolation": 0.0,
         "invasion": 100.0,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-1-4",
@@ -672,7 +672,7 @@
     {
       "node": "中央-17-3",
       "node_id": "中央:中央-17-3",
-      "score": 47.38,
+      "score": 42.88,
       "classification": "attack",
       "label": null,
       "reasons": [
@@ -680,8 +680,8 @@
         "高戦力敵連盟隣接",
         "敵到達距離0",
         "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "中央接続",
+        "中央隣接"
       ],
       "scores": {
         "alliance": 23.0,
@@ -690,7 +690,7 @@
         "isolation": 0.0,
         "invasion": 100.0,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-17-3",
@@ -713,52 +713,9 @@
       }
     },
     {
-      "node": "中央-2-2",
-      "node_id": "中央:中央-2-2",
-      "score": 46.8616,
-      "classification": "attack",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離0",
-        "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
-      ],
-      "scores": {
-        "alliance": 21.0,
-        "coalition": 35.0,
-        "choke": 28.76,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "中央:中央-2-2",
-        "area": "中央",
-        "name": "中央-2-2",
-        "type": "漁場",
-        "owner": "476C",
-        "affiliation": "enemy",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#476",
-          "alliance": "476C",
-          "alliance_name": "476 Gamma",
-          "power": 28120774784,
-          "side": "Enemy",
-          "overall_rank": 5,
-          "server_rank": 2,
-          "power_label": "28.12B"
-        }
-      }
-    },
-    {
       "node": "中央-1-3",
       "node_id": "中央:中央-1-3",
-      "score": 46.58,
+      "score": 42.4,
       "classification": "attack",
       "label": null,
       "reasons": [
@@ -766,17 +723,17 @@
         "高戦力敵連盟隣接",
         "敵到達距離0",
         "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "中央接続",
+        "中央隣接"
       ],
       "scores": {
-        "alliance": 23.0,
+        "alliance": 25.0,
         "coalition": 37.0,
         "choke": 23.0,
         "isolation": 0.0,
         "invasion": 100.0,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-1-3",
@@ -799,9 +756,9 @@
       }
     },
     {
-      "node": "中央-20-2",
-      "node_id": "中央:中央-20-2",
-      "score": 46.58,
+      "node": "中央-2-2",
+      "node_id": "中央:中央-2-2",
+      "score": 42.3328,
       "classification": "attack",
       "label": null,
       "reasons": [
@@ -809,8 +766,51 @@
         "高戦力敵連盟隣接",
         "敵到達距離0",
         "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "中央接続",
+        "中央隣接"
+      ],
+      "scores": {
+        "alliance": 21.0,
+        "coalition": 35.0,
+        "choke": 28.58,
+        "isolation": 0.0,
+        "invasion": 100.0,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "中央:中央-2-2",
+        "area": "中央",
+        "name": "中央-2-2",
+        "type": "漁場",
+        "owner": "476C",
+        "affiliation": "enemy",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#476",
+          "alliance": "476C",
+          "alliance_name": "476 Gamma",
+          "power": 28120774784,
+          "side": "Enemy",
+          "overall_rank": 5,
+          "server_rank": 2,
+          "power_label": "28.12B"
+        }
+      }
+    },
+    {
+      "node": "中央-20-2",
+      "node_id": "中央:中央-20-2",
+      "score": 42.08,
+      "classification": "attack",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "保護切れ",
+        "中央接続",
+        "中央隣接"
       ],
       "scores": {
         "alliance": 23.0,
@@ -819,7 +819,7 @@
         "isolation": 0.0,
         "invasion": 100.0,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-20-2",
@@ -844,7 +844,7 @@
     {
       "node": "中央-1-16",
       "node_id": "中央:中央-1-16",
-      "score": 46.5,
+      "score": 42.0,
       "classification": "attack",
       "label": null,
       "reasons": [
@@ -862,7 +862,7 @@
         "isolation": 0.0,
         "invasion": 80,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-1-16",
@@ -887,14 +887,261 @@
   ],
   "top_server_534_attack": [
     {
-      "node": "中央-2-16",
-      "node_id": "中央:中央-2-16",
-      "score": 33.864,
+      "node": "中央-5-19",
+      "node_id": "中央:中央-5-19",
+      "score": 23.227,
       "classification": null,
       "label": "server_534_attack",
       "reasons": [
         "保護切れ",
-        "戦闘可能時間",
+        "戦闘時間外",
+        "占領上限到達",
+        "中央接続",
+        "中央隣接",
+        "敵隣接"
+      ],
+      "scores": {
+        "alliance": null,
+        "coalition": null,
+        "choke": null,
+        "isolation": null,
+        "invasion": null,
+        "protection": null,
+        "time": null
+      },
+      "source": {
+        "id": "中央:中央-4-19",
+        "area": "中央",
+        "name": "中央-4-19",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      },
+      "target": {
+        "id": "中央:中央-5-19",
+        "area": "中央",
+        "name": "中央-5-19",
+        "type": "漁場",
+        "owner": "TkTk",
+        "affiliation": "enemy",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#480",
+          "alliance": "TkTk",
+          "alliance_name": "Tiki Taka",
+          "power": 23603227317,
+          "side": "Enemy",
+          "overall_rank": 18,
+          "server_rank": 3,
+          "power_label": "23.60B"
+        }
+      }
+    },
+    {
+      "node": "中央-5-19",
+      "node_id": "中央:中央-5-19",
+      "score": 23.227,
+      "classification": null,
+      "label": "server_534_attack",
+      "reasons": [
+        "保護切れ",
+        "戦闘時間外",
+        "占領上限到達",
+        "中央接続",
+        "中央隣接",
+        "敵隣接"
+      ],
+      "scores": {
+        "alliance": null,
+        "coalition": null,
+        "choke": null,
+        "isolation": null,
+        "invasion": null,
+        "protection": null,
+        "time": null
+      },
+      "source": {
+        "id": "中央:中央-5-20",
+        "area": "中央",
+        "name": "中央-5-20",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      },
+      "target": {
+        "id": "中央:中央-5-19",
+        "area": "中央",
+        "name": "中央-5-19",
+        "type": "漁場",
+        "owner": "TkTk",
+        "affiliation": "enemy",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#480",
+          "alliance": "TkTk",
+          "alliance_name": "Tiki Taka",
+          "power": 23603227317,
+          "side": "Enemy",
+          "overall_rank": 18,
+          "server_rank": 3,
+          "power_label": "23.60B"
+        }
+      }
+    },
+    {
+      "node": "中央-6-19",
+      "node_id": "中央:中央-6-19",
+      "score": 23.1573,
+      "classification": null,
+      "label": "server_534_attack",
+      "reasons": [
+        "保護切れ",
+        "戦闘時間外",
+        "占領上限到達",
+        "中央接続",
+        "中央隣接",
+        "敵隣接"
+      ],
+      "scores": {
+        "alliance": null,
+        "coalition": null,
+        "choke": null,
+        "isolation": null,
+        "invasion": null,
+        "protection": null,
+        "time": null
+      },
+      "source": {
+        "id": "中央:中央-5-20",
+        "area": "中央",
+        "name": "中央-5-20",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      },
+      "target": {
+        "id": "中央:中央-6-19",
+        "area": "中央",
+        "name": "中央-6-19",
+        "type": "漁場",
+        "owner": "RCON",
+        "affiliation": "enemy",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#480",
+          "alliance": "RCON",
+          "alliance_name": "알콘",
+          "power": 23144818732,
+          "side": "Enemy",
+          "overall_rank": 22,
+          "server_rank": 4,
+          "power_label": "23.14B"
+        }
+      }
+    },
+    {
+      "node": "中央-3-12",
+      "node_id": "中央:中央-3-12",
+      "score": 22.9619,
+      "classification": null,
+      "label": "server_534_attack",
+      "reasons": [
+        "保護切れ",
+        "戦闘時間外",
+        "占領上限到達",
+        "中央接続",
+        "中央隣接"
+      ],
+      "scores": {
+        "alliance": null,
+        "coalition": null,
+        "choke": null,
+        "isolation": null,
+        "invasion": null,
+        "protection": null,
+        "time": null
+      },
+      "source": {
+        "id": "中央:中央-3-11",
+        "area": "中央",
+        "name": "中央-3-11",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      },
+      "target": {
+        "id": "中央:中央-3-12",
+        "area": "中央",
+        "name": "中央-3-12",
+        "type": "漁場",
+        "owner": "476A",
+        "affiliation": "enemy",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#476",
+          "alliance": "476A",
+          "alliance_name": "476 ALPHA",
+          "power": 33940715221,
+          "side": "Enemy",
+          "overall_rank": 1,
+          "server_rank": 1,
+          "power_label": "33.94B"
+        }
+      }
+    },
+    {
+      "node": "中央-2-16",
+      "node_id": "中央:中央-2-16",
+      "score": 21.864,
+      "classification": null,
+      "label": "server_534_attack",
+      "reasons": [
+        "保護切れ",
+        "戦闘時間外",
         "占領上限到達",
         "中央接続",
         "中央隣接",
@@ -951,12 +1198,12 @@
     {
       "node": "中央-1-1",
       "node_id": "中央:中央-1-1",
-      "score": 33.6401,
+      "score": 21.6401,
       "classification": null,
       "label": "server_534_attack",
       "reasons": [
         "保護切れ",
-        "戦闘可能時間",
+        "戦闘時間外",
         "占領上限到達",
         "中央接続",
         "中央隣接",
@@ -1013,12 +1260,12 @@
     {
       "node": "中央-1-17",
       "node_id": "中央:中央-1-17",
-      "score": 33.3584,
+      "score": 21.3584,
       "classification": null,
       "label": "server_534_attack",
       "reasons": [
         "保護切れ",
-        "戦闘可能時間",
+        "戦闘時間外",
         "占領上限到達",
         "中央接続",
         "中央隣接",
@@ -1075,12 +1322,12 @@
     {
       "node": "中央-1-17",
       "node_id": "中央:中央-1-17",
-      "score": 33.3584,
+      "score": 21.3584,
       "classification": null,
       "label": "server_534_attack",
       "reasons": [
         "保護切れ",
-        "戦闘可能時間",
+        "戦闘時間外",
         "占領上限到達",
         "中央接続",
         "中央隣接",
@@ -1137,12 +1384,12 @@
     {
       "node": "中央-1-16",
       "node_id": "中央:中央-1-16",
-      "score": 32.6519,
+      "score": 20.6519,
       "classification": null,
       "label": "server_534_attack",
       "reasons": [
         "保護切れ",
-        "戦闘可能時間",
+        "戦闘時間外",
         "占領上限到達",
         "中央接続",
         "中央隣接",
@@ -1199,12 +1446,12 @@
     {
       "node": "中央-1-16",
       "node_id": "中央:中央-1-16",
-      "score": 32.6519,
+      "score": 20.6519,
       "classification": null,
       "label": "server_534_attack",
       "reasons": [
         "保護切れ",
-        "戦闘可能時間",
+        "戦闘時間外",
         "占領上限到達",
         "中央接続",
         "中央隣接",
@@ -1257,399 +1504,22 @@
           "power_label": "23.60B"
         }
       }
-    },
-    {
-      "node": "中央-1-17",
-      "node_id": "中央:中央-1-17",
-      "score": 32.4686,
-      "classification": null,
-      "label": "server_534_attack",
-      "reasons": [
-        "保護切れ",
-        "戦闘可能時間",
-        "占領上限到達",
-        "中央接続",
-        "中央隣接",
-        "敵隣接"
-      ],
-      "scores": {
-        "alliance": null,
-        "coalition": null,
-        "choke": null,
-        "isolation": null,
-        "invasion": null,
-        "protection": null,
-        "time": null
-      },
-      "source": {
-        "id": "#509:A-17",
-        "area": "#509",
-        "name": "A-17",
-        "type": "漁場",
-        "owner": "KTVS",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "KTVS",
-          "alliance_name": "TAMA Cream Cat",
-          "power": 24028556233,
-          "side": "Ally",
-          "overall_rank": 17,
-          "server_rank": 2,
-          "power_label": "24.03B"
-        }
-      },
-      "target": {
-        "id": "中央:中央-1-17",
-        "area": "中央",
-        "name": "中央-1-17",
-        "type": "漁場",
-        "owner": "Lghs",
-        "affiliation": "enemy",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#503",
-          "alliance": "Lghs",
-          "alliance_name": "弐共會",
-          "power": 26823676857,
-          "side": "Enemy",
-          "overall_rank": 10,
-          "server_rank": 2,
-          "power_label": "26.82B"
-        }
-      }
-    },
-    {
-      "node": "中央-3-12",
-      "node_id": "中央:中央-3-12",
-      "score": 32.3868,
-      "classification": null,
-      "label": "server_534_attack",
-      "reasons": [
-        "保護切れ",
-        "戦闘可能時間",
-        "占領上限到達",
-        "中央接続",
-        "中央隣接",
-        "敵隣接"
-      ],
-      "scores": {
-        "alliance": null,
-        "coalition": null,
-        "choke": null,
-        "isolation": null,
-        "invasion": null,
-        "protection": null,
-        "time": null
-      },
-      "source": {
-        "id": "中央:中央-2-12",
-        "area": "中央",
-        "name": "中央-2-12",
-        "type": "漁場",
-        "owner": "KTVS",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "KTVS",
-          "alliance_name": "TAMA Cream Cat",
-          "power": 24028556233,
-          "side": "Ally",
-          "overall_rank": 17,
-          "server_rank": 2,
-          "power_label": "24.03B"
-        }
-      },
-      "target": {
-        "id": "中央:中央-3-12",
-        "area": "中央",
-        "name": "中央-3-12",
-        "type": "漁場",
-        "owner": "476A",
-        "affiliation": "enemy",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#476",
-          "alliance": "476A",
-          "alliance_name": "476 ALPHA",
-          "power": 33940715221,
-          "side": "Enemy",
-          "overall_rank": 1,
-          "server_rank": 1,
-          "power_label": "33.94B"
-        }
-      }
-    },
-    {
-      "node": "中央-3-12",
-      "node_id": "中央:中央-3-12",
-      "score": 32.3868,
-      "classification": null,
-      "label": "server_534_attack",
-      "reasons": [
-        "保護切れ",
-        "戦闘可能時間",
-        "占領上限到達",
-        "中央接続",
-        "中央隣接",
-        "敵隣接"
-      ],
-      "scores": {
-        "alliance": null,
-        "coalition": null,
-        "choke": null,
-        "isolation": null,
-        "invasion": null,
-        "protection": null,
-        "time": null
-      },
-      "source": {
-        "id": "中央:中央-3-11",
-        "area": "中央",
-        "name": "中央-3-11",
-        "type": "漁場",
-        "owner": "KTVS",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "KTVS",
-          "alliance_name": "TAMA Cream Cat",
-          "power": 24028556233,
-          "side": "Ally",
-          "overall_rank": 17,
-          "server_rank": 2,
-          "power_label": "24.03B"
-        }
-      },
-      "target": {
-        "id": "中央:中央-3-12",
-        "area": "中央",
-        "name": "中央-3-12",
-        "type": "漁場",
-        "owner": "476A",
-        "affiliation": "enemy",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#476",
-          "alliance": "476A",
-          "alliance_name": "476 ALPHA",
-          "power": 33940715221,
-          "side": "Enemy",
-          "overall_rank": 1,
-          "server_rank": 1,
-          "power_label": "33.94B"
-        }
-      }
-    },
-    {
-      "node": "中央-2-13",
-      "node_id": "中央:中央-2-13",
-      "score": 32.2868,
-      "classification": null,
-      "label": "server_534_attack",
-      "reasons": [
-        "保護切れ",
-        "戦闘可能時間",
-        "占領上限到達",
-        "中央接続",
-        "中央隣接",
-        "敵隣接"
-      ],
-      "scores": {
-        "alliance": null,
-        "coalition": null,
-        "choke": null,
-        "isolation": null,
-        "invasion": null,
-        "protection": null,
-        "time": null
-      },
-      "source": {
-        "id": "中央:中央-1-13",
-        "area": "中央",
-        "name": "中央-1-13",
-        "type": "漁場",
-        "owner": "KTVS",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "KTVS",
-          "alliance_name": "TAMA Cream Cat",
-          "power": 24028556233,
-          "side": "Ally",
-          "overall_rank": 17,
-          "server_rank": 2,
-          "power_label": "24.03B"
-        }
-      },
-      "target": {
-        "id": "中央:中央-2-13",
-        "area": "中央",
-        "name": "中央-2-13",
-        "type": "漁場",
-        "owner": "476A",
-        "affiliation": "enemy",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#476",
-          "alliance": "476A",
-          "alliance_name": "476 ALPHA",
-          "power": 33940715221,
-          "side": "Enemy",
-          "overall_rank": 1,
-          "server_rank": 1,
-          "power_label": "33.94B"
-        }
-      }
     }
   ],
   "top_interdiction": [
     {
-      "node": "f-6",
-      "node_id": "#480:f-6",
-      "score": 23.38,
-      "classification": "interdict",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離0",
-        "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
-      ],
-      "scores": {
-        "alliance": 27.0,
-        "coalition": 16.0,
-        "choke": 8.0,
-        "isolation": 0.0,
-        "invasion": 80,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:f-6",
-        "area": "#480",
-        "name": "f-6",
-        "type": "都市",
-        "owner": "TkTk",
-        "affiliation": "enemy",
-        "importance": 8.0,
-        "alliance_power": {
-          "server": "#480",
-          "alliance": "TkTk",
-          "alliance_name": "Tiki Taka",
-          "power": 23603227317,
-          "side": "Enemy",
-          "overall_rank": 18,
-          "server_rank": 3,
-          "power_label": "23.60B"
-        }
-      }
-    },
-    {
-      "node": "e-6",
-      "node_id": "#480:e-6",
-      "score": 21.76,
-      "classification": "interdict",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離0",
-        "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
-      ],
-      "scores": {
-        "alliance": 26.0,
-        "coalition": 15.0,
-        "choke": 8.0,
-        "isolation": 0.0,
-        "invasion": 70,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:e-6",
-        "area": "#480",
-        "name": "e-6",
-        "type": "都市",
-        "owner": "TkTk",
-        "affiliation": "enemy",
-        "importance": 8.0,
-        "alliance_power": {
-          "server": "#480",
-          "alliance": "TkTk",
-          "alliance_name": "Tiki Taka",
-          "power": 23603227317,
-          "side": "Enemy",
-          "overall_rank": 18,
-          "server_rank": 3,
-          "power_label": "23.60B"
-        }
-      }
-    },
-    {
-      "node": "d-6",
-      "node_id": "#480:d-6",
-      "score": 19.18,
-      "classification": "interdict",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離0",
-        "戦闘可能時間",
-        "土曜戦闘日",
-        "味方隣接"
-      ],
-      "scores": {
-        "alliance": 27.0,
-        "coalition": 16.0,
-        "choke": 8.0,
-        "isolation": 0.0,
-        "invasion": 70,
-        "protection": 0.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:d-6",
-        "area": "#480",
-        "name": "d-6",
-        "type": "都市",
-        "owner": "WbW",
-        "affiliation": "enemy",
-        "importance": 8.0,
-        "alliance_power": {
-          "server": "#480",
-          "alliance": "WbW",
-          "alliance_name": "WreckinbishsWeekly",
-          "power": 24542849657,
-          "side": "Enemy",
-          "overall_rank": 15,
-          "server_rank": 2,
-          "power_label": "24.54B"
-        }
-      }
-    },
-    {
       "node": "h-18",
       "node_id": "#523:h-18",
-      "score": 19.12,
+      "score": 16.32,
       "classification": "interdict",
       "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
         "敵到達距離0",
-        "保護終了6h以内",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "保護切れ",
+        "味方隣接",
+        "自連盟境界リスク"
       ],
       "scores": {
         "alliance": 24.0,
@@ -1657,8 +1527,8 @@
         "choke": 8.0,
         "isolation": 0.0,
         "invasion": 60,
-        "protection": 25.0,
-        "time": 45.0
+        "protection": 35.0,
+        "time": 0.0
       },
       "target": {
         "id": "#523:h-18",
@@ -1681,61 +1551,18 @@
       }
     },
     {
-      "node": "h-2",
-      "node_id": "#476:h-2",
-      "score": 17.8,
+      "node": "d-16",
+      "node_id": "#480:d-16",
+      "score": 14.18,
       "classification": "interdict",
       "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
         "敵到達距離0",
-        "戦闘可能時間",
-        "土曜戦闘日",
-        "自連盟隣接"
-      ],
-      "scores": {
-        "alliance": 30.0,
-        "coalition": 15.0,
-        "choke": 8.0,
-        "isolation": 0.0,
-        "invasion": 60,
-        "protection": 0.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#476:h-2",
-        "area": "#476",
-        "name": "h-2",
-        "type": "都市",
-        "owner": "476K",
-        "affiliation": "enemy",
-        "importance": 8.0,
-        "alliance_power": {
-          "server": "#476",
-          "alliance": "476K",
-          "alliance_name": "476 Kappa",
-          "power": 21771127948,
-          "side": "Enemy",
-          "overall_rank": 29,
-          "server_rank": 9,
-          "power_label": "21.77B"
-        }
-      }
-    },
-    {
-      "node": "e-16",
-      "node_id": "#480:e-16",
-      "score": 17.78,
-      "classification": "interdict",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離0",
-        "戦闘可能時間",
-        "土曜戦闘日",
-        "味方隣接"
+        "味方隣接",
+        "自連盟境界リスク",
+        "グループ防衛ライン"
       ],
       "scores": {
         "alliance": 27.0,
@@ -1744,93 +1571,7 @@
         "isolation": 0.0,
         "invasion": 60,
         "protection": 0.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:e-16",
-        "area": "#480",
-        "name": "e-16",
-        "type": "都市",
-        "owner": "CDf8",
-        "affiliation": "enemy",
-        "importance": 8.0,
-        "alliance_power": {
-          "server": "#480",
-          "alliance": "CDf8",
-          "alliance_name": "Obsidian fire vow",
-          "power": 20299096515,
-          "side": "Enemy",
-          "overall_rank": 32,
-          "server_rank": 5,
-          "power_label": "20.30B"
-        }
-      }
-    },
-    {
-      "node": "f-8",
-      "node_id": "#480:f-8",
-      "score": 17.5,
-      "classification": "interdict",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離0",
-        "保護終了6h以内",
-        "戦闘可能時間",
-        "土曜戦闘日"
-      ],
-      "scores": {
-        "alliance": 23.0,
-        "coalition": 12.0,
-        "choke": 8.0,
-        "isolation": 0.0,
-        "invasion": 50,
-        "protection": 25.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:f-8",
-        "area": "#480",
-        "name": "f-8",
-        "type": "都市",
-        "owner": "BgNa",
-        "affiliation": "enemy",
-        "importance": 8.0,
-        "alliance_power": {
-          "server": "#480",
-          "alliance": "BgNa",
-          "alliance_name": "We have the meats",
-          "power": 27591259047,
-          "side": "Enemy",
-          "overall_rank": 7,
-          "server_rank": 1,
-          "power_label": "27.59B"
-        }
-      }
-    },
-    {
-      "node": "d-16",
-      "node_id": "#480:d-16",
-      "score": 14.76,
-      "classification": "interdict",
-      "label": null,
-      "reasons": [
-        "戦闘可能時間",
-        "土曜戦闘日",
-        "敵隣接",
-        "敵到達距離0",
-        "味方隣接",
-        "自連盟境界リスク"
-      ],
-      "scores": {
-        "alliance": 26.0,
-        "coalition": 15.0,
-        "choke": 8.0,
-        "isolation": 0.0,
-        "invasion": 40,
-        "protection": 0.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#480:d-16",
@@ -1853,87 +1594,88 @@
       }
     },
     {
-      "node": "e-8",
-      "node_id": "#480:e-8",
-      "score": 14.48,
+      "node": "b-14",
+      "node_id": "#480:b-14",
+      "score": 10.06,
       "classification": "interdict",
       "label": null,
       "reasons": [
-        "戦闘可能時間",
-        "土曜戦闘日",
-        "敵到達距離0",
-        "保護終了6h以内",
-        "味方隣接"
-      ],
-      "scores": {
-        "alliance": 22.0,
-        "coalition": 11.0,
-        "choke": 8.0,
-        "isolation": 0.0,
-        "invasion": 30,
-        "protection": 25.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:e-8",
-        "area": "#480",
-        "name": "e-8",
-        "type": "都市",
-        "owner": "BgNa",
-        "affiliation": "enemy",
-        "importance": 8.0,
-        "alliance_power": {
-          "server": "#480",
-          "alliance": "BgNa",
-          "alliance_name": "We have the meats",
-          "power": 27591259047,
-          "side": "Enemy",
-          "overall_rank": 7,
-          "server_rank": 1,
-          "power_label": "27.59B"
-        }
-      }
-    },
-    {
-      "node": "d-14",
-      "node_id": "#480:d-14",
-      "score": 14.1,
-      "classification": "interdict",
-      "label": null,
-      "reasons": [
-        "戦闘可能時間",
-        "土曜戦闘日",
         "敵隣接",
         "高戦力敵連盟隣接",
         "敵到達距離0",
-        "味方隣接"
+        "味方隣接",
+        "自連盟境界リスク",
+        "グループ防衛ライン"
       ],
       "scores": {
-        "alliance": 23.0,
-        "coalition": 12.0,
+        "alliance": 21.0,
+        "coalition": 10.0,
         "choke": 8.0,
         "isolation": 0.0,
         "invasion": 40,
         "protection": 0.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
-        "id": "#480:d-14",
+        "id": "#480:b-14",
         "area": "#480",
-        "name": "d-14",
+        "name": "b-14",
         "type": "都市",
-        "owner": "BgNa",
+        "owner": "WbW",
         "affiliation": "enemy",
         "importance": 8.0,
         "alliance_power": {
           "server": "#480",
-          "alliance": "BgNa",
-          "alliance_name": "We have the meats",
-          "power": 27591259047,
+          "alliance": "WbW",
+          "alliance_name": "WreckinbishsWeekly",
+          "power": 24542849657,
           "side": "Enemy",
-          "overall_rank": 7,
-          "server_rank": 1,
-          "power_label": "27.59B"
+          "overall_rank": 15,
+          "server_rank": 2,
+          "power_label": "24.54B"
+        }
+      }
+    },
+    {
+      "node": "d-8",
+      "node_id": "#480:d-8",
+      "score": 10.06,
+      "classification": "interdict",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離0",
+        "味方隣接",
+        "自連盟境界リスク",
+        "グループ防衛ライン"
+      ],
+      "scores": {
+        "alliance": 21.0,
+        "coalition": 10.0,
+        "choke": 8.0,
+        "isolation": 0.0,
+        "invasion": 40,
+        "protection": 0.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#480:d-8",
+        "area": "#480",
+        "name": "d-8",
+        "type": "都市",
+        "owner": "WbW",
+        "affiliation": "enemy",
+        "importance": 8.0,
+        "alliance_power": {
+          "server": "#480",
+          "alliance": "WbW",
+          "alliance_name": "WreckinbishsWeekly",
+          "power": 24542849657,
+          "side": "Enemy",
+          "overall_rank": 15,
+          "server_rank": 2,
+          "power_label": "24.54B"
         }
       }
     }
@@ -1942,6 +1684,49 @@
   "top_self_pact_threats": [],
   "top_server_534_pact_threats": [],
   "top_server_534_pact_aware_risks": [
+    {
+      "node": "A-17",
+      "node_id": "#509:A-17",
+      "score": 97.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "自連盟保有",
+        "自連盟隣接"
+      ],
+      "scores": {
+        "alliance": 52.0,
+        "coalition": 47.0,
+        "choke": 20.78,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#509:A-17",
+        "area": "#509",
+        "name": "A-17",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      }
+    },
     {
       "node": "A-5",
       "node_id": "#534:A-5",
@@ -1963,7 +1748,7 @@
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-5",
@@ -2002,11 +1787,11 @@
       "scores": {
         "alliance": 59.0,
         "coalition": 36.0,
-        "choke": 6.93,
+        "choke": 6.81,
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-9",
@@ -2049,7 +1834,7 @@
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-1-18",
@@ -2092,7 +1877,7 @@
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-2-15",
@@ -2116,178 +1901,6 @@
     },
     {
       "node": "A-17",
-      "node_id": "#509:A-17",
-      "score": 77.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "自連盟保有",
-        "自連盟隣接",
-        "味方隣接"
-      ],
-      "scores": {
-        "alliance": 53.0,
-        "coalition": 46.0,
-        "choke": 21.14,
-        "isolation": 0.0,
-        "invasion": 77,
-        "protection": 15.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#509:A-17",
-        "area": "#509",
-        "name": "A-17",
-        "type": "漁場",
-        "owner": "KTVS",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "KTVS",
-          "alliance_name": "TAMA Cream Cat",
-          "power": 24028556233,
-          "side": "Ally",
-          "overall_rank": 17,
-          "server_rank": 2,
-          "power_label": "24.03B"
-        }
-      }
-    },
-    {
-      "node": "B-9",
-      "node_id": "#509:B-9",
-      "score": 77.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "自連盟保有",
-        "味方隣接"
-      ],
-      "scores": {
-        "alliance": 46.0,
-        "coalition": 35.0,
-        "choke": 12.15,
-        "isolation": 0.0,
-        "invasion": 77,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#509:B-9",
-        "area": "#509",
-        "name": "B-9",
-        "type": "漁場",
-        "owner": "KTVS",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "KTVS",
-          "alliance_name": "TAMA Cream Cat",
-          "power": 24028556233,
-          "side": "Ally",
-          "overall_rank": 17,
-          "server_rank": 2,
-          "power_label": "24.03B"
-        }
-      }
-    },
-    {
-      "node": "A-13",
-      "node_id": "#534:A-13",
-      "score": 77.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護終了6h以内",
-        "自連盟保有",
-        "自連盟隣接"
-      ],
-      "scores": {
-        "alliance": 60.0,
-        "coalition": 35.0,
-        "choke": 8.07,
-        "isolation": 0.0,
-        "invasion": 77,
-        "protection": 25.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#534:A-13",
-        "area": "#534",
-        "name": "A-13",
-        "type": "漁場",
-        "owner": "4tH",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "4TH",
-          "alliance_name": "QUINTET",
-          "power": 16517834871,
-          "side": "Ally",
-          "overall_rank": 45,
-          "server_rank": 6,
-          "power_label": "16.52B"
-        }
-      }
-    },
-    {
-      "node": "A-15",
-      "node_id": "#534:A-15",
-      "score": 77.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "自連盟保有",
-        "自連盟隣接"
-      ],
-      "scores": {
-        "alliance": 60.0,
-        "coalition": 35.0,
-        "choke": 8.61,
-        "isolation": 0.0,
-        "invasion": 77,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#534:A-15",
-        "area": "#534",
-        "name": "A-15",
-        "type": "漁場",
-        "owner": "w6F",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "w6f",
-          "alliance_name": "気分屋",
-          "power": 5481841042,
-          "side": "Ally",
-          "overall_rank": 71,
-          "server_rank": 13,
-          "power_label": "5.48B"
-        }
-      }
-    },
-    {
-      "node": "A-17",
       "node_id": "#534:A-17",
       "score": 77.0,
       "classification": "risk",
@@ -2303,11 +1916,11 @@
       "scores": {
         "alliance": 60.0,
         "coalition": 35.0,
-        "choke": 9.51,
+        "choke": 9.24,
         "isolation": 0.0,
         "invasion": 77,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-17",
@@ -2346,16 +1959,145 @@
       "scores": {
         "alliance": 60.0,
         "coalition": 35.0,
-        "choke": 10.74,
+        "choke": 10.38,
         "isolation": 0.0,
         "invasion": 77,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-19",
         "area": "#534",
         "name": "A-19",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      }
+    },
+    {
+      "node": "A-21",
+      "node_id": "#534:A-21",
+      "score": 77.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "味方連盟間の接続維持"
+      ],
+      "scores": {
+        "alliance": 60.0,
+        "coalition": 70.0,
+        "choke": 28.67,
+        "isolation": 0.0,
+        "invasion": 77,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#534:A-21",
+        "area": "#534",
+        "name": "A-21",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      }
+    },
+    {
+      "node": "A-3",
+      "node_id": "#534:A-3",
+      "score": 77.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "自連盟保有",
+        "自連盟隣接"
+      ],
+      "scores": {
+        "alliance": 60.0,
+        "coalition": 35.0,
+        "choke": 3.0,
+        "isolation": 0.0,
+        "invasion": 77,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#534:A-3",
+        "area": "#534",
+        "name": "A-3",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      }
+    },
+    {
+      "node": "中央-1-15",
+      "node_id": "中央:中央-1-15",
+      "score": 77.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 50.0,
+        "coalition": 55.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 77,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "中央:中央-1-15",
+        "area": "中央",
+        "name": "中央-1-15",
         "type": "漁場",
         "owner": "KTVS",
         "affiliation": "self",
@@ -2375,52 +2117,9 @@
   ],
   "risk_watchlist": [
     {
-      "node": "E-15",
-      "node_id": "#480:E-15",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護終了6h以内",
-        "戦闘可能時間",
-        "土曜戦闘日"
-      ],
-      "scores": {
-        "alliance": 23.0,
-        "coalition": 37.0,
-        "choke": 6.48,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 25.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:E-15",
-        "area": "#480",
-        "name": "E-15",
-        "type": "漁場",
-        "owner": "SsQ",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#509",
-          "alliance": "SsQ",
-          "alliance_name": "Gummibärenbande V",
-          "power": 25186952492,
-          "side": "Ally",
-          "overall_rank": 14,
-          "server_rank": 3,
-          "power_label": "25.19B"
-        }
-      }
-    },
-    {
-      "node": "E-7",
-      "node_id": "#480:E-7",
-      "score": 100.0,
+      "node": "A-17",
+      "node_id": "#509:A-17",
+      "score": 97.0,
       "classification": "risk",
       "label": null,
       "reasons": [
@@ -2428,164 +2127,35 @@
         "高戦力敵連盟隣接",
         "敵到達距離1",
         "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "自連盟保有",
+        "自連盟隣接"
       ],
       "scores": {
-        "alliance": 23.0,
-        "coalition": 37.0,
-        "choke": 10.92,
+        "alliance": 52.0,
+        "coalition": 47.0,
+        "choke": 20.78,
         "isolation": 0.0,
-        "invasion": 100.0,
+        "invasion": 97,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
-        "id": "#480:E-7",
-        "area": "#480",
-        "name": "E-7",
+        "id": "#509:A-17",
+        "area": "#509",
+        "name": "A-17",
         "type": "漁場",
-        "owner": "BAJ",
-        "affiliation": "ally",
+        "owner": "KTVS",
+        "affiliation": "self",
         "importance": 3.0,
         "alliance_power": {
-          "server": "#440",
-          "alliance": "BAJ",
-          "alliance_name": "Blood and Judgement",
-          "power": 30092173317,
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
           "side": "Ally",
-          "overall_rank": 3,
-          "server_rank": 1,
-          "power_label": "30.09B"
-        }
-      }
-    },
-    {
-      "node": "F-7",
-      "node_id": "#480:F-7",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "戦闘可能時間",
-        "土曜戦闘日",
-        "味方グループ保有"
-      ],
-      "scores": {
-        "alliance": 25.0,
-        "coalition": 39.0,
-        "choke": 11.04,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 0.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:F-7",
-        "area": "#480",
-        "name": "F-7",
-        "type": "漁場",
-        "owner": "GoDs",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#440",
-          "alliance": "GoDs",
-          "alliance_name": "Gods of Sparta",
-          "power": 22679918576,
-          "side": "Ally",
-          "overall_rank": 24,
-          "server_rank": 3,
-          "power_label": "22.68B"
-        }
-      }
-    },
-    {
-      "node": "中央-2-8",
-      "node_id": "中央:中央-2-8",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護終了6h以内",
-        "味方グループ保有",
-        "中央接続"
-      ],
-      "scores": {
-        "alliance": 25.0,
-        "coalition": 59.0,
-        "choke": 23.0,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 25.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "中央:中央-2-8",
-        "area": "中央",
-        "name": "中央-2-8",
-        "type": "漁場",
-        "owner": "VEX",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#509",
-          "alliance": "VEX",
-          "alliance_name": "Vanguard Elite X",
-          "power": 21769694627,
-          "side": "Ally",
-          "overall_rank": 30,
-          "server_rank": 6,
-          "power_label": "21.77B"
-        }
-      }
-    },
-    {
-      "node": "中央-7-19",
-      "node_id": "中央:中央-7-19",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "味方グループ保有",
-        "中央接続"
-      ],
-      "scores": {
-        "alliance": 25.0,
-        "coalition": 59.0,
-        "choke": 23.0,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "中央:中央-7-19",
-        "area": "中央",
-        "name": "中央-7-19",
-        "type": "漁場",
-        "owner": "SsQ",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#509",
-          "alliance": "SsQ",
-          "alliance_name": "Gummibärenbande V",
-          "power": 25186952492,
-          "side": "Ally",
-          "overall_rank": 14,
-          "server_rank": 3,
-          "power_label": "25.19B"
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
         }
       }
     },
@@ -2599,18 +2169,18 @@
         "敵隣接",
         "高戦力敵連盟隣接",
         "敵到達距離1",
-        "戦闘可能時間",
-        "土曜戦闘日",
-        "味方グループ保有"
+        "味方グループ保有",
+        "中央隣接",
+        "グループ防衛ライン"
       ],
       "scores": {
         "alliance": 21.0,
         "coalition": 38.0,
-        "choke": 26.15,
+        "choke": 25.4,
         "isolation": 0.0,
         "invasion": 97,
         "protection": 0.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#511:K-1",
@@ -2653,7 +2223,7 @@
         "isolation": 0.0,
         "invasion": 97,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-1-5",
@@ -2676,9 +2246,9 @@
       }
     },
     {
-      "node": "E-17",
-      "node_id": "#509:E-17",
-      "score": 87.0,
+      "node": "中央-2-8",
+      "node_id": "中央:中央-2-8",
+      "score": 97.0,
       "classification": "risk",
       "label": null,
       "reasons": [
@@ -2686,22 +2256,108 @@
         "高戦力敵連盟隣接",
         "敵到達距離1",
         "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "味方グループ保有",
+        "中央接続"
       ],
       "scores": {
-        "alliance": 24.0,
-        "coalition": 38.0,
-        "choke": 9.03,
+        "alliance": 27.0,
+        "coalition": 61.0,
+        "choke": 23.0,
         "isolation": 0.0,
-        "invasion": 87,
+        "invasion": 97,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
-        "id": "#509:E-17",
-        "area": "#509",
-        "name": "E-17",
+        "id": "中央:中央-2-8",
+        "area": "中央",
+        "name": "中央-2-8",
+        "type": "漁場",
+        "owner": "VEX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
+          "side": "Ally",
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
+        }
+      }
+    },
+    {
+      "node": "中央-7-19",
+      "node_id": "中央:中央-7-19",
+      "score": 97.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "味方グループ保有",
+        "中央接続",
+        "中央隣接"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 0.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "中央:中央-7-19",
+        "area": "中央",
+        "name": "中央-7-19",
+        "type": "漁場",
+        "owner": "GcC",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "GcC",
+          "alliance_name": "GcC",
+          "power": 29973947565,
+          "side": "Ally",
+          "overall_rank": 4,
+          "server_rank": 2,
+          "power_label": "29.97B"
+        }
+      }
+    },
+    {
+      "node": "D-15",
+      "node_id": "#480:D-15",
+      "score": 89.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "グループ防衛ライン"
+      ],
+      "scores": {
+        "alliance": 20.0,
+        "coalition": 34.0,
+        "choke": 6.18,
+        "isolation": 0.0,
+        "invasion": 89,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#480:D-15",
+        "area": "#480",
+        "name": "D-15",
         "type": "漁場",
         "owner": "SsQ",
         "affiliation": "ally",
@@ -2719,6 +2375,49 @@
       }
     },
     {
+      "node": "E-7",
+      "node_id": "#480:E-7",
+      "score": 89.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "グループ防衛ライン"
+      ],
+      "scores": {
+        "alliance": 18.0,
+        "coalition": 27.0,
+        "choke": 9.6,
+        "isolation": 0.0,
+        "invasion": 89,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#480:E-7",
+        "area": "#480",
+        "name": "E-7",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
+        }
+      }
+    },
+    {
       "node": "A-5",
       "node_id": "#534:A-5",
       "score": 87.0,
@@ -2739,7 +2438,7 @@
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-5",
@@ -2778,99 +2477,11 @@
       "scores": {
         "alliance": 59.0,
         "coalition": 36.0,
-        "choke": 6.93,
+        "choke": 6.81,
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#534:A-9",
-        "area": "#534",
-        "name": "A-9",
-        "type": "漁場",
-        "owner": "SHA0",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "SHA0",
-          "alliance_name": "社畜楽園",
-          "power": 3433631937,
-          "side": "Ally",
-          "overall_rank": 82,
-          "server_rank": 17,
-          "power_label": "3.43B"
-        }
-      }
-    }
-  ],
-  "self_risk_watchlist": [
-    {
-      "node": "A-5",
-      "node_id": "#534:A-5",
-      "score": 87.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "自連盟保有",
-        "自連盟隣接"
-      ],
-      "scores": {
-        "alliance": 59.0,
-        "coalition": 36.0,
-        "choke": 3.0,
-        "isolation": 0.0,
-        "invasion": 87,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#534:A-5",
-        "area": "#534",
-        "name": "A-5",
-        "type": "漁場",
-        "owner": "4tH",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "4TH",
-          "alliance_name": "QUINTET",
-          "power": 16517834871,
-          "side": "Ally",
-          "overall_rank": 45,
-          "server_rank": 6,
-          "power_label": "16.52B"
-        }
-      }
-    },
-    {
-      "node": "A-9",
-      "node_id": "#534:A-9",
-      "score": 87.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "自連盟保有",
-        "自連盟隣接"
-      ],
-      "scores": {
-        "alliance": 59.0,
-        "coalition": 36.0,
-        "choke": 6.93,
-        "isolation": 0.0,
-        "invasion": 87,
-        "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-9",
@@ -2913,7 +2524,181 @@
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
+      },
+      "target": {
+        "id": "中央:中央-1-18",
+        "area": "中央",
+        "name": "中央-1-18",
+        "type": "漁場",
+        "owner": "JDX",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "JDX",
+          "alliance_name": "Revo",
+          "power": 26388296429,
+          "side": "Ally",
+          "overall_rank": 13,
+          "server_rank": 1,
+          "power_label": "26.39B"
+        }
+      }
+    }
+  ],
+  "self_risk_watchlist": [
+    {
+      "node": "A-17",
+      "node_id": "#509:A-17",
+      "score": 97.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "自連盟保有",
+        "自連盟隣接"
+      ],
+      "scores": {
+        "alliance": 52.0,
+        "coalition": 47.0,
+        "choke": 20.78,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#509:A-17",
+        "area": "#509",
+        "name": "A-17",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      }
+    },
+    {
+      "node": "A-5",
+      "node_id": "#534:A-5",
+      "score": 87.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "自連盟保有",
+        "自連盟隣接"
+      ],
+      "scores": {
+        "alliance": 59.0,
+        "coalition": 36.0,
+        "choke": 3.0,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#534:A-5",
+        "area": "#534",
+        "name": "A-5",
+        "type": "漁場",
+        "owner": "4tH",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "4TH",
+          "alliance_name": "QUINTET",
+          "power": 16517834871,
+          "side": "Ally",
+          "overall_rank": 45,
+          "server_rank": 6,
+          "power_label": "16.52B"
+        }
+      }
+    },
+    {
+      "node": "A-9",
+      "node_id": "#534:A-9",
+      "score": 87.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "自連盟保有",
+        "自連盟隣接"
+      ],
+      "scores": {
+        "alliance": 59.0,
+        "coalition": 36.0,
+        "choke": 6.81,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#534:A-9",
+        "area": "#534",
+        "name": "A-9",
+        "type": "漁場",
+        "owner": "SHA0",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "SHA0",
+          "alliance_name": "社畜楽園",
+          "power": 3433631937,
+          "side": "Ally",
+          "overall_rank": 82,
+          "server_rank": 17,
+          "power_label": "3.43B"
+        }
+      }
+    },
+    {
+      "node": "中央-1-18",
+      "node_id": "中央:中央-1-18",
+      "score": 87.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 49.0,
+        "coalition": 56.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-1-18",
@@ -2956,7 +2741,7 @@
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-2-15",
@@ -2980,178 +2765,6 @@
     },
     {
       "node": "A-17",
-      "node_id": "#509:A-17",
-      "score": 77.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "自連盟保有",
-        "自連盟隣接",
-        "味方隣接"
-      ],
-      "scores": {
-        "alliance": 53.0,
-        "coalition": 46.0,
-        "choke": 21.14,
-        "isolation": 0.0,
-        "invasion": 77,
-        "protection": 15.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#509:A-17",
-        "area": "#509",
-        "name": "A-17",
-        "type": "漁場",
-        "owner": "KTVS",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "KTVS",
-          "alliance_name": "TAMA Cream Cat",
-          "power": 24028556233,
-          "side": "Ally",
-          "overall_rank": 17,
-          "server_rank": 2,
-          "power_label": "24.03B"
-        }
-      }
-    },
-    {
-      "node": "B-9",
-      "node_id": "#509:B-9",
-      "score": 77.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "自連盟保有",
-        "味方隣接"
-      ],
-      "scores": {
-        "alliance": 46.0,
-        "coalition": 35.0,
-        "choke": 12.15,
-        "isolation": 0.0,
-        "invasion": 77,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#509:B-9",
-        "area": "#509",
-        "name": "B-9",
-        "type": "漁場",
-        "owner": "KTVS",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "KTVS",
-          "alliance_name": "TAMA Cream Cat",
-          "power": 24028556233,
-          "side": "Ally",
-          "overall_rank": 17,
-          "server_rank": 2,
-          "power_label": "24.03B"
-        }
-      }
-    },
-    {
-      "node": "A-13",
-      "node_id": "#534:A-13",
-      "score": 77.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護終了6h以内",
-        "自連盟保有",
-        "自連盟隣接"
-      ],
-      "scores": {
-        "alliance": 60.0,
-        "coalition": 35.0,
-        "choke": 8.07,
-        "isolation": 0.0,
-        "invasion": 77,
-        "protection": 25.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#534:A-13",
-        "area": "#534",
-        "name": "A-13",
-        "type": "漁場",
-        "owner": "4tH",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "4TH",
-          "alliance_name": "QUINTET",
-          "power": 16517834871,
-          "side": "Ally",
-          "overall_rank": 45,
-          "server_rank": 6,
-          "power_label": "16.52B"
-        }
-      }
-    },
-    {
-      "node": "A-15",
-      "node_id": "#534:A-15",
-      "score": 77.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "自連盟保有",
-        "自連盟隣接"
-      ],
-      "scores": {
-        "alliance": 60.0,
-        "coalition": 35.0,
-        "choke": 8.61,
-        "isolation": 0.0,
-        "invasion": 77,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#534:A-15",
-        "area": "#534",
-        "name": "A-15",
-        "type": "漁場",
-        "owner": "w6F",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "w6f",
-          "alliance_name": "気分屋",
-          "power": 5481841042,
-          "side": "Ally",
-          "overall_rank": 71,
-          "server_rank": 13,
-          "power_label": "5.48B"
-        }
-      }
-    },
-    {
-      "node": "A-17",
       "node_id": "#534:A-17",
       "score": 77.0,
       "classification": "risk",
@@ -3167,11 +2780,11 @@
       "scores": {
         "alliance": 60.0,
         "coalition": 35.0,
-        "choke": 9.51,
+        "choke": 9.24,
         "isolation": 0.0,
         "invasion": 77,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-17",
@@ -3210,16 +2823,145 @@
       "scores": {
         "alliance": 60.0,
         "coalition": 35.0,
-        "choke": 10.74,
+        "choke": 10.38,
         "isolation": 0.0,
         "invasion": 77,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-19",
         "area": "#534",
         "name": "A-19",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      }
+    },
+    {
+      "node": "A-21",
+      "node_id": "#534:A-21",
+      "score": 77.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "味方連盟間の接続維持"
+      ],
+      "scores": {
+        "alliance": 60.0,
+        "coalition": 70.0,
+        "choke": 28.67,
+        "isolation": 0.0,
+        "invasion": 77,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#534:A-21",
+        "area": "#534",
+        "name": "A-21",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      }
+    },
+    {
+      "node": "A-3",
+      "node_id": "#534:A-3",
+      "score": 77.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "自連盟保有",
+        "自連盟隣接"
+      ],
+      "scores": {
+        "alliance": 60.0,
+        "coalition": 35.0,
+        "choke": 3.0,
+        "isolation": 0.0,
+        "invasion": 77,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#534:A-3",
+        "area": "#534",
+        "name": "A-3",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      }
+    },
+    {
+      "node": "中央-1-15",
+      "node_id": "中央:中央-1-15",
+      "score": 77.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 50.0,
+        "coalition": 55.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 77,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "中央:中央-1-15",
+        "area": "中央",
+        "name": "中央-1-15",
         "type": "漁場",
         "owner": "KTVS",
         "affiliation": "self",
@@ -3239,6 +2981,49 @@
   ],
   "server_534_risk_watchlist": [
     {
+      "node": "A-17",
+      "node_id": "#509:A-17",
+      "score": 97.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "自連盟保有",
+        "自連盟隣接"
+      ],
+      "scores": {
+        "alliance": 52.0,
+        "coalition": 47.0,
+        "choke": 20.78,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#509:A-17",
+        "area": "#509",
+        "name": "A-17",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      }
+    },
+    {
       "node": "A-5",
       "node_id": "#534:A-5",
       "score": 87.0,
@@ -3259,7 +3044,7 @@
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-5",
@@ -3298,11 +3083,11 @@
       "scores": {
         "alliance": 59.0,
         "coalition": 36.0,
-        "choke": 6.93,
+        "choke": 6.81,
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-9",
@@ -3345,7 +3130,7 @@
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-1-18",
@@ -3388,7 +3173,7 @@
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-2-15",
@@ -3412,178 +3197,6 @@
     },
     {
       "node": "A-17",
-      "node_id": "#509:A-17",
-      "score": 77.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "自連盟保有",
-        "自連盟隣接",
-        "味方隣接"
-      ],
-      "scores": {
-        "alliance": 53.0,
-        "coalition": 46.0,
-        "choke": 21.14,
-        "isolation": 0.0,
-        "invasion": 77,
-        "protection": 15.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#509:A-17",
-        "area": "#509",
-        "name": "A-17",
-        "type": "漁場",
-        "owner": "KTVS",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "KTVS",
-          "alliance_name": "TAMA Cream Cat",
-          "power": 24028556233,
-          "side": "Ally",
-          "overall_rank": 17,
-          "server_rank": 2,
-          "power_label": "24.03B"
-        }
-      }
-    },
-    {
-      "node": "B-9",
-      "node_id": "#509:B-9",
-      "score": 77.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "自連盟保有",
-        "味方隣接"
-      ],
-      "scores": {
-        "alliance": 46.0,
-        "coalition": 35.0,
-        "choke": 12.15,
-        "isolation": 0.0,
-        "invasion": 77,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#509:B-9",
-        "area": "#509",
-        "name": "B-9",
-        "type": "漁場",
-        "owner": "KTVS",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "KTVS",
-          "alliance_name": "TAMA Cream Cat",
-          "power": 24028556233,
-          "side": "Ally",
-          "overall_rank": 17,
-          "server_rank": 2,
-          "power_label": "24.03B"
-        }
-      }
-    },
-    {
-      "node": "A-13",
-      "node_id": "#534:A-13",
-      "score": 77.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護終了6h以内",
-        "自連盟保有",
-        "自連盟隣接"
-      ],
-      "scores": {
-        "alliance": 60.0,
-        "coalition": 35.0,
-        "choke": 8.07,
-        "isolation": 0.0,
-        "invasion": 77,
-        "protection": 25.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#534:A-13",
-        "area": "#534",
-        "name": "A-13",
-        "type": "漁場",
-        "owner": "4tH",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "4TH",
-          "alliance_name": "QUINTET",
-          "power": 16517834871,
-          "side": "Ally",
-          "overall_rank": 45,
-          "server_rank": 6,
-          "power_label": "16.52B"
-        }
-      }
-    },
-    {
-      "node": "A-15",
-      "node_id": "#534:A-15",
-      "score": 77.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "自連盟保有",
-        "自連盟隣接"
-      ],
-      "scores": {
-        "alliance": 60.0,
-        "coalition": 35.0,
-        "choke": 8.61,
-        "isolation": 0.0,
-        "invasion": 77,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#534:A-15",
-        "area": "#534",
-        "name": "A-15",
-        "type": "漁場",
-        "owner": "w6F",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "w6f",
-          "alliance_name": "気分屋",
-          "power": 5481841042,
-          "side": "Ally",
-          "overall_rank": 71,
-          "server_rank": 13,
-          "power_label": "5.48B"
-        }
-      }
-    },
-    {
-      "node": "A-17",
       "node_id": "#534:A-17",
       "score": 77.0,
       "classification": "risk",
@@ -3599,11 +3212,11 @@
       "scores": {
         "alliance": 60.0,
         "coalition": 35.0,
-        "choke": 9.51,
+        "choke": 9.24,
         "isolation": 0.0,
         "invasion": 77,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-17",
@@ -3642,11 +3255,11 @@
       "scores": {
         "alliance": 60.0,
         "coalition": 35.0,
-        "choke": 10.74,
+        "choke": 10.38,
         "isolation": 0.0,
         "invasion": 77,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-19",
@@ -3667,227 +3280,141 @@
           "power_label": "24.03B"
         }
       }
+    },
+    {
+      "node": "A-21",
+      "node_id": "#534:A-21",
+      "score": 77.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "味方連盟間の接続維持"
+      ],
+      "scores": {
+        "alliance": 60.0,
+        "coalition": 70.0,
+        "choke": 28.67,
+        "isolation": 0.0,
+        "invasion": 77,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#534:A-21",
+        "area": "#534",
+        "name": "A-21",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      }
+    },
+    {
+      "node": "A-3",
+      "node_id": "#534:A-3",
+      "score": 77.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "自連盟保有",
+        "自連盟隣接"
+      ],
+      "scores": {
+        "alliance": 60.0,
+        "coalition": 35.0,
+        "choke": 3.0,
+        "isolation": 0.0,
+        "invasion": 77,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#534:A-3",
+        "area": "#534",
+        "name": "A-3",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      }
+    },
+    {
+      "node": "中央-1-15",
+      "node_id": "中央:中央-1-15",
+      "score": 77.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 50.0,
+        "coalition": 55.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 77,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "中央:中央-1-15",
+        "area": "中央",
+        "name": "中央-1-15",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      }
     }
   ],
   "time_sensitive": [
     {
-      "node": "E-15",
-      "node_id": "#480:E-15",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護終了6h以内",
-        "戦闘可能時間",
-        "土曜戦闘日"
-      ],
-      "scores": {
-        "alliance": 23.0,
-        "coalition": 37.0,
-        "choke": 6.48,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 25.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:E-15",
-        "area": "#480",
-        "name": "E-15",
-        "type": "漁場",
-        "owner": "SsQ",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#509",
-          "alliance": "SsQ",
-          "alliance_name": "Gummibärenbande V",
-          "power": 25186952492,
-          "side": "Ally",
-          "overall_rank": 14,
-          "server_rank": 3,
-          "power_label": "25.19B"
-        }
-      }
-    },
-    {
-      "node": "E-7",
-      "node_id": "#480:E-7",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
-      ],
-      "scores": {
-        "alliance": 23.0,
-        "coalition": 37.0,
-        "choke": 10.92,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:E-7",
-        "area": "#480",
-        "name": "E-7",
-        "type": "漁場",
-        "owner": "BAJ",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#440",
-          "alliance": "BAJ",
-          "alliance_name": "Blood and Judgement",
-          "power": 30092173317,
-          "side": "Ally",
-          "overall_rank": 3,
-          "server_rank": 1,
-          "power_label": "30.09B"
-        }
-      }
-    },
-    {
-      "node": "F-7",
-      "node_id": "#480:F-7",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "戦闘可能時間",
-        "土曜戦闘日",
-        "味方グループ保有"
-      ],
-      "scores": {
-        "alliance": 25.0,
-        "coalition": 39.0,
-        "choke": 11.04,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 0.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:F-7",
-        "area": "#480",
-        "name": "F-7",
-        "type": "漁場",
-        "owner": "GoDs",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#440",
-          "alliance": "GoDs",
-          "alliance_name": "Gods of Sparta",
-          "power": 22679918576,
-          "side": "Ally",
-          "overall_rank": 24,
-          "server_rank": 3,
-          "power_label": "22.68B"
-        }
-      }
-    },
-    {
-      "node": "中央-2-8",
-      "node_id": "中央:中央-2-8",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護終了6h以内",
-        "味方グループ保有",
-        "中央接続"
-      ],
-      "scores": {
-        "alliance": 25.0,
-        "coalition": 59.0,
-        "choke": 23.0,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 25.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "中央:中央-2-8",
-        "area": "中央",
-        "name": "中央-2-8",
-        "type": "漁場",
-        "owner": "VEX",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#509",
-          "alliance": "VEX",
-          "alliance_name": "Vanguard Elite X",
-          "power": 21769694627,
-          "side": "Ally",
-          "overall_rank": 30,
-          "server_rank": 6,
-          "power_label": "21.77B"
-        }
-      }
-    },
-    {
-      "node": "中央-7-19",
-      "node_id": "中央:中央-7-19",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "味方グループ保有",
-        "中央接続"
-      ],
-      "scores": {
-        "alliance": 25.0,
-        "coalition": 59.0,
-        "choke": 23.0,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "中央:中央-7-19",
-        "area": "中央",
-        "name": "中央-7-19",
-        "type": "漁場",
-        "owner": "SsQ",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#509",
-          "alliance": "SsQ",
-          "alliance_name": "Gummibärenbande V",
-          "power": 25186952492,
-          "side": "Ally",
-          "overall_rank": 14,
-          "server_rank": 3,
-          "power_label": "25.19B"
-        }
-      }
-    },
-    {
-      "node": "K-1",
-      "node_id": "#511:K-1",
+      "node": "A-17",
+      "node_id": "#509:A-17",
       "score": 97.0,
       "classification": "risk",
       "label": null,
@@ -3895,36 +3422,36 @@
         "敵隣接",
         "高戦力敵連盟隣接",
         "敵到達距離1",
-        "戦闘可能時間",
-        "土曜戦闘日",
-        "味方グループ保有"
+        "保護切れ",
+        "自連盟保有",
+        "自連盟隣接"
       ],
       "scores": {
-        "alliance": 21.0,
-        "coalition": 38.0,
-        "choke": 26.15,
+        "alliance": 52.0,
+        "coalition": 47.0,
+        "choke": 20.78,
         "isolation": 0.0,
         "invasion": 97,
-        "protection": 0.0,
-        "time": 45.0
+        "protection": 35.0,
+        "time": 0.0
       },
       "target": {
-        "id": "#511:K-1",
-        "area": "#511",
-        "name": "K-1",
+        "id": "#509:A-17",
+        "area": "#509",
+        "name": "A-17",
         "type": "漁場",
-        "owner": "JL2",
-        "affiliation": "ally",
+        "owner": "KTVS",
+        "affiliation": "self",
         "importance": 3.0,
         "alliance_power": {
-          "server": "#511",
-          "alliance": "JL2",
-          "alliance_name": "jackalope app 2",
-          "power": 4648607164,
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
           "side": "Ally",
-          "overall_rank": 74,
-          "server_rank": 5,
-          "power_label": "4.65B"
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
         }
       }
     },
@@ -3949,7 +3476,7 @@
         "isolation": 0.0,
         "invasion": 97,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-1-5",
@@ -3972,9 +3499,9 @@
       }
     },
     {
-      "node": "E-17",
-      "node_id": "#509:E-17",
-      "score": 87.0,
+      "node": "中央-2-8",
+      "node_id": "中央:中央-2-8",
+      "score": 97.0,
       "classification": "risk",
       "label": null,
       "reasons": [
@@ -3982,22 +3509,65 @@
         "高戦力敵連盟隣接",
         "敵到達距離1",
         "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "味方グループ保有",
+        "中央接続"
       ],
       "scores": {
-        "alliance": 24.0,
-        "coalition": 38.0,
-        "choke": 9.03,
+        "alliance": 27.0,
+        "coalition": 61.0,
+        "choke": 23.0,
         "isolation": 0.0,
-        "invasion": 87,
+        "invasion": 97,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
-        "id": "#509:E-17",
-        "area": "#509",
-        "name": "E-17",
+        "id": "中央:中央-2-8",
+        "area": "中央",
+        "name": "中央-2-8",
+        "type": "漁場",
+        "owner": "VEX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
+          "side": "Ally",
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
+        }
+      }
+    },
+    {
+      "node": "D-15",
+      "node_id": "#480:D-15",
+      "score": 89.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "グループ防衛ライン"
+      ],
+      "scores": {
+        "alliance": 20.0,
+        "coalition": 34.0,
+        "choke": 6.18,
+        "isolation": 0.0,
+        "invasion": 89,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#480:D-15",
+        "area": "#480",
+        "name": "D-15",
         "type": "漁場",
         "owner": "SsQ",
         "affiliation": "ally",
@@ -4011,6 +3581,49 @@
           "overall_rank": 14,
           "server_rank": 3,
           "power_label": "25.19B"
+        }
+      }
+    },
+    {
+      "node": "E-7",
+      "node_id": "#480:E-7",
+      "score": 89.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "グループ防衛ライン"
+      ],
+      "scores": {
+        "alliance": 18.0,
+        "coalition": 27.0,
+        "choke": 9.6,
+        "isolation": 0.0,
+        "invasion": 89,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#480:E-7",
+        "area": "#480",
+        "name": "E-7",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
         }
       }
     },
@@ -4035,7 +3648,7 @@
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-5",
@@ -4074,357 +3687,11 @@
       "scores": {
         "alliance": 59.0,
         "coalition": 36.0,
-        "choke": 6.93,
+        "choke": 6.81,
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#534:A-9",
-        "area": "#534",
-        "name": "A-9",
-        "type": "漁場",
-        "owner": "SHA0",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "SHA0",
-          "alliance_name": "社畜楽園",
-          "power": 3433631937,
-          "side": "Ally",
-          "overall_rank": 82,
-          "server_rank": 17,
-          "power_label": "3.43B"
-        }
-      }
-    }
-  ],
-  "protection_watchlist": [
-    {
-      "node": "E-15",
-      "node_id": "#480:E-15",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護終了6h以内",
-        "戦闘可能時間",
-        "土曜戦闘日"
-      ],
-      "scores": {
-        "alliance": 23.0,
-        "coalition": 37.0,
-        "choke": 6.48,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 25.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:E-15",
-        "area": "#480",
-        "name": "E-15",
-        "type": "漁場",
-        "owner": "SsQ",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#509",
-          "alliance": "SsQ",
-          "alliance_name": "Gummibärenbande V",
-          "power": 25186952492,
-          "side": "Ally",
-          "overall_rank": 14,
-          "server_rank": 3,
-          "power_label": "25.19B"
-        }
-      }
-    },
-    {
-      "node": "E-7",
-      "node_id": "#480:E-7",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
-      ],
-      "scores": {
-        "alliance": 23.0,
-        "coalition": 37.0,
-        "choke": 10.92,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:E-7",
-        "area": "#480",
-        "name": "E-7",
-        "type": "漁場",
-        "owner": "BAJ",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#440",
-          "alliance": "BAJ",
-          "alliance_name": "Blood and Judgement",
-          "power": 30092173317,
-          "side": "Ally",
-          "overall_rank": 3,
-          "server_rank": 1,
-          "power_label": "30.09B"
-        }
-      }
-    },
-    {
-      "node": "中央-2-8",
-      "node_id": "中央:中央-2-8",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護終了6h以内",
-        "味方グループ保有",
-        "中央接続"
-      ],
-      "scores": {
-        "alliance": 25.0,
-        "coalition": 59.0,
-        "choke": 23.0,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 25.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "中央:中央-2-8",
-        "area": "中央",
-        "name": "中央-2-8",
-        "type": "漁場",
-        "owner": "VEX",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#509",
-          "alliance": "VEX",
-          "alliance_name": "Vanguard Elite X",
-          "power": 21769694627,
-          "side": "Ally",
-          "overall_rank": 30,
-          "server_rank": 6,
-          "power_label": "21.77B"
-        }
-      }
-    },
-    {
-      "node": "中央-7-19",
-      "node_id": "中央:中央-7-19",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "味方グループ保有",
-        "中央接続"
-      ],
-      "scores": {
-        "alliance": 25.0,
-        "coalition": 59.0,
-        "choke": 23.0,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "中央:中央-7-19",
-        "area": "中央",
-        "name": "中央-7-19",
-        "type": "漁場",
-        "owner": "SsQ",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#509",
-          "alliance": "SsQ",
-          "alliance_name": "Gummibärenbande V",
-          "power": 25186952492,
-          "side": "Ally",
-          "overall_rank": 14,
-          "server_rank": 3,
-          "power_label": "25.19B"
-        }
-      }
-    },
-    {
-      "node": "中央-1-5",
-      "node_id": "中央:中央-1-5",
-      "score": 97.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "味方グループ保有",
-        "中央接続"
-      ],
-      "scores": {
-        "alliance": 23.0,
-        "coalition": 57.0,
-        "choke": 23.0,
-        "isolation": 0.0,
-        "invasion": 97,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "中央:中央-1-5",
-        "area": "中央",
-        "name": "中央-1-5",
-        "type": "漁場",
-        "owner": "VEX",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#509",
-          "alliance": "VEX",
-          "alliance_name": "Vanguard Elite X",
-          "power": 21769694627,
-          "side": "Ally",
-          "overall_rank": 30,
-          "server_rank": 6,
-          "power_label": "21.77B"
-        }
-      }
-    },
-    {
-      "node": "E-17",
-      "node_id": "#509:E-17",
-      "score": 87.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
-      ],
-      "scores": {
-        "alliance": 24.0,
-        "coalition": 38.0,
-        "choke": 9.03,
-        "isolation": 0.0,
-        "invasion": 87,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#509:E-17",
-        "area": "#509",
-        "name": "E-17",
-        "type": "漁場",
-        "owner": "SsQ",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#509",
-          "alliance": "SsQ",
-          "alliance_name": "Gummibärenbande V",
-          "power": 25186952492,
-          "side": "Ally",
-          "overall_rank": 14,
-          "server_rank": 3,
-          "power_label": "25.19B"
-        }
-      }
-    },
-    {
-      "node": "A-5",
-      "node_id": "#534:A-5",
-      "score": 87.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "自連盟保有",
-        "自連盟隣接"
-      ],
-      "scores": {
-        "alliance": 59.0,
-        "coalition": 36.0,
-        "choke": 3.0,
-        "isolation": 0.0,
-        "invasion": 87,
-        "protection": 35.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#534:A-5",
-        "area": "#534",
-        "name": "A-5",
-        "type": "漁場",
-        "owner": "4tH",
-        "affiliation": "self",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#534",
-          "alliance": "4TH",
-          "alliance_name": "QUINTET",
-          "power": 16517834871,
-          "side": "Ally",
-          "overall_rank": 45,
-          "server_rank": 6,
-          "power_label": "16.52B"
-        }
-      }
-    },
-    {
-      "node": "A-9",
-      "node_id": "#534:A-9",
-      "score": 87.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護切れ",
-        "自連盟保有",
-        "自連盟隣接"
-      ],
-      "scores": {
-        "alliance": 59.0,
-        "coalition": 36.0,
-        "choke": 6.93,
-        "isolation": 0.0,
-        "invasion": 87,
-        "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-9",
@@ -4467,7 +3734,7 @@
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-1-18",
@@ -4490,8 +3757,51 @@
       }
     },
     {
-      "node": "中央-1-6",
-      "node_id": "中央:中央-1-6",
+      "node": "中央-13-19",
+      "node_id": "中央:中央-13-19",
+      "score": 87.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 26.0,
+        "coalition": 60.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "中央:中央-13-19",
+        "area": "中央",
+        "name": "中央-13-19",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
+        }
+      }
+    },
+    {
+      "node": "中央-14-20",
+      "node_id": "中央:中央-14-20",
       "score": 87.0,
       "classification": "risk",
       "label": null,
@@ -4510,57 +3820,12 @@
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
-        "id": "中央:中央-1-6",
+        "id": "中央:中央-14-20",
         "area": "中央",
-        "name": "中央-1-6",
-        "type": "漁場",
-        "owner": "VEX",
-        "affiliation": "ally",
-        "importance": 3.0,
-        "alliance_power": {
-          "server": "#509",
-          "alliance": "VEX",
-          "alliance_name": "Vanguard Elite X",
-          "power": 21769694627,
-          "side": "Ally",
-          "overall_rank": 30,
-          "server_rank": 6,
-          "power_label": "21.77B"
-        }
-      }
-    }
-  ],
-  "coalition_lines": [
-    {
-      "node": "E-15",
-      "node_id": "#480:E-15",
-      "score": 100.0,
-      "classification": "risk",
-      "label": null,
-      "reasons": [
-        "敵隣接",
-        "高戦力敵連盟隣接",
-        "敵到達距離1",
-        "保護終了6h以内",
-        "戦闘可能時間",
-        "土曜戦闘日"
-      ],
-      "scores": {
-        "alliance": 23.0,
-        "coalition": 37.0,
-        "choke": 6.48,
-        "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 25.0,
-        "time": 45.0
-      },
-      "target": {
-        "id": "#480:E-15",
-        "area": "#480",
-        "name": "E-15",
+        "name": "中央-14-20",
         "type": "漁場",
         "owner": "SsQ",
         "affiliation": "ally",
@@ -4576,11 +3841,13 @@
           "power_label": "25.19B"
         }
       }
-    },
+    }
+  ],
+  "protection_watchlist": [
     {
-      "node": "E-7",
-      "node_id": "#480:E-7",
-      "score": 100.0,
+      "node": "A-17",
+      "node_id": "#509:A-17",
+      "score": 97.0,
       "classification": "risk",
       "label": null,
       "reasons": [
@@ -4588,103 +3855,103 @@
         "高戦力敵連盟隣接",
         "敵到達距離1",
         "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "自連盟保有",
+        "自連盟隣接"
       ],
       "scores": {
-        "alliance": 23.0,
-        "coalition": 37.0,
-        "choke": 10.92,
+        "alliance": 52.0,
+        "coalition": 47.0,
+        "choke": 20.78,
         "isolation": 0.0,
-        "invasion": 100.0,
+        "invasion": 97,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
-        "id": "#480:E-7",
-        "area": "#480",
-        "name": "E-7",
+        "id": "#509:A-17",
+        "area": "#509",
+        "name": "A-17",
         "type": "漁場",
-        "owner": "BAJ",
-        "affiliation": "ally",
+        "owner": "KTVS",
+        "affiliation": "self",
         "importance": 3.0,
         "alliance_power": {
-          "server": "#440",
-          "alliance": "BAJ",
-          "alliance_name": "Blood and Judgement",
-          "power": 30092173317,
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
           "side": "Ally",
-          "overall_rank": 3,
-          "server_rank": 1,
-          "power_label": "30.09B"
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
         }
       }
     },
     {
-      "node": "F-7",
-      "node_id": "#480:F-7",
-      "score": 100.0,
+      "node": "中央-1-5",
+      "node_id": "中央:中央-1-5",
+      "score": 97.0,
       "classification": "risk",
       "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
         "敵到達距離1",
-        "戦闘可能時間",
-        "土曜戦闘日",
-        "味方グループ保有"
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
       ],
       "scores": {
-        "alliance": 25.0,
-        "coalition": 39.0,
-        "choke": 11.04,
+        "alliance": 23.0,
+        "coalition": 57.0,
+        "choke": 23.0,
         "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 0.0,
-        "time": 45.0
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 0.0
       },
       "target": {
-        "id": "#480:F-7",
-        "area": "#480",
-        "name": "F-7",
+        "id": "中央:中央-1-5",
+        "area": "中央",
+        "name": "中央-1-5",
         "type": "漁場",
-        "owner": "GoDs",
+        "owner": "VEX",
         "affiliation": "ally",
         "importance": 3.0,
         "alliance_power": {
-          "server": "#440",
-          "alliance": "GoDs",
-          "alliance_name": "Gods of Sparta",
-          "power": 22679918576,
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
           "side": "Ally",
-          "overall_rank": 24,
-          "server_rank": 3,
-          "power_label": "22.68B"
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
         }
       }
     },
     {
       "node": "中央-2-8",
       "node_id": "中央:中央-2-8",
-      "score": 100.0,
+      "score": 97.0,
       "classification": "risk",
       "label": null,
       "reasons": [
         "敵隣接",
         "高戦力敵連盟隣接",
         "敵到達距離1",
-        "保護終了6h以内",
+        "保護切れ",
         "味方グループ保有",
         "中央接続"
       ],
       "scores": {
-        "alliance": 25.0,
-        "coalition": 59.0,
+        "alliance": 27.0,
+        "coalition": 61.0,
         "choke": 23.0,
         "isolation": 0.0,
-        "invasion": 100.0,
-        "protection": 25.0,
-        "time": 45.0
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-2-8",
@@ -4707,9 +3974,9 @@
       }
     },
     {
-      "node": "中央-7-19",
-      "node_id": "中央:中央-7-19",
-      "score": 100.0,
+      "node": "D-15",
+      "node_id": "#480:D-15",
+      "score": 89.0,
       "classification": "risk",
       "label": null,
       "reasons": [
@@ -4718,21 +3985,21 @@
         "敵到達距離1",
         "保護切れ",
         "味方グループ保有",
-        "中央接続"
+        "グループ防衛ライン"
       ],
       "scores": {
-        "alliance": 25.0,
-        "coalition": 59.0,
-        "choke": 23.0,
+        "alliance": 20.0,
+        "coalition": 34.0,
+        "choke": 6.18,
         "isolation": 0.0,
-        "invasion": 100.0,
+        "invasion": 89,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
-        "id": "中央:中央-7-19",
-        "area": "中央",
-        "name": "中央-7-19",
+        "id": "#480:D-15",
+        "area": "#480",
+        "name": "D-15",
         "type": "漁場",
         "owner": "SsQ",
         "affiliation": "ally",
@@ -4750,6 +4017,309 @@
       }
     },
     {
+      "node": "E-7",
+      "node_id": "#480:E-7",
+      "score": 89.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "グループ防衛ライン"
+      ],
+      "scores": {
+        "alliance": 18.0,
+        "coalition": 27.0,
+        "choke": 9.6,
+        "isolation": 0.0,
+        "invasion": 89,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#480:E-7",
+        "area": "#480",
+        "name": "E-7",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
+        }
+      }
+    },
+    {
+      "node": "A-5",
+      "node_id": "#534:A-5",
+      "score": 87.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "自連盟保有",
+        "自連盟隣接"
+      ],
+      "scores": {
+        "alliance": 59.0,
+        "coalition": 36.0,
+        "choke": 3.0,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#534:A-5",
+        "area": "#534",
+        "name": "A-5",
+        "type": "漁場",
+        "owner": "4tH",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "4TH",
+          "alliance_name": "QUINTET",
+          "power": 16517834871,
+          "side": "Ally",
+          "overall_rank": 45,
+          "server_rank": 6,
+          "power_label": "16.52B"
+        }
+      }
+    },
+    {
+      "node": "A-9",
+      "node_id": "#534:A-9",
+      "score": 87.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "自連盟保有",
+        "自連盟隣接"
+      ],
+      "scores": {
+        "alliance": 59.0,
+        "coalition": 36.0,
+        "choke": 6.81,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#534:A-9",
+        "area": "#534",
+        "name": "A-9",
+        "type": "漁場",
+        "owner": "SHA0",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "SHA0",
+          "alliance_name": "社畜楽園",
+          "power": 3433631937,
+          "side": "Ally",
+          "overall_rank": 82,
+          "server_rank": 17,
+          "power_label": "3.43B"
+        }
+      }
+    },
+    {
+      "node": "中央-1-18",
+      "node_id": "中央:中央-1-18",
+      "score": 87.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 49.0,
+        "coalition": 56.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "中央:中央-1-18",
+        "area": "中央",
+        "name": "中央-1-18",
+        "type": "漁場",
+        "owner": "JDX",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "JDX",
+          "alliance_name": "Revo",
+          "power": 26388296429,
+          "side": "Ally",
+          "overall_rank": 13,
+          "server_rank": 1,
+          "power_label": "26.39B"
+        }
+      }
+    },
+    {
+      "node": "中央-13-19",
+      "node_id": "中央:中央-13-19",
+      "score": 87.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 26.0,
+        "coalition": 60.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "中央:中央-13-19",
+        "area": "中央",
+        "name": "中央-13-19",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
+        }
+      }
+    },
+    {
+      "node": "中央-14-20",
+      "node_id": "中央:中央-14-20",
+      "score": 87.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 22.0,
+        "coalition": 56.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "中央:中央-14-20",
+        "area": "中央",
+        "name": "中央-14-20",
+        "type": "漁場",
+        "owner": "SsQ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "SsQ",
+          "alliance_name": "Gummibärenbande V",
+          "power": 25186952492,
+          "side": "Ally",
+          "overall_rank": 14,
+          "server_rank": 3,
+          "power_label": "25.19B"
+        }
+      }
+    }
+  ],
+  "coalition_lines": [
+    {
+      "node": "A-17",
+      "node_id": "#509:A-17",
+      "score": 97.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "自連盟保有",
+        "自連盟隣接"
+      ],
+      "scores": {
+        "alliance": 52.0,
+        "coalition": 47.0,
+        "choke": 20.78,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#509:A-17",
+        "area": "#509",
+        "name": "A-17",
+        "type": "漁場",
+        "owner": "KTVS",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "KTVS",
+          "alliance_name": "TAMA Cream Cat",
+          "power": 24028556233,
+          "side": "Ally",
+          "overall_rank": 17,
+          "server_rank": 2,
+          "power_label": "24.03B"
+        }
+      }
+    },
+    {
       "node": "K-1",
       "node_id": "#511:K-1",
       "score": 97.0,
@@ -4759,18 +4329,18 @@
         "敵隣接",
         "高戦力敵連盟隣接",
         "敵到達距離1",
-        "戦闘可能時間",
-        "土曜戦闘日",
-        "味方グループ保有"
+        "味方グループ保有",
+        "中央隣接",
+        "グループ防衛ライン"
       ],
       "scores": {
         "alliance": 21.0,
         "coalition": 38.0,
-        "choke": 26.15,
+        "choke": 25.4,
         "isolation": 0.0,
         "invasion": 97,
         "protection": 0.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#511:K-1",
@@ -4813,7 +4383,7 @@
         "isolation": 0.0,
         "invasion": 97,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "中央:中央-1-5",
@@ -4836,9 +4406,9 @@
       }
     },
     {
-      "node": "E-17",
-      "node_id": "#509:E-17",
-      "score": 87.0,
+      "node": "中央-2-8",
+      "node_id": "中央:中央-2-8",
+      "score": 97.0,
       "classification": "risk",
       "label": null,
       "reasons": [
@@ -4846,22 +4416,108 @@
         "高戦力敵連盟隣接",
         "敵到達距離1",
         "保護切れ",
-        "戦闘可能時間",
-        "土曜戦闘日"
+        "味方グループ保有",
+        "中央接続"
       ],
       "scores": {
-        "alliance": 24.0,
-        "coalition": 38.0,
-        "choke": 9.03,
+        "alliance": 27.0,
+        "coalition": 61.0,
+        "choke": 23.0,
         "isolation": 0.0,
-        "invasion": 87,
+        "invasion": 97,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
-        "id": "#509:E-17",
-        "area": "#509",
-        "name": "E-17",
+        "id": "中央:中央-2-8",
+        "area": "中央",
+        "name": "中央-2-8",
+        "type": "漁場",
+        "owner": "VEX",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#509",
+          "alliance": "VEX",
+          "alliance_name": "Vanguard Elite X",
+          "power": 21769694627,
+          "side": "Ally",
+          "overall_rank": 30,
+          "server_rank": 6,
+          "power_label": "21.77B"
+        }
+      }
+    },
+    {
+      "node": "中央-7-19",
+      "node_id": "中央:中央-7-19",
+      "score": 97.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "味方グループ保有",
+        "中央接続",
+        "中央隣接"
+      ],
+      "scores": {
+        "alliance": 25.0,
+        "coalition": 59.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 97,
+        "protection": 0.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "中央:中央-7-19",
+        "area": "中央",
+        "name": "中央-7-19",
+        "type": "漁場",
+        "owner": "GcC",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "GcC",
+          "alliance_name": "GcC",
+          "power": 29973947565,
+          "side": "Ally",
+          "overall_rank": 4,
+          "server_rank": 2,
+          "power_label": "29.97B"
+        }
+      }
+    },
+    {
+      "node": "D-15",
+      "node_id": "#480:D-15",
+      "score": 89.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "グループ防衛ライン"
+      ],
+      "scores": {
+        "alliance": 20.0,
+        "coalition": 34.0,
+        "choke": 6.18,
+        "isolation": 0.0,
+        "invasion": 89,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#480:D-15",
+        "area": "#480",
+        "name": "D-15",
         "type": "漁場",
         "owner": "SsQ",
         "affiliation": "ally",
@@ -4875,6 +4531,49 @@
           "overall_rank": 14,
           "server_rank": 3,
           "power_label": "25.19B"
+        }
+      }
+    },
+    {
+      "node": "E-7",
+      "node_id": "#480:E-7",
+      "score": 89.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "グループ防衛ライン"
+      ],
+      "scores": {
+        "alliance": 18.0,
+        "coalition": 27.0,
+        "choke": 9.6,
+        "isolation": 0.0,
+        "invasion": 89,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "#480:E-7",
+        "area": "#480",
+        "name": "E-7",
+        "type": "漁場",
+        "owner": "BAJ",
+        "affiliation": "ally",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#440",
+          "alliance": "BAJ",
+          "alliance_name": "Blood and Judgement",
+          "power": 30092173317,
+          "side": "Ally",
+          "overall_rank": 3,
+          "server_rank": 1,
+          "power_label": "30.09B"
         }
       }
     },
@@ -4899,7 +4598,7 @@
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-5",
@@ -4938,11 +4637,11 @@
       "scores": {
         "alliance": 59.0,
         "coalition": 36.0,
-        "choke": 6.93,
+        "choke": 6.81,
         "isolation": 0.0,
         "invasion": 87,
         "protection": 35.0,
-        "time": 45.0
+        "time": 0.0
       },
       "target": {
         "id": "#534:A-9",
@@ -4961,6 +4660,49 @@
           "overall_rank": 82,
           "server_rank": 17,
           "power_label": "3.43B"
+        }
+      }
+    },
+    {
+      "node": "中央-1-18",
+      "node_id": "中央:中央-1-18",
+      "score": 87.0,
+      "classification": "risk",
+      "label": null,
+      "reasons": [
+        "敵隣接",
+        "高戦力敵連盟隣接",
+        "敵到達距離1",
+        "保護切れ",
+        "味方グループ保有",
+        "中央接続"
+      ],
+      "scores": {
+        "alliance": 49.0,
+        "coalition": 56.0,
+        "choke": 23.0,
+        "isolation": 0.0,
+        "invasion": 87,
+        "protection": 35.0,
+        "time": 0.0
+      },
+      "target": {
+        "id": "中央:中央-1-18",
+        "area": "中央",
+        "name": "中央-1-18",
+        "type": "漁場",
+        "owner": "JDX",
+        "affiliation": "self",
+        "importance": 3.0,
+        "alliance_power": {
+          "server": "#534",
+          "alliance": "JDX",
+          "alliance_name": "Revo",
+          "power": 26388296429,
+          "side": "Ally",
+          "overall_rank": 13,
+          "server_rank": 1,
+          "power_label": "26.39B"
         }
       }
     }

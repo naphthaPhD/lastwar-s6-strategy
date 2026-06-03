@@ -1,5 +1,40 @@
 # Handoff summary
 
+## 2026-06-04 Full local project output push
+
+## Context
+
+Prepared the current local S6 project outputs for a broad push to `naphthaPhD/lastwar-s6-strategy`. This includes regenerated `sample_output` artifacts, sheet-migration CSV/JSON outputs, and new invasion-strategy helper scripts. Runtime caches and local machine-specific config files are excluded.
+
+## Updated files
+
+- `.gitignore`
+- `analysis/latest_handoff.md`
+- `sample_output/`
+- `sample_output/sheet_migration/`
+- `tools/invasion_strategy_os/`
+- `s6powerrank_8server_power_2026-05-10_en.xlsx`
+
+## Key findings
+
+1. `sample_output/state.json`, `sample_output/briefing_input.json`, and `sample_output/map.html` have regenerated strategy-map output.
+2. `sample_output/sheet_migration/` now includes current node, ownership, pact, risk, commander, and review CSV/JSON outputs.
+3. New MVP helper scripts under `tools/invasion_strategy_os/` support node-status building, sheet migration, unmatched-owner reporting, and alliance-directory suggestions from power data.
+4. `.gitignore` now re-excludes `tools/invasion_strategy_os/__pycache__/`, `tools/invasion_strategy_os/*.pyc`, and timestamped chat-event preprocessor local config files.
+5. Local machine-specific run config and Python bytecode caches are intentionally not part of the push.
+
+## Current risks
+
+1. `sample_output/` is generated output and should be reviewed before being treated as canonical strategy data.
+2. Root-level local run notes with absolute local paths remain untracked and are not part of the public push.
+3. The Excel power-ranking workbook is included as a project artifact, but Markdown/CSV/JSON should remain the preferred review format.
+
+## Recommended next actions
+
+1. After push, verify `HEAD`, `origin/main`, and GitHub `main` match.
+2. Use the committed CSV/JSON outputs for ChatGPT review, but treat generated candidates as review queues rather than final orders.
+3. Keep runtime caches and local path-bearing config files ignored.
+
 ## 2026-06-04 Fishery map border restoration
 
 ## Context

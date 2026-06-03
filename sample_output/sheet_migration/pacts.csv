@@ -1,0 +1,14 @@
+server,alliance,affiliation,pact_status,valid_from_jst,valid_until_jst,source,last_confirmed_at,note
+534,,ally,attack_allowed,,,manual,,server ally
+534,JDX,ally,attack_allowed,,,manual,,
+509,,ally,attack_allowed,,,manual,,server ally
+509,SsQ,ally,attack_allowed,,,manual,,
+509,Sq,ally,attack_allowed,,,manual,,alias from phase3 example
+440,,ally,attack_allowed,,,manual,,server ally
+440,GoDs,ally,attack_allowed,,,manual,,
+440,God,ally,attack_allowed,,,manual,,alias from phase3 example
+511,,ally,attack_allowed,,,manual,,server ally
+503,,enemy,attack_allowed,,,manual,,enemy server
+476,,enemy,attack_allowed,,,manual,,enemy server
+480,,enemy,attack_allowed,,,manual,,enemy server
+523,,enemy,attack_allowed,,,manual,,enemy server
