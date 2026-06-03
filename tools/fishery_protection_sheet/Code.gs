@@ -622,6 +622,7 @@ function copyInvasionMapWithProtectionColors() {
   targetSheet.clear();
   copySourceMapRange_(sourceRange, targetSheet.getRange(1, 1));
   copyMapDimensions_(sourceSheet, targetSheet, rowCount, columnCount);
+  copyMapMerges_(sourceRange, targetSheet);
   targetSheet.setFrozenRows(5);
   targetSheet.setHiddenGridlines(true);
 
@@ -773,6 +774,19 @@ function copyMapDimensions_(sourceSheet, targetSheet, rowCount, columnCount) {
   for (let row = 1; row <= rowCount; row++) {
     targetSheet.setRowHeight(row, sourceSheet.getRowHeight(row));
   }
+}
+
+function copyMapMerges_(sourceRange, targetSheet) {
+  const sourceStartRow = sourceRange.getRow();
+  const sourceStartColumn = sourceRange.getColumn();
+  sourceRange.getMergedRanges().forEach((mergedRange) => {
+    const rowOffset = mergedRange.getRow() - sourceStartRow;
+    const columnOffset = mergedRange.getColumn() - sourceStartColumn;
+    if (rowOffset < 0 || columnOffset < 0) return;
+    targetSheet
+      .getRange(rowOffset + 1, columnOffset + 1, mergedRange.getNumRows(), mergedRange.getNumColumns())
+      .merge();
+  });
 }
 
 function copySourceMapRange_(sourceRange, targetRange) {

@@ -1634,3 +1634,28 @@ Extended the local bound-script source for the working fishery spreadsheet so op
 
 - The production `#534` spreadsheet is used only as a source for this map copy workflow.
 - The live bound Apps Script project still needs to be updated from `tools/fishery_protection_sheet/Code.gs` before the new menu items can run in Google Sheets.
+
+## 2026-06-03 fishery color map layout refinement
+
+## Context
+
+The working tab `侵攻予測_保護切れ色分け` had the copied map values and protection-slot colors, but its layout did not yet look close enough to the production `#534` map. The live working sheet was adjusted with larger area merges, centered text, compact map dimensions, and map borders. The local Apps Script source was also updated so future menu-driven copies restore source merge ranges from `侵攻予測_20260527_取得入力型`.
+
+## Updated files
+
+- `tools/fishery_protection_sheet/Code.gs`
+- `tools/fishery_protection_sheet/README.md`
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Working Google Sheets tab: `侵攻予測_保護切れ色分け`
+
+## Key findings
+
+1. Live layout was refined by merging the top title/instruction rows, `#534/#509/#476` area headers, centering map text, tightening column widths, and adding map block borders.
+2. Added `copyMapMerges_()` so `copyInvasionMapWithProtectionColors()` now recreates merged ranges from the production source map when run from Apps Script.
+
+## Notes
+
+- The live adjustment is a closer layout pass, not a full source-format clone. Full source merge restoration depends on running the updated bound Apps Script.
