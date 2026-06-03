@@ -1,5 +1,34 @@
 # Handoff summary
 
+## 2026-06-03 Fishery management-table values reference
+
+## Context
+
+The user asked whether information only could be copied from the source `管理表たたき`. Added a safe reference path that does not overwrite the working `漁場一覧` or write to the production `#534` spreadsheet.
+
+## Updated files
+
+- `tools/fishery_protection_sheet/Code.gs`
+- `tools/fishery_protection_sheet/README.md`
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Working Google Sheet tab `管理表たたき参照`: created and moved next to the input-master tabs.
+- Working Google Sheet tab `00_目次`: added `管理表たたき参照` under `入力マスタ`.
+
+## Key findings
+
+1. Source spreadsheet is `＃534` (`12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g`), source tab `管理表たたき`.
+2. `管理表たたき参照` currently displays source information through `IMPORTRANGE("12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g","管理表たたき!A:T")`, which brings values without source formatting.
+3. `Code.gs` now includes `copyManagementTableValuesOnly()`, exposed via menu `漁場保護` -> `管理表たたき値コピー`. This reads the source tab and writes values only into `管理表たたき参照`, without formulas, formatting, validation, or any write to the source spreadsheet.
+4. The working `漁場一覧` was not overwritten. Promotion from `管理表たたき参照` into the operational fishery list remains a separate, deliberate step.
+
+## Recommended next actions
+
+1. If a fixed snapshot is needed, paste the latest `Code.gs` into Apps Script and run `漁場保護` -> `管理表たたき値コピー`.
+2. Decide whether to promote only `種別=漁場` rows from `管理表たたき参照` into `漁場一覧`, and whether to limit promotion to specific areas such as `#534`, `#509`, and `#476`.
+
 ## 2026-06-03 Fishery line validation fix
 
 ## Context

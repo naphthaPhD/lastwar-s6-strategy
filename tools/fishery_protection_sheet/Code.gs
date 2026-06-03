@@ -8,6 +8,7 @@ const SHEET_NAMES = {
   OPERATIONAL_CALENDAR: '開放カレンダー4枠',
   LINE_DEFINITIONS: 'ライン定義',
   ROUTE_CHECK: '侵攻ルート確認',
+  MANAGEMENT_REFERENCE: '管理表たたき参照',
   ALLIANCE_JUDGMENT: '連盟判定',
   PACTS: '盟約管理',
   CAPACITY: '連盟キャパ管理',
@@ -68,10 +69,11 @@ const INDEX_ROWS = [
   ['日常運用', 5, '連盟安全期間', '連盟ごとの安全期間と放棄後の最短取得可能時刻を確認', '必要時', '放棄判断用'],
   ['日常運用', 6, 'シミュレーター', '取得・保護パン・放棄時の次回保護切れを試算', '必要時', '個別ケース確認'],
   ['入力マスタ', 1, '漁場一覧', '元データ。漁場ごとの所有連盟、座標、保護切れを保持', '更新時', '直接編集は慎重に'],
-  ['入力マスタ', 2, '連盟判定', '敵/味方/同サーバ/他サーバ味方などの判定マスタ', '更新時', 'xJR/476C/476Bは敵登録済み'],
-  ['入力マスタ', 3, '盟約管理', '盟約相手と有効状態を管理。盟約中は保護パン不可', '更新時', '外交変更時に更新'],
-  ['入力マスタ', 4, '連盟キャパ管理', '1日取得上限、所有都市、都市由来漁場上限、現所有数を管理', '更新時', '取得役の余力判断'],
-  ['入力マスタ', 5, 'ライン定義', 'エリア別の侵攻方向・ライン軸を管理', '変更時', '#509/#476追加時に使う'],
+  ['入力マスタ', 2, '管理表たたき参照', '元の #534 管理表たたきから値だけをコピーする参照タブ', '更新時', '元シートは触らない'],
+  ['入力マスタ', 3, '連盟判定', '敵/味方/同サーバ/他サーバ味方などの判定マスタ', '更新時', 'xJR/476C/476Bは敵登録済み'],
+  ['入力マスタ', 4, '盟約管理', '盟約相手と有効状態を管理。盟約中は保護パン不可', '更新時', '外交変更時に更新'],
+  ['入力マスタ', 5, '連盟キャパ管理', '1日取得上限、所有都市、都市由来漁場上限、現所有数を管理', '更新時', '取得役の余力判断'],
+  ['入力マスタ', 6, 'ライン定義', 'エリア別の侵攻方向・ライン軸を管理', '変更時', '#509/#476追加時に使う'],
   ['取込確認', 1, 'ABCスクショ取込確認', '#534 ABCスクショのファイル順・目視値・番号正規化確認', '取込時', 'A-1,A-3...順'],
   ['取込確認', 2, '縦スクショ再分析', '縦スクショの指定順/OCR/目視/不一致確認', '取込時', '#503/#534混入を要判断'],
   ['取込確認', 3, '縦スクショ取込確認', '縦スクショ初期取込データと並替ヘルパー', '必要時', '監査用'],
@@ -105,6 +107,9 @@ const CALENDAR_HEADERS = [
   'ワンパン候補',
   '保護パン後の状態',
 ];
+
+const SOURCE_MANAGEMENT_SPREADSHEET_ID = '12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g';
+const SOURCE_MANAGEMENT_SHEET_NAME = '管理表たたき';
 
 const ROUTE_CHECK_HEADERS = [
   'エリア',
@@ -268,6 +273,7 @@ function onOpen() {
     .addItem('初期セットアップ', 'setupFisheryProtectionWorkbook')
     .addItem('一覧を再計算', 'refreshFisheryProtectionSystem')
     .addItem('選択ビュー更新', 'refreshSelectedFisheryView')
+    .addItem('管理表たたき値コピー', 'copyManagementTableValuesOnly')
     .addItem('シミュレーター計算', 'runFisherySimulator')
     .addToUi();
 }
@@ -289,6 +295,7 @@ function setupFisheryProtectionWorkbook() {
   const calendarSheet = ensureSheet_(ss, SHEET_NAMES.CALENDAR);
   const lineDefinitionSheet = ensureSheet_(ss, SHEET_NAMES.LINE_DEFINITIONS);
   const routeCheckSheet = ensureSheet_(ss, SHEET_NAMES.ROUTE_CHECK);
+  const managementReferenceSheet = ensureSheet_(ss, SHEET_NAMES.MANAGEMENT_REFERENCE);
   const allianceJudgmentSheet = ensureSheet_(ss, SHEET_NAMES.ALLIANCE_JUDGMENT);
   const pactSheet = ensureSheet_(ss, SHEET_NAMES.PACTS);
   const capacitySheet = ensureSheet_(ss, SHEET_NAMES.CAPACITY);
@@ -301,6 +308,7 @@ function setupFisheryProtectionWorkbook() {
   setupCalendarSheet_(calendarSheet);
   setupLineDefinitionSheet_(lineDefinitionSheet);
   setupRouteCheckSheet_(routeCheckSheet);
+  setupManagementReferenceSheet_(managementReferenceSheet);
   setupAllianceJudgmentSheet_(allianceJudgmentSheet);
   setupPactSheet_(pactSheet);
   setupCapacitySheet_(capacitySheet);
@@ -472,6 +480,28 @@ function refreshSelectedFisheryView() {
   updateSelectedFisheryView_({ source: SpreadsheetApp.getActiveSpreadsheet(), range: SpreadsheetApp.getActiveRange() });
 }
 
+function copyManagementTableValuesOnly() {
+  const sourceSpreadsheet = SpreadsheetApp.openById(SOURCE_MANAGEMENT_SPREADSHEET_ID);
+  const sourceSheet = sourceSpreadsheet.getSheetByName(SOURCE_MANAGEMENT_SHEET_NAME);
+  if (!sourceSheet) throw new Error(`コピー元シートが見つかりません: ${SOURCE_MANAGEMENT_SHEET_NAME}`);
+
+  const values = sourceSheet.getDataRange().getValues();
+  if (values.length === 0) return;
+
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const targetSheet = ensureSheet_(ss, SHEET_NAMES.MANAGEMENT_REFERENCE);
+  const width = Math.max.apply(null, values.map((row) => row.length));
+  const normalizedValues = values.map((row) => normalizeRowLength_(row, width));
+
+  ensureGridSize_(targetSheet, normalizedValues.length, width);
+  targetSheet.clearContents();
+  targetSheet.getRange(1, 1, normalizedValues.length, width).setValues(normalizedValues);
+  targetSheet.setFrozenRows(1);
+  targetSheet.getRange(1, 1, 1, width).setFontWeight('bold').setBackground('#222222').setFontColor('#ffffff');
+  targetSheet.autoResizeColumns(1, Math.min(width, 20));
+  targetSheet.getRange('A1').setNote(`値のみコピー元: ${SOURCE_MANAGEMENT_SHEET_NAME} / ${SOURCE_MANAGEMENT_SPREADSHEET_ID}\n更新: ${Utilities.formatDate(new Date(), getTimeZone_(), 'yyyy/MM/dd HH:mm:ss')}`);
+}
+
 function setupIndexSheet_(sheet) {
   sheet.clear();
   sheet.getRange('A1:F1').setValues([['Last War S6 漁場保護管理 目次', '', '', '', '', '']]);
@@ -525,6 +555,19 @@ function setupRouteCheckSheet_(sheet) {
   sheet.getRange(1, 1, 1, ROUTE_CHECK_HEADERS.length).setValues([ROUTE_CHECK_HEADERS]);
   sheet.setFrozenRows(1);
   sheet.getRange(1, 1, 1, ROUTE_CHECK_HEADERS.length).setFontWeight('bold').setBackground('#a64d1f').setFontColor('#ffffff');
+}
+
+function setupManagementReferenceSheet_(sheet) {
+  const existing = sheet.getDataRange().getValues();
+  if (existing.length > 1 || existing[0].join('') !== '') return;
+  sheet.getRange('A1:D4').setValues([
+    ['管理表たたき参照', '', '', ''],
+    ['用途', '元の #534 / 管理表たたき から値だけをコピーする', '', ''],
+    ['更新方法', '漁場保護 -> 管理表たたき値コピー', '', ''],
+    ['注意', '元シートには書き込まない。値だけで、書式や入力規則はコピーしない。', '', ''],
+  ]);
+  sheet.getRange('A1:D1').setFontWeight('bold').setBackground('#222222').setFontColor('#ffffff');
+  sheet.autoResizeColumns(1, 4);
 }
 
 function setupAllianceJudgmentSheet_(sheet) {
@@ -1353,6 +1396,15 @@ function normalizeRowLength_(row, length) {
 
 function ensureSheet_(ss, name) {
   return ss.getSheetByName(name) || ss.insertSheet(name);
+}
+
+function ensureGridSize_(sheet, rowCount, columnCount) {
+  if (sheet.getMaxRows() < rowCount) {
+    sheet.insertRowsAfter(sheet.getMaxRows(), rowCount - sheet.getMaxRows());
+  }
+  if (sheet.getMaxColumns() < columnCount) {
+    sheet.insertColumnsAfter(sheet.getMaxColumns(), columnCount - sheet.getMaxColumns());
+  }
 }
 
 function ensureListHeaders_(sheet) {
