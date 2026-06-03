@@ -709,6 +709,7 @@ function refreshProtectionColorMapOverlay_(targetSheet) {
   sheet.getRange('CL1').setFormula(`=IMPORTRANGE("${SOURCE_MANAGEMENT_SPREADSHEET_ID}","${SOURCE_MAP_TEMPLATE_SHEET_NAME}!${INVASION_MAP_RANGE_A1}")`);
   sheet.getRange('CF1:CH1').setFontWeight('bold').setBackground('#5b2c6f').setFontColor('#ffffff');
   sheet.hideColumns(88, 89);
+  applyProtectionColorMapBorders_(sheet);
 
   const mapRange = sheet.getRange(INVASION_MAP_RANGE_A1);
   const formulasByState = {
@@ -727,6 +728,30 @@ function refreshProtectionColorMapOverlay_(targetSheet) {
       .build();
   });
   sheet.setConditionalFormatRules(rules);
+}
+
+function applyProtectionColorMapBorders_(sheet) {
+  const mapRange = sheet.getRange(INVASION_MAP_RANGE_A1);
+  mapRange.setBorder(
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    '#bfbfbf',
+    SpreadsheetApp.BorderStyle.DOTTED
+  );
+  mapRange.setBorder(
+    true,
+    true,
+    true,
+    true,
+    null,
+    null,
+    '#727272',
+    SpreadsheetApp.BorderStyle.SOLID
+  );
 }
 
 function setupProtectionColorMapSheet_(sheet) {

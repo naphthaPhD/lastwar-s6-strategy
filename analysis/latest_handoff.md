@@ -1,5 +1,30 @@
 # Handoff summary
 
+## 2026-06-04 Fishery map border restoration
+
+## Context
+
+The user reported that borders disappeared from `侵攻予測_保護切れ色分け`. Live inspection showed map colors and notes were present, but map cells no longer had `borders` in their user-entered format.
+
+## Updated files
+
+- `tools/fishery_protection_sheet/Code.gs`
+- `tools/fishery_protection_sheet/README.md`
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Working Google Sheet tab `侵攻予測_保護切れ色分け`: restored dotted internal borders and solid outer borders across `A1:CC88`.
+
+## Key findings
+
+1. Representative cells `#534:A-1` and `#534:A-5` now show restored border metadata while keeping their protection colors.
+2. Local `refreshProtectionColorMapOverlay_()` now reapplies map borders together with helper formulas and conditional formatting.
+
+## Notes
+
+- The bound Apps Script still needs to be updated from local `tools/fishery_protection_sheet/Code.gs` for future menu runs to preserve borders automatically.
+
 ## 2026-06-03 Fishery manual correction map refresh fix
 
 ## Context
