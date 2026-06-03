@@ -57,6 +57,8 @@ const LIST_HEADERS = [
 const MANUAL_CORRECTION_HEADERS = [
   '反映状態',
   '位置キー',
+  '操作',
+  '操作日時（放棄時刻）',
   '所有連盟',
   '手動保護切れ日時',
   'ワンパン必要',
@@ -269,6 +271,7 @@ const LINE_VALUES = [
 ];
 const ONE_PUNCH_VALUES = ['自動:候補', '自動:7時要判断', '自動:不要', '安全期間', '必要', '不要', '見送り', '要確認'];
 const OPERATION_VALUES = ['取得', '保護パン', '放棄'];
+const MANUAL_CORRECTION_OPERATION_VALUES = ['手動保護切れ', '放棄'];
 const MANUAL_CORRECTION_STATUS_VALUES = ['反映', '保留', '無効', '反映済み'];
 
 const RESPONSE_HOURS = [7, 15, 23];
@@ -384,6 +387,9 @@ function refreshFisheryProtectionSystem() {
     if (operationAt) {
       if (operation === '放棄') {
         nextProtectUntil = calculateAbandonProtectionEnd_(operationAt);
+        if (currentProtectUntil && isManualAbandonCorrection_(row[12])) {
+          nextProtectUntil = currentProtectUntil;
+        }
         row[18] = addHours_(operationAt, REACQUIRE_LOCK_HOURS);
       } else {
         nextProtectUntil = calculateNextProtectionEnd_(operationAt);
@@ -566,7 +572,7 @@ function applyManualFisheryCorrections() {
     const status = String(row[0] || '').trim();
     const key = String(row[1] || '').trim().toUpperCase();
     if (status !== '反映') {
-      resultValues.push([row[7] || '', row[8] || '']);
+      resultValues.push([row[9] || '', row[10] || '']);
       continue;
     }
     if (!key) {
@@ -578,26 +584,47 @@ function applyManualFisheryCorrections() {
       resultValues.push([`エラー:対象なし ${key}`, now]);
       continue;
     }
-    const manualProtectUntil = parseDate_(row[3]);
+    const manualOperation = String(row[2] || '').trim() || '手動保護切れ';
+    const manualOperationAt = parseDate_(row[3]);
+    let manualProtectUntil = parseDate_(row[5]);
+    if (manualOperation === '放棄') {
+      if (!manualOperationAt) {
+        resultValues.push(['エラー:放棄時刻が不正', now]);
+        continue;
+      }
+      if (!manualProtectUntil) {
+        manualProtectUntil = calculateAbandonProtectionEnd_(manualOperationAt);
+      }
+    }
     if (!manualProtectUntil) {
       resultValues.push(['エラー:手動保護切れ日時が不正', now]);
       continue;
     }
 
-    if (listIndex.owner >= 0 && row[2]) listSheet.getRange(targetRow, listIndex.owner + 1).setValue(row[2]);
+    if (listIndex.owner >= 0 && row[4]) listSheet.getRange(targetRow, listIndex.owner + 1).setValue(row[4]);
     if (listIndex.protectUntil >= 0) listSheet.getRange(targetRow, listIndex.protectUntil + 1).setValue(manualProtectUntil);
-    if (listIndex.onePunch >= 0 && row[4]) listSheet.getRange(targetRow, listIndex.onePunch + 1).setValue(row[4]);
-    if (listIndex.assignee >= 0 && row[5]) listSheet.getRange(targetRow, listIndex.assignee + 1).setValue(row[5]);
-    if (listIndex.note >= 0 && row[6]) appendCellText_(listSheet.getRange(targetRow, listIndex.note + 1), `手動修正: ${row[6]}`);
-    if (listIndex.operationAt >= 0) listSheet.getRange(targetRow, listIndex.operationAt + 1).clearContent();
-    if (listIndex.operation >= 0) listSheet.getRange(targetRow, listIndex.operation + 1).clearContent();
+    if (listIndex.onePunch >= 0 && row[6]) listSheet.getRange(targetRow, listIndex.onePunch + 1).setValue(row[6]);
+    if (listIndex.assignee >= 0 && row[7]) listSheet.getRange(targetRow, listIndex.assignee + 1).setValue(row[7]);
+    if (listIndex.note >= 0) {
+      const noteParts = [];
+      if (manualOperation === '放棄') noteParts.push(`放棄時刻=${formatDateTime_(manualOperationAt)}`);
+      if (row[8]) noteParts.push(row[8]);
+      if (noteParts.length > 0) appendCellText_(listSheet.getRange(targetRow, listIndex.note + 1), `手動修正: ${noteParts.join(' / ')}`);
+    }
+    if (manualOperation === '放棄') {
+      if (listIndex.operationAt >= 0) listSheet.getRange(targetRow, listIndex.operationAt + 1).setValue(manualOperationAt);
+      if (listIndex.operation >= 0) listSheet.getRange(targetRow, listIndex.operation + 1).setValue('放棄');
+    } else {
+      if (listIndex.operationAt >= 0) listSheet.getRange(targetRow, listIndex.operationAt + 1).clearContent();
+      if (listIndex.operation >= 0) listSheet.getRange(targetRow, listIndex.operation + 1).clearContent();
+    }
     manualSheet.getRange(rowIndex + 1, 1).setValue('反映済み');
     resultValues.push([`反映済み: ${key}`, now]);
   }
 
   if (resultValues.length > 0) {
-    manualSheet.getRange(2, 8, resultValues.length, 2).setValues(resultValues);
-    manualSheet.getRange(2, 9, resultValues.length, 1).setNumberFormat('yyyy/mm/dd hh:mm');
+    manualSheet.getRange(2, 10, resultValues.length, 2).setValues(resultValues);
+    manualSheet.getRange(2, 11, resultValues.length, 1).setNumberFormat('yyyy/mm/dd hh:mm');
   }
   refreshFisheryProtectionSystem();
 }
@@ -675,20 +702,22 @@ function setupManualCorrectionsSheet_(sheet) {
   sheet.clear();
   sheet.getRange(1, 1, 1, MANUAL_CORRECTION_HEADERS.length).setValues([MANUAL_CORRECTION_HEADERS]);
   sheet.getRange(2, 1, 3, MANUAL_CORRECTION_HEADERS.length).setValues([
-    ['保留', '#534:A-1', '', '2026/06/04 07:00', '要確認', '', '例: 放棄後保護を目視確認。反映する時だけA列を反映に変更', '', ''],
-    ['保留', '', '', '', '', '', '', '', ''],
-    ['保留', '', '', '', '', '', '', '', ''],
+    ['保留', '#534:A-1', '放棄', '2026/06/03 22:30', '', '', '要確認', '', '例: 放棄時刻だけ入れれば放棄後保護を自動計算。目視確認値がある場合は手動保護切れ日時を入れる', '', ''],
+    ['保留', '', '手動保護切れ', '', '', '', '', '', '', '', ''],
+    ['保留', '', '', '', '', '', '', '', '', '', ''],
   ]);
   sheet.setFrozenRows(1);
   sheet.getRange(1, 1, 1, MANUAL_CORRECTION_HEADERS.length).setFontWeight('bold').setBackground('#5b2c6f').setFontColor('#ffffff');
   sheet.getRange('A2:A').setDataValidation(listValidation_(MANUAL_CORRECTION_STATUS_VALUES));
+  sheet.getRange('C2:C').setDataValidation(listValidation_(MANUAL_CORRECTION_OPERATION_VALUES));
   sheet.getRange('D:D').setNumberFormat('yyyy/mm/dd hh:mm');
-  sheet.getRange('E2:E').setDataValidation(listValidation_(ONE_PUNCH_VALUES));
-  sheet.getRange('I:I').setNumberFormat('yyyy/mm/dd hh:mm');
+  sheet.getRange('F:F').setNumberFormat('yyyy/mm/dd hh:mm');
+  sheet.getRange('G2:G').setDataValidation(listValidation_(ONE_PUNCH_VALUES));
+  sheet.getRange('K:K').setNumberFormat('yyyy/mm/dd hh:mm');
   sheet.autoResizeColumns(1, MANUAL_CORRECTION_HEADERS.length);
   sheet.setColumnWidth(2, 130);
-  sheet.setColumnWidth(7, 260);
-  sheet.setColumnWidth(8, 180);
+  sheet.setColumnWidth(9, 360);
+  sheet.setColumnWidth(10, 180);
 }
 
 function buildListSheetRowByKey_(values, index) {
@@ -709,6 +738,15 @@ function buildListSheetRowByKey_(values, index) {
 function appendCellText_(range, text) {
   const current = String(range.getValue() || '').trim();
   range.setValue(current ? `${current}\n${text}` : text);
+}
+
+function isManualAbandonCorrection_(note) {
+  const text = String(note || '');
+  return text.indexOf('手動修正:') !== -1 && text.indexOf('放棄時刻=') !== -1;
+}
+
+function formatDateTime_(date) {
+  return date ? Utilities.formatDate(date, getTimeZone_(), 'yyyy/MM/dd HH:mm') : '';
 }
 
 function buildFisheryProtectionMap_(ss) {

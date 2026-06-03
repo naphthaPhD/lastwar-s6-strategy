@@ -1,5 +1,35 @@
 # Handoff summary
 
+## 2026-06-03 Fishery manual abandonment input
+
+## Context
+
+The user clarified that abandonment should use a manually entered abandonment time, because the protection period may already be over by the time they visually confirm the fishery. The manual correction workflow was adjusted so the entered time is the actual abandonment time, not the later confirmation time.
+
+## Updated files
+
+- `tools/fishery_protection_sheet/Code.gs`
+- `tools/fishery_protection_sheet/README.md`
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Working Google Sheet tab `手動修正`: added `操作` and `操作日時（放棄時刻）` columns, with `操作` validation values `手動保護切れ` and `放棄`.
+- Updated `手動修正` example note to instruct operators to enter the actual abandonment time even if the protection already ended by confirmation time.
+
+## Key findings
+
+1. `applyManualFisheryCorrections()` now treats `操作=放棄` specially.
+2. If `操作=放棄` and `手動保護切れ日時` is blank, the script calculates abandonment protection end from `操作日時（放棄時刻）`.
+3. If `手動保護切れ日時` is entered, that visually confirmed protection end remains the source of truth.
+4. For abandonment rows, the script writes `最終操作日時` and `最終操作=放棄` into `漁場一覧` instead of clearing the operation fields.
+5. Manual abandonment rows append a `手動修正: 放棄時刻=...` note so recalculation can identify the row as a manual abandonment correction and preserve the manual protection-end override.
+
+## Notes
+
+- The live `手動修正` tab structure was updated through Google Sheets MCP.
+- The bound Apps Script project still needs the latest local `tools/fishery_protection_sheet/Code.gs` pasted into Apps Script before `漁場保護` -> `手動修正を一覧へ反映` can use this new logic.
+
 ## 2026-06-03 Fishery management-table values reference
 
 ## Context
