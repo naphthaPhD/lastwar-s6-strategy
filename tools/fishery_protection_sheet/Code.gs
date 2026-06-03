@@ -13,6 +13,8 @@ const SHEET_NAMES = {
   PACTS: '盟約管理',
   CAPACITY: '連盟キャパ管理',
   SELECTED_VIEW: '選択漁場ビュー',
+  MANUAL_CORRECTIONS: '手動修正',
+  PROTECTION_COLOR_MAP: '侵攻予測_保護切れ色分け',
 };
 
 const LIST_HEADERS = [
@@ -52,6 +54,18 @@ const LIST_HEADERS = [
   '総合判定',
 ];
 
+const MANUAL_CORRECTION_HEADERS = [
+  '反映状態',
+  '位置キー',
+  '所有連盟',
+  '手動保護切れ日時',
+  'ワンパン必要',
+  'ワンパン役',
+  '備考',
+  '反映結果',
+  '反映時刻',
+];
+
 const INDEX_HEADERS = [
   '分類',
   '優先',
@@ -66,8 +80,10 @@ const INDEX_ROWS = [
   ['日常運用', 2, '開放カレンダー4枠', '水曜23時・木曜7時・土曜23時・日曜7時の4枠で対象漁場を一覧化', '毎回', '15時は最終枠にしない'],
   ['日常運用', 3, '侵攻ルート確認', '同じ侵攻ルート上の連続開放、敵保有、同時突破リスクを見る', '毎回', '危険/分散の判断'],
   ['日常運用', 4, '選択漁場ビュー', '漁場行、開放枠、侵攻ルートを選択した時に、対象漁場と保護パン候補連盟を見る', '毎回', '選択変更で自動更新'],
-  ['日常運用', 5, '連盟安全期間', '連盟ごとの安全期間と放棄後の最短取得可能時刻を確認', '必要時', '放棄判断用'],
-  ['日常運用', 6, 'シミュレーター', '取得・保護パン・放棄時の次回保護切れを試算', '必要時', '個別ケース確認'],
+  ['日常運用', 5, '侵攻予測_保護切れ色分け', '元の侵攻予測マップをコピーし、同じ保護切れ枠の漁場を同じ色で表示', '毎回', 'メニューから更新'],
+  ['日常運用', 6, '手動修正', '放棄後保護など目視確認した保護切れを入力し、漁場一覧へ反映', '必要時', '放棄確認後に使用'],
+  ['日常運用', 7, '連盟安全期間', '連盟ごとの安全期間と放棄後の最短取得可能時刻を確認', '必要時', '放棄判断用'],
+  ['日常運用', 8, 'シミュレーター', '取得・保護パン・放棄時の次回保護切れを試算', '必要時', '個別ケース確認'],
   ['入力マスタ', 1, '漁場一覧', '元データ。漁場ごとの所有連盟、座標、保護切れを保持', '更新時', '直接編集は慎重に'],
   ['入力マスタ', 2, '管理表たたき参照', '元の #534 管理表たたきから値だけをコピーする参照タブ', '更新時', '元シートは触らない'],
   ['入力マスタ', 3, '連盟判定', '敵/味方/同サーバ/他サーバ味方などの判定マスタ', '更新時', 'xJR/476C/476Bは敵登録済み'],
@@ -110,6 +126,9 @@ const CALENDAR_HEADERS = [
 
 const SOURCE_MANAGEMENT_SPREADSHEET_ID = '12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g';
 const SOURCE_MANAGEMENT_SHEET_NAME = '管理表たたき';
+const SOURCE_INVASION_MAP_SHEET_NAME = '侵攻予測_20260527_取得入力型';
+const SOURCE_MAP_TEMPLATE_SHEET_NAME = 'マップ表示テンプレ';
+const INVASION_MAP_RANGE_A1 = 'A1:CC88';
 
 const ROUTE_CHECK_HEADERS = [
   'エリア',
@@ -250,6 +269,7 @@ const LINE_VALUES = [
 ];
 const ONE_PUNCH_VALUES = ['自動:候補', '自動:7時要判断', '自動:不要', '安全期間', '必要', '不要', '見送り', '要確認'];
 const OPERATION_VALUES = ['取得', '保護パン', '放棄'];
+const MANUAL_CORRECTION_STATUS_VALUES = ['反映', '保留', '無効', '反映済み'];
 
 const RESPONSE_HOURS = [7, 15, 23];
 const SAFE_RESPONSE_HOUR = 15;
@@ -267,12 +287,21 @@ const OPERATIONAL_STATES = [
   { label: 'SUN_07', display: '日曜7時', day: 0, hour: 7, next: 'WED_23' },
 ];
 
+const PROTECTION_STATE_COLORS = {
+  WED_23: '#f9cb9c',
+  THU_07: '#9fc5e8',
+  SAT_23: '#b6d7a8',
+  SUN_07: '#d9d2e9',
+};
+
 function onOpen() {
   SpreadsheetApp.getUi()
     .createMenu('漁場保護')
     .addItem('初期セットアップ', 'setupFisheryProtectionWorkbook')
     .addItem('一覧を再計算', 'refreshFisheryProtectionSystem')
     .addItem('選択ビュー更新', 'refreshSelectedFisheryView')
+    .addItem('侵攻予測マップ保護色コピー', 'copyInvasionMapWithProtectionColors')
+    .addItem('手動修正を一覧へ反映', 'applyManualFisheryCorrections')
     .addItem('管理表たたき値コピー', 'copyManagementTableValuesOnly')
     .addItem('シミュレーター計算', 'runFisherySimulator')
     .addToUi();
@@ -300,6 +329,8 @@ function setupFisheryProtectionWorkbook() {
   const pactSheet = ensureSheet_(ss, SHEET_NAMES.PACTS);
   const capacitySheet = ensureSheet_(ss, SHEET_NAMES.CAPACITY);
   const selectedViewSheet = ensureSheet_(ss, SHEET_NAMES.SELECTED_VIEW);
+  const manualCorrectionsSheet = ensureSheet_(ss, SHEET_NAMES.MANUAL_CORRECTIONS);
+  const protectionColorMapSheet = ensureSheet_(ss, SHEET_NAMES.PROTECTION_COLOR_MAP);
 
   setupIndexSheet_(indexSheet);
   setupListSheet_(listSheet);
@@ -313,6 +344,8 @@ function setupFisheryProtectionWorkbook() {
   setupPactSheet_(pactSheet);
   setupCapacitySheet_(capacitySheet);
   setupSelectedViewSheet_(selectedViewSheet);
+  setupManualCorrectionsSheet_(manualCorrectionsSheet);
+  setupProtectionColorMapSheet_(protectionColorMapSheet);
   refreshFisheryProtectionSystem();
 }
 
@@ -500,6 +533,285 @@ function copyManagementTableValuesOnly() {
   targetSheet.getRange(1, 1, 1, width).setFontWeight('bold').setBackground('#222222').setFontColor('#ffffff');
   targetSheet.autoResizeColumns(1, Math.min(width, 20));
   targetSheet.getRange('A1').setNote(`値のみコピー元: ${SOURCE_MANAGEMENT_SHEET_NAME} / ${SOURCE_MANAGEMENT_SPREADSHEET_ID}\n更新: ${Utilities.formatDate(new Date(), getTimeZone_(), 'yyyy/MM/dd HH:mm:ss')}`);
+}
+
+function applyManualFisheryCorrections() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const manualSheet = ensureSheet_(ss, SHEET_NAMES.MANUAL_CORRECTIONS);
+  const listSheet = ensureSheet_(ss, SHEET_NAMES.LIST);
+  ensureListHeaders_(listSheet);
+
+  const manualValues = manualSheet.getDataRange().getValues();
+  if (manualValues.length < 2) return;
+
+  const listValues = listSheet.getDataRange().getValues();
+  const listHeaders = listValues.length > 0 ? listValues[0].map((value) => String(value || '').trim()) : [];
+  const listIndex = {
+    key: headerIndex_(listHeaders, ['位置キー']),
+    name: headerIndex_(listHeaders, ['漁場名']),
+    owner: headerIndex_(listHeaders, ['所有連盟']),
+    protectUntil: headerIndex_(listHeaders, ['現在保護切れ日時', '現在保護切れ']),
+    onePunch: headerIndex_(listHeaders, ['ワンパン必要', 'ワンパン要否']),
+    assignee: headerIndex_(listHeaders, ['ワンパン役', '担当候補']),
+    note: headerIndex_(listHeaders, ['備考']),
+    operationAt: headerIndex_(listHeaders, ['最終操作日時']),
+    operation: headerIndex_(listHeaders, ['最終操作']),
+  };
+  const rowByKey = buildListSheetRowByKey_(listValues, listIndex);
+  const now = new Date();
+  const resultValues = [];
+
+  for (let rowIndex = 1; rowIndex < manualValues.length; rowIndex++) {
+    const row = manualValues[rowIndex];
+    const status = String(row[0] || '').trim();
+    const key = String(row[1] || '').trim().toUpperCase();
+    if (status !== '反映') {
+      resultValues.push([row[7] || '', row[8] || '']);
+      continue;
+    }
+    if (!key) {
+      resultValues.push(['エラー:位置キー未入力', now]);
+      continue;
+    }
+    const targetRow = rowByKey[key];
+    if (!targetRow) {
+      resultValues.push([`エラー:対象なし ${key}`, now]);
+      continue;
+    }
+    const manualProtectUntil = parseDate_(row[3]);
+    if (!manualProtectUntil) {
+      resultValues.push(['エラー:手動保護切れ日時が不正', now]);
+      continue;
+    }
+
+    if (listIndex.owner >= 0 && row[2]) listSheet.getRange(targetRow, listIndex.owner + 1).setValue(row[2]);
+    if (listIndex.protectUntil >= 0) listSheet.getRange(targetRow, listIndex.protectUntil + 1).setValue(manualProtectUntil);
+    if (listIndex.onePunch >= 0 && row[4]) listSheet.getRange(targetRow, listIndex.onePunch + 1).setValue(row[4]);
+    if (listIndex.assignee >= 0 && row[5]) listSheet.getRange(targetRow, listIndex.assignee + 1).setValue(row[5]);
+    if (listIndex.note >= 0 && row[6]) appendCellText_(listSheet.getRange(targetRow, listIndex.note + 1), `手動修正: ${row[6]}`);
+    if (listIndex.operationAt >= 0) listSheet.getRange(targetRow, listIndex.operationAt + 1).clearContent();
+    if (listIndex.operation >= 0) listSheet.getRange(targetRow, listIndex.operation + 1).clearContent();
+    manualSheet.getRange(rowIndex + 1, 1).setValue('反映済み');
+    resultValues.push([`反映済み: ${key}`, now]);
+  }
+
+  if (resultValues.length > 0) {
+    manualSheet.getRange(2, 8, resultValues.length, 2).setValues(resultValues);
+    manualSheet.getRange(2, 9, resultValues.length, 1).setNumberFormat('yyyy/mm/dd hh:mm');
+  }
+  refreshFisheryProtectionSystem();
+}
+
+function copyInvasionMapWithProtectionColors() {
+  const sourceSpreadsheet = SpreadsheetApp.openById(SOURCE_MANAGEMENT_SPREADSHEET_ID);
+  const sourceSheet = sourceSpreadsheet.getSheetByName(SOURCE_INVASION_MAP_SHEET_NAME);
+  const templateSheet = sourceSpreadsheet.getSheetByName(SOURCE_MAP_TEMPLATE_SHEET_NAME);
+  if (!sourceSheet) throw new Error(`コピー元シートが見つかりません: ${SOURCE_INVASION_MAP_SHEET_NAME}`);
+  if (!templateSheet) throw new Error(`座標テンプレートが見つかりません: ${SOURCE_MAP_TEMPLATE_SHEET_NAME}`);
+
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const targetSheet = ensureSheet_(ss, SHEET_NAMES.PROTECTION_COLOR_MAP);
+  const sourceRange = sourceSheet.getRange(INVASION_MAP_RANGE_A1);
+  const templateValues = templateSheet.getRange(INVASION_MAP_RANGE_A1).getDisplayValues();
+  const fisheryMap = buildFisheryProtectionMap_(ss);
+  const rowCount = sourceRange.getNumRows();
+  const columnCount = sourceRange.getNumColumns();
+
+  ensureGridSize_(targetSheet, rowCount, columnCount + 8);
+  targetSheet.getRange(1, 1, targetSheet.getMaxRows(), targetSheet.getMaxColumns()).breakApart();
+  targetSheet.clear();
+  copySourceMapRange_(sourceRange, targetSheet.getRange(1, 1));
+  copyMapDimensions_(sourceSheet, targetSheet, rowCount, columnCount);
+  targetSheet.setFrozenRows(5);
+  targetSheet.setHiddenGridlines(true);
+
+  const counts = { WED_23: 0, THU_07: 0, SAT_23: 0, SUN_07: 0, unknown: 0 };
+  let coloredCount = 0;
+  for (let rowIndex = 0; rowIndex < templateValues.length; rowIndex++) {
+    const rowValues = templateValues[rowIndex];
+    for (let columnIndex = 0; columnIndex < rowValues.length; columnIndex++) {
+      const coordinate = normalizeFisheryCoordinate_(rowValues[columnIndex]);
+      if (!coordinate) continue;
+      const area = mapAreaForTemplateCell_(rowIndex + 1, columnIndex + 1);
+      if (!area) continue;
+      const key = `${area}:${coordinate}`.toUpperCase();
+      const fishery = fisheryMap[key];
+      if (!fishery) continue;
+      const stateLabel = fishery.stateLabel || deriveStateLabelFromProtectUntil_(fishery.protectUntil);
+      const color = PROTECTION_STATE_COLORS[stateLabel];
+      if (!color) {
+        counts.unknown++;
+        continue;
+      }
+      paintMapCell_(targetSheet, rowIndex + 1, columnIndex + 1, color, buildMapCellNote_(fishery, stateLabel));
+      counts[stateLabel]++;
+      coloredCount++;
+    }
+  }
+
+  writeProtectionColorMapLegend_(targetSheet, columnCount + 3, counts, coloredCount);
+  targetSheet.getRange('A1').setNote(
+    `コピー元: ${SOURCE_INVASION_MAP_SHEET_NAME} / ${SOURCE_MANAGEMENT_SPREADSHEET_ID}\n` +
+    `座標テンプレート: ${SOURCE_MAP_TEMPLATE_SHEET_NAME}\n` +
+    `色分け元: ${SHEET_NAMES.OPERATIONAL_LIST}\n` +
+    `更新: ${Utilities.formatDate(new Date(), getTimeZone_(), 'yyyy/MM/dd HH:mm:ss')}`
+  );
+}
+
+function setupProtectionColorMapSheet_(sheet) {
+  sheet.clear();
+  sheet.getRange('A1:D4').setValues([
+    ['侵攻予測_保護切れ色分け', '', '', ''],
+    ['メニュー', '漁場保護 -> 侵攻予測マップ保護色コピー', '', ''],
+    ['コピー元', `${SOURCE_MANAGEMENT_SPREADSHEET_ID} / ${SOURCE_INVASION_MAP_SHEET_NAME}`, '', ''],
+    ['色分け元', SHEET_NAMES.OPERATIONAL_LIST, '', ''],
+  ]);
+  sheet.getRange('A1:D1').setFontWeight('bold').setBackground('#0d3b66').setFontColor('#ffffff');
+  sheet.setFrozenRows(1);
+}
+
+function setupManualCorrectionsSheet_(sheet) {
+  sheet.clear();
+  sheet.getRange(1, 1, 1, MANUAL_CORRECTION_HEADERS.length).setValues([MANUAL_CORRECTION_HEADERS]);
+  sheet.getRange(2, 1, 3, MANUAL_CORRECTION_HEADERS.length).setValues([
+    ['保留', '#534:A-1', '', '2026/06/04 07:00', '要確認', '', '例: 放棄後保護を目視確認。反映する時だけA列を反映に変更', '', ''],
+    ['保留', '', '', '', '', '', '', '', ''],
+    ['保留', '', '', '', '', '', '', '', ''],
+  ]);
+  sheet.setFrozenRows(1);
+  sheet.getRange(1, 1, 1, MANUAL_CORRECTION_HEADERS.length).setFontWeight('bold').setBackground('#5b2c6f').setFontColor('#ffffff');
+  sheet.getRange('A2:A').setDataValidation(listValidation_(MANUAL_CORRECTION_STATUS_VALUES));
+  sheet.getRange('D:D').setNumberFormat('yyyy/mm/dd hh:mm');
+  sheet.getRange('E2:E').setDataValidation(listValidation_(ONE_PUNCH_VALUES));
+  sheet.getRange('I:I').setNumberFormat('yyyy/mm/dd hh:mm');
+  sheet.autoResizeColumns(1, MANUAL_CORRECTION_HEADERS.length);
+  sheet.setColumnWidth(2, 130);
+  sheet.setColumnWidth(7, 260);
+  sheet.setColumnWidth(8, 180);
+}
+
+function buildListSheetRowByKey_(values, index) {
+  const result = {};
+  for (let rowIndex = 1; rowIndex < values.length; rowIndex++) {
+    const row = values[rowIndex];
+    const key = index.key >= 0 ? String(row[index.key] || '').trim().toUpperCase() : '';
+    if (key) result[key] = rowIndex + 1;
+    const name = index.name >= 0 ? String(row[index.name] || '').trim().toUpperCase() : '';
+    if (name && key.indexOf(':') !== -1) {
+      const area = key.split(':')[0];
+      result[`${area}:${name}`] = rowIndex + 1;
+    }
+  }
+  return result;
+}
+
+function appendCellText_(range, text) {
+  const current = String(range.getValue() || '').trim();
+  range.setValue(current ? `${current}\n${text}` : text);
+}
+
+function buildFisheryProtectionMap_(ss) {
+  const sourceSheet = ss.getSheetByName(SHEET_NAMES.OPERATIONAL_LIST) || ss.getSheetByName(SHEET_NAMES.LIST);
+  if (!sourceSheet) return {};
+  const data = readFisheryRowsFromSheet_(sourceSheet);
+  const result = {};
+  data.rows.forEach((row) => {
+    const keys = [];
+    if (row.key) keys.push(row.key);
+    if (row.area && row.name) keys.push(`${row.area}:${row.name}`);
+    if (row.area && row.coord) keys.push(`${row.area}:${row.coord}`);
+    keys.forEach((key) => {
+      const normalizedKey = String(key || '').trim().toUpperCase();
+      if (normalizedKey) result[normalizedKey] = row;
+    });
+  });
+  return result;
+}
+
+function normalizeFisheryCoordinate_(value) {
+  const text = String(value || '').trim().toUpperCase();
+  return /^[A-K]-(?:1|3|5|7|9|11|13|15|17|19|21)$/.test(text) ? text : '';
+}
+
+function mapAreaForTemplateCell_(rowNumber, columnNumber) {
+  if (rowNumber >= 6 && rowNumber <= 46 && columnNumber <= 41) return '#534';
+  if (rowNumber >= 6 && rowNumber <= 46 && columnNumber >= 42) return '#509';
+  if (rowNumber >= 49 && columnNumber <= 41) return '#476';
+  return '';
+}
+
+function deriveStateLabelFromProtectUntil_(protectUntil) {
+  const state = getProtectionState_(parseDate_(protectUntil));
+  return state ? state.label : '';
+}
+
+function paintMapCell_(sheet, rowNumber, columnNumber, color, note) {
+  const cell = sheet.getRange(rowNumber, columnNumber);
+  const mergedRanges = cell.getMergedRanges();
+  const paintRange = mergedRanges.length > 0 ? mergedRanges[0] : cell;
+  paintRange.setBackground(color).setFontColor('#000000').setFontWeight('bold');
+  paintRange.getCell(1, 1).setNote(note);
+}
+
+function buildMapCellNote_(fishery, stateLabel) {
+  const state = findState_(stateLabel);
+  const lines = [
+    fishery.key || `${fishery.area}:${fishery.name}`,
+    `所有連盟: ${fishery.owner || ''}`,
+    `保護切れ: ${fishery.protectUntil || ''}`,
+    `開放枠: ${state ? state.display : fishery.stateDisplay || stateLabel || ''}`,
+  ];
+  if (fishery.punchAvailability) lines.push(`保護パン可否: ${fishery.punchAvailability}`);
+  if (fishery.constraintMemo) lines.push(`制約: ${fishery.constraintMemo}`);
+  return lines.join('\n');
+}
+
+function copyMapDimensions_(sourceSheet, targetSheet, rowCount, columnCount) {
+  for (let column = 1; column <= columnCount; column++) {
+    targetSheet.setColumnWidth(column, sourceSheet.getColumnWidth(column));
+  }
+  for (let row = 1; row <= rowCount; row++) {
+    targetSheet.setRowHeight(row, sourceSheet.getRowHeight(row));
+  }
+}
+
+function copySourceMapRange_(sourceRange, targetRange) {
+  try {
+    sourceRange.copyTo(targetRange);
+  } catch (error) {
+    const rowCount = sourceRange.getNumRows();
+    const columnCount = sourceRange.getNumColumns();
+    const fallbackRange = targetRange.offset(0, 0, rowCount, columnCount);
+    fallbackRange.setValues(sourceRange.getValues());
+    fallbackRange.setBackgrounds(sourceRange.getBackgrounds());
+    fallbackRange.setFontColors(sourceRange.getFontColors());
+    fallbackRange.setFontWeights(sourceRange.getFontWeights());
+    fallbackRange.setHorizontalAlignments(sourceRange.getHorizontalAlignments());
+    fallbackRange.setVerticalAlignments(sourceRange.getVerticalAlignments());
+  }
+}
+
+function writeProtectionColorMapLegend_(sheet, startColumn, counts, coloredCount) {
+  const updatedAt = Utilities.formatDate(new Date(), getTimeZone_(), 'yyyy/MM/dd HH:mm:ss');
+  const legendRows = [
+    ['保護切れ色', '状態', '件数'],
+    ['水曜23時', 'WED_23', counts.WED_23 || 0],
+    ['木曜7時', 'THU_07', counts.THU_07 || 0],
+    ['土曜23時', 'SAT_23', counts.SAT_23 || 0],
+    ['日曜7時', 'SUN_07', counts.SUN_07 || 0],
+    ['未色分け', '', counts.unknown || 0],
+    ['色分け済み合計', '', coloredCount],
+    ['更新', updatedAt, ''],
+  ];
+  const range = sheet.getRange(1, startColumn, legendRows.length, legendRows[0].length);
+  range.setValues(legendRows);
+  range.setBorder(true, true, true, true, true, true);
+  sheet.getRange(1, startColumn, 1, 3).setFontWeight('bold').setBackground('#222222').setFontColor('#ffffff');
+  sheet.getRange(2, startColumn, 1, 3).setBackground(PROTECTION_STATE_COLORS.WED_23);
+  sheet.getRange(3, startColumn, 1, 3).setBackground(PROTECTION_STATE_COLORS.THU_07);
+  sheet.getRange(4, startColumn, 1, 3).setBackground(PROTECTION_STATE_COLORS.SAT_23);
+  sheet.getRange(5, startColumn, 1, 3).setBackground(PROTECTION_STATE_COLORS.SUN_07);
+  sheet.autoResizeColumns(startColumn, 3);
 }
 
 function setupIndexSheet_(sheet) {

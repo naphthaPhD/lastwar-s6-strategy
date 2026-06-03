@@ -1605,3 +1605,32 @@ This is the first pass where production `#534` was written for the fishery timer
 
 - The audit tab was used to MATCH each `位置キー` against `管理表たたき!T:T`; the older `拠点履歴_座標` management row numbers were not trusted because the production table is sorted and some row-number references pointed to other areas.
 - `data/2026-06-01_fishery_production_update_log.csv` records the applied row numbers, screenshot file names, captured times, and columns touched.
+
+## 2026-06-03 fishery protection color map and manual correction hooks
+
+## Context
+
+Extended the local bound-script source for the working fishery spreadsheet so operators can copy the production `侵攻予測_20260527_取得入力型` map into a separate color-coded tab and color fisheries by the current 4-state protection slot. Added a manual correction tab for abandoned fisheries because abandonment protection must be visually confirmed in-game before being treated as authoritative.
+
+## Updated files
+
+- `tools/fishery_protection_sheet/Code.gs`
+- `tools/fishery_protection_sheet/README.md`
+- `analysis/latest_handoff.md`
+
+## External output
+
+- Working Google Sheets: `https://docs.google.com/spreadsheets/d/1Zzp53UbwcZdD80BXO7xXYfjPxkUvBYwdIN5_I9KnE80/edit`
+- Read-only source Google Sheets: `https://docs.google.com/spreadsheets/d/12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g/edit`
+
+## Key findings
+
+1. The production source has both `侵攻予測_20260527_取得入力型` and `マップ表示テンプレ`; the template contains local coordinates such as `K-1`, `A-21`, so it can drive map-cell coloring without guessing coordinates from owner tags.
+2. Added `copyInvasionMapWithProtectionColors()`, exposed as menu item `漁場保護 -> 侵攻予測マップ保護色コピー`.
+3. The copied map writes to `侵攻予測_保護切れ色分け`, uses `漁場一覧4枠` as the color source, and colors only matched uppercase odd-number fishery cells.
+4. Added `手動修正` and `applyManualFisheryCorrections()` for visually confirmed abandonment protection. Rows marked `反映` update `漁場一覧`, clear `最終操作日時/最終操作`, and then recalculate.
+
+## Notes
+
+- The production `#534` spreadsheet is used only as a source for this map copy workflow.
+- The live bound Apps Script project still needs to be updated from `tools/fishery_protection_sheet/Code.gs` before the new menu items can run in Google Sheets.
