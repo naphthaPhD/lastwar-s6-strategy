@@ -1,5 +1,39 @@
 # Handoff summary
 
+## 2026-06-05 Zombie brother spawn pattern recheck
+
+## Context
+
+Processed `ScreenRecording_06-05-2026 01-04-02_1.MP4`, which shows the event record window for zombie-brother spawn notifications. OpenAI OCR was blocked by the local execution policy because it would send extracted local images to an external API, so the run used OpenCV red-text extraction plus local/manual OCR from contact sheets.
+
+## Updated files
+
+- `tools/red_zombie_event_extractor.py`
+- `prompts/zombie_spawn_ocr_prompt.md`
+- `data/2026-06-05_zombie_brother_spawn_observations.csv`
+- `analysis/2026-06-05_zombie_brother_spawn_pattern.md`
+- `analysis/latest_handoff.md`
+- Local generated outputs under `outputs/red_text_extractor/20260605_010402_red/`
+
+## Key findings
+
+1. The new video confirms that the zombie-brother trigger count is not fixed.
+2. The observed kill counts in this video include 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 15, 16, 18, 20, and 21.
+3. Combining the prior red-text JSON with the new observations, confirmed kill counts span 1-24 except 22 and 23 in the current dataset.
+4. The same kill count can produce different zombie-brother levels, and the same player can have multiple different kill-count/level pairs.
+
+## Current risks
+
+1. This run did not use OpenAI OCR because external image upload was blocked by execution policy.
+2. Tesseract was available locally but only had `eng` and `osd`; it was not accurate enough for Japanese event rows.
+3. The new observation CSV is manual-contact-sheet OCR, not fully automated machine OCR.
+
+## Recommended next actions
+
+1. Do not tell members that a fixed number of zombie kills guarantees brother spawn.
+2. Treat brother spawn as random or internally table-driven until a controlled one-player test proves otherwise.
+3. If validating further, record a single player continuously and log normal zombie level, brother level, and kill count together.
+
 ## 2026-06-04 Stronghold occupation OCR
 
 ## Context

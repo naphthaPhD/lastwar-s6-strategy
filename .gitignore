@@ -31,6 +31,7 @@ map_exports/
 # Local extraction/utility scripts. Keep GitHub docs-only unless explicitly needed.
 build_*.py
 tools/*
+!tools/red_zombie_event_extractor.py
 !tools/chat_event_preprocessor/
 !tools/chat_event_preprocessor/**
 !tools/invasion_strategy_os/
