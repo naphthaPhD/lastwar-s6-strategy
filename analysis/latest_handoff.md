@@ -1,5 +1,36 @@
 # Handoff summary
 
+## 2026-06-04 Stronghold occupation OCR
+
+## Context
+
+Processed `ScreenRecording_06-04-2026 20-53-24_1.MP4`, a Season 6 in-game chat video containing base/fishery occupation notifications. The pipeline extracted 1fps crops, removed the final non-game phone UI frames, OCRed the remaining chat crops, and normalized coordinate-bearing occupation events.
+
+## Updated files
+
+- `analysis/2026-06-04_stronghold_occupation_ocr.md`
+- `analysis/latest_handoff.md`
+- Local generated outputs under `outputs/chat_event_preprocessor/20260604_205324/`
+
+## Key findings
+
+1. OCR processed 183 crop images with 183 successes and 0 failures.
+2. The run produced 852 coordinate-bearing occupation extractions and 450 mechanically deduplicated events.
+3. Deduplicated event counts were highest for #511 (93), #509 (85), #480 (70), #534 (58), #523 (36), #440 (35), and #476 (28).
+4. The dominant facility type was `漁場` with 288 deduplicated events; other relevant types included `交易地`, `密林の村`, `湿地の村`, `密林の兵舎`, and `密林の集会場`.
+
+## Current risks
+
+1. OCR normalization is not perfect: `漁場`/`魚場`, `兵舎`/`兵舍`, alliance prefixes, and occasional mixed resource strings remain.
+2. Server values such as `8061` may be OCR noise and should be checked before strategic use.
+3. The deduplicated CSV is a review queue, not a final cleaned canonical event table.
+
+## Recommended next actions
+
+1. Review `outputs/chat_event_preprocessor/20260604_205324/stronghold_events_unique.csv` for #534, #511, #509, #480, #523, and #476.
+2. Move only confirmed important coordinates into `data/` or `logs/timeline/` after manual normalization.
+3. Add a small normalization pass for alliance names, resource type variants, and impossible server IDs before comparing with other occupation logs.
+
 ## 2026-06-04 Full local project output push
 
 ## Context
