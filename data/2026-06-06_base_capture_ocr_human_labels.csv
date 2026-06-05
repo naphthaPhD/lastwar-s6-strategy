@@ -1,5 +1,5 @@
 image,screen_type,label_rule,event_time,actor_server,actor_alliance,opponent_alliance,target_server,coordinate_x,coordinate_y,level,terrain,kind,action,confidence,notes,event_text
-IMG_1290.PNG,history_modal,top_visible_event,2026-05-27 00:52:11,#476,AL,,#509,449,49,1,,都市,attack_destroy,high,,"#476[AL]が#509領有中のLv.1都市 #509(449,49)を攻撃"
+IMG_1290.PNG,history_modal,top_visible_event,2026-05-27 00:52:11,#476,ALj,,#509,449,49,1,,都市,attack_destroy,high,,"#476[ALj]が#509領有中のLv.1都市 #509(449,49)を攻撃"
 IMG_1291.PNG,history_modal,top_visible_event,2026-05-27 12:01:52,#440,GoDs,BqNa,#480,349,149,1,,都市,attack_destroy,high,,"#440[GoDs]が#480[BqNa]領有中のLv.1都市 #480(349,149)を攻撃"
 IMG_1292.PNG,history_modal,top_visible_event,2026-05-27 12:07:38,#480,BgNa,,#511,849,649,1,,都市,attack_destroy,high,,"#480[BgNa]が#511領有中のLv.1都市 #511(849,649)を攻撃"
 IMG_1293.PNG,history_modal,top_visible_event,2026-05-27 12:14:39,#523,u3o,,#511,249,49,1,,都市,attack_destroy,high,,"#523[u3o]が#511領有中のLv.1都市 #511(249,49)を攻撃"

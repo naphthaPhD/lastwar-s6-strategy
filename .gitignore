@@ -31,6 +31,8 @@ map_exports/
 # Local extraction/utility scripts. Keep GitHub docs-only unless explicitly needed.
 build_*.py
 tools/*
+!tools/base_capture_ocr_update.py
+!tools/vision_ocr.swift
 !tools/red_zombie_event_extractor.py
 !tools/chat_event_preprocessor/
 !tools/chat_event_preprocessor/**

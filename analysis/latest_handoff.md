@@ -1,5 +1,51 @@
 # Handoff summary
 
+## 2026-06-06 Base capture full OCR sheet update
+
+## Context
+
+Processed all 234 images under Dropbox `拠点取得スクショ` with Apple Vision OCR and updated Google Sheets `管理表たたき` (`12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g`). The run updated columns C:D:E:L for confirmed latest OCR candidates.
+
+## Updated files
+
+- `analysis/2026-06-06_base_capture_full_ocr_sheet_update.md`
+- `analysis/latest_handoff.md`
+- `data/2026-06-06_base_capture_full_ocr_events.csv`
+- `data/2026-06-06_base_capture_full_ocr_sheet_updates.csv`
+- `data/2026-06-06_base_capture_full_ocr_review.csv`
+- `data/2026-06-06_base_capture_ocr_human_labels.csv`
+- `inputs/ocr_alliance_corrections.json`
+- `tools/base_capture_ocr_update.py`
+- `tools/vision_ocr.swift`
+- `.gitignore`
+
+## Key findings
+
+1. OCR processed 234 images and extracted 721 events: 129 destruction-history events and 592 timeline occupation/steal events.
+2. The script selected 534 latest coordinate candidates, updated 182 sheet rows, and placed 352 candidates into review queues.
+3. Sheet updates were 109 `漁場` and 73 `都市`; action counts were 48 destroy, 66 occupy, 53 steal, and 15 first_occupy.
+4. Type changes were intentionally blocked; final update count had 0 type changes and 0 short/numeric-only owners.
+5. User correction `AL` -> `ALj` is now applied; no final OCR event rows retain literal owner/alliance `AL`.
+6. For images without visible row time, the workflow now uses the prior older image's visible time by filename order. `MM-DD HH:MM` timeline stamps are also recognized.
+7. Google Sheets writeback succeeded, and 5 sampled rows were read back from the sheet with matching C:D:E:L values.
+
+## Current risks
+
+1. Review queue remains: 155 low-confidence no-material-change rows, 138 existing-newer rows, 57 row-not-found rows, 1 short-owner row, and 1 type-mismatch row.
+2. `previous_image_visible_time` is a practical fill for no-time rows, but those 5 sheet updates should still be treated as lower confidence than visible row timestamps.
+3. The OCR output is Apple Vision only for this run; PaddleOCR remains useful for tag spot-checks if a specific alliance tag looks suspicious.
+
+## Recommended next actions
+
+1. Review `data/2026-06-06_base_capture_full_ocr_review.csv`, especially `row_not_found` and `type_mismatch`.
+2. Spot-check the 19 owner-change rows in `data/2026-06-06_base_capture_full_ocr_sheet_updates.csv`.
+3. If accepted, use the updated `管理表たたき` as the current source for downstream map/state regeneration.
+
+## Notes
+
+- Raw Apple Vision caches remain local under `tmp/base_capture_full_ocr/` and should not be committed.
+- The helper script requires normal Mac execution or approved outside-sandbox access because it reads Dropbox images and calls Google Sheets.
+
 ## 2026-06-06 OCR engine comparison
 
 ## Context
