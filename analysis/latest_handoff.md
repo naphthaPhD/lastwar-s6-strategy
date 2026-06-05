@@ -1975,3 +1975,29 @@ The first 10 samples were `都市一覧 / 陣営破壊履歴` modal screenshots 
 
 - This comparison is still a detection proxy, not a human-labeled correctness benchmark.
 - Examples from the raw output show Apple Vision occasionally reading a tag with an extra trailing character, while PaddleOCR often gives the cleaner tag.
+
+## 2026-06-06 base capture OCR human labels
+
+## Context
+
+Added human labels for the same 20 `拠点取得スクショ/inbox` samples used in the OCR engine comparison.
+
+## Updated files
+
+- `analysis/2026-06-06_base_capture_ocr_human_labels.md`
+- `data/2026-06-06_base_capture_ocr_human_labels.csv`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. The label CSV identifies the target event, time, alliance tag, opponent tag when visible, target server, X/Y coordinates, level, terrain, kind, and action.
+2. History-modal samples use the top visible destruction-history event.
+3. Timeline samples use the first event whose time header is visible in the screenshot.
+4. `IMG_1305.PNG` is a useful tag-risk case: OCR may read `JDXI`, but the visual label is `JDX`.
+5. `IMG_1307.PNG` and `IMG_1309.PNG` are time-boundary cases where the top visible event belongs to the previous time group; the label uses the first visible time-header event instead.
+
+## Recommended next actions
+
+1. Join `data/2026-06-06_base_capture_ocr_human_labels.csv` with `tmp/ocr_engine_comparison_base_capture_v2/ocr_engine_comparison_raw.csv`.
+2. Compute true field-level accuracy for Apple Vision, PaddleOCR, and Tesseract.
+3. Decide whether production OCR should ignore timeline events above the first visible time header.
