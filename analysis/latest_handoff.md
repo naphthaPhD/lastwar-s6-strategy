@@ -1,5 +1,39 @@
 # Handoff summary
 
+## 2026-06-06 OCR engine comparison
+
+## Context
+
+Compared Apple Vision, PaddleOCR, and Tesseract on 20 Dropbox S6 fishery-detail screenshots from `漁場スクショ/縦` and `漁場スクショ/ABC`. This is a detection-proxy comparison, not final ground-truth accuracy.
+
+## Updated files
+
+- `analysis/2026-06-06_ocr_engine_comparison.md`
+- `data/2026-06-06_ocr_engine_comparison_summary.csv`
+
+## Key findings
+
+1. Apple Vision worked when run outside the Codex sandbox and was fastest: average 0.836 seconds/image, with server, alliance, kind, and time detected on all 20 sample images.
+2. PaddleOCR also detected all target fields and gave stronger-looking tag reads on tricky alphanumeric tags such as `K0CH`, `0WM`, `4tH`, and `SHA`, but averaged 4.476 seconds/image.
+3. Tesseract detected time on all images and alliance-like text on all images, but missed/failed `漁場` type detection on 9 of 20 rows and missed one server.
+
+## Current risks
+
+1. The selected fishery-detail screenshots do not show full X/Y coordinates, so coordinate accuracy still needs a separate red-log or occupation-log benchmark.
+2. Apple Vision can misread visually similar tag characters, while PaddleOCR is slower; production use should cross-check risky tags.
+3. Apple Vision failed inside the Codex sandbox with `Foundation._GenericObjCError`; run it in normal Mac execution or with approved outside permissions.
+
+## Recommended next actions
+
+1. Use Apple Vision for fast first-pass OCR on fishery-detail screenshots.
+2. Use PaddleOCR as confirmation for alliance tags and risky rows.
+3. Build a ground-truth label CSV for 20-50 representative images before claiming final OCR accuracy.
+
+## Notes
+
+- Raw comparison output remains local under `tmp/ocr_engine_comparison_v3b/` and should not be broadly committed.
+- The comparison helper is `tools/ocr_engine_comparison.py`; the Apple Vision helper is `tools/vision_ocr.swift`.
+
 ## 2026-06-06 Mac migration handoff
 
 ## Context
@@ -1916,3 +1950,28 @@ The working tab `侵攻予測_保護切れ色分け` had the copied map values a
 ## Notes
 
 - The live adjustment is a closer layout pass, not a full source-format clone. Full source merge restoration depends on running the updated bound Apps Script.
+
+## 2026-06-06 base capture screenshot OCR comparison
+
+## Context
+
+Compared Apple Vision, PaddleOCR, and Tesseract on 20 Dropbox screenshots from `拠点取得スクショ/inbox`.
+The first 10 samples were `都市一覧 / 陣営破壊履歴` modal screenshots and the next 10 were chat `タイムライン` acquisition logs.
+
+## Updated files
+
+- `analysis/2026-06-06_base_capture_ocr_engine_comparison.md`
+- `data/2026-06-06_base_capture_ocr_engine_comparison_summary.csv`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. Apple Vision detected server, coordinate, alliance tag, kind, and time in all 20/20 samples, averaging 0.728 seconds per image.
+2. PaddleOCR also detected all fields in 20/20 samples, averaging 4.196 seconds per image.
+3. Tesseract detected only 2/20 coordinates and 3/20 kinds, with 18/20 rows requiring review.
+4. Apple Vision is the best first-pass engine for `拠点取得スクショ`; PaddleOCR remains useful as a second-pass validator for ambiguous alliance tags and numeric strings.
+
+## Notes
+
+- This comparison is still a detection proxy, not a human-labeled correctness benchmark.
+- Examples from the raw output show Apple Vision occasionally reading a tag with an extra trailing character, while PaddleOCR often gives the cleaner tag.

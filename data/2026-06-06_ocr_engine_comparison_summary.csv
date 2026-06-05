@@ -1,0 +1,4 @@
+engine,images,avg_seconds,server_detected,coordinate_detected,alliance_detected,kind_detected,time_detected,review_required_rows
+apple_vision,20,0.836,20,0,20,20,20,0
+paddleocr,20,4.476,20,0,20,20,20,0
+tesseract,20,2.711,19,0,20,11,20,9

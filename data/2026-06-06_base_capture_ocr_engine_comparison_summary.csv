@@ -1,0 +1,10 @@
+scope,engine,images,avg_seconds,server_detected,coordinate_detected,alliance_detected,kind_detected,time_detected,review_required_rows
+all_20,apple_vision,20,0.728,20,20,20,20,20,0
+all_20,paddleocr,20,4.196,20,20,20,20,20,0
+all_20,tesseract,20,0.989,12,2,19,3,10,18
+history_modal_10,apple_vision,10,0.756,10,10,10,10,10,0
+history_modal_10,paddleocr,10,4.449,10,10,10,10,10,0
+history_modal_10,tesseract,10,0.577,10,0,9,0,0,10
+timeline_chat_10,apple_vision,10,0.700,10,10,10,10,10,0
+timeline_chat_10,paddleocr,10,3.943,10,10,10,10,10,0
+timeline_chat_10,tesseract,10,1.400,2,2,10,3,10,8
