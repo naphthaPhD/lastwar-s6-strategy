@@ -1,5 +1,42 @@
 # Handoff summary
 
+## 2026-06-06 Mac migration handoff
+
+## Context
+
+Prepared a durable migration handoff for moving this S6 project from Windows to a MacBook by copying the full local folder. The handoff records current Git state, canonical files, local-only artifacts, Python/tooling setup, Google MCP/Sheets cautions, and first verification commands for the Mac.
+
+## Updated files
+
+- `analysis/2026-06-06_mac_migration_handoff.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. The verified Windows source folder is `C:\Users\kitazaki\Documents\S6`; branch is `main`; remote is `https://naphthaPhD@github.com/naphthaPhD/lastwar-s6-strategy.git`.
+2. `jdx_run_note_latest.md` is still an untracked local file and should remain local unless explicitly promoted into `analysis/` or `strategy/`.
+3. The Mac side should recreate `.venv`, not reuse the copied Windows virtual environment.
+4. The expected Google MCP/server for live Sheets work is the user's `sub` Google connector; it is not stored in this repo and must be available/authorized on the Mac.
+5. Local `tools/fishery_protection_sheet/Code.gs` is only the local Apps Script source copy; live bound Apps Script updates still need explicit verification.
+
+## Current risks
+
+1. Copying the full folder will also copy local/generated/bulky folders such as `.venv/`, `outputs/`, `tmp/`, `S6powerrank/`, and screenshot source folders; these should not be blindly committed.
+2. Japanese filenames or text may appear garbled if the terminal/display encoding is wrong; verify UTF-8 and Git status before assuming file corruption.
+3. Google Sheets-backed workflows can silently fail or use stale live Apps Script unless the `sub` Google MCP/server and bound script state are checked.
+
+## Recommended next actions
+
+1. After copying to the Mac, read `analysis/2026-06-06_mac_migration_handoff.md` first, then `analysis/latest_handoff.md`.
+2. Run `git status --short --branch`, `git remote -v`, `git log --oneline -5`, `git diff --stat`, and `git ls-files --others --exclude-standard`.
+3. Recreate Python dependencies with a Mac `.venv`, then smoke-test `tools/invasion_strategy_os` with `config.example.json`.
+4. Confirm the `sub` Google MCP/server before doing live Google Sheets or Apps Script work.
+
+## Notes
+
+- Do not use `git add .` after the move. Stage only explicit durable files.
+- Consider whether the Windows-side `s6-safe-auto-push` automation should be disabled or recreated for the Mac workflow.
+
 ## 2026-06-05 Enemy group behavior analysis
 
 ## Context
