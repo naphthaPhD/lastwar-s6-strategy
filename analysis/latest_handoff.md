@@ -1,5 +1,43 @@
 # Handoff summary
 
+## 2026-06-05 Enemy group behavior analysis
+
+## Context
+
+Analyzed current management-table outputs, invasion candidate CSVs, pact/diplomacy OCR, and occupation OCR to explain why enemy groups are pushing in and what #534/JDX should do next.
+
+## Updated files
+
+- `analysis/2026-06-05_enemy_group_behavior_analysis.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. Current enemy-owned nodes are concentrated in #476 (`240`), #480 (`103`), and #503 (`62`); #476 is the main pressure axis.
+2. High/critical enemy nodes are also led by #476 (`88`), followed by #480 (`34`) and #503 (`28`).
+3. Invasion candidates total `41`: #476 has `19`, #480 has `11`, #503 has `10`, and one unresolved/odd `299` value remains.
+4. #534 already has #476-linked pressure at `#534:D-11`, `#534:D-13`, and `#534:E-13`, with additional high-risk trade/fishery rows from #476/#480/#503 alliances.
+5. GcC/APACHE diplomacy OCR suggests pact-based route planning using `GoDs`, `IMp`, `SHA`, `BAJ`, `KTVS`, and `4tH` toward #523/#476, so pact state should be treated as operational movement risk, not just diplomacy.
+
+## Current risks
+
+1. The enemy advantage is not only spending; it is also wider front pressure, pact-based movement planning, and faster decision cycles.
+2. If #534/JDX tries to defend everything, the enemy can keep forcing confirmation, translation, and coordination delays.
+3. Unknown alliance ownership and OCR noise remain; unresolved alliances should not be treated as confirmed enemy/ally without review.
+
+## Recommended next actions
+
+1. Move from full-defense thinking to selected defense: prioritize #534 penetration points, central entrances, and points where strong allied players can actually respond.
+2. Add pact checks and route-risk labels into the command/next-action tab for `GoDs`, `IMp`, `SHA`, `BAJ`, `KTVS`, `4tH`, and GcC/APACHE-related routes.
+3. Use delay operations on #523/#476/#480 connection routes instead of spending troops on every enemy node.
+4. Treat #480/#503 lateral pressure as counter candidates only when they are overextended and thin.
+5. Use short operational messages: `DEFEND`, `DELAY`, `PACT CHECK`, `ABANDON`, and `COUNTER only if weak`.
+
+## Notes
+
+- The analysis distinguishes CSV-derived observations from OCR/diplomacy interpretation.
+- `analysis/2026-06-05_enemy_group_behavior_analysis.md` is intended as the saved handoff for ChatGPT and the map/command-tab workstream.
+
 ## 2026-06-05 Zombie brother spawn pattern recheck
 
 ## Context
