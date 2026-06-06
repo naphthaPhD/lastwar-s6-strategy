@@ -729,18 +729,16 @@ function refreshS6FullMapFromManagement() {
   const rowCount = templateRange.getNumRows();
   const columnCount = templateRange.getNumColumns();
   const templateValues = templateRange.getDisplayValues();
+  const outputValues = templateValues.map((row) => row.slice());
+  const outputBackgrounds = templateRange.getBackgrounds();
+  const outputFontColors = templateRange.getFontColors();
+  const outputFontWeights = templateRange.getFontWeights();
+  const outputHorizontalAlignments = templateRange.getHorizontalAlignments();
+  const outputVerticalAlignments = templateRange.getVerticalAlignments();
+  const outputNotes = templateValues.map((row) => row.map(() => ''));
   const managementMap = buildS6ManagementMap_(managementSheet);
   const allianceServerMap = buildS6AllianceServerMap_(ss);
   const counts = { self: 0, ally: 0, enemy: 0, trade: 0, destroyed: 0, unowned: 0, missing: 0 };
-
-  ensureGridSize_(targetSheet, rowCount, columnCount);
-  targetSheet.getRange(1, 1, targetSheet.getMaxRows(), targetSheet.getMaxColumns()).breakApart();
-  targetSheet.clear();
-  copySourceMapRange_(templateRange, targetSheet.getRange(1, 1));
-  copyMapDimensions_(templateSheet, targetSheet, rowCount, columnCount);
-  copyMapMerges_(templateRange, targetSheet);
-  targetSheet.setFrozenRows(5);
-  targetSheet.setHiddenGridlines(true);
 
   for (let rowIndex = 0; rowIndex < templateValues.length; rowIndex++) {
     const rowNumber = rowIndex + 1;
@@ -760,10 +758,27 @@ function refreshS6FullMapFromManagement() {
       const displayValue = s6FullMapDisplayValue_(node, coordinate);
       const relation = s6FullMapRelation_(node, area, allianceServerMap);
       counts[relation] = (counts[relation] || 0) + 1;
-      paintS6FullMapCell_(targetSheet, rowNumber, columnNumber, displayValue, S6_FULL_MAP_COLORS[relation], buildS6FullMapNote_(node, key));
+      outputValues[rowIndex][columnIndex] = displayValue;
+      outputFontColors[rowIndex][columnIndex] = S6_FULL_MAP_COLORS[relation] || '#000000';
+      outputFontWeights[rowIndex][columnIndex] = 'bold';
+      outputNotes[rowIndex][columnIndex] = buildS6FullMapNote_(node, key);
     }
   }
 
+  ensureGridSize_(targetSheet, rowCount, columnCount);
+  targetSheet.getRange(1, 1, targetSheet.getMaxRows(), targetSheet.getMaxColumns()).breakApart();
+  targetSheet.clear();
+  const targetRange = targetSheet.getRange(1, 1, rowCount, columnCount);
+  targetRange.setValues(outputValues);
+  targetRange.setBackgrounds(outputBackgrounds);
+  targetRange.setFontColors(outputFontColors);
+  targetRange.setFontWeights(outputFontWeights);
+  targetRange.setHorizontalAlignments(outputHorizontalAlignments);
+  targetRange.setVerticalAlignments(outputVerticalAlignments);
+  targetRange.setNotes(outputNotes);
+  copyMapDimensions_(templateSheet, targetSheet, rowCount, columnCount);
+  targetSheet.setFrozenRows(5);
+  targetSheet.setHiddenGridlines(true);
   writeS6FullMapUpdateNote_(targetSheet, counts);
   SpreadsheetApp.getActive().toast(
     `全体マップ更新: 青${counts.self} / 緑${counts.ally} / 赤${counts.enemy} / 黒${counts.trade} / 灰${counts.destroyed}`,

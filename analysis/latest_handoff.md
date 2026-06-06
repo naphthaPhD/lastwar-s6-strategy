@@ -22,16 +22,17 @@ Created a lightweight Apps Script for the live `S6#534` spreadsheet so daily ope
 3. Color rules are encoded in the script: #534 blue, #509/#440/#511 green, #503/#480/#523/#476 red, trade posts black, destroyed gray, and unowned/unknown black.
 4. The script adds notes to map cells with position key, type, owner, protection data, and source management-table row.
 5. Syntax checks passed for both the dedicated S6#534 script and the larger fishery-protection script integration.
+6. After a timeout report, the full-map refresh was changed from per-cell writes to batched range writes (`setValues`, `setFontColors`, `setNotes`) to reduce Apps Script calls from thousands to a small fixed set.
 
 ## Current risks
 
-1. The live Apps Script project still needs to be updated by pasting `tools/s6_534_sheet/Code.gs` into the spreadsheet's Apps Script editor.
+1. The live Apps Script project still needs to be updated by pasting the latest `tools/s6_534_sheet/Code.gs` into the spreadsheet's Apps Script editor.
 2. The script intentionally treats `管理表たたき` as the source of truth, so stale values that only exist in `全体マップ` will disappear after refresh.
 3. Owner side overrides are snapshotted from the current `sample_output/state.json`; add new alliance tags if they appear.
 
 ## Recommended next actions
 
-1. Paste `tools/s6_534_sheet/Code.gs` into the bound Apps Script for `S6#534`.
+1. Paste the latest `tools/s6_534_sheet/Code.gs` into the bound Apps Script for `S6#534`.
 2. Reload the spreadsheet and run `S6#534管理` -> `全体マップ更新`.
 3. After confirming the map, use `管理表たたき` as the only direct edit surface for ownership/type/time changes.
 
