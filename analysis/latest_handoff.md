@@ -1,5 +1,47 @@
 # Handoff summary
 
+## 2026-06-06 Base capture PaddleOCR sheet update
+
+## Context
+
+Processed 121 newly synced `拠点取得スクショ` images with PaddleOCR and updated Google Sheets `管理表たたき` (`12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g`). Apple Vision failed on this image group in the current macOS runtime, so this run used PaddleOCR with cached models.
+
+## Updated files
+
+- `analysis/2026-06-06_base_capture_paddle_sheet_update.md`
+- `analysis/latest_handoff.md`
+- `data/2026-06-06_base_capture_paddle_events.csv`
+- `data/2026-06-06_base_capture_paddle_sheet_updates.csv`
+- `data/2026-06-06_base_capture_paddle_review.csv`
+- `data/2026-06-06_base_capture_paddle_ranges.json`
+- `inputs/ocr_alliance_corrections.json`
+- `tools/base_capture_paddle_update.py`
+
+## Key findings
+
+1. PaddleOCR processed 121 images and extracted 384 occupation/steal events.
+2. The script selected 350 latest coordinate candidates, updated 198 `管理表たたき` rows, and placed 152 candidates into review.
+3. Sheet writeback updated C:D:E:L in five chunks; Google Sheets reported 198 updated rows and 792 updated cells.
+4. Review reasons are `existing_newer` 130, `type_mismatch` 11, `row_not_found` 10, and `low_confidence_owner_no_letter` 1.
+5. Read-back verification confirmed representative rows `C1953:E1953` / `L1953` and `C1947:E1947` / `L1947`.
+
+## Current risks
+
+1. Rows with `previous_image_visible_time` use a practical timestamp fill and should be treated as lower confidence than visible row timestamps.
+2. The review queue is not applied; especially check `row_not_found` and `type_mismatch`.
+3. `管理表たたき` is now updated, but `全体マップ` still needs the S6#534 refresh script if visual map reflection is required.
+
+## Recommended next actions
+
+1. Review `data/2026-06-06_base_capture_paddle_review.csv`.
+2. Spot-check timestamp-filled rows in `data/2026-06-06_base_capture_paddle_sheet_updates.csv`.
+3. Run the S6#534 `全体マップ更新` Apps Script after accepting the management-table updates.
+
+## Notes
+
+- Google Sheets read-back timed out for one sampled C:E range, but the same row's L memo returned and later sampled rows matched.
+- PaddleOCR raw caches remain local under `tmp/base_capture_paddle_ocr/` and are not committed.
+
 ## 2026-06-06 S6#534 map refresh Apps Script
 
 ## Context

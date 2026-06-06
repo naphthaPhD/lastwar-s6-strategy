@@ -12,6 +12,7 @@
   "frE": "fIrE",
   "GCC": "GcC",
   "Gcc": "GcC",
+  "GcCI": "GcC",
   "IL0": "JL0",
   "ILO": "JL0",
   "ILO0": "JL0",
@@ -19,6 +20,7 @@
   "L2": "JL2",
   "LO": "JL0",
   "JLO": "JL0",
+  "L0": "JL0",
   "IDX": "JDX",
   "DX": "JDX",
   "IMp": "IMP",
@@ -46,9 +48,15 @@
   "CDF8": "CDf8",
   "XjR": "xjR",
   "n09": "nO9",
+  "RC0N": "RCON",
   "OTT": "0TT",
   "5HA": "SHA",
   "u30": "u3o",
   "u39": "u3o",
-  "xiR": "xjR"
+  "xiR": "xjR",
+  "onel": "one",
+  "oneI": "one",
+  "Lghsl": "Lghs",
+  "BgNal": "BgNa",
+  "w6f": "W6f"
 }
