@@ -1,5 +1,36 @@
 # Handoff summary
 
+## 2026-06-06 Google Sheet full map color reflection
+
+## Context
+
+Reflected the requested S6#534 full-map color rules directly into the live Google Sheet tab `全体マップ` (`1oK2tebQRs9RaSsrM-Oo9lynAjbt4loV82GjS8a3dPrQ`, `gid=880775829`). The earlier repo-side map update did not change this live sheet view.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. `gid=880775829` maps to the live sheet tab `全体マップ`.
+2. Cell values were not changed; only `userEnteredFormat.textFormat.foregroundColor` was updated.
+3. Updated cell counts: #534-side blue 187, #509/#440/#511-side green 203, #503/#480/#523/#476-side red 632, destroyed gray 115, and trade-post black 62.
+4. Read-back verification confirmed representative cells: `moca` blue, `OWM` green, `UMN` red, `破壊` gray, and `交易地` black.
+
+## Current risks
+
+1. The live sheet is still driven by cell text and local alliance classification. If an alliance tag is missing from `sample_output/state.json` owner affiliations, it is not recolored automatically.
+2. This update colors alliance-name cell text, not the HTML map nodes; both surfaces now need separate refreshes when the rule changes.
+
+## Recommended next actions
+
+1. If a user says the Google Sheet map is stale, check `全体マップ` first, not only `sample_output/map.html`.
+2. Consider adding this formatting reflection as a repeatable script if map colors will be regenerated often.
+
+## Notes
+
+- Verification used the Mac `credentials-sub.json` Google Sheets service account.
+
 ## 2026-06-06 S6#534 full map color update
 
 ## Context
