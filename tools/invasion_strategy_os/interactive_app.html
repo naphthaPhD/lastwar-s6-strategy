@@ -321,6 +321,12 @@
       "#4f46e5", "#0891b2", "#16a34a", "#ca8a04", "#dc2626", "#9333ea",
       "#0d9488", "#ea580c", "#2563eb", "#be123c", "#65a30d", "#7c3aed"
     ];
+    const MAP_COLOR_SELF = "#2563eb";
+    const MAP_COLOR_ALLY = "#16a34a";
+    const MAP_COLOR_ENEMY = "#dc2626";
+    const MAP_COLOR_UNOWNED = "#f8fafc";
+    const MAP_COLOR_TRADE = "#020617";
+    const MAP_COLOR_DESTROYED = "#6b7280";
 
     let network;
     let nodes;
@@ -364,13 +370,14 @@
     }
 
     function strategicColor(node) {
-      if (isDestroyedNode(node)) return "#6b7280";
+      if (isDestroyedNode(node)) return MAP_COLOR_DESTROYED;
+      if (node.type === "交易地") return MAP_COLOR_TRADE;
       if (node.strategic_color) return node.strategic_color;
-      if (isUnownedOwner(node.owner)) return "#f8fafc";
-      if (node.affiliation === "self") return "#2563eb";
-      if (node.affiliation === "ally") return "#16a34a";
-      if (node.affiliation === "enemy") return "#dc2626";
-      return "#dc2626";
+      if (isUnownedOwner(node.owner)) return MAP_COLOR_UNOWNED;
+      if (node.affiliation === "self") return MAP_COLOR_SELF;
+      if (node.affiliation === "ally") return MAP_COLOR_ALLY;
+      if (node.affiliation === "enemy") return MAP_COLOR_ENEMY;
+      return MAP_COLOR_ENEMY;
     }
 
     function sizeForNode(node) {
