@@ -1,5 +1,40 @@
 # Handoff summary
 
+## 2026-06-06 S6#534 full map color update
+
+## Context
+
+Updated the full S6#534 map color rules and regenerated the Google Sheets-backed map output from `管理表たたき`.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+- `sample_output/map.html`
+- `sample_output/state.json`
+- `tools/invasion_strategy_os/README.md`
+- `tools/invasion_strategy_os/invasion_strategy_os.py`
+
+## Key findings
+
+1. Strategic node colors now follow the requested map rules: #534 alliance owners blue, #509/#440/#511 alliance owners green, #503/#480/#523/#476 alliance owners red, trade posts black, destroyed nodes gray, and unowned nodes white.
+2. The regenerated map contains 2,166 nodes and 4,972 connections.
+3. Color distribution in `sample_output/state.json`: blue 219, green 326, red 761, black trade posts 80, gray destroyed 162, and white unowned 618.
+4. Browser verification loaded `sample_output/map.html` successfully, confirmed the legend labels and color codes, and found 0 browser console errors.
+
+## Current risks
+
+1. Trade posts intentionally override owner-side color and are always black.
+2. Screenshot capture from the in-app browser timed out, so the visual QA is based on DOM/canvas presence, legend text, color-code checks, and browser error logs.
+
+## Recommended next actions
+
+1. Open `sample_output/map.html` when sharing the full map view.
+2. If alliance label text itself should also be recolored, update label/font behavior separately; this run recolors the map nodes and legend.
+
+## Notes
+
+- Map regeneration used `tools/invasion_strategy_os/config.google_full_map.json` against the current Google Sheets source.
+
 ## 2026-06-06 Base capture full OCR sheet update
 
 ## Context

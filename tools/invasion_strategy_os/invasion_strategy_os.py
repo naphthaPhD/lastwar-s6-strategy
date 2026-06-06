@@ -45,6 +45,12 @@ ENEMY_SERVERS = {"503", "480", "523", "476"}
 DEFAULT_SELF_OWNERS = {"JDX"}
 UNOWNED_OWNER_VALUES = {"", "unknown", "none", "neutral", "\u672a\u53d6\u5f97", "\u672a\u767b\u9332", "\u4e2d\u7acb", "\u4e2d\u7acb/\u672a\u767b\u9332"}
 DESTROYED_KEYWORDS = ("\u7834\u58ca", "destroyed", "ruined")
+MAP_COLOR_SELF = "#2563eb"
+MAP_COLOR_ALLY = "#16a34a"
+MAP_COLOR_ENEMY = "#dc2626"
+MAP_COLOR_UNOWNED = "#f8fafc"
+MAP_COLOR_TRADE = "#020617"
+MAP_COLOR_DESTROYED = "#6b7280"
 
 NODE_ALIASES = {
     "id": ["id", "node_id", "key", "キー", "ID", "拠点ID", "位置キー"],
@@ -1001,11 +1007,11 @@ def build_owner_affiliations(
 
 def affiliation_color(affiliation: str) -> str:
     return {
-        "self": "#2563eb",
-        "ally": "#16a34a",
-        "enemy": "#dc2626",
-        "destroyed": "#6b7280",
-    }.get(affiliation, "#f8fafc")
+        "self": MAP_COLOR_SELF,
+        "ally": MAP_COLOR_ALLY,
+        "enemy": MAP_COLOR_ENEMY,
+        "destroyed": MAP_COLOR_DESTROYED,
+    }.get(affiliation, MAP_COLOR_UNOWNED)
 
 
 def strategic_affiliation(node: Node, owner_affiliations: dict[str, str]) -> str:
@@ -1018,9 +1024,11 @@ def strategic_affiliation(node: Node, owner_affiliations: dict[str, str]) -> str
 
 def strategic_color(node: Node, owner_affiliations: dict[str, str] | None = None) -> str:
     if is_destroyed_node(node):
-        return "#6b7280"
+        return MAP_COLOR_DESTROYED
+    if node.type == "\u4ea4\u6613\u5730":
+        return MAP_COLOR_TRADE
     if is_unowned_owner(node.owner):
-        return "#f8fafc"
+        return MAP_COLOR_UNOWNED
     if owner_affiliations is None:
         return affiliation_color(area_affiliation(node.area))
     return affiliation_color(strategic_affiliation(node, owner_affiliations))
@@ -1987,9 +1995,10 @@ def add_node_info_panel_v3(html: str, phase3_simulation: dict[str, Any] | None =
 </div>
 <div id="map-legend" aria-label="legend">
   <h3>凡例</h3>
-  <div class="legend-row"><span class="legend-dot" style="background:#2563eb"></span><span>#534 / JDX</span></div>
-  <div class="legend-row"><span class="legend-dot" style="background:#16a34a"></span><span>味方</span></div>
-  <div class="legend-row"><span class="legend-dot" style="background:#dc2626"></span><span>敵</span></div>
+  <div class="legend-row"><span class="legend-dot" style="background:#2563eb"></span><span>#534連盟</span></div>
+  <div class="legend-row"><span class="legend-dot" style="background:#16a34a"></span><span>#509 / #440 / #511連盟</span></div>
+  <div class="legend-row"><span class="legend-dot" style="background:#dc2626"></span><span>#503 / #480 / #523 / #476連盟</span></div>
+  <div class="legend-row"><span class="legend-dot" style="background:#020617"></span><span>交易地</span></div>
   <div class="legend-row"><span class="legend-dot" style="background:#f8fafc"></span><span>未取得</span></div>
   <div class="legend-row"><span class="legend-dot" style="background:#6b7280"></span><span>破壊</span></div>
   <div class="legend-row"><span class="legend-border" style="border:3px solid #ef4444"></span><span>保護終了済み</span></div>
