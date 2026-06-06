@@ -1,5 +1,44 @@
 # Handoff summary
 
+## 2026-06-06 S6#534 map refresh Apps Script
+
+## Context
+
+Created a lightweight Apps Script for the live `S6#534` spreadsheet so daily operators can refresh `全体マップ` from `管理表たたき` with one menu action instead of manually recoloring map cells.
+
+## Updated files
+
+- `.gitignore`
+- `analysis/latest_handoff.md`
+- `tools/s6_534_sheet/Code.gs`
+- `tools/s6_534_sheet/README.md`
+- `tools/fishery_protection_sheet/Code.gs`
+- `tools/fishery_protection_sheet/README.md`
+
+## Key findings
+
+1. Added dedicated menu `S6#534管理` -> `全体マップ更新` in `tools/s6_534_sheet/Code.gs`.
+2. The refresh copies `マップ表示テンプレ!A1:DR135`, rebuilds `全体マップ`, and reads ownership/type/status from `管理表たたき`.
+3. Color rules are encoded in the script: #534 blue, #509/#440/#511 green, #503/#480/#523/#476 red, trade posts black, destroyed gray, and unowned/unknown black.
+4. The script adds notes to map cells with position key, type, owner, protection data, and source management-table row.
+5. Syntax checks passed for both the dedicated S6#534 script and the larger fishery-protection script integration.
+
+## Current risks
+
+1. The live Apps Script project still needs to be updated by pasting `tools/s6_534_sheet/Code.gs` into the spreadsheet's Apps Script editor.
+2. The script intentionally treats `管理表たたき` as the source of truth, so stale values that only exist in `全体マップ` will disappear after refresh.
+3. Owner side overrides are snapshotted from the current `sample_output/state.json`; add new alliance tags if they appear.
+
+## Recommended next actions
+
+1. Paste `tools/s6_534_sheet/Code.gs` into the bound Apps Script for `S6#534`.
+2. Reload the spreadsheet and run `S6#534管理` -> `全体マップ更新`.
+3. After confirming the map, use `管理表たたき` as the only direct edit surface for ownership/type/time changes.
+
+## Notes
+
+- `tools/fishery_protection_sheet/Code.gs` also received the same `全体マップ更新` menu item for compatibility with the existing larger operations script, but the dedicated `tools/s6_534_sheet/Code.gs` is the recommended S6#534 live script.
+
 ## 2026-06-06 Google Sheet full map color reflection
 
 ## Context
