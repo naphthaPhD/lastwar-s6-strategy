@@ -1,5 +1,48 @@
 # Handoff summary
 
+## 2026-06-07 Base capture Apple Vision recheck
+
+## Context
+
+Reprocessed the same 121 `拠点取得スクショ` images with Apple Vision after confirming Apple Vision works when run outside the Codex sandbox. The run compared Apple Vision results against the PaddleOCR-updated `管理表たたき` and applied additional corrections to Google Sheets.
+
+## Updated files
+
+- `analysis/2026-06-07_base_capture_apple_vision_recheck.md`
+- `analysis/latest_handoff.md`
+- `data/2026-06-07_base_capture_apple_vision_events.csv`
+- `data/2026-06-07_base_capture_apple_vision_sheet_updates.csv`
+- `data/2026-06-07_base_capture_apple_vision_review.csv`
+- `data/2026-06-07_base_capture_apple_vision_noop.csv`
+- `data/2026-06-07_base_capture_apple_vision_ranges.json`
+- `data/2026-06-07_base_capture_apple_vision_summary.json`
+- `inputs/ocr_alliance_corrections.json`
+
+## Key findings
+
+1. Apple Vision works in this environment when run outside the sandbox; sandboxed execution fails with `Foundation._GenericObjCError 0`.
+2. Apple Vision processed 121 images and extracted 364 timeline events.
+3. Against the PaddleOCR-updated sheet, Apple Vision produced 95 additional sheet updates, 180 review rows, and 56 no-change rows.
+4. Google Sheets writeback succeeded for 95 rows / 380 cells, updating C:D:E:L.
+5. Read-back verification matched representative rows `C1993:E1993` / `L1993`, `C1953:E1953` / `L1953`, and `C693:E693`.
+
+## Current risks
+
+1. Review queue remains: `existing_newer` 119, `type_mismatch` 51, `row_not_found` 10.
+2. 45 applied updates used `previous_image_visible_time`; treat them as lower confidence than visible row timestamps.
+3. `全体マップ` is not automatically refreshed by the management-table update.
+
+## Recommended next actions
+
+1. Review `data/2026-06-07_base_capture_apple_vision_review.csv`, especially `type_mismatch` and `row_not_found`.
+2. Run the S6#534 `全体マップ更新` Apps Script if visual map reflection is needed.
+3. Use Apple Vision as the primary OCR engine for future base-capture screenshots, with PaddleOCR fallback only when Vision is unavailable.
+
+## Notes
+
+- Added OCR corrections `GODs -> GoDs` and `w6F -> W6f`.
+- Apple Vision raw caches remain local under `tmp/base_capture_apple_vision_recheck_20260607/` and should not be committed.
+
 ## 2026-06-06 Base capture PaddleOCR sheet update
 
 ## Context

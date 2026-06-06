@@ -1,0 +1,41 @@
+{
+  "images": 121,
+  "events": 364,
+  "latest_targets": 331,
+  "updates": 95,
+  "review": 180,
+  "noop": 56,
+  "screen_type": {
+    "timeline_chat": 364
+  },
+  "action": {
+    "occupy": 186,
+    "first_occupy": 62,
+    "steal": 116
+  },
+  "kind_sheet": {
+    "漁場": 234,
+    "交易地": 76,
+    "都市": 54
+  },
+  "time_source": {
+    "image_metadata_inferred": 1,
+    "visible_time": 164,
+    "previous_image_visible_time": 199
+  },
+  "review_reasons": {
+    "existing_newer": 119,
+    "type_mismatch": 51,
+    "row_not_found": 10
+  },
+  "update_actions": {
+    "occupy": 58,
+    "steal": 31,
+    "first_occupy": 6
+  },
+  "update_time_sources": {
+    "visible_time": 50,
+    "previous_image_visible_time": 45
+  },
+  "seconds": 0.2
+}
