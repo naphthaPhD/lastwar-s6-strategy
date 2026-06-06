@@ -1,0 +1,334 @@
+issue,key,management_row,type,owner,expected,full_map,map_row,map_column,memo
+owned_key_not_in_template,中央:中央-1-1,2085,漁場,476A,476A,,,,画像1: #8061 X:24 Y:974 Lv5
+owned_key_not_in_template,中央:中央-1-10,2056,漁場,VEX,VEX,,,,画像10: #8061 X:474 Y:974 Lv5
+owned_key_not_in_template,中央:中央-1-11,2055,漁場,VEX,VEX,,,,画像10: #8061 X:524 Y:974 Lv5
+owned_key_not_in_template,中央:中央-1-12,2041,漁場,VEX,VEX,,,,OCR IMG_0446.PNG / #8061 X:574 Y:974 Lv.5 / 中立/未登録→VEX
+owned_key_not_in_template,中央:中央-1-13,2031,漁場,KTVS,KTVS,,,,"OCR IMG_0525.PNG / #8061 X:624 Y:974 Lv.5 / 中立/未登録 -> KTVS
+重複整理 2026/05/23: 旧行140(MOn / 2026/05/20 04:10)を最新行422(KTVS / 2026/05/21 11:07)へ統合"
+owned_key_not_in_template,中央:中央-1-14,2028,漁場,4tH,4tH,,,,OCR IMG_0526.PNG / #8061 X:674 Y:974 Lv.5 / 中立/未登録 -> 4tH
+owned_key_not_in_template,中央:中央-1-15,2026,漁場,AoW,AoW,,,,Dropbox red OCR IMG_1922.PNG / #8061 X:724 Y:974 Lv.5 漁場 / OCR+Paddle checked
+owned_key_not_in_template,中央:中央-1-16,2004,漁場,TkTk,TkTk,,,,手入力ログ 2026/05/27 23:46 / #8061 X:774 Y:974 Lv.5 漁場 / BHE -> TkTk / 奪取
+owned_key_not_in_template,中央:中央-1-17,1954,漁場,Lghs,Lghs,,,,赤字OCR IMG_0872.PNG / #8061 X:824 Y:974 Lv.5 / MOn -> Lghs
+owned_key_not_in_template,中央:中央-1-18,1974,漁場,JDX,JDX,,,,Dropbox赤字OCR IMG_1272.PNG / #8061 X:874 Y:974 Lv.5 漁場 / MOn -> JDX / 画像内時刻で補正（23:51->23:46） / 奪取
+owned_key_not_in_template,中央:中央-1-19,1957,漁場,one,one,,,,"赤字OCR IMG_0753.PNG / #8061 X:924 Y:974 Lv.5 / FHX -> FHX
+2026/05/28 02:40 サイドバー: 所有変更 FHX -> one"
+owned_key_not_in_template,中央:中央-1-2,2082,漁場,476B,476B,,,,画像2/14: #8061 X:74 Y:974 Lv5
+owned_key_not_in_template,中央:中央-1-20,2083,漁場,Lghs,Lghs,,,,画像2/11: #8061 X:974 Y:974 Lv5
+owned_key_not_in_template,中央:中央-1-3,2078,漁場,476d,476d,,,,追加画像4: #8061 X:124 Y:974 Lv5
+owned_key_not_in_template,中央:中央-1-4,2008,漁場,476C,476C,,,,"OCR IMG_0548.PNG / #8061 X:174 Y:974 Lv.5 / 中立/放棄 -> 476C
+重複整理 2026/05/23: 旧行145(KTVS / 放棄 2026/05/20 11:00)を最新行448(476C / 2026/05/21 23:04)へ統合"
+owned_key_not_in_template,中央:中央-1-5,2079,漁場,VEX,VEX,,,,画像5/16: #8061 X:224 Y:974 Lv5
+owned_key_not_in_template,中央:中央-1-6,2066,漁場,KOCH,KOCH,,,,Dropbox red OCR IMG_1915.PNG / #8061 X:274 Y:974 Lv.5 漁場 / OCR+Paddle checked
+owned_key_not_in_template,中央:中央-1-7,2005,漁場,KOCH,KOCH,,,,Dropbox red OCR IMG_1923.PNG / #8061 X:324 Y:974 Lv.5 漁場 / OCR+Paddle checked
+owned_key_not_in_template,中央:中央-1-8,2057,漁場,476Z,476Z,,,,画像9: #8061 X:374 Y:974 Lv5
+owned_key_not_in_template,中央:中央-1-9,2052,漁場,476A,476A,,,,画像13: #8061 X:424 Y:974 Lv5
+owned_key_not_in_template,中央:中央-10-15,1820,祭壇,GX99,GX99,,,,グレー吹き出しOCR IMG_1136.PNG / #8061 X:724 Y:524 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-10-16,1821,祭壇,Lghs,Lghs,,,,グレー吹き出しOCR IMG_1127.PNG / #8061 X:774 Y:524 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-10-17,1822,祭壇,COZy,COZy,,,,グレー吹き出しOCR IMG_1137.PNG / #8061 X:824 Y:524 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-10-18,2016,漁場,GcC,GcC,,,,OCR IMG_0537.PNG / #8061 X:874 Y:524 Lv.7 / 中立/未登録 -> GcC
+owned_key_not_in_template,中央:中央-10-19,2014,漁場,GoDs,GoDs,,,,OCR IMG_0538.PNG / #8061 X:924 Y:524 Lv.6 / 中立/未登録 -> GoDs
+owned_key_not_in_template,中央:中央-10-20,2000,漁場,AAOA,AAOA,,,,OCR IMG_0563.PNG / #8061 X:974 Y:524 Lv.5 / 中立/未登録 -> AAOA
+owned_key_not_in_template,中央:中央-10-3,1914,漁場,WUG,WUG,,,,RAW_OCR_LOG row19 / #8061 X:124 Y:524 Lv.7 漁場 / 中立/未登録 -> WUG / 画像:89BF5F89
+owned_key_not_in_template,中央:中央-10-4,1823,祭壇,476T,476T,,,,グレー吹き出しOCR IMG_1135.PNG / #8061 X:174 Y:524 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-10-5,1824,祭壇,476T,476T,,,,グレー吹き出しOCR IMG_1139.PNG / #8061 X:224 Y:524 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-10-6,1808,祭壇,476T,476T,,,,グレー吹き出しOCR IMG_1142.PNG / #8061 X:274 Y:524 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-11-15,1776,祭壇,AAOA,AAOA,,,,RAW_OCR_LOG row56 / #8061 X:724 Y:474 Lv.2 こだまの祭壇 / 中立/未登録 -> AAOA / 画像:D1EB3C7D
+owned_key_not_in_template,中央:中央-11-16,1825,祭壇,TkTk,TkTk,,,,RAW_OCR_LOG row49 / #8061 X:774 Y:474 Lv.2 こだまの祭壇 / 中立/未登録 -> TkTk / 画像:BBE70268
+owned_key_not_in_template,中央:中央-11-17,1777,祭壇,WbW,WbW,,,,RAW_OCR_LOG row54 / #8061 X:824 Y:474 Lv.1 どくろの祭壇 / 中立/未登録 -> WbW / 画像:D1EB3C7D
+owned_key_not_in_template,中央:中央-11-18,2017,漁場,BAJ,BAJ,,,,OCR IMG_0536.PNG / #8061 X:874 Y:474 Lv.7 / 中立/未登録 -> BAJ / BAj→BAJ
+owned_key_not_in_template,中央:中央-11-19,1999,漁場,AAOA,AAOA,,,,OCR IMG_0564.PNG / #8061 X:924 Y:474 Lv.6 / 中立/未登録 -> AAOA
+owned_key_not_in_template,中央:中央-11-2,1915,漁場,fIrE,fIrE,,,,RAW_OCR_LOG row16 / #8061 X:74 Y:474 Lv.6 漁場 / 中立/未登録 -> fIrE / 画像:9C4193FD
+owned_key_not_in_template,中央:中央-11-20,2012,漁場,PmP,PmP,,,,OCR IMG_0543.PNG / #8061 X:974 Y:474 Lv.5 / 中立/未登録 -> PmP
+owned_key_not_in_template,中央:中央-11-4,1826,祭壇,SHA0,SHA0,,,,グレー吹き出しOCR IMG_1137.PNG / #8061 X:174 Y:474 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-11-5,1809,祭壇,MOE,MOE,,,,グレー吹き出しOCR IMG_1141.PNG / #8061 X:224 Y:474 Lv.2 祭壇 / 画像内表示
+owned_key_not_in_template,中央:中央-11-6,1827,祭壇,2N7,2N7,,,,グレー吹き出しOCR IMG_1131.PNG / #8061 X:274 Y:474 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-12-1,2107,漁場,476X,476X,,,,動画OCR 20260529_214926_trim15 crop_0179.png / #8061 X:24 Y:424 Lv.5 漁場 / 中立/未登録 -> 476X / 時刻は前後スクショから推定（18:37以降、19:20前）
+owned_key_not_in_template,中央:中央-12-15,1778,祭壇,WbW,WbW,,,,RAW_OCR_LOG row55 / #8061 X:724 Y:424 Lv.2 こだまの祭壇 / 中立/未登録 -> WbW / 画像:D1EB3C7D
+owned_key_not_in_template,中央:中央-12-16,1828,祭壇,BgNa,BgNa,,,,グレー吹き出しOCR IMG_1127.PNG / #8061 X:774 Y:424 Lv.1 祭壇 / 時刻は前後スクショから推定 / OCR補正:BqNa->BgNa
+owned_key_not_in_template,中央:中央-12-17,1829,祭壇,PmP,PmP,,,,グレー吹き出しOCR IMG_1132.PNG / #8061 X:824 Y:424 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-12-18,2019,漁場,AAOA,AAOA,,,,Dropbox赤字OCR IMG_1275.PNG / #8061 X:874 Y:424 Lv.7 漁場 / BAJ -> AAOA
+owned_key_not_in_template,中央:中央-12-19,1989,漁場,BgNa,BgNa,,,,手入力ログ 2026/05/28 12:20 / #8061 X:924 Y:424 Lv.6 漁場 / GcC -> BgNa
+owned_key_not_in_template,中央:中央-12-2,1935,漁場,WUG,WUG,,,,手入力ログ 2026/05/24 18:31 / #8061 X:74 Y:424 Lv.6 漁場 / 中立/未登録 -> WUG
+owned_key_not_in_template,中央:中央-12-20,2024,漁場,PmP,PmP,,,,OCR IMG_0528.PNG / #8061 X:974 Y:424 Lv.5 / 中立/未登録 -> PmP
+owned_key_not_in_template,中央:中央-12-3,1939,漁場,476M,476M,,,,手入力ログ 2026/05/24 16:08 / #8061 X:124 Y:424 Lv.7 漁場 / 中立/未登録 -> 476M
+owned_key_not_in_template,中央:中央-12-4,1830,祭壇,SHA0,SHA0,,,,グレー吹き出しOCR IMG_1134.PNG / #8061 X:174 Y:424 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-12-5,1792,祭壇,WUG,WUG,,,,グレー吹き出しOCR IMG_1148.PNG / #8061 X:224 Y:424 Lv.1 祭壇 / 画像内表示
+owned_key_not_in_template,中央:中央-12-6,1795,祭壇,2N7,2N7,,,,グレー吹き出しOCR IMG_1145.PNG / #8061 X:274 Y:424 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-13-1,2116,漁場,476M,476M,,,,Dropbox赤字OCR IMG_1328.PNG / #8061 X:24 Y:374 Lv.5 漁場 / 中立/未登録 -> 476M
+owned_key_not_in_template,中央:中央-13-15,1810,祭壇,Digg,Digg,,,,グレー吹き出しOCR IMG_1141.PNG / #8061 X:724 Y:374 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-13-16,1831,祭壇,TkTk,TkTk,,,,グレー吹き出しOCR IMG_1134.PNG / #8061 X:774 Y:374 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-13-17,1832,祭壇,AAOA,AAOA,,,,グレー吹き出しOCR IMG_1133.PNG / #8061 X:824 Y:374 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-13-18,2020,漁場,GcC,GcC,,,,OCR IMG_0534.PNG / #8061 X:874 Y:374 Lv.7 / 中立/未登録 -> GcC
+owned_key_not_in_template,中央:中央-13-19,1977,漁場,BAJ,BAJ,,,,赤字OCR IMG_0631.PNG / #8061 X:924 Y:374 Lv.6 / 中立/未登録 -> BAJ
+owned_key_not_in_template,中央:中央-13-2,1936,漁場,fIrE,fIrE,,,,手入力ログ 2026/05/24 18:20 / #8061 X:74 Y:374 Lv.6 漁場 / 中立/未登録 -> fIrE
+owned_key_not_in_template,中央:中央-13-20,2072,漁場,BgNa,BgNa,,,,追加画像7: #8061 X:974 Y:374 Lv5
+owned_key_not_in_template,中央:中央-13-3,1940,漁場,476X,476X,,,,手入力ログ 2026/05/24 15:26 / #8061 X:124 Y:374 Lv.7 漁場 / 中立/未登録 -> 476X
+owned_key_not_in_template,中央:中央-13-4,1833,祭壇,SHA0,SHA0,,,,グレー吹き出しOCR IMG_1138.PNG / #8061 X:174 Y:374 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-13-5,1834,祭壇,89M,89M,,,,グレー吹き出しOCR IMG_1135.PNG / #8061 X:224 Y:374 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-13-6,1835,祭壇,89M,89M,,,,グレー吹き出しOCR IMG_1124.PNG / #8061 X:274 Y:374 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-14-1,2125,漁場,476X,476X,,,,Dropbox赤字OCR IMG_1328.PNG / #8061 X:24 Y:324 Lv.5 漁場 / 中立/未登録 -> 476X
+owned_key_not_in_template,中央:中央-14-14,1836,祭壇,GoDs,GoDs,,,,グレー吹き出しOCR IMG_1132.PNG / #8061 X:674 Y:324 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-14-15,1837,祭壇,BgNa,BgNa,,,,グレー吹き出しOCR IMG_1140.PNG / #8061 X:724 Y:324 Lv.2 祭壇 / 時刻は前後スクショから推定 / OCR補正:BqNa->BgNa
+owned_key_not_in_template,中央:中央-14-16,1796,祭壇,TkTk,TkTk,,,,グレー吹き出しOCR IMG_1145.PNG / #8061 X:774 Y:324 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-14-17,1779,祭壇,RCON,RCON,,,,RAW_OCR_LOG row59 / #8061 X:824 Y:324 Lv.1 どくろの祭壇 / 中立/未登録 -> RCON / 画像:1505E4F4
+owned_key_not_in_template,中央:中央-14-18,1928,漁場,SsQ,SsQ,,,,手入力ログ 2026/05/25 05:06 / #8061 X:874 Y:324 Lv.7 漁場 / GcC -> SsQ
+owned_key_not_in_template,中央:中央-14-19,1971,漁場,GcC,GcC,,,,赤字OCR IMG_0638.PNG / #8061 X:924 Y:324 Lv.6 / 中立/未登録 -> GcC
+owned_key_not_in_template,中央:中央-14-2,1941,漁場,476X,476X,,,,手入力ログ 2026/05/24 15:08 / #8061 X:74 Y:324 Lv.6 漁場 / 中立/未登録 -> 476X
+owned_key_not_in_template,中央:中央-14-20,1927,漁場,SsQ,SsQ,,,,手入力ログ 2026/05/25 05:18 / #8061 X:974 Y:324 Lv.5 漁場 / BAJ -> SsQ
+owned_key_not_in_template,中央:中央-14-3,1937,漁場,WUG,WUG,,,,手入力ログ 2026/05/24 18:14 / #8061 X:124 Y:324 Lv.7 漁場 / 中立/未登録 -> WUG
+owned_key_not_in_template,中央:中央-14-4,1797,祭壇,SHA,SHA,,,,グレー吹き出しOCR IMG_1146.PNG / #8061 X:174 Y:324 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-14-5,1838,祭壇,MOE,MOE,,,,グレー吹き出しOCR IMG_1130.PNG / #8061 X:224 Y:324 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-14-6,1839,祭壇,MOE,MOE,,,,グレー吹き出しOCR IMG_1139.PNG / #8061 X:274 Y:324 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-14-7,1840,祭壇,fIrE,fIrE,,,,グレー吹き出しOCR IMG_1132.PNG / #8061 X:324 Y:324 Lv.2 祭壇 / 時刻は前後スクショから推定 / OCR補正:frE->fIrE
+owned_key_not_in_template,中央:中央-15-1,2132,漁場,476X,476X,,,,Dropbox赤字OCR IMG_1328.PNG / #8061 X:24 Y:274 Lv.5 漁場 / 中立/未登録 -> 476X
+owned_key_not_in_template,中央:中央-15-10,1841,祭壇,JL0,JL0,,,,RAW_OCR_LOG row48 / #8061 X:474 Y:274 Lv.2 こだまの祭壇 / 中立/未登録 -> JL0 / 画像:BBE70268
+owned_key_not_in_template,中央:中央-15-11,1842,祭壇,BAJ,BAJ,,,,グレー吹き出しOCR IMG_1126.PNG / #8061 X:524 Y:274 Lv.2 祭壇 / 時刻は前後スクショから推定 / OCR補正:BAI->BAJ
+owned_key_not_in_template,中央:中央-15-12,1843,祭壇,GcC,GcC,,,,グレー吹き出しOCR IMG_1127.PNG / #8061 X:574 Y:274 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-15-13,1844,祭壇,BHE,BHE,,,,グレー吹き出しOCR IMG_1123.PNG / #8061 X:624 Y:274 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-15-14,1845,祭壇,MOn,MOn,,,,RAW_OCR_LOG row44 / #8061 X:674 Y:274 Lv.2 こだまの祭壇 / 中立/未登録 -> MOn / OCR補正:M0n->MOn / 画像:1EFAEC65
+owned_key_not_in_template,中央:中央-15-15,1846,祭壇,RCON,RCON,,,,グレー吹き出しOCR IMG_1122.PNG / #8061 X:724 Y:274 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-15-16,1804,祭壇,MtG,MtG,,,,グレー吹き出しOCR IMG_1143.PNG / #8061 X:774 Y:274 Lv.1 祭壇 / 画像内表示
+owned_key_not_in_template,中央:中央-15-17,1847,祭壇,DaNG,DaNG,,,,グレー吹き出しOCR IMG_1133.PNG / #8061 X:824 Y:274 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-15-18,1944,漁場,TaW,TaW,,,,赤字OCR IMG_0907.PNG / #8061 X:874 Y:274 Lv.7 / GcC -> TaW
+owned_key_not_in_template,中央:中央-15-19,1966,漁場,PmP,PmP,,,,赤字OCR IMG_0644.PNG / #8061 X:924 Y:274 Lv.6 / 中立/未登録 -> PmP / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-15-2,1975,漁場,476X,476X,,,,赤字OCR IMG_0632.PNG / #8061 X:74 Y:274 Lv.6 / 中立/未登録 -> 476X
+owned_key_not_in_template,中央:中央-15-20,1969,漁場,CDf8,CDf8,,,,赤字OCR IMG_0639.PNG / #8061 X:974 Y:274 Lv.5 / 中立/未登録 -> CDf8
+owned_key_not_in_template,中央:中央-15-3,1938,漁場,fIrE,fIrE,,,,手入力ログ 2026/05/24 18:06 / #8061 X:124 Y:274 Lv.7 漁場 / 中立/未登録 -> fIrE
+owned_key_not_in_template,中央:中央-15-4,1780,祭壇,JL2,JL2,,,,グレー吹き出しOCR IMG_1149.PNG / #8061 X:174 Y:274 Lv.1 祭壇 / 画像内表示 / OCR補正:IL2->JL2
+owned_key_not_in_template,中央:中央-15-5,1781,祭壇,DaNG,DaNG,,,,グレー吹き出しOCR IMG_1150.PNG / #8061 X:224 Y:274 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-15-6,1805,祭壇,NBNH,NBNH,,,,グレー吹き出しOCR IMG_1144.PNG / #8061 X:274 Y:274 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-15-7,1848,祭壇,4tH,4tH,,,,グレー吹き出しOCR IMG_1123.PNG / #8061 X:324 Y:274 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-15-8,1849,祭壇,nO9,nO9,,,,グレー吹き出しOCR IMG_1126.PNG / #8061 X:374 Y:274 Lv.2 祭壇 / 時刻は前後スクショから推定 / OCR補正:n09->nO9
+owned_key_not_in_template,中央:中央-15-9,1798,祭壇,fIrE,fIrE,,,,グレー吹き出しOCR IMG_1146.PNG / #8061 X:424 Y:274 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-16-1,2133,漁場,476M,476M,,,,Dropbox赤字OCR IMG_1328.PNG / #8061 X:24 Y:224 Lv.5 漁場 / 中立/未登録 -> 476M
+owned_key_not_in_template,中央:中央-16-10,1850,祭壇,WUG,WUG,,,,グレー吹き出しOCR IMG_1140.PNG / #8061 X:474 Y:224 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-16-11,1851,祭壇,SsQ,SsQ,,,,RAW_OCR_LOG row47 / #8061 X:524 Y:224 Lv.2 こだまの祭壇 / 中立/未登録 -> SsQ / 画像:1EFAEC65
+owned_key_not_in_template,中央:中央-16-12,1852,祭壇,BAJ,BAJ,,,,RAW_OCR_LOG row43 / #8061 X:574 Y:224 Lv.1 どくろの祭壇 / 中立/未登録 -> BAJ / 画像:1EFAEC65
+owned_key_not_in_template,中央:中央-16-13,1853,祭壇,GcC,GcC,,,,グレー吹き出しOCR IMG_1132.PNG / #8061 X:624 Y:224 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-16-14,1854,祭壇,MOn,MOn,,,,グレー吹き出しOCR IMG_1135.PNG / #8061 X:674 Y:224 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-16-15,1855,祭壇,CDf8,CDf8,,,,グレー吹き出しOCR IMG_1130.PNG / #8061 X:724 Y:224 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-16-16,1782,祭壇,SVa,SVa,,,,グレー吹き出しOCR IMG_1149.PNG / #8061 X:774 Y:224 Lv.1 祭壇 / 画像内表示
+owned_key_not_in_template,中央:中央-16-17,1856,祭壇,TrX,TrX,,,,グレー吹き出しOCR IMG_1122.PNG / #8061 X:824 Y:224 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-16-18,1947,漁場,PmP,PmP,,,,赤字OCR IMG_0906.PNG / #8061 X:874 Y:224 Lv.7 / BAJ -> PmP
+owned_key_not_in_template,中央:中央-16-19,1946,漁場,CDf8,CDf8,,,,赤字OCR IMG_0907.PNG / #8061 X:924 Y:224 Lv.6 / 中立/未登録 -> CDf8
+owned_key_not_in_template,中央:中央-16-2,1981,漁場,WUG,WUG,,,,赤字OCR IMG_0578.PNG / #8061 X:74 Y:224 Lv.6 / 中立/未登録 -> WUG
+owned_key_not_in_template,中央:中央-16-20,1942,漁場,AAOA,AAOA,,,,赤字OCR IMG_0908.PNG / #8061 X:974 Y:224 Lv.5 / 中立/未登録 -> AAOA
+owned_key_not_in_template,中央:中央-16-3,1986,漁場,476M,476M,,,,赤字OCR IMG_0575.PNG / #8061 X:124 Y:224 Lv.7 / 中立/未登録 -> 476M
+owned_key_not_in_template,中央:中央-16-4,1793,祭壇,JL2,JL2,,,,グレー吹き出しOCR IMG_1148.PNG / #8061 X:174 Y:224 Lv.1 祭壇 / 画像内表示 / OCR補正:IL2->JL2
+owned_key_not_in_template,中央:中央-16-5,1783,祭壇,EDFS,EDFS,,,,グレー吹き出しOCR IMG_1149.PNG / #8061 X:224 Y:224 Lv.1 祭壇 / 画像内表示
+owned_key_not_in_template,中央:中央-16-6,1857,祭壇,NBNH,NBNH,,,,グレー吹き出しOCR IMG_1124.PNG / #8061 X:274 Y:224 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-16-7,1858,祭壇,4tH,4tH,,,,グレー吹き出しOCR IMG_1137.PNG / #8061 X:324 Y:224 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-16-8,1859,祭壇,nO9,nO9,,,,グレー吹き出しOCR IMG_1134.PNG / #8061 X:374 Y:224 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-16-9,1799,祭壇,BAJ,BAJ,,,,グレー吹き出しOCR IMG_1146.PNG / #8061 X:424 Y:224 Lv.1 祭壇 / 時刻は前後スクショから推定 / OCR補正:BAI->BAJ
+owned_key_not_in_template,中央:中央-17-1,1916,漁場,WUG,WUG,,,,RAW_OCR_LOG row17 / #8061 X:24 Y:174 Lv.5 漁場 / 中立/未登録 -> WUG / 画像:9C4193FD
+owned_key_not_in_template,中央:中央-17-10,1806,祭壇,SsQ,SsQ,,,,グレー吹き出しOCR IMG_1144.PNG / #8061 X:474 Y:174 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-17-11,1860,祭壇,SsQ,SsQ,,,,グレー吹き出しOCR IMG_1134.PNG / #8061 X:524 Y:174 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-17-12,1861,祭壇,BHE,BHE,,,,グレー吹き出しOCR IMG_1137.PNG / #8061 X:574 Y:174 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-17-13,1862,祭壇,EDFS,EDFS,,,,グレー吹き出しOCR IMG_1123.PNG / #8061 X:624 Y:174 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-17-14,1863,祭壇,K4TR,K4TR,,,,グレー吹き出しOCR IMG_1138.PNG / #8061 X:674 Y:174 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-17-15,1864,祭壇,CDf8,CDf8,,,,グレー吹き出しOCR IMG_1136.PNG / #8061 X:724 Y:174 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-17-16,1865,祭壇,IMP,IMP,,,,グレー吹き出しOCR IMG_1133.PNG / #8061 X:774 Y:174 Lv.1 祭壇 / 時刻は前後スクショから推定 / OCR補正:IMp->IMP
+owned_key_not_in_template,中央:中央-17-17,1953,漁場,DaNG,DaNG,,,,赤字OCR IMG_0878.PNG / #8061 X:824 Y:174 Lv.7 / 中立/未登録 -> DaNG
+owned_key_not_in_template,中央:中央-17-18,1948,漁場,BgNa,BgNa,,,,赤字OCR IMG_0905.PNG / #8061 X:874 Y:174 Lv.7 / BAJ -> BgNa
+owned_key_not_in_template,中央:中央-17-19,1945,漁場,PmP,PmP,,,,赤字OCR IMG_0908.PNG / #8061 X:924 Y:174 Lv.6 / 中立/未登録 -> PmP
+owned_key_not_in_template,中央:中央-17-2,1982,漁場,fIrE,fIrE,,,,赤字OCR IMG_0578.PNG / #8061 X:74 Y:174 Lv.6 / 中立/未登録 -> fIrE
+owned_key_not_in_template,中央:中央-17-20,1917,漁場,BgNa,BgNa,,,,赤字OCR IMG_1090.PNG / #8061 X:974 Y:174 Lv.5 漁場 / 中立/未登録 -> BgNa
+owned_key_not_in_template,中央:中央-17-3,1987,漁場,476X,476X,,,,赤字OCR IMG_0575.PNG / #8061 X:124 Y:174 Lv.7 / 中立/未登録 -> 476X
+owned_key_not_in_template,中央:中央-17-4,1990,漁場,JLO,JLO,,,,OCR IMG_0570.PNG / #8061 X:174 Y:174 Lv.7 / 中立/未登録 -> JLO
+owned_key_not_in_template,中央:中央-17-5,1784,祭壇,FHX,FHX,,,,グレー吹き出しOCR IMG_1149.PNG / #8061 X:224 Y:174 Lv.1 祭壇 / 画像内表示
+owned_key_not_in_template,中央:中央-17-6,1866,祭壇,NBNH,NBNH,,,,グレー吹き出しOCR IMG_1130.PNG / #8061 X:274 Y:174 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-17-7,1867,祭壇,u3o,u3o,,,,グレー吹き出しOCR IMG_1137.PNG / #8061 X:324 Y:174 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-17-8,1811,祭壇,JL0,JL0,,,,グレー吹き出しOCR IMG_1143.PNG / #8061 X:374 Y:174 Lv.1 祭壇 / 時刻は前後スクショから推定 / OCR補正:ILO0->JL0
+owned_key_not_in_template,中央:中央-17-9,1868,祭壇,2N7,2N7,,,,グレー吹き出しOCR IMG_1133.PNG / #8061 X:424 Y:174 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-18-1,1919,漁場,476X,476X,,,,赤字OCR IMG_1087.PNG / #8061 X:24 Y:124 Lv.5 漁場 / 中立/未登録 -> 476X / 画像内時刻で補正（23:11->23:04）
+owned_key_not_in_template,中央:中央-18-10,1933,漁場,JL0,JL0,,,,手入力ログ 2026/05/25 00:28 / #8061 X:474 Y:124 Lv.7 漁場 / 中立/未登録 -> JL0
+owned_key_not_in_template,中央:中央-18-11,1931,漁場,2N7,2N7,,,,手入力ログ 2026/05/25 03:16 / #8061 X:524 Y:124 Lv.7 漁場 / 中立/未登録 -> 2N7
+owned_key_not_in_template,中央:中央-18-12,1943,漁場,DaNG,DaNG,,,,赤字OCR IMG_0908.PNG / #8061 X:574 Y:124 Lv.7 / 中立/未登録 -> DaNG
+owned_key_not_in_template,中央:中央-18-13,2021,漁場,SVa,SVa,,,,OCR IMG_0529.PNG / #8061 X:624 Y:124 Lv.7 / 中立/未登録 -> SVa
+owned_key_not_in_template,中央:中央-18-14,1988,漁場,SVa,SVa,,,,OCR IMG_0571.PNG / #8061 X:674 Y:124 Lv.7 / 中立/未登録 -> SVa
+owned_key_not_in_template,中央:中央-18-15,1976,漁場,DaNG,DaNG,,,,赤字OCR IMG_0632.PNG / #8061 X:724 Y:124 Lv.7 / 中立/未登録 -> DaNG
+owned_key_not_in_template,中央:中央-18-16,1967,漁場,SVa,SVa,,,,赤字OCR IMG_0643.PNG / #8061 X:774 Y:124 Lv.7 / 中立/未登録 -> SVa
+owned_key_not_in_template,中央:中央-18-17,1952,漁場,SVa,SVa,,,,赤字OCR IMG_0879.PNG / #8061 X:824 Y:124 Lv.7 / 中立/未登録 -> SVa
+owned_key_not_in_template,中央:中央-18-18,1949,漁場,WbW,WbW,,,,赤字OCR IMG_0903.PNG / #8061 X:874 Y:124 Lv.7 / GcC -> WbW
+owned_key_not_in_template,中央:中央-18-19,1922,漁場,AAOA,AAOA,,,,手入力ログ 2026/05/25 16:50 / #8061 X:924 Y:124 Lv.6 漁場 / 放棄(元BAJ) -> AAOA
+owned_key_not_in_template,中央:中央-18-2,1983,漁場,WUG,WUG,,,,赤字OCR IMG_0578.PNG / #8061 X:74 Y:124 Lv.6 / 中立/未登録 -> WUG
+owned_key_not_in_template,中央:中央-18-20,1911,漁場,BgNa,BgNa,,,,RAW_OCR_LOG row25 / #8061 X:974 Y:124 Lv.5 漁場 / BgNa -> BgNa / 画像:D5D4691D
+owned_key_not_in_template,中央:中央-18-3,1980,漁場,EDFS,EDFS,,,,Dropbox red OCR IMG_1917.PNG / #8061 X:124 Y:124 Lv.7 漁場 / OCR+Paddle checked
+owned_key_not_in_template,中央:中央-18-4,2009,漁場,476X,476X,,,,OCR IMG_0548.PNG / #8061 X:174 Y:124 Lv.7 / 中立/未登録 -> 476X
+owned_key_not_in_template,中央:中央-18-5,1993,漁場,2N7,2N7,,,,OCR IMG_0568.PNG / #8061 X:224 Y:124 Lv.7 / 中立/未登録 -> 2N7
+owned_key_not_in_template,中央:中央-18-6,1996,漁場,2N7,2N7,,,,OCR IMG_0567.PNG / #8061 X:274 Y:124 Lv.7 / 中立/未登録 -> 2N7
+owned_key_not_in_template,中央:中央-18-7,1997,漁場,JL2,JL2,,,,OCR IMG_0567.PNG / #8061 X:324 Y:124 Lv.7 / 中立/未登録 -> JL2
+owned_key_not_in_template,中央:中央-18-8,1992,漁場,JLO,JLO,,,,OCR IMG_0569.PNG / #8061 X:374 Y:124 Lv.7 / 中立/未登録 -> JLO
+owned_key_not_in_template,中央:中央-18-9,1968,漁場,2N7,2N7,,,,赤字OCR IMG_0642.PNG / #8061 X:424 Y:124 Lv.7 / 中立/未登録 -> 2N7
+owned_key_not_in_template,中央:中央-19-1,1923,漁場,476X,476X,,,,手入力ログ 2026/05/25 15:09 / #8061 X:24 Y:74 Lv.5 漁場 / 中立/未登録 -> 476X
+owned_key_not_in_template,中央:中央-19-10,1925,漁場,DaNG,DaNG,,,,手入力ログ 2026/05/25 13:08 / #8061 X:474 Y:74 Lv.6 漁場 / 中立/未登録 -> DaNG
+owned_key_not_in_template,中央:中央-19-11,1926,漁場,DaNG,DaNG,,,,手入力ログ 2026/05/25 10:49 / #8061 X:524 Y:74 Lv.6 漁場 / 中立/未登録 -> DaNG
+owned_key_not_in_template,中央:中央-19-12,2022,漁場,DaNG,DaNG,,,,OCR IMG_0529.PNG / #8061 X:574 Y:74 Lv.6 / 中立/未登録 -> DaNG
+owned_key_not_in_template,中央:中央-19-13,2029,漁場,SVa,SVa,,,,OCR IMG_0526.PNG / #8061 X:624 Y:74 Lv.6 / 中立/未登録 -> SVa
+owned_key_not_in_template,中央:中央-19-14,1930,漁場,SVa,SVa,,,,手入力ログ 2026/05/25 03:42 / #8061 X:674 Y:74 Lv.6 漁場 / 中立/未登録 -> SVa
+owned_key_not_in_template,中央:中央-19-15,1991,漁場,SVa,SVa,,,,手入力ログ 2026/05/28 11:25 / #8061 X:724 Y:74 Lv.6 漁場 / WbW -> SVa
+owned_key_not_in_template,中央:中央-19-16,1929,漁場,SVa,SVa,,,,手入力ログ 2026/05/25 04:12 / #8061 X:774 Y:74 Lv.6 漁場 / 中立/未登録 -> SVa
+owned_key_not_in_template,中央:中央-19-17,1950,漁場,BgNa,BgNa,,,,赤字OCR IMG_0903.PNG / #8061 X:824 Y:74 Lv.6 / 中立/未登録 -> BgNa
+owned_key_not_in_template,中央:中央-19-18,1970,漁場,CDf8,CDf8,,,,赤字OCR IMG_0639.PNG / #8061 X:874 Y:74 Lv.6 / 中立/未登録 -> CDf8
+owned_key_not_in_template,中央:中央-19-19,1924,漁場,AAOA,AAOA,,,,手入力ログ 2026/05/25 13:20 / #8061 X:924 Y:74 Lv.6 漁場 / WbW -> AAOA
+owned_key_not_in_template,中央:中央-19-2,1984,漁場,fIrE,fIrE,,,,赤字OCR IMG_0578.PNG / #8061 X:74 Y:74 Lv.6 / 中立/未登録 -> fIrE
+owned_key_not_in_template,中央:中央-19-20,1910,漁場,WbW,WbW,,,,RAW_OCR_LOG row26 / #8061 X:974 Y:74 Lv.5 漁場 / 放棄(元BAJ) -> WbW / 画像:501C8E1B
+owned_key_not_in_template,中央:中央-19-3,2045,漁場,EDFS,EDFS,,,,Dropbox赤字OCR IMG_1592.PNG / #8061 X:124 Y:74 Lv.6 漁場 / 476X -> EDFS
+owned_key_not_in_template,中央:中央-19-4,2043,漁場,NBNH,NBNH,,,,OCR IMG_0375.PNG / #8061 X:174 Y:74 Lv.6
+owned_key_not_in_template,中央:中央-19-5,1985,漁場,476M,476M,,,,赤字OCR IMG_0577.PNG / #8061 X:224 Y:74 Lv.6 / 中立/未登録 -> 476M
+owned_key_not_in_template,中央:中央-19-6,2044,漁場,2N7,2N7,,,,Dropbox赤字OCR IMG_1478.PNG / #8061 X:274 Y:74 Lv.6 漁場 / 中立/未登録 -> 2N7
+owned_key_not_in_template,中央:中央-19-7,2060,漁場,JLO,JLO,,,,画像5: #8061 X:324 Y:74 Lv6（連盟名JLOは画像読取）
+owned_key_not_in_template,中央:中央-19-8,1995,漁場,JL2,JL2,,,,OCR IMG_0567.PNG / #8061 X:374 Y:74 Lv.6 / 中立/未登録 -> JL2
+owned_key_not_in_template,中央:中央-19-9,1934,漁場,JL0,JL0,,,,手入力ログ 2026/05/25 00:13 / #8061 X:424 Y:74 Lv.6 漁場 / 中立/未登録 -> JL0
+owned_key_not_in_template,中央:中央-2-12,2042,漁場,BHE,BHE,,,,Dropbox赤字OCR IMG_1450.PNG / 中央 X:574 Y:924 Lv.6 漁場 / KTVS -> BHE / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-2-13,2032,漁場,tWD,tWD,,,,Dropbox赤字OCR IMG_1451.PNG / 中央 X:624 Y:924 Lv.6 漁場 / 476A -> tWD / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-2-14,2035,漁場,MOn,MOn,,,,OCR IMG_0498.PNG / #8061 X:674 Y:924 Lv.6
+owned_key_not_in_template,中央:中央-2-15,2023,漁場,4tH,4tH,,,,OCR IMG_0529.PNG / #8061 X:724 Y:924 Lv.6 / 中立/未登録 -> 4tH
+owned_key_not_in_template,中央:中央-2-16,2025,漁場,476A,476A,,,,OCR IMG_0527.PNG / #8061 X:774 Y:924 Lv.6 / 中立/未登録 -> 476A
+owned_key_not_in_template,中央:中央-2-17,2003,漁場,TIKW,TIKW,,,,手入力ログ 2026/05/27 23:37 / #8061 X:824 Y:924 Lv.6 漁場 / BHE -> TIKW / 奪取
+owned_key_not_in_template,中央:中央-2-18,1955,漁場,JDX,JDX,,,,Dropbox赤字OCR IMG_1305.PNG / #8061 X:874 Y:924 Lv.6 漁場 / TIKW -> JDX / 奪取
+owned_key_not_in_template,中央:中央-2-19,2080,漁場,FHX,FHX,,,,画像3/10: #8061 X:924 Y:924 Lv6
+owned_key_not_in_template,中央:中央-2-2,2081,漁場,476C,476C,,,,追加画像3: #8061 X:74 Y:924 Lv6（前回WUGとして誤読していた箇所を補正）
+owned_key_not_in_template,中央:中央-2-20,2084,漁場,RCON,RCON,,,,画像2/8: #8061 X:974 Y:924 Lv5
+owned_key_not_in_template,中央:中央-2-3,2069,漁場,476C,476C,,,,読取ログ画像5: #8061 X:124 Y:924 Lv6
+owned_key_not_in_template,中央:中央-2-4,2077,漁場,476B,476B,,,,画像5/14: #8061 X:174 Y:924 Lv6
+owned_key_not_in_template,中央:中央-2-5,2065,漁場,476Z,476Z,,,,読取ログ画像2: #8061 X:224 Y:924 Lv6
+owned_key_not_in_template,中央:中央-2-6,2064,漁場,476Z,476Z,,,,読取ログ画像1: #8061 X:274 Y:924 Lv6
+owned_key_not_in_template,中央:中央-2-7,2058,漁場,VEX,VEX,,,,Dropbox赤字OCR IMG_1488.PNG / #8061 X:324 Y:924 Lv.6 漁場 / 中立/未登録 -> VEX
+owned_key_not_in_template,中央:中央-2-8,1772,漁場,VEX,VEX,,,,手入力ログ 2026/05/27 15:14 / #8061 X:374 Y:924 Lv.6 漁場 / 476d -> VEX
+owned_key_not_in_template,中央:中央-2-9,2053,漁場,476d,476d,,,,画像13: #8061 X:424 Y:924 Lv6
+owned_key_not_in_template,中央:中央-20-1,2075,漁場,476X,476X,,,,追加画像6: #8061 X:24 Y:24 Lv5
+owned_key_not_in_template,中央:中央-20-10,1921,漁場,2N7,2N7,,,,赤字OCR IMG_1085.PNG / #8061 X:474 Y:24 Lv.5 漁場 / 中立/未登録 -> 2N7
+owned_key_not_in_template,中央:中央-20-11,1912,漁場,2N7,2N7,,,,RAW_OCR_LOG row24 / #8061 X:524 Y:24 Lv.5 漁場 / 中立/未登録 -> 2N7 / 画像:D5D4691D
+owned_key_not_in_template,中央:中央-20-12,2040,漁場,DaNG,DaNG,,,,OCR IMG_0447.PNG / #8061 X:574 Y:24 Lv.5
+owned_key_not_in_template,中央:中央-20-13,2046,漁場,SVa,SVa,,,,OCR IMG_0372.PNG / #8061 X:624 Y:24 Lv.5
+owned_key_not_in_template,中央:中央-20-14,1775,漁場,SVa,SVa,,,,手入力ログ 2026/05/28 11:36 / #8061 X:674 Y:24 Lv.5 漁場 / WbW -> SVa
+owned_key_not_in_template,中央:中央-20-15,1908,漁場,DaNG,DaNG,,,,RAW_OCR_LOG row30 / #8061 X:724 Y:24 Lv.5 漁場 / 中立/未登録 -> DaNG / 画像:C3781790
+owned_key_not_in_template,中央:中央-20-16,1994,漁場,BgNa,BgNa,,,,OCR IMG_0568.PNG / #8061 X:774 Y:24 Lv.5 / 中立/未登録 -> BgNa
+owned_key_not_in_template,中央:中央-20-17,1774,漁場,DaNG,DaNG,,,,Dropbox赤字OCR IMG_1327.PNG / #8061 X:824 Y:24 Lv.5 漁場 / WbW -> DaNG
+owned_key_not_in_template,中央:中央-20-18,1998,漁場,Digg,Digg,,,,Dropbox red OCR IMG_1921.PNG / #8061 X:874 Y:24 Lv.5 漁場 / OCR+Paddle checked
+owned_key_not_in_template,中央:中央-20-19,2001,漁場,CDf8,CDf8,,,,OCR IMG_0557.PNG / #8061 X:924 Y:24 Lv.5 / 中立/未登録 -> CDf8
+owned_key_not_in_template,中央:中央-20-2,2070,漁場,WUG,WUG,,,,追加画像6/7: #8061 X:74 Y:24 Lv5（前回X174として誤読していた箇所を補正）
+owned_key_not_in_template,中央:中央-20-20,1920,漁場,Digg,Digg,,,,Dropbox red OCR IMG_1921.PNG / #8061 X:974 Y:24 Lv.5 漁場 / OCR+Paddle checked
+owned_key_not_in_template,中央:中央-20-3,2073,漁場,476X,476X,,,,追加画像7: #8061 X:124 Y:24 Lv5
+owned_key_not_in_template,中央:中央-20-4,2071,漁場,WUG,WUG,,,,追加画像1: #8061 X:174 Y:24 Lv5
+owned_key_not_in_template,中央:中央-20-5,2068,漁場,NBNH,NBNH,,,,読取ログ画像4: #8061 X:224 Y:24 Lv5（時刻推定）
+owned_key_not_in_template,中央:中央-20-6,2067,漁場,NBNH,NBNH,,,,読取ログ画像4: #8061 X:274 Y:24 Lv5
+owned_key_not_in_template,中央:中央-20-7,2062,漁場,EDFS,EDFS,,,,Dropbox red OCR IMG_1917.PNG / #8061 X:324 Y:24 Lv.5 漁場 / OCR+Paddle checked
+owned_key_not_in_template,中央:中央-20-8,2059,漁場,JlZ,JlZ,,,,画像6: #8061 X:374 Y:24 Lv5（連盟名JlZは画像読取）
+owned_key_not_in_template,中央:中央-20-9,1932,漁場,2N7,2N7,,,,手入力ログ 2026/05/25 01:36 / #8061 X:424 Y:24 Lv.5 漁場 / 中立/未登録 -> 2N7
+owned_key_not_in_template,中央:中央-3-1,2136,漁場,476H,476H,,,,Dropbox赤字OCR IMG_1273.PNG / #8061 X:24 Y:874 Lv.5 漁場 / 中立/未登録 -> 476H / 画像内時刻で補正（23:51->23:46）
+owned_key_not_in_template,中央:中央-3-10,1964,漁場,4tH,4tH,,,,赤字OCR IMG_0692.PNG / 中央 X:474 Y:874 Lv7 漁場 / 中立/未登録 -> 4tH
+owned_key_not_in_template,中央:中央-3-11,1965,漁場,KTVS,KTVS,,,,赤字OCR IMG_0687.PNG / 中央 X:524 Y:874 Lv7 漁場 / 中立/未登録 -> KTVS / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-3-12,2037,漁場,476A,476A,,,,OCR IMG_0482.PNG / #8061 X:574 Y:874 Lv.7
+owned_key_not_in_template,中央:中央-3-13,2034,漁場,BHE,BHE,,,,OCR IMG_0500.PNG / #8061 X:624 Y:874 Lv.7
+owned_key_not_in_template,中央:中央-3-14,2030,漁場,476d,476d,,,,OCR IMG_0525.PNG / #8061 X:674 Y:874 Lv.7 / 中立/未登録 -> 476d
+owned_key_not_in_template,中央:中央-3-15,2027,漁場,476d,476d,,,,OCR IMG_0527.PNG / #8061 X:724 Y:874 Lv.7 / 中立/未登録 -> 476d
+owned_key_not_in_template,中央:中央-3-16,2002,漁場,AoW,AoW,,,,Dropbox red OCR IMG_1922.PNG / #8061 X:774 Y:874 Lv.7 漁場 / OCR+Paddle checked
+owned_key_not_in_template,中央:中央-3-17,2007,漁場,FHX,FHX,,,,OCR IMG_0550/0551.PNG / #8061 X:824 Y:874 Lv.7 / 中立/未登録 -> FHX
+owned_key_not_in_template,中央:中央-3-18,1951,漁場,MOn,MOn,,,,赤字OCR IMG_0879.PNG / #8061 X:874 Y:874 Lv.7 / FHX -> MOn
+owned_key_not_in_template,中央:中央-3-19,1958,漁場,SsQ,SsQ,,,,赤字OCR IMG_0753.PNG / #8061 X:924 Y:874 Lv.6 / SsQ -> SsQ
+owned_key_not_in_template,中央:中央-3-20,2076,漁場,FHX,FHX,,,,追加OCR 2026/05/30 15:08 / #8061 X:974 Y:874 Lv.5 漁場 / TkTk -> FHX / 奪取
+owned_key_not_in_template,中央:中央-3-3,1978,漁場,476C,476C,,,,赤字OCR IMG_0585.PNG / #8061 X:124 Y:874 Lv.7 / 中立/未登録 -> 476C
+owned_key_not_in_template,中央:中央-3-4,2010,漁場,476Z,476Z,,,,Dropbox赤字OCR IMG_1488.PNG / #8061 X:174 Y:874 Lv.7 漁場 / 中立/未登録 -> 476Z
+owned_key_not_in_template,中央:中央-3-5,2054,漁場,VEX,VEX,,,,追加OCR 2026/05/30 15:34 / #8061 X:224 Y:874 Lv.7 漁場 / 中立/放棄 -> VEX / 放棄日時をクリア
+owned_key_not_in_template,中央:中央-3-6,1773,漁場,VEX,VEX,,,,追加OCR 2026/05/30 15:14 / #8061 X:274 Y:874 Lv.7 漁場 / 476Z -> VEX
+owned_key_not_in_template,中央:中央-3-7,1771,漁場,VEX,VEX,,,,手入力ログ 2026/05/27 15:29 / #8061 X:324 Y:874 Lv.7 漁場 / 中立/放棄 -> VEX
+owned_key_not_in_template,中央:中央-3-8,2051,漁場,476B,476B,,,,画像18: #8061 X:374 Y:874 Lv7
+owned_key_not_in_template,中央:中央-3-9,2050,漁場,476B,476B,,,,画像18: #8061 X:424 Y:874 Lv7
+owned_key_not_in_template,中央:中央-4-10,1812,祭壇,476A,476A,,,,グレー吹き出しOCR IMG_1142.PNG / #8061 X:474 Y:824 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-4-11,1869,祭壇,Lghs,Lghs,,,,グレー吹き出しOCR IMG_1126.PNG / #8061 X:524 Y:824 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-4-12,1813,祭壇,KTVS,KTVS,,,,グレー吹き出しOCR IMG_1141.PNG / #8061 X:574 Y:824 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-4-13,1870,祭壇,Stj,Stj,,,,RAW_OCR_LOG row45 / #8061 X:624 Y:824 Lv.1 どくろの祭壇 / 中立/未登録 -> Stj / 画像:1EFAEC65
+owned_key_not_in_template,中央:中央-4-14,1794,祭壇,xjR,xjR,,,,グレー吹き出しOCR IMG_1147.PNG / #8061 X:674 Y:824 Lv.1 祭壇 / 画像内表示 / OCR補正:xiR->xjR
+owned_key_not_in_template,中央:中央-4-15,1871,祭壇,fzn,fzn,,,,グレー吹き出しOCR IMG_1127.PNG / #8061 X:724 Y:824 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-4-16,1872,祭壇,JDX,JDX,,,,グレー吹き出しOCR IMG_1136.PNG / #8061 X:774 Y:824 Lv.1 祭壇 / 時刻は前後スクショから推定 / OCR補正:DX->JDX
+owned_key_not_in_template,中央:中央-4-17,2033,漁場,FHX,FHX,,,,OCR IMG_0503.PNG / #8061 X:824 Y:824 Lv.7 / FHX維持
+owned_key_not_in_template,中央:中央-4-18,2047,漁場,SsQ,SsQ,,,,新規画像1: #8061 X:874 Y:824 Lv.7
+owned_key_not_in_template,中央:中央-4-19,1956,漁場,KTVS,KTVS,,,,Dropbox赤字OCR IMG_1445.PNG / 中央 X:924 Y:824 Lv.6 漁場 / SsQ -> KTVS / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-4-2,2139,漁場,476H,476H,,,,動画OCR 20260529_214926_trim15 crop_0182.png / #8061 X:74 Y:824 Lv.6 漁場 / 中立/未登録 -> 476H
+owned_key_not_in_template,中央:中央-4-20,2074,漁場,MOn,MOn,,,,Dropbox赤字OCR IMG_1480.PNG / #8061 X:974 Y:824 Lv.5 漁場 / 中立/未登録 -> MOn
+owned_key_not_in_template,中央:中央-4-3,1918,漁場,476C,476C,,,,赤字OCR IMG_1089.PNG / #8061 X:124 Y:824 Lv.7 漁場 / 中立/未登録 -> 476C
+owned_key_not_in_template,中央:中央-4-4,1979,漁場,476H,476H,,,,Dropbox赤字OCR IMG_1488.PNG / #8061 X:174 Y:824 Lv.7 漁場 / 中立/未登録 -> 476H
+owned_key_not_in_template,中央:中央-4-5,1873,祭壇,476d,476d,,,,グレー吹き出しOCR IMG_1126.PNG / #8061 X:224 Y:824 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-4-6,1874,祭壇,476C,476C,,,,グレー吹き出しOCR IMG_1122.PNG / #8061 X:274 Y:824 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-4-7,1785,祭壇,476X,476X,,,,RAW_OCR_LOG row62 / #8061 X:324 Y:824 Lv.1 どくろの祭壇 / 中立/未登録 -> 476X / 画像:1505E4F4
+owned_key_not_in_template,中央:中央-4-8,1875,祭壇,476B,476B,,,,グレー吹き出しOCR IMG_1126.PNG / #8061 X:374 Y:824 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-4-9,1876,祭壇,476A,476A,,,,グレー吹き出しOCR IMG_1140.PNG / #8061 X:424 Y:824 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-5-1,1909,漁場,Kfk,Kfk,,,,RAW_OCR_LOG row29 / #8061 X:24 Y:774 Lv.5 漁場 / 中立/未登録 -> Kfk / 画像:0C5C35F7
+owned_key_not_in_template,中央:中央-5-10,1814,祭壇,476A,476A,,,,グレー吹き出しOCR IMG_1143.PNG / #8061 X:474 Y:774 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-5-11,1877,祭壇,Bye,Bye,,,,グレー吹き出しOCR IMG_1138.PNG / #8061 X:524 Y:774 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-5-12,1878,祭壇,Stj,Stj,,,,グレー吹き出しOCR IMG_1124.PNG / #8061 X:574 Y:774 Lv.1 祭壇 / 時刻は前後スクショから推定 / OCR補正:Sti->Stj
+owned_key_not_in_template,中央:中央-5-13,1879,祭壇,SHA,SHA,,,,グレー吹き出しOCR IMG_1131.PNG / #8061 X:624 Y:774 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-5-14,1880,祭壇,GX99,GX99,,,,グレー吹き出しOCR IMG_1130.PNG / #8061 X:674 Y:774 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-5-15,1786,祭壇,one,one,,,,RAW_OCR_LOG row58 / #8061 X:724 Y:774 Lv.1 どくろの祭壇 / 中立/未登録 -> one / 画像:1505E4F4
+owned_key_not_in_template,中央:中央-5-16,1787,祭壇,TIKW,TIKW,,,,RAW_OCR_LOG row53 / #8061 X:774 Y:774 Lv.1 どくろの祭壇 / 中立/未登録 -> TIKW / 画像:D1EB3C7D
+owned_key_not_in_template,中央:中央-5-17,1881,祭壇,Lghs,Lghs,,,,グレー吹き出しOCR IMG_1127.PNG / #8061 X:824 Y:774 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-5-18,2048,漁場,fzn,fzn,,,,Dropbox赤字OCR IMG_1650.PNG / #8061 X:874 Y:774 Lv.7 漁場 / FHX -> fzn
+owned_key_not_in_template,中央:中央-5-19,2063,漁場,TkTk,TkTk,,,,追加画像2: #8061 X:924 Y:774 Lv6
+owned_key_not_in_template,中央:中央-5-2,2140,漁場,Kfk,Kfk,,,,Dropbox赤字OCR IMG_1337.PNG / #8061 X:74 Y:774 Lv.6 漁場 / 中立/未登録 -> Kfk
+owned_key_not_in_template,中央:中央-5-20,2039,漁場,KTVS,KTVS,,,,Dropbox赤字OCR IMG_1447.PNG / 中央 X:974 Y:774 Lv.5 漁場 / MtG -> KTVS / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-5-3,2141,漁場,Kfk,Kfk,,,,Dropbox赤字OCR IMG_1650.PNG / #8061 X:124 Y:774 Lv.7 漁場 / 中立/未登録 -> Kfk
+owned_key_not_in_template,中央:中央-5-4,1882,祭壇,476M,476M,,,,グレー吹き出しOCR IMG_1123.PNG / #8061 X:174 Y:774 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-5-5,1883,祭壇,476M,476M,,,,グレー吹き出しOCR IMG_1140.PNG / #8061 X:224 Y:774 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-5-6,1884,祭壇,476d,476d,,,,グレー吹き出しOCR IMG_1132.PNG / #8061 X:274 Y:774 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-5-7,1885,祭壇,476C,476C,,,,グレー吹き出しOCR IMG_1123.PNG / #8061 X:324 Y:774 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-5-8,1886,祭壇,476X,476X,,,,グレー吹き出しOCR IMG_1130.PNG / #8061 X:374 Y:774 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-5-9,1887,祭壇,476B,476B,,,,グレー吹き出しOCR IMG_1122.PNG / #8061 X:424 Y:774 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-6-1,2142,漁場,ALj,ALj,,,,Dropbox red OCR IMG_1919.PNG / #8061 X:24 Y:724 Lv.5 漁場 / OCR+Paddle checked / time inferred from adjacent screenshots: after 04:59 and before 06:55 / ALi->ALj
+owned_key_not_in_template,中央:中央-6-10,1888,祭壇,476B,476B,,,,RAW_OCR_LOG row50 / #8061 X:474 Y:724 Lv.2 こだまの祭壇 / 中立/未登録 -> 476B / 画像:BBE70268
+owned_key_not_in_template,中央:中央-6-11,1800,祭壇,KTVS,KTVS,,,,グレー吹き出しOCR IMG_1144.PNG / #8061 X:524 Y:724 Lv.2 祭壇 / 画像内表示
+owned_key_not_in_template,中央:中央-6-12,1889,祭壇,UMN,UMN,,,,グレー吹き出しOCR IMG_1125.PNG / #8061 X:574 Y:724 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-6-13,1890,祭壇,SHA,SHA,,,,グレー吹き出しOCR IMG_1125.PNG / #8061 X:624 Y:724 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-6-14,1891,祭壇,fzn,fzn,,,,グレー吹き出しOCR IMG_1124.PNG / #8061 X:674 Y:724 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-6-15,1788,祭壇,JDX,JDX,,,,RAW_OCR_LOG row60 / #8061 X:724 Y:724 Lv.2 こだまの祭壇 / 中立/未登録 -> JDX / 画像:1505E4F4
+owned_key_not_in_template,中央:中央-6-16,1815,祭壇,UMN,UMN,,,,グレー吹き出しOCR IMG_1142.PNG / #8061 X:774 Y:724 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-6-17,1892,祭壇,GX99,GX99,,,,グレー吹き出しOCR IMG_1136.PNG / #8061 X:824 Y:724 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-6-18,1963,漁場,FHX,FHX,,,,赤字OCR IMG_0696.PNG / 中央 X:874 Y:724 Lv7 漁場 / TkTk -> FHX
+owned_key_not_in_template,中央:中央-6-19,2061,漁場,RCON,RCON,,,,画像4: #8061 X:924 Y:724 Lv6
+owned_key_not_in_template,中央:中央-6-2,2143,漁場,ALj,ALj,,,,Dropbox red OCR IMG_1918.PNG / #8061 X:74 Y:724 Lv.6 漁場 / OCR+Paddle checked / ALi->ALj
+owned_key_not_in_template,中央:中央-6-20,2049,漁場,Digg,Digg,,,,新規画像1: #8061 X:974 Y:724 Lv.5
+owned_key_not_in_template,中央:中央-6-3,2144,漁場,Kfk,Kfk,,,,Dropbox赤字OCR IMG_1654.PNG / #8061 X:124 Y:724 Lv.7 漁場 / 中立/未登録 -> Kfk
+owned_key_not_in_template,中央:中央-6-4,1816,祭壇,476Z,476Z,,,,グレー吹き出しOCR IMG_1141.PNG / #8061 X:174 Y:724 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-6-5,1801,祭壇,476Z,476Z,,,,グレー吹き出しOCR IMG_1146.PNG / #8061 X:224 Y:724 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-6-6,1817,祭壇,476M,476M,,,,グレー吹き出しOCR IMG_1141.PNG / #8061 X:274 Y:724 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-6-7,1893,祭壇,476d,476d,,,,RAW_OCR_LOG row46 / #8061 X:324 Y:724 Lv.2 こだまの祭壇 / 中立/未登録 -> 476d / 画像:1EFAEC65
+owned_key_not_in_template,中央:中央-6-8,1894,祭壇,476C,476C,,,,グレー吹き出しOCR IMG_1131.PNG / #8061 X:374 Y:724 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-6-9,1895,祭壇,476X,476X,,,,グレー吹き出しOCR IMG_1131.PNG / #8061 X:424 Y:724 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-7-14,1896,祭壇,TIKW,TIKW,,,,グレー吹き出しOCR IMG_1125.PNG / #8061 X:674 Y:674 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-7-15,1897,祭壇,FHX,FHX,,,,グレー吹き出しOCR IMG_1133.PNG / #8061 X:724 Y:674 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-7-16,1898,祭壇,FHX,FHX,,,,グレー吹き出しOCR IMG_1122.PNG / #8061 X:774 Y:674 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-7-17,1899,祭壇,one,one,,,,グレー吹き出しOCR IMG_1125.PNG / #8061 X:824 Y:674 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-7-18,1961,漁場,FHX,FHX,,,,赤字OCR IMG_0698.PNG / 中央 X:874 Y:674 Lv7 漁場 / RCON -> FHX / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-7-19,1962,漁場,GcC,GcC,,,,Dropbox赤字OCR IMG_1481.PNG / #8061 X:924 Y:674 Lv.6 漁場 / 中立/未登録 -> GcC
+owned_key_not_in_template,中央:中央-7-2,2150,漁場,ALj,ALj,,,,Dropbox赤字OCR IMG_1656.PNG / #8061 X:74 Y:674 Lv.6 漁場 / 中立/未登録 -> ALj
+owned_key_not_in_template,中央:中央-7-20,2011,漁場,MtG,MtG,,,,Dropbox red OCR IMG_1923.PNG / #8061 X:974 Y:674 Lv.5 漁場 / OCR+Paddle checked
+owned_key_not_in_template,中央:中央-7-3,2151,漁場,ALj,ALj,,,,Dropbox赤字OCR IMG_1591.PNG / #8061 X:124 Y:674 Lv.7 漁場 / 中立/未登録 -> ALj
+owned_key_not_in_template,中央:中央-7-4,1818,祭壇,VEX,VEX,,,,グレー吹き出しOCR IMG_1142.PNG / #8061 X:174 Y:674 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-7-5,1789,祭壇,476H,476H,,,,グレー吹き出しOCR IMG_1149.PNG / #8061 X:224 Y:674 Lv.1 祭壇 / 画像内表示
+owned_key_not_in_template,中央:中央-7-6,1900,祭壇,476H,476H,,,,グレー吹き出しOCR IMG_1131.PNG / #8061 X:274 Y:674 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-7-7,1790,祭壇,476Z,476Z,,,,RAW_OCR_LOG row61 / #8061 X:324 Y:674 Lv.2 こだまの祭壇 / 中立/未登録 -> 476Z / 画像:1505E4F4
+owned_key_not_in_template,中央:中央-8-1,2036,漁場,ALj,ALj,,,,OCR IMG_0498.PNG / #8061 X:24 Y:624 Lv.5
+owned_key_not_in_template,中央:中央-8-15,1901,祭壇,Stj,Stj,,,,グレー吹き出しOCR IMG_1135.PNG / #8061 X:724 Y:624 Lv.2 祭壇 / 時刻は前後スクショから推定 / OCR補正:Sti->Stj
+owned_key_not_in_template,中央:中央-8-16,1902,祭壇,Bye,Bye,,,,グレー吹き出しOCR IMG_1124.PNG / #8061 X:774 Y:624 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-8-17,1791,祭壇,299,299,,,,RAW_OCR_LOG row57 / #8061 X:824 Y:624 Lv.1 どくろの祭壇 / 中立/未登録 -> 299 / 画像:D1EB3C7D / Dropbox画像で299視認
+owned_key_not_in_template,中央:中央-8-18,2038,漁場,RCON,RCON,,,,OCR IMG_0483.PNG / #8061 X:874 Y:624 Lv.7 / 中立/未登録→RCON
+owned_key_not_in_template,中央:中央-8-19,1960,漁場,MtG,MtG,,,,赤字OCR IMG_0747.PNG / #8061 X:924 Y:624 Lv.6 / MtG -> MtG / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-8-2,1973,漁場,ALj,ALj,,,,赤字OCR IMG_0635.PNG / #8061 X:74 Y:624 Lv.6 / 中立/未登録 -> ALj
+owned_key_not_in_template,中央:中央-8-20,1959,漁場,MtG,MtG,,,,赤字OCR IMG_0749.PNG / #8061 X:974 Y:624 Lv.5 / MtG -> MtG / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-8-3,1972,漁場,ALj,ALj,,,,赤字OCR IMG_0635.PNG / #8061 X:124 Y:624 Lv.7 / 中立/未登録 -> ALj
+owned_key_not_in_template,中央:中央-8-4,1819,祭壇,ALj,ALj,,,,グレー吹き出しOCR IMG_1142.PNG / #8061 X:174 Y:624 Lv.1 祭壇 / 時刻は前後スクショから推定 / OCR補正:ALiji->ALj
+owned_key_not_in_template,中央:中央-8-5,1802,祭壇,ALj,ALj,,,,グレー吹き出しOCR IMG_1144.PNG / #8061 X:224 Y:624 Lv.1 祭壇 / 画像内表示 / OCR補正:ALji->ALj
+owned_key_not_in_template,中央:中央-8-6,1803,祭壇,GcC,GcC,,,,グレー吹き出しOCR IMG_1146.PNG / #8061 X:274 Y:624 Lv.2 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-9-1,2006,漁場,ALj,ALj,,,,OCR IMG_0552.PNG / #8061 X:24 Y:574 Lv.5 / 中立/未登録 -> ALj
+owned_key_not_in_template,中央:中央-9-15,1903,祭壇,xjR,xjR,,,,RAW_OCR_LOG row51 / #8061 X:724 Y:574 Lv.2 こだまの祭壇 / 中立/未登録 -> xjR / 画像:BBE70268
+owned_key_not_in_template,中央:中央-9-16,1904,祭壇,xjR,xjR,,,,グレー吹き出しOCR IMG_1125.PNG / #8061 X:774 Y:574 Lv.1 祭壇 / 時刻は前後スクショから推定 / OCR補正:xiR->xjR
+owned_key_not_in_template,中央:中央-9-17,1807,祭壇,TIKW,TIKW,,,,グレー吹き出しOCR IMG_1143.PNG / #8061 X:824 Y:574 Lv.1 祭壇 / 画像内表示
+owned_key_not_in_template,中央:中央-9-18,2018,漁場,RCON,RCON,,,,OCR IMG_0535.PNG / #8061 X:874 Y:574 Lv.7 / 中立/未登録 -> RCON
+owned_key_not_in_template,中央:中央-9-19,2015,漁場,TaW,TaW,,,,OCR IMG_0537.PNG / #8061 X:924 Y:574 Lv.6 / 中立/未登録 -> TaW
+owned_key_not_in_template,中央:中央-9-2,2167,漁場,ALj,ALj,,,,Dropbox赤字OCR IMG_1591.PNG / #8061 X:74 Y:574 Lv.6 漁場 / 中立/未登録 -> ALj
+owned_key_not_in_template,中央:中央-9-20,2013,漁場,GoDs,GoDs,,,,OCR IMG_0539.PNG / #8061 X:974 Y:574 Lv.5 / 中立/未登録 -> GoDs / 時刻視認補正
+owned_key_not_in_template,中央:中央-9-3,1913,漁場,fIrE,fIrE,,,,RAW_OCR_LOG row20 / #8061 X:124 Y:574 Lv.7 漁場 / 中立/未登録 -> fIrE / 画像:89BF5F89
+owned_key_not_in_template,中央:中央-9-4,1905,祭壇,476K,476K,,,,グレー吹き出しOCR IMG_1139.PNG / #8061 X:174 Y:574 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-9-5,1906,祭壇,476K,476K,,,,グレー吹き出しOCR IMG_1136.PNG / #8061 X:224 Y:574 Lv.1 祭壇 / 時刻は前後スクショから推定
+owned_key_not_in_template,中央:中央-9-6,1907,祭壇,476K,476K,,,,RAW_OCR_LOG row52 / #8061 X:274 Y:574 Lv.2 こだまの祭壇 / 中立/未登録 -> 476K / 画像:BBE70268

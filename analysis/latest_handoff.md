@@ -14,6 +14,8 @@ Created a lightweight Apps Script for the live `S6#534` spreadsheet so daily ope
 - `tools/s6_534_sheet/README.md`
 - `tools/fishery_protection_sheet/Code.gs`
 - `tools/fishery_protection_sheet/README.md`
+- `tools/s6_534_sheet/audit_full_map_reflection.py`
+- `data/2026-06-06_s6_full_map_reflection_audit.csv`
 
 ## Key findings
 
@@ -24,18 +26,22 @@ Created a lightweight Apps Script for the live `S6#534` spreadsheet so daily ope
 5. Syntax checks passed for both the dedicated S6#534 script and the larger fishery-protection script integration.
 6. After a timeout report, the full-map refresh was changed from per-cell writes to batched range writes (`setValues`, `setFontColors`, `setNotes`) to reduce Apps Script calls from thousands to a small fixed set.
 7. After a readability regression report, the batched refresh now also copies template formatting and restores merged cells so `全体マップ` keeps the `マップ表示テンプレ` visual layout.
+8. Background fills are now forced to white on refresh; only font color carries ownership meaning.
+9. Live audit found 0 ownership value mismatches inside the current `全体マップ` template coverage. It found 330 owned rows not represented in the template, all `中央:` keys: 198 fishery rows and 132 altar rows.
 
 ## Current risks
 
 1. The live Apps Script project still needs to be updated by pasting the latest `tools/s6_534_sheet/Code.gs` into the spreadsheet's Apps Script editor.
 2. The script intentionally treats `管理表たたき` as the source of truth, so stale values that only exist in `全体マップ` will disappear after refresh.
 3. Owner side overrides are snapshotted from the current `sample_output/state.json`; add new alliance tags if they appear.
+4. Central/#8061 rows in `管理表たたき` have no display destination in the current `全体マップ`; they need a separate central map/template section if they should appear.
 
 ## Recommended next actions
 
 1. Paste the latest `tools/s6_534_sheet/Code.gs` into the bound Apps Script for `S6#534`.
 2. Reload the spreadsheet and run `S6#534管理` -> `全体マップ更新`.
 3. After confirming the map, use `管理表たたき` as the only direct edit surface for ownership/type/time changes.
+4. Decide whether to add a central/#8061 map tab or expand `マップ表示テンプレ` so the 330 central owned rows can be reflected visually.
 
 ## Notes
 

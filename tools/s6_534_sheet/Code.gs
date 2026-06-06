@@ -6,6 +6,7 @@ const S6_SHEET_NAMES = {
 };
 
 const S6_FULL_MAP_RANGE_A1 = 'A1:DR135';
+const S6_FULL_MAP_BACKGROUND = '#ffffff';
 const S6_FULL_MAP_COLORS = {
   self: '#2563eb',
   ally: '#16a34a',
@@ -53,7 +54,7 @@ function refreshS6FullMapFromManagement() {
   const columnCount = templateRange.getNumColumns();
   const templateValues = templateRange.getDisplayValues();
   const outputValues = templateValues.map((row) => row.slice());
-  const outputBackgrounds = templateRange.getBackgrounds();
+  const outputBackgrounds = templateValues.map((row) => row.map(() => S6_FULL_MAP_BACKGROUND));
   const outputFontColors = templateRange.getFontColors();
   const outputFontWeights = templateRange.getFontWeights();
   const outputHorizontalAlignments = templateRange.getHorizontalAlignments();
