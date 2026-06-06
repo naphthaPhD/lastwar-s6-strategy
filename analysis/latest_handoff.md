@@ -23,6 +23,7 @@ Created a lightweight Apps Script for the live `S6#534` spreadsheet so daily ope
 4. The script adds notes to map cells with position key, type, owner, protection data, and source management-table row.
 5. Syntax checks passed for both the dedicated S6#534 script and the larger fishery-protection script integration.
 6. After a timeout report, the full-map refresh was changed from per-cell writes to batched range writes (`setValues`, `setFontColors`, `setNotes`) to reduce Apps Script calls from thousands to a small fixed set.
+7. After a readability regression report, the batched refresh now also copies template formatting and restores merged cells so `全体マップ` keeps the `マップ表示テンプレ` visual layout.
 
 ## Current risks
 

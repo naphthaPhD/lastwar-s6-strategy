@@ -769,6 +769,7 @@ function refreshS6FullMapFromManagement() {
   targetSheet.getRange(1, 1, targetSheet.getMaxRows(), targetSheet.getMaxColumns()).breakApart();
   targetSheet.clear();
   const targetRange = targetSheet.getRange(1, 1, rowCount, columnCount);
+  copyMapBaseFormat_(templateRange, targetSheet, rowCount, columnCount);
   targetRange.setValues(outputValues);
   targetRange.setBackgrounds(outputBackgrounds);
   targetRange.setFontColors(outputFontColors);
@@ -777,6 +778,7 @@ function refreshS6FullMapFromManagement() {
   targetRange.setVerticalAlignments(outputVerticalAlignments);
   targetRange.setNotes(outputNotes);
   copyMapDimensions_(templateSheet, targetSheet, rowCount, columnCount);
+  copyMapMerges_(templateRange, targetSheet);
   targetSheet.setFrozenRows(5);
   targetSheet.setHiddenGridlines(true);
   writeS6FullMapUpdateNote_(targetSheet, counts);
@@ -1170,6 +1172,19 @@ function copyMapMerges_(sourceRange, targetSheet) {
       .getRange(rowOffset + 1, columnOffset + 1, mergedRange.getNumRows(), mergedRange.getNumColumns())
       .merge();
   });
+}
+
+function copyMapBaseFormat_(sourceRange, targetSheet, rowCount, columnCount) {
+  try {
+    sourceRange.copyFormatToRange(targetSheet, 1, columnCount, 1, rowCount);
+  } catch (error) {
+    const targetRange = targetSheet.getRange(1, 1, rowCount, columnCount);
+    targetRange.setBackgrounds(sourceRange.getBackgrounds());
+    targetRange.setFontColors(sourceRange.getFontColors());
+    targetRange.setFontWeights(sourceRange.getFontWeights());
+    targetRange.setHorizontalAlignments(sourceRange.getHorizontalAlignments());
+    targetRange.setVerticalAlignments(sourceRange.getVerticalAlignments());
+  }
 }
 
 function copySourceMapRange_(sourceRange, targetRange) {
