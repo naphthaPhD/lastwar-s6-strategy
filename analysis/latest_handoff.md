@@ -4,7 +4,7 @@
 
 ## Context
 
-Reflected the requested S6#534 full-map color rules directly into the live Google Sheet tab `全体マップ` (`1oK2tebQRs9RaSsrM-Oo9lynAjbt4loV82GjS8a3dPrQ`, `gid=880775829`). The earlier repo-side map update did not change this live sheet view.
+Reflected the requested S6#534 full-map color rules directly into the live Google Sheet tab `全体マップ` (`1oK2tebQRs9RaSsrM-Oo9lynAjbt4loV82GjS8a3dPrQ`, `gid=880775829`). The first live-sheet pass only covered `A1:DN100`; the corrected pass covers the full tab size `A1:DR135`.
 
 ## Updated files
 
@@ -14,8 +14,9 @@ Reflected the requested S6#534 full-map color rules directly into the live Googl
 
 1. `gid=880775829` maps to the live sheet tab `全体マップ`.
 2. Cell values were not changed; only `userEnteredFormat.textFormat.foregroundColor` was updated.
-3. Updated cell counts: #534-side blue 187, #509/#440/#511-side green 203, #503/#480/#523/#476-side red 632, destroyed gray 115, and trade-post black 62.
-4. Read-back verification confirmed representative cells: `moca` blue, `OWM` green, `UMN` red, `破壊` gray, and `交易地` black.
+3. Corrected full-range updated cell counts: #534-side blue 194, #509/#440/#511-side green 314, #503/#480/#523/#476-side red 755, destroyed gray 162, and trade-post black 80.
+4. Read-back verification confirmed upper-map representative cells: `moca` blue, `OWM` green, `UMN` red, `破壊` gray, and `交易地` black.
+5. Read-back verification also confirmed lower-map representative cells: `SHA` blue, `JL2` green, `fIrE` red, `破壊` gray, and `交易地` black.
 
 ## Current risks
 
