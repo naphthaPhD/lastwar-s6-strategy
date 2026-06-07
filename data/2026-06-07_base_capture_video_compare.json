@@ -1,0 +1,3850 @@
+{
+  "summary": {
+    "video_events": 229,
+    "image_events": 124,
+    "updates": 110,
+    "review": 0,
+    "update_status_counts": {
+      "missing_in_video": 25,
+      "exact_match": 74,
+      "coord_kind_only": 6,
+      "owner_match_action_diff": 5
+    },
+    "video_only_coords": 22
+  },
+  "updates": [
+    {
+      "status": "missing_in_video",
+      "position_key": "#509:j-8",
+      "target_server": "#509",
+      "x": 349,
+      "y": 949,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像.PNG",
+      "image_text": "#503[UMN]が#509[0WM]領有中のLV.1都市 #509(349,949)を攻撃し、陣営のために破壊宝箱xを勝 ち取りました 2026-6-6 04:06:20",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#523:c-12",
+      "target_server": "#523",
+      "x": 549,
+      "y": 249,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (1).PNG",
+      "image_text": "#511[2N7]が#523[K4TR]領有中のLV.2都市 #523(549,249)を攻撃し、陣営のために破壊宝箱x5を勝 ち取りました 2026-6-6 04:28:41",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#509:j-6",
+      "target_server": "#509",
+      "x": 249,
+      "y": 949,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (1).PNG",
+      "image_text": "#503[UMN]が#509[OUM]領有中のLV.1都市 #509(249,949)を攻撃し、陣営のために破壊宝箱xを勝 ち取りました 2026-6-6 04:29:00",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#523:d-12",
+      "target_server": "#523",
+      "x": 549,
+      "y": 349,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (1).PNG",
+      "image_text": "#511[2N7]が#523[5DU]領有中のLV.3都市#523(549,349)を 攻撃し、陣営のために破壊宝箱＊10を勝ち取りました 2026-6-6 04:32:12",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#511:i-18",
+      "target_server": "#511",
+      "x": 849,
+      "y": 849,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2).PNG",
+      "image_text": "#480[AAOAが#511[5Va]領有中のLV.1都市 #511(849,849)を攻撃し、陣営のために破壊宝箱xを勝 ち取りました 2026-6-6 04:36:13",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#523:d-10",
+      "target_server": "#523",
+      "x": 449,
+      "y": 349,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2).PNG",
+      "image_text": "#509[5s0]が#523[K4TR]領有中のLV.3都市 #523(449,349)を攻撃し、陣営のために破壊宝箱x10を 勝ち取りました 2026-6-6 04:36:32",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#523:d-14",
+      "target_server": "#523",
+      "x": 649,
+      "y": 349,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2).PNG",
+      "image_text": "#509[5s0]が#523[5Du]領有中のLV.3都市#523(649,349)を 攻撃し、陣営のために破壊宝箱x10を勝ち取りました 2026-6-6 04:39:29",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#480:c-2",
+      "target_server": "#480",
+      "x": 49,
+      "y": 249,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2).PNG",
+      "image_text": "#534[4tH]が#480[PmP]領有中のLV.1都市#480(49,249)を 攻撃し、陣営のために破壊宝箱xを勝ち取りました 2026-6-6 04:43:21",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#480:j-6",
+      "target_server": "#480",
+      "x": 249,
+      "y": 949,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2) (1).PNG",
+      "image_text": "#534[KTVSが#480領有中のLV.1都市#480(249,949)を 攻撃し、陣営のために破壊宝箱xを勝ち取りました 2026-6-6 09:03:05",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#511:d-6",
+      "target_server": "#511",
+      "x": 249,
+      "y": 349,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2) (1).PNG",
+      "image_text": "#523[50Uが#511領有中のLV.2都市#511(249,349)を 攻撃し、陣営のために破壊宝箱x5を勝ち取りました 2026-6-6 10:35:19",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#509:d-14",
+      "target_server": "#509",
+      "x": 649,
+      "y": 349,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2) (1).PNG",
+      "image_text": "#503[GX991が#509[FHX]領有中のLV.3都市 #509(649,349)を攻撃し、陣営のために破壊宝箱＊10を 勝ち取りました 2026-6-6 12:01:40",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#509:b-18",
+      "target_server": "#509",
+      "x": 849,
+      "y": 149,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2) (1).PNG",
+      "image_text": "#503[one]が#509[AoW]領有中のLV.1都市 #509(849,149)を攻撃し、陣営のために破壊宝箱xを勝 ち取りました 2026-6-6 12:10:44",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#480:j-8",
+      "target_server": "#480",
+      "x": 349,
+      "y": 949,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (3).PNG",
+      "image_text": "#534[JDX]が#480[TkTk]領有中のLV.1都市 #480(349,949)を攻撃し、陣営のために破壊宝箱＊こを勝 ち取りました 2026-6-6 12:19:10",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#480:j-2",
+      "target_server": "#480",
+      "x": 49,
+      "y": 949,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (3).PNG",
+      "image_text": "#509[Monが#480[MtG]領有中のLV.1都市#480(49,949)を 攻撃し、陣営のために破壊宝箱xを勝ち取りました 2026-6-6 12:21:34",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#480:j-4",
+      "target_server": "#480",
+      "x": 149,
+      "y": 949,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (3) (1).PNG",
+      "image_text": "#509[BHE]が#480[MtG]領有中のLV.1都市 #480(149,949)を攻撃し、陣営のために破壊宝箱＊を勝 ち取りました 2026-6-6 12:23:21",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#440:c-4",
+      "target_server": "#440",
+      "x": 149,
+      "y": 249,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (3) (1).PNG",
+      "image_text": "#476[476M]が#440領有中のLV.1都市#440(149,249)を 攻撃し、陣営のために破壊宝箱xを勝ち取りました 2026-6-6 12:29:36",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#440:d-6",
+      "target_server": "#440",
+      "x": 249,
+      "y": 349,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (3) (1).PNG",
+      "image_text": "#503[Lghsが#440[GoDs]領有中のLv.2都市 #440(249,349)を攻撃し、陣営のために破壊宝箱x5を勝 ち取りました 2026-6-6 12:34:05",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#440:e-2",
+      "target_server": "#440",
+      "x": 49,
+      "y": 449,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (3) (1).PNG",
+      "image_text": "#476[476M]が#440[IMp]領有中のLV.1都市 #440(49,449)を攻撃し、陣営のために破壊宝箱xを勝 ち取りました 2026-6-6 12:35:17",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#534:b-16",
+      "target_server": "#534",
+      "x": 749,
+      "y": 149,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (4).PNG",
+      "image_text": "#476[4762]が#534[M0E]領有中のLV.1都市 #534(749,149)を攻撃し、陣営のために破壊宝箱x2を勝 ち取りました 2026-6-6 12:36:11",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#440:f-20",
+      "target_server": "#440",
+      "x": 949,
+      "y": 549,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (4).PNG",
+      "image_text": "#503[fznが#440[TrX]領有中のLV.1都市#440(949,549)を 攻撃し、陣営のために破壊宝箱xを勝ち取りました 2026-6-6 12:46:26",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#440:g-20",
+      "target_server": "#440",
+      "x": 949,
+      "y": 649,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (5).PNG",
+      "image_text": "#503[299が#440[TrX]領有中のLV.1都市#440(949,649)を 攻撃し、陣営のために破壊宝箱＊2を勝ち取りました 2026-6-6 20:04:11",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#534:g-14",
+      "target_server": "#534",
+      "x": 649,
+      "y": 649,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (5).PNG",
+      "image_text": "#476[476B]が#534[KTVS]領有中のLV.3都市 #534(649,649)を攻撃し、陣営のために破壊宝箱*10を 勝ち取りました 2026-6-6 20:05:36",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#480:f-2",
+      "target_server": "#480",
+      "x": 49,
+      "y": 549,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (5).PNG",
+      "image_text": "#440[GoDs]が#480[Digg]領有中のLV.1都市 #480(49,549)を攻撃し、陣営のために破壊宝箱x2を勝 ち取りました 2026-6-6 20:19:43",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#534:e-16",
+      "target_server": "#534",
+      "x": 749,
+      "y": 449,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (5).PNG",
+      "image_text": "#476[476c]が#534[KTVS]領有中のLV.2都市 #534(749,449)を攻撃し、陣営のために破壊宝箱x5を勝 ち取りました 2026-6-6 20:25:49",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#534:d-16",
+      "target_server": "#534",
+      "x": 749,
+      "y": 349,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (6).PNG",
+      "image_text": "#476[476c]が#534[KTVS]領有中のLV.2都市 #534(749,349)を攻撃し、陣営のために破壊宝箱x5を勝 ち取りました 2026-6-6 20:27:43",
+      "video_candidates": []
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:h-6",
+      "target_server": "#480",
+      "x": 249,
+      "y": 749,
+      "image_owner": "TIKW",
+      "image_action": "occupy",
+      "image_type": "都市",
+      "image_file": "画像 (7).PNG",
+      "image_text": "連盟TIKWがLV.2湿地の兵舎 #480(X:249,Y:749)を占領",
+      "video_candidates": [
+        {
+          "owner": "TIKW",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟TIKWがLv.2湿地の兵舎 #480(X:249,Y:749)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0002.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0002.png"
+        },
+        {
+          "owner": "TIKW",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟TIKWがLv.2湿地の兵舎 #480(X:249,Y:749)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0000.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0000.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:j-10",
+      "target_server": "#480",
+      "x": 449,
+      "y": 949,
+      "image_owner": "TkTk",
+      "image_action": "occupy",
+      "image_type": "都市",
+      "image_file": "画像 (7).PNG",
+      "image_text": "連盟TkTkがLV.1湿地の村 #480(X:449,Y:949) を占領",
+      "video_candidates": [
+        {
+          "owner": "TkTk",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟TkTkがLv.1湿地の村 #480(X:449,Y:949)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0002.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0002.png"
+        },
+        {
+          "owner": "TkTk",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟TkTkがLv.1湿地の村 #480(X:449,Y:949)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0000.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0000.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#503:A-7",
+      "target_server": "#503",
+      "x": 299,
+      "y": 20,
+      "image_owner": "one",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (7) (1).PNG",
+      "image_text": "連盟oneは連盟ASpのLV.1漁場 #503(X:299,Y:20)を奪い",
+      "video_candidates": [
+        {
+          "owner": "oneI",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟oneIは連盟ASpのLv.1漁場 #503(X:299,Y:20)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0006.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0006.png"
+        },
+        {
+          "owner": "one",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟oneは連盟ASpのLv.1漁場 #503(X:299,Y:20)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0007.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0007.png"
+        },
+        {
+          "owner": "one",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟oneは連盟ASpのLv.1漁場 #503(X:299,Y:20)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0002.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0002.png"
+        },
+        {
+          "owner": "onel",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟onelは連盟ASpのLv.1漁場 #503(X:299,Y:20)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0005.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0005.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#534:A-15",
+      "target_server": "#534",
+      "x": 699,
+      "y": 20,
+      "image_owner": "476d",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (7) (1).PNG",
+      "image_text": "連盟476dは連盟w6fのLV.1漁場 #534(X:699,Y:20)を奪い",
+      "video_candidates": [
+        {
+          "owner": "476dI",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476dIは連盟w6fのLv.1漁場 #534(X:699,Y:20)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0006.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0006.png"
+        },
+        {
+          "owner": "476dl",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476dlは連盟w6fのLv.1漁場 #534(X:699,Y:20)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0007.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0007.png"
+        },
+        {
+          "owner": "476d",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476dは連盟w6fのLv.1漁場 #534(X:699,Y:20)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0004.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0004.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#440:J-21",
+      "target_server": "#440",
+      "x": 978,
+      "y": 899,
+      "image_owner": "fzn",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (7) (1).PNG",
+      "image_text": "連盟fznは連盟TrXのLV.1漁場 #440(X:978,Y:899)を奪い",
+      "video_candidates": [
+        {
+          "owner": "fzn",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟fznは連盟TrXのLv.1漁場 #440(X:978,Y:899)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0006.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0006.png"
+        },
+        {
+          "owner": "fznl",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟fznlは連盟TrXのLv.1漁場 #440(X:978,Y:899)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0008.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0008.png"
+        },
+        {
+          "owner": "fzn",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟fznは連盟TrXのLv.1漁場 #440(X:978,Y:899)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0005.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0005.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:I-3",
+      "target_server": "#480",
+      "x": 99,
+      "y": 799,
+      "image_owner": "MOn",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (7) (1).PNG",
+      "image_text": "連盟MOnは連盟MtGのLV.1漁場 #480(X:99,Y:799)を奪い",
+      "video_candidates": [
+        {
+          "owner": "MOnI",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟MOnIは連盟MtGのLv.1漁場 #480(X:99,Y:799)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0006.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0006.png"
+        },
+        {
+          "owner": "MOn",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟MOnは連盟MtGのLv.1漁場 #480(X:99,Y:799)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0007.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0007.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#523:J-21",
+      "target_server": "#523",
+      "x": 978,
+      "y": 899,
+      "image_owner": "476X",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (7).PNG",
+      "image_text": "連盟476XがLV.1漁場 #523(X:978,Y:899)を 占領",
+      "video_candidates": [
+        {
+          "owner": "476X",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟476XがLv.1漁場 #523(X:978,Y:899)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0000.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0000.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:A-13",
+      "target_server": "#480",
+      "x": 599,
+      "y": 20,
+      "image_owner": "TIKW",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (8).PNG",
+      "image_text": "連盟TIKWは連盟TaWのLV.1漁場 #480(X:599,Y:20)を奪い",
+      "video_candidates": [
+        {
+          "owner": "TIKW",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟TIKWは連盟TaWOのLv.1漁場 #480(X:599,Y:20)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0008.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0008.png"
+        },
+        {
+          "owner": "TIKW",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟TIKWは連盟TaWのLv.1漁場 #480(X:599,Y:20)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0011.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0011.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#440:G-1",
+      "target_server": "#440",
+      "x": 20,
+      "y": 599,
+      "image_owner": "WbW",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (8).PNG",
+      "image_text": "連盟WbWは連盟IMpのLV.1漁場 #440(X:20,Y:599)を奪い",
+      "video_candidates": [
+        {
+          "owner": "WbW",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟WbWは連盟IMpのLv.1漁場 #440(X:20,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0009.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0009.png"
+        },
+        {
+          "owner": "WbW",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟WbWは連盟IMpのLv.1漁場 #440(X:20,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0011.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0011.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:K-3",
+      "target_server": "#480",
+      "x": 99,
+      "y": 978,
+      "image_owner": "Bye",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (8).PNG",
+      "image_text": "連盟ByeがLV.1漁場 #480(X:99,Y:978)を占領",
+      "video_candidates": [
+        {
+          "owner": "Bye",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟ByeがLv.1漁場 #480(X:99,Y:978) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0013.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0013.png"
+        },
+        {
+          "owner": "Bye",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟ByeがLv.1漁場 #480(X:99,Y:978)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0011.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0011.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#440:I-15",
+      "target_server": "#440",
+      "x": 699,
+      "y": 799,
+      "image_owner": "476A",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (9).PNG",
+      "image_text": "連盟476Aは連盟GCCのLV.2漁場 #440(X:699,Y:799)を奪い",
+      "video_candidates": [
+        {
+          "owner": "476A",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Aは連盟GcCのLv.2漁場 #440(X:699,Y:799) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0013.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0013.png"
+        },
+        {
+          "owner": "476A",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Aは連盟GcCのLv.2漁場 #440(X:699,Y:799)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0011.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0011.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:J-7",
+      "target_server": "#480",
+      "x": 299,
+      "y": 899,
+      "image_owner": "Stj",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (9).PNG",
+      "image_text": "連盟Stjは連盟KTVSのLV.1漁場 #480(X:299,Y:899)を奪い",
+      "video_candidates": [
+        {
+          "owner": "Stj",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟Stjは連盟KTVSのLv.1漁場 #480(X:299,Y:899) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0013.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0013.png"
+        },
+        {
+          "owner": "StJ",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟StJは連盟KTVSのLv.1漁場 #480(X:299,Y:899)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0014.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0014.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#440:D-3",
+      "target_server": "#440",
+      "x": 99,
+      "y": 299,
+      "image_owner": "476M",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (10).PNG",
+      "image_text": "連盟476Mは連盟IMpのLV.1漁場 #440(X:99,Y:299)を奪い",
+      "video_candidates": [
+        {
+          "owner": "476M",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "06-06 23:13\n連盟476Mは連盟IMpのLv.1漁場 #440(X:99,Y:299)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0015.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0015.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#511:F-5",
+      "target_server": "#511",
+      "x": 199,
+      "y": 499,
+      "image_owner": "JL0",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (10).PNG",
+      "image_text": "連盟JLOは連盟5DUのLV.2漁場 #511(X:199,Y:499)を奪い",
+      "video_candidates": [
+        {
+          "owner": "L0",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟L0は連盟5DUのLv.2漁場 #511(X:199,Y:499)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0015.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0015.png"
+        },
+        {
+          "owner": "JL0",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟JLOは連盟5DUのLv.2漁場 #511(X:199,Y:499) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0017.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0017.png"
+        },
+        {
+          "owner": "JL0",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟JL0は連盟5DUのLv.2漁場 #511(X:199,Y:499)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0016.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0016.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#534:A-1",
+      "target_server": "#534",
+      "x": 20,
+      "y": 20,
+      "image_owner": "476C",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (10).PNG",
+      "image_text": "連盟476Cは連盟n09のLV.1漁場 #534(X:20,Y:20)を奪い",
+      "video_candidates": [
+        {
+          "owner": "476C",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Cは連盟nO9のLv.1漁場 #534(X:20,Y:20)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0015.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0015.png"
+        },
+        {
+          "owner": "476CI",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476CIは連盟nO9のLv.1漁場 #534(X:20,Y:20) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0017.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0017.png"
+        },
+        {
+          "owner": "476C",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Cは連盟nO9のLv.1漁場 #534(X:20,Y:20)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0016.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0016.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#509:G-19",
+      "target_server": "#509",
+      "x": 899,
+      "y": 599,
+      "image_owner": "UMN",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (10).PNG",
+      "image_text": "連盟UMNは連盟GX99のLV.1漁場 #509(X:899,Y:599)を奪い",
+      "video_candidates": [
+        {
+          "owner": "UMN",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟UMNは連盟GX99のLv.1漁場 #509(X:899,Y:599) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0017.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0017.png"
+        },
+        {
+          "owner": "UMN",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟UMNは連盟GX99のLv.1漁場 #509(X:899,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0016.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0016.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#523:g-16",
+      "target_server": "#523",
+      "x": 749,
+      "y": 649,
+      "image_owner": "WUG",
+      "image_action": "occupy",
+      "image_type": "都市",
+      "image_file": "画像 (10).PNG",
+      "image_text": "連盟WUGがLV.2湿地の兵舎 #523(X:749,Y:649)を占領",
+      "video_candidates": [
+        {
+          "owner": "WUG",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟WUGがLv.2湿地の兵舎 #523(X:749,Y:649) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0017.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0017.png"
+        },
+        {
+          "owner": "WUG",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟WUGがLv.2湿地の兵営 #523(X:749,Y:649)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0016.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0016.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#440:K-11",
+      "target_server": "#440",
+      "x": 499,
+      "y": 978,
+      "image_owner": "TIKW",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (10).PNG",
+      "image_text": "連盟TIKWは連盟BAのLV.1漁場 #440(X:499,Y:978)を奪い",
+      "video_candidates": [
+        {
+          "owner": "TIKW",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟TIKWは連盟BAJのLv.1漁場 #440(X:499,Y:978) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0017.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0017.png"
+        },
+        {
+          "owner": "TIKWI",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟TIKWIは連盟BAJのLv.1漁場 #440(X:499,Y:978) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0019.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0019.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:J-3",
+      "target_server": "#480",
+      "x": 99,
+      "y": 899,
+      "image_owner": "BHE",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (11).PNG",
+      "image_text": "連盟BHEは連盟MtGのLV.1漁場 #480(X:99,Y:899)を奪い",
+      "video_candidates": [
+        {
+          "owner": "BHE",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟BHEは連盟MtGのLv.1漁場 #480(X:99,Y:899) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0019.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0019.png"
+        },
+        {
+          "owner": "BHE",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟BHEは連盟MtGのLv.1漁場 #480(X:99,Y:899)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0020.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0020.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#534:B-15",
+      "target_server": "#534",
+      "x": 699,
+      "y": 99,
+      "image_owner": "476Z",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (11).PNG",
+      "image_text": "連盟476Zは連盟MOEのLV.1漁場 #534(X:699,Y:99)を奪い",
+      "video_candidates": [
+        {
+          "owner": "476Z",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "06-06 23:19 連盟476Zは連盟MOEのLv.1漁場 #534(X:699,Y:99) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0019.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0019.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#440:I-21",
+      "target_server": "#440",
+      "x": 978,
+      "y": 799,
+      "image_owner": "299",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (11).PNG",
+      "image_text": "連盟299がLV.1漁場 #440(X:978,Y:799)を占 領",
+      "video_candidates": [
+        {
+          "owner": "299",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟299がLv.1漁場 #440(X:978,Y:799) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0019.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0019.png"
+        },
+        {
+          "owner": "299",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟299がLv.1漁場 #440(X:978,Y:799)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0020.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0020.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:A-19",
+      "target_server": "#480",
+      "x": 899,
+      "y": 20,
+      "image_owner": "COZy",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (11).PNG",
+      "image_text": "連盟COZyは連盟BAのLV.1漁場 #480(X:899,Y:20)を奪い",
+      "video_candidates": [
+        {
+          "owner": "COZy",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟COZyは連盟BAJのLv.1魚場 #480(X:899,Y:20) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0022.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0022.png"
+        },
+        {
+          "owner": "COZy",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟COZyは連盟BAJのLv.1漁場 #480(X:899,Y:20)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0020.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0020.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#509:E-13",
+      "target_server": "#509",
+      "x": 599,
+      "y": 399,
+      "image_owner": "xjR",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (12).PNG",
+      "image_text": "連盟xjRがLV.4漁場 #509(X:599,Y:399)を占 領",
+      "video_candidates": [
+        {
+          "owner": "xjR",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟xjRがLv.4魚場 #509(X:599,Y:399) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0022.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0022.png"
+        },
+        {
+          "owner": "xjR",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟xjRがLv.4漁場 #509(X:599,Y:399)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0020.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0020.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:E-9",
+      "target_server": "#480",
+      "x": 399,
+      "y": 399,
+      "image_owner": "RCON",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (12).PNG",
+      "image_text": "連盟RCONは連盟TaWのLV.4漁場 #480(X:399,Y:399)を奪い",
+      "video_candidates": [
+        {
+          "owner": "RCON",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟RCONは連盟TaWのLv.4漁場 #480(X:399,Y:399)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0023.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0023.png"
+        },
+        {
+          "owner": "RCON",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟RCONは連盟TaWのLv.4漁場 #480(X:399,Y:399)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0021.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0021.png"
+        },
+        {
+          "owner": "RCON",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟RCONは連盟TaWのLv.4魚場 #480(X:399,Y:399) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0022.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0022.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#511:G-5",
+      "target_server": "#511",
+      "x": 199,
+      "y": 599,
+      "image_owner": "JL0",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (12).PNG",
+      "image_text": "連盟JLOは連盟5DUのLV.2漁場 #511(X:199,Y:599)を奪い",
+      "video_candidates": [
+        {
+          "owner": "JL0",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟JLOは連盟5DUのLv.2魚場 #511(X:199,Y:599) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0022.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0022.png"
+        },
+        {
+          "owner": "L0I",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟L0Iは連盟5DUのLv.2漁場 #511(X:199,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0023.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0023.png"
+        },
+        {
+          "owner": "JL0",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟JL0は連盟5DUのLv.2漁場 #511(X:199,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0024.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0024.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#440:E-3",
+      "target_server": "#440",
+      "x": 99,
+      "y": 399,
+      "image_owner": "476M",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (12).PNG",
+      "image_text": "連盟476Mは連盟IMpのLV.1漁場 #440(X:99,Y:399)を奪い",
+      "video_candidates": [
+        {
+          "owner": "476M",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476MIは連盟IMpのLv.1魚場 #440(X:99,Y:399) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0022.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0022.png"
+        },
+        {
+          "owner": "476M",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Mは連盟IMpのLv.1漁場 #440(X:99,Y:399)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0023.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0023.png"
+        },
+        {
+          "owner": "476M",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Mは連盟IMpのLv.1漁場 #440(X:99,Y:399)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0024.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0024.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#440:J-11",
+      "target_server": "#440",
+      "x": 499,
+      "y": 899,
+      "image_owner": "CDf8",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (13).PNG",
+      "image_text": "連盟CDf8は連盟TrXのLV.1漁場 #440(X:499,Y:899)を奪い",
+      "video_candidates": [
+        {
+          "owner": "CDf8",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟CDf8は連盟TrXのLv.1漁場 #440(X:499,Y:899)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0023.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0023.png"
+        },
+        {
+          "owner": "CDf8I",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟CDf8Iは連盟TrXのLv.1魚場 #440(X:499,Y:899)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0025.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0025.png"
+        },
+        {
+          "owner": "CDf8",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟CDf8は連盟TrXのLv.1漁場 #440(X:499,Y:899)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0024.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0024.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:E-11",
+      "target_server": "#480",
+      "x": 499,
+      "y": 399,
+      "image_owner": "BgNa",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (13).PNG",
+      "image_text": "連盟BgNaは連盟GCCのLV.4漁場 #480(X:499,Y:399)を奪い",
+      "video_candidates": [
+        {
+          "owner": "BgNaI",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟BgNaIは連盟GcCのLv.4魚場 #480(X:499,Y:399)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0025.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0025.png"
+        },
+        {
+          "owner": "BgNa",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟BgNaは連盟GcCのLv.4漁場 #480(X:499,Y:399)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0026.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0026.png"
+        },
+        {
+          "owner": "BgNa",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟BgNaは連盟GcCのLv.4漁場 #480(X:499,Y:399)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0024.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0024.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#534:F-9",
+      "target_server": "#534",
+      "x": 399,
+      "y": 499,
+      "image_owner": "JDX",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (13).PNG",
+      "image_text": "連盟DXは連盟476CのLV.4漁場 #534(X:399,Y:499)を奪い",
+      "video_candidates": [
+        {
+          "owner": "DXI",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟DXIは連盟476CのLv.4魚場 #534(X:399,Y:499)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0025.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0025.png"
+        },
+        {
+          "owner": "DX",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟DXは連盟476CのLv.4漁場 #534(X:399,Y:499) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0027.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0027.png"
+        },
+        {
+          "owner": "JDXl",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟JDXlは連盟476CのLv.4漁場 #534(X:399,Y:499)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0024.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0024.png"
+        },
+        {
+          "owner": "JDX",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟JDXは連盟476CのLv.4漁場 #534(X:399,Y:499)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0026.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0026.png"
+        },
+        {
+          "owner": "JDX",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟JDXは連盟476CのLv.4漁場 #534(X:399,Y:499) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0028.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0028.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#440:H-21",
+      "target_server": "#440",
+      "x": 978,
+      "y": 699,
+      "image_owner": "299",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (13).PNG",
+      "image_text": "連盟299がLV.1漁場 #440(X:978,Y:699)を占 領",
+      "video_candidates": [
+        {
+          "owner": "299",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟299がLv.1漁場 #440(X:978,Y:699)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0026.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0026.png"
+        },
+        {
+          "owner": "299",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟299がLv.1魚場 #440(X:978,Y:699)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0025.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0025.png"
+        },
+        {
+          "owner": "299",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟299がLv.1漁場 #440(X:978,Y:699) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0027.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0027.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#503:I-15",
+      "target_server": "#503",
+      "x": 699,
+      "y": 799,
+      "image_owner": "RING",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (13).PNG",
+      "image_text": "連盟RINGがLV.2漁場 #503(X:699,Y:799)を 占領",
+      "video_candidates": [
+        {
+          "owner": "RING",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟RINGがLv.2魚場 #503(X:699,Y:799)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0025.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0025.png"
+        },
+        {
+          "owner": "RING",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟RINGがLv.2漁場 #503(X:699,Y:799)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0026.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0026.png"
+        },
+        {
+          "owner": "RING",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟RINGがLv.2漁場 #503(X:699,Y:799) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0027.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0027.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#503:H-11",
+      "target_server": "#503",
+      "x": 499,
+      "y": 699,
+      "image_owner": "RING",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (13).PNG",
+      "image_text": "連盟RINGがLV.3漁場 #503(X:499,Y:699)を 占領",
+      "video_candidates": [
+        {
+          "owner": "RING",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟RINGがLv.3漁場 #503(X:499,Y:699)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0026.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0026.png"
+        },
+        {
+          "owner": "RING",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟RINGがLv.3漁場 #503(X:499,Y:699) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0027.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0027.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#511:B-17",
+      "target_server": "#511",
+      "x": 799,
+      "y": 99,
+      "image_owner": "AAOA",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (15).PNG",
+      "image_text": "連盟AAOAは連盟sbMのLV.1漁場 #511(X:799,Y:99)を奪い",
+      "video_candidates": [
+        {
+          "owner": "AAOA",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟AAOAは連盟sbMのLv.1漁場 #511(X:799,Y:99)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0034.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0034.png"
+        },
+        {
+          "owner": "AAOA",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟AAOAは連盟sbMのLv.1漁場 #511(X:799,Y:99) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0031.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0031.png"
+        },
+        {
+          "owner": "AAOAI",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟AAOAIは連盟sbMのLv.1漁場 #511(X:799,Y:99)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0032.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0032.png"
+        },
+        {
+          "owner": "AA0A",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟AA0Aは連盟sbMのLv.1漁場 #511(X:799,Y:99)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0033.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0033.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#440:G-21",
+      "target_server": "#440",
+      "x": 978,
+      "y": 599,
+      "image_owner": "fzn",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (15).PNG",
+      "image_text": "連盟fznがLV.1漁場 #440(X:978,Y:599)を占 領",
+      "video_candidates": [
+        {
+          "owner": "fzn",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟fznがLv.1漁場 #440(X:978,Y:599)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0033.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0033.png"
+        },
+        {
+          "owner": "fzn",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟fznがLv.1漁場 #440(X:978,Y:599) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0031.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0031.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#523:E-7",
+      "target_server": "#523",
+      "x": 299,
+      "y": 399,
+      "image_owner": "u3o",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (14).PNG",
+      "image_text": "連盟u30がLV.3漁場 #523(X:299,Y:399)を占 領",
+      "video_candidates": [
+        {
+          "owner": "u3o",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟u3oがLv.3漁場 #523(X:299,Y:399) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0035.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0035.png"
+        },
+        {
+          "owner": "u3o",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟u3oがLv.3漁場 #523(X:299,Y:399)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0032.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0032.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#440:G-3",
+      "target_server": "#440",
+      "x": 99,
+      "y": 599,
+      "image_owner": "WbW",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (14).PNG",
+      "image_text": "連盟WbWは連盟IMpのLV.1漁場 #440(X:99,Y:599)を奪い",
+      "video_candidates": [
+        {
+          "owner": "WbW",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟WbWは連盟IMpのLv.1漁場 #440(X:99,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0036.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0036.png"
+        },
+        {
+          "owner": "WbWl",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟WbWlは連盟IMpのLv.1漁場 #440(X:99,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0032.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0032.png"
+        },
+        {
+          "owner": "WbW",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟WbWは連盟IMpのLv.1漁場 #440(X:99,Y:599) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0035.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0035.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#534:A-13",
+      "target_server": "#534",
+      "x": 599,
+      "y": 20,
+      "image_owner": "476Z",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (16).PNG",
+      "image_text": "連盟476ZがLV.1漁場 #534(X:599,Y:20)を占 領",
+      "video_candidates": [
+        {
+          "owner": "476Z",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟476ZがLv.1漁場 #534(X:599,Y:20)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0038.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0038.png"
+        },
+        {
+          "owner": "476Z",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟476ZがLv.1漁場 #534(X:599,Y:20)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0039.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0039.png"
+        }
+      ]
+    },
+    {
+      "status": "coord_kind_only",
+      "position_key": "中央:中央-4-17",
+      "target_server": "#8061",
+      "x": 824,
+      "y": 824,
+      "image_owner": "AOW",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (16).PNG",
+      "image_text": "連盟AOWがLV.7漁場 #8061(X:824,Y:824)を 占領",
+      "video_candidates": [
+        {
+          "owner": "AoW",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟AoWがLv.7漁場 #8061(X:824,Y:824)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0043.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0043.png"
+        },
+        {
+          "owner": "AoW",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟AoWがLv.7漁場 #8061(X:824,Y:824)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0041.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0041.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#509:H-1",
+      "target_server": "#509",
+      "x": 20,
+      "y": 699,
+      "image_owner": "xjR",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (14).PNG",
+      "image_text": "連盟xjRは連盟DaoのLV.1漁場 #509(X:20,Y:699)を奪い",
+      "video_candidates": [
+        {
+          "owner": "xjR",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟xjRは連盟DaoのLv.1漁場 #509(X:20,Y:699) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0035.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0035.png"
+        },
+        {
+          "owner": "xjR",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟xjRは連盟DaoのLv.1漁場 #509(X:20,Y:699)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0037.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0037.png"
+        },
+        {
+          "owner": "xjR",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟xjRは連盟DaoのLv.1漁場 #509(X:20,Y:699)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0033.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0033.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#534:E-7",
+      "target_server": "#534",
+      "x": 299,
+      "y": 399,
+      "image_owner": "kOi",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (15).PNG",
+      "image_text": "連盟kOiがLV.3漁場 #534(X:299,Y:399)を占 領",
+      "video_candidates": [
+        {
+          "owner": "kOi",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟kOiがLv.3漁場 #534(X:299,Y:399)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0029.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0029.png"
+        },
+        {
+          "owner": "kOit",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟kOitがLv.3漁場 #534(X:299,Y:399)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0030.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0030.png"
+        },
+        {
+          "owner": "kOi",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟kOiがLv.3漁場 #534(X:299,Y:399) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0027.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0027.png"
+        },
+        {
+          "owner": "k0i",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟k0iがLv.3漁場 #534(X:299,Y:399) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0028.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0028.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#509:B-19",
+      "target_server": "#509",
+      "x": 899,
+      "y": 99,
+      "image_owner": "one",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (15).PNG",
+      "image_text": "連盟oneは連盟AoWのLV.1漁場 #509(X:899,Y:99)を奪い",
+      "video_candidates": [
+        {
+          "owner": "one",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟oneは連盟AoWWのLv.1漁場 #509(X:899,Y:99)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0029.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0029.png"
+        },
+        {
+          "owner": "one",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟oneは連盟AoWのLv.1漁場 #509(X:899,Y:99) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0028.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0028.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#503:g-4",
+      "target_server": "#503",
+      "x": 149,
+      "y": 649,
+      "image_owner": "xjR",
+      "image_action": "occupy",
+      "image_type": "都市",
+      "image_file": "画像 (15).PNG",
+      "image_text": "連盟xjRがLV.1湿地の村 #503(X:149,Y:649) を占領",
+      "video_candidates": [
+        {
+          "owner": "xjR",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟xjRがLv.1温地の村 #503(X:149,Y:649)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0033.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0033.png"
+        },
+        {
+          "owner": "xjR",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟xjRがLv.1湿地の村 #503(X:149,Y:649)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0030.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0030.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "中央:中央-1-4",
+      "target_server": "#8061",
+      "x": 174,
+      "y": 974,
+      "image_owner": "SHA",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (17).PNG",
+      "image_text": "連盟SHAがLV.5漁場 #8061(X:174,Y:974)を 占領",
+      "video_candidates": [
+        {
+          "owner": "SHA",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟SHAがLv.5漁場 #8061(X:174,Y:974) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0035.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0035.png"
+        },
+        {
+          "owner": "SHA",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟SHAがLv.5漁場 #8061(X:174,Y:974)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0037.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0037.png"
+        }
+      ]
+    },
+    {
+      "status": "owner_match_action_diff",
+      "position_key": "#440:E-21",
+      "target_server": "#440",
+      "x": 978,
+      "y": 399,
+      "image_owner": "TrX",
+      "image_action": "first_occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (17).PNG",
+      "image_text": "連盟TrXがLV.1漁場 #440(X:978,Y:399)を占 領",
+      "video_candidates": [
+        {
+          "owner": "TrX",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟TrXがLv.1漁場 #440(X:978,Y:399)を占領した最初の連盟となりました。",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0036.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0036.png"
+        },
+        {
+          "owner": "TrX",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟TrXがLv.1漁場 #440(X:978,Y:399)を占領した最初の連盟となりました。おめでとうございます。",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0037.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0037.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#509:K-17",
+      "target_server": "#509",
+      "x": 799,
+      "y": 978,
+      "image_owner": "hMt",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (17).PNG",
+      "image_text": "連盟hMtがLV.1漁場 #509(X:799,Y:978)を占 領",
+      "video_candidates": [
+        {
+          "owner": "hMt",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟hMtがLv.1漁場 #509(X:799,Y:978)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0041.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0041.png"
+        },
+        {
+          "owner": "hMt",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟hMtがLv.1漁場 #509(X:799,Y:978)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0039.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0039.png"
+        },
+        {
+          "owner": "hMt",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟hMtがLv.1漁場 #509(X:799,Y:978)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0038.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0038.png"
+        }
+      ]
+    },
+    {
+      "status": "coord_kind_only",
+      "position_key": "#509:F-19",
+      "target_server": "#509",
+      "x": 899,
+      "y": 499,
+      "image_owner": "0TT",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (18).PNG",
+      "image_text": "連盟OTTがLV.1漁場 #509(X:899,Y:499)を占 領",
+      "video_candidates": [
+        {
+          "owner": "OTT",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟OTTがLv.1漁場 #509(X:899,Y:499)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0046.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0046.png"
+        },
+        {
+          "owner": "OTT",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟OTTがLv.1漁場 #509(X:899,Y:499) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0049.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0049.png"
+        }
+      ]
+    },
+    {
+      "status": "coord_kind_only",
+      "position_key": "中央:中央-3-17",
+      "target_server": "#8061",
+      "x": 824,
+      "y": 874,
+      "image_owner": "AOW",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (16).PNG",
+      "image_text": "連盟AOWがLV.7漁場 #8061(X:824,Y:874)を 占領",
+      "video_candidates": [
+        {
+          "owner": "AoW",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟AoWがLv.7漁場 #8061(X:824,Y:874)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0043.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0043.png"
+        },
+        {
+          "owner": "null",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟AoWがLv.7漁場 #8061(X:824,Y:874)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0044.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0044.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "中央:中央-1-16",
+      "target_server": "#8061",
+      "x": 774,
+      "y": 974,
+      "image_owner": "OWM",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (18).PNG",
+      "image_text": "連盟OWMがLV.5漁場 #8061(X:774,Y:974) を占領",
+      "video_candidates": [
+        {
+          "owner": "OWM",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟OWMがLv.5漁場 #8061(X:774,Y:974)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0050.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0050.png"
+        }
+      ]
+    },
+    {
+      "status": "owner_match_action_diff",
+      "position_key": "#440:d-8",
+      "target_server": "#440",
+      "x": 349,
+      "y": 349,
+      "image_owner": "GcC",
+      "image_action": "first_occupy",
+      "image_type": "都市",
+      "image_file": "画像 (18).PNG",
+      "image_text": "連盟GcCがLV.3密林の集会場 #440(X:349,Y:349)を占領",
+      "video_candidates": [
+        {
+          "owner": "GcC",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟GcCがLv.3密林の集会場 #440(X:349,Y:349)を占領した最初の連盟となりました。おめでとうございます。",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0048.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0048.png"
+        },
+        {
+          "owner": "GcC",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟GcCがLv.3密林の集合場 #440(X:349,Y:349) を占領した最初の連盟となりました。おめでとうございます。",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0049.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0049.png"
+        }
+      ]
+    },
+    {
+      "status": "owner_match_action_diff",
+      "position_key": "#440:d-10",
+      "target_server": "#440",
+      "x": 449,
+      "y": 349,
+      "image_owner": "GcC",
+      "image_action": "first_occupy",
+      "image_type": "都市",
+      "image_file": "画像 (18).PNG",
+      "image_text": "連盟GcCがLV.3密林の集会場 #440(X:449,Y:349)を占領",
+      "video_candidates": [
+        {
+          "owner": "GcC",
+          "action": "occupy",
+          "type": "密林",
+          "raw_text": "連盟GcCがLv.3密林の集会場 #440(X:449,Y:349) を占領した最初の連盟となりました。おめでとうございます。",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0052.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0052.png"
+        },
+        {
+          "owner": "GcC",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟GcCがLv.3密林の集合場 #440(X:449,Y:349) を占領した最初の連盟となりました。おめでとうございます。",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0049.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0049.png"
+        },
+        {
+          "owner": "GcC",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟GcCがLv.3密林の集会場 #440(X:449,Y:349)を占領した最初の連盟となりました。おめでとうございます。",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0051.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0051.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "中央:中央-2-14",
+      "target_server": "#8061",
+      "x": 674,
+      "y": 924,
+      "image_owner": "tWD",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (19).PNG",
+      "image_text": "連盟tWDがLV.6漁場 #8061(X:674,Y:924)を 占領",
+      "video_candidates": [
+        {
+          "owner": "tWD",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟tWDがLv.6漁場 #8061(X:674,Y:924) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0052.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0052.png"
+        },
+        {
+          "owner": "tWD",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟tWDがLv.6漁場 #8061(X:674,Y:924)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0050.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0050.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:H-3",
+      "target_server": "#480",
+      "x": 99,
+      "y": 699,
+      "image_owner": "TkTk",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (20).PNG",
+      "image_text": "連盟TkTkは連盟MtGのLV.1漁場 #480(X:99,Y:699)を奪い",
+      "video_candidates": [
+        {
+          "owner": "TkTk",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟TkTkは連盟MtGのLv.1漁場 #480(X:99,Y:699)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0060.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0060.png"
+        },
+        {
+          "owner": "TkTk",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟TkTkは連盟MtGのLv.1漁場 #480(X:99,Y:699)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0059.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0059.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:I-7",
+      "target_server": "#480",
+      "x": 299,
+      "y": 799,
+      "image_owner": "RCON",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (20).PNG",
+      "image_text": "連盟RCONは連盟KTVSのLV.2漁場 #480(X:299,Y:799)を奪い",
+      "video_candidates": [
+        {
+          "owner": "RCON",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟RCONは連盟KTVSのLv.2漁場 #480(X:299,Y:799)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0060.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0060.png"
+        },
+        {
+          "owner": "RCON",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟RCONは連盟KTVSのLv.2漁場 #480(X:299,Y:799)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0061.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0061.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#523:h-18",
+      "target_server": "#523",
+      "x": 849,
+      "y": 749,
+      "image_owner": "ALj",
+      "image_action": "occupy",
+      "image_type": "都市",
+      "image_file": "画像 (21).PNG",
+      "image_text": "連盟ALjがLV.1湿地の村 #523(X:849,Y:749) を占領",
+      "video_candidates": [
+        {
+          "owner": "ALj",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟ALjがLv.1湿地の村 #523(X:849,Y:749)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0056.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0056.png"
+        },
+        {
+          "owner": "ALj",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟ALjがLv.1湿地の村 #523(X:849,Y:749)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0057.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0057.png"
+        },
+        {
+          "owner": "AL",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟AL」がLv.1湿地の村 #523(X:849,Y:749)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0058.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0058.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#523:F-17",
+      "target_server": "#523",
+      "x": 799,
+      "y": 499,
+      "image_owner": "FHX",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (21).PNG",
+      "image_text": "連盟FHXは連盟u30のLV.2漁場 #523(X:799,Y:499)を奪い",
+      "video_candidates": [
+        {
+          "owner": "FHX",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟FHXは連盟u3oのLv.2漁場 #523(X:799,Y:499)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0057.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0057.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:G-1",
+      "target_server": "#480",
+      "x": 20,
+      "y": 599,
+      "image_owner": "89M",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (21).PNG",
+      "image_text": "連盟89Mは連盟MtGのLV.1漁場 #480(X:20,Y:599)を奪い",
+      "video_candidates": [
+        {
+          "owner": "89M",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟89Mは連盟MtGのLv.1漁場 #480(X:20,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0057.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0057.png"
+        },
+        {
+          "owner": "89M",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟89Mは連盟MtGのLv.1漁場 #480(X:20,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0059.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0059.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#440:H-15",
+      "target_server": "#440",
+      "x": 699,
+      "y": 699,
+      "image_owner": "476A",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (22).PNG",
+      "image_text": "連盟476Aは連盟TrXのLV.3漁場 #440(X:699,Y:699)を奪い",
+      "video_candidates": [
+        {
+          "owner": "476A",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Aは連盟TrXのLv.3漁場 #440(X:699,Y:699)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0060.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0060.png"
+        },
+        {
+          "owner": "476A",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Aは連盟TrXのLv.3漁場 #440(X:699,Y:699)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0061.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0061.png"
+        }
+      ]
+    },
+    {
+      "status": "coord_kind_only",
+      "position_key": "#480:G-3",
+      "target_server": "#480",
+      "x": 99,
+      "y": 599,
+      "image_owner": "GODS",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (22).PNG",
+      "image_text": "連盟GODSは連盟DiggのLV.1漁場 #480(X:99,Y:599)を奪い",
+      "video_candidates": [
+        {
+          "owner": "GoDs",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟GoDsは連盟DiggのLv.1漁場 #480(X:99,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0062.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0062.png"
+        },
+        {
+          "owner": "GoDs",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟GoDsは連盟DiggのLv.1漁場 #480(X:99,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0061.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0061.png"
+        },
+        {
+          "owner": "GoDs",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟GoDsは連盟DiggのLv.1漁場 #480(X:99,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0064.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0064.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#476:K-1",
+      "target_server": "#476",
+      "x": 20,
+      "y": 978,
+      "image_owner": "476H",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (22).PNG",
+      "image_text": "連盟476Hは連盟nO9のLV.1漁場 #476(X:20,Y:978)を奪い",
+      "video_candidates": [
+        {
+          "owner": "nO9",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Hは連盟nO9のLv.1漁場 #476(X:20,Y:978)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0065.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0065.png"
+        },
+        {
+          "owner": "476H",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Hは連盟nO9OのLv.1漁場 #476(X:20,Y:978)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0064.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0064.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#476:K-13",
+      "target_server": "#476",
+      "x": 599,
+      "y": 978,
+      "image_owner": "476K",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (20).PNG",
+      "image_text": "連盟476Kは連盟SHAのLV.1漁場 #476(X:599,Y:978)を奪い",
+      "video_candidates": [
+        {
+          "owner": "476KI",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476KIは連盟SHAのLv.1漁場 #476(X:599,Y:978)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0060.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0060.png"
+        },
+        {
+          "owner": "476K",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Kは連盟SHAのLv.1漁場 #476(X:599,Y:978)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0061.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0061.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#509:D-9",
+      "target_server": "#509",
+      "x": 399,
+      "y": 299,
+      "image_owner": "tWD",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (21).PNG",
+      "image_text": "連盟tWDがLV.3漁場 #509(X:399,Y:299)を占 領",
+      "video_candidates": [
+        {
+          "owner": "",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟tWDがLv.3漁場 #509(X:399,Y:299)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0055.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0055.png"
+        },
+        {
+          "owner": "tWD",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟tWDがLv.3漁場 #509(X:399,Y:299) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0056.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0056.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#476:J-1",
+      "target_server": "#476",
+      "x": 20,
+      "y": 899,
+      "image_owner": "476K",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (22).PNG",
+      "image_text": "連盟476Kは連盟89MのLV.1漁場 #476(X:20,Y:899)を奪い",
+      "video_candidates": [
+        {
+          "owner": "89M",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Kは連盟89MのLv.1漁場 #476(X:20,Y:899)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0065.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0065.png"
+        },
+        {
+          "owner": "476K",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Kは連盟89MのLv.1漁場 #476(X:20,Y:899) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0066.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0066.png"
+        },
+        {
+          "owner": "476K",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Kは連盟89MのLv.1漁場 #476(X:20,Y:899)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0063.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0063.png"
+        },
+        {
+          "owner": "476K",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Kは連盟89MのLv.1漁場 #476(X:20,Y:899)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0064.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0064.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:K-7",
+      "target_server": "#480",
+      "x": 299,
+      "y": 978,
+      "image_owner": "GX99",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (23).PNG",
+      "image_text": "連盟GX99は連盟DXのLV.1漁場 #480(X:299,Y:978)を奪い",
+      "video_candidates": [
+        {
+          "owner": "JDX",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟GX99は連盟JDXのLv.1漁場 #480(X:299,Y:978)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0065.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0065.png"
+        },
+        {
+          "owner": "GX99",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟GX99は連盟JDXのLv.1漁場 #480(X:299,Y:978) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0066.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0066.png"
+        },
+        {
+          "owner": "GX99",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟GX99は連盟JDXのLv.1漁場 #480(X:299,Y:978)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0064.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0064.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#534:E-15",
+      "target_server": "#534",
+      "x": 699,
+      "y": 399,
+      "image_owner": "476C",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (23).PNG",
+      "image_text": "連盟476Cは連盟Sg3のLV.3漁場 #534(X:699,Y:399)を奪い",
+      "video_candidates": [
+        {
+          "owner": "Sq3",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Cは連盟Sq3のLv.3漁場 #534(X:699,Y:399)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0065.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0065.png"
+        },
+        {
+          "owner": "476C",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Cは連盟Sg3のLv.3漁場 #534(X:699,Y:399) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0066.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0066.png"
+        },
+        {
+          "owner": "476C",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476Cは連盟Sg3のLv.3漁場 #534(X:699,Y:399)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0067.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0067.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#509:C-5",
+      "target_server": "#509",
+      "x": 199,
+      "y": 199,
+      "image_owner": "476d",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (23).PNG",
+      "image_text": "連盟476dは連盟SHAのLV.2漁場 #509(X:199,Y:199)を奪い",
+      "video_candidates": [
+        {
+          "owner": "476dI",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476dIは連盟SHAのLv.2漁場 #509(X:199,Y:199)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0067.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0067.png"
+        },
+        {
+          "owner": "476d",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟476dは連盟SHAのLv.2漁場 #509(X:199,Y:199)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0068.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0068.png"
+        }
+      ]
+    },
+    {
+      "status": "owner_match_action_diff",
+      "position_key": "#523:b-18",
+      "target_server": "#523",
+      "x": 849,
+      "y": 149,
+      "image_owner": "5DU",
+      "image_action": "first_occupy",
+      "image_type": "都市",
+      "image_file": "画像 (23).PNG",
+      "image_text": "連盟5DUがLV.1湿地の村 #523(X:849,Y:149) を占領",
+      "video_candidates": [
+        {
+          "owner": "5DU",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟5DUがLv.1湿地の村 #523(X:849,Y:149)を占領した最初の連盟となりました。おめでとうございます。",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0069.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0069.png"
+        },
+        {
+          "owner": "476dI",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟5DUがLv.1湿地の村 #523(X:849,Y:149) を占領した最初の連盟となりました。おめでとうございます。",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0066.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0066.png"
+        },
+        {
+          "owner": "5DU",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟5DUがLv.1湿地の村 #523(X:849,Y:149)を占領した最初の連盟となりました。おめでとうございます。",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0067.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0067.png"
+        }
+      ]
+    },
+    {
+      "status": "owner_match_action_diff",
+      "position_key": "#440:f-18",
+      "target_server": "#440",
+      "x": 849,
+      "y": 549,
+      "image_owner": "TrX",
+      "image_action": "first_occupy",
+      "image_type": "都市",
+      "image_file": "画像 (24) (1).PNG",
+      "image_text": "連盟TrXがLV.1密林の村 #440(X:849,Y:549) を占領",
+      "video_candidates": [
+        {
+          "owner": "TrX",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟TrXがLv.1密林の村 #440(X:849,Y:549) を占領した最初の連盟となりました。おめでとうございます。",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0071.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0071.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "中央:中央-6-19",
+      "target_server": "#8061",
+      "x": 924,
+      "y": 724,
+      "image_owner": "BHE",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (25).PNG",
+      "image_text": "連盟BHEは連盟DiggのLV.6漁場 #8061(X:924,Y:724)を奪い",
+      "video_candidates": [
+        {
+          "owner": "BHE",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟BHEは連盟DiggのLv.6漁場 #8061(X:924,Y:724)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0073.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0073.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:C-19",
+      "target_server": "#480",
+      "x": 899,
+      "y": 199,
+      "image_owner": "PmP",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (24) (1).PNG",
+      "image_text": "連盟PmPがLV.1漁場 #480(X:899,Y:199)を 占領",
+      "video_candidates": [
+        {
+          "owner": "PmP",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟PmPがLv.1漁場 #480(X:899,Y:199)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0073.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0073.png"
+        },
+        {
+          "owner": "PmP",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟PmPがLv.1漁場 #480(X:899,Y:199)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0072.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0072.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#440:F-7",
+      "target_server": "#440",
+      "x": 299,
+      "y": 499,
+      "image_owner": "Lghs",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (24).PNG",
+      "image_text": "連盟Lghsは連盟BAのLV.3漁場 #440(X:299,Y:499)を奪い",
+      "video_candidates": [
+        {
+          "owner": "Lqhs",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟Lqhsは連盟BAJのLv.3漁場 #440(X:299,Y:499) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0071.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0071.png"
+        },
+        {
+          "owner": "Lghs",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟Lghsは連盟BA]のLv.3漁場 #440(X:299,Y:499)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0072.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0072.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:G-5",
+      "target_server": "#480",
+      "x": 199,
+      "y": 599,
+      "image_owner": "89M",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (24).PNG",
+      "image_text": "連盟89Mは連盟DiggのLV.2漁場 #480(X:199,Y:599)を奪い",
+      "video_candidates": [
+        {
+          "owner": "89M",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟89Mは連盟DiggのLv.2漁場 #480(X:199,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0069.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0069.png"
+        },
+        {
+          "owner": "89MI",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟89MIは連盟DiggのLv.2漁場 #480(X:199,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0067.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0067.png"
+        },
+        {
+          "owner": "89M",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟89Mは連盟DiggのLv.2漁場 #480(X:199,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0068.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0068.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#509:H-13",
+      "target_server": "#509",
+      "x": 599,
+      "y": 699,
+      "image_owner": "OWM",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (24).PNG",
+      "image_text": "連盟OWMがLV.3漁場 #509(X:599,Y:699)を 占領",
+      "video_candidates": [
+        {
+          "owner": "OWM",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟OWMがLv.3漁場 #509(X:599,Y:699)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0069.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0069.png"
+        },
+        {
+          "owner": "OWM",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟OWMがLv.3漁場 #509(X:599,Y:699)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0068.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0068.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#523:E-15",
+      "target_server": "#523",
+      "x": 699,
+      "y": 399,
+      "image_owner": "BAJ",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (24).PNG",
+      "image_text": "連盟BAは連盟u30のLV.3漁場 #523(X:699,Y:399)を奪い",
+      "video_candidates": [
+        {
+          "owner": "BAJ",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟BAJは連盟u3oのLv.3漁場 #523(X:699,Y:399) を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0071.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0071.png"
+        },
+        {
+          "owner": "BAJ",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟BAJは連盟u30のLv.3漁場 #523(X:699,Y:399)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0069.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0069.png"
+        },
+        {
+          "owner": "BAJ",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟BA」は連盟u3oのLv.3漁場 #523(X:699,Y:399)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0070.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0070.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#534:A-5",
+      "target_server": "#534",
+      "x": 199,
+      "y": 20,
+      "image_owner": "476H",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (25).PNG",
+      "image_text": "連盟476HがLV.1漁場 #534(X:199,Y:20)を占 領",
+      "video_candidates": [
+        {
+          "owner": "476H",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟476HがLv.1漁場 #534(X:199,Y:20)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0073.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0073.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:D-11",
+      "target_server": "#480",
+      "x": 499,
+      "y": 299,
+      "image_owner": "GcC",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (25).PNG",
+      "image_text": "連盟GCCがLV.3漁場 #480(X:499,Y:299)を占 領",
+      "video_candidates": [
+        {
+          "owner": "GcC",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟GcCがLv.3漁場 #480(X:499,Y:299)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0074.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0074.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#523:C-11",
+      "target_server": "#523",
+      "x": 499,
+      "y": 199,
+      "image_owner": "K4TR",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (25).PNG",
+      "image_text": "連盟K4TRがLV.2漁場 #523(X:499,Y:199)を 占領",
+      "video_candidates": [
+        {
+          "owner": "K4TR",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟K4TRがLv.2漁場 #523(X:499,Y:199)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0074.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0074.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#523:b-12",
+      "target_server": "#523",
+      "x": 549,
+      "y": 149,
+      "image_owner": "K4TR",
+      "image_action": "occupy",
+      "image_type": "都市",
+      "image_file": "画像 (26).PNG",
+      "image_text": "連盟K4TRがLV.1湿地の村 #523(X:549,Y:149)を占領",
+      "video_candidates": [
+        {
+          "owner": "K4TR",
+          "action": "occupy",
+          "type": "都市",
+          "raw_text": "連盟K4TRがLv.1湿地の村 #523(X:549,Y:149)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0075.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0075.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#523:H-7",
+      "target_server": "#523",
+      "x": 299,
+      "y": 699,
+      "image_owner": "u3o",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (26).PNG",
+      "image_text": "連盟u30がLV.3漁場 #523(X:299,Y:699)を占 領",
+      "video_candidates": [
+        {
+          "owner": "u3o",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟u3oがLv.3漁場 #523(X:299,Y:699)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0076.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0076.png"
+        },
+        {
+          "owner": "u3o",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟u30がLv.3漁場 #523(X:299,Y:699)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0077.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0077.png"
+        }
+      ]
+    },
+    {
+      "status": "coord_kind_only",
+      "position_key": "#440:D-7",
+      "target_server": "#440",
+      "x": 299,
+      "y": 299,
+      "image_owner": "IMP",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (26).PNG",
+      "image_text": "連盟IMpがLV.3漁場 #440(X:299,Y:299)を占 領",
+      "video_candidates": [
+        {
+          "owner": "IMp",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟IMpがLv.3漁場 #440(X:299,Y:299) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0079.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0079.png"
+        },
+        {
+          "owner": "IMp",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟IMpがLv.3漁場 #440(X:299,Y:299)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0077.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0077.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#440:F-19",
+      "target_server": "#440",
+      "x": 899,
+      "y": 499,
+      "image_owner": "TrX",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (27).PNG",
+      "image_text": "連盟TrXがLV.1漁場 #440(X:899,Y:499)を占 領",
+      "video_candidates": [
+        {
+          "owner": "TrX",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟TrXがLv.1漁場 #440(X:899,Y:499) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0079.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0079.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#511:D-17",
+      "target_server": "#511",
+      "x": 799,
+      "y": 299,
+      "image_owner": "DaNG",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (27).PNG",
+      "image_text": "連盟DaNGがLV.2漁場 #511(X:799,Y:299)を 占領",
+      "video_candidates": [
+        {
+          "owner": "DaNG",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟DaNGがLv.2漁場 #511(X:799,Y:299) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0079.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0079.png"
+        }
+      ]
+    },
+    {
+      "status": "coord_kind_only",
+      "position_key": "#440:D-11",
+      "target_server": "#440",
+      "x": 499,
+      "y": 299,
+      "image_owner": "IMP",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (27).PNG",
+      "image_text": "連盟IMpがLV.3漁場 #440(X:499,Y:299)を占 領",
+      "video_candidates": [
+        {
+          "owner": "IMp",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟IMpがLv.3漁場 #440(X:499,Y:299) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0081.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0081.png"
+        },
+        {
+          "owner": "IMp",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟IMpがLv.3漁場 #440(X:499,Y:299) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0079.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0079.png"
+        },
+        {
+          "owner": "IMp",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟IMpがLv.3漁場 #440(X:499,Y:299) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0080.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0080.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#503:J-1",
+      "target_server": "#503",
+      "x": 20,
+      "y": 899,
+      "image_owner": "SMK4",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (27).PNG",
+      "image_text": "連盟SMK4がLV.1漁場 #503(X:20,Y:899)を占 領",
+      "video_candidates": [
+        {
+          "owner": "SMK4",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟SMK4がLv.1漁場 #503(X:20,Y:899) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0080.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0080.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#511:K-11",
+      "target_server": "#511",
+      "x": 499,
+      "y": 978,
+      "image_owner": "DaNG",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (28).PNG",
+      "image_text": "連盟DaNGがLV.1漁場 #511(X:499,Y:978)を 占領",
+      "video_candidates": [
+        {
+          "owner": "DaNG",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟DaNGがLv.1漁場 #511(X:499,Y:978) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0081.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0081.png"
+        }
+      ]
+    },
+    {
+      "status": "exact_match",
+      "position_key": "#480:K-9",
+      "target_server": "#480",
+      "x": 399,
+      "y": 978,
+      "image_owner": "Stj",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (7) (1).PNG",
+      "image_text": "連盟Stjは連盟DXのLV.1漁場 #480(X:399,Y:978)を奪い",
+      "video_candidates": [
+        {
+          "owner": "Stj",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟Stjは連盟JDXのLv.1漁場 #480(X:399,Y:978)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0006.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0006.png"
+        },
+        {
+          "owner": "Sj",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟Sjは連盟JDXのLv.1漁場 #480(X:399,Y:978)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0000.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0000.png"
+        },
+        {
+          "owner": "Stj",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟Stjは連盟JXのLv.1漁場 #480(X:399,Y:978)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0002.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0002.png"
+        },
+        {
+          "owner": "St",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟Stjは連盟JDXのLv.1漁場 #480(X:399,Y:978)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0005.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0005.png"
+        }
+      ]
+    }
+  ],
+  "problem_updates": [
+    {
+      "status": "missing_in_video",
+      "position_key": "#509:j-8",
+      "target_server": "#509",
+      "x": 349,
+      "y": 949,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像.PNG",
+      "image_text": "#503[UMN]が#509[0WM]領有中のLV.1都市 #509(349,949)を攻撃し、陣営のために破壊宝箱xを勝 ち取りました 2026-6-6 04:06:20",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#523:c-12",
+      "target_server": "#523",
+      "x": 549,
+      "y": 249,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (1).PNG",
+      "image_text": "#511[2N7]が#523[K4TR]領有中のLV.2都市 #523(549,249)を攻撃し、陣営のために破壊宝箱x5を勝 ち取りました 2026-6-6 04:28:41",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#509:j-6",
+      "target_server": "#509",
+      "x": 249,
+      "y": 949,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (1).PNG",
+      "image_text": "#503[UMN]が#509[OUM]領有中のLV.1都市 #509(249,949)を攻撃し、陣営のために破壊宝箱xを勝 ち取りました 2026-6-6 04:29:00",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#523:d-12",
+      "target_server": "#523",
+      "x": 549,
+      "y": 349,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (1).PNG",
+      "image_text": "#511[2N7]が#523[5DU]領有中のLV.3都市#523(549,349)を 攻撃し、陣営のために破壊宝箱＊10を勝ち取りました 2026-6-6 04:32:12",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#511:i-18",
+      "target_server": "#511",
+      "x": 849,
+      "y": 849,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2).PNG",
+      "image_text": "#480[AAOAが#511[5Va]領有中のLV.1都市 #511(849,849)を攻撃し、陣営のために破壊宝箱xを勝 ち取りました 2026-6-6 04:36:13",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#523:d-10",
+      "target_server": "#523",
+      "x": 449,
+      "y": 349,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2).PNG",
+      "image_text": "#509[5s0]が#523[K4TR]領有中のLV.3都市 #523(449,349)を攻撃し、陣営のために破壊宝箱x10を 勝ち取りました 2026-6-6 04:36:32",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#523:d-14",
+      "target_server": "#523",
+      "x": 649,
+      "y": 349,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2).PNG",
+      "image_text": "#509[5s0]が#523[5Du]領有中のLV.3都市#523(649,349)を 攻撃し、陣営のために破壊宝箱x10を勝ち取りました 2026-6-6 04:39:29",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#480:c-2",
+      "target_server": "#480",
+      "x": 49,
+      "y": 249,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2).PNG",
+      "image_text": "#534[4tH]が#480[PmP]領有中のLV.1都市#480(49,249)を 攻撃し、陣営のために破壊宝箱xを勝ち取りました 2026-6-6 04:43:21",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#480:j-6",
+      "target_server": "#480",
+      "x": 249,
+      "y": 949,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2) (1).PNG",
+      "image_text": "#534[KTVSが#480領有中のLV.1都市#480(249,949)を 攻撃し、陣営のために破壊宝箱xを勝ち取りました 2026-6-6 09:03:05",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#511:d-6",
+      "target_server": "#511",
+      "x": 249,
+      "y": 349,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2) (1).PNG",
+      "image_text": "#523[50Uが#511領有中のLV.2都市#511(249,349)を 攻撃し、陣営のために破壊宝箱x5を勝ち取りました 2026-6-6 10:35:19",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#509:d-14",
+      "target_server": "#509",
+      "x": 649,
+      "y": 349,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2) (1).PNG",
+      "image_text": "#503[GX991が#509[FHX]領有中のLV.3都市 #509(649,349)を攻撃し、陣営のために破壊宝箱＊10を 勝ち取りました 2026-6-6 12:01:40",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#509:b-18",
+      "target_server": "#509",
+      "x": 849,
+      "y": 149,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (2) (1).PNG",
+      "image_text": "#503[one]が#509[AoW]領有中のLV.1都市 #509(849,149)を攻撃し、陣営のために破壊宝箱xを勝 ち取りました 2026-6-6 12:10:44",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#480:j-8",
+      "target_server": "#480",
+      "x": 349,
+      "y": 949,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (3).PNG",
+      "image_text": "#534[JDX]が#480[TkTk]領有中のLV.1都市 #480(349,949)を攻撃し、陣営のために破壊宝箱＊こを勝 ち取りました 2026-6-6 12:19:10",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#480:j-2",
+      "target_server": "#480",
+      "x": 49,
+      "y": 949,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (3).PNG",
+      "image_text": "#509[Monが#480[MtG]領有中のLV.1都市#480(49,949)を 攻撃し、陣営のために破壊宝箱xを勝ち取りました 2026-6-6 12:21:34",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#480:j-4",
+      "target_server": "#480",
+      "x": 149,
+      "y": 949,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (3) (1).PNG",
+      "image_text": "#509[BHE]が#480[MtG]領有中のLV.1都市 #480(149,949)を攻撃し、陣営のために破壊宝箱＊を勝 ち取りました 2026-6-6 12:23:21",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#440:c-4",
+      "target_server": "#440",
+      "x": 149,
+      "y": 249,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (3) (1).PNG",
+      "image_text": "#476[476M]が#440領有中のLV.1都市#440(149,249)を 攻撃し、陣営のために破壊宝箱xを勝ち取りました 2026-6-6 12:29:36",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#440:d-6",
+      "target_server": "#440",
+      "x": 249,
+      "y": 349,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (3) (1).PNG",
+      "image_text": "#503[Lghsが#440[GoDs]領有中のLv.2都市 #440(249,349)を攻撃し、陣営のために破壊宝箱x5を勝 ち取りました 2026-6-6 12:34:05",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#440:e-2",
+      "target_server": "#440",
+      "x": 49,
+      "y": 449,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (3) (1).PNG",
+      "image_text": "#476[476M]が#440[IMp]領有中のLV.1都市 #440(49,449)を攻撃し、陣営のために破壊宝箱xを勝 ち取りました 2026-6-6 12:35:17",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#534:b-16",
+      "target_server": "#534",
+      "x": 749,
+      "y": 149,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (4).PNG",
+      "image_text": "#476[4762]が#534[M0E]領有中のLV.1都市 #534(749,149)を攻撃し、陣営のために破壊宝箱x2を勝 ち取りました 2026-6-6 12:36:11",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#440:f-20",
+      "target_server": "#440",
+      "x": 949,
+      "y": 549,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (4).PNG",
+      "image_text": "#503[fznが#440[TrX]領有中のLV.1都市#440(949,549)を 攻撃し、陣営のために破壊宝箱xを勝ち取りました 2026-6-6 12:46:26",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#440:g-20",
+      "target_server": "#440",
+      "x": 949,
+      "y": 649,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (5).PNG",
+      "image_text": "#503[299が#440[TrX]領有中のLV.1都市#440(949,649)を 攻撃し、陣営のために破壊宝箱＊2を勝ち取りました 2026-6-6 20:04:11",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#534:g-14",
+      "target_server": "#534",
+      "x": 649,
+      "y": 649,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (5).PNG",
+      "image_text": "#476[476B]が#534[KTVS]領有中のLV.3都市 #534(649,649)を攻撃し、陣営のために破壊宝箱*10を 勝ち取りました 2026-6-6 20:05:36",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#480:f-2",
+      "target_server": "#480",
+      "x": 49,
+      "y": 549,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (5).PNG",
+      "image_text": "#440[GoDs]が#480[Digg]領有中のLV.1都市 #480(49,549)を攻撃し、陣営のために破壊宝箱x2を勝 ち取りました 2026-6-6 20:19:43",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#534:e-16",
+      "target_server": "#534",
+      "x": 749,
+      "y": 449,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (5).PNG",
+      "image_text": "#476[476c]が#534[KTVS]領有中のLV.2都市 #534(749,449)を攻撃し、陣営のために破壊宝箱x5を勝 ち取りました 2026-6-6 20:25:49",
+      "video_candidates": []
+    },
+    {
+      "status": "missing_in_video",
+      "position_key": "#534:d-16",
+      "target_server": "#534",
+      "x": 749,
+      "y": 349,
+      "image_owner": "破壊",
+      "image_action": "destroy",
+      "image_type": "都市",
+      "image_file": "画像 (6).PNG",
+      "image_text": "#476[476c]が#534[KTVS]領有中のLV.2都市 #534(749,349)を攻撃し、陣営のために破壊宝箱x5を勝 ち取りました 2026-6-6 20:27:43",
+      "video_candidates": []
+    },
+    {
+      "status": "coord_kind_only",
+      "position_key": "中央:中央-4-17",
+      "target_server": "#8061",
+      "x": 824,
+      "y": 824,
+      "image_owner": "AOW",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (16).PNG",
+      "image_text": "連盟AOWがLV.7漁場 #8061(X:824,Y:824)を 占領",
+      "video_candidates": [
+        {
+          "owner": "AoW",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟AoWがLv.7漁場 #8061(X:824,Y:824)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0043.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0043.png"
+        },
+        {
+          "owner": "AoW",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟AoWがLv.7漁場 #8061(X:824,Y:824)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0041.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0041.png"
+        }
+      ]
+    },
+    {
+      "status": "coord_kind_only",
+      "position_key": "#509:F-19",
+      "target_server": "#509",
+      "x": 899,
+      "y": 499,
+      "image_owner": "0TT",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (18).PNG",
+      "image_text": "連盟OTTがLV.1漁場 #509(X:899,Y:499)を占 領",
+      "video_candidates": [
+        {
+          "owner": "OTT",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟OTTがLv.1漁場 #509(X:899,Y:499)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0046.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0046.png"
+        },
+        {
+          "owner": "OTT",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟OTTがLv.1漁場 #509(X:899,Y:499) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0049.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0049.png"
+        }
+      ]
+    },
+    {
+      "status": "coord_kind_only",
+      "position_key": "中央:中央-3-17",
+      "target_server": "#8061",
+      "x": 824,
+      "y": 874,
+      "image_owner": "AOW",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (16).PNG",
+      "image_text": "連盟AOWがLV.7漁場 #8061(X:824,Y:874)を 占領",
+      "video_candidates": [
+        {
+          "owner": "AoW",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟AoWがLv.7漁場 #8061(X:824,Y:874)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0043.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0043.png"
+        },
+        {
+          "owner": "null",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟AoWがLv.7漁場 #8061(X:824,Y:874)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0044.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0044.png"
+        }
+      ]
+    },
+    {
+      "status": "coord_kind_only",
+      "position_key": "#480:G-3",
+      "target_server": "#480",
+      "x": 99,
+      "y": 599,
+      "image_owner": "GODS",
+      "image_action": "steal",
+      "image_type": "漁場",
+      "image_file": "画像 (22).PNG",
+      "image_text": "連盟GODSは連盟DiggのLV.1漁場 #480(X:99,Y:599)を奪い",
+      "video_candidates": [
+        {
+          "owner": "GoDs",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟GoDsは連盟DiggのLv.1漁場 #480(X:99,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0062.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0062.png"
+        },
+        {
+          "owner": "GoDs",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟GoDsは連盟DiggのLv.1漁場 #480(X:99,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0061.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0061.png"
+        },
+        {
+          "owner": "GoDs",
+          "action": "steal",
+          "type": "漁場",
+          "raw_text": "連盟GoDsは連盟DiggのLv.1漁場 #480(X:99,Y:599)を奪い取りました！",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0064.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0064.png"
+        }
+      ]
+    },
+    {
+      "status": "coord_kind_only",
+      "position_key": "#440:D-7",
+      "target_server": "#440",
+      "x": 299,
+      "y": 299,
+      "image_owner": "IMP",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (26).PNG",
+      "image_text": "連盟IMpがLV.3漁場 #440(X:299,Y:299)を占 領",
+      "video_candidates": [
+        {
+          "owner": "IMp",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟IMpがLv.3漁場 #440(X:299,Y:299) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0079.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0079.png"
+        },
+        {
+          "owner": "IMp",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟IMpがLv.3漁場 #440(X:299,Y:299)を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0077.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0077.png"
+        }
+      ]
+    },
+    {
+      "status": "coord_kind_only",
+      "position_key": "#440:D-11",
+      "target_server": "#440",
+      "x": 499,
+      "y": 299,
+      "image_owner": "IMP",
+      "image_action": "occupy",
+      "image_type": "漁場",
+      "image_file": "画像 (27).PNG",
+      "image_text": "連盟IMpがLV.3漁場 #440(X:499,Y:299)を占 領",
+      "video_candidates": [
+        {
+          "owner": "IMp",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟IMpがLv.3漁場 #440(X:499,Y:299) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0081.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0081.png"
+        },
+        {
+          "owner": "IMp",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟IMpがLv.3漁場 #440(X:499,Y:299) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0079.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0079.png"
+        },
+        {
+          "owner": "IMp",
+          "action": "occupy",
+          "type": "漁場",
+          "raw_text": "連盟IMpがLv.3漁場 #440(X:499,Y:299) を占領しました",
+          "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0080.png",
+          "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0080.png"
+        }
+      ]
+    }
+  ],
+  "review": [],
+  "video_only": [
+    {
+      "target_server": "#440",
+      "x": 499,
+      "y": 799,
+      "owner": "CDf8",
+      "action": "steal",
+      "type": "漁場",
+      "raw_text": "連盟CDf8は連盟TaWのLv.2漁場 #440(X:499,Y:799)を奪い取りました！",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0064.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0064.png",
+      "candidate_count": 3
+    },
+    {
+      "target_server": "#476",
+      "x": 599,
+      "y": 899,
+      "owner": "476B",
+      "action": "steal",
+      "type": "漁場",
+      "raw_text": "連盟476Bは連盟SHAのLv.1漁場 #476(X:599,Y:899)を奪い取りました！",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0064.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0064.png",
+      "candidate_count": 3
+    },
+    {
+      "target_server": "#480",
+      "x": 199,
+      "y": 799,
+      "owner": "MOn",
+      "action": "steal",
+      "type": "漁場",
+      "raw_text": "連盟MOnは連盟MtGのLv.2漁場 #480(X:199,Y:799)を奪い取りました！",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0059.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0059.png",
+      "candidate_count": 2
+    },
+    {
+      "target_server": "#480",
+      "x": 199,
+      "y": 899,
+      "owner": "Lghs",
+      "action": "steal",
+      "type": "漁場",
+      "raw_text": "連盟Lghsは連盟JDXのLv.1漁場 #480(X:199,Y:899)を奪い取りました！",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0005.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0005.png",
+      "candidate_count": 3
+    },
+    {
+      "target_server": "#523",
+      "x": 699,
+      "y": 499,
+      "owner": "BAJ",
+      "action": "steal",
+      "type": "漁場",
+      "raw_text": "連盟BAJは連盟u30のLv.3漁場 #523(X:699,Y:499)を奪い取りました！",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0061.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0061.png",
+      "candidate_count": 2
+    },
+    {
+      "target_server": "#523",
+      "x": 699,
+      "y": 599,
+      "owner": "WUG",
+      "action": "steal",
+      "type": "漁場",
+      "raw_text": "連盟WUGは連盟u3oのLv.3漁場 #523(X:699,Y:599)を奪い取りました！",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0011.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0011.png",
+      "candidate_count": 2
+    },
+    {
+      "target_server": "#523",
+      "x": 749,
+      "y": 549,
+      "owner": "WUG",
+      "action": "occupy",
+      "type": "都市",
+      "raw_text": "連盟WUGがLv.2湿地の兵舎 #523(X:749,Y:549) を占領しました",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0017.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0017.png",
+      "candidate_count": 1
+    },
+    {
+      "target_server": "#523",
+      "x": 799,
+      "y": 599,
+      "owner": "FHX",
+      "action": "steal",
+      "type": "漁場",
+      "raw_text": "連盟FHXは連盟NBNHのLv.2漁場 #523(X:799,Y:599) を奪い取りました！",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0013.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0013.png",
+      "candidate_count": 1
+    },
+    {
+      "target_server": "#534",
+      "x": 499,
+      "y": 699,
+      "owner": "476X",
+      "action": "steal",
+      "type": "漁場",
+      "raw_text": "連盟476Xは連盟nO9のLv.3漁場 #534(X:499,Y:699)を奪い取りました！",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0011.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0011.png",
+      "candidate_count": 2
+    },
+    {
+      "target_server": "#534",
+      "x": 849,
+      "y": 449,
+      "owner": "DX",
+      "action": "occupy",
+      "type": "都市",
+      "raw_text": "連盟DXがLv.1密林の村 #534(X:849,Y:449)を占領しました",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0003.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0003.png",
+      "candidate_count": 4
+    },
+    {
+      "target_server": "#480",
+      "x": 499,
+      "y": 199,
+      "owner": "GcC",
+      "action": "occupy",
+      "type": "漁場",
+      "raw_text": "連盟GcCがLv.2漁場 #480(X:499,Y:199)を占領しました",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0070.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0070.png",
+      "candidate_count": 3
+    },
+    {
+      "target_server": "#523",
+      "x": 399,
+      "y": 299,
+      "owner": "K4TR",
+      "action": "occupy",
+      "type": "漁場",
+      "raw_text": "連盟K4TRがLv.3漁場 #523(X:399,Y:299) を占領しました",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/cropped/crop_0080.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/095915/frames/frame_0080.png",
+      "candidate_count": 2
+    },
+    {
+      "target_server": "#511",
+      "x": 949,
+      "y": 949,
+      "owner": "破壊",
+      "action": "destroy",
+      "type": "都市",
+      "raw_text": "#480[CDf8]が 領有中のLv.1都市#511(949,949)を攻撃し、陣営のために破壊宝箱×2を勝ち取りました",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/cropped/crop_0000.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/frames/frame_0000.png",
+      "candidate_count": 1
+    },
+    {
+      "target_server": "#511",
+      "x": 949,
+      "y": 849,
+      "owner": "破壊",
+      "action": "destroy",
+      "type": "都市",
+      "raw_text": "#480[CDf8]が 領有中のLv.1都市#511(949,849)を攻撃し、陣営のために破壊宝箱×2を勝ち取りました",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/cropped/crop_0000.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/frames/frame_0000.png",
+      "candidate_count": 1
+    },
+    {
+      "target_server": "#509",
+      "x": 249,
+      "y": 49,
+      "owner": "破壊",
+      "action": "destroy",
+      "type": "都市",
+      "raw_text": "#476[476z]が 領有中のLv.1都市#509(249,49)を攻撃し、陣営のために破壊宝箱×2を勝ち取りました",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/cropped/crop_0000.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/frames/frame_0000.png",
+      "candidate_count": 1
+    },
+    {
+      "target_server": "#509",
+      "x": 149,
+      "y": 49,
+      "owner": "破壊",
+      "action": "destroy",
+      "type": "都市",
+      "raw_text": "#476[476z]が 領有中のLv.1都市#509(149,49)を攻撃し、陣営のために破壊宝箱×2を勝ち取りました",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/cropped/crop_0000.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/frames/frame_0000.png",
+      "candidate_count": 1
+    },
+    {
+      "target_server": "#509",
+      "x": 349,
+      "y": 49,
+      "owner": "破壊",
+      "action": "destroy",
+      "type": "都市",
+      "raw_text": "#476[ALi]が 領有中のLv.1都市#509(349,49)を攻撃し、陣営のために破壊宝箱×2を勝ち取りました",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/cropped/crop_0000.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/frames/frame_0000.png",
+      "candidate_count": 1
+    },
+    {
+      "target_server": "#511",
+      "x": 649,
+      "y": 49,
+      "owner": "破壊",
+      "action": "destroy",
+      "type": "都市",
+      "raw_text": "#523[EDF]が 領有中のLv.1都市#511(649,49)を攻撃し、陣営のために破壊宝箱×2を勝ち取りました",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/cropped/crop_0073.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/frames/frame_0073.png",
+      "candidate_count": 1
+    },
+    {
+      "target_server": "#511",
+      "x": 649,
+      "y": 849,
+      "owner": "破壊",
+      "action": "destroy",
+      "type": "都市",
+      "raw_text": "#480[CDf8]が 領有中のLv.1都市#511(649,849)を攻撃し、陣営のために破壊宝箱×2を勝ち取りました",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/cropped/crop_0073.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/frames/frame_0073.png",
+      "candidate_count": 1
+    },
+    {
+      "target_server": "#511",
+      "x": 349,
+      "y": 549,
+      "owner": "破壊",
+      "action": "destroy",
+      "type": "都市",
+      "raw_text": "#523[WUG]が#511[JL]領有中のLv.3都市#511(349,549)を攻撃し、陣営のために破壊宝箱×10を勝ち取りました",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/cropped/crop_0073.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/frames/frame_0073.png",
+      "candidate_count": 1
+    },
+    {
+      "target_server": "#509",
+      "x": 549,
+      "y": 949,
+      "owner": "破壊",
+      "action": "destroy",
+      "type": "都市",
+      "raw_text": "#503[UMN]が#509[AoW]領有中のLv.1都市#509(549,949)を攻撃し、陣営のために破壊宝箱×2を勝ち取りました",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/cropped/crop_0073.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/frames/frame_0073.png",
+      "candidate_count": 1
+    },
+    {
+      "target_server": "#509",
+      "x": 449,
+      "y": 849,
+      "owner": "破壊",
+      "action": "destroy",
+      "type": "都市",
+      "raw_text": "#503[Stj]が#509[AoW]領有中のLv.1都市#509(449,849)を攻撃し、陣営のために破壊宝箱×2を勝ち取りました",
+      "crop_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/cropped/crop_0073.png",
+      "frame_path": "/Users/mba2025/Documents/Projects/S6/tmp/tmp/video_ocr_20260607/100150/frames/frame_0073.png",
+      "candidate_count": 1
+    }
+  ]
+}

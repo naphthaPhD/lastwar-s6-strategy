@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any
 
 from google.auth import default
+from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
 
@@ -24,6 +25,7 @@ OUT_DIR = ROOT / "tmp" / "base_capture_full_ocr"
 DATA_DIR = ROOT / "data"
 VISION_SCRIPT = ROOT / "tools" / "vision_ocr.swift"
 CORRECTIONS_PATH = ROOT / "inputs" / "ocr_alliance_corrections.json"
+DEFAULT_CREDENTIALS = Path("/Users/mba2025/.config/gptcodex/credentials-sub.json")
 
 
 @dataclass
@@ -53,7 +55,11 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="OCR Dropbox base-capture screenshots and update 管理表たたき.")
     parser.add_argument("--image-dir", type=Path, default=IMAGE_DIR)
     parser.add_argument("--out-dir", type=Path, default=OUT_DIR)
+    parser.add_argument("--data-dir", type=Path, default=DATA_DIR)
+    parser.add_argument("--run-date", default="2026-06-06")
+    parser.add_argument("--credentials", type=Path, default=DEFAULT_CREDENTIALS)
     parser.add_argument("--limit", type=int, default=0)
+    parser.add_argument("--trust-type-mismatch", action="store_true")
     parser.add_argument("--apply", action="store_true")
     return parser.parse_args()
 
@@ -353,8 +359,12 @@ def parse_events(raw_output: str, image: Path, corrections: dict[str, str], fall
     return parse_history_events(lines, image, corrections) + parse_timeline_events(lines, image, corrections, fallback_hhmm)
 
 
-def service() -> Any:
-    creds, _ = default(scopes=["https://www.googleapis.com/auth/spreadsheets"])
+def service(credentials_path: Path | None = None) -> Any:
+    scopes = ["https://www.googleapis.com/auth/spreadsheets"]
+    if credentials_path and credentials_path.exists():
+        creds = service_account.Credentials.from_service_account_file(str(credentials_path), scopes=scopes)
+    else:
+        creds, _ = default(scopes=scopes)
     return build("sheets", "v4", credentials=creds)
 
 
@@ -391,12 +401,39 @@ def build_sheet_indexes(values: list[list[str]]) -> tuple[dict[str, int], dict[t
         memo = normalize_chars(padded[11])
         if key:
             key_to_row[key] = row_index
+            key_coord = key_to_xy(key)
+            if key_coord:
+                coord_to_row[key_coord] = row_index
         for match in memo_pattern.finditer(memo):
             coord_to_row[(match.group(1), int(match.group(2)), int(match.group(3)))] = row_index
         if area and memo:
             for match in re.finditer(r"X\s*:\s*(\d{1,4})\s*Y\s*:\s*(\d{1,4})", memo, re.IGNORECASE):
                 coord_to_row[(area, int(match.group(1)), int(match.group(2)))] = row_index
     return key_to_row, coord_to_row
+
+
+def key_to_xy(key: str) -> tuple[str, int, int] | None:
+    match = re.fullmatch(r"(#\d{3,4}|中央):([A-Ka-k]|中央-\d+)-(\d{1,2})", key.strip())
+    if not match:
+        return None
+    area, row_part, column_text = match.groups()
+    column = int(column_text)
+    if area == "中央":
+        # The center map uses custom key labels that are already represented in
+        # memo/state data; do not guess their screen coordinates from the key.
+        return None
+    if len(row_part) != 1:
+        return None
+    row_index = ord(row_part.lower()) - ord("a") + 1
+    if row_part.islower():
+        x = column * 50 - 51
+        y = row_index * 100 - 51
+    else:
+        x = 20 if column == 1 else 978 if column == 21 else column * 50 - 51
+        y = 20 if row_index == 1 else 978 if row_index == 11 else row_index * 100 - 101
+    if x < 0 or y < 0:
+        return None
+    return area, x, y
 
 
 def add_state_coord_index(coord_to_row: dict[tuple[str, int, int], int], key_to_row: dict[str, int]) -> None:
@@ -515,7 +552,7 @@ def main() -> int:
         }
         for event in all_events
     ]
-    write_csv(DATA_DIR / "2026-06-06_base_capture_full_ocr_events.csv", event_rows)
+    write_csv(args.data_dir / f"{args.run_date}_base_capture_full_ocr_events.csv", event_rows)
 
     latest: dict[tuple[str, int, int], Event] = {}
     for event in all_events:
@@ -527,7 +564,7 @@ def main() -> int:
         if key not in latest or event.event_time > latest[key].event_time:
             latest[key] = event
 
-    svc = service()
+    svc = service(args.credentials)
     values = read_sheet_values(svc)
     key_to_row, coord_to_row = build_sheet_indexes(values)
     add_state_coord_index(coord_to_row, key_to_row)
@@ -593,7 +630,7 @@ def main() -> int:
                 }
             )
             continue
-        if existing_type and existing_type != event.kind_sheet:
+        if existing_type and kind_for_sheet(existing_type) != event.kind_sheet and not args.trust_type_mismatch:
             review_rows.append(
                 {
                     "reason": "type_mismatch",
@@ -651,17 +688,17 @@ def main() -> int:
             }
         )
 
-    write_csv(DATA_DIR / "2026-06-06_base_capture_full_ocr_sheet_updates.csv", update_rows)
-    write_csv(DATA_DIR / "2026-06-06_base_capture_full_ocr_review.csv", review_rows)
+    write_csv(args.data_dir / f"{args.run_date}_base_capture_full_ocr_sheet_updates.csv", update_rows)
+    write_csv(args.data_dir / f"{args.run_date}_base_capture_full_ocr_review.csv", review_rows)
 
     if args.apply and ranges:
         body = {"valueInputOption": "USER_ENTERED", "data": [{"range": f"{SHEET}!{rng}", "values": data} for rng, data in ranges.items()]}
         result = svc.spreadsheets().values().batchUpdate(spreadsheetId=SPREADSHEET_ID, body=body).execute()
         print(f"applied={result}")
     print(f"images={len(images)} events={len(all_events)} latest_targets={len(latest)} updates={len(update_rows)} review={len(review_rows)} seconds={time.perf_counter()-started:.1f}")
-    print(DATA_DIR / "2026-06-06_base_capture_full_ocr_events.csv")
-    print(DATA_DIR / "2026-06-06_base_capture_full_ocr_sheet_updates.csv")
-    print(DATA_DIR / "2026-06-06_base_capture_full_ocr_review.csv")
+    print(args.data_dir / f"{args.run_date}_base_capture_full_ocr_events.csv")
+    print(args.data_dir / f"{args.run_date}_base_capture_full_ocr_sheet_updates.csv")
+    print(args.data_dir / f"{args.run_date}_base_capture_full_ocr_review.csv")
     return 0
 
 

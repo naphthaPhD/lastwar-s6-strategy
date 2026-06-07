@@ -1,5 +1,139 @@
 # Handoff summary
 
+## 2026-06-07 Week 4 GPT review input
+
+## Context
+
+The user wants ChatGPT/GPT to think through this week's review, so a compact input memo was created with the latest corrected destroyed-city counts, interpretation, Week 5 framing, and a copy-ready prompt.
+
+## Updated files
+
+- `analysis/2026-06-07_week4_review_input_for_gpt.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. Each area has 86 destroyable cities for review purposes. The sheet appears to contain 90 city-like positions per area, but 4 are treated as game-machine/non-city positions outside the city-destruction denominator.
+2. Corrected destroyed-city counts for Week 4 review: #509 67, #511 62, #480 33, #534 23, #440 16, #523 6, #476 4, #503 0.
+3. Corrected total is 211 destroyed cities out of 688, or 30.7%.
+4. #534 is 23/86 destroyed, 26.7%. This is not instant collapse, but it is a clear attrition position.
+5. #440 is 17 in the management table, but the user says the game screen shows 16. Treat #440=16 as the review number because one video-OCR-derived row is suspected overcount.
+6. #509/#511 are already heavily damaged, so #534's Week 5 review should consider allied-side connection loss, not only #534's own damage.
+
+## Current risks
+
+1. The latest strategy files still contain older destroyed-city tables in some sections; use the new GPT review input memo for current review numbers.
+2. Management table OCR can overcount when video frames contain repeated or slightly shifted destruction logs.
+3. Week 5 framing may demoralize members if it is presented as "we are losing" without a narrowed action scope.
+
+## Recommended next actions
+
+1. Give `analysis/2026-06-07_week4_review_input_for_gpt.md` to ChatGPT/GPT as the primary Week 4 review input.
+2. Ask GPT to produce two outputs: an officer-facing sober review and a short member-facing morale note.
+3. Before final battle instructions, regenerate edge/risk outputs from the latest management table if possible.
+
+## Questions for ChatGPT
+
+1. How should officers explain "#534 is in attrition" without causing resignation?
+2. Which Week 5 objective should be prioritized: sanctuary participation, outpost, or allied-side connection?
+3. What is the minimum daily check list for R4/R5?
+
+## Notes
+
+- This is a #534 overall review input, not a JDX-only review.
+- The copy-ready prompt for GPT is inside `analysis/2026-06-07_week4_review_input_for_gpt.md`.
+
+## 2026-06-07 Week 4 end #534 situation summary
+
+## Context
+
+Created a Week 4 end situation summary after the user clarified that the framing should not be `#534/JDX individual situation`, but `#534 overall`. The summary treats #534 as being in a gradual attrition / losing-position state rather than a JDX-specific problem.
+
+## Updated files
+
+- `analysis/2026-06-07_week4_end_situation_summary.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. #534 overall is not in instant collapse, but it is in a clear attrition position: city losses, connection loss, and allied-side losses are stacking up.
+2. User's current in-game screen confirms #534 has 23 destroyed cities. The old management-table aggregate showed #534 as 8, so that CSV-derived value is stale/undercounted.
+3. Old CSV-derived destroyed-city counts still show #509 42, #511 34, #480 19, #440 4, and #476 2, but these should be treated as stale until the full map is refreshed from the current game screen.
+4. Enemy-owned nodes total 407, led by #476 with 240. #480 has 103 and #503 has 62, so #480/#503 should be treated as side/opportunistic pressure rather than the main enemy.
+5. #534 frontline risk narrows the action frame: critical 2, high 47, with direct #534 defense edges 5 and direct attack edges 5, but these also need refresh after the #534 destroyed-city count correction.
+6. Week 5 should be framed as preserving sanctuary/outpost participation routes and limiting further attrition, not defending every city.
+
+## Current risks
+
+1. If officers frame Week 5 as "defend everything", morale and coordination will degrade further.
+2. Unknown/uncertain rows remain too large for battle instruction use: unknown owner 655 and uncertain alerts 1,380.
+3. #509/#511 city destruction may weaken allied connection options for Week 5-7 if ignored.
+4. The current game screen has already diverged from `node_current_v2.csv`; all area-level destroyed-city counts need a refresh before being treated as current.
+5. Outpost and sanctuary timing still requires exact in-game calendar confirmation.
+
+## Recommended next actions
+
+1. Use `analysis/2026-06-07_week4_end_situation_summary.md` as the current ChatGPT-facing Week 4 end source.
+2. Describe #534 as "ジリ貧だが、見るべき対象は絞れる" rather than "JDX個別状況".
+3. For Week 5, prioritize connection/participation rights for sanctuary and outpost over reclaiming destroyed cities.
+4. Rebuild or refresh the full map / management-table aggregate so #534 destroyed cities read as 23, then recalculate area-level destroyed-city distribution.
+5. Keep the daily confirmation scope to #534 direct defense/attack edges around D-11 / D-13 / E-13 unless a new event changes the map.
+
+## Questions for ChatGPT
+
+1. How should we phrase a sober officer note that says "#534 is in attrition" without causing resignation?
+2. Which Week 5 routes matter most for #534 overall: sanctuary participation, outpost defense, or #509/#440/#511 linkage?
+3. What minimum map checks are needed before the next battle window?
+
+## Notes
+
+- The previous `management_table_situation_analysis` remains useful, but its old #534 destroyed-city count was based on stale `node_current_v2.csv`.
+- JDX is treated only as one #534 alliance/source, not as the main subject.
+
+## 2026-06-07 Management table situation analysis
+
+## Context
+
+Analyzed the current S6 management-table outputs after the user reported low motivation due to the enemy being too strong and additional opponent groups joining the invasion. The goal was to separate immediate action items from noisy management-table backlog and provide a morale-preserving operational frame for #534/JDX.
+
+## Updated files
+
+- `analysis/2026-06-07_management_table_situation_analysis.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. The situation feels bad for valid reasons: enemy-owned nodes total 407, with #476 holding 240, #480 holding 103, and #503 holding 62.
+2. The threat is not uniformly everywhere. Overall risk_map has critical 111 / high 167 rows, but #534 frontline risk narrows to critical 2 / high 47.
+3. Immediate #534-owned action scope is small: 5 direct defense edges and 5 direct attack edges.
+4. Unknown rows are creating management overload: unknown attack edges 25, unknown defense edges 23, unknown owner rows 655, and uncertain alerts 1,380. These should be treated as review queues, not orders.
+5. Recommended morale frame: stop saying "defend everything"; say "check only 10 edge candidates, park the rest."
+
+## Current risks
+
+1. R4/R5 burnout risk is higher than the tactical value of chasing every table row.
+2. Using unknown edge rows as commands would create confusion because they still require map, pact, and launch-source confirmation.
+3. #480/#503 pressure is real, but should be handled as secondary/connection pressure rather than merged into the main #476 threat.
+4. Some source tables mix 2026-05-31 generated outputs with 2026-06-06/07 OCR updates, so latest in-game map spot checks remain necessary.
+
+## Recommended next actions
+
+1. Limit today's review to #534 direct defense edges and direct attack edges around D-11 / D-13 / E-13.
+2. Move unknown edge and unknown owner rows to a separate review queue; do not include them in immediate battle instructions.
+3. Communicate to officers that destroyed #534 cities are confirmed losses and should be used for route/loss explanation, not treated as reclaim targets.
+4. Ask ChatGPT to draft a morale-preserving officer note using the "10 items only" frame.
+
+## Questions for ChatGPT
+
+1. Is the "10 edge candidates only" reduction aggressive enough for morale recovery?
+2. How should officers phrase the distinction between #476 main pressure and #480/#503 opportunistic pressure?
+3. Which destroyed #534 city losses most affect Week 5 sanctuary/outpost planning?
+
+## Notes
+
+- A Data Analytics MCP report was rendered in-thread with charts for risk counts, enemy-node server mix, and edge-count separation.
+- The durable Markdown report is `analysis/2026-06-07_management_table_situation_analysis.md`.
+
 ## 2026-06-07 Base capture Apple Vision recheck
 
 ## Context

@@ -42,6 +42,8 @@ tools/*
 !tools/fishery_protection_sheet/**
 !tools/s6_534_sheet/
 !tools/s6_534_sheet/**
+tools/s6_534_sheet/__pycache__/
+tools/s6_534_sheet/*.pyc
 tools/chat_event_preprocessor/_tmp_test/
 tools/chat_event_preprocessor/__pycache__/
 tools/chat_event_preprocessor/*.pyc
