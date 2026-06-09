@@ -1,14 +1,15 @@
 # Handoff summary
 
-## 2026-06-09 JDX power screenshot OCR
+## 2026-06-09 JDX power screenshot OCR and sheet writeback
 
 ## Context
 
-The user uploaded new JDX power screenshots. The current batch was found in Dropbox `lastwar/S6/JDX戦力スクショ/inbox` as `IMG_8159.PNG` through `IMG_8191.PNG` with timestamps around 2026-06-09 19:26-19:27. Apple Vision OCR was run locally and the OCR candidates were matched against Google Sheets `JDX戦力など` / `現在週`.
+The user uploaded new JDX power screenshots. The current batch was found in Dropbox `lastwar/S6/JDX戦力スクショ/inbox` as `IMG_8159.PNG` through `IMG_8191.PNG` with timestamps around 2026-06-09 19:26-19:27. Apple Vision OCR was run locally and the OCR candidates were matched against Google Sheets `JDX戦力など` / `現在週`. After explicit user approval, the OCR update candidates were written back to the sheet.
 
 ## Updated files
 
 - `analysis/2026-06-09_jdx_power_screenshot_ocr.md`
+- `analysis/2026-06-09_jdx_power_sheet_writeback.md`
 - `analysis/latest_handoff.md`
 - `data/2026-06-09_jdx_power_vote_ocr.csv`
 - `data/2026-06-09_jdx_power_comment_ocr.csv`
@@ -20,31 +21,33 @@ The user uploaded new JDX power screenshots. The current batch was found in Drop
 2. `IMG_8159.PNG` - `IMG_8179.PNG` are voter popups and expose option number plus visible total power.
 3. `IMG_8180.PNG` - `IMG_8191.PNG` are comment-list screenshots and expose first-squad composition, first-squad power, and job for many members.
 4. OCR produced 90 voter candidates, 45 comment candidates, 73 sheet-matched update candidates, and 72 changed-row candidates.
-5. Google Sheets direct writeback was not performed because the auto-generated update plan still contains over-inclusive / review-needed candidates.
+5. `現在週` was briefly found header-only; it was restored from the same spreadsheet's `20260531_戦力アンケート` tab before OCR writeback.
+6. After the user explicitly said "一括反映して", 72 changed rows / 345 non-empty OCR-derived cells were written to `現在週!C:G`.
+7. `戦力分析` recalculated at `2026/06/09 21:26:01`: alliance members 96, total power 27861.92M, average total power 290.23M, first-squad power responses 80.
 
 ## Current risks
 
 1. Name OCR and fuzzy matching can assign a power value to the wrong commander if applied blindly.
-2. Some total-power decreases may be real, but they should be checked before overwriting.
+2. Some total-power decreases may be real, but they should be spot-checked after writeback.
 3. Comment OCR can miss composition icons; `いたちごっこR` needs manual confirmation because OCR read `★163.9指導者`, likely meaning `航空 63.9 指導者`.
 
 ## Recommended next actions
 
-1. Review `data/2026-06-09_jdx_power_sheet_update_plan.csv`, especially rows with large total-power changes.
-2. After approval, apply only confirmed `C:G` updates to `現在週`.
-3. Verify `戦力分析` recalculation after writeback.
+1. Use the updated `戦力分析` tab for Week 5 JDX assignment planning.
+2. Spot-check large total-power changes and weak OCR rows against the source screenshots.
+3. Manually confirm `いたちごっこR` if that member matters for assignment decisions.
 4. Move only `IMG_8159.PNG` - `IMG_8191.PNG` to processed/処理済み after successful writeback.
 
 ## Questions for ChatGPT
 
-1. Which update candidates are too risky to apply without visual spot-checking?
-2. Should total power be overwritten from voter popup values, or should this run update only D:G?
+1. Which large total-power changes should be reviewed before using the data for final assignments?
+2. Should uncertain comment-derived rows be excluded from officer-facing summaries?
 3. How should JDX officers use the updated first-squad distribution for Week 5 assignments?
 
 ## Notes
 
 - Raw OCR text remains local at `tmp/jdx_power_ocr_20260609.txt` and should not be committed.
-- Google Sheets `戦力分析` was observed recalculated at `2026/06/09 19:38:02` before writeback.
+- Google Sheets `戦力分析` was observed recalculated at `2026/06/09 21:26:01` after writeback.
 - No screenshots were committed.
 
 ## 2026-06-07 Week 4 GPT review input
