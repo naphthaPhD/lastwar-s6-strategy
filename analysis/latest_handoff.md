@@ -4,11 +4,12 @@
 
 ## Context
 
-The user uploaded another JDX power screenshot batch and noted that the comment section is now a video. The current batch was found in Dropbox `lastwar/S6/JDX戦力スクショ/inbox`: still images `IMG_8197.PNG` through `IMG_8221.PNG`, plus `ScreenRecording_06-10-2026 20-24-22_1.MP4`. The video is about 62.6 seconds; 31 frames were extracted at 2-second intervals and OCRed with Apple Vision.
+The user uploaded another JDX power screenshot batch and noted that the comment section is now a video. The current batch was found in Dropbox `lastwar/S6/JDX戦力スクショ/inbox`: still images `IMG_8197.PNG` through `IMG_8221.PNG`, plus `ScreenRecording_06-10-2026 20-24-22_1.MP4`. The video is about 62.6 seconds; 31 frames were extracted at 2-second intervals and OCRed with Apple Vision. After the user asked to reflect the results in the sheet, safe OCR candidates were written back to Google Sheets `現在週`.
 
 ## Updated files
 
 - `analysis/2026-06-10_jdx_power_video_ocr.md`
+- `analysis/2026-06-10_jdx_power_sheet_writeback.md`
 - `analysis/latest_handoff.md`
 - `data/2026-06-10_jdx_power_vote_ocr.csv`
 - `data/2026-06-10_jdx_power_comment_video_ocr.csv`
@@ -20,19 +21,21 @@ The user uploaded another JDX power screenshot batch and noted that the comment 
 2. Comment video OCR produced 147 comment candidates and 69 sheet-matched first-squad/job candidates.
 3. The generated update plan contains 82 candidate rows, 81 changed rows, and 77 `safe_to_apply=True` changed rows.
 4. 18 rows have flags such as `large_total_delta`, `partial_comment_parse`, `low_vote_match`, or `low_comment_match`.
-5. Google Sheets writeback was not performed in this pass.
+5. Google Sheets writeback was performed for `safe_to_apply=True` changed rows only: 77 rows / 332 cells to `現在週!C:G`.
+6. Four changed rows were held out because of low-score matching: `Revo Geruge`, `BCCR`, `もるせら`, and `Fateの晩风`.
+7. `戦力分析` recalculated at `2026/06/10 20:55:01`: alliance members 96, total power 28044.12M, average total power 292.13M, first-squad power responses 83.
 
 ## Current risks
 
-1. Low-score fuzzy matches should not be blindly written to `現在週`.
-2. Some large total-power deltas may be real, but they need spot-checking before final assignment decisions.
+1. Low-score fuzzy matches were not written to `現在週`; they remain as holdouts.
+2. Some large total-power deltas were written because the name match was strong, but they need spot-checking before final assignment decisions.
 3. The comment video mostly shows 2026-06-07 comments, so it may duplicate or only slightly refine the already-entered first-squad data.
 
 ## Recommended next actions
 
-1. If the user says `一括反映して`, write back the 2026-06-10 update plan to `現在週!C:G`, preferably starting with `safe_to_apply=True` rows.
-2. After writeback, verify `戦力分析` recalculation time and headline metrics.
-3. For final officer-facing use, check rows flagged `low_vote_match` or `low_comment_match` against the source images/video.
+1. Use the updated `戦力分析` tab for Week 5 JDX assignment planning.
+2. Check the four held-out rows against the source images/video before individual writeback.
+3. For final officer-facing use, spot-check large total-power deltas against the source images.
 
 ## Questions for ChatGPT
 
