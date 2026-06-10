@@ -15,6 +15,7 @@ The user uploaded another JDX power screenshot batch and noted that the comment 
 - `data/2026-06-10_jdx_power_comment_video_ocr.csv`
 - `data/2026-06-10_jdx_power_sheet_update_plan.csv`
 - `data/2026-06-10_jdx_power_vote_corrections.csv`
+- `data/2026-06-10_jdx_power_poll_respondents.csv`
 
 ## Key findings
 
@@ -24,13 +25,15 @@ The user uploaded another JDX power screenshot batch and noted that the comment 
 4. 18 rows have flags such as `large_total_delta`, `partial_comment_parse`, `low_vote_match`, or `low_comment_match`.
 5. Google Sheets writeback was first performed for `safe_to_apply=True` changed rows only: 77 rows / 332 cells to `現在週!C:G`.
 6. The user clarified that 80 members answered the poll. The missing three were corrected: `レバブル子` was renamed to `まったり子`, `黒猫 nuda` had a low-score vote match because header text was included, and `へ亟へ` was visually confirmed from `IMG_8220.PNG`.
-7. After correction, `戦力分析` recalculated at `2026/06/10 21:00:58`: alliance members 96, total power 28052.69M, average total power 292.22M, first-squad power responses 83.
+7. `戦力分析` response-status formulas were corrected to use a new helper tab `20260610_投票回答` instead of counting all non-empty `現在週!D:F` cells.
+8. After correction, `戦力分析` recalculated at `2026/06/10 21:05:42`: alliance members 96, total power 28052.69M, average total power 292.22M, poll responses 80, poll non-responses 16, poll respondents with first-squad power 74, poll respondents without first-squad power 6.
 
 ## Current risks
 
 1. Most low-score fuzzy matches were not written to `現在週`; `黒猫 nuda` and `へ亟へ` were manually confirmed and corrected.
 2. Some large total-power deltas were written because the name match was strong, but they need spot-checking before final assignment decisions.
 3. The comment video mostly shows 2026-06-07 comments, so it may duplicate or only slightly refine the already-entered first-squad data.
+4. `コメント一軍戦力値入力数（全体）=83` is not the same metric as `選択肢回答数=80`; the former counts all current first-squad power values in `現在週`.
 
 ## Recommended next actions
 
