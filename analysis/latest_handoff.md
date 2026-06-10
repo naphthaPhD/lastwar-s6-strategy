@@ -1,5 +1,51 @@
 # Handoff summary
 
+## 2026-06-10 JDX power screenshot and comment video OCR
+
+## Context
+
+The user uploaded another JDX power screenshot batch and noted that the comment section is now a video. The current batch was found in Dropbox `lastwar/S6/JDX戦力スクショ/inbox`: still images `IMG_8197.PNG` through `IMG_8221.PNG`, plus `ScreenRecording_06-10-2026 20-24-22_1.MP4`. The video is about 62.6 seconds; 31 frames were extracted at 2-second intervals and OCRed with Apple Vision.
+
+## Updated files
+
+- `analysis/2026-06-10_jdx_power_video_ocr.md`
+- `analysis/latest_handoff.md`
+- `data/2026-06-10_jdx_power_vote_ocr.csv`
+- `data/2026-06-10_jdx_power_comment_video_ocr.csv`
+- `data/2026-06-10_jdx_power_sheet_update_plan.csv`
+
+## Key findings
+
+1. Static image OCR produced 107 voter candidates and 77 sheet-matched total-power candidates.
+2. Comment video OCR produced 147 comment candidates and 69 sheet-matched first-squad/job candidates.
+3. The generated update plan contains 82 candidate rows, 81 changed rows, and 77 `safe_to_apply=True` changed rows.
+4. 18 rows have flags such as `large_total_delta`, `partial_comment_parse`, `low_vote_match`, or `low_comment_match`.
+5. Google Sheets writeback was not performed in this pass.
+
+## Current risks
+
+1. Low-score fuzzy matches should not be blindly written to `現在週`.
+2. Some large total-power deltas may be real, but they need spot-checking before final assignment decisions.
+3. The comment video mostly shows 2026-06-07 comments, so it may duplicate or only slightly refine the already-entered first-squad data.
+
+## Recommended next actions
+
+1. If the user says `一括反映して`, write back the 2026-06-10 update plan to `現在週!C:G`, preferably starting with `safe_to_apply=True` rows.
+2. After writeback, verify `戦力分析` recalculation time and headline metrics.
+3. For final officer-facing use, check rows flagged `low_vote_match` or `low_comment_match` against the source images/video.
+
+## Questions for ChatGPT
+
+1. Should the large total-power deltas be treated as real changes or held out from assignment logic until manually checked?
+2. Is it better to update only C:D from the 2026-06-10 vote screenshots and keep E:G from the prior comment import?
+3. Which flagged rows matter most for Week 5 assignment decisions?
+
+## Notes
+
+- Raw OCR text remains local at `tmp/jdx_power_ocr_20260610.txt` and should not be committed.
+- Extracted video frames remain local at `tmp/jdx_20260610_video_frames/` and should not be committed.
+- Existing untracked `jdx_run_note_latest.md` was not touched.
+
 ## 2026-06-09 JDX power screenshot OCR and sheet writeback
 
 ## Context
