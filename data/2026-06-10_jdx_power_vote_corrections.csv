@@ -1,0 +1,4 @@
+name,correction_type,row,old_name,new_name,total_m,band,form,first_m,job,source,note
+まったり子,rename_and_vote_update,3,レバブル子,まったり子,383.2,3_70M以上〜75M未満,ロ,74,指導者,IMG_8200.PNG;frame_004.png,User clarified レバブル子 renamed to まったり子.
+黒猫 nuda,vote_update,21,黒猫 nuda,黒猫 nuda,358.97,2_75M以上〜80M未満,航,76.2,エンジニア,IMG_8198.PNG,OCR matched the name but vote score was below the original safe threshold because the header text was included.
+へ亟へ,vote_update,87,へ亟へ,へ亟へ,232.61,a_50M未満,航,49.2,エンジニア,IMG_8220.PNG,OCR read the name as 公亟介; visual check confirmed へ亟へ.

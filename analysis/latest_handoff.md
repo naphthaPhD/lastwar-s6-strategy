@@ -14,6 +14,7 @@ The user uploaded another JDX power screenshot batch and noted that the comment 
 - `data/2026-06-10_jdx_power_vote_ocr.csv`
 - `data/2026-06-10_jdx_power_comment_video_ocr.csv`
 - `data/2026-06-10_jdx_power_sheet_update_plan.csv`
+- `data/2026-06-10_jdx_power_vote_corrections.csv`
 
 ## Key findings
 
@@ -21,20 +22,20 @@ The user uploaded another JDX power screenshot batch and noted that the comment 
 2. Comment video OCR produced 147 comment candidates and 69 sheet-matched first-squad/job candidates.
 3. The generated update plan contains 82 candidate rows, 81 changed rows, and 77 `safe_to_apply=True` changed rows.
 4. 18 rows have flags such as `large_total_delta`, `partial_comment_parse`, `low_vote_match`, or `low_comment_match`.
-5. Google Sheets writeback was performed for `safe_to_apply=True` changed rows only: 77 rows / 332 cells to `現在週!C:G`.
-6. Four changed rows were held out because of low-score matching: `Revo Geruge`, `BCCR`, `もるせら`, and `Fateの晩风`.
-7. `戦力分析` recalculated at `2026/06/10 20:55:01`: alliance members 96, total power 28044.12M, average total power 292.13M, first-squad power responses 83.
+5. Google Sheets writeback was first performed for `safe_to_apply=True` changed rows only: 77 rows / 332 cells to `現在週!C:G`.
+6. The user clarified that 80 members answered the poll. The missing three were corrected: `レバブル子` was renamed to `まったり子`, `黒猫 nuda` had a low-score vote match because header text was included, and `へ亟へ` was visually confirmed from `IMG_8220.PNG`.
+7. After correction, `戦力分析` recalculated at `2026/06/10 21:00:58`: alliance members 96, total power 28052.69M, average total power 292.22M, first-squad power responses 83.
 
 ## Current risks
 
-1. Low-score fuzzy matches were not written to `現在週`; they remain as holdouts.
+1. Most low-score fuzzy matches were not written to `現在週`; `黒猫 nuda` and `へ亟へ` were manually confirmed and corrected.
 2. Some large total-power deltas were written because the name match was strong, but they need spot-checking before final assignment decisions.
 3. The comment video mostly shows 2026-06-07 comments, so it may duplicate or only slightly refine the already-entered first-squad data.
 
 ## Recommended next actions
 
 1. Use the updated `戦力分析` tab for Week 5 JDX assignment planning.
-2. Check the four held-out rows against the source images/video before individual writeback.
+2. Check the remaining held-out rows against the source images/video before individual writeback.
 3. For final officer-facing use, spot-check large total-power deltas against the source images.
 
 ## Questions for ChatGPT
