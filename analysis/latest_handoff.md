@@ -28,6 +28,8 @@ The user uploaded another JDX power screenshot batch and noted that the comment 
 7. `戦力分析` response-status formulas were corrected to use a new helper tab `20260610_投票回答` instead of counting all non-empty `現在週!D:F` cells.
 8. The `一軍帯別` block was also corrected to count `20260610_投票回答!D:D`, not all non-empty `現在週!D:D` values. The band counts now sum to 80.
 9. After correction, `戦力分析` recalculated at `2026/06/10 21:09:29`: alliance members 96, total power 28052.69M, average total power 292.22M, poll responses 80, poll non-responses 16, poll respondents with first-squad power 74, poll respondents without first-squad power 6.
+10. On 2026-06-12, `戦力分析` was updated again using the `未回答者` sheet. The analysis now separates poll-screenshot non-responses (16, from `20260610_投票回答`) from latest weekly non-responses (6, latest `未回答者` date 2026-06-08).
+11. The old `戦力分析` lower section `未回答者一覧（現在週・2026/06/01）` was replaced with dynamic formulas that list the latest `未回答者` date and all-week non-responders. Current latest-week non-responders are 6; all 9-week non-responders are 3.
 
 ## Current risks
 
@@ -36,12 +38,14 @@ The user uploaded another JDX power screenshot batch and noted that the comment 
 3. The comment video mostly shows 2026-06-07 comments, so it may duplicate or only slightly refine the already-entered first-squad data.
 4. `コメント一軍戦力値入力数（全体）=83` is not the same metric as `選択肢回答数=80`; the former counts all current first-squad power values in `現在週`.
 5. `現在週!D:D` still contains some previous/current carried-forward band values, so poll-only band distribution must use `20260610_投票回答`.
+6. `未回答者` tab metrics are weekly non-response logs, not the same definition as the 2026-06-10 poll screenshot response set. Do not merge the 6 latest-week non-responders with the 16 poll non-responders as if they were one metric.
 
 ## Recommended next actions
 
 1. Use the updated `戦力分析` tab for Week 5 JDX assignment planning.
 2. Check the remaining held-out rows against the source images/video before individual writeback.
 3. For final officer-facing use, spot-check large total-power deltas against the source images.
+4. When explaining response coverage, state which basis is being used: `20260610_投票回答` for poll coverage, or `未回答者` latest date for weekly non-response tracking.
 
 ## Questions for ChatGPT
 
