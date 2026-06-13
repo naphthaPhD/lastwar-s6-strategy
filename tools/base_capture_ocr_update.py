@@ -58,6 +58,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--data-dir", type=Path, default=DATA_DIR)
     parser.add_argument("--run-date", default="2026-06-06")
     parser.add_argument("--credentials", type=Path, default=DEFAULT_CREDENTIALS)
+    parser.add_argument("--spreadsheet", default=SPREADSHEET_ID)
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--trust-type-mismatch", action="store_true")
     parser.add_argument("--apply", action="store_true")
@@ -368,11 +369,11 @@ def service(credentials_path: Path | None = None) -> Any:
     return build("sheets", "v4", credentials=creds)
 
 
-def read_sheet_values(svc: Any) -> list[list[str]]:
+def read_sheet_values(svc: Any, spreadsheet_id: str) -> list[list[str]]:
     result = (
         svc.spreadsheets()
         .values()
-        .get(spreadsheetId=SPREADSHEET_ID, range=f"{SHEET}!A1:T2500", valueRenderOption="FORMATTED_VALUE")
+        .get(spreadsheetId=spreadsheet_id, range=f"{SHEET}!A1:T2500", valueRenderOption="FORMATTED_VALUE")
         .execute()
     )
     return result.get("values", [])
@@ -565,7 +566,7 @@ def main() -> int:
             latest[key] = event
 
     svc = service(args.credentials)
-    values = read_sheet_values(svc)
+    values = read_sheet_values(svc, args.spreadsheet)
     key_to_row, coord_to_row = build_sheet_indexes(values)
     add_state_coord_index(coord_to_row, key_to_row)
 
@@ -693,7 +694,7 @@ def main() -> int:
 
     if args.apply and ranges:
         body = {"valueInputOption": "USER_ENTERED", "data": [{"range": f"{SHEET}!{rng}", "values": data} for rng, data in ranges.items()]}
-        result = svc.spreadsheets().values().batchUpdate(spreadsheetId=SPREADSHEET_ID, body=body).execute()
+        result = svc.spreadsheets().values().batchUpdate(spreadsheetId=args.spreadsheet, body=body).execute()
         print(f"applied={result}")
     print(f"images={len(images)} events={len(all_events)} latest_targets={len(latest)} updates={len(update_rows)} review={len(review_rows)} seconds={time.perf_counter()-started:.1f}")
     print(args.data_dir / f"{args.run_date}_base_capture_full_ocr_events.csv")

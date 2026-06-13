@@ -1,0 +1,5 @@
+reason,target_server,x,y,image,event_time,owner_for_sheet,kind_sheet,source_text,sheet_row,existing_at,existing_owner
+row_not_found,#8061,924,824,IMG_2217.PNG,2026/06/12 03:56:00,BHE,漁場,"連盟BHEがLV.6漁場 #8061(X:924,Y:824)を 占領",,,
+low_confidence_no_material_change,#523,99,399,IMG_2219.PNG,2026/06/12 06:26:00,u3o,,"連盟u30がLV.1漁場 #523(X:99,Y:399)を占 領",1380,2026/05/21 2:37,u3o
+low_confidence_no_material_change,#480,499,899,IMG_2224.PNG,2026/06/12 13:11:00,TkTk,,"連盟TKTkがLV.1漁場 #480(X:499,Y:899)を 占領",651,2026/06/02 11:19,TkTk
+low_confidence_no_material_change,#523,20,199,IMG_2235.PNG,2026/06/13 00:20:00,EDFS,,"連盟EDFSがLV.1漁場 #523(X:20,Y:199)を占 領",1394,2026/05/20 5:11,EDFS

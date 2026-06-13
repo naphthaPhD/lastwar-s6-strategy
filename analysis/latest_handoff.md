@@ -1,5 +1,52 @@
 # Handoff summary
 
+## 2026-06-13 Base capture screenshot OCR and sheet update
+
+## Context
+
+The user updated the Dropbox base-capture screenshot folder. The current update batch was identified as 26 files modified on 2026-06-13 in `lastwar/S6/拠点取得スクショ/inbox`: `IMG_2215.PNG` through `IMG_2240.PNG`. Apple Vision OCR was run against those files only. The extracted events were applied directly to both Google Sheets management tables, using the current `1oK2.../管理表たたき` as the active sheet and without restoring older `12u...` rows over newer data.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+- `data/2026-06-13_base_capture_full_ocr_events.csv`
+- `data/2026-06-13_base_capture_full_ocr_sheet_updates.csv`
+- `data/2026-06-13_base_capture_full_ocr_review.csv`
+- `tools/base_capture_ocr_update.py`
+- `tools/s6_534_sheet/rebuild_full_map.py`
+
+## Key findings
+
+1. The 26 new screenshots produced 69 OCR events.
+2. 62 management-table rows were updated: `種別`, `所有連盟`, `取得日時`, and `メモ`.
+3. The same 62-row update was applied directly to both `1oK2.../管理表たたき` and `12u.../管理表たたき`.
+4. `1oK2.../全体マップ` was rebuilt after the update. Current map counts are self 172, ally 198, enemy 629, unowned 421, destroyed 268, trade 80.
+5. The full-map rebuild tool now clears stale conditional-formatting rules before writing the map, preventing background colors from reappearing behind cells that should be white.
+
+## Current risks
+
+1. One OCR event was not applied because the row was not found: `#8061 X:924 Y:824`, owner `BHE`, image `IMG_2217.PNG`.
+2. Three low-confidence OCR events were held out because they did not materially change the existing sheet owner: `#523 X:99 Y:399 u3o`, `#480 X:499 Y:899 TkTk`, and `#523 X:20 Y:199 EDFS`.
+3. The active `1oK2...` sheet contains newer June 10/11 destruction data than the older `12u...` source, so future repair work must avoid full-row restoration from `12u...` unless the date freshness is checked.
+
+## Recommended next actions
+
+1. Spot-check the held-out `#8061 X:924 Y:824` event in-game or against the management table schema, because it may be outside the expected server list.
+2. Continue using direct per-position updates for new screenshot batches rather than bulk-copying `12u...` into `1oK2...`.
+3. If the full map visually shows colored backgrounds again, check conditional-format rule count first before changing map data.
+
+## Questions for ChatGPT
+
+1. Should `#8061 X:924 Y:824` be ignored as an out-of-scope OCR target, or should the management-table coordinate universe be expanded?
+2. Are the three low-confidence no-change rows worth manual review, or can they be treated as unchanged?
+3. Should the June 10/11 destruction rows in `1oK2...` be promoted back into `12u...` so both sheets have the same freshness baseline?
+
+## Notes
+
+- Raw OCR output remains local under `tmp/base_capture_20260613_inbox_vision/` and should not be committed.
+- Temporary symlinks remain local under `tmp/base_capture_20260613_images/` and should not be committed.
+- Existing untracked `jdx_run_note_latest.md` was not touched.
+
 ## 2026-06-10 JDX power screenshot and comment video OCR
 
 ## Context

@@ -146,9 +146,7 @@ def build_alliance_server_map(rows: list[list[str]]) -> dict[str, str]:
 
 
 def is_destroyed(node: dict[str, object]) -> bool:
-    return any("破壊" in str(node.get(field, "")) for field in ["type", "owner", "status"]) or (
-        "破壊" in str(node.get("memo", "")) and not node.get("owner")
-    )
+    return any("破壊" in str(node.get(field, "")) for field in ["type", "owner", "status"])
 
 
 def is_unowned(owner: str) -> bool:
@@ -243,11 +241,13 @@ def main() -> None:
     management = build_management(get_values(service, args.spreadsheet, f"{MANAGEMENT_SHEET}!A1:T2500"))
     alliance_server_map = build_alliance_server_map(get_values(service, args.spreadsheet, f"{PACT_SHEET}!A1:D500"))
     metadata = service.spreadsheets().get(spreadsheetId=args.spreadsheet).execute()
-    full_map_sheet_id = next(
-        sheet["properties"]["sheetId"]
+    full_map_sheet = next(
+        sheet
         for sheet in metadata["sheets"]
         if sheet["properties"]["title"] == FULL_MAP_SHEET
     )
+    full_map_sheet_id = full_map_sheet["properties"]["sheetId"]
+    conditional_format_count = len(full_map_sheet.get("conditionalFormats", []))
 
     counts: Counter[str] = Counter()
     rows: list[dict[str, object]] = []
@@ -289,7 +289,15 @@ def main() -> None:
     )
     rows[0]["values"][0]["note"] = summary_note
 
-    requests = []
+    requests = [
+        {
+            "deleteConditionalFormatRule": {
+                "sheetId": full_map_sheet_id,
+                "index": index,
+            }
+        }
+        for index in range(conditional_format_count - 1, -1, -1)
+    ]
     for start in range(0, len(rows), 15):
         requests.append({
             "updateCells": {
@@ -316,6 +324,7 @@ def main() -> None:
         "mode": "apply" if args.apply else "dry_run",
         "spreadsheet": args.spreadsheet,
         "request_count": len(requests),
+        "deleted_conditional_format_rules": conditional_format_count if args.apply else 0,
         "counts": dict(counts),
         "examples": examples,
     }
