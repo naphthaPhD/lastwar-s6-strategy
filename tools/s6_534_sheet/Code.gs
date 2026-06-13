@@ -91,6 +91,7 @@ function refreshS6FullMapFromManagement() {
 
   ensureS6GridSize_(targetSheet, rowCount, columnCount);
   targetSheet.getRange(1, 1, targetSheet.getMaxRows(), targetSheet.getMaxColumns()).breakApart();
+  clearS6FullMapConditionalFormats_(targetSheet);
   targetSheet.clear();
   const targetRange = targetSheet.getRange(1, 1, rowCount, columnCount);
   copyS6MapBaseFormat_(templateRange, targetSheet, rowCount, columnCount);
@@ -103,6 +104,7 @@ function refreshS6FullMapFromManagement() {
   targetRange.setNotes(outputNotes);
   copyS6MapDimensions_(templateSheet, targetSheet, rowCount, columnCount);
   copyS6MapMerges_(templateRange, targetSheet);
+  targetRange.setBackground(S6_FULL_MAP_BACKGROUND);
   targetSheet.setFrozenRows(5);
   targetSheet.setHiddenGridlines(true);
   writeS6FullMapUpdateNote_(targetSheet, counts);
@@ -337,6 +339,10 @@ function copyS6MapMerges_(sourceRange, targetSheet) {
       .getRange(rowOffset + 1, columnOffset + 1, mergedRange.getNumRows(), mergedRange.getNumColumns())
       .merge();
   });
+}
+
+function clearS6FullMapConditionalFormats_(sheet) {
+  sheet.setConditionalFormatRules([]);
 }
 
 function ensureS6Sheet_(ss, name) {
