@@ -46,6 +46,7 @@ The user updated the Dropbox base-capture screenshot folder. The current update 
 - Raw OCR output remains local under `tmp/base_capture_20260613_inbox_vision/` and should not be committed.
 - Temporary symlinks remain local under `tmp/base_capture_20260613_images/` and should not be committed.
 - On 2026-06-13, the live menu `S6#534管理` -> `全体マップ更新` was confirmed to recreate 8 conditional-format rules on `全体マップ`; the sheet was repaired by the Python API rebuild, and local `tools/s6_534_sheet/Code.gs` was patched to clear conditional formatting and force white backgrounds after merge restoration. The live bound Apps Script still needs to be pasted from the updated local file because the visible Chrome account lacked access to the `S6#534` sheet.
+- On 2026-06-14, the same background-color recurrence was traced to 8 conditional-format rules remaining on the source tab `マップ表示テンプレ` as well as `全体マップ`. Both tabs were repaired in the live `1oK2...` spreadsheet: conditional-format rule count is now 0 on both tabs, and `A1:DR135` backgrounds were forced to white before rebuilding `全体マップ`.
 - Existing untracked `jdx_run_note_latest.md` was not touched.
 
 ## 2026-06-10 JDX power screenshot and comment video OCR
