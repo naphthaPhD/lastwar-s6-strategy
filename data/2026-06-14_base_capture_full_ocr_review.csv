@@ -1,0 +1,3 @@
+reason,target_server,x,y,image,event_time,owner_for_sheet,kind_sheet,source_text,sheet_row,existing_at,existing_owner
+row_not_found,#8061,974,774,IMG_2264.PNG,2026/06/14 04:52:00,OWM,漁場,"連盟OWMがLV.5漁場 #8061(X:974,Y:774) を占領",,,
+low_confidence_no_material_change,#440,449,249,IMG_2241.PNG,2026/06/14 10:03:13,GcC,,"連盟GcCがLV.2密林の兵舎 #440(X:449,Y:249)を占領",69,2026/06/13 11:14,GcC

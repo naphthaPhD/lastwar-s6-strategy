@@ -1,5 +1,51 @@
 # Handoff summary
 
+## 2026-06-14 Base capture screenshot OCR and sheet update
+
+## Context
+
+The user uploaded another base-capture screenshot batch to Dropbox `lastwar/S6/拠点取得スクショ/inbox` and asked for sheet reflection plus moving analyzed images to `review`. The current batch was identified as 47 files modified on 2026-06-14: `IMG_2241.PNG` through `IMG_2287.PNG`.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+- `data/2026-06-14_base_capture_full_ocr_events.csv`
+- `data/2026-06-14_base_capture_full_ocr_sheet_updates.csv`
+- `data/2026-06-14_base_capture_full_ocr_review.csv`
+
+## Key findings
+
+1. The 47 new screenshots produced 170 OCR events and 149 latest target records.
+2. `1oK2.../管理表たたき` received 147 row updates: `種別`, `所有連盟`, `取得日時`, and `メモ`.
+3. `12u.../管理表たたき` received the same batch as direct per-position updates, with 146 row updates due to existing value / row-state differences.
+4. `1oK2.../全体マップ` was rebuilt after management-table reflection. Current map counts are self 157, ally 180, enemy 666, unowned 376, destroyed 309, trade 80.
+5. `全体マップ` and `マップ表示テンプレ` both still have 0 conditional-format rules after the rebuild, and sampled backgrounds remain white.
+6. The 47 processed source files were moved from Dropbox `inbox` to Dropbox `review`.
+
+## Current risks
+
+1. `#8061 X:974 Y:774` from `IMG_2264.PNG` was not applied because the management-table row was not found.
+2. `#440 X:449 Y:249 GcC` from `IMG_2241.PNG` was held out as low-confidence but no material change from the existing owner.
+3. On `12u...`, `#523 X:899 Y:799 ALj` from `IMG_2263.PNG` was additionally held out as low-confidence but no material owner change.
+
+## Recommended next actions
+
+1. Treat the `#8061 X:974 Y:774` event as a manual review item unless the central coordinate universe is expanded.
+2. Continue moving only analyzed batches from `inbox` to `review` after successful sheet reflection.
+3. Keep using the Python map rebuild or updated Apps Script source so full-map backgrounds remain white.
+
+## Questions for ChatGPT
+
+1. Should out-of-table `#8061` events be tracked in a separate central-area queue?
+2. Should low-confidence no-change events be ignored after one review, or retained for audit only?
+3. Does the destroyed count of 309 change the next #534 operational summary?
+
+## Notes
+
+- Raw OCR output remains local under `tmp/base_capture_20260614_inbox_vision/` and should not be committed.
+- Temporary symlinks remain local under `tmp/base_capture_20260614_images/` and should not be committed.
+- Existing untracked `jdx_run_note_latest.md` was not touched.
+
 ## 2026-06-13 Base capture screenshot OCR and sheet update
 
 ## Context
