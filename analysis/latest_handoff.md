@@ -1,5 +1,49 @@
 # Handoff summary
 
+## 2026-06-14 Week 5 end destroyed-city rate update
+
+## Context
+
+The user said Week 5 has ended and asked to update the latest destroyed-city rates from Google Sheets `管理表たたき`. The live sheet was read on 2026-06-14 and summarized with the corrected denominator of 86 destroyable cities per area.
+
+## Updated files
+
+- `analysis/2026-06-14_week5_destroy_rate_update.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. Latest management-table counts: #509 72, #511 64, #480 33, #534 30, #440 26, #523 18, #476 4, #503 0.
+2. Denominator remains 86 destroyable cities per area, or 688 total across eight areas.
+3. Total destroyed cities are now 247/688, or 35.9%.
+4. #534 is now 30/86, or 34.9%, up from 23/86 at the Week 4 review baseline.
+5. Week 5 increased the total from 211 to 247, a +36 destroyed-city change.
+6. Largest increases from the Week 4 review baseline are #523 +12, #440 +10, #534 +7, #509 +5, and #511 +2.
+
+## Current risks
+
+1. #534 is no longer just lightly damaged; 30/86 destroyed cities means the remaining 56 cities need connection-aware prioritization.
+2. #509 and #511 are already in severe damage territory, reducing allied-side connection options.
+3. #440 previously had a management-table/game-screen mismatch, so the latest #440 26 should be treated as management-table current until game-screen confirmation.
+4. Edge/risk outputs may still be stale if they were generated before the latest destroyed-city updates.
+
+## Recommended next actions
+
+1. Use `analysis/2026-06-14_week5_destroy_rate_update.md` as the current Week 5 destroyed-city source.
+2. Ask ChatGPT to build the Week 5 end review around loss limitation, remaining routes, and Week 6 participation rights.
+3. If operational orders are needed, regenerate edge/risk outputs from the latest management table before selecting targets.
+
+## Questions for ChatGPT
+
+1. How should #534 explain 30/86 destroyed cities without causing resignation?
+2. Which Week 6 routes or participation conditions matter most after this damage distribution?
+3. Should #440/#523 be game-screen verified before using their increases in member-facing messaging?
+
+## Notes
+
+- This update is based on the live management table, not the old 5/31 `node_current_v2.csv`.
+- The previous Week 4 GPT review input remains useful for framing, but its destroyed-city counts are superseded by the 2026-06-14 update.
+
 ## 2026-06-14 Base capture screenshot OCR and sheet update
 
 ## Context
