@@ -1,5 +1,40 @@
 # Handoff summary
 
+## 2026-05-25 JDX power sheet update log archived
+
+## Context
+
+The root local note `jdx_run_note_latest.md` was converted into a durable repository timeline entry so the JDX power update run is not only preserved as a local machine memo.
+
+## Updated files
+
+- `logs/timeline/2026-05-25_jdx_power_update.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. The JDX power screenshot automation processed `IMG_1055.PNG` through `IMG_1084.PNG`.
+2. Google Sheets `JDX戦力など` / `現在週 A:G` received 18 updated rows and 69 updated cells.
+3. The run updated only clear, roster-matched current-week values in `D:G` and did not overwrite rank or total power.
+4. Post-update counts were 一軍帯回答数 68, 一軍戦力値回答数 64, 一軍帯未回答者数 28, 一軍戦力値未回答数 32.
+
+## Current risks
+
+1. This is a historical automation log from 2026-05-25, not a current Week 5/6 strategy update.
+
+## Recommended next actions
+
+1. Treat `logs/timeline/2026-05-25_jdx_power_update.md` as the durable repo copy of the JDX power update run.
+2. Keep the root `jdx_run_note_latest.md` as a local note unless a future cleanup explicitly removes or ignores it.
+
+## Questions for ChatGPT
+
+1. None. This is archival context only.
+
+## Notes
+
+- The root local note remains untracked and is not the repository source of truth.
+
 ## 2026-06-14 Week 5 end destroyed-city rate update
 
 ## Context
