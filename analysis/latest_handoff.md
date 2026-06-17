@@ -17,45 +17,45 @@ The user uploaded a new JDX power screenshot batch. The new files were found in 
 - `data/2026-06-17_jdx_power_sheet_writeback_summary.json`
 - `data/2026-06-18_jdx_power_analysis_update_summary.json`
 - `data/2026-06-18_jdx_first_power_trend_update_summary.json`
+- `data/2026-06-18_jdx_vote_count_81_update_summary.json`
 
 ## Key findings
 
 1. The batch contains 24 vote-popup screenshots (`IMG_2340.PNG` - `IMG_2363.PNG`) and 14 comment screenshots (`IMG_2364.PNG` - `IMG_2377.PNG`).
-2. OCR produced 81 vote candidates, 79 matched vote candidates, 72 comment candidates, and 70 matched comment candidates.
+2. OCR produced 81 vote candidates; after user confirmation, all 81 were accepted into the vote helper, 72 comment candidates, and 70 matched comment candidates.
 3. The generated sheet update plan has 80 changed rows, 70 `safe_to_apply=True` rows, and 34 flagged rows.
 4. Google Sheets `現在週` had been header-only, so it was restored from `20260531_戦力アンケート` as a 96-member roster before applying OCR results.
 5. `レバブル子` was restored as renamed `まったり子`.
-6. Field-level sheet writeback applied vote-derived total/band values for 78 members and comment-derived form/first-squad/job values for 61 members.
-7. New helper tab `20260617_投票回答` contains 79 OCR-matched vote respondents.
-8. `戦力分析` now separates OCR-matched vote respondents 79 from the user-confirmed vote response count 80.
-9. User-confirmed nonrespondents are shown as 16, while the OCR first-squad band table remains based on the 79 matched rows in `20260617_投票回答`.
+6. Field-level sheet writeback applied vote-derived total/band values for 80 members and comment-derived form/first-squad/job values for 61 members.
+7. New helper tab `20260617_投票回答` contains 81 vote respondents after adding visually/user-confirmed low-OCR rows `もこP` and `もるせら`.
+8. `戦力分析` now shows OCR/confirmed vote respondents 81.
+9. User-confirmed nonrespondents are shown as 15, and the first-squad band table is based on the 81 rows in `20260617_投票回答`.
 10. The top comparison formulas in `戦力分析` were refreshed to use `20260614_戦力アンケート`, `20260531_戦力アンケート`, and `20260524_戦力アンケート` instead of stale May references.
 11. `一軍戦力推移` was rebuilt from the latest 8 available snapshots: 20260426, 20260503, 20260510, 20260517, 20260524, 20260531, 20260614, and 20260617/current.
 12. The trend table now has 29 commanders with first-squad values in all 8 selected snapshots; top first-to-latest gainers are カラトリ君 +5.8, sakimaru +5.74, CHIKO un +5.7, 北池袋 +5.6, and himoぺよ星 +5.2.
-13. A screenshot appears to show participation `91/97`, while OCR matched 79 vote candidates and user confirmation says 80. The remaining unmatched respondent needs confirmation before the helper tab is complete.
+13. A screenshot appears to show participation `91/97`, while the confirmed option-response count is 81. Keep wording cautious around the screenshot participation text.
 
 ## Current risks
 
 1. The restored `現在週` roster comes from the 2026-05-31 base, so any membership changes after that date may need manual correction.
-2. The OCR vote helper is still short by one row versus the user-confirmed 80 responses.
-3. The OCR vote candidate count and user-confirmed count still do not match the visible `91/97`-like participation text, so poll coverage wording should stay cautious.
-4. One vote row (`Fateの晩风`) and nine comment rows (`K’awiil`, `BCCR`, `RAMETT vu`, `渋猫選手R`, `SOL265`, `あつないR`, `RiricoR`, `Wolveress23`, `OLDヤンガス`) were held from field-level application because of low match confidence.
+2. The OCR vote helper now matches the user-confirmed 81 responses.
+3. The confirmed 81 response count still does not match the visible `91/97`-like participation text, so poll coverage wording should stay cautious.
+4. Nine comment rows (`K’awiil`, `BCCR`, `RAMETT vu`, `渋猫選手R`, `SOL265`, `あつないR`, `RiricoR`, `Wolveress23`, `OLDヤンガス`) were held from field-level application because of low match confidence.
 5. `未回答者` sheet latest date is still 2026-06-08; the `戦力分析` section now distinguishes this from the 2026-06-17 OCR/helper and user-confirmed counts.
 6. `一軍戦力推移` skips 20260601 because no independent saved tab exists for that date; it uses the latest 8 available saved/current snapshots instead.
 7. Large total-power deltas are compared against the 2026-05-31 base, so many are expected and should not automatically be treated as OCR errors.
 
 ## Recommended next actions
 
-1. Find the one respondent missing from `20260617_投票回答` so the helper tab reaches the user-confirmed 80.
-2. Manually check the held vote/comment rows before using them for final assignment planning.
-3. Decide whether `未回答者` should be updated for 2026-06-17, since `戦力分析` still has a 2026-06-08未回答者 baseline.
-4. Treat `20260617_投票回答` as the provisional OCR-backed helper tab, not the final poll-response source.
+1. Manually check the held comment rows before using them for final assignment planning.
+2. Decide whether `未回答者` should be updated for 2026-06-17, since `戦力分析` still has a 2026-06-08未回答者 baseline.
+3. Treat `20260617_投票回答` as the confirmed 81-response helper tab, while keeping the `91/97` screenshot text as a separate unresolved display discrepancy.
 
 ## Questions for ChatGPT
 
-1. Is the user-confirmed 80 the correct operational response count even though a screenshot appears to show `91/97`?
+1. Is the user-confirmed 81 the correct operational response count even though a screenshot appears to show `91/97`?
 2. Which held rows should be manually checked first for Week 6/7 assignment decisions?
-3. Should the 2026-06-08 `未回答者` baseline be updated now that the 2026-06-17 OCR/helper and user-confirmed counts exist?
+3. Should the 2026-06-08 `未回答者` baseline be updated now that the 2026-06-17 confirmed 81-response helper exists?
 
 ## Notes
 
