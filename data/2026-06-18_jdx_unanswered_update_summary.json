@@ -1,0 +1,119 @@
+{
+  "current_member_count": 96,
+  "targets": [
+    {
+      "target_date": "2026/06/10",
+      "helper_tab": "20260610_投票回答",
+      "vote_response_count": 80,
+      "unanswered_count": 16,
+      "unanswered_names": [
+        "もるせら",
+        "指揮官の鷹",
+        "ゾンビ屋響子",
+        "LA 49",
+        "—DARTS—",
+        "ji i tan R18",
+        "Raju 95",
+        "Boss B",
+        "Shamshie",
+        "Wolveress23",
+        "K18footballer",
+        "LERROYYYY",
+        "Sunnouk",
+        "PHL Sai",
+        "ひでとん9120",
+        "DeveshS"
+      ],
+      "replaced_existing_rows_for_date": 0
+    },
+    {
+      "target_date": "2026/06/17",
+      "helper_tab": "20260617_投票回答",
+      "vote_response_count": 81,
+      "unanswered_count": 15,
+      "unanswered_names": [
+        "BCCR",
+        "torsoboy00",
+        "HIDEGONDx",
+        "LA 49",
+        "Raju 95",
+        "Revo 鷹R",
+        "呷八覇",
+        "LERROYYYY",
+        "Jinstars",
+        "へ亟へ",
+        "レッチャ",
+        "Sunnouk",
+        "PHL Sai",
+        "ひでとん9120",
+        "DeveshS"
+      ],
+      "replaced_existing_rows_for_date": 0
+    }
+  ],
+  "updated_range": "未回答者!A1:B165",
+  "analysis_after_update": [
+    [
+      "投票回答状況（2026-06-17 OCR / ユーザー確認）",
+      "",
+      "",
+      "未回答者シート基準（最新週）"
+    ],
+    [
+      "指標",
+      "値",
+      "",
+      "指標",
+      "値"
+    ],
+    [
+      "選択肢回答数（OCR名寄せ）",
+      "81",
+      "",
+      "最新日付",
+      "2026/06/17"
+    ],
+    [
+      "選択肢回答数（ユーザー確認）",
+      "81",
+      "",
+      "最新週未回答者数",
+      "15"
+    ],
+    [
+      "選択肢未回答者数（ユーザー確認）",
+      "15",
+      "",
+      "最新週回答済み想定",
+      "81"
+    ],
+    [
+      "OCR/確認差分",
+      "0",
+      "",
+      "全対象回数",
+      "11"
+    ],
+    [
+      "OCR回答者の一軍戦力値あり",
+      "77",
+      "",
+      "全対象回すべて未回答",
+      "2"
+    ],
+    [
+      "OCR回答者の一軍戦力値なし",
+      "4",
+      "",
+      "コメント一軍戦力値回答数（全体）",
+      "83"
+    ],
+    [
+      "OCR回答者かつ一軍帯あり",
+      "81",
+      "",
+      "コメント一軍戦力値未回答数（全体）",
+      "13"
+    ]
+  ]
+}

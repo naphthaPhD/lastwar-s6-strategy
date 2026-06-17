@@ -18,6 +18,7 @@ The user uploaded a new JDX power screenshot batch. The new files were found in 
 - `data/2026-06-18_jdx_power_analysis_update_summary.json`
 - `data/2026-06-18_jdx_first_power_trend_update_summary.json`
 - `data/2026-06-18_jdx_vote_count_81_update_summary.json`
+- `data/2026-06-18_jdx_unanswered_update_summary.json`
 
 ## Key findings
 
@@ -31,9 +32,11 @@ The user uploaded a new JDX power screenshot batch. The new files were found in 
 8. `戦力分析` now shows OCR/confirmed vote respondents 81.
 9. User-confirmed nonrespondents are shown as 15, and the first-squad band table is based on the 81 rows in `20260617_投票回答`.
 10. The top comparison formulas in `戦力分析` were refreshed to use `20260614_戦力アンケート`, `20260531_戦力アンケート`, and `20260524_戦力アンケート` instead of stale May references.
-11. `一軍戦力推移` was rebuilt from the latest 8 available snapshots: 20260426, 20260503, 20260510, 20260517, 20260524, 20260531, 20260614, and 20260617/current.
-12. The trend table now has 29 commanders with first-squad values in all 8 selected snapshots; top first-to-latest gainers are カラトリ君 +5.8, sakimaru +5.74, CHIKO un +5.7, 北池袋 +5.6, and himoぺよ星 +5.2.
-13. A screenshot appears to show participation `91/97`, while the confirmed option-response count is 81. Keep wording cautious around the screenshot participation text.
+11. `未回答者` was updated for both 2026/06/10 and 2026/06/17: 16 nonrespondents for 06/10 and 15 nonrespondents for 06/17.
+12. `戦力分析` now sees `未回答者` latest date as 2026/06/17 and latest-week nonrespondents as 15.
+13. `一軍戦力推移` was rebuilt from the latest 8 available snapshots: 20260426, 20260503, 20260510, 20260517, 20260524, 20260531, 20260614, and 20260617/current.
+14. The trend table now has 29 commanders with first-squad values in all 8 selected snapshots; top first-to-latest gainers are カラトリ君 +5.8, sakimaru +5.74, CHIKO un +5.7, 北池袋 +5.6, and himoぺよ星 +5.2.
+15. A screenshot appears to show participation `91/97`, while the confirmed option-response count is 81. Keep wording cautious around the screenshot participation text.
 
 ## Current risks
 
@@ -41,21 +44,20 @@ The user uploaded a new JDX power screenshot batch. The new files were found in 
 2. The OCR vote helper now matches the user-confirmed 81 responses.
 3. The confirmed 81 response count still does not match the visible `91/97`-like participation text, so poll coverage wording should stay cautious.
 4. Nine comment rows (`K’awiil`, `BCCR`, `RAMETT vu`, `渋猫選手R`, `SOL265`, `あつないR`, `RiricoR`, `Wolveress23`, `OLDヤンガス`) were held from field-level application because of low match confidence.
-5. `未回答者` sheet latest date is still 2026-06-08; the `戦力分析` section now distinguishes this from the 2026-06-17 OCR/helper and user-confirmed counts.
+5. `未回答者` is now updated through 2026/06/17, but the visible `91/97`-like participation text remains a separate display discrepancy.
 6. `一軍戦力推移` skips 20260601 because no independent saved tab exists for that date; it uses the latest 8 available saved/current snapshots instead.
 7. Large total-power deltas are compared against the 2026-05-31 base, so many are expected and should not automatically be treated as OCR errors.
 
 ## Recommended next actions
 
 1. Manually check the held comment rows before using them for final assignment planning.
-2. Decide whether `未回答者` should be updated for 2026-06-17, since `戦力分析` still has a 2026-06-08未回答者 baseline.
-3. Treat `20260617_投票回答` as the confirmed 81-response helper tab, while keeping the `91/97` screenshot text as a separate unresolved display discrepancy.
+2. Treat `20260617_投票回答` as the confirmed 81-response helper tab, while keeping the `91/97` screenshot text as a separate unresolved display discrepancy.
 
 ## Questions for ChatGPT
 
 1. Is the user-confirmed 81 the correct operational response count even though a screenshot appears to show `91/97`?
 2. Which held rows should be manually checked first for Week 6/7 assignment decisions?
-3. Should the 2026-06-08 `未回答者` baseline be updated now that the 2026-06-17 confirmed 81-response helper exists?
+3. Should the `91/97`-like display text be ignored for operations, or checked separately in-game?
 
 ## Notes
 
