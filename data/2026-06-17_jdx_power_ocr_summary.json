@@ -1,0 +1,9 @@
+{
+  "vote_candidates": 81,
+  "comment_candidates": 72,
+  "matched_vote_candidates": 79,
+  "matched_comment_candidates": 70,
+  "plan_changed_rows": 80,
+  "plan_safe_rows": 70,
+  "flagged_rows": 34
+}

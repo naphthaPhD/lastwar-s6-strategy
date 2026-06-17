@@ -1,5 +1,55 @@
 # Handoff summary
 
+## 2026-06-17 JDX power screenshot OCR
+
+## Context
+
+The user uploaded a new JDX power screenshot batch. The new files were found in Dropbox `lastwar/S6/JDX戦力スクショ/inbox` as `IMG_2340.PNG` through `IMG_2377.PNG`, timestamped around 2026-06-17 22:51-22:52. Apple Vision OCR was run on all 38 still images.
+
+## Updated files
+
+- `analysis/2026-06-17_jdx_power_screenshot_ocr.md`
+- `analysis/latest_handoff.md`
+- `data/2026-06-17_jdx_power_vote_ocr.csv`
+- `data/2026-06-17_jdx_power_comment_ocr.csv`
+- `data/2026-06-17_jdx_power_sheet_update_plan.csv`
+- `data/2026-06-17_jdx_power_ocr_summary.json`
+
+## Key findings
+
+1. The batch contains 24 vote-popup screenshots (`IMG_2340.PNG` - `IMG_2363.PNG`) and 14 comment screenshots (`IMG_2364.PNG` - `IMG_2377.PNG`).
+2. OCR produced 81 vote candidates, 79 matched vote candidates, 72 comment candidates, and 70 matched comment candidates.
+3. The generated sheet update plan has 80 changed rows, 70 `safe_to_apply=True` rows, and 34 flagged rows.
+4. Google Sheets `現在週` is currently header-only, so `戦力分析` recalculates as 0 alliance members. Do not apply OCR candidates directly as a diff until `現在週` is restored.
+5. A screenshot appears to show participation `91/97`, while OCR matched only 79 vote candidates. The missing vote respondents need confirmation before creating a final poll-response helper tab.
+6. `レバブル子` is still treated as the same member as renamed `まったり子`.
+
+## Current risks
+
+1. Restoring `現在週` from the wrong tab could reintroduce stale member names or ranks.
+2. The OCR vote candidate count does not yet match the visible participation count, so poll coverage is not final.
+3. Some comment OCR rows have low fuzzy-match scores or partial numeric reads; these are flagged in the update plan.
+4. Large total-power deltas are compared against the 2026-05-31 base, so many are expected and should not automatically be treated as OCR errors.
+
+## Recommended next actions
+
+1. Confirm whether to restore `現在週` first. The safest available base is `20260531_戦力アンケート`, then layer 2026-06-17 OCR candidates onto `C:G`.
+2. Review missing/low-score vote rows until the poll response count is reconciled with the screenshot count.
+3. If applying now, apply only `safe_to_apply=True` rows first and leave low-score rows for manual review.
+4. After any sheet writeback, verify `戦力分析` member count, poll response count, and first-squad band totals.
+
+## Questions for ChatGPT
+
+1. Should `現在週` be restored from `20260531_戦力アンケート`, or should another base tab be used?
+2. How strict should we be about reconciling the apparent `91/97` participation count before using the data for assignment planning?
+3. Which flagged rows should be manually checked first for Week 6/7 assignment decisions?
+
+## Notes
+
+- Raw OCR text remains local at `tmp/jdx_power_ocr_20260617.txt` and should not be committed.
+- The temporary parser is local at `tmp/parse_jdx_power_20260617.py` and should not be committed unless we intentionally promote it to `tools/`.
+- Existing untracked `jdx_run_note_latest.md` was not touched.
+
 ## 2026-06-17 Base capture screenshot OCR and sheet update
 
 ## Context
