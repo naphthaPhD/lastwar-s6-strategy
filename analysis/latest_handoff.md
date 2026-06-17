@@ -15,6 +15,7 @@ The user uploaded a new JDX power screenshot batch. The new files were found in 
 - `data/2026-06-17_jdx_power_sheet_update_plan.csv`
 - `data/2026-06-17_jdx_power_ocr_summary.json`
 - `data/2026-06-17_jdx_power_sheet_writeback_summary.json`
+- `data/2026-06-18_jdx_power_analysis_update_summary.json`
 
 ## Key findings
 
@@ -25,29 +26,32 @@ The user uploaded a new JDX power screenshot batch. The new files were found in 
 5. `レバブル子` was restored as renamed `まったり子`.
 6. Field-level sheet writeback applied vote-derived total/band values for 78 members and comment-derived form/first-squad/job values for 61 members.
 7. New helper tab `20260617_投票回答` contains 79 OCR-matched vote respondents.
-8. `戦力分析` now shows OCR vote respondents 79, provisional nonrespondents 17, and first-squad band counts summing to 79.
-9. A screenshot appears to show participation `91/97`, while OCR matched only 79 vote candidates. The missing vote respondents still need confirmation before treating the poll response count as final.
+8. `戦力分析` now separates OCR-matched vote respondents 79 from the user-confirmed vote response count 80.
+9. User-confirmed nonrespondents are shown as 16, while the OCR first-squad band table remains based on the 79 matched rows in `20260617_投票回答`.
+10. The top comparison formulas in `戦力分析` were refreshed to use `20260614_戦力アンケート`, `20260531_戦力アンケート`, and `20260524_戦力アンケート` instead of stale May references.
+11. A screenshot appears to show participation `91/97`, while OCR matched 79 vote candidates and user confirmation says 80. The remaining unmatched respondent needs confirmation before the helper tab is complete.
 
 ## Current risks
 
 1. The restored `現在週` roster comes from the 2026-05-31 base, so any membership changes after that date may need manual correction.
-2. The OCR vote candidate count does not yet match the visible participation count, so poll coverage is not final.
-3. One vote row (`Fateの晩风`) and nine comment rows (`K’awiil`, `BCCR`, `RAMETT vu`, `渋猫選手R`, `SOL265`, `あつないR`, `RiricoR`, `Wolveress23`, `OLDヤンガス`) were held from field-level application because of low match confidence.
-4. `未回答者` sheet latest date is still 2026-06-08; the `戦力分析` section now distinguishes this from the 2026-06-17 OCR helper count.
-5. Large total-power deltas are compared against the 2026-05-31 base, so many are expected and should not automatically be treated as OCR errors.
+2. The OCR vote helper is still short by one row versus the user-confirmed 80 responses.
+3. The OCR vote candidate count and user-confirmed count still do not match the visible `91/97`-like participation text, so poll coverage wording should stay cautious.
+4. One vote row (`Fateの晩风`) and nine comment rows (`K’awiil`, `BCCR`, `RAMETT vu`, `渋猫選手R`, `SOL265`, `あつないR`, `RiricoR`, `Wolveress23`, `OLDヤンガス`) were held from field-level application because of low match confidence.
+5. `未回答者` sheet latest date is still 2026-06-08; the `戦力分析` section now distinguishes this from the 2026-06-17 OCR/helper and user-confirmed counts.
+6. Large total-power deltas are compared against the 2026-05-31 base, so many are expected and should not automatically be treated as OCR errors.
 
 ## Recommended next actions
 
-1. Review missing/low-score vote rows until the poll response count is reconciled with the screenshot count.
+1. Find the one respondent missing from `20260617_投票回答` so the helper tab reaches the user-confirmed 80.
 2. Manually check the held vote/comment rows before using them for final assignment planning.
 3. Decide whether `未回答者` should be updated for 2026-06-17, since `戦力分析` still has a 2026-06-08未回答者 baseline.
 4. Treat `20260617_投票回答` as the provisional OCR-backed helper tab, not the final poll-response source.
 
 ## Questions for ChatGPT
 
-1. How strict should we be about reconciling the apparent `91/97` participation count before using the data for assignment planning?
+1. Is the user-confirmed 80 the correct operational response count even though a screenshot appears to show `91/97`?
 2. Which held rows should be manually checked first for Week 6/7 assignment decisions?
-3. Should the 2026-06-08 `未回答者` baseline be updated now that the 2026-06-17 OCR helper tab exists?
+3. Should the 2026-06-08 `未回答者` baseline be updated now that the 2026-06-17 OCR/helper and user-confirmed counts exist?
 
 ## Notes
 
