@@ -1,5 +1,49 @@
 # Handoff summary
 
+## 2026-06-17 Base capture screenshot OCR and sheet update
+
+## Context
+
+The user uploaded a new base-capture screenshot batch to Dropbox `lastwar/S6/拠点取得スクショ/inbox` and asked to reflect it in Google Sheets, then move analyzed images to `review`. The visible new batch was 52 files: `IMG_2288.PNG` through `IMG_2339.PNG`.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+- `data/2026-06-17_base_capture_full_ocr_events.csv`
+- `data/2026-06-17_base_capture_full_ocr_sheet_updates.csv`
+- `data/2026-06-17_base_capture_full_ocr_review.csv`
+
+## Key findings
+
+1. The 52 screenshots produced 145 OCR events and 127 latest target records.
+2. The active `1oK2.../管理表たたき` sheet received the batch update for `種別`, `所有連盟`, `取得日時`, and `メモ`; Google Sheets reported 121 updated rows / 484 updated cells.
+3. The older/source `12u.../管理表たたき` sheet received the same per-position update; Google Sheets also reported 121 updated rows / 484 updated cells.
+4. `1oK2.../全体マップ` was rebuilt after the management-table reflection. Current map counts are self 166, ally 174, enemy 691, unowned 348, destroyed 309, trade 80.
+5. `全体マップ` and `マップ表示テンプレ` both have 0 conditional-format rules after the rebuild.
+6. The 52 processed source files were moved from Dropbox `inbox` to Dropbox `review`.
+
+## Current risks
+
+1. Five OCR records were held out in the review CSV: three `low_confidence_no_material_change` rows and two `row_not_found` rows.
+2. The two row-not-found items are central-area `#8061` fishery events at `X:624 Y:924` and `X:74 Y:874`.
+3. The no-material-change review items are `#8061 X:674 Y:974 4tH`, `#8061 X:24 Y:624 ALj`, and `#534 X:499 Y:978 f4j`.
+
+## Recommended next actions
+
+1. Treat `data/2026-06-17_base_capture_full_ocr_review.csv` as the manual-review queue for held-out items.
+2. Continue using per-position OCR updates for both sheets, avoiding full-copy restoration from `12u...`.
+3. Keep using the Python full-map rebuild path unless the live Apps Script is confirmed to preserve white backgrounds and no conditional formatting.
+
+## Questions for ChatGPT
+
+1. Should the two missing `#8061` central fishery coordinates be added to the management-table universe?
+2. Can low-confidence no-material-change rows be ignored after audit, or should they remain in a separate watch list?
+
+## Notes
+
+- Raw OCR output remains local under `tmp/base_capture_20260617_vision/` and should not be committed.
+- Temporary symlinks remain local under `tmp/base_capture_20260617_new_images/` and should not be committed.
+
 ## 2026-05-25 JDX power sheet update log archived
 
 ## Context

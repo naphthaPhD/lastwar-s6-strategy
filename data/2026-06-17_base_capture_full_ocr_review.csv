@@ -1,0 +1,6 @@
+reason,target_server,x,y,sheet_row,existing_at,event_time,existing_owner,owner_for_sheet,image,source_text,kind_sheet
+low_confidence_no_material_change,#8061,674,974,2028,2026/05/21 11:17,2026/06/14 14:25:00,4tH,4tH,IMG_2291.PNG,"連盟4tHがLV.5漁場 #8061(X:674,Y:974)を 占領",
+row_not_found,#8061,624,924,,,2026/06/14 14:39:00,,4tH,IMG_2291.PNG,"連盟4tHがLV.6漁場 #8061(X:624,Y:924)を 占領",漁場
+row_not_found,#8061,74,874,,,2026/06/15 17:56:00,,476H,IMG_2308.PNG,"連盟476HがLV.6漁場 #8061(X:74,Y:874)を 占領",漁場
+low_confidence_no_material_change,#8061,24,624,2036,2026/05/21 3:43,2026/06/16 00:42:00,ALj,ALj,IMG_2313.PNG,"連盟ALjがLV.5漁場 #8061(X:24,Y:624)を占 領",
+low_confidence_no_material_change,#534,499,978,1590,2026/05/22 20:46,2026/06/17 11:16:00,f4j,f4j,IMG_2327.PNG,"連盟f4jがLV.1漁場 #534(X:499,Y:978)を占 領",
