@@ -4,7 +4,7 @@
 
 ## Context
 
-The user uploaded a new JDX power screenshot batch. The new files were found in Dropbox `lastwar/S6/JDX戦力スクショ/inbox` as `IMG_2340.PNG` through `IMG_2377.PNG`, timestamped around 2026-06-17 22:51-22:52. Apple Vision OCR was run on all 38 still images, then the Google Sheets `現在週`, `20260617_投票回答`, and `戦力分析` tabs were updated.
+The user uploaded a new JDX power screenshot batch. The new files were found in Dropbox `lastwar/S6/JDX戦力スクショ/inbox` as `IMG_2340.PNG` through `IMG_2377.PNG`, timestamped around 2026-06-17 22:51-22:52. Apple Vision OCR was run on all 38 still images, then the Google Sheets `現在週`, `20260617_投票回答`, `戦力分析`, and `一軍戦力推移` tabs were updated.
 
 ## Updated files
 
@@ -16,6 +16,7 @@ The user uploaded a new JDX power screenshot batch. The new files were found in 
 - `data/2026-06-17_jdx_power_ocr_summary.json`
 - `data/2026-06-17_jdx_power_sheet_writeback_summary.json`
 - `data/2026-06-18_jdx_power_analysis_update_summary.json`
+- `data/2026-06-18_jdx_first_power_trend_update_summary.json`
 
 ## Key findings
 
@@ -29,7 +30,9 @@ The user uploaded a new JDX power screenshot batch. The new files were found in 
 8. `戦力分析` now separates OCR-matched vote respondents 79 from the user-confirmed vote response count 80.
 9. User-confirmed nonrespondents are shown as 16, while the OCR first-squad band table remains based on the 79 matched rows in `20260617_投票回答`.
 10. The top comparison formulas in `戦力分析` were refreshed to use `20260614_戦力アンケート`, `20260531_戦力アンケート`, and `20260524_戦力アンケート` instead of stale May references.
-11. A screenshot appears to show participation `91/97`, while OCR matched 79 vote candidates and user confirmation says 80. The remaining unmatched respondent needs confirmation before the helper tab is complete.
+11. `一軍戦力推移` was rebuilt from the latest 8 available snapshots: 20260426, 20260503, 20260510, 20260517, 20260524, 20260531, 20260614, and 20260617/current.
+12. The trend table now has 29 commanders with first-squad values in all 8 selected snapshots; top first-to-latest gainers are カラトリ君 +5.8, sakimaru +5.74, CHIKO un +5.7, 北池袋 +5.6, and himoぺよ星 +5.2.
+13. A screenshot appears to show participation `91/97`, while OCR matched 79 vote candidates and user confirmation says 80. The remaining unmatched respondent needs confirmation before the helper tab is complete.
 
 ## Current risks
 
@@ -38,7 +41,8 @@ The user uploaded a new JDX power screenshot batch. The new files were found in 
 3. The OCR vote candidate count and user-confirmed count still do not match the visible `91/97`-like participation text, so poll coverage wording should stay cautious.
 4. One vote row (`Fateの晩风`) and nine comment rows (`K’awiil`, `BCCR`, `RAMETT vu`, `渋猫選手R`, `SOL265`, `あつないR`, `RiricoR`, `Wolveress23`, `OLDヤンガス`) were held from field-level application because of low match confidence.
 5. `未回答者` sheet latest date is still 2026-06-08; the `戦力分析` section now distinguishes this from the 2026-06-17 OCR/helper and user-confirmed counts.
-6. Large total-power deltas are compared against the 2026-05-31 base, so many are expected and should not automatically be treated as OCR errors.
+6. `一軍戦力推移` skips 20260601 because no independent saved tab exists for that date; it uses the latest 8 available saved/current snapshots instead.
+7. Large total-power deltas are compared against the 2026-05-31 base, so many are expected and should not automatically be treated as OCR errors.
 
 ## Recommended next actions
 

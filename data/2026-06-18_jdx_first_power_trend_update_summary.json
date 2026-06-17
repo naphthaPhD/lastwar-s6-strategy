@@ -1,0 +1,86 @@
+{
+  "snapshot_dates": [
+    "20260426",
+    "20260503",
+    "20260510",
+    "20260517",
+    "20260524",
+    "20260531",
+    "20260614",
+    "20260617"
+  ],
+  "respondents_all_snapshots": 29,
+  "top_10_growth": [
+    {
+      "name": "カラトリ君",
+      "first": 61.6,
+      "latest": 67.4,
+      "diff": 5.8,
+      "max_diff": 5.8
+    },
+    {
+      "name": "sakimaru",
+      "first": 58.3,
+      "latest": 64.04,
+      "diff": 5.74,
+      "max_diff": 5.74
+    },
+    {
+      "name": "CHIKO un",
+      "first": 67.5,
+      "latest": 73.2,
+      "diff": 5.7,
+      "max_diff": 5.7
+    },
+    {
+      "name": "北池袋",
+      "first": 60.0,
+      "latest": 65.6,
+      "diff": 5.6,
+      "max_diff": 5.6
+    },
+    {
+      "name": "himoぺよ星",
+      "first": 53.1,
+      "latest": 58.3,
+      "diff": 5.2,
+      "max_diff": 5.2
+    },
+    {
+      "name": "枝マメDx",
+      "first": 57.25,
+      "latest": 62.31,
+      "diff": 5.06,
+      "max_diff": 5.06
+    },
+    {
+      "name": "ssi103",
+      "first": 81.0,
+      "latest": 86.0,
+      "diff": 5.0,
+      "max_diff": 5.0
+    },
+    {
+      "name": "AyuMiN",
+      "first": 59.0,
+      "latest": 64.0,
+      "diff": 5.0,
+      "max_diff": 5.0
+    },
+    {
+      "name": "Revo nutswa",
+      "first": 55.0,
+      "latest": 60.0,
+      "diff": 5.0,
+      "max_diff": 5.0
+    },
+    {
+      "name": "指揮官の鷹",
+      "first": 61.7,
+      "latest": 66.4,
+      "diff": 4.7,
+      "max_diff": 4.7
+    }
+  ],
+  "updated_range": "一軍戦力推移!A1:M36"
+}
