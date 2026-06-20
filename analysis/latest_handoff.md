@@ -1,5 +1,49 @@
 # Handoff summary
 
+## 2026-06-20 Base capture screenshot OCR and sheet update
+
+## Context
+
+The user uploaded another base-capture screenshot batch to Dropbox `lastwar/S6/拠点取得スクショ/inbox` and asked to reflect it in Google Sheets, then move analyzed images to `review`. The visible new batch was 83 files modified on 2026-06-20: `IMG_2378.PNG` through `IMG_2461.PNG`, with `IMG_2386.PNG` not present in the local Dropbox sync.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+- `data/2026-06-20_base_capture_full_ocr_events.csv`
+- `data/2026-06-20_base_capture_full_ocr_sheet_updates.csv`
+- `data/2026-06-20_base_capture_full_ocr_review.csv`
+
+## Key findings
+
+1. The 83 screenshots produced 251 OCR events and 240 latest target records.
+2. The active `1oK2.../管理表たたき` sheet received 203 row updates for `種別`, `所有連盟`, `取得日時`, and `メモ`.
+3. The older/source `12u.../管理表たたき` sheet received the same per-position update, with 202 row updates due to existing sheet-state differences.
+4. `1oK2.../全体マップ` was rebuilt after the management-table reflection. Current map counts are self 165, ally 173, enemy 689, unowned 316, destroyed 345, trade 80.
+5. `全体マップ` and `マップ表示テンプレ` both have 0 conditional-format rules after the rebuild.
+6. The 83 processed source files were moved from Dropbox `inbox` to Dropbox `review`.
+
+## Current risks
+
+1. The active-sheet review CSV contains 37 held-out records, all `low_confidence_no_material_change`.
+2. The held-out rows appear to be existing-owner matches, mostly trading post recapture lines where the OCR text is noisy but the owner did not materially change.
+3. `IMG_2386.PNG` was not visible in the local Dropbox sync for this batch.
+
+## Recommended next actions
+
+1. Treat `data/2026-06-20_base_capture_full_ocr_review.csv` as the audit queue for held-out no-change rows.
+2. If a missing screenshot matters, confirm whether `IMG_2386.PNG` exists on the upload device or was intentionally skipped.
+3. Continue rebuilding `全体マップ` through the Python tool after each management-table reflection to keep backgrounds and conditional formatting clean.
+
+## Questions for ChatGPT
+
+1. Do the 37 no-material-change trading-post review rows need any strategic follow-up, or can they remain audit-only?
+2. Does the destroyed count of 345 change the next #534 operational summary?
+
+## Notes
+
+- Raw OCR output remains local under `tmp/base_capture_20260620_vision/` and should not be committed.
+- Temporary symlinks remain local under `tmp/base_capture_20260620_images/` and should not be committed.
+
 ## 2026-06-17 JDX power screenshot OCR
 
 ## Context
