@@ -1,5 +1,48 @@
 # Handoff summary
 
+## 2026-06-21 S6 latest status and Week 7 schedule
+
+## Context
+
+The user asked to summarize the latest Season 6 information, push changes if any, and provide the Week 7 schedule. The active management sheet is the corrected `1oK2.../管理表たたき`, not the older `12u...` sheet used in the 2026-06-14 Week 5 report.
+
+## Updated files
+
+- `analysis/2026-06-21_s6_latest_week7_update.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. Live `1oK2.../管理表たたき` counts now show destroyed cities at 338/688, or 49.1%.
+2. #534 is 44/86 destroyed cities, or 51.2%; with facilities included it is 47/91 destroyed across cities, outposts, and sanctuary.
+3. #534 facility losses are 2/4 outposts and 1/1 sanctuary.
+4. The latest three-category totals are cities 338/688, outposts 4/32, and sanctuaries 3/8; altar rows are intentionally excluded.
+5. Week 7 is treated as 2026-06-22 through 2026-06-28: Tuesday altar, Wednesday war day, Saturday final Sanctuary Duel / Outpost Conquest / war day, and Sunday Faction Duel.
+
+## Current risks
+
+1. The older `analysis/2026-06-14_week5_destroy_rate_update.md` is now superseded for operational destroyed-city counts.
+2. #534 is no longer merely damaged; the city loss rate is above 50%, and sanctuary/outpost losses reduce late-week participation and connection options.
+3. #509/#511 are nearly exhausted as connection bases, while #476/#503 remain almost undamaged, keeping the map highly asymmetric.
+4. Cpt Hedgehog's public guide and local game-rule notes agree on Week 5-7 Sanctuary Duel Saturdays, but exact in-game server-time windows should still be checked before issuing final rally times.
+
+## Recommended next actions
+
+1. Use `analysis/2026-06-21_s6_latest_week7_update.md` as the current S6/Week 7 handoff for ChatGPT review.
+2. For #534, prioritize remaining connection-critical cities and outpost/sanctuary participation routes over broad city defense.
+3. Before 2026-06-27, verify in-game event calendar times for Sanctuary Duel, Outpost Conquest, and Faction Duel rally windows.
+
+## Questions for ChatGPT
+
+1. How should the Week 7 review phrase #534's 51.2% city destruction without collapsing morale?
+2. Which remaining #534 cities should be classified as must-hold based on connection value?
+3. Should Saturday 2026-06-27 be messaged as a defense-first day, a participation/reward day, or a narrow counterattack day?
+
+## Notes
+
+- Browser plugin setup failed in this Codex environment because the browser runtime returned a sandbox metadata error, so public web confirmation was done through direct web reads of Cpt Hedgehog pages plus local official/game-rule notes.
+- Google Sheets live read used the existing service-account credential at `/Users/mba2025/.config/gptcodex/credentials-sub.json`.
+
 ## 2026-06-20 Base capture screenshot OCR and sheet update
 
 ## Context
