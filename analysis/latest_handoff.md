@@ -2896,3 +2896,40 @@ Added human labels for the same 20 `拠点取得スクショ/inbox` samples used
 1. Join `data/2026-06-06_base_capture_ocr_human_labels.csv` with `tmp/ocr_engine_comparison_base_capture_v2/ocr_engine_comparison_raw.csv`.
 2. Compute true field-level accuracy for Apple Vision, PaddleOCR, and Tesseract.
 3. Decide whether production OCR should ignore timeline events above the first visible time header.
+
+## 2026-06-21 base capture screenshot update and Inbox cleanup
+
+## Context
+
+Processed newly uploaded Dropbox screenshots from `拠点取得スクショ/inbox` and cleaned up old residual Inbox files. The working spreadsheet was `1oK2tebQRs9RaSsrM-Oo9lynAjbt4loV82GjS8a3dPrQ`; the older/source spreadsheet `12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g` was also updated.
+
+## Updated files
+
+- `data/2026-06-21_base_capture_full_ocr_events.csv`
+- `data/2026-06-21_base_capture_full_ocr_sheet_updates.csv`
+- `data/2026-06-21_base_capture_full_ocr_review.csv`
+- `data/2026-06-21_old_inbox_cleanup_base_capture_full_ocr_events.csv`
+- `data/2026-06-21_old_inbox_cleanup_base_capture_full_ocr_sheet_updates.csv`
+- `data/2026-06-21_old_inbox_cleanup_base_capture_full_ocr_review.csv`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. Newly uploaded set: 45 images (`IMG_2386.PNG`, `IMG_2462.PNG` through `IMG_2505.PNG`) produced 142 OCR events, 117 latest target updates, and 0 review rows.
+2. The new set included 24 destruction events; 23 destruction updates were reflected to the management table.
+3. Old residual Inbox cleanup: 59 old images were already represented in prior committed OCR CSVs; 104 old unmatched images were OCR-processed as a backfill/safety cleanup.
+4. The 104 old unmatched images produced 317 OCR events, 145 working-sheet updates, and 120 review rows on the working spreadsheet. Review reasons were `existing_newer` 81, `low_confidence_no_material_change` 33, `row_not_found` 4, and `type_mismatch` 2.
+5. The old cleanup set included 37 destruction events; 36 destruction updates were reflected where the management table did not already have newer information.
+6. The working spreadsheet `管理表たたき` received 117 new-set updates plus 145 old-cleanup updates. The source spreadsheet received 117 new-set updates plus 183 old-cleanup updates.
+7. After management-table updates, `tools/s6_534_sheet/rebuild_full_map.py --apply` rebuilt the working `全体マップ`. Result counts were self 163, ally 155, enemy 733, unowned 269, destroyed 368, trade 80.
+8. Direct Sheets API verification confirmed `全体マップ` has 0 conditional formatting rules after rebuild, so map background colors should not be reintroduced by conditional formatting.
+
+## File movement
+
+- Moved 208 Inbox images to `拠点取得スクショ/review`.
+- `拠点取得スクショ/inbox` image count after cleanup: 0.
+
+## Notes
+
+- Old cleanup was intentionally conservative: rows with a newer existing acquisition timestamp were not overwritten.
+- Central-map rows such as `中央:中央-10-19` were retained because matching rows exist in the management table and the OCR/update helper resolved them to sheet rows.
