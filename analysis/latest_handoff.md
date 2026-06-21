@@ -1,5 +1,52 @@
 # Handoff summary
 
+## 2026-06-21 City destruction video OCR and #534 correction
+
+## Context
+
+The user uploaded a new in-game city-destruction video to Dropbox `lastwar/S6/拠点取得スクショ/inbox` and delegated the analysis method. The video was `ScreenRecording_06-21-2026 19-25-47_1.MP4`, 367.66 seconds long. Frames were sampled at 1 fps, OCR was run with the existing base-capture pipeline, and the results were reconciled against the active `1oK2.../管理表たたき`.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+- `data/2026-06-21_city_destroy_video_base_capture_full_ocr_events.csv`
+- `data/2026-06-21_city_destroy_video_base_capture_full_ocr_sheet_updates.csv`
+- `data/2026-06-21_city_destroy_video_base_capture_full_ocr_review.csv`
+- `data/2026-06-21_city_destroy_video_534_missing_candidates.csv`
+- `data/2026-06-21_city_destroy_video_534_not_current_city.csv`
+
+## Key findings
+
+1. Video OCR produced 1,108 raw event rows, 348 broad sheet-update candidates, and 45 review rows; these were not bulk-applied because the video contains older events and multiple servers.
+2. A stricter #534 reconciliation plus a loose raw-OCR pass found six current #534 city rows that had video evidence of destruction but were not yet marked destroyed in the active sheet.
+3. The six evidence-backed #534 rows applied to `1oK2.../管理表たたき` were `b-18`, `c-18`, `e-4`, `f-18`, `g-16`, and `h-16`.
+4. The same six keys were also applied to the `12u.../管理表たたき` source sheet where matching rows existed.
+5. After the update, the active `1oK2...` sheet has #534 at 54 destroyed city rows. If the correct denominator is 84 cities per area, the sheet now implies 30 remaining, while the user's in-game check says 27 remaining. Therefore three #534 destroyed cities are still not coordinate-identified from this video OCR.
+6. The active full map was rebuilt after the update. The analyzed video was moved from Dropbox `inbox` to `review`.
+
+## Current risks
+
+1. The raw video OCR contains legitimate old records, duplicate scrolling records, and other-server records, so applying the full 348 update candidates would corrupt the management table.
+2. The active sheet still carries 86 city rows for #534 even though the user confirmed the true city count is 84; city-rate reporting should use 84 as the denominator unless the table structure is corrected.
+3. #534 still has a three-city discrepancy versus the in-game remaining count of 27.
+
+## Recommended next actions
+
+1. Use `data/2026-06-21_city_destroy_video_534_missing_candidates.csv` as the exact evidence list for the six applied corrections.
+2. When the user checks the game screen, identify the remaining three #534 destroyed coordinates and update them manually or via another screenshot pass.
+3. Separately audit the two extra city rows per area in `管理表たたき`, because the correct area city denominator is 84.
+
+## Questions for ChatGPT
+
+1. Which three likely #534 coordinates should be prioritized for manual game-screen verification?
+2. Should the management table keep the extra rows as non-city facilities, or should the city-count logic explicitly exclude them?
+
+## Notes
+
+- The six applied rows were backed by video frames: `frame_0293`, `frame_0297`, `frame_0331`, `frame_0332`, `frame_0348`, and `frame_0363`.
+- Broad OCR outputs were saved for traceability, but only the six #534 current-city corrections were reflected in Sheets.
+- User clarification: red text in the in-game destruction display means the destruction was by an enemy; blue text means the destruction was by an ally. This affects interpretation of who destroyed the city, while the management-table owner field still becomes `破壊`.
+
 ## 2026-06-21 Correction: #396 is reference-only
 
 ## Context
