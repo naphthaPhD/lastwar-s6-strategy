@@ -1,5 +1,51 @@
 # Handoff summary
 
+## 2026-06-21 Faction Duel rule screenshots
+
+## Context
+
+The user added new screenshots to Dropbox `ゲーム内ルールなどスクショ`. The 2026-06-21 additions were checked with Apple Vision OCR and visual review. The new information mainly covers the final `陣営対決` / Faction Duel operation-area rules, rewards, point conditions, and a JDX-facing alliance notice.
+
+## Updated files
+
+- `analysis/2026-06-21_faction_duel_rule_update.md`
+- `docs/season6_mechanics.md`
+- `research/source_log.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. Faction Duel lasts 7 days: Monday-Saturday warm-up, Sunday battle.
+2. Presidents and vice presidents choose each warzone's operation area; selection closes 10 minutes before battle.
+3. After battle starts, each warzone can attack/defend only facilities inside its assigned operation area.
+4. Flag-bearer warzones are the exception and can attack or support every facility in the center area.
+5. All commanders can attack/defend the Ancestral Temple regardless of assigned operation area.
+6. The #396 operation-area screen shows #396 assigned to the southwest cannon. The JDX notice says #396 can attack the temple and southwest/left-bottom cannon only.
+7. Winning faction gets 30,000,000 faction-ranking influence only; it does not add to a specific warzone, alliance, or individual influence.
+8. Faction victory reward requires at least 50,000 personal points.
+
+## Current risks
+
+1. If members ignore operation-area limits, they may relocate to a place where they cannot participate.
+2. The 30,000,000 influence reward can be misunderstood as alliance or individual power gain; it is faction-ranking only.
+3. Some reward icon names remain partially unread and should not be over-specified in member-facing copy.
+
+## Recommended next actions
+
+1. For #396/#534, publish the short rule: "main force to Ancestral Temple; others support southwest cannon; #396 cannot freely attack every cannon."
+2. Include the 50,000 personal point threshold in member instructions.
+3. Before Sunday battle, verify the in-game event calendar and operation-area assignment screen again.
+
+## Questions for ChatGPT
+
+1. How should we phrase the #396 limitation without making members feel useless?
+2. What is the shortest member-facing explanation of the 50,000 point requirement?
+
+## Notes
+
+- Source screenshots remain in Dropbox; raw screenshots were not committed.
+- `analysis/2026-06-21_faction_duel_rule_update.md` is the compact source-backed memo.
+
 ## 2026-06-21 Week 7 schedule ponchi prompt
 
 ## Context
