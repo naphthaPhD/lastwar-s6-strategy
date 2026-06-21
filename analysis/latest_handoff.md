@@ -1,5 +1,46 @@
 # Handoff summary
 
+## 2026-06-21 Correction: #396 is reference-only
+
+## Context
+
+The user clarified that #396 is an earlier/lead server, so the #396 southwest-cannon assignment should be treated as reference only, not as #534's confirmed Sunday Faction Duel assignment.
+
+## Updated files
+
+- `analysis/2026-06-21_week7_schedule_restructured.md`
+- `prompts/2026-06-21_week7_schedule_ponchi_prompt.md`
+- `analysis/2026-06-21_faction_duel_rule_update.md`
+- `docs/season6_mechanics.md`
+- `research/source_log.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. #396 southwest-cannon assignment is now explicitly labeled as a lead-server example.
+2. #534's actual operation area must be confirmed from the in-game screen before member publication.
+3. The stable rule remains: Ancestral Temple is attackable/defensible by all commanders regardless of operation area.
+4. Member-facing Week 7 copy should say "Temple plus the assigned operation area", not "Temple plus southwest cannon" unless #534's in-game screen confirms that assignment.
+
+## Current risks
+
+1. Reusing #396 copy verbatim could misdirect #534 members to the wrong cannon.
+2. The one-page visual must avoid presenting southwest cannon as #534-confirmed.
+
+## Recommended next actions
+
+1. Before publishing the Week 7 ponchi, check #534's actual operation-area assignment in game.
+2. Keep the #396 screenshots as rule evidence for operation-area limitations and the Temple exception only.
+
+## Questions for ChatGPT
+
+1. Can the visual phrase this as "神殿 + 当日割当区域" without losing clarity?
+2. What short wording prevents members from assuming all cannons are open?
+
+## Notes
+
+- This correction supersedes the previous wording that framed #396/#534 around southwest cannon.
+
 ## 2026-06-21 Week 7 schedule revised after Faction Duel screenshots
 
 ## Context
@@ -16,8 +57,8 @@ The user said additional material was added in another chat and asked to reconst
 
 1. Latest live management-table counts are now cities 361/688 destroyed, or 52.5%.
 2. #534 is now 48/86 destroyed cities, or 55.8%; #534 has 2/4 outposts and 1/1 sanctuary destroyed.
-3. The Sunday Faction Duel should not be messaged as free movement to all center facilities for #396/#534.
-4. #396/#534 should be framed around Ancestral Temple plus southwest cannon; high-power members prioritize temple, others support southwest cannon.
+3. The Sunday Faction Duel should not be messaged as free movement to all center facilities for #534.
+4. #396's southwest-cannon assignment is a lead-server reference; #534 should be framed around Ancestral Temple plus its actual assigned operation area.
 5. Faction Duel victory reward requires at least 50,000 personal points, and the 30,000,000 influence is faction-ranking influence only.
 
 ## Current risks
@@ -30,12 +71,12 @@ The user said additional material was added in another chat and asked to reconst
 
 1. Use `analysis/2026-06-21_week7_schedule_restructured.md` as the updated schedule source.
 2. Use the revised `prompts/2026-06-21_week7_schedule_ponchi_prompt.md` for GPT-generated one-page visuals.
-3. Before member publication, verify #396's operation area assignment and the Sunday battle start time in-game.
+3. Before member publication, verify #534's operation area assignment and the Sunday battle start time in-game.
 
 ## Questions for ChatGPT
 
 1. How should the one-page visual show that Saturday is the maximum attrition day and Sunday is the temple-focused final battle?
-2. How can the #396 limitation be phrased positively as "focus points" rather than "things we cannot do"?
+2. How can the operation-area limitation be phrased positively as "focus points" rather than "things we cannot do"?
 
 ## Notes
 
@@ -61,7 +102,7 @@ The user added new screenshots to Dropbox `ゲーム内ルールなどスクシ�
 3. After battle starts, each warzone can attack/defend only facilities inside its assigned operation area.
 4. Flag-bearer warzones are the exception and can attack or support every facility in the center area.
 5. All commanders can attack/defend the Ancestral Temple regardless of assigned operation area.
-6. The #396 operation-area screen shows #396 assigned to the southwest cannon. The JDX notice says #396 can attack the temple and southwest/left-bottom cannon only.
+6. The #396 operation-area screen shows a lead-server example where #396 is assigned to the southwest cannon. This is reference-only and should not be treated as #534's confirmed assignment.
 7. Winning faction gets 30,000,000 faction-ranking influence only; it does not add to a specific warzone, alliance, or individual influence.
 8. Faction victory reward requires at least 50,000 personal points.
 
@@ -73,13 +114,13 @@ The user added new screenshots to Dropbox `ゲーム内ルールなどスクシ�
 
 ## Recommended next actions
 
-1. For #396/#534, publish the short rule: "main force to Ancestral Temple; others support southwest cannon; #396 cannot freely attack every cannon."
+1. For #534, publish the short rule: "Ancestral Temple is open to all; the assigned operation area must be confirmed in-game; do not assume every cannon is open."
 2. Include the 50,000 personal point threshold in member instructions.
 3. Before Sunday battle, verify the in-game event calendar and operation-area assignment screen again.
 
 ## Questions for ChatGPT
 
-1. How should we phrase the #396 limitation without making members feel useless?
+1. How should we phrase the operation-area limitation without making members feel useless?
 2. What is the shortest member-facing explanation of the 50,000 point requirement?
 
 ## Notes
