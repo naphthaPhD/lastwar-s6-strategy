@@ -3235,3 +3235,34 @@ Processed newly uploaded Dropbox screenshots from `拠点取得スクショ/inbo
 
 - Old cleanup was intentionally conservative: rows with a newer existing acquisition timestamp were not overwritten.
 - Central-map rows such as `中央:中央-10-19` were retained because matching rows exist in the management table and the OCR/update helper resolved them to sheet rows.
+
+## 2026-06-21 #534 city denominator correction
+
+## Context
+
+Rechecked the #534 remaining-city discrepancy against the live game-screen confirmation. The working spreadsheet is `1oK2tebQRs9RaSsrM-Oo9lynAjbt4loV82GjS8a3dPrQ`; the older/source spreadsheet is `12uNW9XphH2zSX4h5BzjSd-OON9r5AckAuNCwQTbY79g`.
+
+## Updated files
+
+- `tools/s6_534_sheet/rebuild_full_map.py`
+- `tools/s6_534_sheet/Code.gs`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. User confirmed #534 `i-18`, `i-20`, `j-18`, and `j-20` are `ゲーム機`. These four should be excluded from the city denominator.
+2. User confirmed #534 `f-2` is an empty city, not alliance-owned and not destroyed.
+3. Both the working and source spreadsheets were updated for the five confirmed coordinates. `f-2` has `種別=都市` with blank owner/acquisition time; the four machine coordinates have `種別=ゲーム機` with blank owner/acquisition time.
+4. Working-sheet #534 count now reconciles as `都市82 = 破壊54 + 空き都市1 + 連盟所有27`. The empty city is `f-2`.
+5. The full-map rebuild logic now displays `ゲーム機` explicitly and counts it separately from `交易地`, while keeping the map background white.
+
+## Verification
+
+1. Sheets API verification on the working spreadsheet: `都市82`, `破壊54`, `空き都市1`, `連盟所有残27`, `ゲーム機4`.
+2. Rebuilt `全体マップ` with `tools/s6_534_sheet/rebuild_full_map.py --apply`.
+3. `全体マップ` verification: `#534:I-18`, `#534:I-20`, `#534:J-18`, and `#534:J-20` display `ゲーム機`; `#534:F-2` displays `f-2`; conditional formatting rule count is `0`.
+
+## Notes
+
+- The source spreadsheet now carries the same manual classification for `f-2` and the four machine coordinates, but its destruction-history reflection state is not identical to the working spreadsheet.
+- The local Apps Script source was updated. If the bound Google Sheets Apps Script still contains an older pasted version, replace it with `tools/s6_534_sheet/Code.gs` before using the menu-driven `全体マップ更新`.

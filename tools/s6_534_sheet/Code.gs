@@ -12,6 +12,7 @@ const S6_FULL_MAP_COLORS = {
   ally: '#16a34a',
   enemy: '#dc2626',
   trade: '#020617',
+  machine: '#020617',
   destroyed: '#6b7280',
   unowned: '#000000',
 };
@@ -62,7 +63,7 @@ function refreshS6FullMapFromManagement() {
   const outputNotes = templateValues.map((row) => row.map(() => ''));
   const managementMap = buildS6ManagementMap_(managementSheet);
   const allianceServerMap = buildS6AllianceServerMap_(ss);
-  const counts = { self: 0, ally: 0, enemy: 0, trade: 0, destroyed: 0, unowned: 0, missing: 0 };
+  const counts = { self: 0, ally: 0, enemy: 0, trade: 0, machine: 0, destroyed: 0, unowned: 0, missing: 0 };
 
   for (let rowIndex = 0; rowIndex < templateValues.length; rowIndex++) {
     const rowNumber = rowIndex + 1;
@@ -109,7 +110,7 @@ function refreshS6FullMapFromManagement() {
   targetSheet.setHiddenGridlines(true);
   writeS6FullMapUpdateNote_(targetSheet, counts);
   ss.toast(
-    `全体マップ更新: 青${counts.self} / 緑${counts.ally} / 赤${counts.enemy} / 黒${counts.trade} / 灰${counts.destroyed}`,
+    `全体マップ更新: 青${counts.self} / 緑${counts.ally} / 赤${counts.enemy} / 黒${(counts.trade || 0) + (counts.machine || 0)} / 灰${counts.destroyed}`,
     'S6#534',
     8
   );
@@ -199,12 +200,14 @@ function s6AreaForFullMapCell_(rowNumber, columnNumber) {
 function s6FullMapDisplayValue_(node, fallbackCoordinate) {
   if (isS6DestroyedNode_(node)) return '破壊';
   if (node.type === '交易地') return '交易地';
+  if (node.type === 'ゲーム機') return 'ゲーム機';
   return node.owner || fallbackCoordinate;
 }
 
 function s6FullMapRelation_(node, area, allianceServerMap) {
   if (isS6DestroyedNode_(node)) return 'destroyed';
   if (node.type === '交易地') return 'trade';
+  if (node.type === 'ゲーム機') return 'machine';
   const owner = normalizeS6AllianceTag_(node.owner);
   if (!owner || isS6UnownedOwner_(owner)) return 'unowned';
   const overrideRelation = s6OwnerSideOverride_(owner);
@@ -284,6 +287,7 @@ function writeS6FullMapUpdateNote_(sheet, counts) {
     `緑(#509/#440/#511): ${counts.ally || 0}\n` +
     `赤(#503/#480/#523/#476): ${counts.enemy || 0}\n` +
     `黒(交易地): ${counts.trade || 0}\n` +
+    `黒(ゲーム機): ${counts.machine || 0}\n` +
     `灰(破壊): ${counts.destroyed || 0}\n` +
     `未取得/未判定: ${counts.unowned || 0}\n` +
     `管理表未一致: ${counts.missing || 0}`

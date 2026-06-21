@@ -31,6 +31,7 @@ COLORS = {
     "ally": "#16a34a",
     "enemy": "#dc2626",
     "trade": "#020617",
+    "machine": "#020617",
     "destroyed": "#6b7280",
     "unowned": "#000000",
 }
@@ -158,6 +159,8 @@ def relation_for(node: dict[str, object], area: str, alliance_server_map: dict[s
         return "destroyed"
     if str(node.get("type", "")) == "交易地":
         return "trade"
+    if str(node.get("type", "")) == "ゲーム機":
+        return "machine"
     owner = str(node.get("owner", "")).strip()
     if is_unowned(owner):
         return "unowned"
@@ -179,6 +182,8 @@ def display_value(node: dict[str, object], fallback: str) -> str:
         return "破壊"
     if str(node.get("type", "")) == "交易地":
         return "交易地"
+    if str(node.get("type", "")) == "ゲーム機":
+        return "ゲーム機"
     return str(node.get("owner", "")).strip() or fallback
 
 
@@ -283,6 +288,7 @@ def main() -> None:
         f"緑(#509/#440/#511): {counts['ally']}\n"
         f"赤(#503/#480/#523/#476): {counts['enemy']}\n"
         f"黒(交易地): {counts['trade']}\n"
+        f"黒(ゲーム機): {counts['machine']}\n"
         f"灰(破壊): {counts['destroyed']}\n"
         f"未取得/未判定: {counts['unowned']}\n"
         f"管理表未一致: {counts['missing']}"
