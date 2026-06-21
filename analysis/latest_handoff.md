@@ -1,5 +1,46 @@
 # Handoff summary
 
+## 2026-06-21 Week 7 schedule revised after Faction Duel screenshots
+
+## Context
+
+The user said additional material was added in another chat and asked to reconstruct the Week 7 schedule. The new source is `analysis/2026-06-21_faction_duel_rule_update.md`, plus a fresh live read of `1oK2.../管理表たたき`.
+
+## Updated files
+
+- `analysis/2026-06-21_week7_schedule_restructured.md`
+- `prompts/2026-06-21_week7_schedule_ponchi_prompt.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. Latest live management-table counts are now cities 361/688 destroyed, or 52.5%.
+2. #534 is now 48/86 destroyed cities, or 55.8%; #534 has 2/4 outposts and 1/1 sanctuary destroyed.
+3. The Sunday Faction Duel should not be messaged as free movement to all center facilities for #396/#534.
+4. #396/#534 should be framed around Ancestral Temple plus southwest cannon; high-power members prioritize temple, others support southwest cannon.
+5. Faction Duel victory reward requires at least 50,000 personal points, and the 30,000,000 influence is faction-ranking influence only.
+
+## Current risks
+
+1. Saturday 2026-06-27 has city war, final Sanctuary Duel, and outpost-related activity overlapping; spreading forces too widely is the main operational risk.
+2. Sunday 2026-06-28 operation-area limits can cause wasted relocation if members assume they can attack every cannon.
+3. Exact Saturday/Sunday event start times other than Sanctuary Duel 13:00 server time still require in-game calendar confirmation.
+
+## Recommended next actions
+
+1. Use `analysis/2026-06-21_week7_schedule_restructured.md` as the updated schedule source.
+2. Use the revised `prompts/2026-06-21_week7_schedule_ponchi_prompt.md` for GPT-generated one-page visuals.
+3. Before member publication, verify #396's operation area assignment and the Sunday battle start time in-game.
+
+## Questions for ChatGPT
+
+1. How should the one-page visual show that Saturday is the maximum attrition day and Sunday is the temple-focused final battle?
+2. How can the #396 limitation be phrased positively as "focus points" rather than "things we cannot do"?
+
+## Notes
+
+- The previous 44/86 #534 city-destruction figure is superseded by the latest live 48/86 count.
+
 ## 2026-06-21 Faction Duel rule screenshots
 
 ## Context
