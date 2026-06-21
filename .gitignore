@@ -34,6 +34,8 @@ tools/*
 !tools/base_capture_ocr_update.py
 !tools/vision_ocr.swift
 !tools/red_zombie_event_extractor.py
+!tools/city_destroy_video_gpt_vision.py
+!tools/city_destroy_video_gpt_vision_README.md
 !tools/chat_event_preprocessor/
 !tools/chat_event_preprocessor/**
 !tools/invasion_strategy_os/

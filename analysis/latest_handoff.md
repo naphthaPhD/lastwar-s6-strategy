@@ -1,5 +1,43 @@
 # Handoff summary
 
+## 2026-06-21 GPT Vision high-density city-destruction workflow
+
+## Context
+
+The user asked to make the proposed high-density frame extraction plus GPT Vision/API workflow usable for the city-destruction history video. A new CLI was added for selecting relevant scroll intervals, extracting dense cropped frames, sending them to the OpenAI Responses API, and aggregating the results into all-server CSV summaries.
+
+## Updated files
+
+- `tools/city_destroy_video_gpt_vision.py`
+- `tools/city_destroy_video_gpt_vision_README.md`
+- `.gitignore`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. The tool has four modes: `suggest-ranges`, `prepare`, `ocr`, and `aggregate`.
+2. `suggest-ranges --server '#534'` against the existing Apple Vision raw OCR found 204 hit frames and proposed 11 merged #534 scroll intervals.
+3. A smoke test extracted 3 high-density cropped frames from seconds 330-331 of `ScreenRecording_06-21-2026 19-25-47_1.MP4`; the crop visibly contains the destruction-history rows and red/blue text.
+4. The GPT prompt encodes the user's color rule: red text means enemy destruction, blue text means ally destruction.
+5. The tool does not directly update Google Sheets. It writes deduped event CSVs and optional sheet-difference CSVs for review before reflection.
+
+## Current risks
+
+1. Running `ocr` requires `OPENAI_API_KEY` and will incur API cost.
+2. The default model follows `OPENAI_VISION_MODEL` or `OPENAI_OCR_MODEL`, falling back to the repo's existing `gpt-5.4-mini`; the caller should override if needed.
+3. GPT Vision outputs still need aggregation review before sheet reflection.
+
+## Recommended next actions
+
+1. Run `ocr --limit 3` first to confirm JSON quality on the extracted frames.
+2. If quality is good, run the full #534 suggested intervals, aggregate with `--compare-sheet`, and compare the resulting #534 count to the in-game remaining count of 27.
+3. If #534 reconciles, repeat with all servers or apply the existing all-server missing list after review.
+
+## Notes
+
+- Smoke-test frames were written only under `tmp/` and were not committed.
+- Usage examples are in `tools/city_destroy_video_gpt_vision_README.md`.
+
 ## 2026-06-21 City destruction video OCR and #534 correction
 
 ## Context
