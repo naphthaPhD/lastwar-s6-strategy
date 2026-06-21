@@ -1,5 +1,42 @@
 # Handoff summary
 
+## 2026-06-21 Week 7 schedule ponchi prompt
+
+## Context
+
+The user asked for an instruction document that can be given to GPT to create a Week 7 schedule ponchi/one-page visual.
+
+## Updated files
+
+- `prompts/2026-06-21_week7_schedule_ponchi_prompt.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. The prompt uses the latest `1oK2.../管理表たたき` numbers, not the superseded 2026-06-14 counts.
+2. It frames #534 as 44/86 destroyed cities, 2/4 destroyed outposts, and 1/1 destroyed sanctuary.
+3. It asks GPT to make a horizontal Week 7 timeline from 2026-06-22 to 2026-06-28.
+4. The emphasized peak days are 2026-06-27 and 2026-06-28.
+
+## Current risks
+
+1. Exact rally times still need final confirmation from the in-game event calendar.
+2. The prompt intentionally uses a morale-preserving but realistic tone; ChatGPT should avoid wording that sounds like surrender.
+
+## Recommended next actions
+
+1. Give `prompts/2026-06-21_week7_schedule_ponchi_prompt.md` to GPT to draft the visual structure and copy.
+2. After GPT drafts it, verify event times in-game before publishing to members.
+
+## Questions for ChatGPT
+
+1. Can this be converted into a one-page Japanese briefing image with a clear Saturday/Sunday emphasis?
+2. What exact member-facing wording keeps urgency without making people give up?
+
+## Notes
+
+- Use `analysis/2026-06-21_s6_latest_week7_update.md` as the source report behind this prompt.
+
 ## 2026-06-21 S6 latest status and Week 7 schedule
 
 ## Context
