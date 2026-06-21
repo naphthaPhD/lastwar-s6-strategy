@@ -1,5 +1,47 @@
 # Handoff summary
 
+## 2026-06-21 S6 project retrospective and endgame outlook
+
+## Context
+
+The user asked to start summarizing what this Season 6 project has done, how the game actually progressed, and how the season is likely to end or has ended. A durable retrospective/endgame analysis was added, separating confirmed project work, observed season progression, current destruction evidence, and final-week unknowns.
+
+## Updated files
+
+- `analysis/2026-06-21_s6_project_retrospective_and_endgame.md`
+- `analysis/latest_handoff.md`
+
+## Key findings
+
+1. The project evolved from mechanics/rule research and #534/JDX strategy design into live management-table maintenance, OCR/video analysis, and ChatGPT handoff operations.
+2. The original strategic read that #534 should not try to defeat #476 in a full frontal fight was broadly correct, but the actual season progressed more harshly than expected for #534 and allied-side servers.
+3. As of 2026-06-21, active-sheet/GPT Vision evidence has #534 at 54 destroyed city rows; the user's game-screen remaining count implies 57 destroyed out of the true 84-city denominator, leaving three #534 destroyed coordinates still unidentified.
+4. #476 and #503 remain almost untouched by city destruction evidence, while #509/#511/#440/#534/#523 have suffered heavy city losses.
+5. The season's final result is not fully observed until the 2026-06-27 final Saturday battles and 2026-06-28 Faction Duel/Ancestral Temple fight, but #534's practical endgame has shifted from map recovery to participation, rewards, connection preservation, and record keeping.
+
+## Current risks
+
+1. The active sheet still uses 86 city rows per server, while the user confirmed the true city count should be 84.
+2. GPT/video evidence suggests additional non-#534 destroyed cities are not yet reflected in the active sheet, especially #440.
+3. The final Faction Duel can change Influence Points, but it does not restore destroyed cities or lost connection infrastructure.
+
+## Recommended next actions
+
+1. After 2026-06-28, append final Faction Duel result, final influence rankings, and #534's exact remaining-city count to the retrospective.
+2. Identify the three missing #534 destroyed coordinates implied by the in-game remaining count of 27.
+3. Preserve a final all-server destroyed-city table using the true 84-city denominator and note any remaining sheet-vs-game discrepancies.
+
+## Questions for ChatGPT
+
+1. How should the final public-facing #534/JDX retrospective phrase the strategic loss without demoralizing members?
+2. Which lessons should be framed as command/coordination issues versus unavoidable power-balance issues?
+3. What final screenshots or data points are essential before archiving Season 6?
+
+## Notes
+
+- `analysis/2026-06-21_s6_project_retrospective_and_endgame.md` is now the main long-form summary for the project's Season 6 arc.
+- The document intentionally distinguishes confirmed active-sheet values, GPT/video evidence, and game-screen inferred values.
+
 ## 2026-06-21 GPT Vision high-density city-destruction workflow
 
 ## Context
