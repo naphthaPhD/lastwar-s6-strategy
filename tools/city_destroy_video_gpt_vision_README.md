@@ -47,6 +47,7 @@ export OPENAI_VISION_MODEL='gpt-5.4-mini'
   --metadata tmp/city_destroy_gpt_vision_20260621/metadata.json \
   --out-dir tmp/city_destroy_gpt_vision_20260621 \
   --detail high \
+  --batch-size 2 \
   --sleep 0.2
 ```
 
@@ -56,8 +57,11 @@ export OPENAI_VISION_MODEL='gpt-5.4-mini'
 ./.venv/bin/python tools/city_destroy_video_gpt_vision.py ocr \
   --metadata tmp/city_destroy_gpt_vision_20260621/metadata.json \
   --out-dir tmp/city_destroy_gpt_vision_20260621 \
-  --limit 3
+  --limit 3 \
+  --batch-size 1
 ```
+
+`--batch-size 2` は今回の動画で動作確認済み。`--batch-size 3` はAPI側の一時エラー/サイズ相性が出たため、長時間処理では2を推奨する。
 
 ## 4. 集計
 

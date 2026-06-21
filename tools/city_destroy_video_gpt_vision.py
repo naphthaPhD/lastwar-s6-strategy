@@ -51,6 +51,7 @@ Return JSON only:
 {
   "events": [
     {
+      "source_frame": "frame filename if shown in the prompt",
       "event_time": "YYYY-M-D HH:MM:SS",
       "actor_server": "#476",
       "actor_alliance": "476K",
@@ -350,8 +351,6 @@ def ocr_frames(args: argparse.Namespace) -> int:
         return 2
 
     metadata = load_metadata(args.metadata)
-    if args.limit:
-        metadata = metadata[: args.limit]
     out_dir = args.out_dir / "responses"
     out_dir.mkdir(parents=True, exist_ok=True)
     events_path = args.out_dir / "gpt_vision_events.json"
@@ -361,7 +360,8 @@ def ocr_frames(args: argparse.Namespace) -> int:
     ok = 0
     errors = 0
 
-    for index, record in enumerate(metadata, start=1):
+    jobs: list[dict[str, Any]] = []
+    for record in metadata:
         frame = record.get("frame")
         path = Path(str(record.get("path", "")))
         if not frame or not path.exists():
@@ -369,16 +369,31 @@ def ocr_frames(args: argparse.Namespace) -> int:
             continue
         if frame in done and not args.force:
             continue
-        eprint(f"[{index}/{len(metadata)}] GPT Vision OCR {frame}")
+        jobs.append(record)
+    if args.limit:
+        jobs = jobs[: args.limit]
+
+    batch_size = max(1, args.batch_size)
+    batches = [jobs[index : index + batch_size] for index in range(0, len(jobs), batch_size)]
+
+    for index, batch in enumerate(batches, start=1):
+        batch_frames = [str(record.get("frame")) for record in batch]
+        eprint(f"[{index}/{len(batches)}] GPT Vision OCR {', '.join(batch_frames)}")
+        prompt = args.prompt or (
+            PROMPT
+            + "\n\nWhen multiple images are provided, each event must include source_frame exactly matching the frame filename printed before that image."
+        )
+        content: list[dict[str, Any]] = [{"type": "input_text", "text": prompt}]
+        for record in batch:
+            path = Path(str(record.get("path", "")))
+            content.append({"type": "input_text", "text": f"source_frame: {record.get('frame')}"})
+            content.append({"type": "input_image", "image_url": data_url(path), "detail": args.detail})
         payload: dict[str, Any] = {
             "model": args.model,
             "input": [
                 {
                     "role": "user",
-                    "content": [
-                        {"type": "input_text", "text": args.prompt or PROMPT},
-                        {"type": "input_image", "image_url": data_url(path), "detail": args.detail},
-                    ],
+                    "content": content,
                 }
             ],
             "text": {"format": {"type": "json_object"}},
@@ -394,17 +409,22 @@ def ocr_frames(args: argparse.Namespace) -> int:
             )
             text = output_text(response)
             parsed = parse_jsonish(text)
-            response_path = out_dir / f"{Path(frame).stem}.response.json"
-            parsed_path = out_dir / f"{Path(frame).stem}.json"
+            batch_stem = Path(batch_frames[0]).stem if len(batch_frames) == 1 else f"{Path(batch_frames[0]).stem}_batch{len(batch_frames)}"
+            response_path = out_dir / f"{batch_stem}.response.json"
+            parsed_path = out_dir / f"{batch_stem}.json"
             response_path.write_text(json.dumps(response, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             parsed_path.write_text(json.dumps(parsed, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             records.append(
                 {
                     "status": "ok",
-                    "frame": frame,
-                    "image_path": str(path),
-                    "timestamp_sec": record.get("timestamp_sec"),
-                    "sequence": record.get("sequence"),
+                    "frame": batch_frames[0],
+                    "frames": batch_frames,
+                    "image_path": str(Path(str(batch[0].get("path", "")))),
+                    "image_paths": [str(record.get("path", "")) for record in batch],
+                    "timestamp_sec": batch[0].get("timestamp_sec"),
+                    "timestamps_sec": [record.get("timestamp_sec") for record in batch],
+                    "sequence": batch[0].get("sequence"),
+                    "sequences": [record.get("sequence") for record in batch],
                     "model": args.model,
                     "elapsed_sec": round(time.time() - started, 3),
                     "response_id": response.get("id"),
@@ -419,22 +439,31 @@ def ocr_frames(args: argparse.Namespace) -> int:
             records.append(
                 {
                     "status": "error",
-                    "frame": frame,
-                    "image_path": str(path),
-                    "timestamp_sec": record.get("timestamp_sec"),
-                    "sequence": record.get("sequence"),
+                    "frame": batch_frames[0] if batch_frames else "",
+                    "frames": batch_frames,
+                    "image_paths": [str(record.get("path", "")) for record in batch],
+                    "timestamp_sec": batch[0].get("timestamp_sec") if batch else "",
+                    "timestamps_sec": [record.get("timestamp_sec") for record in batch],
+                    "sequence": batch[0].get("sequence") if batch else "",
+                    "sequences": [record.get("sequence") for record in batch],
                     "model": args.model,
                     "elapsed_sec": round(time.time() - started, 3),
                     "error": str(exc),
                 }
             )
             errors += 1
-            eprint(f"failed {frame}: {exc}")
+            eprint(f"failed {', '.join(batch_frames)}: {exc}")
         events_path.write_text(json.dumps(records, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        if args.sleep and index < len(metadata):
+        if args.sleep and index < len(batches):
             time.sleep(args.sleep)
 
-    print(json.dumps({"ok": ok, "errors": errors, "events": str(events_path)}, ensure_ascii=False, indent=2))
+    print(
+        json.dumps(
+            {"jobs": len(jobs), "batches": len(batches), "ok": ok, "errors": errors, "events": str(events_path)},
+            ensure_ascii=False,
+            indent=2,
+        )
+    )
     return 1 if errors else 0
 
 
@@ -449,6 +478,16 @@ def to_int(value: Any) -> int | None:
         return value
     match = re.search(r"\d+", str(value or ""))
     return int(match.group(0)) if match else None
+
+
+def target_from_raw_text(raw_text: str) -> tuple[str, int, int] | None:
+    normalized = raw_text.replace("＃", "#").replace("（", "(").replace("）", ")").replace("，", ",")
+    matches = list(re.finditer(r"#\s*(\d{3})\s*\(\s*(\d{1,4})\s*,\s*(\d{1,4})\s*\)", normalized))
+    if not matches:
+        return None
+    # The destruction target is the coordinate-bearing #server(x,y) reference.
+    match = matches[-1]
+    return f"#{match.group(1)}", int(match.group(2)), int(match.group(3))
 
 
 def xy_to_coord(x: int, y: int) -> str:
@@ -478,9 +517,14 @@ def flatten_events(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
         for event in record.get("events", []) or []:
             if not isinstance(event, dict):
                 continue
-            server = normalize_server(event.get("target_server"))
-            x = to_int(event.get("x"))
-            y = to_int(event.get("y"))
+            raw_text = str(event.get("raw_text") or "")
+            raw_target = target_from_raw_text(raw_text)
+            if raw_target:
+                server, x, y = raw_target
+            else:
+                server = normalize_server(event.get("target_server"))
+                x = to_int(event.get("x"))
+                y = to_int(event.get("y"))
             if server not in KNOWN_SERVERS or x is None or y is None:
                 continue
             target_type = str(event.get("target_type") or "")
@@ -499,9 +543,9 @@ def flatten_events(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
                     "level": str(event.get("level") or ""),
                     "text_color": str(event.get("text_color") or "unknown"),
                     "destroyed_by": str(event.get("destroyed_by") or "unknown"),
-                    "frame": record.get("frame", ""),
+                    "frame": str(event.get("source_frame") or record.get("frame", "")),
                     "timestamp_sec": record.get("timestamp_sec", ""),
-                    "raw_text": str(event.get("raw_text") or ""),
+                    "raw_text": raw_text,
                 }
             )
     return rows
@@ -668,6 +712,7 @@ def build_parser() -> argparse.ArgumentParser:
     ocr.add_argument("--timeout", type=int, default=180)
     ocr.add_argument("--sleep", type=float, default=0.0)
     ocr.add_argument("--limit", type=int, default=0)
+    ocr.add_argument("--batch-size", type=int, default=1)
     ocr.add_argument("--force", action="store_true")
     ocr.add_argument("--prompt", default="")
     ocr.set_defaults(func=ocr_frames)

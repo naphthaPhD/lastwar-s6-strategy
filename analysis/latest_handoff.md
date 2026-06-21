@@ -38,6 +38,50 @@ The user asked to make the proposed high-density frame extraction plus GPT Visio
 - Smoke-test frames were written only under `tmp/` and were not committed.
 - Usage examples are in `tools/city_destroy_video_gpt_vision_README.md`.
 
+## 2026-06-21 Full-video GPT Vision destruction OCR
+
+## Context
+
+After the user deleted the previously pasted API key, a new encrypted OpenAI API key was generated through the Platform connector, decrypted locally into `/private/tmp/s6_openai_key_setup/openai_env.sh`, and used to run GPT Vision OCR over the full city-destruction history video. The old key was reported by the user as deleted.
+
+## Updated files
+
+- `tools/city_destroy_video_gpt_vision.py`
+- `tools/city_destroy_video_gpt_vision_README.md`
+- `analysis/latest_handoff.md`
+- `data/2026-06-21_full_video_gpt_vision_rawcoord_city_destroy_gpt_vision_raw_events.csv`
+- `data/2026-06-21_full_video_gpt_vision_rawcoord_city_destroy_gpt_vision_deduped_events.csv`
+- `data/2026-06-21_full_video_gpt_vision_rawcoord_city_destroy_gpt_vision_summary.csv`
+- `data/2026-06-21_full_video_gpt_vision_rawcoord_city_destroy_gpt_vision_sheet_missing.csv`
+- `data/2026-06-21_full_video_gpt_vision_rawcoord_city_destroy_gpt_vision_not_in_sheet.csv`
+
+## Key findings
+
+1. The full video was cropped and extracted at 2 fps, producing 735 frames.
+2. GPT Vision OCR ran over all 735 frames with 369 successful response records and zero recorded API errors.
+3. Raw GPT extraction produced 3,225 usable event rows; after deduplication by target server and coordinate, 410 unique destroyed city coordinates remained.
+4. Aggregation now prioritizes the `#server(x,y)` coordinate found in `raw_text`, because GPT's structured `target_server` field occasionally contradicted the visible coordinate text.
+5. Corrected GPT Vision summary versus active `1oK2.../管理表たたき`: #534 54, #509 79, #503 0, #480 52, #440 81, #511 80, #523 59, #476 4 unique destroyed coordinates.
+6. #534 still remains at 54 video-confirmed destroyed coordinates, matching the active sheet's 54 destroyed rows; GPT Vision did not recover the three missing #534 coordinates implied by the user's in-game remaining count of 27.
+7. GPT Vision sheet-missing candidates are 40 rows total: #509 2, #480 4, #440 24, #511 2, #523 8. Two GPT Vision coordinates are outside current city rows: #511 `e-12`, #523 `f-12`.
+
+## Current risks
+
+1. GPT Vision improves text/color readability but still does not reconcile #534 to the in-game remaining count.
+2. Some GPT rows contain contradictory natural-language fragments, so the corrected raw-coordinate aggregation should be used, not the first non-rawcoord aggregate.
+3. The new API key exists in a local temp env file only; do not commit or display it.
+
+## Recommended next actions
+
+1. Treat `data/2026-06-21_full_video_gpt_vision_rawcoord_city_destroy_gpt_vision_summary.csv` as the current GPT Vision summary.
+2. Review `data/2026-06-21_full_video_gpt_vision_rawcoord_city_destroy_gpt_vision_sheet_missing.csv` before applying any of the 40 non-#534 candidates to Sheets.
+3. For #534's remaining discrepancy, rely on a direct game-screen city list/map check rather than this destruction-history video.
+
+## Notes
+
+- No Google Sheets reflection was performed from the GPT Vision all-video run.
+- Temporary response JSON and extracted frames are under `tmp/city_destroy_gpt_vision_20260621_all/` and were not committed.
+
 ## 2026-06-21 City destruction video OCR and #534 correction
 
 ## Context
