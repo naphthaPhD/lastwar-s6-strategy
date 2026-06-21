@@ -47,6 +47,51 @@ The user uploaded a new in-game city-destruction video to Dropbox `lastwar/S6/�
 - Broad OCR outputs were saved for traceability, but only the six #534 current-city corrections were reflected in Sheets.
 - User clarification: red text in the in-game destruction display means the destruction was by an enemy; blue text means the destruction was by an ally. This affects interpretation of who destroyed the city, while the management-table owner field still becomes `破壊`.
 
+## 2026-06-21 All-server city destruction video re-aggregation
+
+## Context
+
+The user clarified that the uploaded video screen is the complete destruction-history list from season start through the current time, and that all eight server areas should be re-aggregated, not just #534. The raw Apple Vision OCR lines were re-parsed by event row: timestamp line plus the following destruction text lines, then deduplicated by target server and coordinate.
+
+## Updated files
+
+- `analysis/latest_handoff.md`
+- `data/2026-06-21_city_destroy_video_all_servers_lineparse_events.csv`
+- `data/2026-06-21_city_destroy_video_all_servers_summary.csv`
+- `data/2026-06-21_city_destroy_video_all_servers_sheet_missing.csv`
+- `data/2026-06-21_city_destroy_video_all_servers_not_in_sheet.csv`
+- `data/2026-06-21_city_destroy_video_all_servers_sheet_destroyed_not_seen.csv`
+
+## Key findings
+
+1. Re-parsing by row produced clean all-server counts for the eight valid areas: #534, #509, #503, #480, #440, #511, #523, and #476.
+2. Video-unique destroyed city coordinates by server are: #534 55, #509 79, #503 0, #480 53, #440 82, #511 78, #523 58, #476 4.
+3. Compared with the active `1oK2.../管理表たたき`, the video shows 40 city coordinates that are not currently marked `破壊`: #509 2, #480 4, #440 24, #511 2, #523 8.
+4. #534 has 55 video coordinates, but only 54 match current city rows; the non-sheet city coordinate is `f-12`. The active sheet also has 54 #534 destroyed city rows, so the remaining discrepancy versus the user's in-game count of 27 likely comes from OCR-missed rows or the 84-vs-86 table denominator issue.
+5. Three video coordinates are not in current city rows: #534 `f-12`, #480 `f-10`, and #440 `f-12`.
+
+## Current risks
+
+1. The all-server 40-row missing list is stronger than the earlier broad OCR candidates, but it still comes from OCR and should be treated as evidence-backed candidates before bulk sheet application.
+2. #534 still does not reconcile to the user's game-screen count, so an API vision pass or denser frame extraction may be needed for the missing #534 rows.
+3. Some rows in the active sheet are counted as city rows even though the user confirmed each area should have 84 cities, not 86.
+
+## Recommended next actions
+
+1. Review `data/2026-06-21_city_destroy_video_all_servers_sheet_missing.csv`; if acceptable, apply those 40 missing rows to `管理表たたき` as `破壊`.
+2. For #534 specifically, run a higher-density frame extraction or GPT Vision/API pass over the relevant scrolling segment to find the missing 2-3 coordinates.
+3. Audit and correct the per-area 84-city denominator separately from the destruction-history update.
+
+## Questions for ChatGPT
+
+1. Should the 40 all-server video-backed candidates be applied immediately, or should #534 be reconciled first?
+2. How should the 84-city true denominator be represented in reports while the sheet still contains 86 city rows?
+
+## Notes
+
+- This all-server re-aggregation supersedes the earlier #534-only interpretation for video-summary purposes.
+- Sheet reflection for these additional 40 all-server candidates has not yet been performed in this pass.
+
 ## 2026-06-21 Correction: #396 is reference-only
 
 ## Context

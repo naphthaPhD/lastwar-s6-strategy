@@ -1,0 +1,9 @@
+server,video_destroy_unique_coords,sheet_city_rows,sheet_destroyed,sheet_remaining_rows,remaining_if_84_total,video_destroy_not_marked_in_sheet,video_destroy_not_in_city_rows,sheet_destroyed_not_seen_in_video
+#534,55,86,54,32,30,0,1,0
+#509,79,86,77,9,7,2,0,0
+#503,0,86,0,86,84,0,0,0
+#480,53,86,48,38,36,4,1,0
+#440,82,86,57,29,27,24,1,0
+#511,78,86,77,9,7,2,0,1
+#523,58,86,50,36,34,8,0,0
+#476,4,86,4,82,80,0,0,0
