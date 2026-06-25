@@ -1,5 +1,51 @@
 # Handoff summary
 
+## 2026-06-25 JDX power screenshot OCR and sheet reflection
+
+## Context
+
+The user uploaded a new JDX power screenshot batch and asked for sheet reflection. The batch was in Dropbox `lastwar/S6/JDX戦力スクショ/inbox` as `IMG_2507.PNG` through `IMG_2542.PNG`. OCR was run locally, then results were reflected into the linked JDX power Google Sheet.
+
+## Updated files
+
+- `analysis/2026-06-25_jdx_power_screenshot_ocr.md`
+- `analysis/latest_handoff.md`
+- `data/2026-06-25_jdx_power_vote_ocr.csv`
+- `data/2026-06-25_jdx_power_comment_ocr.csv`
+- `data/2026-06-25_jdx_power_sheet_update_plan.csv`
+- `data/2026-06-25_jdx_power_ocr_summary.json`
+- `data/2026-06-25_jdx_power_sheet_writeback_summary.json`
+
+## Key findings
+
+1. The 2026-06-25 vote popup screenshots produced 74 OCR vote candidates, of which 72 were accepted after removing low-confidence scroll-boundary artifacts.
+2. The visible in-game participant count on the vote popup was `72/97`, matching the reflected `20260625_投票回答` helper count of 72.
+3. Comment screenshots produced 70 OCR comment candidates; 69 were safely matched and reflected.
+4. `現在週` was found with only the header row, so it was rebuilt from `20260531_戦力アンケート`, then the existing 6/17 OCR results and the new 6/25 OCR results were applied in order.
+5. Google Sheet tabs/ranges updated: `現在週`, `20260625_投票回答`, `未回答者`, `戦力分析`, and `一軍戦力推移`.
+
+## Current risks
+
+1. Two vote OCR artifacts at screenshot boundaries were excluded because the names were clipped and duplicated adjacent-page rows.
+2. One low-confidence comment name remained excluded from automatic reflection.
+3. Non-respondents retain baseline or previous known values in `現在週`; current-week response status should be read from `20260625_投票回答` and `未回答者`.
+
+## Recommended next actions
+
+1. If the user later confirms a different 6/25 participant count, compare it against `20260625_投票回答` before changing counts.
+2. Use `未回答者` latest date `2026/06/25` for follow-up on the 24 current-week non-respondents.
+3. Treat `analysis/2026-06-25_jdx_power_screenshot_ocr.md` as the local audit record for this reflection pass.
+
+## Questions for ChatGPT
+
+1. Should the excluded boundary artifacts be ignored permanently, or should they be reviewed against adjacent screenshots if a count mismatch is reported?
+2. Does the updated one-army trend table need a member-facing summary?
+
+## Notes
+
+- `レバブル子` was normalized to `まったり子`.
+- The final verification read showed `戦力分析` values: OCR answered 72, unanswered 24, latest date `2026/06/25`.
+
 ## 2026-06-21 S6 project retrospective and endgame outlook
 
 ## Context

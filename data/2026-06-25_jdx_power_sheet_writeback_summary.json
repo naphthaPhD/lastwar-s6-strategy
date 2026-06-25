@@ -1,0 +1,40 @@
+{
+  "current_rows_written": 96,
+  "plans_applied": [
+    {
+      "plan": "data/2026-06-17_jdx_power_sheet_update_plan.csv",
+      "applied_vote_rows": 78,
+      "applied_vote_cells": 156,
+      "applied_comment_rows": 61,
+      "applied_comment_cells": 174,
+      "held_vote_rows": [
+        "Fateの晩风"
+      ],
+      "held_comment_rows": [
+        "K’awiil",
+        "BCCR",
+        "RAMETT vu",
+        "渋猫選手R",
+        "SOL265",
+        "あつないR",
+        "RiricoR",
+        "Wolveress23",
+        "OLDヤンガス"
+      ]
+    },
+    {
+      "plan": "data/2026-06-25_jdx_power_sheet_update_plan.csv",
+      "applied_vote_rows": 72,
+      "applied_vote_cells": 144,
+      "applied_comment_rows": 69,
+      "applied_comment_cells": 195,
+      "held_vote_rows": [],
+      "held_comment_rows": []
+    }
+  ],
+  "helper_vote_rows": 72,
+  "unanswered_20260625_rows": 24,
+  "first_power_trend_rows": 31,
+  "held_vote_rows_20260625": [],
+  "held_comment_rows_20260625": []
+}
