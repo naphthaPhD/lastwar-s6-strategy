@@ -15,6 +15,7 @@ The user uploaded a new JDX power screenshot batch, then added the missing `IMG_
 - `data/2026-07-03_jdx_power_sheet_update_plan.csv`
 - `data/2026-07-03_jdx_power_ocr_summary.json`
 - `data/2026-07-03_jdx_power_sheet_writeback_summary.json`
+- `data/2026-07-03_jdx_power_overview_ponchi_summary.json`
 
 ## Key findings
 
@@ -24,6 +25,7 @@ The user uploaded a new JDX power screenshot batch, then added the missing `IMG_
 4. Google Sheet tabs/ranges updated: `現在週`, `20260703_投票回答`, `未回答者`, `戦力分析`, and `一軍戦力推移`.
 5. Verification read showed `戦力分析` values: OCR answered 61, unanswered 35, latest date `2026/07/03`.
 6. Because this was the final survey, `20260703_戦力アンケート` was created as a saved snapshot of the 96-row final current-week table.
+7. A one-page overview image was added for member-facing sharing. It summarizes the 96-row saved roster, 61 OCR-reflected vote rows, 55 reflected comment rows, 35 non-respondents, first-squad band distribution, final first-power top 5, and growth top 5.
 
 ## Current risks
 
@@ -50,6 +52,7 @@ The user uploaded a new JDX power screenshot batch, then added the missing `IMG_
 - Final sharing images were created:
   - `screenshots/selected/2026-07-03_jdx_power_top5_growth.png`
   - `screenshots/selected/2026-07-03_jdx_power_top5_final_first_power.png`
+  - `screenshots/selected/2026-07-03_jdx_power_overview_ponchi.png`
 
 ## 2026-06-25 JDX power screenshot OCR and sheet reflection
 

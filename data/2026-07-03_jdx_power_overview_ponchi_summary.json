@@ -1,0 +1,97 @@
+{
+  "output": "screenshots/selected/2026-07-03_jdx_power_overview_ponchi.png",
+  "source_files": [
+    "data/2026-07-03_jdx_power_sheet_update_plan.csv",
+    "data/2026-07-03_jdx_power_top5_image_summary.json"
+  ],
+  "roster_rows": 96,
+  "vote_ocr_reflected_rows": 61,
+  "comment_reflected_rows": 55,
+  "unanswered_rows": 35,
+  "first_power_known_rows": 79,
+  "first_power_band_counts": {
+    "80M+": 4,
+    "75-80M": 5,
+    "70-75M": 10,
+    "65-70M": 9,
+    "62-65M": 13,
+    "60-62M": 7,
+    "58-60M": 6,
+    "55-58M": 9,
+    "50-55M": 11,
+    "<50M": 5
+  },
+  "effective_form_counts": {
+    "ロ": 13,
+    "航": 12,
+    "戦": 52
+  },
+  "effective_job_counts": {
+    "指導者": 18,
+    "エンジニア": 59
+  },
+  "final_first_power_top5": [
+    {
+      "name": "ssi103",
+      "form": "航",
+      "first": 87.0,
+      "job": "指導者"
+    },
+    {
+      "name": "K’awiil",
+      "form": "ロ",
+      "first": 86.58,
+      "job": "指導者"
+    },
+    {
+      "name": "渋猫選手R",
+      "form": "ロ",
+      "first": 82.0,
+      "job": "指導者"
+    },
+    {
+      "name": "Rameπ vu",
+      "form": "ロ",
+      "first": 80.0,
+      "job": "指導者"
+    },
+    {
+      "name": "Revo GARO",
+      "form": "ロ",
+      "first": 79.7,
+      "job": "指導者"
+    }
+  ],
+  "growth_top5": [
+    {
+      "name": "Shamshie",
+      "start": 42.9,
+      "final": 51.7,
+      "delta": 8.8
+    },
+    {
+      "name": "SOL265",
+      "start": 63.0,
+      "final": 69.0,
+      "delta": 6.0
+    },
+    {
+      "name": "枝マメDx",
+      "start": 57.87,
+      "final": 63.77,
+      "delta": 5.9
+    },
+    {
+      "name": "三SUN SUN三",
+      "start": 52.0,
+      "final": 57.72,
+      "delta": 5.72
+    },
+    {
+      "name": "北池袋",
+      "start": 60.83,
+      "final": 66.53,
+      "delta": 5.7
+    }
+  ]
+}

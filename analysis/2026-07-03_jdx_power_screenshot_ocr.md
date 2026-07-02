@@ -47,10 +47,11 @@ Dropboxにアップロードされた `IMG_2545.PNG` から `IMG_2574.PNG` をOC
 
 ## 8. Final visuals
 
-最終アンケート共有用の画像を2枚作成した。
+最終アンケート共有用の画像を3枚作成した。
 
 - `screenshots/selected/2026-07-03_jdx_power_top5_growth.png`: 一軍戦力伸び幅TOP5。
 - `screenshots/selected/2026-07-03_jdx_power_top5_final_first_power.png`: 最終一軍戦力TOP5。
+- `screenshots/selected/2026-07-03_jdx_power_overview_ponchi.png`: 最終結果全体の1枚サマリー。
 
 ## 9. Unknowns
 
@@ -64,6 +65,7 @@ Dropboxにアップロードされた `IMG_2545.PNG` から `IMG_2574.PNG` をOC
 - `data/2026-07-03_jdx_power_ocr_summary.json`
 - `data/2026-07-03_jdx_power_sheet_writeback_summary.json`
 - `data/2026-07-03_jdx_power_top5_image_summary.json`
+- `data/2026-07-03_jdx_power_overview_ponchi_summary.json`
 
 ## 11. Corrections
 
