@@ -608,7 +608,7 @@ The user uploaded a new JDX power screenshot batch. The new files were found in 
 1. The restored `現在週` roster comes from the 2026-05-31 base, so any membership changes after that date may need manual correction.
 2. The OCR vote helper now matches the user-confirmed 81 responses.
 3. The confirmed 81 response count still does not match the visible `91/97`-like participation text, so poll coverage wording should stay cautious.
-4. Nine comment rows (`K’awiil`, `BCCR`, `RAMETT vu`, `渋猫選手R`, `SOL265`, `あつないR`, `RiricoR`, `Wolveress23`, `OLDヤンガス`) were held from field-level application because of low match confidence.
+4. Nine comment rows (`K’awiil`, `BCCR`, `Rameπ vu`, `渋猫選手R`, `SOL265`, `あつないR`, `RiricoR`, `Wolveress23`, `OLDヤンガス`) were held from field-level application because of low match confidence.
 5. `未回答者` is now updated through 2026/06/17, but the visible `91/97`-like participation text remains a separate display discrepancy.
 6. `一軍戦力推移` skips 20260601 because no independent saved tab exists for that date; it uses the latest 8 available saved/current snapshots instead.
 7. Large total-power deltas are compared against the 2026-05-31 base, so many are expected and should not automatically be treated as OCR errors.

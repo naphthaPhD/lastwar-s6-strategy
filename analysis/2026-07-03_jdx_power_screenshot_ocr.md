@@ -64,3 +64,7 @@ Dropboxにアップロードされた `IMG_2545.PNG` から `IMG_2574.PNG` をOC
 - `data/2026-07-03_jdx_power_ocr_summary.json`
 - `data/2026-07-03_jdx_power_sheet_writeback_summary.json`
 - `data/2026-07-03_jdx_power_top5_image_summary.json`
+
+## 11. Corrections
+
+- 2026-07-03: `RAMETT vu` 表記を正しい `Rameπ vu` に統一した。Google Sheet、ローカルCSV/JSON、最終一軍戦力TOP5画像を更新済み。
