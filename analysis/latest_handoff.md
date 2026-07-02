@@ -1,5 +1,51 @@
 # Handoff summary
 
+## 2026-07-03 JDX power screenshot OCR and sheet reflection
+
+## Context
+
+The user uploaded a new JDX power screenshot batch, then added the missing `IMG_2548.PNG`. The final OCR pass covered Dropbox `lastwar/S6/JDX戦力スクショ/inbox` images `IMG_2545.PNG` through `IMG_2574.PNG`.
+
+## Updated files
+
+- `analysis/2026-07-03_jdx_power_screenshot_ocr.md`
+- `analysis/latest_handoff.md`
+- `data/2026-07-03_jdx_power_vote_ocr.csv`
+- `data/2026-07-03_jdx_power_comment_ocr.csv`
+- `data/2026-07-03_jdx_power_sheet_update_plan.csv`
+- `data/2026-07-03_jdx_power_ocr_summary.json`
+- `data/2026-07-03_jdx_power_sheet_writeback_summary.json`
+
+## Key findings
+
+1. The 2026-07-03 vote popup screenshots produced 62 OCR vote candidates; 61 were accepted after excluding one clipped scroll-boundary duplicate.
+2. Comment screenshots produced 55 OCR comment candidates, all safely matched and reflected.
+3. `現在週` was again found with only the header row, so it was rebuilt from `20260531_戦力アンケート`, then 6/17, 6/25, and 7/3 OCR results were applied in order.
+4. Google Sheet tabs/ranges updated: `現在週`, `20260703_投票回答`, `未回答者`, `戦力分析`, and `一軍戦力推移`.
+5. Verification read showed `戦力分析` values: OCR answered 61, unanswered 35, latest date `2026/07/03`.
+
+## Current risks
+
+1. The in-game participant count footer was not OCR-readable in this batch, so the answer count is based on accepted OCR name matching.
+2. One `IMG_2556.PNG` top-edge OCR artifact was excluded as a duplicate of `だあむ`.
+3. `一軍戦力推移` uses a reconstructed 20260625 row set because there is no saved `20260625_戦力アンケート` tab.
+
+## Recommended next actions
+
+1. If the user can confirm the 7/3 participant count, compare it against `20260703_投票回答` before adjusting counts.
+2. Use `未回答者` latest date `2026/07/03` for follow-up on the 35 current-week non-respondents.
+3. Consider saving a dated snapshot tab after each future OCR reflection if `現在週` is later cleared externally.
+
+## Questions for ChatGPT
+
+1. Should a dated `20260703_戦力アンケート` snapshot tab be added to preserve current-week values?
+2. Should member-facing follow-up use the full 35-person non-response list or only officers/key fighters?
+
+## Notes
+
+- `レバブル子` was normalized to `まったり子`.
+- The final reflected helper count is 61 rows in `20260703_投票回答`.
+
 ## 2026-06-25 JDX power screenshot OCR and sheet reflection
 
 ## Context
