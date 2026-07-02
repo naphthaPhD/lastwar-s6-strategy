@@ -45,14 +45,22 @@ Dropboxにアップロードされた `IMG_2545.PNG` から `IMG_2574.PNG` をOC
 2. 未回答者35名は `未回答者` の最新日付 `2026/07/03` を基準に確認する。
 3. 最終保存値を参照する場合は `現在週` ではなく `20260703_戦力アンケート` を優先する。
 
-## 8. Unknowns
+## 8. Final visuals
+
+最終アンケート共有用の画像を2枚作成した。
+
+- `screenshots/selected/2026-07-03_jdx_power_top5_growth.png`: 一軍戦力伸び幅TOP5。
+- `screenshots/selected/2026-07-03_jdx_power_top5_final_first_power.png`: 最終一軍戦力TOP5。
+
+## 9. Unknowns
 
 - 上端重複として除外した1件以外に、画面外で回答済みの人がいるかは画像だけでは判断不能。
 
-## 9. Files referenced
+## 10. Files referenced
 
 - `data/2026-07-03_jdx_power_vote_ocr.csv`
 - `data/2026-07-03_jdx_power_comment_ocr.csv`
 - `data/2026-07-03_jdx_power_sheet_update_plan.csv`
 - `data/2026-07-03_jdx_power_ocr_summary.json`
 - `data/2026-07-03_jdx_power_sheet_writeback_summary.json`
+- `data/2026-07-03_jdx_power_top5_image_summary.json`

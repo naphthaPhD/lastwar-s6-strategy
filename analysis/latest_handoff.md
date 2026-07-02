@@ -47,6 +47,9 @@ The user uploaded a new JDX power screenshot batch, then added the missing `IMG_
 - `レバブル子` was normalized to `まったり子`.
 - The final reflected helper count is 61 rows in `20260703_投票回答`.
 - Final snapshot tab `20260703_戦力アンケート` contains 96 data rows plus header.
+- Final sharing images were created:
+  - `screenshots/selected/2026-07-03_jdx_power_top5_growth.png`
+  - `screenshots/selected/2026-07-03_jdx_power_top5_final_first_power.png`
 
 ## 2026-06-25 JDX power screenshot OCR and sheet reflection
 

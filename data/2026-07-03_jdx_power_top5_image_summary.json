@@ -1,0 +1,70 @@
+{
+  "growth_top5": [
+    {
+      "name": "Shamshie",
+      "start": 42.9,
+      "final": 51.7,
+      "delta": 8.8
+    },
+    {
+      "name": "SOL265",
+      "start": 63.0,
+      "final": 69.0,
+      "delta": 6.0
+    },
+    {
+      "name": "枝マメDx",
+      "start": 57.87,
+      "final": 63.77,
+      "delta": 5.9
+    },
+    {
+      "name": "三SUN SUN三",
+      "start": 52.0,
+      "final": 57.72,
+      "delta": 5.72
+    },
+    {
+      "name": "北池袋",
+      "start": 60.83,
+      "final": 66.53,
+      "delta": 5.7
+    }
+  ],
+  "final_first_power_top5": [
+    {
+      "name": "ssi103",
+      "form": "航",
+      "first": 87.0,
+      "job": "指導者"
+    },
+    {
+      "name": "K’awiil",
+      "form": "ロ",
+      "first": 86.58,
+      "job": "指導者"
+    },
+    {
+      "name": "渋猫選手R",
+      "form": "ロ",
+      "first": 82.0,
+      "job": "指導者"
+    },
+    {
+      "name": "RAMETT vu",
+      "form": "ロ",
+      "first": 80.0,
+      "job": "指導者"
+    },
+    {
+      "name": "Revo GARO",
+      "form": "ロ",
+      "first": 79.7,
+      "job": "指導者"
+    }
+  ],
+  "outputs": [
+    "screenshots/selected/2026-07-03_jdx_power_top5_growth.png",
+    "screenshots/selected/2026-07-03_jdx_power_top5_final_first_power.png"
+  ]
+}
